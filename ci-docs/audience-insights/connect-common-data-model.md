@@ -1,0 +1,89 @@
+---
+title: Conectar os dados do Common Data Model a uma conta do Azure Data Lake
+description: Trabalhe com dados do Common Data Model usando o Azure Data Lake Storage.
+ms.date: 05/29/2020
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: adkuppa
+manager: shellyha
+ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643444"
+---
+# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a><span data-ttu-id="fa3bb-103">Conectar a uma pasta do Common Data Model usando uma conta do Azure Data Lake</span><span class="sxs-lookup"><span data-stu-id="fa3bb-103">Connect to a Common Data Model folder using an Azure Data Lake account</span></span>
+
+<span data-ttu-id="fa3bb-104">Este artigo fornece informações sobre como ingerir dados de uma pasta do Common Data Model usando sua conta Gen2 do Azure Data Lake Storage.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-104">This article provides information on how to ingest data from a Common Data Model folder using your Azure Data Lake Storage Gen2 account.</span></span>
+
+## <a name="important-considerations"></a><span data-ttu-id="fa3bb-105">Considerações importantes</span><span class="sxs-lookup"><span data-stu-id="fa3bb-105">Important considerations</span></span>
+
+- <span data-ttu-id="fa3bb-106">Os dados no Azure Data Lake precisam seguir o padrão do Common Data Model.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-106">Data in your Azure Data Lake needs to follow the Common Data Model standard.</span></span> <span data-ttu-id="fa3bb-107">Outros formatos não têm suporte no momento.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-107">Other formats aren't supported at the moment.</span></span>
+
+- <span data-ttu-id="fa3bb-108">A ingestão de dados oferece suporte exclusivamente a contas de armazenamento *Gen2* do Azure Data Lake.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-108">Data ingestion supports Azure Data Lake *Gen2* storage accounts exclusively.</span></span> <span data-ttu-id="fa3bb-109">Não é possível usar contas de armazenamento Gen1 do Azure Data Lake para ingerir dados.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-109">You can't use Azure Data Lake Gen1 storage accounts to ingest data.</span></span>
+
+- <span data-ttu-id="fa3bb-110">Para autenticar com uma entidade de serviço do Azure, verifique se ela está configurada em seu locatário.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-110">To authenticate with an Azure service principal, make sure it's configured in your tenant.</span></span> <span data-ttu-id="fa3bb-111">Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md).</span><span class="sxs-lookup"><span data-stu-id="fa3bb-111">For more information, see [Connect audience insights to an Azure Data Lake Storage Gen2 account with an Azure service principal](connect-service-principal.md).</span></span>
+
+- <span data-ttu-id="fa3bb-112">O Azure Data Lake a partir do qual você deseja se conectar e ingerir dados deve estar na mesma região do Azure que o ambiente do Dynamics 365 Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-112">The Azure Data Lake you want to connect and ingest data from have to be in the same Azure region as the Dynamics 365 Customer Insights environment.</span></span> <span data-ttu-id="fa3bb-113">Não há suporte para conexões com uma pasta do Common Data Model de um data lake em uma região diferente do Azure.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-113">Connections to a Common Data Model folder from a data lake in a different Azure region is not supported.</span></span> <span data-ttu-id="fa3bb-114">Para conhecer a região do Azure do ambiente, acesse **Administrador** > **Sistema** > **Sobre** em insights de público-alvo.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-114">To know the Azure region of the environment, go to **Admin** > **System** > **About** in audience insights.</span></span>
+
+- <span data-ttu-id="fa3bb-115">Os dados armazenados em serviços online podem ser armazenados em um local diferente daquele onde os dados são processados ou armazenados no Dynamics 365 Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-115">Data stored in online services, may be stored in a different location than where data is processed or stored in Dynamics 365 Customer Insights.</span></span><span data-ttu-id="fa3bb-116"> Ao importar ou se conectar a dados armazenados em serviços online, você concorda que os dados podem ser transferidos e armazenados com o Dynamics 365 Customer Insights. [Saiba mais no Microsoft Trust Center.](https://www.microsoft.com/trust-center)</span><span class="sxs-lookup"><span data-stu-id="fa3bb-116"> By importing or connecting to data stored in online services, you agree that data can be transferred to and stored with Dynamics 365 Customer Insights. [Learn more at the Microsoft Trust Center.](https://www.microsoft.com/trust-center)</span></span>
+
+## <a name="connect-to-a-common-data-model-folder"></a><span data-ttu-id="fa3bb-117">Conectar-se a uma pasta do Common Data Model</span><span class="sxs-lookup"><span data-stu-id="fa3bb-117">Connect to a Common Data Model folder</span></span>
+
+1. <span data-ttu-id="fa3bb-118">Nos insights de público-alvo, vá para **Dados** > **Fontes de dados**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-118">In audience insights, go to **Data** > **Data sources**.</span></span>
+
+1. <span data-ttu-id="fa3bb-119">Selecione **Adicionar fonte de dados**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-119">Select **Add data source**.</span></span>
+
+1. <span data-ttu-id="fa3bb-120">Selecione **Conectar-se a uma pasta do Common Data Model**, insira um **Nome** para a fonte de dados e selecione **Avançar**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-120">Select **Connect to a Common Data Model folder**, enter a **Name** for the data source, and select **Next**.</span></span>
+
+1. <span data-ttu-id="fa3bb-121">Você pode escolher entre usar uma opção baseada em recurso e uma opção baseada em assinatura para autenticação.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-121">You can choose between using a resource-based option and a subscription-based option for authentication.</span></span> <span data-ttu-id="fa3bb-122">Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md).</span><span class="sxs-lookup"><span data-stu-id="fa3bb-122">For more information, see [Connect audience insights to an Azure Data Lake Storage Gen2 account with an Azure service principal](connect-service-principal.md).</span></span> <span data-ttu-id="fa3bb-123">Insira as informações do **Contêiner** e selecione **Avançar**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-123">Enter the **Container** information and select **Next**.</span></span>
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="fa3bb-124">![Caixa de diálogo para inserir detalhes da conexão para o Azure Data Lake](media/enter-new-storage-details.png)</span><span class="sxs-lookup"><span data-stu-id="fa3bb-124">![Dialog box to enter connection details for Azure Data Lake](media/enter-new-storage-details.png)</span></span>
+
+1. <span data-ttu-id="fa3bb-125">Na caixa de diálogo **Selecionar uma pasta do Common Data Model**, selecione o arquivo model.json para importar os dados e selecione **Avançar**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-125">In the **Select a Common Data Model folder** dialog, select the model.json file to import data from, and select **Next**.</span></span>
+   > [!NOTE]
+   > <span data-ttu-id="fa3bb-126">Qualquer arquivo model.json associado a outra fonte de dados no ambiente não será mostrado na lista.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-126">Any model.json file associated with another data source in the environment won't show in the list.</span></span>
+
+1. <span data-ttu-id="fa3bb-127">Você obterá uma lista de entidades disponíveis no arquivo model.json selecionado.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-127">You'll get a list of available entities in the selected model.json file.</span></span> <span data-ttu-id="fa3bb-128">Você pode revisar e selecionar da lista de entidades disponíveis e selecionar **Salvar**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-128">You can review and select from the list of available entities and select **Save**.</span></span> <span data-ttu-id="fa3bb-129">Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-129">All of the selected entities will be ingested from the new data source.</span></span>
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="fa3bb-130">![Caixa de diálogo mostrando uma lista de entidades de um arquivo model.json](media/review-entities.png)</span><span class="sxs-lookup"><span data-stu-id="fa3bb-130">![Dialog box showing a list of entities from a model.json file](media/review-entities.png)</span></span>
+
+8. <span data-ttu-id="fa3bb-131">Indique quais entidades de dados você quer habilitar na criação de perfil de dados e selecione **Salvar**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-131">Indicate which data entities you want to enable data profiling and select **Save**.</span></span> <span data-ttu-id="fa3bb-132">A criação de perfil de dados permite a análise e outros recursos.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-132">Data profiling enables analytics and other capabilities.</span></span> <span data-ttu-id="fa3bb-133">Você pode selecionar a entidade inteira, que seleciona todos os atributos da entidade, ou selecionar certos atributos de sua escolha.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-133">You can select the whole entity, which selects all attributes from the entity, or select certain attributes of your choice.</span></span> <span data-ttu-id="fa3bb-134">Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-134">By default, no entity is enabled for data profiling.</span></span>
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="fa3bb-135">![Caixa de diálogo mostrando uma criação de perfil de dados](media/dataprofiling-entities.png)</span><span class="sxs-lookup"><span data-stu-id="fa3bb-135">![Dialog box showing a data profiling](media/dataprofiling-entities.png)</span></span>
+
+9. <span data-ttu-id="fa3bb-136">Após salvar suas seleções, a página **Fontes de dados** será aberta.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-136">After saving your selections, the **Data sources** page opens.</span></span> <span data-ttu-id="fa3bb-137">Agora você verá a conexão da pasta Common Data Model como uma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-137">You should now see the Common Data Model folder connection as a data source.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="fa3bb-138">Um arquivo model.json só pode ser associado a uma fonte de dados no mesmo ambiente.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-138">A model.json file can only associate with one data source in the same environment.</span></span> <span data-ttu-id="fa3bb-139">Contudo, o mesmo arquivo model.json pode ser usado para fontes de dados em vários ambientes.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-139">However, the same model.json file can be used for data sources in multiple environments.</span></span>
+
+## <a name="edit-a-common-data-model-folder-data-source"></a><span data-ttu-id="fa3bb-140">Editar uma fonte de dados da pasta do Common Data Model</span><span class="sxs-lookup"><span data-stu-id="fa3bb-140">Edit a Common Data Model folder data source</span></span>
+
+<span data-ttu-id="fa3bb-141">Você pode atualizar a chave de acesso para a conta de armazenamento que contém a pasta do Common Data Model.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-141">You can update the access key for the storage account containing the Common Data Model folder.</span></span> <span data-ttu-id="fa3bb-142">Você também pode alterar o arquivo model.json.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-142">You may also change the model.json file.</span></span> <span data-ttu-id="fa3bb-143">Para conectar-se a um contêiner diferente na sua conta de armazenamento ou alterar o nome da conta, [crie uma nova conexão da fonte de dados](#connect-to-a-common-data-model-folder).</span><span class="sxs-lookup"><span data-stu-id="fa3bb-143">To connect to a different container from your storage account, or change the account name, [create a new data source connection](#connect-to-a-common-data-model-folder).</span></span>
+
+1. <span data-ttu-id="fa3bb-144">Nos insights de público-alvo, vá para **Dados** > **Fontes de dados**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-144">In audience insights, go to **Data** > **Data sources**.</span></span>
+
+2. <span data-ttu-id="fa3bb-145">Ao lado da fonte de dados que você deseja atualizar, selecione as reticências.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-145">Next to the data source you'd like to update, select the ellipsis.</span></span>
+
+3. <span data-ttu-id="fa3bb-146">Selecione uma opção **Editar** na lista.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-146">Select the **Edit** option from the list.</span></span>
+
+4. <span data-ttu-id="fa3bb-147">Opcionalmente, atualize a **Chave de acesso** e selecione **Avançar**.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-147">Optionally, update the **Access key** and select **Next**.</span></span>
+
+   ![Caixa de diálogo para editar e atualizar uma chave de acesso para uma fonte de dados existente](media/edit-access-key.png)
+
+5. <span data-ttu-id="fa3bb-149">Ou você pode atualizar de uma conexão de chave de conta para uma conexão baseada em recursos ou baseada em assinatura.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-149">Optionally, you can update from an account key connection to a resource-based or a subscription-based connection.</span></span> <span data-ttu-id="fa3bb-150">Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md).</span><span class="sxs-lookup"><span data-stu-id="fa3bb-150">For more information, see [Connect audience insights to an Azure Data Lake Storage Gen2 account with an Azure service principal](connect-service-principal.md).</span></span> <span data-ttu-id="fa3bb-151">Você não pode alterar informações de **Contêiner** ao atualizar a conexão.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-151">You can't change **Container** information when updating the connection.</span></span>
+   > [!div class="mx-imgBorder"]
+   > <span data-ttu-id="fa3bb-152">![Caixa de diálogo para inserir detalhes da conexão para o Azure Data Lake](media/enter-existing-storage-details.png)</span><span class="sxs-lookup"><span data-stu-id="fa3bb-152">![Dialog box to enter connection details for Azure Data Lake](media/enter-existing-storage-details.png)</span></span>
+
+6. <span data-ttu-id="fa3bb-153">Opcionalmente, escolha um arquivo model.json diferente com um conjunto diferente de entidades do contêiner.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-153">Optionally, choose a different model.json file with a different set of entities from the container.</span></span>
+
+7. <span data-ttu-id="fa3bb-154">Ou você pode selecionar entidades adicionais para ingestão.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-154">Optionally, you can select additional entities to ingest.</span></span> <span data-ttu-id="fa3bb-155">Você também pode remover quaisquer entidades já selecionadas, se não houver dependências.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-155">You can also remove any already selected entities if there are no dependencies.</span></span>
+
+   > [!IMPORTANT]
+   > <span data-ttu-id="fa3bb-156">Se houver dependências no arquivo model.json existente e no conjunto de entidades, você verá uma mensagem de erro e não poderá selecionar um arquivo model.json diferente.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-156">If there are dependencies on the existing model.json file and the set of entities, you'll see an error message and can't select a different model.json file.</span></span> <span data-ttu-id="fa3bb-157">Remova essas dependências antes de alterar o arquivo model.json ou crie uma nova fonte de dados com o arquivo model.json que você deseja usar para evitar a remoção das dependências.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-157">Remove those dependencies before changing the model.json file or create a new data source with the model.json file that you want to use to avoid removing the dependencies.</span></span>
+
+8. <span data-ttu-id="fa3bb-158">Ou você pode selecionar atributos ou entidades adicionais para habilitar a criação de perfil de dados ou desabilitar os já selecionados.</span><span class="sxs-lookup"><span data-stu-id="fa3bb-158">Optionally, you can select additional attributes or entities to enable data profiling on or disable already selected ones.</span></span>   
