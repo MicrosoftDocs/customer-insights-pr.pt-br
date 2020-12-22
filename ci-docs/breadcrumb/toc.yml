@@ -1,0 +1,11 @@
+- name: Documentação
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Dynamic 365
+      tocHref: /dynamics365/
+      topicHref: /dynamics365/
+      items:
+        - name: Customer Insights
+          tocHref: /dynamics365/customer-insights/
+          topicHref: /dynamics365/customer-insights/
