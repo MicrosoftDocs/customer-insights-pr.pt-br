@@ -5,16 +5,16 @@ ms.date: 09/28/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b7e834f5f2fd1328563139675d7f850008348734
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405044"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268534"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Atualização incremental de fontes de dados baseadas no Power Query
 
@@ -54,3 +54,6 @@ Os insights de público-alvo permitem a atualização incremental de fontes de d
    - **Verificar se há atualizações a cada** : Especifique quanto tempo você deseja que dure o período de atualização incremental.
 
 1. Selecione **Salvar** para concluir a criação da fonte de dados. A atualização inicial dos dados será uma atualização completa. Posteriormente, a atualização incremental de dados acontece conforme configurado na etapa anterior.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Enriquecimento com o enriquecimento de terceiros da HERE Technologies
 description: Informações gerais sobre o enriquecimento de terceiros da HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668664"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269500"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com a HERE Technologies (versão preliminar)
 
@@ -43,7 +43,11 @@ Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requi
 
 1. Confirme as duas entradas selecionando **Conectar-se à HERE**.
 
-1. Selecione **Adicionar dados** e escolha se deseja mapear os campos para o endereço principal e/ou secundário. Você pode especificar um mapeamento de campo para ambos os endereços (por exemplo, um endereço residencial e um comercial) e enriquecer os perfis para ambos os endereços separadamente. Selecione **Avançar**.
+1.  Selecione **Adicionar dados** e escolha o **Conjunto de dados do cliente** que deseja enriquecer com dados de localização de Tecnologias HERE. Você pode selecionar a entidade **Cliente** para enriquecer todos os perfis de cliente ou selecionar uma entidade de segmento para enriquecer apenas perfis de clientes contidos nesse segmento.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Captura de tela ao escolher o conjunto de dados do cliente.":::
+
+1. Escolha se deseja mapear os campos para o endereço principal e/ou secundário. Você pode especificar um mapeamento de campo para ambos os endereços (por exemplo, um endereço residencial e um comercial) e enriquecer os perfis para ambos os endereços separadamente. Selecione **Avançar**.
 
 1. Defina quais campos de seus perfis unificados devem ser usados para procurar dados de localização correspondentes da HERE Technologies. Os campos **Rua 1** e **CEP** são obrigatórios para o endereço principal e/ou secundário selecionado. Para uma maior precisão de correspondência, mais campos podem ser adicionados.
 
@@ -68,3 +72,6 @@ Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md
 
 Ao habilitar o Dynamics 365 Customer Insights para transmitir dados à HERE Technologies, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que a HERE Technologies cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

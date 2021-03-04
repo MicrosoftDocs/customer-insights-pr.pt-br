@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643939"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269684"
 ---
-# <a name="overview-about-data-sources"></a>Visão geral sobre fontes de dados
+# <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Você verá o nome de cada fonte de dados ingeridos, seu status e a última vez 
 |Atualizando    |A ingestão de dados está em andamento. Você pode cancelar esta operação selecionando **Interromper atualização** na coluna **Ações**. A interrupção da atualização de uma fonte de dados a reverterá para o último estado de atualização.       |
 |Falhou     |A ingestão de dados encontrou erros.         |
 
-Selecione **Status da Atualização** para revisar mais detalhes sobre o status de atualização, incluindo detalhes do erro e atualizações do processo downstream.
+Selecione o valor na coluna **Status** de qualquer fonte de dados para revisar mais detalhes. No painel **Detalhes de progresso**, expanda **Fontes de dados**. Selecione **Ver detalhes** para obter mais informações sobre o status de atualização, incluindo detalhes do erro e atualizações do processo downstream.
 
 O carregamento de dados pode demorar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página **Entidades**. Para obter mais informações, consulte [Entidades](entities.md).
 
@@ -76,3 +76,6 @@ Para atualizar uma fonte de dados sob demanda, siga estas etapas:
 2. Selecione as reticências verticais ao lado da fonte de dados que você deseja remover e selecione **Excluir** no menu suspenso.
 
 3. Confirme a exclusão.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

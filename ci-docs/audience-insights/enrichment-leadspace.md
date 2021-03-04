@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668709"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269408"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecimento de perfis de empresa com Leadspace (versão preliminar)
 
@@ -38,7 +38,11 @@ Para configurar o Leadspace, os seguintes pré-requisitos devem ser atendidos:
 
 1. Selecione **Introdução** e digite um **token da Leadspace** ativo (chave perpétua). Revise e forneça seu consentimento para **Conformidade e privacidade dos dados** marcando a caixa de seleção **Concordo**. Confirme as duas entradas selecionando **Conectar-se à Leadspace**.
 
-1. Selecione **Dados do mapa** e defina quais campos de seus perfis unificados devem ser usados para procurar dados da empresa correspondentes na Leadspace. O campo **Nome da empresa** é obrigatório. Para uma maior precisão de correspondência, podem ser adicionados até dois outros campos, **Site da empresa** e **Local da empresa**.
+1. Selecione **Mapear dados** e escolha o conjunto de dados que deseja enriquecer com dados da empresa do Leadspace. Você pode selecionar a entidade *Cliente* para enriquecer todos os perfis de cliente ou selecionar uma entidade de segmento para enriquecer apenas perfis de clientes contidos nesse segmento.
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Escolha entre enriquecimento do segmento e do perfil do cliente.":::
+
+1. Clique em **Próximo** e defina quais campos de seus perfis unificados devem ser usados para procurar dados da empresa correspondentes na Leadspace. O campo **Nome da empresa** é obrigatório. Para uma maior precisão de correspondência, podem ser adicionados até dois outros campos, **Site da empresa** e **Local da empresa**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Painel de mapeamento de campo da Leadspace.":::
    
@@ -62,3 +66,6 @@ Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md
 
 Ao habilitar o Dynamics 365 Customer Insights para transmitir dados à Leadspace, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que a Leadspace cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

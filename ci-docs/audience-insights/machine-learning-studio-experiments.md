@@ -4,17 +4,17 @@ description: Use modelos do Machine Learning Studio (clássico) no Dynamics 365 
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669004"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270190"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Usar modelos baseados no Azure Machine Learning Studio (clássico)
 
@@ -171,3 +171,6 @@ Todo o [experimento de recomendação de produto pode ser acessado na Galeria de
 Para usar essas previsões no Customer Insights, você precisa **exportar** as previsões junto com as IDs dos clientes. [Exporte-as para o mesmo local de Armazenamento de Blobs do Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) para o qual você exporta os dados de origem. O serviço web preditivo pode ser planejado para ser executado regularmente e atualizar as pontuações.
 
 Os dados gerados pelo modelo personalizado podem ser usados para enriquecer ainda mais os dados dos clientes. Para obter mais informações, consulte [Modelos personalizados de aprendizado de máquina](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Exportar dados do Customer Insights para o Dynamics 365 Marketing
 description: Saiba como configurar a conexão com o Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643759"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269040"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Conector para o Dynamics 365 Marketing (versão preliminar)
 
@@ -24,7 +24,10 @@ Use [segmentos](segments.md) para gerar campanhas e contatar grupos específicos
 
 ## <a name="prerequisite"></a>Pré-requisito
 
-Registros de contato [do Dynamics 365 Marketing ingeridos no Common Data Service](connect-power-query.md).
+- Os registros de contatos devem estar presentes no Dynamics 365 Marketing antes de exportar um segmento do Customer Insights para o Marketing. Leia mais sobre como ingerir contatos no [Dynamics 365 Marketing usando o Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Exportar segmentos de insights de público-alvo para o Marketing não criará registros de contatos nas instâncias do Marketing. Os registros de contatos do Marketing devem ser ingeridos em insights de público-alvo e usados como uma fonte de dados. Também será necessário incluí-los na entidade unificada do Customer para mapear IDs de clientes para IDs de contatos antes que os segmentos possam ser exportados.
 
 ## <a name="configure-the-connector-for-marketing"></a>Configurar o conector para o Marketing
 
@@ -49,3 +52,6 @@ Registros de contato [do Dynamics 365 Marketing ingeridos no Common Data Service
 ## <a name="export-the-data"></a>Exportar os dados
 
 Você pode [exportar dados sob demanda](export-destinations.md). A exportação também será executada a cada [atualização agendada](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

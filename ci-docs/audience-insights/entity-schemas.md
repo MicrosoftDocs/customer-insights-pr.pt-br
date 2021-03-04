@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643894"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269270"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidades no Common Data Model
 
@@ -45,3 +45,6 @@ Para obter mais informações, consulte a documentação sobre os [Esquemas de e
 Você pode exibir entidades no [Navegador de Entidades do Common Data Model](https://microsoft.github.io/CDM/). Selecione o botão **Carregar do GitHub!** e vá até **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, onde você encontrará a lista de entidades do Customer Insights e suas definições.
 > [!div class="mx-imgBorder"]
 > ![Navegador de Entidades do CDM mostrando a entidade Atividade do Cliente](media/CDM-entity-navigator.png "Navegador de Entidades do CDM mostrando a entidade Atividade do Cliente")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

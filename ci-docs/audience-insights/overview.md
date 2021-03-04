@@ -1,30 +1,26 @@
 ---
-title: Recurso de insights de público-alvo
-description: Visão geral do recurso de insights de público-alvo do Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights
+description: Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405043"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476981"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Recurso de insights de público-alvo do Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights
 
-A experiência do cliente está no centro das ambições de transformação digital de todas as organizações. Para competir no mercado atual, as organizações devem criar relacionamentos significativos com seus clientes em nível pessoal. A personalização eficaz em escala requer uma exibição completa e unificada do cliente.
+Os insights de público-alvo ajudam você a compreender melhor seus clientes. Conecte dados de várias fontes transacionais, comportamentais e observacionais para criar uma visão do cliente em 360 graus. Use essas informações para gerar experiências e processos centrados no cliente. Unificar e entender dados de clientes, além de utilizá-los para ações e insights inteligentes.
 
-Os insights de público-alvo ajudam você a compreender melhor seus clientes. Conecte dados de várias fontes transacionais, comportamentais e observacionais para criar uma visão do cliente em 360 graus. Use essas informações para gerar experiências e processos centrados no cliente.
-
-**Unificar e entender dados de clientes, além de utilizá-los para ações e insights inteligentes.**
-
-Com os insights de público-alvo, as organizações podem:  
+## <a name="main-benefits"></a>Principais benefícios 
 
 - **Eliminar silos de dados e unificar os dados do cliente**
 
@@ -33,15 +29,15 @@ Com os insights de público-alvo, as organizações podem:
 
 - **Enriquecer com a inteligência do público contida no Microsoft Graph**
 
-  - Criar perfis de clientes mais detalhados, incorporando a inteligência do público contida no Microsoft Graph.  
+  - Criar perfis de clientes mais detalhados, [incorporando a inteligência do público contida no Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Potencializar seus processos de negócios e experiências personalizadas do cliente**
 
   - Impulsionar a participação personalizada entre os canais - capacitar os profissionais de marketing, vendas e serviços, insights contextuais do cliente e cartões de perfil personalizados, infundidos nos aplicativos de negócios que eles já usam todos os dias
   - Automatizar experiências e processos centrados no cliente com base em perfis personalizáveis, medidas de negócios e segmentos.
-  - Permitir e estender experiências de linha de negócios baseadas no Microsoft Power Platform. Criar aplicativos rapidamente com insights incorporados usando uma abordagem poderosa de pouco código do PowerApps.  
+  - Permitir e estender experiências de linha de negócios baseadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Criar aplicativos rapidamente com insights incorporados usando uma abordagem poderosa de pouco código do PowerApps.  
 
-Os insights de público-alvo incluem recursos para os seguintes usuários principais:
+## <a name="key-audiences"></a>Principais públicos-alvo
 
 - **Analistas de dados/administradores:**
 
@@ -58,5 +54,8 @@ Os insights de público-alvo incluem recursos para os seguintes usuários princi
 
 - **Analistas de negócios:**
 
-  - Crie perfis personalizáveis, defina medidas e crie segmentos para obter uma visão de 360 graus do seu cliente, específica da sua organização.  
-  - Usar conectores prontos para uso para PowerApps ou Microsoft Power BI ou APIs para revelar insights nos seus aplicativos de negócios ou soluções de BI.  
+  - Crie perfis personalizáveis, defina medidas, crie segmentos e se beneficie da análise preditiva para obter uma visão de 360 graus do seu cliente, específica da sua organização.  
+  - Use conectores prontos para uso em vários aplicativos ou APIs da Microsoft e de terceiros para processar ainda mais os insights.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

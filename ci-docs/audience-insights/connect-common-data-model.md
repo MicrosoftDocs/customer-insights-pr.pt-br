@@ -4,17 +4,17 @@ description: Trabalhe com dados do Common Data Model usando o Azure Data Lake St
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643444"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267846"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar a uma pasta do Common Data Model usando uma conta do Azure Data Lake
 
@@ -38,17 +38,25 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
 
 1. Selecione **Adicionar fonte de dados**.
 
-1. Selecione **Conectar-se a uma pasta do Common Data Model**, insira um **Nome** para a fonte de dados e selecione **Avançar**.
+1. Selecione **Conectar-se a uma pasta do Common Data Model**, insira um **Nome** para a fonte de dados e selecione **Avançar**. Nomear diretrizes: 
+   - Comece com uma letra.
+   - Use somente letras e números. Caracteres especiais e espaços não são permitidos.
+   - Use entre 3 e 64 caracteres.
 
 1. Você pode escolher entre usar uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Insira as informações do **Contêiner** e selecione **Avançar**.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para inserir detalhes da conexão para o Azure Data Lake](media/enter-new-storage-details.png)
-
-1. Na caixa de diálogo **Selecionar uma pasta do Common Data Model**, selecione o arquivo model.json para importar os dados e selecione **Avançar**.
+   > ![Caixa de diálogo para inserir novos detalhes de conexão do Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Qualquer arquivo model.json associado a outra fonte de dados no ambiente não será mostrado na lista.
+   > Você precisa de uma das seguintes funções para o contêiner ou conta de armazenamento mencionada acima para se conectar e criar uma fonte de dados:
+   >  - Leitor de Dados do Storage Blob
+   >  - Proprietário de Dados do Storage Blob
+   >  - Colaborador de Dados do Storage Blob
 
-1. Você obterá uma lista de entidades disponíveis no arquivo model.json selecionado. Você pode revisar e selecionar da lista de entidades disponíveis e selecionar **Salvar**. Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.
+1. Na caixa de diálogo **Selecionar uma pasta do Common Data Model**, selecione o arquivo manifest.json para importar os dados e selecione **Avançar**.
+   > [!NOTE]
+   > Qualquer arquivo model.json ou manifest.json associado a outra fonte de dados no ambiente não será mostrado na lista.
+
+1. Você obterá uma lista de entidades disponíveis no arquivo model.json ou manifest.json selecionado. Você pode revisar e selecionar da lista de entidades disponíveis e selecionar **Salvar**. Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo mostrando uma lista de entidades de um arquivo model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
 9. Após salvar suas seleções, a página **Fontes de dados** será aberta. Agora você verá a conexão da pasta Common Data Model como uma fonte de dados.
 
 > [!NOTE]
-> Um arquivo model.json só pode ser associado a uma fonte de dados no mesmo ambiente. Contudo, o mesmo arquivo model.json pode ser usado para fontes de dados em vários ambientes.
+> Um arquivo model.json file ou manifest.json só pode ser associado a uma fonte de dados no mesmo ambiente. Contudo, o mesmo arquivo model.json file ou manifest.json pode ser usado para fontes de dados em vários ambientes.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Editar uma fonte de dados da pasta do Common Data Model
 
-Você pode atualizar a chave de acesso para a conta de armazenamento que contém a pasta do Common Data Model. Você também pode alterar o arquivo model.json. Para conectar-se a um contêiner diferente na sua conta de armazenamento ou alterar o nome da conta, [crie uma nova conexão da fonte de dados](#connect-to-a-common-data-model-folder).
+Você pode atualizar a chave de acesso para a conta de armazenamento que contém a pasta do Common Data Model. Você também pode alterar o arquivo model.json file ou manifest.json. Para conectar-se a um contêiner diferente na sua conta de armazenamento ou alterar o nome da conta, [crie uma nova conexão da fonte de dados](#connect-to-a-common-data-model-folder).
 
 1. Nos insights de público-alvo, vá para **Dados** > **Fontes de dados**.
 
@@ -77,13 +85,24 @@ Você pode atualizar a chave de acesso para a conta de armazenamento que contém
 
 5. Ou você pode atualizar de uma conexão de chave de conta para uma conexão baseada em recursos ou baseada em assinatura. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para inserir detalhes da conexão para o Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Opcionalmente, escolha um arquivo model.json diferente com um conjunto diferente de entidades do contêiner.
+   > ![Caixa de diálogo para inserir detalhes de conexão do Azure Data Lake a uma conta de armazenamento existente](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Você precisa de uma das seguintes funções para o contêiner ou conta de armazenamento mencionada acima para se conectar e criar uma fonte de dados:
+   >  - Leitor de Dados do Storage Blob
+   >  - Proprietário de Dados do Storage Blob
+   >  - Colaborador de Dados do Storage Blob
+
+
+6. Opcionalmente, escolha outro arquivo model.json ou manifest.json com um conjunto diferente de entidades no contêiner.
 
 7. Ou você pode selecionar entidades adicionais para ingestão. Você também pode remover quaisquer entidades já selecionadas, se não houver dependências.
 
    > [!IMPORTANT]
-   > Se houver dependências no arquivo model.json existente e no conjunto de entidades, você verá uma mensagem de erro e não poderá selecionar um arquivo model.json diferente. Remova essas dependências antes de alterar o arquivo model.json ou crie uma nova fonte de dados com o arquivo model.json que você deseja usar para evitar a remoção das dependências.
+   > Se houver dependências no arquivo model.json ou manifest.json existente e no conjunto de entidades, você verá uma mensagem de erro e não será possível selecionar outro arquivo model.json ou manifest.json. Remova essas dependências antes de alterar o arquivo model.json ou manifest.json ou criar uma fonte de dados com o arquivo model.json ou manifest.json que deseja usar para evitar a remoção das dependências.
 
 8. Ou você pode selecionar atributos ou entidades adicionais para habilitar a criação de perfil de dados ou desabilitar os já selecionados.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Criar e gerenciar ambientes
 description: Saiba como se inscrever no serviço e gerenciar ambientes.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644119"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270098"
 ---
 # <a name="manage-environments"></a>Gerenciar ambientes
 
@@ -46,9 +46,9 @@ Há duas maneiras de criar um novo ambiente. Você pode especificar uma configur
 
 Para criar um ambiente:
 
-1. Selecione o símbolo de **Configurações** no cabeçalho do aplicativo.
+1. Selecione o seletor de **Ambiente** no cabeçalho do aplicativo.
 
-1. Selecione **Novo ambiente**.
+1. Selecione **Novo**.
 
    > [!div class="mx-imgBorder"]
    > ![Configurações do ambiente](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Para criar um ambiente:
 
    - Para a opção Azure Data Lake Storage Gen2, você pode escolher entre uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). O nome do **Contêiner** não pode ser alterado e será "customerinsights".
    
-   - Se você quiser usar [previsões](predictions.md), insira a URL da instância do Common Data Service no campo **Endereço do servidor** em **Usar previsões**.
+   - Se quiser usar [previsões](predictions.md) ou configurar o compartilhamento de dados com aplicativos e soluções com base no Microsoft Dataverse, forneça a URL do ambiente do Microsoft Dataverse em **Configurar compartilhamento de dados com o Microsoft Dataverse e habilitar recursos adicionais**. Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um Microsoft Dataverse Managed Data Lake.
+
+     > [!NOTE]
+     > - Atualmente, não há suporte para o compartilhamento de dados com o Microsoft Dataverse Managed Data Lake ao salvar todos os dados no seu Azure Data Lake Storage.
+     > - Atualmente, não há suporte para a [previsão de valores ausentes em uma entidade](predictions.md) ao habilitar o compartilhamento de dados com o Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opções de configuração para permitir o compartilhamento com o Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Quando você executar processos, como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento especificada acima. Os arquivos de dados e arquivos model.json serão criados e adicionados às respectivas subpastas com base no processo executado.
 
@@ -120,11 +127,11 @@ Quando a unificação de dados estiver concluída, vá para **Medidas** e **Segm
 
 Você pode editar alguns dos detalhes dos ambientes existentes.
 
-1. Vá para **Administração** > **Sistema** > **Sobre**.
+1.  Selecione o seletor de **Ambiente** no cabeçalho do aplicativo.
 
-2. Selecione **Editar**.
+2.  Selecione o ícone **Editar**.
 
-3. Você pode atualizar o **Nome de exibição**, do ambiente, mas não pode alterar a **Região** ou o **Tipo**.
+3. Na caixa **Editar ambiente**, é possível atualizar o **Nome de exibição** do ambiente, mas não é possível alterar a **Região** ou o **Tipo**.
 
 4. Se um ambiente estiver configurado para armazenar dados no Azure Data Lake Storage Gen2, você poderá atualizar a **Chave da conta**. No entanto, você não pode alterar o **Nome da conta** e o nome do **Recipiente**.
 
@@ -132,19 +139,27 @@ Você pode editar alguns dos detalhes dos ambientes existentes.
 
 ## <a name="reset-an-existing-environment"></a>Redefinir um ambiente existente
 
-Você pode redefinir um ambiente para um estado vazio se quiser excluir todas as configurações e remover os dados ingeridos.
+Como administrador, você pode redefinir um ambiente para um estado vazio se quiser excluir todas as configurações e remover os dados ingeridos.
 
-1.  Vá para **Administração** > **Sistema** > **Sobre**.
+1.  Selecione o seletor de **Ambiente** no cabeçalho do aplicativo. 
 
-2.  Selecione **Redefinir**. 
+2.  Selecione o ambiente que deseja redefinir e selecione as reticências **...**. 
 
-3.  Para confirmar a exclusão, insira o nome do ambiente e selecione **Redefinir**.
+3. Escolha a opção **Redefinir**. 
+
+4.  Para confirmar a exclusão, insira o nome do ambiente e selecione **Redefinir**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Excluir um ambiente existente (disponível apenas para administradores)
+
+Como administrador, é possível excluir um ambiente administrado por você.
+
+1.  Selecione o seletor de **Ambiente** no cabeçalho do aplicativo.
+
+2.  Selecione o ambiente que deseja redefinir e selecione as reticências **...**. 
+
+3. Escolha a opção **Excluir**. 
+
+4.  Para confirmar a exclusão, insira o nome do ambiente e selecione **Excluir**.
 
 
-## <a name="delete-an-existing-environment"></a>Excluir um ambiente existente
-
-1. Vá para **Administração** > **Sistema** > **Sobre**.
-
-1. Selecione **Excluir**.
-
-1. Para confirmar a exclusão, insira o nome do ambiente e selecione **Excluir**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

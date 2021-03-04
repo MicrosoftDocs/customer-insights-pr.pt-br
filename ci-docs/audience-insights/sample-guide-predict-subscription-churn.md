@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653966"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269822"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guia de amostra para previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -46,10 +46,9 @@ Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes
    - **DateOfBirth**: Data
    - **CreatedOn**: Data/Hora/Zona
 
-   [!div class="mx-imgBorder"]
-   ![Transformar Data de nascimento em Data](media/ecommerce-dob-date.PNG "transformar data de nascimento em data")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformar data de nascimento em data.":::
 
-1. No campo 'Nome' no painel direito, renomeie sua fonte de dados de **Consulta** para **eCommerceContacts**
+1. No campo **Nome** no painel direito, renomeie sua fonte de dados de **Consulta** para **eCommerceContacts**
 
 1. Salvar a fonte de dados.
 
@@ -67,7 +66,7 @@ Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes
    - **RewardsPoints**: Número inteiro
    - **CreatedOn**: Data/Hora
 
-1. No campo 'Nome' no painel direito, renomeie sua fonte de dados de **Consulta** para **loyCustomers**.
+1. No campo **Nome** no painel direito, renomeie sua fonte de dados de **Consulta** para **loyCustomers**.
 
 1. Salvar a fonte de dados.
 
@@ -90,7 +89,7 @@ Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes
    - **Is_auto_renew**: Verdadeiro/Falso
    - **RecurringFrequencyInMonths**: Número inteiro
 
-1. No campo 'Nome' no painel direito, renomeie sua fonte de dados de **Consulta** para **SubscriptionHistory**.
+1. No campo **Nome** no painel direito, renomeie sua fonte de dados de **Consulta** para **SubscriptionHistory**.
 
 1. Salvar a fonte de dados.
 
@@ -230,3 +229,6 @@ Você pode criar um novo segmento com base na entidade criada pelo modelo.
 Agora, você tem um segmento que é atualizado dinamicamente que identifica clientes de alto risco de rotatividade para este negócio de assinatura.
 
 Para obter mais informações, consulte [Criar e gerenciar segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

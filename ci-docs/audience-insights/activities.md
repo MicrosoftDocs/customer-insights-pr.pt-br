@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667215"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267418"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -44,13 +44,13 @@ Suas fontes de dados incluem entidades com dados transacionais e de atividades d
 
 1. Na seção **Definir relacionamento**, configure os detalhes para conectar seus dados de atividade ao cliente correspondente.
 
-   > [!div class="mx-imgBorder"]
-   > ![Defina o relacionamento da entidade](media/activities-entities-define.png "Defina o relacionamento da entidade")
-
     - **Campo da entidade de atividade**: selecione o campo na sua entidade de atividade que será usado para estabelecer um relacionamento com outra entidade.
     - **Entidade do cliente**: selecione a entidade do cliente de origem correspondente com a qual sua entidade de atividade estará em relacionamento. É possível se relacionar apenas às entidades do cliente de origem que são usadas no processo de unificação de dados.
     - **Campo da entidade do cliente**: este campo mostra a chave primária da entidade do cliente de origem, conforme selecionada no processo de mapeamento. Esse campo de chave primária na entidade do cliente de origem é usado para estabelecer um relacionamento com a entidade da atividade.
     - **Nome**: se já existir um relacionamento entre esta entidade de atividade e a entidade cliente de origem selecionada, o nome do relacionamento estará no modo somente leitura. Se não existir esse relacionamento, um novo relacionamento será criado com o nome fornecido aqui.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Defina o relacionamento da entidade](media/activities-entities-define.png "Defina o relacionamento da entidade")
 
 1. Selecione **Salvar** para aplicar suas alterações.
 
@@ -82,3 +82,6 @@ Suas fontes de dados incluem entidades com dados transacionais e de atividades d
 3. Selecione no ícone **Excluir**.
 
 4. Confirme a exclusão.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

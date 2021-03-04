@@ -1,7 +1,7 @@
 ---
 title: Configuração do sistema em insights do público
 description: Saiba mais sobre as configurações do sistema na funcionalidade de insights de público-alvo do Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405053"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267326"
 ---
 # <a name="system-configuration"></a>Configuração do sistema
 
-A página **Sistema** inclui quatro guias: **Status**, **Agenda**, **Sobre** e **Geral**.
+A página **Sistema** inclui as seguintes guias:
+- [Status](#status-tab)
+- [Agendar](#schedule-tab)
+- [Uso da API](#api-usage-tab)
+- [Sobre](#about-tab)
+- [Geral](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Página do sistema](media/system-tabs.png "Página do sistema")
 
 ## <a name="status-tab"></a>Guia Status
 
-A guia **Status** permite acompanhar o progresso da ingestão de dados, exportações de dados e vários processos importantes do produto. Revise as informações nesta guia para garantir a integridade dos processos ativos.
+A **guia Status** permite acompanhar o progresso da ingestão de dados, exportações de dados e vários outros processos importantes do produto. Revise as informações nesta guia para garantir a integridade dos processos ativos.
 
-Essa guia inclui tabelas de status para **Fontes de dados**, **Processos do sistema** e **Preparação de dados**. Cada tabela rastreia o **Nome** da tarefa e sua entidade correspondente, o **Status** de sua execução mais recente e quando foi **Ultima atualização**.
+Esta guia inclui tabelas com status e informações de processamento para vários processos. Cada tabela rastreia o **Nome** da tarefa e sua entidade correspondente, o **Status** de sua execução mais recente e quando foi **Ultima atualização**.
 
 Exiba os detalhes das últimas execuções das tarefas, selecionando seu nome.
 
@@ -40,7 +45,7 @@ Existem seis tipos de status para tarefas. Os seguintes tipos de status também 
 - **Ignorada:** A tarefa foi ignorada. Um ou mais dos processos de downstream dos quais essa tarefa depende estão falhando ou foram ignorados.
 - **Falha:** o processamento da tarefa falhou.
 - **Cancelado:** o processamento foi cancelado pelo usuário antes de terminar.
-- **Na fila:** o processamento está na fila e será iniciado assim que todas as tarefas posteriores forem concluídas. Para obter mais informações, consulte [Políticas de atualização](#refresh-policies).
+- **Enfileirado:** O processamento está enfileirado e iniciará assim que todas as tarefas upstream forem concluídas. Para obter mais informações, consulte [Políticas de atualização](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Políticas de atualização
 
@@ -89,4 +94,17 @@ Selecione **Salvar** para confirmar suas seleções.
 
 ## <a name="api-usage-tab"></a>Guia de uso da API
 
-Encontre detalhes sobre o uso da API em tempo real e veja quais eventos ocorreram em um determinado período. Para obter mais informações, consulte [Ingestão de dados em tempo real](real-time-data-ingestion.md).
+Encontre detalhes sobre o uso da API em tempo real e veja quais eventos aconteceram em um determinado período. Você escolhe o período de tempo no menu suspenso **Selecione um período**. 
+
+O **Uso de API** contém três seções: 
+- **Chamadas de API** - um gráfico que visualiza o número agregado de chamadas para a API no período selecionado.
+
+- **Transferência de dados** - um gráfico que mostra o volume de dados que foram transferidos por meio da API no período selecionado.
+
+-  **Operações** - uma tabela com linhas para cada operação de API disponível e detalhes sobre o uso das operações. Você pode selecionar um nome de operação para ir para [a referência da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operações que usam [ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um botão com um símbolo binocular para visualizar o uso da API em tempo real. Selecione o botão para abrir um painel lateral contendo detalhes de uso para o uso da API em tempo real no ambiente atual.   
+   Use a caixa **Agrupar por** no painel **Uso da API em tempo real** para escolher a melhor forma de apresentar suas interações em tempo real. Você pode agrupar os dados pelo método API, nome qualificado da entidade (entidade ingerida), criado por (fonte do evento), resultado (êxito ou falha) ou códigos de erro. Os dados estão disponíveis como um gráfico de histórico e como uma tabela.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

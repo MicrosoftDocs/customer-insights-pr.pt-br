@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e3f41c0424b2cd756d72ae6af9d5225ebba92628
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: e71c69a6207147d8cd65363d51a5fa6bbf896151
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405020"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269362"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades em insights de público-alvo
 
@@ -57,3 +57,6 @@ Selecione o ícone do gráfico para ver o resumo dos dados.
 ### <a name="next-step"></a>Próxima etapa
 
 Veja o tópico [Unificar](data-unification.md) para saber como *mapear*, *corresponder* e *mesclar* os dados ingeridos.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

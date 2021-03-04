@@ -1,7 +1,7 @@
 ---
 title: Recursos novos e futuros
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4649990"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270418"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
@@ -30,6 +30,77 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="january-2021-updates"></a>Atualizações de janeiro de 2021
+
+As atualizações em janeiro de 2021 incluem vários recursos, upgrades de desempenho e correções de bugs.
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Funcionalidade estendida e desempenho aprimorado para exportação de SFTP** Agora você pode exportar todas as entidades de saída do Customer Insights para um host SFTP. Anteriormente, a exportação era limitada a entidades de segmento. Além disso, o desempenho da exportação de SFTP permite mais volume de dados em menos tempo, dependendo do desempenho do seu host SFTP.    
+  Para obter mais informações, consulte [Conector para SFTP (versão preliminar)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmentos
+
+- **Segmentos sugeridos com tecnologia de aprendizado de máquina para melhorar as métricas** Existe uma nova maneira de descobrir e criar segmentos. O sistema usa um modelo de IA para sugerir segmentos que podem ajudar a melhorar um KPI (medida) que você já está rastreando. Mostramos a influência dos atributos que você seleciona em uma medida ou em outro atributo principal. Essas informações ajudam a encontrar segmentos potenciais que apresentam oportunidades.    
+  Para obter mais informações, consulte [Segmentos sugeridos (versão preliminar)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Unificação de dados
+
+- **Experiência de correspondência aprimorada** Na área de unificação de dados, a experiência de correspondência foi atualizada. Ela permite que você configure e visualize as regras de correspondência, incluindo estatísticas detalhadas para explicar melhor como a correspondência funciona. Existem opções para desativar uma regra de correspondência para que não fique mais ativa, enquanto mantém a configuração, regras de correspondência de arrastar e soltar e muito mais.
+  Para obter mais informações, consulte [Corresponder entidades](match-entities.md).
+
+- **A saída de duplicação do processo de correspondência está disponível como uma entidade** A saída do processo de duplicação do processo de correspondência agora é gravada em uma entidade separada para análise posterior. Essa entidade consiste nos campos usados no processo de duplicação e no registro do vencedor e nos registros alternativos correspondentes que são mesclados com o registro do vencedor.
+  Para obter mais informações, consulte [Saída de duplicação como uma entidade](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Administrador do sistema
+
+- **Compartilhe dados perfeitamente com o Microsoft Dataverse** Agora você pode compartilhar a saída do Customer Insights com os aplicativos Microsoft Dataverse usando o Data Lake gerenciado do Microsoft Dataverse. Depois de associar um ambiente do Dataverse ao Customer Insights, você tem a opção de ativar o compartilhamento de dados.
+  Para obter mais informações, consulte [Gerenciar ambientes](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Atualizações de dezembro de 2020
+
+As atualizações em dezembro de 2020 incluem vários recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Recursos novos e atualizados em dezembro de 2020
+
+#### <a name="data-enrichment"></a>Enriquecimento de dados
+
+- **Marca aprimorada e enriquecimento de afinidade de interesse**
+  
+  Simplificamos nossas pontuações de afinidade para torná-las mais fáceis de entender e usar. Agora você pode identificar rapidamente os clientes com base na afinidade que eles têm por uma determinada marca ou interesse.
+
+  Além disso, adicionamos novas opções de configuração para controlar melhor como você deseja que seus perfis de cliente sejam enriquecidos. 
+
+  Para obter mais informações, consulte [Enriquecer os perfis de clientes com afinidades de marca e de interesse](enrichment-microsoft-graph.md).
+
+- **Controle quais perfis enriquecer**
+
+  Agora você pode enriquecer apenas um subconjunto de seus perfis de cliente com a opção de selecionar uma entidade de segmento, em vez da entidade de cliente padrão. Crie um segmento com os perfis de cliente que você gostaria de enriquecer e selecione-o na configuração de enriquecimento para seu conjunto de dados de cliente.
+  Este recurso está disponível atualmente apenas para enriquecimentos fornecidos pela Experian e HERE Technologies. Estaremos habilitando esse recurso para mais enriquecimentos em breve.
+
+  Para obter mais informações, consulte [Enriqueça os perfis do cliente com dados demográficos da Experian](enrichment-experian.md) ou [Enriquecimento de perfis de clientes com a HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Ative seus segmentos por meio do Autopilot**
+
+  Exporte segmentos para Autopilot e use-os para fins de marketing. Para obter mais informações, consulte [Conector para Autopilot (versão preliminar)](export-autopilot.md).
+
+- **Ative seus segmentos por meio do SendGrid**
+
+  Exporte segmentos para SendGrid e use-os para fins de marketing. Para obter mais informações, consulte [Conector para SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Administrador do sistema
+
+- **Experiência de gerenciamento de ambiente atualizada**
+  
+  Agora você pode criar, editar, excluir e redefinir ambientes diretamente do seletor de ambiente no cabeçalho do aplicativo. 
+  
+  Além disso, o ambiente que você está usando será fixado na parte superior do painel de ambiente para que você não precise mais pesquisá-lo.
+
+  Para obter mais informações, consulte [Gerenciar ambientes](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>Atualizações de novembro de 2020
 
@@ -165,7 +236,7 @@ Para obter mais informações, consulte [Enriquecer os perfis de clientes com da
 O painel de detalhes da tarefa permite que você veja detalhes sobre as tarefas que o sistema executa. É uma maneira prática de identificar problemas com a configuração e encontrar soluções.
 Analise as mensagens de erro para ver como tratar os possíveis problemas.
  
-- **Processamento de informações adicionadas a páginas adicionais**
+- **Processando informações adicionadas a mais páginas**
 
 Esta melhoria adiciona informações sobre o status de suas entidades na página **Entidades** e **Clientes**.
  
@@ -202,9 +273,9 @@ As atualizações em agosto de 2020 incluem vários recursos, upgrades de desemp
 
 #### <a name="enrichment"></a>Enriquecimento
 
-- **Enriquecimento de afinidades de interesse disponível em mercados adicionais**
+- **Enriquecimento de afinidades de interesse disponível em mais mercados**
 
-  Estamos estendendo a disponibilidade do enriquecimento de afinidades de interesse além dos Estados Unidos para cinco mercados adicionais: Canadá, Austrália, Reino Unido, França e Alemanha. Com essa extensão, você poderá enriquecer seus dados de cliente com interesses adicionais aplicáveis a esses mercados. Também enriqueceremos os perfis de clientes localizados nesses mercados usando dados proprietários locais do Microsoft Graph.
+  Estamos estendendo a disponibilidade do enriquecimento de afinidades de interesse além dos Estados Unidos para cinco outros mercados: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, você pode enriquecer seus dados de clientes com mais interesses aplicáveis a esses mercados. Também enriqueceremos os perfis de clientes localizados nesses mercados usando dados proprietários locais do Microsoft Graph.
   Para obter mais informações, consulte [Enriquecer os perfis de clientes com afinidades de marca e de interesse](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ As atualizações em julho de 2020 incluem vários recursos, upgrades de desempe
 
 #### <a name="enrichment"></a>Enriquecimento
 
-- **Enriquecimento das afinidades de marca disponível em mercados adicionais**
+- **Enriquecimento de afinidades de marca disponível em mais mercados**
 
-  Estamos estendendo a disponibilidade do enriquecimento das afinidades de marca além dos Estados Unidos para cinco mercados adicionais: Canadá, Austrália, Reino Unido, França e Alemanha. Com essa extensão, você poderá enriquecer os dados de clientes com marcas locais nesses mercados. Também enriqueceremos os perfis de clientes localizados nesses mercados usando dados proprietários locais do Microsoft Graph.
+  Estamos estendendo a disponibilidade do enriquecimento de afinidades de marca além dos Estados Unidos para cinco outros mercados: Canadá, Austrália, Reino Unido, França e Alemanha. Com essa extensão, você poderá enriquecer os dados de clientes com marcas locais nesses mercados. Também enriqueceremos os perfis de clientes localizados nesses mercados usando dados proprietários locais do Microsoft Graph.
   Para obter mais informações, consulte [Enriquecer os perfis de clientes com afinidades de marca e de interesse](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Atualizações de junho de 2020
@@ -238,7 +309,7 @@ As atualizações em junho de 2020 incluem vários recursos, upgrades de desempe
 
 - **Enriquecimento com dados da empresa do Leadspace**
   
-  Defina campos em perfis de clientes unificados que são usados para consultar dados da empresa relacionados no Leadspace. Depois de executar o processo de enriquecimento, os perfis B2B são enriquecidos com atributos adicionais, incluindo tamanho, localização e setor da empresa e muito mais.    
+  Defina campos em perfis de clientes unificados que são usados para consultar dados da empresa relacionados no Leadspace. Depois de executar o processo de enriquecimento, os perfis de B2B são enriquecidos com mais atributos, incluindo tamanho da empresa, localização, setor e muito mais.    
   Essa colaboração permite que você melhore a qualidade de seus dados com entradas de serviços de terceiros. Para usar esse enriquecimento, você precisará de uma licença do Leadspace para acessar os dados de empresa B2B. O sistema usará essa licença para manter seus dados enriquecidos continuamente.    
   Para obter mais informações, consulte [Enriquecimento de perfis de empresas com o Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ As atualizações em junho de 2020 incluem vários recursos, upgrades de desempe
   Um novo controle no Complemento do cartão do cliente do Dynamics 365 permite que você mostre enriquecimentos de marca e de interesse em seus contatos em aplicativos de interação com os clientes no Dynamics 365.    
   Para obter mais informações, consulte [Complemento do Cartão do Cliente](customer-card-add-in.md).
 
-- **Gatilhos adicionais do Power Automate**
+- **Mais gatinhos do Power Automate**
 
   Estendemos nossos gatilhos do Power Automate e adicionamos os seguintes gatilhos:
   - Receber uma notificação ou executar uma ação quando uma atualização completa automatizada (fontes de dados, unificação, segmentos, medidas, exportações) for concluída
@@ -295,12 +366,12 @@ As atualizações em junho de 2020 incluem vários recursos, upgrades de desempe
   
   Encontre clientes semelhantes em sua base de clientes usando a inteligência artificial. Um modelo de aprendizado de máquina de classificação binária atribui uma pontuação de similaridade aos clientes no segmento expandido. A pontuação é baseada na semelhança com os clientes no segmento de origem. Dependendo da pontuação de similaridade, os perfis de clientes são adicionados a um segmento recém-criado.
 
-  Às vezes chamado de modelagem idêntica no marketing digital, ele usa um modelo de IA para ajudar a encontrar clientes que são semelhantes a outro segmento de seus clientes, levando em consideração atributos adicionais. Ele não permite apenas que você selecione os atributos. Ele também permite que você especifique o número máximo de clientes que devem estar nesse novo segmento. O modelo de IA, então, computará pontuações de similaridade para cada cliente com base em seus atributos selecionados e encontrará clientes com a pontuação de similaridade média mais alta. O segmento resultante incluirá clientes que se parecem com o cliente em seu segmento original.    
+  Às vezes referido como modelagem idêntica em marketing digital, ele usa um modelo de IA para ajudar a encontrar clientes que são semelhantes a outro segmento de seus clientes, levando em consideração mais atributos. Ele não permite apenas que você selecione os atributos. Ele também permite que você especifique o número máximo de clientes que devem estar nesse novo segmento. O modelo de IA, então, computará pontuações de similaridade para cada cliente com base em seus atributos selecionados e encontrará clientes com a pontuação de similaridade média mais alta. O segmento resultante incluirá clientes que se parecem com o cliente em seu segmento original.    
   Para obter mais informações, consulte [Clientes semelhantes](find-similar-customer-segments.md).
 
 - **Diferenciadores e sobreposição de segmentos**
 
-  A sobreposição de segmentos permite que você veja quantos e quais clientes são comuns a dois ou mais segmentos. Por exemplo, como um segmento de clientes com altos gastos se sobrepõe a um segmento de clientes com alta satisfação, ou como um segmento de clientes em rotatividade se sobrepõe a um segmento de clientes com baixa satisfação. Além disso, você pode analisar como a sobreposição muda com base em um atributo adicional de sua escolha.
+  A sobreposição de segmentos permite que você veja quantos e quais clientes são comuns a dois ou mais segmentos. Por exemplo, como um segmento de clientes com altos gastos se sobrepõe a um segmento de clientes com alta satisfação, ou como um segmento de clientes em rotatividade se sobrepõe a um segmento de clientes com baixa satisfação. Além disso, você pode analisar como a sobreposição muda com base em um atributo extra de sua escolha.
 
   Os diferenciadores de segmentos revelam o que diferencia um segmento do resto de seus clientes ou de outro segmento. Tudo o que você precisa fazer é identificar um segmento e o sistema identificará os atributos e medidas do perfil que distinguem o segmento na forma de uma lista classificada de diferenciadores, do diferenciador mais forte ao mais fraco.    
   Para obter mais informações, consulte [Informações de segmentos (versão preliminar)](segment-insights.md).
@@ -333,7 +404,7 @@ As atualizações em maio de 2020 incluem vários recursos, atualizações de de
 
 - **Linha do tempo e paginação atualizadas no Complemento do Cartão do Cliente**
 
-  A linha do tempo da solução Complemento do Cartão do Cliente corresponde à linha do tempo da atividade. A paginação da linha do tempo melhorou, mostrando até 50 atividades ao mesmo tempo. Ela também permite carregar atividades adicionais na linha do tempo.    
+  A linha do tempo da solução Complemento do Cartão do Cliente corresponde à linha do tempo da atividade. A paginação da linha do tempo melhorou, mostrando até 50 atividades ao mesmo tempo. Também permite carregar mais atividades na linha do tempo.    
   Para obter mais informações, consulte [Complemento do Cartão do Cliente](customer-card-add-in.md).
 
 - Gatilho do **Power Automate para alterações de segmento**
@@ -412,7 +483,7 @@ As atualizações em abril de 2020 incluem vários recursos, atualizações de d
 
 - **Exportar para LiveRamp**
 
-  Ative seus dados no LiveRamp® para conectar-se a mais de 500 plataformas nos ecossistemas digital, social e de TV. Aproveite seus dados no LiveRamp para segmentar, suprimir e personalizar campanhas publicitárias.    
+  Ative seus dados no LiveRamp® para conectar-se a mais de 500 plataformas nos ecossistemas digital, social e de TV. Use seus dados no LiveRamp para direcionar, suprimir e personalizar campanhas de anúncios.    
   Para obter mais informações, consulte o [conector do LiveRamp&reg;](export-liveramp.md).
 
 - **Complemento de equipes do Customer Insights**
@@ -433,7 +504,7 @@ As atualizações em abril de 2020 incluem vários recursos, atualizações de d
 
 #### <a name="segments"></a>Segmentos
 
-- **Operador adicional**
+- **Outra operadora**
   
   O operador In-set permite a segmentação para clientes por vários valores possíveis de cadeia de caracteres. Antes da adição deste operador, você precisava construir esses segmentos com várias condições OR. O operador In-set permite fazer isso com uma única condição.    
   Para obter mais informações, consulte [Criar e gerenciar segmentos](segments.md).
@@ -444,3 +515,6 @@ As atualizações em abril de 2020 incluem vários recursos, atualizações de d
   
   Copie sua configuração de um ambiente para outro. Ao criar um novo ambiente, você pode selecionar um ambiente existente do qual deseja copiar a configuração. Atualmente, oferecemos suporte a fontes de dados, unificação de dados, relacionamentos, medidas e segmentos a serem copiados. Credenciais de fonte de dados e dados reais não são copiados.    
   Para obter mais informações, consulte [Gerenciar ambientes](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

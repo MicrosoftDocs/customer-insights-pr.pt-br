@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643669"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269960"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Conector para Gerenciador de Anúncios do Facebook (versão preliminar)
 
@@ -62,7 +62,16 @@ Exporte segmentos de perfis unificados de clientes para o Gerenciador de Anúnci
 
 Você pode [exportar dados sob demanda](export-destinations.md). A exportação também será executada a cada [atualização agendada](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Limitações conhecidas
+
+- Até 10 milhões de perfis de cliente por exportação para o Gerenciador de Anúncios do Facebook 
+- A exportação para o Gerenciador de Anúncios do Facebook é limitada a segmentos
+- A exportação de segmentos com um total de 10 milhão de perfis pode levar até 90 minutos para ser concluída
+
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 
 Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao Gerenciador de Anúncios do Facebook, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que o Gerenciador de Anúncios do Facebook cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Seu Administrador do Dynamics 365 Customer Insights pode remover este destino de exportação a qualquer momento para interromper o uso dessa funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

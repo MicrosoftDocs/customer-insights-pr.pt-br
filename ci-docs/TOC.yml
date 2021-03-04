@@ -14,10 +14,10 @@
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Recursos novos e atualizados
       href: audience-insights/whats-new-audience-insights.md
-    - name: Introdução
+    - name: Criar um novo ambiente
+      href: audience-insights/home.md
+    - name: Módulos de aprendizagem
       items:
-        - name: Criar um novo ambiente
-          href: audience-insights/home.md
         - name: Ingerir dados
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Criar um perfil de cliente unificado
@@ -44,7 +44,7 @@
           href: audience-insights/entities.md
     - name: Unificação de dados
       items:
-        - name: Visão geral da unificação
+        - name: Visão geral da unificação de dados
           href: audience-insights/data-unification.md
         - name: Mapear entidades e atributos
           href: audience-insights/map-entities.md
@@ -80,6 +80,8 @@
           href: audience-insights/segments.md
         - name: Obtenha insights sobre segmentos
           href: audience-insights/segment-insights.md
+        - name: Consulte segmentos sugeridos
+          href: audience-insights/suggested-segments.md
         - name: Localizar clientes semelhantes
           href: audience-insights/find-similar-customer-segments.md
         - name: Definir medidas e KPIs
@@ -96,6 +98,12 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Guia de amostra para previsão de rotatividade transacional
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Prever o valor de permanência do cliente (CLV)
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Prever recomendações do produto
+          href: audience-insights/predict-product-recommendation.md
+        - name: Guia de amostra para previsão de recomendação do produto
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Implementar modelos personalizados de aprendizado de máquina
           href: audience-insights/custom-models.md
         - name: Experimentos com o Azure Machine Learning
@@ -104,10 +112,14 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Opções de exportação
       items:
-        - name: Destinos de exportação da descoberta
+        - name: Visão geral do destinos de exportação
           href: audience-insights/export-destinations.md
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
         - name: Armazenamento de Blobs do Azure
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: Dynamics 365 Customer Service (Suplemento)
@@ -136,6 +148,8 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
     - name: Administração
@@ -152,6 +166,8 @@
           href: audience-insights/supported-languages.md
     - name: Extensibilidade
       items:
+        - name: Integre dados da Web a partir de insights de participação
+          href: audience-insights/integrate-engagement-insights.md
         - name: Revisar os esquemas de entidades no Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Trabalhar com APIs
@@ -170,10 +186,6 @@
       href: engagement-insights/overview.md
     - name: Avaliação gratuita
       href: 'https://pi.dynamics.com/'
-    - name: Início Rápido
-      items:
-        - name: Início rápido para versão preliminar pública
-          href: engagement-insights/quickstart.md
     - name: Introdução
       items:
         - name: Introdução
@@ -223,4 +235,4 @@
     - name: Limites de serviço
       href: engagement-insights/quotas.md
 - name: Contatar o suporte
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'

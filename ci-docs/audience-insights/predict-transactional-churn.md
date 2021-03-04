@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644389"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268304"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsão de rotatividade transacional (versão preliminar)
 
@@ -96,6 +96,8 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
 1. Opcionalmente, selecione **Adicionar dados** para **Atividades do cliente**. Escolha a entidade que fornece as informações de atividades do cliente conforme descrito nos pré-requisitos.
 
 1. Mapeie os campos semânticos para atributos na sua entidade de atividades do cliente e selecione **Avançar**. Para obter descrições dos campos, observe os [pré-requisitos](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Mapeie os campos do cliente para dados transacionais.":::
 
 1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está configurando. Selecione **Criar novo** e escolha um tipo de atividade disponível ou crie um novo.
 
@@ -185,3 +187,6 @@ A exclusão de uma previsão também remove sua entidade de saída.
 1. Selecione os três pontos verticais ao lado da previsão que deseja excluir.
 
 1. Selecione **Excluir**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

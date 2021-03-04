@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643579"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269776"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guia de amostra para previsão de rotatividade transacional (versão preliminar)
 
@@ -49,7 +49,7 @@ Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes
    [!div class="mx-imgBorder"]
    ![Transformar Data de nascimento em Data](media/ecommerce-dob-date.PNG "transformar data de nascimento em data")
 
-1. No campo 'Nome' no painel direito, renomeie sua fonte de dados de **Consulta** para **eCommerceContacts**
+1. No campo **Nome** no painel direito, renomeie sua fonte de dados de **Consulta** para **eCommerceContacts**
 
 1. Salvar a fonte de dados.
 
@@ -66,7 +66,7 @@ Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes
    - **PurchasedOn**: Data/Hora
    - **TotalPrice**: Moeda
    
-1. No campo 'Nome' no painel direito, renomeie sua fonte de dados de **Consulta** para **eCommercePurchases**.
+1. No campo **Nome** no painel direito, renomeie sua fonte de dados de **Consulta** para **eCommercePurchases**.
 
 1. Salvar a fonte de dados.
 
@@ -84,7 +84,7 @@ Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes
    - **RewardsPoints**: Número inteiro
    - **CreatedOn**: Data/Hora
 
-1. No campo 'Nome' no painel direito, renomeie sua fonte de dados de **Consulta** para **loyCustomers**.
+1. No campo **Nome** no painel direito, renomeie sua fonte de dados de **Consulta** para **loyCustomers**.
 
 1. Salvar a fonte de dados.
 
@@ -166,7 +166,7 @@ Com os perfis de cliente unificados em vigor, agora podemos executar a previsão
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Selecione a janela de previsão de niveladores de modelo e definição de rotatividade.":::
 
-1. Selecione **Histórico de compras (obrigatório)** e selecione **Adicionar dados** para histórico de assinaturas.
+1. Selecione **Histórico de Compras (obrigatório)** e selecione **Adicionar dados** para histórico de compra.
 
 1. Adicione a entidade **eCommercePurchases : eCommerce** e mapeie os campos do eCommerce para os campos correspondentes exigidos pelo modelo.
 
@@ -204,3 +204,6 @@ Você pode criar um novo segmento com base na entidade criada pelo modelo.
 Agora, você tem um segmento que é atualizado dinamicamente que identifica clientes de alto risco de rotatividade para este negócio de assinatura.
 
 Para obter mais informações, consulte [Criar e gerenciar segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

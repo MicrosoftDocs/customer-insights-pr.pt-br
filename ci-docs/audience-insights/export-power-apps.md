@@ -1,20 +1,20 @@
 ---
 title: Conector do Power Apps
 description: Conecte-se com o Power Apps e o Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405011"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268902"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector do Microsoft Power Apps (versão prévia)
 
@@ -31,7 +31,7 @@ Consulte a documentação do Power Apps para saber como [adicionar uma conexão 
 Depois de adicionar o Customer Insights como uma conexão de dados, você pode escolher as seguintes entidades no Power Apps:
 
 - Cliente: para usar dados do [perfil de cliente unificado](customer-profiles.md).
-- Atividade Unificada do Cliente: para exibir a [linha do tempo](activities.md) no aplicativo.
+- UnifiedActivity: para exibir a [linha do tempo de atividade](activities.md) no aplicativo.
 
 ## <a name="limitations"></a>Limitações
 
@@ -72,3 +72,6 @@ Por exemplo, você adiciona perfis de clientes a um [controle de galeria](https:
 1. Para exibir a linha do tempo unificada para um cliente, adicione um elemento Galeria e adicione a propriedade Itens: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Exemplo: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

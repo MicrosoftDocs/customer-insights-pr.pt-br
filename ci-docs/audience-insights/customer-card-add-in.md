@@ -1,7 +1,7 @@
 ---
 title: Instalar e configurar o Complemento do Cartão do Cliente
 description: Instalar e configura o suplemento de Cartão de Cliente para o Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644029"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268030"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
@@ -28,7 +28,7 @@ Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos
 - Perfis de clientes [ingeridos a partir do aplicativo do Dynamics 365 usando o Common Data Service](connect-power-query.md).
 - Os usuários do complemento do cartão do cliente precisam ser [adicionados como usuários](permissions.md) nos insights de público-alvo.
 - [Recursos de pesquisa e filtro configurados](search-filter-index.md).
-- Controle demográfico: campos demográficos, como idade ou sexo, estão disponíveis no perfil de cliente unificado.
+- Controle demográfico: campos demográficos (como idade ou sexo) estão disponíveis no perfil de cliente unificado.
 - Controle de enriquecimento: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
 - Controle de inteligência: requer dados gerados usando o Azure Machine Learning ([Previsões](predictions.md) ou [Modelos Personalizados](custom-models.md))
 - Controle de medida: requer [medidas configuradas](measures.md).
@@ -92,10 +92,26 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 
 1. Na caixa de diálogo **Propriedades do Campo**, limpe a caixa de seleção **Exibir rótulo no formulário**.
 
-1. Selecione a opção **Web** para o controle. Para o controle Enriquecimento, selecione qual tipo de enriquecimento você quer exibir, configurando o campo **enriqumentType**. Você precisa adicionar um controle de enriquecimento separado para cada tipo de enriquecimento.
+1. Selecione a opção **Web** para o controle. Para o controle Enriquecimento, selecione qual tipo de enriquecimento você quer exibir, configurando o campo **enriqumentType**. Adicione um controle de enriquecimento separado para cada tipo de enriquecimento.
 
 1. Selecione **Salvar** e **Publicar** para publicar o formulário de contato atualizado.
 
 1. Vá para o formulário de contato publicado. Você verá o controle recém-adicionado. Pode ser necessário fazer login na primeira vez em que o utilizar.
 
 1. Para personalizar o que você deseja mostrar no controle personalizado, selecione o botão de edição no canto superior direito.
+
+## <a name="upgrade-customer-card-add-in"></a>Atualizar Suplemento do Cartão do Cliente
+O Suplemento do Cartão do Cliente não é atualizado automaticamente. Para atualizar para a versão mais recente, siga este procedimento no aplicativo Dynamics 365 que tem o suplemento instalado.
+
+1. No aplicativo Dynamics 365, acesse **Configurações** > **Personalização** e selecione **Soluções**.
+
+1. Na tabela de suplementos, procure **CustomerInsightsCustomerCard** e selecione a linha.
+
+1. Selecione **Aplicar Atualização de Solução** na barra de ações.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atualize a solução na Área de personalização dos aplicativos do Dynamics 365":::
+
+1. Depois de iniciar o processo de atualização, você verá um indicador de carregamento até que a atualização seja concluída. Se não houver uma versão mais recente, a atualização exibirá uma mensagem de erro.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

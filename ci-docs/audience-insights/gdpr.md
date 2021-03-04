@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405040"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268672"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitações de Direitos do Titular dos Dados (DSR) no GDPR
 
@@ -75,3 +75,6 @@ Um administrador do locatário pode seguir estas etapas para exportar dados:
 1. Enviar um email para D365CI@microsoft.com especificando o endereço de email do usuário na solicitação. A equipe do Customer Insights enviará um email para o endereço de email do administrador do locatário registrado, pedindo confirmação para exportar dados.
 2. Reconheça a confirmação para exportar os dados para o usuário solicitado.
 3. Receba os dados exportados através do endereço de e-mail do administrador do locatário.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

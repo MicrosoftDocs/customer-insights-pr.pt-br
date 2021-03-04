@@ -4,17 +4,17 @@ description: Corresponda entidades para criar perfis de clientes unificados.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405050"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267464"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -22,7 +22,7 @@ Após concluir a fase de mapeamento, você estará pronto para corresponder suas
 
 ## <a name="specify-the-match-order"></a>Especifique a ordem de correspondência
 
-Vá para **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
+Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
 
 Cada correspondência unifica duas ou mais entidades em uma única entidade, enquanto persiste cada registro de cliente exclusivo. No exemplo a seguir, selecionamos três entidades: **ContactCSV: TestData** como a entidade **Principal**, **WebAccountCSV: TestData** como a **Entidade 2** e **CallRecordSmall: TestData** como **Entidade 3**. O diagrama acima das seleções ilustra como a ordem de correspondência será executada.
 
@@ -136,7 +136,7 @@ Depois que um registro que passou por eliminação de duplicação for identific
 
 1. A execução do processo de correspondência agora agrupa os registros com base nas condições definidas nas regras de eliminação de duplicação. Após o agrupamento dos registros, a política de mesclagem é aplicada para identificar o registro vencedor.
 
-1. Esse registro vencedor é então passado para a correspondência entre entidades.
+1. Esse registro vencedor é então transmitido para a correspondência entre entidades, juntamente com os registros não vencedores (por exemplo, IDs alternativas) para melhorar a qualidade da correspondência.
 
 1. Quaisquer regras de correspondência personalizadas definidas para sempre corresponder e nunca corresponder anulam as regras de eliminação de duplicação. Se uma regra de eliminação de duplicação identificar registros correspondentes e uma regra de correspondência personalizada for definida para nunca corresponder esses registros, esses dois registros não serão correspondidos.
 
@@ -157,6 +157,17 @@ O primeiro processo de correspondência resulta na criação de uma entidade mes
 
 > [!TIP]
 > Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
+
+## <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicação como uma entidade
+Além da entidade mestre unificada criada como parte da correspondência entre entidades, o processo de eliminação de duplicação também gera uma entidade para cada entidade da ordem de correspondência para identificar os registros sem duplicação. Essas entidades podem ser encontradas juntamente com **ConflationMatchPairs:CustomerInsights** na seção **Sistema** na página **Entidades**, com o nome **Deduplication_Datasource_Entity**.
+
+Uma entidade de saída de eliminação de duplicação contém as seguintes informações:
+- IDs/chaves
+  - Campo de chave primária e seu campo de IDs alternativas. O campo de IDs alternativas consiste em todas as IDs alternativas identificadas para um registro.
+  - O campo Deduplication_GroupId mostra o grupo ou cluster identificado em uma entidade que agrupa todos os registros semelhantes com base nos campos de eliminação de duplicação especificados. Isso é usado para fins de processamento do sistema. Se não houver regras de eliminação de duplicação manual especificadas e as regras de eliminação de duplicação definidas pelo sistema se aplicarem, talvez você não encontre esse campo na entidade de saída de eliminação de duplicação.
+  - Deduplication_WinnerId: este campo contém a ID do vencedor dos grupos ou clusters identificados. Se a Deduplication_WinnerId for igual ao valor da chave primária para um registro, isso significa que o registro é o registro vencedor.
+- Campos usados para definir as regras de eliminação de duplicação.
+- Campos de regra e pontuação para denotar quais das regras de eliminação de duplicação foram aplicadas e a pontuação retornada pelo algoritmo de correspondência.
 
 ## <a name="review-and-validate-your-matches"></a>Revise e valide suas correspondências
 
@@ -200,6 +211,11 @@ Aumente a qualidade reconfigurando alguns dos seus parâmetros de correspondênc
   > [!div class="mx-imgBorder"]
   > ![Duplicar uma regra](media/configure-data-duplicate-rule.png "Duplicar uma regra")
 
+- **Desative uma regra** para reter uma regra de correspondência enquanto a exclui do processo de correspondência.
+
+  > [!div class="mx-imgBorder"]
+  > ![Desativar uma regra](media/configure-data-deactivate-rule.png "Desativar uma regra")
+
 - **Edite suas regras** selecionando o símbolo **Editar**. Você pode aplicar as seguintes alterações:
 
   - Alterar atributos para uma condição: selecione novos atributos na linha de condição específica.
@@ -229,6 +245,8 @@ Você pode especificar condições que determinados registros sempre devem corre
     - Entity2Key: 34567
 
    O mesmo arquivo de modelo pode especificar registros de correspondência personalizados de várias entidades.
+   
+   Se você deseja especificar a correspondência personalizada para eliminação de duplicação em uma entidade, forneça a mesma entidade como Entidade1 e Entidade2 e defina os diferentes valores de chave primária.
 
 5. Depois de adicionar todas as substituições que você deseja aplicar, salve o arquivo de modelo.
 
@@ -250,3 +268,6 @@ Você pode especificar condições que determinados registros sempre devem corre
 ## <a name="next-step"></a>Próxima etapa
 
 Depois de concluir o processo de correspondência de pelo menos um par de correspondência, você pode resolver possíveis contradições em seus dados, percorrendo o tópico [**Mesclar**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
