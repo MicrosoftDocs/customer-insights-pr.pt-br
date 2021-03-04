@@ -6,16 +6,16 @@ metadata:
   description: Hub de ajuda com links importantes dos insights de público-alvo.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405045"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745707"
 landingContent:
 - title: Sobre os insights de público-alvo
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Site da comunidade
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Ingerir fontes de dados
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Adicionar fontes de dados
-      url: data-sources.md
-    - text: Atualização incremental
-      url: incremental-refresh-data-sources.md
-    - text: Compreender as entidades
-      url: entities.md
 - title: Unificar dados
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 'Mapa '
-      url: map-entities.md
-    - text: Corresponder
-      url: match-entities.md
-    - text: Merge
-      url: merge-entities.md
-- title: Refinar perfis do cliente
+    - text: Visão geral de fontes de dados
+      url: data-sources.md
+    - text: Visão geral da unificação
+      url: data-unification.md
+    - text: Compreender as entidades
+      url: entities.md
+- title: Enriquecer refinar dados
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Enriquecer perfis de cliente
+      url: enrichment-hub.md
     - text: Configurar relacionamentos
       url: relationships.md
     - text: Listar atividades do cliente
       url: activities.md
-    - text: Traga seus próprios modelos Aprendizado de Máquina
-      url: custom-models.md
+- title: Obtenha insights
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Criar segmentos
+      url: segments.md
+    - text: Criar medidas
+      url: measures.md
+    - text: Completar dados com previsões
+      url: predictions.md
 - title: Exportar dados do cliente
   linkLists:
   - linkListType: how-to-guide
