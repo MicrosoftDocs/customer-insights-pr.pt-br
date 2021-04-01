@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270190"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598325"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Usar modelos baseados no Azure Machine Learning Studio (clássico)
 
@@ -37,7 +37,7 @@ Em uma primeira etapa, precisamos criar um espaço de trabalho e abrir o Machine
 
 1. Procure **Espaço de Trabalho do Machine Learning Studio** e selecione **Criar**.
 
-1. Insira os detalhes necessários para [criar o espaço de trabalho](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Escolha o **Tipo de preço do plano do serviço Web** com base na quantidade de dados que você planeja importar. Para um melhor desempenho, selecione o **Local** geograficamente mais próximo de você.
+1. Insira os detalhes necessários para [criar o espaço de trabalho](/azure/machine-learning/studio/create-workspace). Escolha o **Tipo de preço do plano do serviço Web** com base na quantidade de dados que você planeja importar. Para um melhor desempenho, selecione o **Local** geograficamente mais próximo de você.
 
 1. Depois de criar o recurso, o painel da área de trabalho Machine Learning Studio aparecerá. Selecione **Lançar Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Agora você pode criar um novo experimento ou importar um modelo de experimento 
 
    ![Configure um serviço web preditivo](media/predictive-webservice-control.png)
 
-1. Depois que o experimento de serviço web preditivo for bem-sucedido, você pode implantá-lo para agendamento automático. Para que o serviço Web funcione com o Customer Insights, selecione **Implantar Serviço Web** > **Versão Preliminar Implantar Serviço Web [Novo]**. [Saiba mais sobre como implantar um serviço Web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Depois que o experimento de serviço web preditivo for bem-sucedido, você poderá implantá-lo para agendamento automático. Para que o serviço Web funcione com o Customer Insights, selecione **Implantar Serviço Web** > **Versão Preliminar Implantar Serviço Web [Novo]**. [Saiba mais sobre como implantar um serviço Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Implantar um serviço Web preditivo](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ A imagem a seguir mostra o pipeline de treinamento e avaliação do modelo do Az
 
 ![Modelo de rotatividade do Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-Também aplicamos uma técnica chamada **Importância do Recurso de Permutação**, um aspecto importante da otimização do modelo. Os modelos integrados têm pouco ou nenhum insight sobre o impacto de qualquer recurso específico na previsão final. A calculadora de importância de recurso usa um algoritmo personalizado para calcular a influência de recursos individuais no resultado de um modelo específico. A importância do recurso é normalizada entre +1 e -1. Uma influência negativa significa que o recurso correspondente tem uma influência contra intuitiva no resultado e deve ser removido do modelo. Uma influência positiva indica que o recurso está contribuindo fortemente para a previsão. Esses valores não são coeficientes de correlação, pois são métricas diferentes. Para obter mais informações, consulte [Importância do Recurso de Permutação](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Também aplicamos uma técnica chamada **Importância do Recurso de Permutação**, um aspecto importante da otimização do modelo. Os modelos integrados têm pouco ou nenhum insight sobre o impacto de qualquer recurso específico na previsão final. A calculadora de importância de recurso usa um algoritmo personalizado para calcular a influência de recursos individuais no resultado de um modelo específico. A importância do recurso é normalizada entre +1 e -1. Uma influência negativa significa que o recurso correspondente tem uma influência contra intuitiva no resultado e deve ser removido do modelo. Uma influência positiva indica que o recurso está contribuindo fortemente para a previsão. Esses valores não são coeficientes de correlação, pois são métricas diferentes. Para obter mais informações, consulte [Importância do Recurso de Permutação](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Todo o [experimento de rotatividade está disponível na Galeria de IA do Azure](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Todo o [experimento de recomendação de produto pode ser acessado na Galeria de
 
 ## <a name="integrate-custom-models"></a>Integrar modelos personalizados
 
-Para usar essas previsões no Customer Insights, você precisa **exportar** as previsões junto com as IDs dos clientes. [Exporte-as para o mesmo local de Armazenamento de Blobs do Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) para o qual você exporta os dados de origem. O serviço web preditivo pode ser planejado para ser executado regularmente e atualizar as pontuações.
+Para usar essas previsões no Customer Insights, você precisa **exportar** as previsões junto com as IDs dos clientes. [Exporte-as para o mesmo local de Armazenamento de Blobs do Azure](/azure/storage/common/storage-import-export-data-from-blobs) para o qual você exporta os dados de origem. O serviço web preditivo pode ser planejado para ser executado regularmente e atualizar as pontuações.
 
 Os dados gerados pelo modelo personalizado podem ser usados para enriquecer ainda mais os dados dos clientes. Para obter mais informações, consulte [Modelos personalizados de aprendizado de máquina](custom-models.md).
 

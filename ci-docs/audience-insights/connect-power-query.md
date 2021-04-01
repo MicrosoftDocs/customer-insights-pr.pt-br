@@ -2,23 +2,23 @@
 title: Ingerir dados por meio de um conector do Power Query
 description: Conectores para fontes de dados com base no Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267754"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596899"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar-se à fonte de dados do Power Query
 
-O Power Query oferece um amplo conjunto de conectores para ingerir dados. A maioria desses conectores são suportados por Dynamics 365 Customer Insights. Adicionar fontes de dados com base em conectores do Power Query geralmente segue as etapas descritas na próxima seção. No entanto, dependendo do conector que você usa, são necessárias informações diferentes. Para obter mais informações, consulte a documentação sobre conectores individuais na [referência do conector do Power Query](https://docs.microsoft.com/power-query/connectors/).
+O Power Query oferece um amplo conjunto de conectores para ingerir dados. A maioria desses conectores são suportados por Dynamics 365 Customer Insights. Adicionar fontes de dados com base em conectores do Power Query geralmente segue as etapas descritas na próxima seção. No entanto, dependendo do conector que você usa, são necessárias informações diferentes. Para obter mais informações, consulte a documentação sobre conectores individuais na [referência do conector do Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Criar uma nova fonte de dados
 
@@ -44,7 +44,7 @@ O Power Query oferece um amplo conjunto de conectores para ingerir dados. A maio
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo Editar consultas](media/data-manager-configure-edit-queries.png "Caixa de diálogo Editar consultas")
 
-1. Você também poderá transformar seus dados. Selecione uma entidade para editar ou transformar. Use as opções na janela do Power Query para aplicar as transformações. Cada transformação é listada em **Etapas aplicadas**. O Power Query fornece várias opções de transformação pré-criadas. Para obter mais informações, consulte [Transformações do Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Você também poderá transformar seus dados. Selecione uma entidade para editar ou transformar. Use as opções na janela do Power Query para aplicar as transformações. Cada transformação é listada em **Etapas aplicadas**. O Power Query fornece várias opções de transformação pré-criadas. Para obter mais informações, consulte [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Você pode adicionar entidades adicionais à sua fonte de dados, selecionando **Obter dados** na caixa de diálogo **Editar consultas**.
 
@@ -59,7 +59,7 @@ O Power Query oferece um amplo conjunto de conectores para ingerir dados. A maio
 
 ## <a name="available-power-query-data-sources"></a>Fontes de dados do Power Query disponíveis
 
-Consulte a [referência do conector do Power Query](https://docs.microsoft.com/power-query/connectors/) para obter uma lista atualizada de conectores que você pode selecionar para importar os dados para o Customer Insights. 
+Consulte a [referência do conector do Power Query](/power-query/connectors/) para obter uma lista atualizada de conectores que você pode selecionar para importar os dados para o Customer Insights. 
 
 Conectores com uma marca de seleção na coluna **Customer Insights (Dataflows)** estão disponíveis para criar novas fontes de dados com base no Power Query. Revise a documentação de um conector específico para saber mais sobre seus pré-requisitos, limitações e outros detalhes.
 

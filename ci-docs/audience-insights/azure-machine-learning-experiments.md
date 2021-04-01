@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267892"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597405"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos baseados em Azure Machine Learning
 
@@ -29,9 +29,9 @@ Os dados unificados no Dynamics 365 Customer Insights são uma fonte para a cria
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Configurar o espaço de trabalho do Azure Machine Learning
 
-1. Consulte [Criar um espaço de trabalho do Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) e conheça opções diferentes para criar o espaço de trabalho. Para obter o melhor desempenho, crie o espaço de trabalho em uma região do Azure que seja geograficamente mais próxima de seu ambiente do Customer Insights.
+1. Consulte [Criar um espaço de trabalho do Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) e conheça opções diferentes para criar o espaço de trabalho. Para obter o melhor desempenho, crie o espaço de trabalho em uma região do Azure que seja geograficamente mais próxima de seu ambiente do Customer Insights.
 
-1. Acesse seu espaço de trabalho por meio do [Azure Machine Learning Studio](https://ml.azure.com/). Existem várias [maneiras de interagir](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) com seu espaço de trabalho.
+1. Acesse seu espaço de trabalho por meio do [Azure Machine Learning Studio](https://ml.azure.com/). Existem várias [maneiras de interagir](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) com seu espaço de trabalho.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Trabalhar com o designer do Azure Machine Learning
 
@@ -39,13 +39,13 @@ O designer do Azure Machine Learning fornece uma tela visual em que você pode a
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Trabalhar com o SDK do Azure Machine Learning
 
-Cientistas de dados e desenvolvedores de IA usam o [SDK do Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) para criar fluxos de trabalho de aprendizado de máquina. Atualmente, os modelos treinados com o SDK não podem ser integrados diretamente ao Customer Insights. Um pipeline de inferência em lote que usa esse modelo é necessário para a integração com o Customer Insights.
+Cientistas de dados e desenvolvedores de IA usam o [SDK do Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) para criar fluxos de trabalho de aprendizado de máquina. Atualmente, os modelos treinados com o SDK não podem ser integrados diretamente ao Customer Insights. Um pipeline de inferência em lote que usa esse modelo é necessário para a integração com o Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Requisitos de pipeline em lote para a integração com o Customer Insights
 
 ### <a name="dataset-configuration"></a>Configuração do conjunto de dados
 
-Você precisa criar conjuntos de dados para usar dados de entidade do Customer Insights para seu pipeline de inferência em lote. Esses conjuntos de dados precisam ser registrados no espaço de trabalho. Atualmente, nós apenas oferecemos suporte a [conjuntos de dados de tabela](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) no formato .csv. Os conjuntos de dados que correspondem aos dados da entidade precisam ser parametrizados como um parâmetro de pipeline.
+Você precisa criar conjuntos de dados para usar dados de entidade do Customer Insights para seu pipeline de inferência em lote. Esses conjuntos de dados precisam ser registrados no espaço de trabalho. Atualmente, nós apenas oferecemos suporte a [conjuntos de dados de tabela](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) no formato .csv. Os conjuntos de dados que correspondem aos dados da entidade precisam ser parametrizados como um parâmetro de pipeline.
    
 * Parâmetros do conjunto de dados no designer
    
@@ -76,7 +76,7 @@ Você precisa criar conjuntos de dados para usar dados de entidade do Customer I
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importar dados de pipeline para o Customer Insights
 
-* O designer fornece o [Módulo de exportação de dados](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) que permite à saída de um pipeline ser exportada para o armazenamento do Azure. Atualmente, o módulo deve usar o tipo de armazenamento de dados **Armazenamento de Blobs do Azure** e parametrizar o **Armazenamento de dados** e o **Caminho** relativo. O Customer Insights substitui esses dois parâmetros durante a execução do pipeline com um armazenamento de dados e caminho que é acessível ao produto.
+* O designer fornece o [Módulo de exportação de dados](/azure/machine-learning/algorithm-module-reference/export-data) que permite à saída de um pipeline ser exportada para o armazenamento do Azure. Atualmente, o módulo deve usar o tipo de armazenamento de dados **Armazenamento de Blobs do Azure** e parametrizar o **Armazenamento de dados** e o **Caminho** relativo. O Customer Insights substitui esses dois parâmetros durante a execução do pipeline com um armazenamento de dados e caminho que é acessível ao produto.
    > [!div class="mx-imgBorder"]
    > ![Configuração do módulo de exportação de dados](media/intelligence-designer-importdata.png "Configuração do módulo de exportação de dados")
    

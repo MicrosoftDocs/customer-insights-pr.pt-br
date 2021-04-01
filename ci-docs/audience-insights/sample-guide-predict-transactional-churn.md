@@ -2,19 +2,19 @@
 title: Guia de amostra de previsão de rotatividade transacional
 description: Use este guia de amostra para experimentar o modelo de previsão de rotatividade transacional pronto para uso.
 ms.date: 11/19/2020
-ms.reviewer: digranad
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269776"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595412"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guia de amostra para previsão de rotatividade transacional (versão preliminar)
 

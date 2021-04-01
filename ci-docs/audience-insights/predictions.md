@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268258"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595887"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Concluir seus dados parciais com previsões
 
@@ -31,7 +31,7 @@ As previsões permitem criar facilmente valores previstos que podem melhorar sua
 
 Antes de sua organização poder usar o recurso de previsões, verifique se os seguintes pré-requisitos foram atendidos:
 
-1. Sua organização tem uma instância [configurada no Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) e está na mesma organização que o Customer Insights.
+1. Sua organização tem uma instância [configurada no Common Data Service](/ai-builder/build-model#prerequisites) e está na mesma organização que o Customer Insights.
 
 2. Seu ambiente está anexado à sua instância do Common Data Service.
 
@@ -120,7 +120,7 @@ Depois de criar uma previsão, você poderá personalizar o modelo no AI Builder
 
 4. Selecione **Personalizar no AI Builder**.
 
-5. Atualize seu modelo no AI Builder. [Saiba mais sobre o gerenciamento de modelos no AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Atualize seu modelo no AI Builder. [Saiba mais sobre o gerenciamento de modelos no AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 A próxima execução da sua previsão usará o modelo atualizado que você criou.
 

@@ -1,7 +1,7 @@
 ---
 title: Recursos novos e futuros
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270418"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598417"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Estamos animados para anunciar nossas atualizações mais recentes! Este artigo resume os recursos de recursos de versão preliminar pública, aprimoramentos de disponibilidade geral e atualizações de recursos. Para ver os planos de recurso a longo prazo, consulte os [Planos de lançamento do Dynamics 365 e do Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Estamos animados para anunciar nossas atualizações mais recentes! Este artigo resume os recursos de recursos de versão preliminar pública, aprimoramentos de disponibilidade geral e atualizações de recursos. Para ver os planos de recurso a longo prazo, consulte os [Planos de lançamento do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
 
 Você também pode assistir ao vídeo a seguir para saber mais sobre os recursos planejados para os últimos seis meses.
 
@@ -30,6 +30,40 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Atualizações de fevereiro de 2021
+
+As atualizações em fevereiro de 2021 incluem vários recursos, atualizações de desempenho e correções de bugs.
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar segmentos para o AdRoll**
+
+  Estendemos nossos destinos de exportação para incluir o AdRoll. Agora você pode exportar segmentos do Customer Insights para públicos-alvo do AdRoll e usá-los como a linha de base para sua publicidade. Para obter mais informações, consulte [Conector para AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmentos
+ 
+- **Duplicar um segmento**
+  
+  Para criar um novo segmento com base em um existente, agora você pode duplicar um segmento e editar o segmento duplicado para refiná-lo ainda mais. 
+
+- **Adicionar outros atributos a um segmento**
+
+  Agora você pode incluir atributos em sua saída do segmento, mesmo se esses atributos não fizerem parte do perfil do cliente. Por exemplo, inclua as IDs de assinatura em um segmento, mesmo que ele faça parte da entidade de assinatura que tenha uma relação M:1 com a entidade do cliente. Contanto que o atributo pertença a uma entidade relacionada à entidade do cliente, agora é possível incluir esses atributos.  
+
+#### <a name="predictions"></a>Previsões
+
+- **Criar recomendações de produto preditivas**
+
+  Entender o que os clientes estão interessados em comprar é uma das primeiras etapas necessárias para melhorar a receita comercial e ganhar a fidelidade do cliente por meio da personalização e do envolvimento. Fornecer recomendações de produtos que não estejam alinhados aos interesses de seu cliente pode criar uma sensação de desconexão entre o cliente e sua empresa e, em última análise, limitar a receita potencial e a experiência geral de um cliente. 
+
+  Usando seus próprios dados, agora você pode criar previsões para quais produtos seus clientes provavelmente comprarão no futuro. Para obter mais informações, consulte [Previsão de recomendação de produto](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Administrador do sistema
+
+- **O ambiente de cópia oferece suporte a mais tipos de fontes de dados**
+
+  Os administradores podem copiar as configurações do ambiente para um novo ambiente na mesma organização. Esse recurso estende a funcionalidade do ambiente de cópia para casos em que as fontes de dados com base em um data lake do Common Data Service ou uma pasta do Common Data Model são usadas.
 
 ## <a name="january-2021-updates"></a>Atualizações de janeiro de 2021
 
@@ -195,9 +229,9 @@ Para obter mais informações, consulte [Conector para Mailchimp](export-mailchi
 
 - **Desduplique os registros de origem em uma entidade Match**
 
-Especifique regras de desduplicação em entidades usadas no processo de correspondência para identificar registros duplicados. Mescle-os em um registro e vincule todos os registros de origem a este registro mesclado. Esse registro desduplicado será então usado no processo de correspondência entre entidades.
+Especifique regras de eliminação de duplicação em entidades usadas no processo de correspondência para identificar registros duplicados. Mescle-os em um registro e vincule todos os registros de origem a este registro mesclado. Esse registro desduplicado será então usado no processo de correspondência entre entidades.
 
-Para mais informações, consulte [Definir a desduplicação em uma entidade correspondente](match-entities.md#define-deduplication-on-a-match-entity).
+Para mais informações, consulte [Definir a eliminação de duplicação em uma entidade correspondente](match-entities.md#define-deduplication-on-a-match-entity).
 
 #### <a name="system-administration"></a>Administrador do sistema
 
