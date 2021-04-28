@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes unificados
 description: Use recursos para enriquecer os dados do cliente.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597681"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895991"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (visualização)
 
@@ -27,9 +27,9 @@ Você precisa ter permissões de Colaborador ou Administrador para criar ou edit
 
 Na guia **Descobrir**, você encontrará os seguintes enriquecimentos:
 
-- [Marcas](enrichment-microsoft-graph.md) fornecidas pelo Microsoft Graph
-- [Interesses](enrichment-microsoft-graph.md) fornecidos pelo Microsoft Graph
-- [Dados da empresa](enrichment-leadspace.md) fornecidos pela Leadspace
+- [Marcas](enrichment-microsoft.md) fornecidas pela Microsoft
+- [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft
+- [Dados de empresas](enrichment-leadspace.md) fornecidos pela Leadspace
 - [Dados demográficos](enrichment-experian.md) fornecidos pela Experian
 - [Dados de localização](enrichment-here.md) fornecidos pela HERE Technologies
 - [Dados personalizados](enrichment-SFTP-custom-import.md) via SFTP
@@ -40,7 +40,7 @@ Na guia **Meus enriquecimentos**, você pode ver os enriquecimentos configurados
 
 Vá para **Meus enriquecimentos** para ver todos os enriquecimentos configurados. Cada enriquecimento é representado como uma linha que inclui informações adicionais sobre o enriquecimento.
 
-Selecione um enriquecimento para ver as opções disponíveis. Como alternativa, você pode selecionar as reticências (...) em um item da lista para ver as opções.
+Selecione um enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências (...) em um item da lista para ver as opções.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opções para gerenciar enriquecimentos na lista de enriquecimentos":::
 
@@ -52,5 +52,12 @@ Selecione um enriquecimento para ver as opções disponíveis. Como alternativa,
 
 Você pode executar ou desativar vários enriquecimentos de uma vez, selecionando-os na lista. As opções de exibição e edição não estão disponíveis como ação em massa e funcionam apenas para um enriquecimento de cada vez.
 
+## <a name="enrichments-and-connections"></a>Enriquecimentos e conexões
+
+Os enriquecimentos de terceiros são configurados usando [conexões](connections.md), as quais um administrador configura com credenciais e fornece consentimento para a transferências de dados. A conexão pode então ser usada pelos administradores e colaboradores para a configuração de enriquecimentos.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Vários enriquecimentos do mesmo tipo
+
+A entidade a ser enriquecida é especificada durante a configuração de enriquecimento, o que permite que você enriqueça somente um subconjunto de seus perfis. Por exemplo, enriqueça os dados somente para um segmento específico. Você pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma conexão. Alguns enriquecimentos terão limites para o número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e o uso atual podem ser vistos na página **Enriquecimento**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597175"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906842"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsão de rotatividade transacional (versão preliminar)
 
@@ -46,6 +46,14 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
         - **Carimbo de data/hora:** A data e a hora do evento identificado pela chave primária.
         - **Evento:** O nome do evento que você deseja usar. Por exemplo, um campo denominado "UserAction" em um supermercado pode ser um cupom usado pelo cliente.
         - **Detalhes:** Informações detalhadas sobre o evento. Por exemplo, um campo denominado "CouponValue" em um supermercado pode ser o valor da moeda do cupom.
+- Características de dados sugeridas:
+    - Dados históricos suficientes: dados de transação de pelo menos o dobro da janela de tempo selecionada. De preferência, de dois a três anos de dados de assinatura. 
+    - Várias compras por cliente: idealmente, pelo menos duas transações por cliente.
+    - Número de clientes: pelo menos 10 perfis de clientes, de preferência mais de 1.000 clientes exclusivos. O modelo falhará com menos de 10 clientes e dados históricos insuficientes.
+    - Integridade dos dados: menos de 20% de valores ausentes no campo de dados da entidade fornecida.
+
+> [!NOTE]
+> Para uma empresa com alta frequência de compra pelos clientes (em intervalos de algumas semanas), é recomendável selecionar uma janela de previsão e uma definição de rotatividade mais curtas. Para baixa frequência de compra (em intervalos de alguns meses ou uma vez por ano), escolha uma janela de previsão e uma definição de rotatividade mais longas.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Criar uma previsão de rotatividade transacional
 
@@ -129,7 +137,9 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
 1. Selecione a previsão que você deseja revisar.
    - **Nome da previsão:** nome da previsão fornecido ao criá-la.
    - **Tipo de previsão:** tipo de modelo usado para a previsão
-   - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.
+   - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.    
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de rotatividade e *IsChurn* é um rótulo binário baseado em *ChurnScore* com limite de 0,5. O limite padrão pode não funcionar para o seu cenário. [Criar um novo segmento](segments.md#create-a-new-segment) com o limite de sua preferência.
+     Nem todos os clientes são necessariamente clientes ativos. Alguns deles podem não ter tido nenhuma atividade por um longo período e já são considerados com rotatividade, com base na sua definição de rotatividade. Prever o risco de rotatividade para clientes que já apresentaram rotatividade não é útil porque eles não são o público de interesse.
    - **Campo previsto:** este campo é preenchido apenas para alguns tipos de previsões e não é usado na previsão de rotatividade.
    - **Status:** status da execução da previsão.
         - **Enfileirada:** a previsão está aguardando a execução de outros processos.

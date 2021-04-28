@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598616"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896451"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Os insights de público-alvo ajudam você a compreender melhor seus clientes. Co
   - Conectar e unificar seus dados com facilidade - obter dados transacionais, observacionais e comportamentais de [de fontes de dados usando conectores predefinidos](data-sources.md).
   - Transformar dados de clientes de maneira inteligente - criar perfis unificados de clientes, em conformidade com o [Modelo de Dados Comum](/common-data-model/). Resolver as identidades dos clientes com recomendações orientadas por AI/ML.
 
-- **Enriquecer com a inteligência do público contida no Microsoft Graph**
+- **Enriquecer com a inteligência do público**
 
-  - Criar perfis de clientes mais detalhados, [incorporando a inteligência do público contida no Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Criar perfis de clientes mais detalhados [incorporando dados enriquecidos](enrichment-hub.md).  
 
 - **Potencializar seus processos de negócios e experiências personalizadas do cliente**
 
@@ -43,7 +43,7 @@ Os insights de público-alvo ajudam você a compreender melhor seus clientes. Co
 
   - Acesso a uma ampla coleção de conectores para ingerir todos os dados de seus clientes.
   - Capacidade de unificar os dados do cliente e transformá-los no formato do [Modelo de Dados Comum](/common-data-model/).
-  - Enriquecer as informações do cliente com informações da inteligência do público contidas no Microsoft Graph, como afinidade e interesses da marca.
+  - Enriqueça as informações do cliente com insights da inteligência do público, como afinidade e interesses da marca.
   - Experiência de configuração e depuração de "cliques, não código" para ajudar a configurar facilmente os insights de público-alvo e identificar possíveis problemas.
   - Limpeza e padronização de dados do cliente em fontes diferentes com recomendações baseadas em IA.  
 

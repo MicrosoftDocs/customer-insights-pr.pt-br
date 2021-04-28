@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para a Adobe Experience Platform
 description: Saiba como usar os segmentos de insights de público-alvo na Adobe Experience Platform.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596255"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760087"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Usar segmentos do Customer Insights na Adobe Experience Platform (versão preliminar)
 
@@ -51,21 +51,36 @@ O email de oferta que você deseja enviar conterá o nome, o sobrenome e a data 
 
 Com nosso público-alvo identificado, podemos configurar a exportação dos insights de público-alvo para uma conta de Armazenamento de Blobs do Azure.
 
-1. Nos insights de público-alvo, vá para **Administrador** > **Destinos de exportação**.
+### <a name="configure-a-connection"></a>Configurar uma conexão
 
-1. No bloco **Armazenamento de Blobs do Azure**, selecione **Configurar**.
+1. Vá para **Administração** > **Conexões**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Bloco de configuração para o Armazenamento de Blobs do Azure.":::
+1. Selecione **Adicionar conexão** e escolha **Armazenamento de Blobs do Azure** ou selecione **Configurar** no bloco **Armazenamento de Blobs do Azure**:
 
-1. Forneça um **Nome de exibição** para este novo destino de exportação e, em seguida, insira o **Nome da conta**, a **Chave da conta** e o **Contêiner** da conta do Armazenamento de Blobs do Azure para a qual você deseja exportar o segmento.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Bloco de configuração para o Armazenamento de Blobs do Azure."::: para configurar a conexão.
+
+1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
+
+1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Insira o **Nome da conta**, a **Chave de conta** e o **Contêiner** da Conta de armazenamento de blobs para a qual deseja exportar o segmento.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captura de tela da configuração da conta de armazenamento. "::: 
+   
+    - Para saber mais sobre como encontrar o nome da Conta de armazenamento de blobs e a chave de conta, consulte [Gerenciar configurações da conta de armazenamento no portal do Azure](/azure/storage/common/storage-account-manage).
+    - Para saber como criar um contêiner, consulte [Criar um container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Para saber mais sobre como encontrar o nome e a chave da conta do Azure Blob Storage, consulte [Gerenciar as configurações da conta de armazenamento no portal do Azure](/azure/storage/common/storage-account-manage).
+1. Selecione **Salvar** para concluir a conexão. 
 
-   - Para saber como criar um contêiner, consulte [Criar um container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Configurar uma exportação
 
-1. Selecione **Avançar**.
+Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Vá para **Dados** > **Exportações**.
+
+1. Para criar uma exportação, selecione **Adicionar exportação**.
+
+1. No campo **Conexão para exportação**, escolha uma conexão da seção do Armazenamento de Blobs do Azure. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
 
 1. Escolha o segmento que você deseja exportar. Neste exemplo, é **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Com nosso público-alvo identificado, podemos configurar a exportação dos insi
 
 1. Selecione **Salvar**.
 
-Depois de salvar o destino da exportação, você o encontrará em **Administração** > **Exportações** > **Meus destinos de exportação**.
+Depois de salvar o destino da exportação, você a encontrará em **Dados** > **Exportações**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Captura de tela com lista de exportações e segmento de exemplo em destaque.":::
-
-Agora você pode [exportar o segmento sob demanda](export-destinations.md#export-data-on-demand). A exportação também será executada a cada [atualização agendada](system.md).
+Agora você pode [exportar o segmento sob demanda](export-destinations.md#run-exports-on-demand). A exportação também será executada a cada [atualização agendada](system.md).
 
 > [!NOTE]
 > Certifique-se de que o número de registros no segmento exportado esteja dentro do limite permitido de sua licença do Adobe Campaign Standard.

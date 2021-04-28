@@ -1,7 +1,7 @@
 ---
 title: Previsão de recomendação do produto
 description: Preveja os produtos que um cliente provavelmente comprará ou com os quais interagirá.
-ms.date: 02/15/2021
+ms.date: 03/17/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,20 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5ae78b6bbc51fd8a25bc408050a23479698a1414
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598049"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906750"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Previsão de recomendação do produto (versão preliminar)
 
 O modelo de recomendação de produto cria conjuntos de recomendações de produto preditivas. As recomendações são baseadas no comportamento de compra anterior e clientes com padrões de compra semelhantes. Você pode criar novas previsões de recomendação de produto na página **Inteligência** > **Previsões**. Selecione **Minhas previsões** para ver outras previsões que você criou.
 
-As recomendações de produtos podem estar sujeitas às leis e regulamentações locais, bem como às expectativas do cliente, as quais o modelo não foi projetado especificamente para levar em consideração.  Como usuário desse recurso preditivo, **você deve revisar as recomendações antes de entregá-las aos seus clientes** para garantir que você está cumprindo todas as leis ou regulamentos aplicáveis, bem como as expectativas do cliente quanto ao que você pode recomendar. 
+As recomendações de produtos podem estar sujeitas às leis e regulamentações locais e às expectativas dos clientes. O modelo não foi criado especificamente para levar isso em consideração.  Como usuário desse recurso preditivo, **você deve revisar as recomendações antes de fornecê-las aos seus clientes** para garantir a conformidade com todas as leis ou regulamentações aplicáveis e as expectativas dos clientes em relação ao que você pode recomendar. 
 
-Além disso, a saída deste modelo fornecerá recomendações com base na ID do produto. Seu mecanismo de entrega precisará obter IDs de produto previstos e mapeá-los para o conteúdo apropriado para que seus clientes sejam responsáveis pela localização, conteúdo de imagem e outro conteúdo ou comportamento específico de negócios.
+Além disso, a saída deste modelo fornecerá recomendações com base na ID do produto. Seu mecanismo de entrega precisará mapear as IDs de produto previstas para o conteúdo apropriado de modo que seus clientes sejam responsáveis por localização, conteúdo de imagem e outros conteúdos ou comportamentos específicos de negócios.
 
 ## <a name="sample-guide"></a>Guia de amostra
 
@@ -31,19 +31,31 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Por último, [Permissões de colaborador](permissions.md) em Customer Insights.
+
 - Conhecimento de negócios para entender os diferentes tipos de produtos para sua empresa e como seus clientes interagem com eles. Apoiamos a recomendação de produtos que foram adquiridos anteriormente por seus clientes ou recomendações de novos produtos.
+
 - Dados sobre as transações, compras e seu histórico:
     - Identificadores de transação para distinguir compras ou transações.
     - Identificadores de cliente para mapear transações aos seus clientes.
     - Datas dos eventos de transação que especificam a transação ocorreu.
-    - (Opcional) Informações de ID do produto para a transação.
+    - Informações da ID do Produto (Product ID) para a transação.
+    - (Opcional) Uma entidade de dados do catálogo de produtos para usar um filtro de produto.
     - (Opcional) Se uma transação é uma devolução ou não.
     - O esquema de dados semânticos requer as seguintes informações:
         - **ID da transação:** um identificador exclusivo de uma compra ou transação.
-        - **Data da transação:** a data da compra ou da transação.
+        - **Data da transação:** a data da compra ou transação.
         - **Valor da transação:** o valor numérico da compra ou da transação.
         - **ID exclusiva do produto:** a ID do produto ou serviço adquirido, se os seus dados estiverem em um nível de item de linha.
-        - (Opcional) **Compra ou devolução:** um campo verdadeiro/falso que identifica se a transação foi uma devolução ou não. Se o **Valor da transação** for negativo, também usaremos essa informação para inferir uma devolução.
+        - (Opcional) **Compra ou devolução:** um campo booliano em que o valor *verdadeiro* identifica que uma transação foi uma devolução. Se os dados da Compra ou Devolução não forem fornecidos para o modelo e o **Valor da transação** for negativo, também usaremos essas informações para inferir uma devolução.
+- Características de dados sugeridas:
+    - Dados históricos suficientes: pelo menos um ano de dados transacionais, de preferência de dois a três anos para incluir alguma sazonalidade.
+    - Várias compras por cliente: três ou mais transações por ID de Cliente
+    - Número de clientes: pelo menos 100 clientes, de preferência mais de 10.000 clientes. O modelo falhará com menos de 100 clientes.
+
+> [!NOTE]
+> - O modelo requer o histórico de transações de seus clientes. A definição de uma transação é bastante flexível. Todos os dados que descrevem uma interação entre usuário e produto podem funcionar como uma entrada. Por exemplo, comprar um produto, assistir a uma aula ou participar de um evento.
+> - Apenas uma entidade de histórico de transações pode ser configurada atualmente. Se houver várias entidades de compra, una-as no Power Query antes da ingestão de dados.
+> - Se ordem e detalhes da ordem forem entidades diferentes, junte-as antes de usar no modelo. O modelo não funciona com apenas uma ID de ordem ou ID de recebimento em uma entidade.
 
 
 ## <a name="create-a-product-recommendation-prediction"></a>Criar uma previsão de recomendação do produto
@@ -71,7 +83,7 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Escolha se deseja **Sugerir produtos que os clientes compraram recentemente**.
 
-1. Se você selecionou *não* recomendar produtos comprados recentemente, defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada 2 anos. Esta janela examinará o histórico de compras dos últimos 2 anos e, se encontrar um item, o item será filtrado das recomendações.
+1. Se você selecionou *não* recomendar produtos comprados recentemente, defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada dois anos. Essa janela examinará o histórico de compras dos últimos dois anos e, se encontrar um item, o item será filtrado das recomendações.
 
 1. Selecione **Avançar**
 
@@ -95,7 +107,31 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Selecione **Avançar**.
 
-### <a name="set-schedule-and-review-configuration"></a>Defina o agendamento e revise a configuração
+### <a name="configure-product-filters"></a>Configurar filtros de produto
+
+Às vezes, apenas alguns produtos são benéficos ou apropriados para o tipo de previsão que você cria. Os filtros de produto permitem que você identifique um subconjunto de produtos com características específicas para recomendar aos seus clientes. O modelo usará todos os produtos disponíveis para aprender padrões, mas usará apenas os produtos que correspondam ao filtro de produto em sua saída.
+
+1. Na etapa **Adicionar informações do produto**, adicione seu catálogo de produtos com informações para cada produto. Mapeie as informações necessárias e selecione **Avançar**.
+
+3. Na etapa **Filtros de produto**, escolha entre as seguintes opções.
+
+   * **Sem filtros**: usar todos os produtos na previsão de recomendação de produtos.
+
+   * **Definir filtros de produto específicos**: usar produtos específicos na previsão de recomendação de produtos.
+
+1. Selecione **Avançar**.
+
+1. Se você optar por definir um filtro de produto, precisará defini-lo agora. No painel **Atributos do catálogo de produtos**, selecione os atributos da sua *entidade Catálogo de Produtos* que você deseja incluir no filtro.
+
+   :::image type="content" source="media/product-filters-sidepane.png" alt-text="Painel lateral mostrando os atributos na entidade do catálogo de produtos a serem selecionados para filtros de produto.":::
+
+1. Escolha se você deseja que o filtro de produto use conectores **and** ou **or** para combinar logicamente sua seleção de atributos do catálogo de produtos.
+   
+   :::image type="content" source="media/product-filters-sample.png" alt-text="Configuração de exemplo de filtros de produto combinados com conectores AND lógicos.":::
+
+1. Selecione **Avançar**.
+
+### <a name="set-update-schedule-and-review-configuration"></a>Definir o cronograma de atualizações e revisar a configuração
 
 1. Defina uma frequência para treinar o modelo novamente. Essa configuração é importante para atualizar a precisão das previsões conforme novos dados são importados para o Customer Insights. A maioria das empresas pode realizar o treinamento novamente uma vez por mês e obter uma boa precisão para suas previsões.
 
@@ -114,8 +150,9 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 1. Selecione a previsão que você deseja revisar.
    - **Nome da previsão:** O nome da previsão que foi fornecido ao criá-la.
    - **Tipo de previsão:** O tipo do modelo usado na previsão
-   - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.
-   - **Campo previsto:** este campo é preenchido apenas para alguns tipos de previsões e não é usado na previsão de rotatividade.
+   - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.    
+      *Pontuação* na entidade de saída é uma medida quantitativa da recomendação. O modelo recomenda produtos com uma pontuação mais alta em vez de produtos com uma pontuação mais baixa.
+   - **Campo previsto:** este campo é preenchido apenas para alguns tipos de previsões e não é usado na previsão de Recomendação de Produtos.
    - **Status:** O status atual da execução da previsão.
         - **Na fila:** A previsão está aguardando a execução de outros processos.
         - **Atualizando:** A previsão está atualmente executando o estágio de "pontuação" do processamento para gerar resultados que fluirão para a entidade de saída.
@@ -128,23 +165,43 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
    > [!div class="mx-imgBorder"]
    > ![Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir](media/product-recommendation-verticalellipses.PNG "Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir")
 
-1. Há três seções principais de dados na página de resultados:
+1. Há cinco seções principais de dados na página de resultados:
     1. **Desempenho do modelo de treinamento:** A, B ou C são pontuações possíveis. Essa pontuação indica o desempenho da previsão e pode ajudar você a decidir usar os resultados armazenados na entidade de saída.
         - As pontuações são determinadas com base nas seguintes regras:
             - **A** O modelo será considerado como qualidade **A** se a métrica "Success @ K" for pelo menos 10% superior à linha de base. 
-            - **B** O modelo será considerado como qualidade **B** se a métrica "Success @ K" for pelo menos 0 a 10% superior à linha de base.
-            - **C** O modelo será considerado como qualidade **C** se a métrica "Success @ K" for pelo menor que a linha de base.
+            - **B** O modelo será considerado como qualidade **B** se a métrica "Success @ K" for 0% a 10% superior à linha de base.
+            - **C** O modelo será considerado como qualidade **C** se a métrica "Success @ K" for inferior à linha de base.
                
                > [!div class="mx-imgBorder"]
                > ![Exibição do resultado de desempenho do modelo](media/product-recommendation-modelperformance.PNG "Exibição do resultado de desempenho do modelo")
             - **Linha de base**: O modelo pega os principais produtos mais recomendados por contagem de compra em todos os clientes e usa regras aprendidas identificadas pelo modelo para criar um conjunto de recomendações para os clientes. As previsões são então comparadas aos principais produtos, calculadas pelo número de clientes que compraram o produto. Se um cliente tem pelo menos um produto em seus produtos recomendados que também foi visto nos produtos mais comprados, eles são considerados parte da linha de base. Se 10 desses clientes tivessem um produto recomendado comprado de um total de 100 clientes, a linha de base seria 10%.
             - **Success @ K**: Usando um conjunto de validação de período de transações, as recomendações são criadas para todos os clientes e comparadas com o conjunto de validação de transações. Por exemplo, em um período de 12 meses, o mês 12 pode ser reservado como um conjunto de dados de validação. Se o modelo fizesse a previsão de pelo menos um item que você compraria no mês 12 com base no que aprendeu nos 11 meses anteriores, o cliente aumentaria a métrica "Success @ K".
     
-    1. **Produtos mais sugeridos (com contagem):** Os 5 principais produtos previstos para seus clientes.
+    1. **Produtos mais sugeridos (com contagem):** os cinco principais produtos previstos para seus clientes.
        > [!div class="mx-imgBorder"]
        > ![Gráfico mostrando os 5 produtos mais recomendados](media/product-recommendation-topproducts.PNG "Gráfico mostrando os 5 produtos mais recomendados")
     
-    1. **Recomendações de produtos de alta confiança:** Uma amostra de recomendações fornecidas a seus clientes que o modelo acha que provavelmente serão adquiridas pelo cliente.
+    1. **Principais fatores de recomendação:** o modelo usa o histórico de transações dos clientes para fazer recomendações de produtos. Ele aprende padrões com base em compras anteriores e encontra semelhanças entre clientes e produtos. Essas semelhanças são então utilizadas para gerar recomendações de produtos.
+    A seguir estão os fatores que podem influenciar uma recomendação de produto gerada pelo modelo. 
+        - **Transações anteriores**: no passado, os padrões de compra eram utilizados pelo modelo para gerar recomendações de produtos. Por exemplo, o modelo pode recomendar um _Mouse Surface Arc_ se alguém comprou recentemente um _Surface Book 3_ e uma _Caneta Surface_. O modelo aprendeu que, historicamente, muitos clientes compraram um _Mouse Surface Arc_ depois de comprar um _Surface Book 3_ e uma _Caneta Surface_.
+        - **Similaridade do cliente**: um produto recomendado foi historicamente comprado por outros clientes que apresentam padrões de compra semelhantes. Por exemplo, John recebeu como recomendação o _Surface Headphones 2_ porque Jennifer e Brad recentemente compraram o _Surface Headphones 2_. O modelo acredita que John é semelhante a Jennifer e Brad porque eles tiveram historicamente padrões de compra semelhantes.
+        - **Similaridade do produto**: um produto recomendado é semelhante a outros produtos que o cliente comprou anteriormente. O modelo considera dois produtos semelhantes se tiverem sido comprados juntos ou por clientes semelhantes. Por exemplo, alguém recebe uma recomendação de uma _Unidade de Armazenamento USB_ porque comprou anteriormente um _Adaptador USB-C para USB_ e o modelo acredita que a _Unidade de Armazenamento USB_ é semelhante ao _Adaptador USB-C para USB_ com base em padrões de compra históricos.
+
+        Toda recomendação de produto é influenciada por um ou mais desses fatores. A porcentagem de recomendações em que cada fator influenciador desempenhou um papel é visualizada em um gráfico. No exemplo a seguir, 100% das recomendações foram influenciadas por transações anteriores, 60% pela similaridade do cliente e 22% pela similaridade do produto. Passe o mouse sobre as barras do gráfico para ver a porcentagem exata em que os fatores influenciadores contribuíram.
+
+        > [!div class="mx-imgBorder"]
+        > ![Principais fatores de recomendação](media/product-recommendation-keyrecommendationfactors.png "Principais fatores de recomendação aprendidos pelo modelo para gerar recomendações de produtos")
+       
+     
+   1. **Estatísticas de dados**: fornecem uma visão geral do número de transações, clientes e produtos que o modelo considerou. Elas são baseadas nos dados de entrada que foram usados para aprender padrões e gerar recomendações de produtos.
+
+      > [!div class="mx-imgBorder"]
+      > ![Estatísticas de dados](media/product-recommendation-datastatistics.png "Estatísticas de dados sobre dados de entrada usados pelo modelo para aprender padrões")
+
+      Esta seção mostra estatísticas sobre os pontos de dados que foram usados pelo modelo para aprender padrões e gerar recomendações de produtos. A filtragem, conforme definida na configuração do modelo, será aplicada na saída gerada pelo modelo. No entanto, o modelo usa todos os dados disponíveis para aprender padrões. Portanto, se você usar a filtragem de produto na configuração do modelo, esta seção mostrará o número total de produtos que o modelo analisou para aprender padrões, que pode diferir do número de produtos que correspondem aos critérios de filtragem definidos.
+
+   1. **Recomendações de produtos de alta confiança:** Uma amostra de recomendações fornecidas a seus clientes que o modelo acha que provavelmente serão adquiridas pelo cliente.    
+      Se um catálogo de produtos for adicionado, as IDs dos produtos serão substituídas pelos nomes dos produtos. Os nomes dos produtos fornecem informações mais acionáveis e intuitivas sobre as previsões.
        > [!div class="mx-imgBorder"]
        > ![Lista mostrando sugestões de alta confiança para um conjunto selecionado de clientes individuais](media/product-recommendation-highconfidence.PNG "Lista mostrando sugestões de alta confiança para um conjunto selecionado de clientes individuais")
 
@@ -154,7 +211,7 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Selecione a previsão cujos logs de erro gostaria de exibir e selecione **Logs**.
 
-1. Revise todos os erros. Há vários tipos de erros que podem ocorrer e eles descrevem qual condição causou o erro. Por exemplo, um erro causado por dados insuficientes para gerar uma previsão de forma precisa é geralmente resolvido ao carregar dados adicionais no Customer Insights.
+1. Revise todos os erros. Há vários tipos de erros que podem ocorrer e eles descrevem qual condição causou o erro. Por exemplo, um erro em que não há dados suficientes para prever com precisão é normalmente resolvido carregando mais dados no Customer Insights.
 
 ## <a name="refresh-a-prediction"></a>Atualizar uma previsão
 

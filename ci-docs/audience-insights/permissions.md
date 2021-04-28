@@ -1,7 +1,7 @@
 ---
 title: Gerenciar permissões de usuário
 description: Saiba mais sobre permissões e funções de usuário.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595688"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760359"
 ---
 # <a name="user-permissions"></a>Permissões de usuário
 
@@ -31,7 +31,7 @@ Há três tipos de funções:
 - Exiba e explore a página **Enriquecimento**.
 - Explorar e exportar entidades usando a página **Entidades**.
 - Exiba o status dos processos do sistema usando a página **Sistema**.
-- Exporte segmentos da página **Segmentos**.
+- Exiba exportações na página **Exportações**.
 - Instale e use o painel **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Colaborador
@@ -43,6 +43,7 @@ Há três tipos de funções:
 - Crie segmentos usando a página **Segmentos**.
 - Crie medidas usando a página **Medidas**.
 - Gerencie a configuração e enriqueça os perfis de cliente na página **Enriquecimento** (somente para os primeiros enriquecimentos da parte).
+- Gerencie e crie exportações com base em conexões compartilhadas com colaboradores. [Saiba mais sobre como os administradores permitem que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrador
 
@@ -50,8 +51,9 @@ Há três tipos de funções:
 - Altere as configurações na página **Sistema**, incluindo o idioma de trabalho, e atualize os cronogramas de seus processos do sistema.
 - Exiba e adicione permissões usando a página **Permissões**.
 - Configure as definições de filtro e pesquisa para a página Clientes usando a página **Índice de filtro e pesquisa** (accessível pela página **Clientes**).
-- Defina os destinos do segmento do Dynamics 365 Sales usando a página **Exportar destinos**.
+- Gerencie conexões e as permita para outras funções de usuário na página **Conexões**.
 - Gerencie a configuração e enriqueça os perfis de cliente na página **Enriquecimento** (para todos os enriquecimentos).
+- Gerencie e crie exportações na página **Exportações**.
 - Instale e use o **Complemento do Cartão do Cliente**.
 - Adicione e use o **conector do Power Apps**.
 - Habilite o uso de [APIs do Customer Insights](apis.md).

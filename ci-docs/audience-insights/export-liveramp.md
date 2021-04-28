@@ -1,7 +1,7 @@
 ---
 title: Conector LiveRamp
-description: Saiba como exportar dados para o LiveRamp.
-ms.date: 12/02/2020
+description: Saiba como configurar a conexão e a exportação para o LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597543"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760313"
 ---
-# <a name="liverampreg-connector-preview"></a>Conector do LiveRamp&reg; (versão preliminar)
+# <a name="export-segments-to-liverampreg-preview"></a>Exportar segmentos para o LiveRamp&reg; (versão preliminar)
 
-Ative seus dados no LiveRamp para conectar-se a mais de 500 plataformas nos ecossistemas digital, social e de TV. Trabalhe com seus dados no LiveRamp para segmentar, suprimir e personalizar campanhas publicitárias.
+Ative seus dados no LiveRamp para se conectar a mais de 500 plataformas em ecossistemas digitais, sociais e de TV. Trabalhe com seus dados no LiveRamp para segmentar, suprimir e personalizar campanhas publicitárias.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma conexão
 
 - Você precisa de uma assinatura do LiveRamp para usar esse conector.
 - Para obter uma assinatura, [entre em contato com a LiveRamp](https://liveramp.com/contact/) diretamente. [Saiba mais sobre o LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Conectar-se ao LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Configurar conexão com o LiveRamp
 
-1. Nos insights de público-alvo, vá para **Administrador** > **Destinos de exportação**.
+1. Vá para **Administração** > **Conexões**.
 
-1. No bloco **LiveRamp**, selecione **Configurar**.
+1. Selecione **Adicionar conexão** e escolha **LiveRamp** para configurar a conexão.
 
-1. Dê ao seu destino um nome reconhecível no campo **Nome de exibição**.
+1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
+
+1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Forneça um **Nome do usuário** e uma **Senha** para sua conta do LiveRamp Secure FTP (SFTP).
 Essas credenciais podem ser diferentes das credenciais do LiveRamp Onboarding.
@@ -40,15 +42,25 @@ Essas credenciais podem ser diferentes das credenciais do LiveRamp Onboarding.
 
 1. Após a verificação bem-sucedida, forneça seu consentimento para **Privacidade e conformidade de dados** marcando a caixa de seleção **Concordo**.
 
-1. Selecione **Avançar** para configurar o conector LiveRamp.
+1. Selecione **Salvar** para concluir a conexão.
 
-## <a name="configure-the-connector"></a>Configurar o conector
+## <a name="configure-an-export"></a>Configurar uma exportação
+
+Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Vá para **Dados** > **Exportações**.
+
+1. Para criar uma nova exportação, selecione **Adicionar destino**.
+
+1. No campo **Conexão para exportação**, escolha uma conexão da seção do LiveRamp. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
 
 1. No campo **Escolha seu identificador de chave**, selecione **Email**, **Nome e endereço** ou **Telefone** para enviar ao LiveRamp para resolução de identidade.
+   > [!div class="mx-imgBorder"]
+   > ![Conector LiveRamp com mapeamento de atributos](media/export-liveramp-segments.png "Conector LiveRamp com mapeamento de atributos")
 
 1. Mapeie os atributos correspondentes da sua entidade unificada do cliente para o identificador de chave selecionado.
 
-1. Selecione **Adicionar atributo** para mapear atributos adicionais para enviar ao LiveRamp.
+1. Selecione **Adicionar atributo** para mapear mais atributos para enviar para o LiveRamp.
 
    > [!TIP]
    > Enviar mais atributos de identificador de chave para o LiveRamp provavelmente resultará em uma taxa de correspondência mais alta.
@@ -57,13 +69,10 @@ Essas credenciais podem ser diferentes das credenciais do LiveRamp Onboarding.
 
 1. Selecione **Salvar**.
 
-> [!div class="mx-imgBorder"]
-> ![Conector LiveRamp com mapeamento de atributos](media/export-liveramp-segments.png "Conector LiveRamp com mapeamento de atributos")
+Salvar uma exportação não a executa imediatamente.
 
-## <a name="export-the-data"></a>Exportar os dados
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
 
-A exportação começará em breve se todos os pré-requisitos para exportação tiverem sido concluídos. A exportação também será executada a cada [atualização agendada](system.md#schedule-tab).
-Depois que a exportação for concluída com êxito, você poderá entrar no LiveRamp Onboarding para ativar e distribuir seus dados.
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

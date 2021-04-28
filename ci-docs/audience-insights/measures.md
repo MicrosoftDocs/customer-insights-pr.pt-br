@@ -1,7 +1,7 @@
 ---
 title: Criar e gerenciar medidas
 description: Defina medidas para analisar e refletir o desempenho da sua empresa.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654718"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887926"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerenciar medidas
 
-As medidas ajudam você a entender melhor os comportamentos dos clientes e o desempenho da empresa, recuperando valores relevantes de [perfis unificados](data-unification.md). Por exemplo, uma empresa deseja ver o *gasto total por cliente* para entender o histórico de compras de cada cliente. Ou meça *vendas totais da empresa* para compreender a receita em nível agregado de toda a empresa.  
+As medidas ajudam você a entender melhor os comportamentos dos clientes e o desempenho dos negócios. Elas analisam para valores relevantes de [perfis unificados](data-unification.md). Por exemplo, uma empresa deseja ver o *total de gastos por cliente* para entender o histórico de compras do cliente individual ou medir o *total de vendas da empresa* para entender a receita de nível agregado em todo o negócio.  
 
 As medidas são criadas por meio do construtor de medidas, uma plataforma de consulta de dados com vários operadores e opções de mapeamento simples. Ele permite filtrar dados, agrupar resultados, detectar [caminhos de relacionamento de entidades](relationships.md) e exibir a saída.
 
 Use o construtor de medidas para extrair insights e planejar atividades comerciais por meio da consulta de dados do cliente. Por exemplo, criar uma medida de *gasto total por cliente* e *retorno total por cliente* ajuda a identificar um grupo de clientes com alto gasto, mas alto retorno. É possível [criar um segmento](segments.md) para realizar as próximas ações recomendadas. 
 
-## <a name="create-a-measure"></a>Criar uma medida
+## <a name="build-your-own-measure-from-scratch"></a>Criar sua própria medida do zero
 
 Esta seção explica como criar uma medida do zero. Você pode criar uma medida com atributos de dados de entidades de dados que têm um relacionamento configurado para se conectar com a entidade Cliente. 
 
 1. Nos insights de público-alvo, vá para **Medidas**.
 
-1. Selecione **Novo**.
+1. Selecione **Novo** e escolha **Crie sua própria**.
 
 1. Selecione **Editar nome** e forneça um **Nome** para a medida. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
    1. Selecione **Editar dimensões** para adicionar atributos de dados pelos quais você deseja agrupar os valores de medida. Por exemplo, cidade ou sexo. Por padrão, a dimensão *CustomerID* é selecionada para criar *medidas em nível de cliente*. Você pode remover a dimensão padrão se quiser criar *medidas em nível de negócios*.
    1. Selecione **Concluído** para adicionar as dimensões à medida.
 
+1. Se houver valores nos seus dados que precisem ser substituídos por um número inteiro, por exemplo, substitua *nulo* por *0* e selecione **Regras**. Configure a regra e escolha apenas números inteiros como substituições.
+
 1. Se houver vários caminhos entre a entidade de dados que você mapeou e a entidade *Cliente*, você deverá escolher um dos [caminhos de relacionamento de entidade](relationships.md) identificados. Os resultados da medição podem variar dependendo do caminho selecionado. 
    1. Selecione **Preferências de dados** e escolha o caminho da entidade que deve ser usado para identificar sua medida. Se houver somente um único caminho para a entidade *Cliente*, este controle não será exibido.
    1. Selecione **Concluído** para aplicar sua seleção. 
@@ -88,9 +90,57 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
 
 1. Acesse **Medidas** para ver a medida recém-criada na lista.
 
+## <a name="use-a-template-to-build-a-measure"></a>Usar um modelo para criar uma medida
+
+Você pode usar modelos predefinidos de medidas comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
+
+Modelos de medidas disponíveis: 
+- Valor médio da transação (ATV)
+- Valor total da transação
+- Receita diária média
+- Receita média anual
+- Contagem de transações
+- Pontos de fidelidade ganhos
+- Pontos de fidelidade resgatados
+- Saldo de pontos de fidelidade
+- Período ativo do cliente
+- Duração da associação ao programa de fidelidade
+- Tempo desde a última compra
+
+O procedimento a seguir descreve as etapas para criar uma nova medida usando um modelo.
+
+1. Nos insights de público-alvo, vá para **Medidas**.
+
+1. Selecione **Novo** e, em seguida, selecione **Escolher um modelo**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de tela do menu suspenso ao criar uma nova medida com destaque no modelo.":::
+
+1. Encontre o modelo que se adapta às suas necessidades e selecione **Escolher modelo**.
+
+1. Revise os dados necessários e selecione **Começar** se você tiver todos os dados no local.
+
+1. No painel **Editar nome**, defina o nome da sua medida e a entidade de saída. 
+
+1. Selecione **Concluído**.
+
+1. Na seção **Definir período**, defina o período dos dados a serem usados. Escolha se você deseja que a nova medida cubra todo o conjunto de dados, selecionando **Todo o tempo**. Ou se você quiser que a medida se concentre em um **Período específico**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de tela mostrando a seção do período ao configurar uma medida com base em um modelo.":::
+
+1. Na próxima seção, selecione **Adicionar dados** para escolher as atividades e mapear os dados correspondentes da sua entidade *Atividade Unificada*.
+
+    1. Etapa 1 de 2: em **Tipo de atividade**, escolha o tipo da entidade que deseja usar. Para **Atividades**, selecione as entidades que deseja mapear.
+    1. Etapa 2 de 2: escolha o atributo da entidade *Atividade Unificada* do componente exigido pela fórmula. Por exemplo, para Valor médio da transação, é o atributo que representa o Valor da transação. Para **Carimbo de data/hora da atividade**, escolha o atributo da entidade Atividade Unificada que representa a data e hora da atividade.
+   
+1. Depois que o mapeamento de dados for bem-sucedido, você poderá ver o status como **Concluído** e o nome das atividades e atributos mapeados.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Captura de tela de uma configuração de modelo de medida concluída.":::
+
+1. Agora você pode selecionar **Executar** para calcular os resultados da medida. Para refiná-los mais tarde, selecione **Salvar rascunho**.
+
 ## <a name="manage-your-measures"></a>Gerenciar suas medidas
 
-Depois de [criar uma medida](#create-a-measure), você verá uma lista de medidas na página **Medidas**.
+Você pode encontrar a lista de medidas na página **Medidas**.
 
 Você encontrará informações sobre o tipo de medida, o criador, a data de criação, o status e o estado. Ao selecionar uma medida da lista, você pode exibir a saída e baixar um arquivo .CSV.
 

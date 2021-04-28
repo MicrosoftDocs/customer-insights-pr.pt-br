@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595642"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906888"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -49,6 +49,12 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
         - **Carimbo de data/hora:** A data e a hora do evento identificado pela chave primária.
         - **Evento:** O nome do evento que você deseja usar. Por exemplo, um campo chamado "UserAction" em um serviço de streaming de vídeo pode ter o valor "Visualizado".
         - **Detalhes:** Informações detalhadas sobre o evento. Por exemplo, um campo chamado "ShowTitle" em um serviço de streaming de vídeo pode ter o valor de um vídeo que o cliente assistiu.
+- Características de dados sugeridas:
+    - Dados históricos suficientes: dados de assinatura de pelo menos o dobro da janela de tempo selecionada. De preferência, de dois a três anos de dados de assinatura.
+    - Status da assinatura: os dados incluem assinaturas ativas e inativas de cada cliente, portanto, há várias entradas por ID de cliente.
+    - Número de clientes: pelo menos 10 perfis de clientes, de preferência mais de 1.000 clientes exclusivos. O modelo falhará com menos de 10 clientes e dados históricos insuficientes.
+    - Integridade dos dados: menos de 20% de valores ausentes no campo de dados da entidade fornecida.
+   
    > [!NOTE]
    > Você precisará de pelo menos dois registros de atividades para 50% dos clientes para os quais deseja calcular a rotatividade.
 
@@ -67,7 +73,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 ### <a name="define-customer-churn"></a>Definir rotatividade de clientes
 
 1. Insira o número de **Dias desde o término da assinatura** que a sua empresa considera um cliente em um estado rotativo. Esse período geralmente é associado a atividades comerciais como ofertas ou outros esforços de marketing para tentar fidelizar o cliente.
-1. Insira o número de **Dias para consultar no futuro para prever a rotatividade** para definir uma janela para prever a rotatividade. Por exemplo, para prever o risco de rotatividade de seus clientes nos próximos 90 dias para alinhar seus esforços de retenção de marketing. Prever o risco de rotatividade por períodos mais longos ou mais curtos pode dificultar a abordagem dos fatores em seu perfil de risco de rotatividade, mas isso depende muito de seus requisitos específicos de negócios. Selecione **Avançar** para continuar
+1. Insira o número de **Dias para consultar no futuro para prever a rotatividade** para definir uma janela para prever a rotatividade. Por exemplo, para prever o risco de rotatividade de seus clientes nos próximos 90 dias para alinhar seus esforços de retenção de marketing. Prever o risco de rotatividade para períodos mais longos ou mais curtos pode dificultar ainda mais a abordagem dos fatores no seu perfil de risco de rotatividade, dependendo dos requisitos comerciais específicos. Selecione **Avançar** para continuar
    >[!TIP]
    > Você pode selecionar **Salvar e fechar** a qualquer momento para salvar a previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
 
@@ -113,7 +119,8 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 1. Selecione a previsão que você deseja revisar.
    - **Nome da previsão:** O nome da previsão que foi fornecido ao criá-la.
    - **Tipo de previsão:** O tipo do modelo usado na previsão
-   - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.
+   - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.    
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de rotatividade e *IsChurn* é um rótulo binário baseado em *ChurnScore* com limite de 0,5. O limite padrão pode não funcionar para o seu cenário. [Criar um novo segmento](segments.md#create-a-new-segment) com o limite de sua preferência.
    - **Campo previsto:** Este campo é preenchido somente para alguns tipos de previsões e não é usado na previsão de rotatividade de assinaturas.
    - **Status:** O status atual da execução da previsão.
         - **Na fila:** A previsão está aguardando a execução de outros processos.
