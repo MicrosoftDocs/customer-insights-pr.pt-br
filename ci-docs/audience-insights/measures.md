@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887926"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049236"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerenciar medidas
 
@@ -34,7 +34,7 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
 
 1. Selecione **Editar nome** e forneça um **Nome** para a medida. 
    > [!NOTE]
-   > Se sua nova configuração de medida tiver apenas dois campos (por exemplo, CustomerID) e um cálculo, a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E você poderá ver o valor da medida no perfil de cliente unificado. Outras medidas vão gerar suas próprias entidades.
+   > Se a nova configuração de medida tiver somente dois campos, por exemplo, CustomerID e um cálculo, a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E você poderá ver o valor da medida no perfil de cliente unificado. Outras medidas vão gerar suas próprias entidades.
 
 1. Na área de configuração, escolha a função de agregação no menu suspenso **Selecionar função**. As funções de agregação incluem: 
    - **Somar**

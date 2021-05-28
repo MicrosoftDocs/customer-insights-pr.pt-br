@@ -1,7 +1,7 @@
 ---
-title: Instalar e configurar o Complemento do Cartão do Cliente
-description: Instalar e configura o suplemento de Cartão de Cliente para o Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Suplemento do Cartão do Cliente para aplicativos Dynamics 365
+description: Mostre dados de insights do público-alvo em aplicativos Dynamics 365 com este suplemento.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597313"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059574"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Exiba dados demográficos, insights e linhas de tempo de atividades com o Suplemento do Cartão do Cliente.
+Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Com o Suplemento do Cartão do Cliente instalado em um aplicativo Dynamics 365 compatível, você pode escolher exibir dados demográficos, insights e cronogramas de atividades. O suplemento recuperará dados do Customer Insights sem afetar os dados no aplicativo conectado Dynamics 365. 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Aplicativo Dynamics 365 (como Hub de Vendas ou Hub do SAC), versão 9.0 e posterior com Interface Unificada ativada.
-- Perfis de clientes [ingeridos a partir do aplicativo do Dynamics 365 usando o Common Data Service](connect-power-query.md).
-- Os usuários do complemento do cartão do cliente precisam ser [adicionados como usuários](permissions.md) nos insights de público-alvo.
-- [Recursos de pesquisa e filtro configurados](search-filter-index.md).
-- Controle demográfico: campos demográficos (como idade ou sexo) estão disponíveis no perfil de cliente unificado.
-- Controle de enriquecimento: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
-- Controle de inteligência: requer dados gerados usando o Azure Machine Learning ([Previsões](predictions.md) ou [Modelos Personalizados](custom-models.md))
-- Controle de medida: requer [medidas configuradas](measures.md).
-- Controle de linha do tempo: requer [atividades configuradas](activities.md).
+- O suplemento só funciona com aplicativos baseados em modelo do Dynamics 365, como Vendas ou Customer Service, versão 9.0 e superior.
+- Para que seus dados do Dynamics 365 sejam mapeados para os perfis de clientes de insights do público-alvo, eles precisam ser [ingeridos do aplicativo Dynamics 365 usando o conector do Common Data Service ](connect-power-query.md).
+- Todos os usuários do Dynamics 365 do Suplemento de Cartão do Cliente devem ser [adicionados como usuários](permissions.md) nos insights do público-alvo para ver os dados.
+- [É preciso que haja recursos de filtro e pesquisa configurados](search-filter-index.md) em insights de público-alvo para que a pesquisa de dados funcione.
+- Cada controle de suplemento depende de dados específicos nos insights do público-alvo:
+  - Controle de medida: requer [medidas configuradas](measures.md).
+  - Controle de inteligência: requer dados gerados usando [previsões](predictions.md) ou [modelos personalizados](custom-models.md).
+  - Controle demográfico: campos demográficos (como idade ou sexo) estão disponíveis no perfil de cliente unificado.
+  - Controle de enriquecimento: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
+  - Controle de linha do tempo: requer [atividades configuradas](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalar o Complemento do Cartão do Cliente
 
@@ -56,9 +57,9 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
    > [!NOTE]
    > Verifique se o bloqueador de pop-up do navegador não bloqueia a janela de autenticação quando você seleciona o botão **Entrar**.
 
-1. Selecione o ambiente por meio do qual você deseja buscar dados.
+1. Selecione o ambiente do Customer Insights do qual você deseja extrair os dados.
 
-1. Defina o mapeamento de campo para registros no aplicativo do Dynamics 365.
+1. Defina o mapeamento de campo para registros no aplicativo Dynamics 365. Dependendo de seus dados no Customer Insights, você pode escolher mapear estas opções:
    - Para mapear com um contato, selecione o campo na entidade Cliente que corresponde à ID de sua entidade de contato.
    - Para mapear com uma conta, selecione o campo na entidade Cliente que corresponde à ID da entidade de sua conta.
 

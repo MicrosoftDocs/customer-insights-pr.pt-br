@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887880"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085516"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
@@ -36,11 +36,9 @@ Você pode adicionar uma fonte de dados de três maneiras principais:
 
 A ingestão de dados de fontes de dados locais no Audience Insights tem suporte com base nos fluxos de dados do Power Platform. Os fluxos de dados podem ser habilitados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) durante a configuração do ambiente.
 
-As fontes de dados criadas após a associação de um ambiente do Dataverse com o Customer Insights usará[fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateways de dados. Remova e recrie fontes de dados que existiam antes que um ambiente do Dataverse fosse associado para usar os gateways de dados locais.
+As fontes de dados criadas após a associação de um ambiente do Dataverse com o Customer Insights usará[fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Remova e recrie fontes de dados que existiam antes que um ambiente do Dataverse fosse associado para [usar os gateways de dados locais](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Power Platform, onde você pode exibir e configurar gateways de dados locais.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de tela da página de fontes de dados mostrando links que apontam para o ambiente do Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Analisar dados ingeridos
 

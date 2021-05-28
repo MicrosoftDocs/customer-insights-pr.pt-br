@@ -1,7 +1,7 @@
 ---
 title: Trabalhar com APIs
 description: Use APIs e entenda as limitações.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873648"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016578"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabalhar com APIs do Customer Insights
 
@@ -90,19 +90,13 @@ A [seção de registro de aplicativo](#create-a-new-app-registration-in-the-azur
 
 1. No registro do seu aplicativo no portal do Azure, vá para **Permissões de API**.
 
-1. Selecione **Adicionar uma permissão** e **Customer Insights** no painel lateral.
+1. Selecione **Adicionar permissão**. 
+
+1. Selecione a guia **APIs que minha organização usa** e escolha **Dynamics 365 AI para Customer Insights** na lista. 
 
 1. Para **Tipo de permissão**, selecione **Permissões de aplicativo** e a permissão **CustomerInsights.Api.All**.
 
 1. Selecione **Adicionar permissões**.
-
-1. Para dar o consentimento do administrador a essa permissão do aplicativo, você precisa adicionar uma Entidade de Serviço.
-
-   1. Instale o módulo PowerShell do Azure Active Directory (AD): `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Conecte-se à sua conta do AD: `Connect-AzureAD -TenantId <your tenant id>`. Você pode encontrar sua ID de locatário em **Visão geral** > **Azure Active Directory**.
-   1. Execute o seguinte comando para adicionar uma Entidade de Serviço do Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` O parâmetro AppId pertence ao aplicativo de API do Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Nome da Entidade de Serviço":::
 
 1. Volte para **Permissões de API** para o registro do seu aplicativo.
 

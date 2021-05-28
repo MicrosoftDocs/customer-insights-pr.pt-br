@@ -1,7 +1,7 @@
 ---
 title: Mesclar entidades na unificação de dados
 description: Mescle entidades para criar perfis de clientes unificados.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896497"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085562"
 ---
 # <a name="merge-entities"></a>Mesclar entidades
 
 A fase de mesclagem na última fase no processo de unificação de dados. Seu objetivo é reconciliar dados conflitantes. Exemplos de dados conflitantes podem incluir um nome de cliente encontrado em dois de seus conjuntos de dados, mas que mostra um pouco diferente em cada um ("Grant Marshall" versus "Grant Marshal") ou um número de telefone que difere no formato (617-803-091X versus 617803091X). A mesclagem desses pontos de dados conflitantes é feita atributo a atributo.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Página da mesclagem no processo de unificação de dados mostrando a tabela com campos mesclados que definem o perfil unificado do cliente.":::
+
 Depois de concluir a [fase de correspondência](match-entities.md), você inicia a fase de mesclagem selecionando o bloco **Mesclar** na página **Unificar**.
 
 ## <a name="review-system-recommendations"></a>Revisar recomendações do sistema
 
-Na página **Mesclar**, você pode escolher e excluir atributos para mesclar a sua entidade de perfil de cliente unificado (o resultado do processo de configuração). Alguns atributos são mesclados automaticamente pelo sistema.
+Em **Dados** > **Unificar** > **Mesclar**, você escolhe e exclui atributos para mesclar dentro de sua entidade de perfil unificado do cliente. O perfil unificado do cliente é o resultado do processo de unificação dos dados. Alguns atributos são mesclados automaticamente pelo sistema.
 
-### <a name="view-merged-attributes"></a>Exibir atributos mesclados
+Para ver os atributos incluídos em um de seus atributos mesclados automaticamente, selecione esse atributo mesclado na guia **Campos do cliente** da tabela. Os atributos que compõem esse atributo mesclado aparecem em duas novas linhas abaixo do atributo mesclado.
 
-Para exibir os atributos incluídos em um dos atributos mesclados automaticamente, selecione esse atributo mesclado. Os dois atributos que compõem esse atributo mesclado são exibidos em duas novas linhas abaixo do atributo mesclado.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Separar, renomear, excluir e editar campos mesclados
 
-> [!div class="mx-imgBorder"]
-> ![Selecionar atributo mesclado](media/configure-data-merge-profile-attributes.png "Selecionar atributo mesclado")
+Você pode mudar a forma como o sistema processa atributos mesclados para gerar o perfil unificado do cliente. Selecione **Mostrar mais** e escolha o que você quer alterar.
 
-### <a name="separate-merged-attributes"></a>Separar atributos mesclados
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opções do menu suspenso Mostrar mais para gerenciar atributos mesclados.":::
 
-Para separar ou desmembrar qualquer um dos atributos mesclados automaticamente, localize o atributo na tabela **Atributos do perfil**.
+Para obter mais informações, consulte as seções a seguir.
 
-1. Selecione o botão de reticências (...).
+## <a name="separate-merged-fields"></a>Separar campos mesclados
+
+Para separar os campos mesclados, localize o atributo na tabela. Os campos separados aparecem como pontos de dados individuais no perfil unificado do cliente. 
+
+1. Selecione o campo mesclado.
   
-2. Na lista suspensa, selecione **Campos separados**.
+1. Selecione **Mostrar mais** e escolha **Campos separados**.
+ 
+1. Confirme a separação.
 
-### <a name="remove-merged-attributes"></a>Remova os atributos mesclados
+1. Selecione **Salvar** e **Executar** para processar as alterações.
 
-Para excluir um atributo da entidade do perfil do cliente final, localize-o na tabela **Atributos do perfil**.
+## <a name="rename-merged-fields"></a>Renomear campos mesclados
 
-1. Selecione o botão de reticências (...).
+Altere o nome de exibição dos atributos mesclados. Não é possível alterar o nome da entidade de saída.
+
+1. Selecione o campo mesclado.
   
-2. Na lista suspensa, selecione **Não mesclar**.
+1. Selecione **Mostrar mais** e escolha **Renomear**.
 
-   O atributo é movido para a seção **Removido do registro do cliente**.
+1. Confirme o nome de exibição alterado. 
 
-## <a name="manually-add-a-merged-attribute"></a>Adicionar manualmente um atributo mesclado
+1. Selecione **Salvar** e **Executar** para processar as alterações.
 
-Para adicionar um atributo mesclado, vá para a página **Mesclar**.
+## <a name="exclude-merged-fields"></a>Excluir campos mesclados
 
-1. Selecione **Adicionar atributo mesclado**.
+Exclua um atributo do perfil unificado do cliente. Se o campo for usado em outros processos, por exemplo, em um segmento, remova-o desses processos antes de excluí-lo do perfil do cliente. 
 
-2. Forneça um **Nome** para identificá-lo na página **Mesclar** posteriormente.
+1. Selecione o campo mesclado.
+  
+1. Selecione **Mostrar mais** e escolha **Excluir**.
 
-3. Se preferir, forneça um **Nome para exibição** para aparecer na entidade unificada do Perfil do Cliente.
+1. Confirme a exclusão.
 
-4. Configure **Selecionar atributos duplicados** para selecionar os atributos que você deseja mesclar nas entidades correspondentes. Você também pode procurar por atributos.
+1. Selecione **Salvar** e **Executar** para processar as alterações. 
 
-5. Defina **Classificar por importância** para priorizar um atributo acima dos outros. Por exemplo, se a entidade *WebAccountCSV* tiver os dados mais precisos sobre o atributo *Nomes Completos*, você pode priorizar essa entidade em vez de *ContactCSV*, selecionando *WebAccountCSV*. Como um resultado, *WebAccountCSV* passa para a primeira prioridade, enquanto *ContactCSV* passa para a segunda prioridade ao extrair valores para o atributo *Nome Completo*.
+Na página **Meslar**, selecione **Campos excluídos** para ver a lista de todos os campos excluídos. Este painel lhe permite adicionar novamente campos excluídos.
+
+## <a name="manually-combine-fields"></a>Combinar campos manualmente
+
+Especifique um atributo mesclado manualmente. 
+
+1. Na página **Mesclar**, selecione **Combinar campos**.
+
+1. Forneça um **Nome** e um **Nome do campo de saída**.
+
+1. Escolha um campo para adicionar. Selecione **Adicionar campos** para combinar outros campos.
+
+1. Confirme a exclusão.
+
+1. Selecione **Salvar** e **Executar** para processar as alterações. 
+
+## <a name="change-the-order-of-fields"></a>Alterar a ordem dos campos
+
+Algumas entidades contêm mais detalhes que outras. Se uma entidade tiver os dados mais recentes sobre um campo, você pode priorizá-los sobre outras entidades ao mesclar valores.
+
+1. Selecione o campo mesclado.
+  
+1. Selecione **Mostrar mais** e escolha **Editar**.
+
+1. No painel **Combinar campos**, selecione **Mover para cima/para baixo** para definir a ordem ou arraste e solte-os na posição desejada.
+
+1. Confirme a alteração.
+
+1. Selecione **Salvar** e **Executar** para processar as alterações.
 
 ## <a name="run-your-merge"></a>Execute sua mesclagem
 
@@ -72,11 +111,11 @@ Quer você mescle atributos manualmente ou permita que o sistema os mescle, semp
 > [!div class="mx-imgBorder"]
 > ![Mesclagem de dados Salvar e Executar](media/configure-data-merge-save-run.png "Mesclagem de dados Salvar e Executar")
 
-Para fazer alterações adicionais e executar novamente a etapa, você pode cancelar uma mesclagem em andamento. Selecione **Atualizando...** e selecione **Cancelar o trabalho** no painel lateral exibido.
+Escolha **Executar somente Mesclagem** se você só quiser ver a saída refletida na entidade unificada do cliente. Os processos posteriores serão atualizados conforme [definida agenda de atualização](system.md#schedule-tab).
 
-Após o texto **Atualizando...** mudar para **Bem-sucedido**, a mesclagem concluiu e resolveu as contradições nos seus dados de acordo com as políticas que você definiu. Atributos mesclados e não mesclados são incluídos na entidade de perfil unificado. Atributos excluídos não estão incluídos na entidade de perfil unificado.
+Escolha **Executar processos de mesclagem e posteriores** para atualizar o sistema com suas alterações. Todos os processos, incluindo enriquecimento, segmentos e medidas, serão executados novamente automaticamente. Após o término de todos os processos posteriores, os perfis do cliente refletirão as alterações.
 
-Se não foi a primeira vez que você executou uma mesclagem com êxito, todos os processos posteriores, incluindo enriquecimento, segmentação e medidas, serão executados novamente de forma automática. Depois que todos os processos posteriores foram executados novamente, os perfis dos clientes refletem todas as alterações feitas.
+Para fazer mais alterações e executar a etapa novamente, cancele uma mesclagem em andamento. Selecione **Atualizando...** e selecione **Cancelar o trabalho** no painel lateral exibido.
 
 > [!TIP]
 > Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
@@ -85,9 +124,6 @@ Se não foi a primeira vez que você executou uma mesclagem com êxito, todos os
 
 Configurar [atividades](activities.md), [enriquecimento](enrichment-hub.md) ou [relacionamentos](relationships.md) para obter mais informações sobre seus clientes.
 
-Se você já configurou atividades, enriquecimento ou relacionamentos, ou se definiu segmentos, eles serão processados automaticamente para usar os dados mais recentes do cliente.
-
-
-
+Se você já tiver configurado atividades, enriquecimento ou segmentos, eles serão processados automaticamente para usar os dados mais recentes do cliente.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

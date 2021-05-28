@@ -1,0 +1,92 @@
+---
+title: Exportar dados do Customer Insights para o Azure Synapse Analytics
+description: Aprenda a configurar a conexão e exportar para o Azure Synapse Analytics.
+ms.date: 04/12/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: how-to
+author: stefanie-msft
+ms.author: sthe
+manager: shellyha
+ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5977363"
+---
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar para o Azure Synapse Analytics (versão preliminar)
+
+O Azure Synapse é um serviço de análise que acelera o tempo de insight de armazéns de dados e sistemas de big data. Você pode ingerir e usar seus dados de Customer Insights em [Azure Synapse](/azure/synapse-analytics/overview-what-is).
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+Os seguintes pré-requisitos devem ser cumpridos para configurar a conexão do Customer Insights para o Azure Synapse.
+
+> [!NOTE]
+> Lembre-se de definir todas as **atribuições de função** conforme descrito.  
+
+## <a name="prerequisites-in-customer-insights"></a>Pré-requisitos no Customer Insights
+
+* Você tem uma função de **Administrador** nos insights do público-alvo. Saiba mais sobre [como definir permissões do usuário em insights de público-alvo](permissions.md#assign-roles-and-permissions)
+
+No Azure: 
+
+- Uma assinatura ativa do Azure.
+
+- Se estiver usando uma nova conta do Azure Data Lake Storage Gen2, a *entidade de serviço para insights do público-alvo* precisa de permissões do **Colaborador de Dados do Storage Blob**. Saiba mais sobre [como conectar-se a uma conta do Azure Data Lake Storage Gen2 com a entidade de serviço para insights do público-alvo](connect-service-principal.md). O Data Lake Storage Gen2 **deve ter** [namespace hierárquico](/azure/storage/blobs/data-lake-storage-namespace) ativado.
+
+- No grupo de recursos onde o espaço de trabalho do Azure Synapse está localizado, a *entidade de serviço* e o *usuário para insights do público-alvo* precisa receber, pelo menos, permissões de **Leitor**. Para mais informações, veja [Atribuir funções do Azure usando o portal do Azure](/azure/role-based-access-control/role-assignments-portal).
+
+- O *usuário* precisa de permissões do **Colaborador de Dados do Storage Blob** na conta do Azure Data Lake Storage Gen2 onde os dados estão localizados e vinculados ao espaço de trabalho do Azure Synapse. Saiba mais sobre [como usar o portal do Azure para atribuir uma função do Azure para acesso aos dados de blob e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e [permissões do Colaborador de Dados do Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+
+- A identidade gerenciada do espaço de trabalho do *[Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* precisa de permissões do **Colaborador de Dados do Storage Blob** na conta do Azure Data Lake Storage Gen2 onde os dados estão localizados e vinculados ao espaço de trabalho do Azure Synapse. Saiba mais sobre [como usar o portal do Azure para atribuir uma função do Azure para acesso aos dados de blob e fila](/azure/storage/common/storage-auth-aad-rbac-portal) e [permissões do Colaborador de Dados do Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+
+- No espaço de trabalho do Azure Synapse, a *entidade de serviço para insights do público-alvo* precisa da função de **Administrador do Synapse** atribuída. Para mais informações, veja [Como configurar o controle de acesso para o seu espaço de trabalho do Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurar a conexão e exportar para o Azure Synapse
+
+### <a name="configure-a-connection"></a>Configurar uma conexão
+
+1. Vá para **Administração** > **Conexões**.
+
+1. Selecione **Adicionar conexão** e escolha **Azure Synapse Analytics** ou selecione **Configurar** no bloco **Azure Synapse Analytics** para configurar a conexão.
+
+1. Dê um nome reconhecível à sua conexão no campo Nome de exibição. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
+
+1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Selecione ou pesquise pela assinatura na qual deseja usar os dados do Customer Insights. Assim que uma assinatura for selecionada, você também pode selecionar **Espaço de trabalho**, **Conta de armazenamento** e **Recipiente**.
+
+1. Selecione **Salvar** para salvar a conexão.
+
+### <a name="configure-an-export"></a>Configurar uma exportação
+
+Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, veja [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Vá para **Dados** > **Exportações**.
+
+1. Para criar uma exportação, selecione **Adicionar exportação**.
+
+1. No campo **Conexão para exportação**, escolha uma conexão da seção do **Azure Synapse Analytics**. Se não vir este nome de seção, não há [conexões](connections.md) deste tipo disponíveis para você.
+
+1. Fornece um **Nome de exibição** reconhecívelf para sua exportação e um **Nome do banco de dados**.
+
+1. Selecione quais entidades você deseja exportar para o Azure Synapse Analytics.
+
+1. Selecione **Salvar**.
+
+Salvar uma exportação não a executa imediatamente.
+
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand).
+
+### <a name="update-an-export"></a>Atualizar uma exportação
+
+1. Vá para **Dados** > **Exportações**.
+
+1. Selecione **Editar** na exportação que você deseja atualizar.
+
+   - **Adicionar** ou **Remove** entidades da seleção. Se forem removidas da seleção, as entidades não serão excluídas do banco de dados do Synapse Analytics. Porém, futuras atualizações de dados não irão atualizar as entidades removidas desse banco de dados.
+
+   - **Alterar o nome do banco de dados** cria um novo banco de dados do Synapse Analytics. O banco de dados cujo o nome já foi configurado não será atualizado em nenhuma atualização futura.

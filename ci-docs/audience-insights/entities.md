@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596393"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049380"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades em insights de público-alvo
 
@@ -37,12 +37,12 @@ Selecione uma entidade para explorar os diferentes campos e registros incluídos
 > [!div class="mx-imgBorder"]
 > ![Selecionar uma entidade](media/data-manager-entities-data.png "Selecionar uma entidade")
 
-- A guia **Dados** é selecionada por padrão e mostra uma tabela que lista detalhes sobre os registros individuais da entidade.
+- A guia **Dados** mostra uma tabela que lista detalhes sobre registros individuais da entidade.
 
 > [!div class="mx-imgBorder"]
 > ![Tabela de campos](media/data-manager-entities-fields.PNG "Tabela de campos")
 
-- A guia **Campos** mostra uma tabela para revisar detalhes da entidade selecionada, como nomes de campos, tipos de dados e tipos. A coluna **Tipo** mostra os tipos associados de Common Data Model que são identificados automaticamente pelo sistema ou [mapeados manualmente](map-entities.md) pelos usuários. Esses são tipos semânticos que podem diferir dos tipos de dados dos atributos - por exemplo, o campo *Email* abaixo tem um tipo de dados *Texto*, mas seu tipo de Common Data Model (semântico) pode ser *Email* ou *Endereço de E-mail*.
+- A guia **Atributos** vem selecionada por padrão e mostra uma tabela para revisar os detalhes da entidade selecionada, como nomes de campo, tipos de dados e tipos. A coluna **Tipo** mostra os tipos associados de Common Data Model que são identificados automaticamente pelo sistema ou [mapeados manualmente](map-entities.md) pelos usuários. Esses são tipos semânticos que podem diferir dos tipos de dados dos atributos - por exemplo, o campo *Email* abaixo tem um tipo de dados *Texto*, mas seu tipo de Common Data Model (semântico) pode ser *Email* ou *Endereço de E-mail*.
 
 > [!NOTE]
 > Ambas as tabelas mostram apenas uma amostra dos dados da sua entidade. Para visualizar o conjunto completo de dados, vá para a página **Fontes de dados**, selecione uma entidade, selecione **Editar** e, em seguida, visualize os dados dessa entidade com o editor Power Query, conforme explicado em [Fontes de dados](data-sources.md).
