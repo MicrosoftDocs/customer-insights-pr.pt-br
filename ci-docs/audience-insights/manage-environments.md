@@ -1,7 +1,7 @@
 ---
 title: Criar e gerenciar ambientes
 description: Saiba como se inscrever no serviço e gerenciar ambientes.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887972"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259085"
 ---
 # <a name="manage-environments"></a>Gerenciar ambientes
 
@@ -76,9 +76,9 @@ Para criar um ambiente:
    > Oferecemos suporte apenas a contas de armazenamento do Azure Data Lake Gen2 da mesma região do Azure que você selecionou ao criar o ambiente.
    > Oferecemos suporte somente a contas de armazenamento habilitadas para o Namespace Hierárquico (HNS) do Azure Data Lake Gen2.
 
-   - Para a opção Azure Data Lake Storage Gen2, você pode escolher entre uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). O nome do **Contêiner** não pode ser alterado e será "customerinsights".
+   - Para a opção Azure Data Lake Storage Gen2, você pode escolher entre uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). O nome do **Contêiner** não pode ser alterado e será `customerinsights`.
    
-   - Se você quiser usar [previsões](predictions.md), configure o compartilhamento de dados com aplicativos e soluções baseados no Microsoft Dataverse ou habilite a ingestão de dados de fontes de dados locais e forneça a URL do ambiente do Microsoft Dataverse em **Configurar compartilhamento de dados com o Microsoft Dataverse e habilitar recursos adicionais**. Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um Microsoft Dataverse Managed Data Lake.
+   - Se você quiser usar [previsões](predictions.md), configure o compartilhamento de dados com o Microsoft Dataverse ou habilite a ingestão de dados de fontes de dados locais e forneça a URL do ambiente do Microsoft Dataverse em **Configurar compartilhamento de dados com o Microsoft Dataverse e habilitar recursos adicionais**. Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Atualmente, não há suporte para o compartilhamento de dados com o Microsoft Dataverse Managed Data Lake ao salvar todos os dados no seu Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Para criar um ambiente:
      > [!div class="mx-imgBorder"]
      > ![Opções de configuração para permitir o compartilhamento com o Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Quando você executar processos, como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento especificada acima. Os arquivos de dados e arquivos model.json serão criados e adicionados às respectivas subpastas com base no processo executado.
+   Quando você executar processos, como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento especificada acima. Arquivos de dados e arquivos model.json serão criados e adicionados às pastas com base no nome do processo.
 
    Se você criar vários ambientes do Customer Insights e optar por salvar as entidades de saída desses ambientes na sua conta de armazenamento, pastas separadas serão criadas para cada ambiente com ci_<environmentid> no contêiner.
 
@@ -146,7 +146,7 @@ Você pode editar alguns dos detalhes dos ambientes existentes.
    > - Atualmente, não há suporte para o compartilhamento de dados com o Microsoft Dataverse Managed Data Lake ao salvar todos os dados no seu Azure Data Lake Storage.
    > - No momento, não há suporte para [Previsão de valores ausentes em uma entidade](predictions.md) ao habilitar o compartilhamento de dados com o Data Lake Gerenciado do Microsoft Dataverse.
 
-   Depois de habilitar o compartilhamento de dados com o Microsoft Dataverse, uma atualização completa das suas fontes de dados e de outros processos será acionada. Se os processos estiverem em execução e enfileirados, você não verá a opção para habilitar o compartilhamento de dados com o Microsoft Dataverse. Você pode esperar que esses processos sejam concluídos ou cancelá-los para habilitar o compartilhamento de dados. 
+   Depois de habilitar o compartilhamento de dados com o Microsoft Dataverse, uma atualização completa das suas fontes de dados e de outros processos será iniciada. Se os processos estiverem em execução no momento, você não verá a opção para habilitar o compartilhamento de dados com o Microsoft Dataverse. Aguarde a conclusão desses processos ou cancele-os para habilitar o compartilhamento de dados. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opções de configuração para habilitar o compartilhamento de dados com o Microsoft Dataverse.":::
    

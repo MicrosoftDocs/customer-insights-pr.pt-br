@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes com dados da Microsoft
 description: Use dados proprietários da Microsoft para enriquecer dados de clientes com afinidades de marca e interesse.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064877"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245693"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquecer perfis de clientes com afinidades de marca e interesse (versão prévia)
 
@@ -69,12 +69,10 @@ Uma experiência guiada ajuda você na configuração dos enriquecimentos.
 
 ### <a name="define-your-brands-or-interests"></a>Definir suas marcas ou interesses
 
-Selecione uma das seguintes opções:
+Escolha até cinco marcas ou interesses usando uma ou ambas as opções:
 
-- **Setor**: o sistema identifica as principais marcas ou interesses relevantes para o seu setor e enriquece os dados dos seus clientes com eles.
-- **Escolher seus próprios**: selecione até cinco itens da lista de marcas ou interesses mais relevantes para sua organização.
-
-Para adicionar uma marca ou interesse, insira-a na área de entrada para obter sugestões com base nos termos correspondentes. Se não listarmos uma marca ou interesse que você procura, envie-nos seus comentários usando o link **Sugerir**.
+- **Setor**: selecione seu setor na lista suspensa e escolha entre as principais marcas ou interesses desse setor.
+- **Escolher seus próprios**: insira uma marca ou interesse que seja relevante para sua organização e escolha uma das sugestões correspondentes. Se não listarmos uma marca ou interesse que você procura, envie-nos seus comentários usando o link **Sugerir**.
 
 ### <a name="review-enrichment-preferences"></a>Revisar preferências de enriquecimento
 

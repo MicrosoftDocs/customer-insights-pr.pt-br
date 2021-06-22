@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906842"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095588"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsão de rotatividade transacional (versão preliminar)
 
@@ -144,7 +144,7 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
    - **Status:** status da execução da previsão.
         - **Enfileirada:** a previsão está aguardando a execução de outros processos.
         - **Atualizando:** a previsão está em execução no momento para produzir resultados que fluirão para a entidade de saída.
-        - **Falha:** a execução da previsão falhou. [Analisar os logs](#troubleshoot-a-failed-prediction) para obter mais detalhes.
+        - **Falha:** a execução da previsão falhou. [Analisar os logs](manage-predictions.md#troubleshoot-a-failed-prediction) para obter mais detalhes.
         - **Êxito:** a previsão teve êxito. Selecione **Exibir** nos três pontos verticais para revisar a previsão
    - **Editado:** A data em que a configuração da previsão foi alterada.
    - **Última atualização:** A data em que a previsão atualizou resultados na entidade de saída.
@@ -168,35 +168,9 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
        
     1. **Fatores mais influentes:** Muitos fatores são levados em consideração ao criar a previsão. Cada um dos fatores tem sua importância calculada para as previsões agregadas que um modelo cria. Você pode usar esses fatores para ajudar a validar os resultados de previsão. Ou você pode usar essas informações posteriormente para [criar segmentos](segments.md) que podem ajudar a influenciar o risco de rotatividade dos clientes.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Solucionar uma previsão com falha
+## <a name="manage-predictions"></a>Gerenciar previsões
 
-1. Vá para **Inteligência** > **Previsões** e selecione a guia **Minhas previsões**.
-
-1. Selecione as reticências verticais ao lado da previsão para a qual deseja exibir os logs de erros.
-
-1. Selecione **Logs**.
-
-1. Revise todos os erros. Há vários tipos de erros que podem ocorrer e eles descrevem qual condição causou o erro. Por exemplo, um erro causado por dados insuficientes para gerar uma previsão de forma precisa é geralmente resolvido ao carregar dados adicionais no Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Atualizar uma previsão
-
-As previsões serão atualizadas automaticamente no mesmo [cronograma de atualização dos dados](system.md#schedule-tab) conforme definido nas configurações. Você também pode atualizá-las manualmente.
-
-1. Vá para **Inteligência** > **Previsões** e selecione a guia **Minhas previsões**.
-
-1. Selecione os três pontos verticais ao lado da previsão que deseja atualizar.
-
-1. Selecione **Atualizar**.
-
-## <a name="delete-a-prediction"></a>Excluir uma previsão
-
-A exclusão de uma previsão também remove sua entidade de saída.
-
-1. Vá para **Inteligência** > **Previsões** e selecione a guia **Minhas previsões**.
-
-1. Selecione os três pontos verticais ao lado da previsão que deseja excluir.
-
-1. Selecione **Excluir**.
+É possível otimizar, solucionar problemas, atualizar ou excluir previsões. Revise um relatório de usabilidade de dados de entrada para descobrir como fazer uma previsão mais rápida e confiável. Para obter mais informações, consulte [Gerenciar previsões](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954565"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095496"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Previsão do valor de permanência do cliente (CLV) (versão preliminar)
 
@@ -149,7 +149,6 @@ Os dados que refletem as principais interações do cliente (como Web, SAC e log
 
 1. Selecione **Avançar**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Revisar e executar a configuração do modelo
 
 1. Na etapa **Revisar os detalhes do seu modelo**, valide a configuração da previsão. Você pode voltar para qualquer parte da configuração da previsão selecionando **Editar** abaixo do valor exibido. Você também pode selecionar uma etapa de configuração no indicador de progresso.
@@ -170,11 +169,10 @@ Os dados que refletem as principais interações do cliente (como Web, SAC e log
 - **Status**: status da execução da previsão.
     - **Enfileirada**: a previsão está aguardando a conclusão de outros processos.
     - **Atualizando**: a previsão está em execução no momento para criar resultados que fluirão para a entidade de saída.
-    - **Falha**: a execução da previsão falhou. [Analisar os logs](#troubleshoot-a-failed-prediction) para obter mais detalhes.
+    - **Falha**: a execução da previsão falhou. [Analisar os logs](manage-predictions.md#troubleshoot-a-failed-prediction) para obter mais detalhes.
     - **Êxito**: a previsão teve êxito. Selecione **Exibir** nas elipses verticais para revisar os resultados da previsão.
 - **Editado**: a data em que a configuração da previsão foi alterada.
 - **Última atualização**: a data em que a previsão atualizou resultados na entidade de saída.
-
 
 ### <a name="review-prediction-results"></a>Revisar os resultados de previsão
 
@@ -216,28 +214,8 @@ Há três seções principais de dados na página de resultados.
 
 - **Fatores mais influentes**: vários fatores são considerados na criação de previsão de CLV com base nos dados de entrada fornecidos ao modelo de IA. Cada um deles tem a sua importância calculada para as previsões agregadas criadas por um modelo. Você pode usar esses fatores para ajudar a validar os resultados de previsão. Esses fatores também fornecem mais informações sobre os fatores mais influentes que contribuíram para prever o CLV em todos os seus clientes.
 
-## <a name="refresh-a-prediction"></a>Atualizar uma previsão
+## <a name="manage-predictions"></a>Gerenciar previsões
 
-As previsões são atualizadas automaticamente na mesma [programação em que seus dados são atualizados](system.md#schedule-tab) conforme definido nas configurações. Você também pode atualizá-las manualmente.
-
-1. Vá para **Inteligência** > **Previsões** e selecione a guia **Minhas previsões**.
-2. Selecione os três pontos verticais ao lado da previsão que deseja atualizar.
-3. Selecione **Atualizar**.
-
-## <a name="delete-a-prediction"></a>Excluir uma previsão
-
-A exclusão de uma previsão também remove sua entidade de saída.
-
-1. Vá para **Inteligência** > **Previsões** e selecione a guia **Minhas previsões**.
-2. Selecione os três pontos verticais ao lado da previsão que deseja excluir.
-3. Selecione **Excluir**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Solucionar uma previsão com falha
-
-1. Vá para **Inteligência** > **Previsões** e selecione a guia **Minhas previsões**.
-2. Selecione as reticências verticais ao lado da previsão para a qual deseja exibir os logs de erros.
-3. Selecione **Logs**.
-4. Revise todos os erros. Há vários tipos de erros que podem ocorrer e eles descrevem qual condição causou o erro. Por exemplo, um erro em que não há dados suficientes para prever com precisão é normalmente resolvido carregando mais dados em insights de público-alvo.
-
+É possível otimizar, solucionar problemas, atualizar ou excluir previsões. Revise um relatório de usabilidade de dados de entrada para descobrir como fazer uma previsão mais rápida e confiável. Para obter mais informações, consulte [Gerenciar previsões](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

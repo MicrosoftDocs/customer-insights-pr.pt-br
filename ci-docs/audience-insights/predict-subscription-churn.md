@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906888"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095634"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -147,30 +147,9 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
        > [!div class="mx-imgBorder"]
        > ![Lista mostrando os fatores influentes e a respectiva importância deles na previsão de resultados de rotatividade](media/subscription-churn-influentialfactors.PNG "Lista mostrando os fatores influentes e a respectiva importância deles na previsão de resultados de rotatividade")
 
-## <a name="fix-a-failed-prediction"></a>Corrigir uma previsão com falha
+## <a name="manage-predictions"></a>Gerenciar previsões
 
-1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
-1. Selecione a previsão cujos logs de erro gostaria de exibir e selecione **Logs**.
-   > [!div class="mx-imgBorder"]
-   > ![Exibição da barra de menus de resultados, incluindo os botões fechar, editar modelo e logs](media/subscription-churn-logsbutton.PNG "Exibição da barra de menus de resultados, incluindo os botões fechar, editar modelo e logs")
-1. Revise todos os erros. Há vários tipos de erros que podem ocorrer e eles descrevem qual condição causou o erro. Por exemplo, um erro em que não há dados suficientes para prever com precisão é normalmente resolvido carregando dados adicionais.
-
-## <a name="refresh-a-prediction"></a>Atualizar uma previsão
-
-As previsões serão atualizadas automaticamente no mesmo [cronograma de atualização dos dados](system.md#schedule-tab) conforme definido nas configurações.
-
-1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
-1. Selecione os três pontos verticais ao lado da previsão que deseja atualizar.
-1. Selecione **Atualizar**.
-
-## <a name="delete-a-prediction"></a>Excluir uma previsão
-
-1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
-1. Selecione os três pontos verticais ao lado da previsão que deseja excluir.
-1. Selecione **Excluir**.
-
-> [!NOTE]
-> Excluir uma previsão removerá sua entidade de saída.
+É possível otimizar, solucionar problemas, atualizar ou excluir previsões. Revise um relatório de usabilidade de dados de entrada para descobrir como fazer uma previsão mais rápida e confiável. Para obter mais informações, consulte [Gerenciar previsões](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
