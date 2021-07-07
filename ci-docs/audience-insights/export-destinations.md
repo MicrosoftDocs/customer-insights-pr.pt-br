@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253026"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305464"
 ---
 # <a name="exports-preview-overview"></a>Visão geral de exportações (versão preliminar)
 
 A página **Exportações** mostra todas as exportações configuradas. As exportações compartilham dados específicos com vários aplicativos. Elas podem incluir perfis ou entidades de clientes, esquemas e detalhes de mapeamento. Cada exportação requer uma [conexão, configurada por um administrador, para gerenciar a autenticação e o acesso](connections.md).
 
-Vamos para **Dados** > **Exportações** para exibir a página de exportações. Todas as funções de usuário têm acesso para exibir exportações configuradas. Use o campo de pesquisa na barra de comandos para localizar exportações por nome, nome de conexão ou tipo de conexão.
+Vamos para **Dados** > **Exportações** para exibir a página de exportações. Todas as funções podem visualizar exportações configuradas. Use o campo de busca na barra de comandos para encontrar as exportações por nome, nome da conexão ou tipo da conexão.
 
 ## <a name="set-up-a-new-export"></a>Configurar uma nova exportação
 
@@ -65,7 +65,7 @@ Depois que criar os destinos de exportação, eles serão listados em **Dados** 
 
 1. Vá para **Dados** > **Exportações**.
 
-1. Usuários sem permissões de edição selecionam **Exibir** em vez de **Editar** para ver os detalhes da exportação.
+1. Os usuários sem as permissões de edição devem selecionar **Visualizar** em vez de **Editar** para ver os detalhes da exportação.
 
 1. O painel lateral mostra a configuração de uma exportação. Sem permissões de edição, você não pode alterar os valores. Selecione **Fechar** para retornar à página de exportações.
 
@@ -73,7 +73,7 @@ Depois que criar os destinos de exportação, eles serão listados em **Dados** 
 
 Cada exportação que você configura tem uma agenda de atualizações. Durante uma atualização, o sistema procura dados novos ou atualizados para incluir em uma exportação. Por padrão, as exportações são executadas como parte de cada [atualização agendada do sistema](system.md#schedule-tab). Você pode personalizar a agenda de atualização ou desativá-la para executar as exportações manualmente.
 
-As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações nas [dependências](system.md#refresh-policies) em andamento no momento em que uma exportação agendada deve começar, o sistema primeiro concluirá as dependências e, em seguida, executará a exportação. Você pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizada**.
+As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações em andamento nas [dependências](system.md#refresh-policies) quando uma exportação agendada precisar iniciar, o sistema primeiro concluirá as atualizações e depois fará a exportação. Você pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizada**.
 
 ### <a name="schedule-exports"></a>Agenda exportações
 

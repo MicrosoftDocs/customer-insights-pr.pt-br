@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965564"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305418"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços aprimorados
 
@@ -22,11 +22,11 @@ Os endereços dos seus dados podem ser não estruturados, incompletos ou incorre
 
 ## <a name="how-we-enhance-addresses"></a>Como aprimoramos os endereços
 
-Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar seus componentes e os coloca em um formato estruturado. Depois, usamos inteligência artificial para corrigir, completar e padronizar os valores no endereço.
+Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar seus componentes e os coloca em um formato estruturado. Em seguida, usamos a IA para corrigir, completar e padronizar os valores no endereço.
 
 ### <a name="example"></a>Exemplo
 
-As informações de endereço podem estar em formato não padrão e conter erros de ortografia. O modelo pode corrigir esses problemas e criar endereços consistentes em perfis unificados de clientes.
+As informações de endereço podem estar em um formato não padrão e conter erros de ortografia. O modelo pode corrigir esses problemas e criar endereços consistentes em perfis unificados de clientes.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Os endereços avançados só funcionam com os valores que já existem nos dados 
 2. Verificar se algum dos valores, como CEPs ou nomes de ruas, é válido.
 3. Alterar valores que não reconhece.
 
-O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo muda um valor de entrada, como acontece com qualquer modelo baseado em ML, não há garantia de 100% de precisão.
+O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo altera um valor de entrada, como acontece com qualquer modelo baseado em aprendizado de máquina, a precisão de 100% não é garantida.
 
 ## <a name="supported-countries-or-regions"></a>Países ou regiões com suporte
 
@@ -76,7 +76,7 @@ Os endereços devem conter um valor de país/região. Não processamos endereço
 1. Selecione como os endereços serão formatados em seu conjunto de dados. Escolha **Endereço com um único atributo** se os endereços em seus dados usarem um único campo. Escolha **Endereço com vários atributos** se os endereços em seus dados usarem mais de um campo de dados.
 
    > [!NOTE]
-   > O campo País/região é obrigatório em endereços com atributo único e com vários atributos. Endereços que não contiverem valores de país/região válidos ou suportados não serão enriquecidos
+   > País/região é obrigatório em endereços de atributo único e de vários atributos. Endereços que não contiverem valores de país/região válidos ou com suporte não serão enriquecidos.
 
 1.  Mapeie os campos de endereço da sua entidade de cliente unificada.
 
@@ -98,6 +98,6 @@ Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando *
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md), [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para oferecer experiências personalizadas aos seus clientes.
+Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md) e [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

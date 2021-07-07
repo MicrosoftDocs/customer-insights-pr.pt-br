@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896037"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305280"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com a HERE Technologies (versão preliminar)
 
@@ -24,9 +24,9 @@ A HERE Technologies é uma empresa de plataforma de localização que fornece da
 
 Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requisitos devem ser atendidos:
 
-- Você tem uma assinatura ativa da HERE Technologies. Para obter uma assinatura, você pode [se inscrever aqui](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [entre contato com a HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) diretamente. [Saiba mais sobre o enriquecimento de localização da HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- Você tem uma assinatura ativa da HERE Technologies. Para obter uma assinatura, você pode [inscrever-se aqui](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [entre contato com a HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) diretamente. [Saiba mais sobre o enriquecimento de localização da HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Há uma [conexão](connections.md) da HERE disponível *ou* você tem permissões de [administrador](permissions.md#administrator) e a chave de API da HERE Technologies.
+- Uma [conexão](connections.md) da HERE está disponível *ou* você tem permissões de [administrador](permissions.md#administrator) e a chave de API da HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
@@ -37,7 +37,7 @@ Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requi
    > [!div class="mx-imgBorder"]
    > ![Bloco da HERE Technologies](media/HERE-tile.png "Bloco da HERE Technologies")
 
-1. Selecione uma [conexão](connections.md) na lista suspensa. Contate um administrador se nenhuma conexão estiver disponível. Se for administrador, você poderá criar uma conexão selecionando **Adicionar conexão**. Escolha **HERE Technologies** no menu suspenso. 
+1. Selecione uma [conexão](connections.md) na lista suspensa. Contate um administrador se nenhuma conexão estiver disponível. Se for administrador, você poderá criar uma conexão selecionando **Adicionar conexão**. Escolha **HERE Technologies** na lista suspensa. 
 
 1. Selecione **Conectar-se à HERE Technologies** para confirmar a seleção da conexão.
 
@@ -58,7 +58,7 @@ Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requi
 
 1. Selecione **Salvar enriquecimento** depois de revisar suas escolhas.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Configurar a conexão para a HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Configurar a conexão para a HERE Technologies 
 
 Você deve ser um administrador para configurar as conexões. Selecione **Adicionar conexão** ao configurar um enriquecimento *ou* acesse **Administração** > **Conexões** e selecione **Configurar** no bloco da HERE technologies.
 
@@ -66,13 +66,13 @@ Você deve ser um administrador para configurar as conexões. Selecione **Adicio
 
 1. Forneça uma chave de API da HERE Technologies válida.
 
-1. Revise e forneça seu consentimento para a **Conformidade e privacidade dos dados** marcando a caixa de seleção **Concordo**
+1. Revise e forneça seu consentimento para a **Conformidade e privacidade dos dados** selecionando **Eu concordo**.
 
 1. Selecione **Verificar** para validar a configuração.
 
 1. Depois de concluir a verificação, selecione **Salvar**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Página de configuração de conexão da HERE technologies](media/enrichment-HERE-connection.png "Página de configuração de conexão da HERE technologies")
 
 ## <a name="enrichment-results"></a>Resultados de enriquecimento
@@ -85,12 +85,12 @@ Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando *
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md), [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para oferecer experiências personalizadas aos seus clientes.
+Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md) e [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 
 Ao habilitar o Dynamics 365 Customer Insights para transmitir dados à HERE Technologies, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que a HERE Technologies cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
+Seu administrador do Dynamics 365 Customer Insights poderá remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259085"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304866"
 ---
 # <a name="manage-environments"></a>Gerenciar ambientes
 
@@ -54,29 +54,32 @@ Para criar um ambiente:
 1. Selecione **Novo**.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurações do ambiente](media/environment-settings-dialog.png)
+   > ![Configurações de ambiente.](media/environment-settings-dialog.png)
 
-1. Na caixa de diálogo **Criar novo ambiente**, selecione **Novo ambiente**.
+1. Na caixa de diálogo **Criar um ambiente**, selecione **Novo ambiente**.
 
    Se você quiser [copiar dados do ambiente atual](#considerations-for-copy-configuration-preview), selecione **Copiar de um ambiente existente**. Você verá uma lista de todos os ambientes disponíveis da sua organização, dos quais é possível copiar dados.
 
 1. Forneça os detalhes a seguir:
    - **Nome**: o nome deste ambiente. Esse campo já estará preenchido se você copiou de um ambiente existente, mas é possível alterá-lo.
-   - **Região**: a região na qual o serviço é implantado e hospedado.
    - **Tipo**: selecione se você deseja criar um ambiente de produção ou área restrita.
-
+   - **Região**: a região na qual o serviço é implantado e hospedado.
+   
 1. Opcionalmente, é possível selecionar **Configurações avançadas**:
 
-   - **Salvar todos os dados no**: especifica onde você deseja armazenar os dados de saída gerados do Customer Insights. Você terá duas opções: **Armazenamento do Customer Insights** (um Azure Data Lake gerenciado pela equipe do Customer Insights) e Gen2 do **Azure Data Lake Storage** (seu próprio Azure Data Lake Storage). Por padrão, a opção de armazenamento do Customer Insights é selecionada.
+   - **Salvar todos os dados no**: especifica onde você deseja armazenar os dados de saída gerados do Customer Insights. Você terá duas opções: **Armazenamento do Customer Insights** (um Azure Data Lake gerenciado pela equipe do Customer Insights) e **Azure Data Lake Storage** (seu próprio Azure Data Lake Storage). Por padrão, a opção de armazenamento do Customer Insights é selecionada.
 
-   > [!NOTE]
-   > Ao salvar dados no Azure Data Lake Storage, você concorda que os dados serão transferidos e armazenados na localização geográfica adequada para a conta de armazenamento do Azure, que pode ser diferente de onde os dados são armazenados no Dynamics 365 Customer Insights. [Saiba mais no Microsoft Trust Center.](https://www.microsoft.com/trust-center)
-   >
-   > Atualmente, as entidades ingeridas são sempre armazenadas no data lake gerenciado do Customer Insights.
-   > Oferecemos suporte apenas a contas de armazenamento do Azure Data Lake Gen2 da mesma região do Azure que você selecionou ao criar o ambiente.
-   > Oferecemos suporte somente a contas de armazenamento habilitadas para o Namespace Hierárquico (HNS) do Azure Data Lake Gen2.
+     > [!NOTE]
+     > Ao salvar dados no Azure Data Lake Storage, você concorda que os dados serão transferidos e armazenados na localização geográfica adequada para a conta de armazenamento do Azure, que pode ser diferente de onde os dados são armazenados no Dynamics 365 Customer Insights. [Saiba mais no Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+     >
+     > No momento, as entidade ingeridas são sempre armazenadas no Data Lake gerenciado do Customer Insights. 
+     > 
+     > Oferecemos suporte apenas para contas do Azure Data Lake Storage da mesma região Azure que você selecionou ao criar o ambiente. 
+     > 
+     > Oferecemos suporte apenas a contas do Azure Data Lake Storage que tenham um namespace hierárquico hierárquico habilitado.
 
-   - Para a opção Azure Data Lake Storage Gen2, você pode escolher entre uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). O nome do **Contêiner** não pode ser alterado e será `customerinsights`.
+
+   - Para a opção do Azure Data Lake Storage, você pode escolher entre uma opção baseada em recursos e outra baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). O nome do **Contêiner** não pode ser alterado e será `customerinsights`.
    
    - Se você quiser usar [previsões](predictions.md), configure o compartilhamento de dados com o Microsoft Dataverse ou habilite a ingestão de dados de fontes de dados locais e forneça a URL do ambiente do Microsoft Dataverse em **Configurar compartilhamento de dados com o Microsoft Dataverse e habilitar recursos adicionais**. Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um Microsoft Dataverse Managed Data Lake.
 
@@ -85,7 +88,7 @@ Para criar um ambiente:
      > - Atualmente, não há suporte para a [previsão de valores ausentes em uma entidade](predictions.md) ao habilitar o compartilhamento de dados com o Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Opções de configuração para permitir o compartilhamento com o Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Opções de configuração para habilitar o compartilhamento de dados com o Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Quando você executar processos, como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento especificada acima. Arquivos de dados e arquivos model.json serão criados e adicionados às pastas com base no nome do processo.
 
@@ -113,14 +116,14 @@ As seguintes configurações *não* são copiadas:
 
 - Perfis do cliente.
 - Credenciais da fonte de dados. Você precisará fornecer as credenciais para cada fonte de dados e atualizar as fontes de dados manualmente.
-- Fontes de dados da pasta Common Data Model e do lake gerenciado do Common Data Service. Você precisará criar essas fontes de dados manualmente com o mesmo nome do ambiente de origem.
+- As fontes de dados da pasta Common Data Model e Data Lake gerenciadas pelo Dataverse. Você precisará criar essas fontes de dados manualmente com o mesmo nome do ambiente de origem.
 
 Ao copiar um ambiente, você verá uma mensagem de confirmação de que o novo ambiente foi criado. Selecione **Ir para fontes de dados** para ver a lista de fontes de dados.
 
 Todas as fontes de dados mostrarão um status **Credenciais Necessárias**. Edite as fontes de dados e insira as credenciais para atualizá-las.
 
 > [!div class="mx-imgBorder"]
-> ![Fontes de dados copiadas](media/data-sources-copied.png)
+> ![Fontes de dados copiadas.](media/data-sources-copied.png)
 
 Após atualizar as fontes de dados, vá para **Dados** > **Unificar**. Aqui você encontrará configurações do ambiente de origem. Edite-os conforme necessário ou selecione **Executar** para iniciar o processo de unificação de dados e criar a entidade unificada do cliente.
 
@@ -136,9 +139,9 @@ Você pode editar alguns dos detalhes dos ambientes existentes.
 
 3. Na caixa **Editar ambiente**, é possível atualizar o **Nome de exibição** do ambiente, mas não é possível alterar a **Região** ou o **Tipo**.
 
-4. Se um ambiente estiver configurado para armazenar dados no Azure Data Lake Storage Gen2, você poderá atualizar a **Chave da conta**. No entanto, você não pode alterar o **Nome da conta** e o nome do **Recipiente**.
+4. Se um ambiente estiver configurado para armazenar dados no Azure Data Lake Storage, você pode atualizar a **Chave de conta**. No entanto, você não pode alterar o **Nome da conta** e o nome do **Recipiente**.
 
-5. Opcionalmente, você pode atualizar de uma conexão baseada em chave de conta para uma conexão baseada em recurso ou assinatura. Após a atualização, não é possível reverter para a chave de conta. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
+5. Como outra opção, você pode atualizar de uma conexão baseada em chave da conta para uma conexão baseada em recursos ou em assinatura. Após a atualização, não é possível reverter para a chave de conta. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
 
 6. Opcionalmente, você pode fornecer uma URL do ambiente do Microsoft Dataverse em **Configurar compartilhamento de dados com o Microsoft Dataverse e habilitar recursos adicionais**. Esses recursos incluem o compartilhamento de dados com aplicativos e soluções baseados no Microsoft Dataverse, a ingestão de dados de fontes de dados locais ou o uso de [previsões](predictions.md). Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um Data Lake Gerenciado do Microsoft Dataverse.
 
@@ -158,19 +161,19 @@ Como administrador, você pode redefinir um ambiente para um estado vazio se qui
 
 1.  Selecione o seletor de **Ambiente** no cabeçalho do aplicativo. 
 
-2.  Selecione o ambiente que deseja redefinir e selecione as reticências **...**. 
+2.  Selecione o ambiente que deseja redefinir selecione as reticências (**...**). 
 
 3. Escolha a opção **Redefinir**. 
 
 4.  Para confirmar a exclusão, insira o nome do ambiente e selecione **Redefinir**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Excluir um ambiente existente (disponível apenas para administradores)
+## <a name="delete-an-existing-environment"></a>Excluir um ambiente existente
 
 Como administrador, é possível excluir um ambiente administrado por você.
 
 1.  Selecione o seletor de **Ambiente** no cabeçalho do aplicativo.
 
-2.  Selecione o ambiente que deseja redefinir e selecione as reticências **...**. 
+2.  Selecione o ambiente que deseja redefinir selecione as reticências (**...**). 
 
 3. Escolha a opção **Excluir**. 
 

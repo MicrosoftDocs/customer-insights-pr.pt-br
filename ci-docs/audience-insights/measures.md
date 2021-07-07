@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049236"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304775"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerenciar medidas
 
-As medidas ajudam você a entender melhor os comportamentos dos clientes e o desempenho dos negócios. Elas analisam para valores relevantes de [perfis unificados](data-unification.md). Por exemplo, uma empresa deseja ver o *total de gastos por cliente* para entender o histórico de compras do cliente individual ou medir o *total de vendas da empresa* para entender a receita de nível agregado em todo o negócio.  
+As medidas ajudam você a entender melhor os comportamentos dos clientes e o desempenho dos negócios. Elas analisam para valores relevantes de [perfis unificados](data-unification.md). Por exemplo, uma empresa deseja ver o *gasto total por cliente* para entender o histórico ou a medida de um cliente específico ou medir as *vendas totais da empresa* para entender a receita de nível agregado em toda a empresa.  
 
 As medidas são criadas por meio do construtor de medidas, uma plataforma de consulta de dados com vários operadores e opções de mapeamento simples. Ele permite filtrar dados, agrupar resultados, detectar [caminhos de relacionamento de entidades](relationships.md) e exibir a saída.
 
@@ -34,7 +34,7 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
 
 1. Selecione **Editar nome** e forneça um **Nome** para a medida. 
    > [!NOTE]
-   > Se a nova configuração de medida tiver somente dois campos, por exemplo, CustomerID e um cálculo, a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E você poderá ver o valor da medida no perfil de cliente unificado. Outras medidas vão gerar suas próprias entidades.
+   > Se a sua configuração de medida tiver apenas dois campos, por exemplo, CustomerID e um cálculo, a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E você poderá ver o valor da medida no perfil de cliente unificado. Outras medidas vão gerar suas próprias entidades.
 
 1. Na área de configuração, escolha a função de agregação no menu suspenso **Selecionar função**. As funções de agregação incluem: 
    - **Somar**
@@ -64,17 +64,19 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
 
 1. Para adicionar filtros, selecione **Filtro** na área de configuração. 
   
-   1. Na seção **Adicionar atributo** do painel **Filtros**, selecione o atributo que deseja usar para criar filtros.
+   1. Na seção **Adicionar atributo** do painel **Filtros**, selecione o atributo de lote que você deseja usar para criar filtros.
    1. Configure os operadores de filtro para definir o filtro para cada atributo selecionado.
    1. Selecione **Aplicar** para adicionar os filtros à medida.
 
 1. Para adicionar dimensões, selecione **Dimensão** na área de configuração. As dimensões serão mostradas como colunas na entidade de saída da medida.
+ 
    1. Selecione **Editar dimensões** para adicionar atributos de dados pelos quais você deseja agrupar os valores de medida. Por exemplo, cidade ou sexo. Por padrão, a dimensão *CustomerID* é selecionada para criar *medidas em nível de cliente*. Você pode remover a dimensão padrão se quiser criar *medidas em nível de negócios*.
    1. Selecione **Concluído** para adicionar as dimensões à medida.
 
-1. Se houver valores nos seus dados que precisem ser substituídos por um número inteiro, por exemplo, substitua *nulo* por *0* e selecione **Regras**. Configure a regra e escolha apenas números inteiros como substituições.
+1. Caso haja valores nos seus dados que você precise substituir por um inteiro, por exemplo, substituir *nulo* por *0*, selecione **Regras**. Configure a regra e escolha apenas números inteiros como substituições.
 
 1. Se houver vários caminhos entre a entidade de dados que você mapeou e a entidade *Cliente*, você deverá escolher um dos [caminhos de relacionamento de entidade](relationships.md) identificados. Os resultados da medição podem variar dependendo do caminho selecionado. 
+   
    1. Selecione **Preferências de dados** e escolha o caminho da entidade que deve ser usado para identificar sua medida. Se houver somente um único caminho para a entidade *Cliente*, este controle não será exibido.
    1. Selecione **Concluído** para aplicar sua seleção. 
 
@@ -123,7 +125,7 @@ O procedimento a seguir descreve as etapas para criar uma nova medida usando um 
 
 1. Selecione **Concluído**.
 
-1. Na seção **Definir período**, defina o período dos dados a serem usados. Escolha se você deseja que a nova medida cubra todo o conjunto de dados, selecionando **Todo o tempo**. Ou se você quiser que a medida se concentre em um **Período específico**.
+1. Na seção **Definir período**, defina o período dos dados a serem usados. Para escolher se você deseja que a nova medida aborde todo o conjunto de dados, selecione **O tempo todo**, ou que a medida se concentre em um **Período específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de tela mostrando a seção do período ao configurar uma medida com base em um modelo.":::
 
@@ -142,12 +144,12 @@ O procedimento a seguir descreve as etapas para criar uma nova medida usando um 
 
 Você pode encontrar a lista de medidas na página **Medidas**.
 
-Você encontrará informações sobre o tipo de medida, o criador, a data de criação, o status e o estado. Ao selecionar uma medida da lista, você pode exibir a saída e baixar um arquivo .CSV.
+Você encontrará informações sobre o tipo de medida, o criador, a data de criação, o status e o estado. Ao selecionar uma nova medida, na lista, você pode visualizar a saída e baixar um arquivo CSV.
 
 Para atualizar todas as suas medidas ao mesmo tempo, selecione **Atualizar tudo** sem selecionar uma medida específica.
 
 > [!div class="mx-imgBorder"]
-> ![Ações para gerenciar medidas únicas](media/measure-actions.png "Ações para gerenciar medidas únicas")
+> ![Ações para gerenciar medidas únicas.](media/measure-actions.png "Ações para gerenciar medidas únicas.")
 
 Selecione uma medida da lista para as seguintes opções:
 
@@ -159,11 +161,11 @@ Selecione uma medida da lista para as seguintes opções:
 - **Ative** ou **Desative**. Medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
 
 > [!TIP]
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
+> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Após selecionar **Ver detalhes** para uma ou mais tarefas do trabalho, você encontrará informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados com a tarefa.
 
 ## <a name="next-step"></a>Próxima etapa
 
-Você pode usar as medidas existentes para criar [um segmento de cliente](segments.md).
+Você pode usar medidas existentes para criar [um segmento de cliente](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

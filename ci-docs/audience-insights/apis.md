@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016578"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304728"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabalhar com APIs do Customer Insights
 
-O Dynamics 365 Customer Insights fornece APIs para criar seus próprios aplicativos com base nos dados do Customer Insights.
+O Dynamics 365 Customer Insights fornece APIs para criar seus próprios aplicativos com base em seus dados no Customer Insights.
 
 > [!IMPORTANT]
 > Os detalhes dessas APIs estão listados na [Referência de APIs do Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Eles incluem informações adicionais sobre operações, parâmetros e respostas.
 
-Este artigo explica como acessar as APIs do Customer Insights, criar um registro do Azure App e começar a usar as bibliotecas de cliente disponíveis.
+Este artigo descreve como acessar as APIs do Customer Insights, criar um Registro de Azure App e começar a usar as bibliotecas de cliente disponíveis.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Comece a experimentar as APIs do Customer Insights
 
@@ -32,6 +32,7 @@ Este artigo explica como acessar as APIs do Customer Insights, criar um registro
 1. Para habilitar APIs em seu ambiente do Customer Insights, acesse **Administrador** > **Permissões**. Você precisará de permissões de administrador para fazer isso.
 
 1. Acesse a guia **APIs** e selecione o botão **Habilitar**.    
+ 
    Habilitar as APIs cria uma chave de assinatura primária e secundária para sua instância, que é usada nas solicitações de API. É possível regenerar as chaves selecionando **Regenerar primária** ou **Regenerar secundária** em **Administrador** > **Permissões** > **APIs**.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar APIs do Customer Insights":::
@@ -40,7 +41,7 @@ Este artigo explica como acessar as APIs do Customer Insights, criar um registro
 
 1. Escolha uma operação de API e selecione **Experimentar**.
 
-1. No painel lateral, defina o valor no menu suspenso **Autorização** como **implícito**. O cabeçalho `Authorization` é obtido com um token do portador adicionado. Sua chave de assinatura será preenchida automaticamente.
+1. No painel lateral, defina o valor no menu suspenso **Autorização** como **implícito**. O cabeçalho `Authorization` será adicionado com um token de portador. Sua chave de assinatura será preenchida automaticamente.
   
 1. Opcionalmente, adicione todos os parâmetros de consulta necessários.
 
@@ -48,27 +49,27 @@ Este artigo explica como acessar as APIs do Customer Insights, criar um registro
 
 A resposta HTTP aparecerá logo abaixo.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="Gif animado mostrando como selecionar o teste de APIs.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="Como testar as APIs.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Criar um registro de aplicativo no portal do Azure
 
-Essas etapas ajudam você a começar a usar as APIs do Customer Insights em um aplicativo do Azure usando permissões delegadas. Certifique-se de ter concluído a [seção Introdução](#get-started-trying-the-customer-insights-apis) primeiro.
+Essas etapas ajudam você a começar a usar as APIs do Customer Insights em um aplicativo Azure usando permissões delegadas. Certifique-se de concluir a [seção de Introdução](#get-started-trying-the-customer-insights-apis) primeiro.
 
 1. Entre no [portal do Azure](https://portal.azure.com) com a conta que pode acessar os dados do Customer Insights.
 
 1. À esquerda, selecione **Registros de aplicativo**.
 
 1. Selecione **Novo registro**, forneça um nome de aplicativo e escolha o tipo de conta.
+ 
    Ou adicione uma URL de redirecionamento. http://localhost é suficiente para desenvolver um aplicativo em seu computador local.
 
 1. No seu novo registro de aplicativo, vá para **Permissões de API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animado para definir a permissão da API no registro do aplicativo.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Como definir permissões de API no registro do aplicativo.":::
 
 1. Selecione **Adicionar uma permissão** e **Customer Insights** no painel lateral.
 
-1. Para **Tipo de permissão**, selecione **Permissões delegadas** e a permissão **user_impersonation**.
+1. Em **Tipo de permissão**, selecione **Permissões delegadas** e, em seguida, selecione a permissão **user_impersonation**.
 
 1. Selecione **Adicionar permissões**. Se você precisar acessar a API sem que um usuário faça logon, consulte a seção [Permissões de aplicativo de servidor a servidor](#server-to-server-application-permissions).
 
@@ -76,13 +77,13 @@ Essas etapas ajudam você a começar a usar as APIs do Customer Insights em um a
 
 Você pode usar a ID do aplicativo/cliente para esse registro de aplicativo na Biblioteca de Autenticação da Microsoft (MSAL) para obter um token de portador para envio com sua solicitação à API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animado para conceder consentimento de administrador.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Conceder consentimento de administrador.":::
 
 Para obter mais informações sobre MSAL, consulte [Visão geral da Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Para obter mais informações sobre o registro do aplicativo no Azure, consulte [A nova experiência de registro de aplicativo do portal do Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
+Para obter mais informações sobre o registro de aplicativos no Azure, consulte [Registrar um aplicativo](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-Para obter informações sobre como usar as APIs de nossas bibliotecas de clientes, consulte [Bibliotecas de clientes do Customer Insights](#customer-insights-client-libraries).
+Para obter informações sobre como usar as APIs em nossas bibliotecas de cliente, consulte [Bibliotecas de cliente do Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Permissões de aplicativo de servidor a servidor
 
@@ -94,7 +95,7 @@ A [seção de registro de aplicativo](#create-a-new-app-registration-in-the-azur
 
 1. Selecione a guia **APIs que minha organização usa** e escolha **Dynamics 365 AI para Customer Insights** na lista. 
 
-1. Para **Tipo de permissão**, selecione **Permissões de aplicativo** e a permissão **CustomerInsights.Api.All**.
+1. Em **Tipo de permissão**, selecione **Permissões de aplicativo** e, em seguida, selecione a permissão **CustomerInsights.Api.All**.
 
 1. Selecione **Adicionar permissões**.
 
@@ -102,9 +103,10 @@ A [seção de registro de aplicativo](#create-a-new-app-registration-in-the-azur
 
 1. Selecione **Conceder consentimento do administrador para...** para concluir o registro do aplicativo.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animado para conceder consentimento de administrador.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Conceder consentimento de administrador.":::
 
-1. Para concluir, é preciso adicionar o nome do registro do aplicativo como um usuário no Customer Insights.    
+1. Para concluir, é preciso adicionar o nome do registro do aplicativo como um usuário no Customer Insights.  
+   
    Abra o Customer Insights, acesse **Administrador** > **Permissões** e selecione **Adicionar usuário**.
 
 1. Pesquise o nome do registro do seu aplicativo, selecione-o nos resultados da pesquisa e selecione **Salvar**.
@@ -124,6 +126,7 @@ Saiba como começar a usar as bibliotecas de clientes C# de NuGet.org. Para obte
 1. Procure **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Selecione **Instalar** para adicionar o pacote ao projeto.
+ 
    Se desejar, execute este comando no **Console do Gerenciador de Pacotes NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Adicione o pacote NuGet ao projeto do Visual Studio":::
@@ -132,16 +135,18 @@ Saiba como começar a usar as bibliotecas de clientes C# de NuGet.org. Para obte
 
 1. Use a [Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) para obter um `AccessToken` usando seu [registro do Azure App](#create-a-new-app-registration-in-the-azure-portal) existente.
 
-1. Depois de autenticar e adquirir um token com sucesso, crie um ou use um `HttpClient` existente com a **"Autorização" DefaultRequestHeaders** adicional definida como **Portador <access token>** e **Ocp-Apim-Subscription-Key** definido como [**chave de assinatura** do seu ambiente do Customer Insights](#get-started-trying-the-customer-insights-apis).    
+1. Depois de autenticar e adquirir um token com sucesso, crie um ou use um `HttpClient` existente com a **"Autorização" DefaultRequestHeaders** adicional definida como **Portador <access token>** e **Ocp-Apim-Subscription-Key** definido como [**chave de assinatura** do seu ambiente do Customer Insights](#get-started-trying-the-customer-insights-apis).   
+ 
    Redefina o cabeçalho **Autorização** quando apropriado. Por exemplo, quando o token expirou.
 
 1. Passe este `HttpClient` para a construção do cliente `CustomerInsights`.
 
    :::image type="content" source="media/httpclient-sample.png" alt-text="Amostra de httpclient":::
 
-1. Faça chamadas com o cliente para os "métodos de extensão", por exemplo, `GetAllInstancesAsync`. Se o acesso ao `Microsoft.Rest.HttpOperationResponse` subjacente for preferencial, use os" métodos de mensagem http "; por exemplo, `GetAllInstancesWithHttpMessagesAsync`.
+1. Faça chamadas com o cliente para os "métodos de extensão", por exemplo, `GetAllInstancesAsync`. Se o acesso ao `Microsoft.Rest.HttpOperationResponse` subjacente for preferencial, use os" métodos de mensagem http ", por exemplo, `GetAllInstancesWithHttpMessagesAsync`.
 
 1. A resposta provavelmente será do tipo `object` porque o método pode retornar vários tipos (por exemplo, `IList<InstanceInfo>` e `ApiErrorResult`). Para verificar o tipo de retorno, você pode converter com segurança os objetos nos tipos de resposta especificados na [página de detalhes da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) para essa operação.    
+   
    Se mais informações sobre a solicitação forem necessárias, use os **métodos de mensagem http** para acessar o objeto de resposta bruto.
 
 ### <a name="nodejs-package"></a>Pacote NodeJS

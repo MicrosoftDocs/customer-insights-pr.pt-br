@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866393"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304912"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -45,7 +45,7 @@ Suas fontes de dados podem incluir entidades com dados transacionais e de ativid
 
    - **Primeiro**: o campo estrangeiro em sua entidade de atividade que será utilizado para estabelecer um relacionamento com outra entidade.
    - **Segundo**: a entidade cliente de origem correspondente com qual sua entidade de atividade se relacionará. Você só pode se relacionar com entidades de origem do cliente que são usadas no processo de unificação dos dados.
-   - **Terceiro**: se já existir um relacionamento entre esta entidade de atividade e a entidade do cliente de origem selecionada, o nome do relacionamento estará no modo somente leitura. Se esse relacionamento não existir, um novo relacionamento será criado com o nome que você forneceu nesta caixa.
+   - **Terceiro**: se já existir um relacionamento entre esta entidade de atividade e a entidade do cliente de origem selecionada, o nome do relacionamento estará no modo somente leitura. Se o relacionamento não existir, um relacionamento será criado com o nome que você forneceu nesta caixa.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina o relacionamento da entidade.":::
 
@@ -53,23 +53,23 @@ Suas fontes de dados podem incluir entidades com dados transacionais e de ativid
 
 1. Na etapa **Unificação de atividades**, escolha o evento de atividade e a hora de início de sua atividade. 
    - **Campos obrigatórios**
-      1. **Atividade do evento**: o campo que é o evento para esta atividade
-      2. **Carimbo de data/hora**: o campo que representa a hora de início da sua atividade.
+      - **Atividade do evento**: o campo que é o evento para esta atividade.
+      - **Carimbo de data/hora**: o campo que representa a hora de início da sua atividade.
 
    - **Campos opcionais**
-      1. **Detalhes adicionais**: o campo com informações relevantes desta atividade.
-      2. **Ícone**: o ícone que melhor representa este tipo de atividade.
-      3. **Endereço Web**: o campo contendo uma URL com informações sobre esta atividade. Por exemplo, o sistema transacional que origina essa atividade. Esse URL pode ser qualquer campo da fonte de dados ou pode ser construído como um novo campo usando uma transformação do Power Query. Os dados da URL serão armazenados na entidade *Atividade Unificada*, que pode ser consumida posteriormente com o uso de [APIs](apis.md).
+      - **Detalhes adicionais**: o campo com informações relevantes desta atividade.
+      - **Ícone**: o ícone que melhor representa este tipo de atividade.
+      - **Endereço Web**: o campo contendo uma URL com informações sobre esta atividade. Por exemplo, o sistema transacional que origina essa atividade. Esse URL pode ser qualquer campo da fonte de dados ou pode ser construído como um novo campo usando uma transformação do Power Query. Os dados da URL serão armazenados na entidade *Atividade Unificada*, que pode ser consumida posteriormente com o uso de [APIs](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique os dados da atividade do cliente em uma entidade Atividade Unificada.":::
 
 1. Selecione **Avançar** para passar para a próxima etapa. Você pode selecionar **Concluir e revisar** para salvar a atividade agora com o tipo de atividade definido como **Outro**. 
 
-1. Na etapa **Tipo de Atividade**, escolha o tipo de atividade e, opcionalmente, selecione se deseja mapear semanticamente alguns dos tipos de atividade para uso em outras áreas do Customer Insights. No momento, os os tipos de atividade *Inscrição* & *SalesOrderLine* podem ser mapeados semanticamente depois que concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, você pode escolher *Outro* ou *Criar* para um tipo de atividade personalizada.
+1. Na etapa **Tipo de Atividade**, escolha o tipo de atividade e, opcionalmente, selecione se deseja mapear semanticamente alguns dos tipos de atividade para uso em outras áreas do Customer Insights. No momento, os tipos de atividade *Inscrição* e *SalesOrderLine* poderão ser mapeados semanticamente depois que concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, você pode escolher *Outro* ou *Criar* para um tipo de atividade personalizada.
 
 1. Selecione **Avançar** para passar para a próxima etapa. 
 
-1. Na etapa **Revisar**, verifique suas seleções. Você pode voltar para qualquer uma das etapas anteriores e atualizar as informações se necessário.
+1. Na etapa **Revisar**, verifique suas seleções. Volte para qualquer uma das etapas anteriores e atualize as informações, se necessário.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Revise os campos especificados para uma atividade.":::
    
@@ -89,7 +89,7 @@ As seguintes ações estão disponíveis quando você seleciona uma atividade.
 
 - **Editar**: abre a configuração da atividade na etapa de revisão. Você pode alterar qualquer uma ou todas as configurações atuais desta etapa. Depois que alterar a configuração, selecione **Salvar atividade** e, em seguida, selecione **Executar** para processar as alterações.
 
-- **Renomear**: abre uma caixa de diálogo para inserir um nome diferente para a atividade selecionada. Selecione **Salvar** para aplicar suas alterações.
+- **Renomear**: abre uma caixa de diálogo onde você pode inserir um nome diferente para a atividade selecionada. Selecione **Salvar** para aplicar suas alterações.
 
 - **Excluir**: abre uma caixa de diálogo para confirmar a exclusão da atividade selecionada. Você também pode excluir mais de uma atividade de uma vez, selecionando as atividades e, em seguida, selecionando o ícone de exclusão. Selecione **Excluir** para confirmar a exclusão.
 

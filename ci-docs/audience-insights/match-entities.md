@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085608"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306014"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -209,7 +209,7 @@ Experimente diferentes limites de precisão nas condições para encontrar o val
 
 Você pode reconfigurar e ajustar a maioria dos parâmetros de correspondência.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Captura de tela do menu suspenso com opções de regra de correspondência.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Captura de tela do menu suspenso com as opções de regra de correspondência.":::
 
 - **Altere a ordem das suas regras** se você definiu várias regras. Você pode reordenar as regras de correspondência selecionando as opções **Mover para Cima** e **Mover para Baixo** ou arrastando e soltando.
 
@@ -247,7 +247,7 @@ Você pode especificar condições que determinados registros sempre devem corre
 
 1. Vá para **Dados** > **Fontes de dados** e ingira os arquivos de modelo como novas entidades. Depois de ingerido, você pode usá-los para especificar a configuração de Correspondência.
 
-1. Após o upload dos arquivos e entidades estarem disponíveis, selecione a opção **Correspondência personalizada** novamente. Você verá opções para especificar as entidades que deseja incluir. Selecione as entidades obrigatórias no menu suspenso.
+1. Após o upload dos arquivos e entidades estarem disponíveis, selecione a opção **Correspondência personalizada** novamente. Você verá opções para especificar as entidades que deseja incluir. Selecione as entidades necessárias no menu suspenso.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de tela da caixa de diálogo para escolher substituições para um cenário de correspondência personalizado.":::
 

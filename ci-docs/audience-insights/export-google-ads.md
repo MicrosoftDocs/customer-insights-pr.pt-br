@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976304"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305326"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos para o Google Ads (versão preliminar)
 
-Exporte segmentos de perfis de clientes unificados para a lista de públicos-alvo do Google Ads e use-os para anunciar na Pesquisa do Google, no Gmail, no YouTube e na Rede de Display do Google. 
+Exporte segmentos de perfis de cliente unificados para uma lista de público-alvo do Google Ads e use-os para criar anúncios no Pesquisa Google, Gmail, YouTube e Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Pré-requisitos para conexão
 
 -   Você deve ter uma [conta do Google Ads](https://ads.google.com/) e as credenciais de administrador correspondentes.
--   Você deve ter um [token de Desenvolvedor do Google Ads aprovado](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Você deve atender aos requisitos da [Política de Correspondência de Clientes](https://support.google.com/adspolicy/answer/6299717)
--   Você deve atender aos requisitos dos [tamanhos de listas de remarketing](https://support.google.com/google-ads/answer/7558048) 
-
+-   Você tem um [token de desenvolvedor aprovado do Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Você atende aos requisitos da [Política de correspondência de clientes](https://support.google.com/adspolicy/answer/6299717).
+-   Você atende aos requisitos dos [tamanhos de lista de remarketing](https://support.google.com/google-ads/answer/7558048).
 -   Há públicos-alvo existentes no Google Ads e as IDs correspondentes. Para obter mais informações, consulte [públicos-alvo do Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Você deve ter [segmentos configurados](segments.md)
--   Os perfis de clientes unificados nos segmentos exportados contêm campos que representam endereço de email, nome e sobrenome
+-   Você deve ter [segmentos configurados](segments.md).
+-   Os perfis de cliente unificados nos segmentos exportados contêm campos que representam um endereço de email, nome e sobrenome.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
@@ -68,7 +67,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Para criar uma nova exportação, selecione **Adicionar destino**.
 
-1. No campo **Conexão para exportação**, escolha uma conexão da seção do Google Ads. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
+1. No campo **Conexão para exportação**, escolha uma conexão da seção do Google Ads. Se você não vir este nome de seção, significa que não há conexões desse tipo disponíveis para você.
 
 1. Insira sua **[ID de público-alvo do Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e selecione **Conectar** para inicializar a conexão com o Google Ads.
 
@@ -78,7 +77,9 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 Salvar uma exportação não a executa imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). 
+
+Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

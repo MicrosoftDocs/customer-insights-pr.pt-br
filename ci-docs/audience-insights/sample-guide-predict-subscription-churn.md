@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595504"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306289"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guia de amostra para previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -22,7 +22,7 @@ Explicaremos a você um exemplo de ponta a ponta de previsão de rotatividade de
 
 ## <a name="scenario"></a>Cenário
 
-A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que são vendidas por meio do site Contoso Coffee. Recentemente, eles começaram um negócio de assinatura para seus clientes obterem café regularmente. O objetivo deles é entender quais clientes assinantes podem cancelar sua assinatura nos próximos meses. Saber qual de seus clientes está **propenso a rotacionar**, pode ajudá-los a economizar esforços de marketing, concentrando-se em mantê-los.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem por meio do site Contoso Coffee. Recentemente, eles começaram um negócio de assinatura para seus clientes obterem café regularmente. O objetivo deles é entender quais clientes assinantes podem cancelar sua assinatura nos próximos meses. Saber qual de seus clientes está **propenso a rotacionar**, pode ajudá-los a economizar esforços de marketing, concentrando-se em mantê-los.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -128,7 +128,7 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 1. Vá para a guia **Corresponder** e selecione **Definir pedido**.
 
-1. Na lista suspensa **Primário**, escolha **eCommerceContacts : eCommerce** como fonte primária e inclua todos os registros.
+1. Na lista suspensa **Primária**, escolha **eCommerceContacts : eCommerce** como sua fonte primária e inclua todos os registros.
 
 1. Na lista suspensa **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registros.
 
@@ -138,16 +138,16 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 1. Adicione sua primeira condição usando FullName.
 
-   * Para eCommerceContacts selecione **FullName** no menu suspenso.
-   * Para loyCustomers selecione **FullName** no menu suspenso.
+   * Para eCommerceContacts, selecione **FullName** na lista suspensa.
+   * Para loyCustomers, selecione **FullName** na lista suspensa.
    * Selecione o menu suspenso **Normalizar** e escolha **Inserir (telefone, nome, endereço,...)**.
    * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 
 1. Digite o nome **FullName, Email** para a nova regra.
 
    * Adicione uma segunda condição para o endereço de e-mail selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, escolha **Email** no menu suspenso.
-   * Para a entidade loyCustomers, escolha **Email** no menu suspenso. 
+   * Para a entidade eCommerceContacts, selecione **Email** na lista suspensa.
+   * Para a entidade loyCustomers, selecione **Email** na lista suspensa. 
    * Deixe o campo Normalizar em branco. 
    * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 

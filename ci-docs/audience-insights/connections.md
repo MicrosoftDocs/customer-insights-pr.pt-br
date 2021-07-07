@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896083"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304958"
 ---
 # <a name="connections-preview-overview"></a>Visão geral de conexões (versão preliminar)
 
@@ -42,7 +42,7 @@ Para adicionar conexões, você deve ter [permissões de administrador](permissi
 
 1. Acesse a guia **Conexões**.
 
-1. Selecione **Adicionar conexão** para criar uma conexão. Escolha no menu suspenso o tipo de conexão que você deseja criar.
+1. Selecione **Adicionar conexão** para criar uma conexão. Escolha no menu suspenso o tipo de conexão que deseja criar.
 
 1. No painel **Configurar conexão**, forneça os detalhes necessários. 
    1. O **Nome de exibição** e o tipo de conexão descrevem uma conexão. Recomendamos escolher um nome que explique a finalidade e o objetivo dessa conexão.
@@ -74,7 +74,9 @@ Ao configurar ou editar uma conexão de exportação, você escolhe quais usuár
 
 ## <a name="remove-a-connection"></a>Remover uma conexão
 
-Se a conexão que você estiver removendo for usada para enriquecimentos ou exportações, primeiro é necessário separá-los ou removê-los. A caixa de diálogo de remoção guiará você para os enriquecimentos ou exportações relevantes. Os enriquecimentos e as exportações separados tornam-se inativos. Você os reativa adicionando outra conexão a eles na página [Enriquecimentos](enrichment-hub.md) ou [Exportações](export-destinations.md).
+Se a conexão que você estiver removendo for usada para enriquecimentos ou exportações, primeiro é necessário separá-los ou removê-los. A caixa de diálogo de remoção guiará você para os enriquecimentos ou exportações relevantes. 
+
+Os enriquecimentos e as exportações separados tornam-se inativos. Você os reativa adicionando outra conexão a eles na página [Enriquecimentos](enrichment-hub.md) ou [Exportações](export-destinations.md).
 
 1. Acesse **Administração** > **Conexões (versão preliminar)**.
 

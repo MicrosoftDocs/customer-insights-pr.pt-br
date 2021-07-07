@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129931"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306335"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Exemplo de guia de previsão do valor de permanência do cliente (CLV)
 
@@ -123,7 +123,7 @@ Depois de ingerir os dados, agora começamos o processo de unificação de dados
 
 1. Vá para a guia **Corresponder** e selecione **Definir pedido**.
 
-1. Na lista suspensa **Primário**, escolha **eCommerceContacts : eCommerce** como fonte primária e inclua todos os registros.
+1. Na lista suspensa **Primária**, escolha **eCommerceContacts : eCommerce** como sua fonte primária e inclua todos os registros.
 
 1. Na lista suspensa **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registros.
 
@@ -133,16 +133,16 @@ Depois de ingerir os dados, agora começamos o processo de unificação de dados
 
 1. Adicione sua primeira condição usando FullName.
 
-   - Para eCommerceContacts selecione **FullName** no menu suspenso.
-   - Para loyCustomers selecione **FullName** no menu suspenso.
-   - Selecione o menu suspenso **Normalizar** e escolha **Inserir (telefone, nome, endereço,...)**.
+   - Para eCommerceContacts, selecione **FullName** na lista suspensa.
+   - Para loyCustomers, selecione **FullName** na lista suspensa.
+   - Selecione a caixa suspensa **Normalizar** e escolha **Tipo (Telefone, Nome, Endereço, ...)**.
    - Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 
 1. Digite o nome **FullName, Email** para a nova regra.
 
    - Adicione uma segunda condição para o endereço de e-mail selecionando **Adicionar condição**
-   - Para a entidade eCommerceContacts, escolha **Email** no menu suspenso.
-   - Para a entidade loyCustomers, escolha **Email** no menu suspenso.
+   - Para a entidade eCommerceContacts, selecione **Email** na lista suspensa.
+   - Para a entidade loyCustomers, selecione **Email** na lista suspensa.
    - Deixe o campo Normalizar em branco.
    - Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 

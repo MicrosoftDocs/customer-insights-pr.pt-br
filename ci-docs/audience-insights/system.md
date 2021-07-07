@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595366"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305696"
 ---
 # <a name="system-configuration"></a>Configuração do sistema
 
@@ -94,7 +94,7 @@ Selecione **Salvar** para confirmar suas seleções.
 
 ## <a name="api-usage-tab"></a>Guia de uso da API
 
-Encontre detalhes sobre o uso da API em tempo real e veja quais eventos aconteceram em um determinado período. Você escolhe o período de tempo no menu suspenso **Selecione um período**. 
+Encontre detalhes sobre o uso da API em tempo real e veja quais eventos aconteceram em um determinado período. Você pode escolher o período no menu suspenso **Selecionar um período**. 
 
 O **Uso de API** contém três seções: 
 - **Chamadas de API** - um gráfico que visualiza o número agregado de chamadas para a API no período selecionado.
