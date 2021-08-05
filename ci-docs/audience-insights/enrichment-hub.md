@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes unificados
 description: Use recursos para enriquecer os dados do cliente.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305234"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555247"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (visualização)
 
 Use dados de fontes como a Microsoft e outros parceiros para enriquecer os dados de seus clientes.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Página do hub de enriquecimento":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Página do hub de enriquecimento.":::
 
 Em insights de público-alvo, acesse **Dados** > **Enriquecimento** para trabalhar com as opções de enriquecimento.  
 
@@ -42,17 +43,17 @@ Na guia **Meus enriquecimentos**, você pode ver os enriquecimentos configurados
 
 Acesse a guia **Meus enriquecimentos** para ver todos os enriquecimentos configurados. Cada enriquecimento é representado como uma linha que inclui informações adicionais sobre o enriquecimento.
 
-Selecione um enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências (...) em um item da lista para ver as opções.
+Selecione o enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências (...) em um item da lista para ver as opções. Se configurou vários enriquecimentos, você poderá usar a caixa de pesquisa para encontrá-los rapidamente.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opções para gerenciar enriquecimentos na lista de enriquecimentos":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opções para gerenciar enriquecimentos na lista de enriquecimentos.":::
 
 - **Exibir** detalhes de enriquecimento com o número de perfis de clientes enriquecidos.
 - **Editar** a configuração de enriquecimento.
 - **Executar** o enriquecimento para atualizar os perfis dos clientes com os dados mais recentes.
 - **Desativar** um enriquecimento existente para impedi-lo de atualizar automaticamente a cada atualização agendada. Os dados da última atualização bem-sucedida continuarão disponíveis. **Ativar** um enriquecimento inativo para reiniciar a atualização automática a cada atualização agendada.
-- **Exclua** um enriquecimento.
+- **Exclua** o enriquecimento.
 
-Você pode executar ou desativar vários enriquecimentos de uma vez, selecionando-os na lista. As opções de exibição e edição não estão disponíveis como ação em massa e funcionam apenas para um enriquecimento de cada vez.
+Execute ou desative vários enriquecimentos de uma vez, selecionando-os na lista. As opções de exibição e edição não estão disponíveis como ação em massa. Elas só funcionam para um enriquecimento de cada vez.
 
 ## <a name="enrichments-and-connections"></a>Enriquecimentos e conexões
 

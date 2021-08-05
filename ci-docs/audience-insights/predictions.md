@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595887"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692513"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Concluir seus dados parciais com previsões
 
@@ -31,11 +31,11 @@ As previsões permitem criar facilmente valores previstos que podem melhorar sua
 
 Antes de sua organização poder usar o recurso de previsões, verifique se os seguintes pré-requisitos foram atendidos:
 
-1. Sua organização tem uma instância [configurada no Common Data Service](/ai-builder/build-model#prerequisites) e está na mesma organização que o Customer Insights.
+1. Sua organização tem uma configuração de [instância no Microsoft Dataverse](/ai-builder/build-model#prerequisites) e ela está na mesma organização que o Customer Insights.
 
-2. Seu ambiente está anexado à sua instância do Common Data Service.
+2. O ambiente de insights do seu público-alvo está ligado à sua instância do Dataverse.
 
-Se você estiver [criando o primeiro ambiente](manage-environments.md), configure-o no diálogo **Criar um ambiente** e selecione **Avançado**. Se você já criou um ambiente, vá para as configurações e selecione **Avançado**. De qualquer forma, na seção **Usar previsões**, insira a URL da instância do Common Data Service à qual você deseja anexar seu ambiente.
+Se você estiver [criando o primeiro ambiente](get-started-paid.md), configure-o no diálogo **Criar um ambiente** e selecione **Avançado**. Se você já criou um ambiente, vá para as configurações e selecione **Avançado**. De qualquer forma, na seção **Usar previsões**, insira a URL da instância do Dataverse à qual você deseja anexar seu ambiente.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Criar uma previsão na entidade Cliente
 
@@ -47,17 +47,17 @@ Se você estiver [criando o primeiro ambiente](manage-environments.md), configur
 
 4. Localize o nome do atributo para o qual deseja prever valores e selecione o ícone **Visão geral** na coluna **Resumo**.
    > [!div class="mx-imgBorder"]
-   > ![Ícone de Visão geral](media/intelligence-overviewicon.png "Ícone de Visão geral")
+   > ![Ícone de Visão geral.](media/intelligence-overviewicon.png "Ícone de Visão geral")
 
 5. Se houver uma alta taxa de valores ausentes para o seu atributo, selecione **Prever valores ausentes** para prosseguir com sua previsão.
    > [!div class="mx-imgBorder"]
-   > ![Status da visão geral com o botão prever valores ausentes mostrado](media/intelligence-overviewpredictmissingvalues.png "Status da visão geral com o botão prever valores ausentes mostrado")
+   > ![Status da visão geral com o botão Prever valores ausentes exibido.](media/intelligence-overviewpredictmissingvalues.png "Status da visão geral com o botão prever valores ausentes mostrado")
 
 6. Forneça um **Nome de exibição** e um **Nome da entidade de saída** para os resultados da previsão.
 
 7. Uma lista de opções preenchida previamente mostrará onde você pode mapear os valores para uma categoria prevista. Nesse caso, suas únicas opções de categoria serão 0 ou 1, pois mapeiam para verdadeiro/falso ou a natureza binária da previsão. Na coluna Categoria, mapeie os valores do campo que você deseja classificar como "0" na previsão final para "0" e os itens que você deseja classificar como "1" na previsão final para o "1".
    > [!div class="mx-imgBorder"]
-   > ![Exemplo mostrando valores de campo mapeado para categorias](media/intelligence-categorymapping.png "Exemplo mostrando valores de campo mapeado para categorias")
+   > ![Exemplo que mostra os valores de campo mapeado em categorias.](media/intelligence-categorymapping.png "Exemplo que mostra valores de campo mapeado para categorias")
 
 8. Selecione **Concluído** e a previsão será processada. O processamento levará algum tempo, dependendo do tamanho e da complexidade dos dados. Os resultados estarão disponíveis em uma nova entidade com base no **Nome da entidade de saída** da previsão que você criou.
 
@@ -77,7 +77,7 @@ Como parte desse fluxo, você escolherá um atributo específico para basear seu
 
 5. Se o segmento que criou tiver dados incompletos no campo de origem, você poderá optar por prever os valores ausentes.
    > [!div class="mx-imgBorder"]
-   > ![Botão Previsão](media/segments-predictoption.png "Botão Previsão")
+   > ![Botão Previsão.](media/segments-predictoption.png "Botão Previsão")
 
 6. Forneça um **Nome de exibição** e um **Nome da entidade de saída** para os resultados da previsão.
 
@@ -93,7 +93,7 @@ Como parte desse fluxo, você escolherá um atributo específico para basear seu
 
 4. Você verá alguns pontos de dados na exibição de sua previsão.
    > [!div class="mx-imgBorder"]
-   > ![Página Previsões](media/intelligence-predictionsviewpage.png "Página Previsões")
+   > ![Página Previsões.](media/intelligence-predictionsviewpage.png "Página Previsões")
 
    - **Valores previstos** mostra o mapeamento criado durante o Valor de campo para a fase Mapeamento de categoria. Esses são os valores em seu conjunto de dados que foram mapeados para uma categoria específica.
    -**Principais influenciadores** são os fatores em seu conjunto de dados que mais provavelmente influenciarão a confiança da previsão do Valor de campo que está sendo mapeado para uma categoria específica.
@@ -139,7 +139,7 @@ A próxima execução da sua previsão usará o modelo atualizado que você crio
 
 ## <a name="troubleshooting"></a>Solução de Problemas
 
-Se você não conseguir concluir o processo anexo do Common Data Service por causa de um erro, tente concluí-lo manualmente. Há dois problemas conhecidos que podem ocorrer no processo de anexo:
+Se você não conseguir concluir o processo anexo do Dataverse por causa de um erro, tente concluí-lo manualmente. Há dois problemas conhecidos que podem ocorrer no processo de anexo:
 
 - A solução Complemento do Cartão do Cliente não foi instalada.
     1. Siga as instruções para [instalar e configurar a solução](customer-card-add-in.md).

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597497"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554288"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitações de Direitos do Titular dos Dados (DSR) no GDPR
 
@@ -40,7 +40,7 @@ Um administrador do Customer Insights pode seguir estas etapas para remover dado
    2. Verifique o status da fonte de dados em **Status**. Uma marca de seleção significa que a atualização foi bem-sucedida. Um triângulo de aviso significa que algo deu errado. Se um triângulo de aviso for exibido, entre em contato com D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Tratar solicitações de exclusão de RGPD de dados do cliente](media/gdpr-data-sources.png "Tratar solicitações de exclusão de RGPD de dados do cliente")
+> ![Tratar solicitações de exclusão de RGPD de dados do cliente.](media/gdpr-data-sources.png "Tratar solicitações de exclusão de RGPD de dados do cliente")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Gerenciar solicitações de exclusão de dados do usuário
 
@@ -52,7 +52,7 @@ Um administrador do Customer Insights pode seguir estas etapas para excluir os d
 4. Selecione **Remover**.
 
 > [!div class="mx-imgBorder"]
-> ![Tratar solicitações de exclusão de RGPD de dados do usuário](media/gdpr-permissions.png "Tratar solicitações de exclusão de RGPD de dados do usuário")
+> ![Tratar solicitações de exclusão de RGPD de dados do usuário.](media/gdpr-permissions.png "Tratar solicitações de exclusão de RGPD de dados do usuário")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Responder a solicitações de exportação do titular dos dados de RGPD
 

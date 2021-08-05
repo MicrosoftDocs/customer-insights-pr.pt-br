@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305280"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555293"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com a HERE Technologies (versão preliminar)
 
@@ -35,7 +35,7 @@ Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requi
 1. Selecione **Enriquecer meus dados** no bloco da HERE Technologies e selecione **Começar agora**.
 
    > [!div class="mx-imgBorder"]
-   > ![Bloco da HERE Technologies](media/HERE-tile.png "Bloco da HERE Technologies")
+   > ![Bloco da HERE Technologies.](media/HERE-tile.png "Bloco da HERE Technologies")
 
 1. Selecione uma [conexão](connections.md) na lista suspensa. Contate um administrador se nenhuma conexão estiver disponível. Se for administrador, você poderá criar uma conexão selecionando **Adicionar conexão**. Escolha **HERE Technologies** na lista suspensa. 
 
@@ -50,7 +50,7 @@ Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requi
 1. Defina quais campos de seus perfis unificados devem ser usados para procurar dados de localização correspondentes da HERE Technologies. Os campos **Rua 1** e **CEP** são obrigatórios para o endereço principal e/ou secundário selecionado. Para uma maior precisão de correspondência, mais campos podem ser adicionados.
 
    > [!div class="mx-imgBorder"]
-   > ![Página de configuração de enriquecimento da HERE Technologies](media/enrichment-HERE-configuration.png "Página de configuração de enriquecimento da HERE Technologies")
+   > ![Página de configuração de enriquecimento da HERE Technologies.](media/enrichment-HERE-configuration.png "Página de configuração de enriquecimento da HERE Technologies")
 
 1. Selecione **Avançar** para concluir o mapeamento de campos.
 
@@ -73,7 +73,7 @@ Você deve ser um administrador para configurar as conexões. Selecione **Adicio
 1. Depois de concluir a verificação, selecione **Salvar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Página de configuração de conexão da HERE technologies](media/enrichment-HERE-connection.png "Página de configuração de conexão da HERE technologies")
+   > ![Página de configuração de conexão da HERE Technologies.](media/enrichment-HERE-connection.png "Página de configuração de conexão da HERE technologies")
 
 ## <a name="enrichment-results"></a>Resultados de enriquecimento
 

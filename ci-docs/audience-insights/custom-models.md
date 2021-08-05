@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305606"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554834"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizado de máquina personalizados
 
@@ -42,7 +42,7 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
 1. Dê ao seu modelo personalizado um nome reconhecível no campo **Nome**.
 
    > [!div class="mx-imgBorder"]
-   > ![Captura de tela do painel Novo fluxo de trabalho](media/new-workflowv2.png "Captura de tela do painel Novo fluxo de trabalho")
+   > ![Captura de tela do painel Novo fluxo de trabalho.](media/new-workflowv2.png "Captura de tela do painel Novo fluxo de trabalho")
 
 1. Selecione a organização que contém o serviço Web em **Locatário que contém seu serviço Web**.
 
@@ -59,7 +59,7 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
    > O fluxo de trabalho do modelo personalizado aplicará heurística para mapear os campos de entrada do serviço Web para atributos de entidade com base no nome e tipo de dados do campo. Você verá um erro se um campo do serviço Web não puder ser mapeado para uma entidade.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar um fluxo de trabalho](media/intelligence-screen2-updated.png "Configurar um fluxo de trabalho")
+   > ![Configure um fluxo de trabalho.](media/intelligence-screen2-updated.png "Configurar um fluxo de trabalho")
 
 1. Na etapa **Parâmetros de saída do modelo**, defina as seguintes propriedades:
    - Machine Learning Studio (clássico)
@@ -70,12 +70,12 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
       1. Selecione **Nome do parâmetro do Caminho de Saída** do pipeline em lote no menu suspenso.
 
       > [!div class="mx-imgBorder"]
-      > ![Painel de parâmetros de saída do modelo](media/intelligence-screen3-outputparameters.png "Painel de parâmetros de saída do modelo")
+      > ![Painel de Parâmetros de Saída do Modelo.](media/intelligence-screen3-outputparameters.png "Painel de parâmetros de saída do modelo")
 
 1. Selecione o atributo correspondente na lista suspensa **ID do cliente nos resultados** que identifica os clientes e selecione **Salvar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Relacionar os resultados ao painel de dados do cliente](media/intelligence-screen4-relatetocustomer.png "Relacionar os resultados ao painel de dados do cliente")
+   > ![Relacione os resultados ao painel de Dados do cliente.](media/intelligence-screen4-relatetocustomer.png "Relacionar os resultados ao painel de dados do cliente")
 
 1. Você verá a tela **Fluxo de Trabalho Salvo** com detalhes sobre o fluxo de trabalho.    
    Se você configurou um fluxo de trabalho para um pipeline do Azure Machine Learning, os insights de público-lavo serão anexados ao espaço de trabalho que contém o pipeline. Os insights de público-alvo receberão uma função **Colaborador** no espaço de trabalho do Azure.

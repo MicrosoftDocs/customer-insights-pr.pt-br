@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306060"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554971"
 ---
 # <a name="segment-insights-preview"></a>Insights do segmento (versão preliminar)
 
@@ -44,7 +44,7 @@ Você também pode analisar como a sobreposição muda para atributos específic
 Após concluir a análise, encontre detalhes sobre esse insight em **Segmentos** > **Insights (versão preliminar)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalhes de insight de sobreposição de segmentos":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalhes de insight da sobreposição de segmentos.":::
 
 Selecione um insight para ver os resultados da análise:
 
@@ -77,7 +77,7 @@ Os diferenciadores de segmento ajudam a descobrir o que diferencia um segmento d
 Após concluir a análise, encontre detalhes sobre esse insight em **Segmentos** > **Insights (versão preliminar)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalhes de insight de diferenciador de segmentos":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalhes de insight do diferenciador de segmentos.":::
 
 Selecione um insight para ver os resultados da análise. Uma análise diferenciadora inclui duas guias. A guia **Atributos** lista os atributos de perfil considerados como diferenciadores. A guia **Medidas** lista diferenciadores. Cada guia inclui os seguintes detalhes:
 

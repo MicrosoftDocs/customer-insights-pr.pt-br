@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095634"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556293"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -63,7 +63,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 1. Nos insights de público-alvo, vá para **Inteligência** > **Previsões**.
 1. Selecione o bloco **Modelo de rotatividade de assinaturas (versão preliminar)** e selecione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Bloco do modelo de Rotatividade de Assinaturas com o botão Usar este modelo](media/subscription-churn-usethismodel.PNG "Bloco do modelo de Rotatividade de Assinaturas com o botão Usar este modelo")
+   > ![Bloco do modelo de Rotatividade de Assinaturas com o botão Usar este modelo.](media/subscription-churn-usethismodel.PNG "Bloco do modelo de Rotatividade de Assinaturas com o botão Usar este modelo")
 
 ### <a name="name-model"></a>Nomear modelo
 
@@ -86,11 +86,11 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
     1. Selecione a **Entidade Cliente** que corresponde à entidade do cliente primário.
     1. Insira um nome que descreva a relação.
        > [!div class="mx-imgBorder"]
-       > ![Página do histórico de assinaturas mostrando a criação de uma relação com o cliente](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página do histórico de assinaturas mostrando a criação de uma relação com o cliente")
-1. Selecione **Avançar**.
+       > ![Página do histórico de assinaturas que mostra a criação de um relacionamento com o cliente.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página do histórico de assinaturas que mostra a criação de uma relação com o cliente")
+1. Selecione **Avançar**
 1. Mapeie os campos semânticos para atributos dentro da entidade do histórico de assinaturas e selecione **Salvar**. Para obter descrições dos campos, observe os [pré-requisitos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Página do histórico de assinaturas mostrando atributos semânticos que são mapeados para campos na entidade do histórico de assinaturas selecionado](media/subscription-churn-subscriptionhistorymapping.PNG "Página do histórico de assinaturas mostrando atributos semânticos que são mapeados para campos na entidade do histórico de assinaturas selecionado")
+   > ![Página do histórico de assinaturas que mostra atributos semânticos que são mapeados para campos na entidade do histórico de assinaturas selecionado.](media/subscription-churn-subscriptionhistorymapping.PNG "Página do histórico de assinaturas que mostra atributos semânticos que são mapeados para campos na entidade do histórico de assinaturas selecionado")
 1. Selecione **Adicionar dados** em **Atividades do cliente** e escolha a entidade que fornece as informações da atividade do cliente conforme descrito nos pré-requisitos.
 1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está configurando.  Selecione **Criar** e forneça um nome caso não encontre uma opção que corresponda ao tipo de atividade do qual precisa.
 1. Você precisará configurar a relação da entidade de atividade do cliente com a entidade do Cliente.
@@ -101,8 +101,8 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 1. Mapeie os campos semânticos para atributos dentro da entidade da atividade do cliente e selecione **Salvar**. Para obter descrições dos campos, observe os [pré-requisitos](#prerequisites).
 1. (Opcional) Se você tiver outras atividades do cliente que gostaria de incluir, repita as etapas acima.
    > [!div class="mx-imgBorder"]
-   > ![Defina o relacionamento da entidade](media/subscription-churn-customeractivitiesmapping.PNG "Página de atividades do cliente mostrando atributos semânticos que são mapeados para campos na entidade de atividade do cliente")
-1. Selecione **Avançar**.
+   > ![Defina o relacionamento da entidade.](media/subscription-churn-customeractivitiesmapping.PNG "Página de atividades do cliente que mostra atributos semânticos que são mapeados para campos na entidade de atividade do cliente")
+1. Selecione **Avançar**
 
 ### <a name="set-schedule-and-review-configuration"></a>Defina o agendamento e revise a configuração
 
@@ -115,7 +115,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 
 1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
    > [!div class="mx-imgBorder"]
-   > ![Exibição da página Minhas Previsões](media/subscription-churn-mypredictions.PNG "Exibição da página Minhas Previsões")
+   > ![Exibição da página Minhas Previsões.](media/subscription-churn-mypredictions.PNG "Exibição da página Minhas Previsões")
 1. Selecione a previsão que você deseja revisar.
    - **Nome da previsão:** O nome da previsão que foi fornecido ao criá-la.
    - **Tipo de previsão:** O tipo do modelo usado na previsão
@@ -131,7 +131,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
    - **Última atualização:** A data em que a previsão atualizou resultados na entidade de saída.
 1. Selecione os três pontos verticais ao lado da previsão cujos resultados deseja revisar e selecione **Exibir**.
    > [!div class="mx-imgBorder"]
-   > ![Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir](media/subscription-churn-verticalellipses.PNG "Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir")
+   > ![Exibição das opções no menu de três pontos verticais de uma previsão, que inclui editar, atualizar, exibir, logs e excluir.](media/subscription-churn-verticalellipses.PNG "Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir")
 1. Há três seções principais de dados na página de resultados:
     1. **Desempenho do modelo de treinamento:** A, B ou C são pontuações possíveis. Essa pontuação indica o desempenho da previsão e pode ajudar você a decidir usar os resultados armazenados na entidade de saída.
         - As pontuações são determinadas com base nas seguintes regras:
@@ -139,13 +139,13 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
             - **B** quando o modelo previu com precisão, pelo menos 50% do total de previsões e quando a porcentagem de previsões precisas para clientes com rotatividade for até 10% maior do que a taxa média histórica de churn, da taxa média histórica de churn.
             - **C** quando o modelo previu com precisão menos 50% das previsões totais ou quando a porcentagem de previsões precisas para clientes com rotatividade for menor que a taxa média histórica de churn.
                > [!div class="mx-imgBorder"]
-               > ![Exibição do resultado de desempenho do modelo](media/subscription-churn-modelperformance.PNG "Exibição do resultado de desempenho do modelo")
+               > ![Exibição do resultado do desempenho do modelo.](media/subscription-churn-modelperformance.PNG "Exibição do resultado de desempenho do modelo")
     1. **Probabilidade de rotatividade (número de clientes):** Grupos de clientes com base no risco previsto de rotatividade. Esses dados podem ajudar você mais tarde, se quiser criar um segmento de clientes com alto risco de rotatividade. Esses segmentos ajudam a entender qual deve ser o limite para a assinatura do segmento.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico mostrando a distribuição dos resultados de rotatividade, divididos em intervalos de 0-100%](media/subscription-churn-resultdistribution.PNG "Gráfico mostrando a distribuição dos resultados de rotatividade, divididos em intervalos de 0-100%")
+       > ![Gráfico que mostra a distribuição dos resultados de rotatividade, divididos em intervalos de 0-100%.](media/subscription-churn-resultdistribution.PNG "Gráfico que mostra a distribuição dos resultados de rotatividade, divididos em intervalos de 0-100%")
     1. **Fatores mais influentes:** Muitos fatores são levados em consideração ao criar a previsão. Cada um deles tem a sua importância calculada para as previsões agregadas criadas por um modelo. Você pode usar esses fatores para ajudar a validar os resultados de previsão. Ou você pode usar essas informações posteriormente para [criar segmentos](segments.md) que podem ajudar a influenciar o risco de rotatividade dos clientes.
        > [!div class="mx-imgBorder"]
-       > ![Lista mostrando os fatores influentes e a respectiva importância deles na previsão de resultados de rotatividade](media/subscription-churn-influentialfactors.PNG "Lista mostrando os fatores influentes e a respectiva importância deles na previsão de resultados de rotatividade")
+       > ![Lista que mostra os fatores influentes e a importância deles na previsão de resultados de rotatividade.](media/subscription-churn-influentialfactors.PNG "Lista que mostra os fatores influentes e a respectiva importância deles na previsão de resultados de rotatividade")
 
 ## <a name="manage-predictions"></a>Gerenciar previsões
 

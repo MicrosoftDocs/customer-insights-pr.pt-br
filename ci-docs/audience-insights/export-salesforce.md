@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o Salesforce Marketing Cloud
 description: Saiba como configurar a conexão e exportar para o Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 8ce243918c2388e931a98df3bbe576ddf692f707
+ms.sourcegitcommit: 4823684a1399fd66ffecfce21735f2bc90a1733c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314573"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6660253"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Exportar segmentos e outros dados para o Salesforce Marketing Cloud (versão preliminar)
 
@@ -23,11 +23,6 @@ Use seus dados do cliente no Salesforce Marketing Cloud ao exportá-los por meio
 ## <a name="prerequisites-for-connection"></a>Pré-requisitos para conexão
 
 - Disponibilidade de um host SFTP e as credenciais de administrador correspondentes. [Como configurar locais SFTP para o Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Limitações conhecidas
-
-- O tempo de execução de uma exportação depende do desempenho do sistema. Recomendamos dois núcleos de CPU e 1Gb de memória como configuração mínima do servidor. 
-- A exportação de entidades com até 100 milhões de perfis de cliente pode levar 90 minutos usando as configurações mínimas recomendadas. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Configurar a conexão para o Salesforce Marketing Cloud
 

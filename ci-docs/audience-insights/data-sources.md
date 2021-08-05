@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304682"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692421"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
@@ -30,13 +31,13 @@ Você pode adicionar uma fonte de dados de três maneiras principais:
 
 - [Por meio de dezenas de conectores do Power Query](connect-power-query.md)
 - [De uma pasta do Common Data Model](connect-common-data-model.md)
-- [Do seu próprio lake do Microsoft Dataverse](connect-common-data-service-lake.md)
+- [Do seu próprio lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adicionar dados de fontes de dados locais
 
-Há suporte à ingestão de dados de fontes de dados locais nos insights de público-alvo com base nos fluxos de dados do Microsoft Power Platform. Os fluxos de dados podem ser habilitados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) durante a configuração do ambiente.
+Há suporte à ingestão de dados de fontes de dados locais nos insights de público-alvo com base nos fluxos de dados do Microsoft Power Platform. Os fluxos de dados podem ser habilitados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](get-started-paid.md) durante a configuração do ambiente.
 
-As fontes de dados criadas após a associação de um ambiente do Dataverse com o Customer Insights usará[fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Remova e recrie fontes de dados que existiam antes que um ambiente do Dataverse fosse associado para [usar os gateways de dados locais](/data-integration/gateway/service-gateway-app.md).
+As fontes de dados criadas após a associação de um ambiente do Dataverse com o Customer Insights usará[fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Remova e recrie fontes de dados que existiam antes que um ambiente do Dataverse fosse associado para [usar os gateways de dados locais](/data-integration/gateway/service-gateway-app).
 
 Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
 
@@ -45,7 +46,7 @@ Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficar
 Você verá o nome de cada fonte de dados ingeridos, seu status e a última vez em que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por cada coluna.
 
 > [!div class="mx-imgBorder"]
-> ![Fonte de dados adicionada](media/configure-data-datasource-added.png "Fonte de dados adicionada")
+> ![Fonte de dados adicionada.](media/configure-data-datasource-added.png "Fonte de dados adicionada")
 
 |Status  |Descrição  |
 |---------|---------|

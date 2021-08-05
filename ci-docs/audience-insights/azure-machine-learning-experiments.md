@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597405"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554421"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos baseados em Azure Machine Learning
 
@@ -52,7 +52,7 @@ Você precisa criar conjuntos de dados para usar dados de entidade do Customer I
      No designer, abra **Selecionar colunas no conjunto de dados** e selecione **Definir como parâmetro de pipeline** em que você fornece um nome para o parâmetro.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrização do conjunto de dados no designer](media/intelligence-designer-dataset-parameters.png "Parametrização do conjunto de dados no designer")
+     > ![Parametrização do conjunto de dados no designer.](media/intelligence-designer-dataset-parameters.png "Parametrização do conjunto de dados no designer")
    
 * Parâmetro do conjunto de dados no SDK (Python)
    
@@ -78,7 +78,7 @@ Você precisa criar conjuntos de dados para usar dados de entidade do Customer I
 
 * O designer fornece o [Módulo de exportação de dados](/azure/machine-learning/algorithm-module-reference/export-data) que permite à saída de um pipeline ser exportada para o armazenamento do Azure. Atualmente, o módulo deve usar o tipo de armazenamento de dados **Armazenamento de Blobs do Azure** e parametrizar o **Armazenamento de dados** e o **Caminho** relativo. O Customer Insights substitui esses dois parâmetros durante a execução do pipeline com um armazenamento de dados e caminho que é acessível ao produto.
    > [!div class="mx-imgBorder"]
-   > ![Configuração do módulo de exportação de dados](media/intelligence-designer-importdata.png "Configuração do módulo de exportação de dados")
+   > ![Configuração do módulo de exportação de dados.](media/intelligence-designer-importdata.png "Configuração do módulo de exportação de dados")
    
 * Ao gravar a saída de inferência usando código, você pode carregar a saída para um caminho dentro de um *armazenamento de dados registrado* no espaço de trabalho. Se o caminho e o armazenamento de dados forem parametrizados no pipeline, o Customer Insights poderá ler e importar a saída da inferência. Atualmente, uma única saída de tabela no formato csv é compatível. O caminho deve incluir o diretório e o nome do arquivo.
 

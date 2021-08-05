@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306014"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650304"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -138,7 +138,7 @@ A especificação de regras de eliminação de duplicação não é obrigatória
    - **Menos recente**: identifica o registro vencedor com base na menor recência. Requer uma data ou um campo numérico para definir a recência.
  
    > [!div class="mx-imgBorder"]
-   > ![Etapa 1 das regras de eliminação de duplicação](media/match-selfconflation.png "Etapa 1 das regras de eliminação de duplicação")
+   > ![Etapa 1 das regras de eliminação de duplicação.](media/match-selfconflation.png "Etapa 1 das regras de eliminação de duplicação")
  
 1. Depois que as entidades forem selecionadas e a preferência de mesclagem for definida, selecione **Adicionar regra** para definir as regras de eliminação de duplicação no nível da entidade.
    - **Selecionar campo** lista todos os campos disponíveis dessa entidade. Escolha o campo em que deseja verificar se há duplicidades. Escolha campos que provavelmente são exclusivos para cada cliente. Por exemplo, um endereço de email ou a combinação de nome, cidade e número de telefone.
@@ -146,7 +146,7 @@ A especificação de regras de eliminação de duplicação não é obrigatória
    - Defina mais condições adicionais selecionando **Adicionar condição**.
  
    > [!div class="mx-imgBorder"]
-   > ![Etapa 2 das regras de eliminação de duplicação](media/match-selfconflation-rules.png "Etapa 2 das regras de eliminação de duplicação")
+   > ![Etapa 2 das regras de eliminação de duplicação.](media/match-selfconflation-rules.png "Etapa 2 das regras de eliminação de duplicação")
 
   É possível criar várias regras de eliminação de duplicação para uma entidade. 
 
@@ -179,7 +179,9 @@ Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Executar** para
 Você encontrará o resultado de uma execução com êxito, a entidade unificada do perfil do cliente, na página **Entidades**. Sua entidade de cliente unificada é chamada **Clientes** na seção **Perfis**. A primeira execução de correspondência com êxito cria a entidade unificada *Cliente*. Todas as execuções de correspondência subsequentes expandem essa entidade.
 
 > [!TIP]
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
+> Depois de executar o processo de correspondência, selecione o status do processo para abrir o painel **Detalhes da tarefa**. Ele oferece uma visão geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver que entidades participaram do processo de correspondência, que regras foram aplicadas a elas e se as atualizações foram publicadas com êxito.  
+> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho detalhado para obter os detalhes do processo por meio do link de status da tarefa.":::
 
 ## <a name="review-and-validate-your-matches"></a>Revise e valide suas correspondências
 

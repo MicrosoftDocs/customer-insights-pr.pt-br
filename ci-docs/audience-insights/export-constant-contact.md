@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124259"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362404"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportar segmentos para o Constant Contact (versão preliminar)
 
@@ -47,7 +47,7 @@ Exporte segmentos de perfis de clientes unificados para o Constant Contact e use
 
 1. Selecione **Conectar** para inicializar a conexão com o Constant Contact.
 
-1. Selecione **Autenticar com o AdRoll** e forneça suas credenciais de administrador do Constant Contact. 
+1. Selecione **Autenticar com Constant Contact** e forneça suas credenciais de administrador para o Constant Contact. 
 
 1. Selecione **Adicionar a si mesmo como usuário de exportação** e forneça suas credenciais do Customer Insights.
 

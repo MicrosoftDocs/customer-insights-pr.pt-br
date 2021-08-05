@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305142"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555477"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquecer perfis de clientes com afinidades de marca e interesse (versão prévia)
 
@@ -27,7 +27,7 @@ Para configurar o enriquecimento das afinidades da marca, vá para a guia **Desc
 Para configurar o enriquecimento das afinidades do interesse, vá para a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Interesses**.
 
    > [!div class="mx-imgBorder"]
-   > ![Blocos de marcas e interesses](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
+   > ![Blocos de marcas e interesses.](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
 
 ## <a name="how-we-determine-affinities"></a>Como determinamos afinidades
 
@@ -123,7 +123,7 @@ Dependendo do tamanho dos dados do cliente, pode levar alguns minutos para que u
 
 Depois de executar o processo de enriquecimento, vá para **Meus enriquecimentos** para revisar o número total de clientes enriquecidos e um detalhamento de marcas ou interesses nos perfis de clientes enriquecidos.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Visualização dos resultados após a execução do processo de enriquecimento":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Visualização dos resultados após a execução do processo de enriquecimento.":::
 
 Revise os dados enriquecidos selecionando **Exibir Dados enriquecidos** no gráfico. Dados enriquecidos para marcas vão para a entidade **BrandAffinityFromMicrosoft**. Os dados para interesses estão na entidade **InterestAffinityFromMicrosoft**. Você também encontrará essas entidades listadas no grupo **Enriquecimento** em **Dados** > **Entidades**.
 
@@ -131,7 +131,7 @@ Revise os dados enriquecidos selecionando **Exibir Dados enriquecidos** no gráf
 
 As afinidades de marca e interesse também podem ser visualizadas em cartões de clientes individuais. Vá para **Clientes** e selecione um perfil do cliente. No cartão do cliente, você encontrará gráficos das marcas ou interesses pelos quais as pessoas no perfil demográfico desse cliente têm afinidade.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Cartão de cliente com dados enriquecidos":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Cartão de cliente com dados enriquecidos.":::
 
 ## <a name="next-steps"></a>Próximas etapas
 

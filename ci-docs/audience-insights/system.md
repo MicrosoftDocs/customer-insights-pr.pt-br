@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 32bb89b02947350c056c8ce8adbe37500d2099a1
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305696"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556064"
 ---
 # <a name="system-configuration"></a>Configuração do sistema
 
@@ -26,7 +26,7 @@ A página **Sistema** inclui as seguintes guias:
 - [Geral](#general-tab)
 
 > [!div class="mx-imgBorder"]
-> ![Página do sistema](media/system-tabs.png "Página do sistema")
+> ![Página do sistema.](media/system-tabs.png "Página do sistema")
 
 ## <a name="status-tab"></a>Guia Status
 

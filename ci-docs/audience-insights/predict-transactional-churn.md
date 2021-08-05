@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095588"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559391"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsão de rotatividade transacional (versão preliminar)
 
@@ -42,12 +42,12 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
     - Identificadores de clientes para mapear atividades para os clientes.
     - Informações de atividades que contêm o nome e a data da atividade.
     - O esquema de dados semânticos para atividades do cliente inclui:
-        - **Chave primária:** Um identificador exclusivo para uma atividade. Por exemplo, uma visita a um site ou um registro de uso mostrando que o cliente experimentou uma amostra do seu produto.
+        - **Chave primária:** Um identificador exclusivo para uma atividade. Por exemplo, uma visita a um site ou um registro de uso que mostra que o cliente experimentou uma amostra do seu produto.
         - **Carimbo de data/hora:** A data e a hora do evento identificado pela chave primária.
         - **Evento:** O nome do evento que você deseja usar. Por exemplo, um campo denominado "UserAction" em um supermercado pode ser um cupom usado pelo cliente.
         - **Detalhes:** Informações detalhadas sobre o evento. Por exemplo, um campo denominado "CouponValue" em um supermercado pode ser o valor da moeda do cupom.
 - Características de dados sugeridas:
-    - Dados históricos suficientes: dados de transação de pelo menos o dobro da janela de tempo selecionada. De preferência, de dois a três anos de dados de assinatura. 
+    - Dados históricos suficientes: dados de transação de pelo menos o dobro da janela de tempo selecionada. De preferência, de dois a três anos do histórico de transações. 
     - Várias compras por cliente: idealmente, pelo menos duas transações por cliente.
     - Número de clientes: pelo menos 10 perfis de clientes, de preferência mais de 1.000 clientes exclusivos. O modelo falhará com menos de 10 clientes e dados históricos insuficientes.
     - Integridade dos dados: menos de 20% de valores ausentes no campo de dados da entidade fornecida.
@@ -97,7 +97,7 @@ A previsão de rotatividade transacional ajuda a prever se um cliente não compr
     1. Selecione a **Entidade Cliente** que corresponde à entidade do cliente primário.
     1. Insira um nome que descreva a relação.
 
-    :::image type="content" source="media/model-purchase-join.PNG" alt-text="Página do histórico de compras mostrando a criação de um relacionamento com o cliente.":::
+    :::image type="content" source="media/model-purchase-join.PNG" alt-text="Página do histórico de compras que mostra a criação de um relacionamento com o cliente.":::
    
 1. Selecione **Avançar**.
 

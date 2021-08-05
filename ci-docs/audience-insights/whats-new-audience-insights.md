@@ -1,7 +1,7 @@
 ---
 title: Recursos novos e futuros
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263237"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692375"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Atualizações de junho de 2021
+
+As atualizações em junho de 2021 incluem vários recursos, upgrades de desempenho e correções de bugs.
+
+### <a name="data-ingestion"></a>Ingestão de dados
+
+- **Aprimoramento nas atualizações de progresso de unificação de dados** Agora você pode ver atualizações dinâmicas de status aprimoradas e mais granulares nas etapas do [processo de unificação de dados](data-unification.md). Esse recurso permite que você acompanhe o progresso detalhado para entender o fluxo do processo e agir se alguma etapa precisar de atenção.
+
+### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar segmentos e outros dados para o Salesforce Marketing Cloud** Ampliamos nossos destinos de exportação para incluir o [Salesforce Marketing Cloud](export-salesforce.md). Agora você pode exportar segmentos e outros tipos de dados para o Salesforce Marketing Cloud por meio de uma exportação de SFTP de marca. A importação de dados pode ser totalmente automatizada no Salesforce e usada para criar campanhas de marketing mais eficientes.  
+ 
+- **Exportar segmentos para o ActiveCampaign** Ampliamos nossos destinos de exportação para incluir o [Active Campaign](export-active-campaign.md). Agora você pode exportar segmentos para gerar campanhas, executar marketing por email e trabalhar com grupos específicos de clientes no ActiveCampaign.
+ 
+- **Exportar segmentos para o Sendinblue** Ampliamos nossos destinos de exportação para incluir o [Sendinblue](export-sendinblue.md). Agora você pode exportar segmentos para gerar campanhas, executar marketing por email e trabalhar com grupos específicos de clientes com o Sendinblue.
+ 
+### <a name="ux-updates"></a>Atualizações de experiência do usuário 
+
+- **Nova página Clientes e página de detalhes do perfil** Reformulamos a página Clientes e as páginas de detalhes do perfil para melhorar a experiência do usuário e o desempenho. Essas alterações permitem que você exiba, classifique, pesquise e filtre clientes. Os filtros agora são representados na URL para compartilhar os resultados da pesquisa com outros usuários de forma simples. Os resultados da pesquisa também podem ser salvos como um segmento.    
+  A página de detalhes de perfis de clientes agora agrupa dados em várias subseções, como dados demográficos, IDs e outros atributos de perfil para facilitar a leitura. Outras seções na página de detalhes do perfil agora são mais interativas. Por exemplo, a seção de atividades agora permite filtragem e classificação.
+
 
 ## <a name="may-2021-updates"></a>Atualizações de maio de 2021
 
@@ -170,7 +192,7 @@ As atualizações em fevereiro de 2021 incluem vários recursos, atualizações 
 
 - **O ambiente de cópia oferece suporte a mais tipos de fontes de dados**
 
-  Os administradores podem copiar as configurações do ambiente para um novo ambiente na mesma organização. Esse recurso estende a funcionalidade do ambiente de cópia para casos em que as fontes de dados com base em um data lake do Common Data Service ou uma pasta do Common Data Model são usadas.
+  Os administradores podem copiar as configurações do ambiente para um novo ambiente na mesma organização. Este recurso amplia a funcionalidade do ambiente de cópia para casos em que as fontes de dados com base em um data lake gerenciado do Microsoft Dataverse ou uma pasta Common Data Model são usados.
 
 ## <a name="january-2021-updates"></a>Atualizações de janeiro de 2021
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596347"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692291"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidades no Common Data Model
 
@@ -24,7 +24,7 @@ O [Common Data Model](/common-data-model/) é uma especificação declarativa e 
 
 Esse é um modelo de dados compartilhado que permite que aplicativos e integradores de dados colaborem mais facilmente, fornecendo uma definição unificada de dados. O Common Data Model inclui um rico sistema de metadados com entidades, relacionamentos, hierarquias, características e muito mais. Ele tem sua origem nos aplicativos do Dynamics 365 e é um software livre no GitHub com mais de 260 entidades padrão. Um grande sistema de parceiros internos e externos contribui com conceitos específicos do setor para o Common Data Model.
 
-Vários sistemas e plataformas implementam o Common Data Model hoje, incluindo fluxos de dados do Power BI e Serviços de Dados do Azure. Já tem suporte no Common Data Service, no Dynamics 365, no Power Apps, no Power BI e nos próximos serviços de dados do Azure, agregando valor diretamente ao [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Vários sistemas e plataformas implementam o Common Data Model atualmente, incluindo fluxos de dados do Power BI e Serviços de Dados do Azure. Ele já tem suporte no Microsoft Dataverse, Dynamics 365, Power Apps, Power BI e os futuros serviços de dados do Azure, agregando valor diretamente para o [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Esquemas de entidades do Customer Insights
 
@@ -44,7 +44,7 @@ Para obter mais informações, consulte a documentação sobre os [Esquemas de e
 
 Você pode exibir entidades no [Navegador de Entidades do Common Data Model](https://microsoft.github.io/CDM/). Selecione o botão **Carregar do GitHub!** e vá até **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, onde você encontrará a lista de entidades do Customer Insights e suas definições.
 > [!div class="mx-imgBorder"]
-> ![Navegador de Entidades do CDM mostrando a entidade Atividade do Cliente](media/CDM-entity-navigator.png "Navegador de Entidades do CDM mostrando a entidade Atividade do Cliente")
+> ![Navegador de Entidades do CDM mostrando a entidade CustomerActivity](media/CDM-entity-navigator.png "Navegador de Entidades do CDM mostrando a entidade Atividade do Cliente")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

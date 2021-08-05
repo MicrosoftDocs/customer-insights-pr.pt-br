@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305608"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650120"
 ---
 # <a name="merge-entities"></a>Mesclar entidades
 
 A fase de mesclagem na última fase no processo de unificação de dados. Seu objetivo é reconciliar dados conflitantes. Exemplos de dados conflitantes podem incluir um nome de cliente encontrado em dois de seus conjuntos de dados, mas que mostra um pouco diferente em cada um ("Grant Marshall" versus "Grant Marshal") ou um número de telefone que difere no formato (617-803-091X versus 617803091X). A mesclagem desses pontos de dados conflitantes é feita atributo a atributo.
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Página da mesclagem no processo de unificação de dados mostrando a tabela com campos mesclados que definem o perfil unificado do cliente.":::
+:::image type="content" source="media/merge-fields-page.png" alt-text="Página da mesclagem no processo de unificação de dados que mostra a tabela com campos mesclados que definem o perfil unificado do cliente.":::
 
 Depois de concluir a [fase de correspondência](match-entities.md), você inicia a fase de mesclagem selecionando o bloco **Mesclar** na página **Unificar**.
 
@@ -109,7 +109,7 @@ Algumas entidades contêm mais detalhes que outras. Se uma entidade tiver os dad
 Quer você mescle atributos manualmente ou permita que o sistema os mescle, sempre é possível executar sua mesclagem. Selecione **Executar** na página **Mesclar** para iniciar o processo.
 
 > [!div class="mx-imgBorder"]
-> ![Mesclagem de dados Salvar e Executar](media/configure-data-merge-save-run.png "Mesclagem de dados Salvar e Executar")
+> ![Salvar e Executar a mesclagem de dados.](media/configure-data-merge-save-run.png "Mesclagem de dados Salvar e Executar")
 
 Escolha **Executar somente Mesclagem** se você só quiser ver a saída refletida na entidade unificada do cliente. Os processos posteriores serão atualizados conforme [definida agenda de atualização](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Escolha **Executar processos de mesclagem e posteriores** para atualizar o siste
 Para fazer mais alterações e executar a etapa novamente, cancele uma mesclagem em andamento. Selecione **Atualizando...** e selecione **Cancelar o trabalho** no painel lateral exibido.
 
 > [!TIP]
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
+> Depois de executar o processo de mesclagem, selecione o status do processo para abrir o painel **Detalhes da tarefa**. Ele oferece uma visão geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver que entidades participaram do processo de correspondência, se a resolução de conflitos e as publicação das atualizações tiveram êxito.  
+> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho detalhado para obter os detalhes do processo por meio do link de status da tarefa.":::
 
 ## <a name="next-step"></a>Próxima Etapa
 

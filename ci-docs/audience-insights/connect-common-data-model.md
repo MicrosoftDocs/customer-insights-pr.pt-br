@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596531"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554880"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar a uma pasta do Common Data Model usando uma conta do Azure Data Lake
 
@@ -45,7 +45,7 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
 
 1. Você pode escolher entre usar uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Insira as informações do **Contêiner** e selecione **Avançar**.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para inserir novos detalhes de conexão do Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Caixa de diálogo para inserir detalhes da nova conexão do Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Você precisa de uma das seguintes funções para o contêiner ou conta de armazenamento mencionada acima para se conectar e criar uma fonte de dados:
    >  - Leitor de Dados do Storage Blob
@@ -58,11 +58,11 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
 
 1. Você obterá uma lista de entidades disponíveis no arquivo model.json ou manifest.json selecionado. Você pode revisar e selecionar da lista de entidades disponíveis e selecionar **Salvar**. Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo mostrando uma lista de entidades de um arquivo model.json](media/review-entities.png)
+   > ![Caixa de diálogo mostrando uma lista de entidades de um arquivo model.json.](media/review-entities.png)
 
 8. Indique quais entidades de dados você quer habilitar na criação de perfil de dados e selecione **Salvar**. A criação de perfil de dados permite a análise e outros recursos. Você pode selecionar a entidade inteira, que seleciona todos os atributos da entidade, ou selecionar certos atributos de sua escolha. Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo mostrando uma criação de perfil de dados](media/dataprofiling-entities.png)
+   > ![Caixa de diálogo mostrando uma criação de perfil de dados.](media/dataprofiling-entities.png)
 
 9. Após salvar suas seleções, a página **Fontes de dados** será aberta. Agora você verá a conexão da pasta Common Data Model como uma fonte de dados.
 
@@ -81,12 +81,12 @@ Você pode atualizar a chave de acesso para a conta de armazenamento que contém
 
 4. Opcionalmente, atualize a **Chave de acesso** e selecione **Avançar**.
 
-   ![Caixa de diálogo para editar e atualizar uma chave de acesso para uma fonte de dados existente](media/edit-access-key.png)
+   ![Caixa de diálogo para editar e atualizar uma chave de acesso para uma fonte de dados existente.](media/edit-access-key.png)
 
 5. Ou você pode atualizar de uma conexão de chave de conta para uma conexão baseada em recursos ou baseada em assinatura. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
    > [!div class="mx-imgBorder"]
 
-   > ![Caixa de diálogo para inserir detalhes de conexão do Azure Data Lake a uma conta de armazenamento existente](media/enter-existing-storage-details.png)
+   > ![Caixa de diálogo para inserir detalhes de conexão do Azure Data Lake a uma conta de armazenamento existente.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Você precisa de uma das seguintes funções para o contêiner ou conta de armazenamento mencionada acima para se conectar e criar uma fonte de dados:

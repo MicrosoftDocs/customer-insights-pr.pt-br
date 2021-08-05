@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597129"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554007"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfis de clientes: índice de filtro e pesquisa
 
 O resultado da unificação dos dados do cliente é uma entidade de Perfil do Cliente que fornece uma visão unificada da sua base total de clientes. Para [encontrar informações rapidamente sobre um cliente ou grupo de clientes específico](customer-profiles.md), você pode configurar o recurso **Pesquisar** e **Filtrar** na página **Clientes**. Leia para saber como os administradores podem editar os atributos na página **Índice de pesquisa e filtro**, que estão disponíveis para os usuários pesquisarem e filtrarem.
 
 > [!div class="mx-imgBorder"]
-> ![Filtro de pesquisa](media/search-filter.png "Filtro de pesquisa")
+> ![Filtro de pesquisa.](media/search-filter.png "Filtro de pesquisa")
 
 ## <a name="add-fields-and-specify-attributes"></a>Adicionar campos e especificar atributos
 

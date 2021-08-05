@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598325"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555155"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Usar modelos baseados no Azure Machine Learning Studio (clássico)
 
@@ -41,7 +41,7 @@ Em uma primeira etapa, precisamos criar um espaço de trabalho e abrir o Machine
 
 1. Depois de criar o recurso, o painel da área de trabalho Machine Learning Studio aparecerá. Selecione **Lançar Machine Learning Studio**.
 
-   ![Interface do usuário do Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Interface do usuário do Estúdio do Azure Machine Learning.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Trabalhar com o Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Agora você pode criar um novo experimento ou importar um modelo de experimento 
 
 1. Se você criar um novo experimento ou usar um modelo de experimento da galeria, será necessário configurar as propriedades **Importar Dados**. Use a experiência guiada ou forneça detalhes diretamente para acessar o Armazenamento de Blobs do Azure que contém seus dados.  
 
-   ![Experimento do Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Experimento do Estúdio do Azure Machine Learning.](media/azure-machine-learning-studio-experiment.png)
 
 1. Agora você pode construir um pipeline de processamento personalizado para limpar e pré-processar os dados, extrair recursos e adaptar um modelo adequado.
 
@@ -63,15 +63,15 @@ Agora você pode criar um novo experimento ou importar um modelo de experimento 
 
 1. Quando estiver satisfeito com a qualidade de um modelo, selecione **Configurar serviço Web** > **Serviço Web Preditivo**. Esta opção importa o modelo adaptado e o pipeline de caracterização do experimento de treinamento para um serviço preditivo. O serviço preditivo pode usar outro conjunto de dados de entrada com o esquema usado no experimento de treinamento para fazer previsões.
 
-   ![Configure um serviço web preditivo](media/predictive-webservice-control.png)
+   ![Configure um serviço Web preditivo.](media/predictive-webservice-control.png)
 
 1. Depois que o experimento de serviço web preditivo for bem-sucedido, você poderá implantá-lo para agendamento automático. Para que o serviço Web funcione com o Customer Insights, selecione **Implantar Serviço Web** > **Versão Preliminar Implantar Serviço Web [Novo]**. [Saiba mais sobre como implantar um serviço Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Implantar um serviço Web preditivo](media/predictive-webservice-deploy.png)
+   ![Implante um serviço Web preditivo.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Modelos de amostra da galeria
 
-Usaremos um cenário fictício do Contoso Hotel para os modelos neste artigo. O Contoso Hotel coleta os seguintes dados:
+Usaremos um cenário fictício da Contoso Hotel para os modelos este artigo. A Contoso Hotel coleta os seguintes dados:
 
 - Dados de CRM que consistem na atividade de estadia do hotel. O conjunto de dados inclui informações sobre as datas de estadia de cada cliente cadastrado. Ele também contém informações sobre a reserva, tipos de quarto, detalhes de gastos e assim por diante. Os dados abrangem quatro anos, de janeiro de 2014 a janeiro de 2018.
 - Perfis de clientes dos hóspedes do hotel. Esses perfis contêm informações sobre cada cliente, incluindo seu nome, data de nascimento, endereço postal, gênero e número de telefone.
@@ -87,13 +87,13 @@ A definição de rotatividade pode variar de acordo com o cenário. Neste exempl
 
 O modelo de experimento pode ser importado da galeria. Primeiro, importe os dados referentes a **Atividade de Estadia no Hotel**, **Dados do cliente** e **Dados de Uso do Serviço** do Armazenamento de Blobs do Azure.
 
-   ![Importar dados para modelo de rotatividade](media/import-data-azure-blob-storage.png)
+   ![Importe dados para modelo de rotatividade.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Definição de recursos
 
 Com base na definição de rotatividade, primeiro identificamos as características brutas que influenciarão o rótulo. Em seguida, processamos esses recursos brutos em recursos numéricos que podem ser usados com modelos de aprendizado de máquina. A integração de dados ocorre no Customer Insights para que possamos unir essas tabelas usando a *ID do Cliente*.
 
-   ![Unir dados importados](media/join-imported-data.png)
+   ![Junte dados importados.](media/join-imported-data.png)
 
 A definição de recursos para construir o modelo para análise de rotatividade pode ser um pouco complicada. Os dados são uma função do tempo com novas atividades hoteleiras registradas diariamente. Durante a definição de recursos, queremos gerar recursos estáticos a partir dos dados dinâmicos. Nesse caso, geramos vários recursos da atividade hoteleira com uma janela deslizante de um ano. Também expandimos os recursos categóricos como tipo de quarto ou tipo de reserva em recursos separados usando a codificação one-hot.  
 
@@ -114,7 +114,7 @@ Agora precisamos escolher o algoritmo ideal a ser usado. Nesse caso, a maioria d
 
 A imagem a seguir mostra o pipeline de treinamento e avaliação do modelo do Azure Machine Learning Studio:
 
-![Modelo de rotatividade do Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Modelo de rotatividade do Estúdio do Azure Machine Learning.](media/azure-machine-learning-model.png)
 
 Também aplicamos uma técnica chamada **Importância do Recurso de Permutação**, um aspecto importante da otimização do modelo. Os modelos integrados têm pouco ou nenhum insight sobre o impacto de qualquer recurso específico na previsão final. A calculadora de importância de recurso usa um algoritmo personalizado para calcular a influência de recursos individuais no resultado de um modelo específico. A importância do recurso é normalizada entre +1 e -1. Uma influência negativa significa que o recurso correspondente tem uma influência contra intuitiva no resultado e deve ser removido do modelo. Uma influência positiva indica que o recurso está contribuindo fortemente para a previsão. Esses valores não são coeficientes de correlação, pois são métricas diferentes. Para obter mais informações, consulte [Importância do Recurso de Permutação](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Definimos o objetivo como maximizar a quantidade de dólares do uso do serviço,
 
 Como no modelo de rotatividade, estamos unindo o ServiceCustomerID do hotel e o CustomerID para criar recomendações consistentemente por CustomerID.
 
-![Definição de recursos do modelo de recomendação](media/azure-machine-learning-model-featurization.png)
+![Definição de recursos do modelo de recomendação.](media/azure-machine-learning-model-featurization.png)
 
 Os dados são originados de três entidades diferentes e os recursos são derivados delas. A definição de recursos para o problema de recomendação é diferente em comparação com cenários de rotatividade ou CLTV. O modelo de recomendação precisa de dados de entrada na forma de três conjuntos de recursos.
 
@@ -156,13 +156,13 @@ Os dados são originados de três entidades diferentes e os recursos são deriva
 
 Prevemos produtos ou serviços usando o algoritmo chamado **Treinar Recomendação do Matchbox** para treinar o modelo de recomendação.
 
-![Algoritmo de recomendação do produto](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritmo de recomendação do produto.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 As três portas de entrada para o modelo **Treinar Recomendação do Matchbox** incluem os dados de uso do serviço de treinamento, a descrição do cliente (opcional) e a descrição do serviço. Há três maneiras diferentes de pontuar o modelo. Uma é para avaliação do modelo em que uma pontuação de Ganho Cumulativo com Desconto Normalizado (NDCG) é calculada para classificar os itens avaliados. Neste experimento, temos a pontuação NDCG de 0,97. As outras duas opções são pontuar o modelo em todo o catálogo de serviços recomendáveis ou pontuar apenas em itens que os usuários não usaram antes.
 
 Olhando mais adiante nas distribuições das recomendações em todo o catálogo de serviços, notamos que telefone, WiFi e correio são os principais serviços a serem recomendados. Isso é consistente com o que descobrimos nas distribuições dos dados de consumo de serviço:
 
-![Saída do modelo de recomendação](media/azure-machine-learning-model-output.png)
+![Saída do modelo de recomendação.](media/azure-machine-learning-model-output.png)
 
 Todo o [experimento de recomendação de produto pode ser acessado na Galeria de IA do Azure.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059574"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692191"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
@@ -25,7 +25,7 @@ Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O suplemento só funciona com aplicativos baseados em modelo do Dynamics 365, como Vendas ou Customer Service, versão 9.0 e superior.
-- Para que seus dados do Dynamics 365 sejam mapeados para os perfis de clientes de insights do público-alvo, eles precisam ser [ingeridos do aplicativo Dynamics 365 usando o conector do Common Data Service ](connect-power-query.md).
+- Para que seus dados do Dynamics 365 sejam mapeados para os perfis de clientes de insights do público-alvo, eles precisam ser [ingeridos do aplicativo Dynamics 365 usando o conector do Microsoft Dataverse ](connect-power-query.md).
 - Todos os usuários do Dynamics 365 do Suplemento de Cartão do Cliente devem ser [adicionados como usuários](permissions.md) nos insights do público-alvo para ver os dados.
 - [É preciso que haja recursos de filtro e pesquisa configurados](search-filter-index.md) em insights de público-alvo para que a pesquisa de dados funcione.
 - Cada controle de suplemento depende de dados específicos nos insights do público-alvo:
@@ -50,7 +50,7 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 1. Selecione o link **Nome para Exibição** da solução **Suplemento do Cartão do Cliente do Dynamics 365 Customer Insights (versão prévia)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selecione nome para exibição](media/select-display-name.png "Selecione nome para exibição")
+   > ![Selecione o nome de exibição.](media/select-display-name.png "Selecione nome para exibição")
 
 1. Selecione **Entrar** e insira as credenciais da conta de administrador que você usa para configurar o Customer Insights.
 
@@ -64,7 +64,7 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
    - Para mapear com uma conta, selecione o campo na entidade Cliente que corresponde à ID da entidade de sua conta.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo ID de Contato](media/contact-id-field.png "Campo ID de Contato")
+   > ![Campo ID do Contato.](media/contact-id-field.png "Campo ID de Contato")
 
 1. Selecione **Salvar configuração** para salvar as configurações.
 
@@ -83,7 +83,7 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 1. Selecione o formulário de contato ao qual você deseja adicionar os controles do Cartão do Cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Selecione o formulário de Contato](media/contact-active-forms.png "Selecione o formulário de Contato")
+    > ![Selecione o formulário de Contato.](media/contact-active-forms.png "Selecione o formulário de Contato")
 
 1. Para adicionar um controle, no editor de formulários, arraste qualquer campo do **Gerenciador de Campos** para o local em que deseja que o controle apareça.
 
@@ -110,7 +110,7 @@ O Suplemento do Cartão do Cliente não é atualizado automaticamente. Para atua
 
 1. Selecione **Aplicar Atualização de Solução** na barra de ações.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atualize a solução na Área de personalização dos aplicativos do Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atualize a solução na Área de personalização dos aplicativos do Dynamics 365.":::
 
 1. Depois de iniciar o processo de atualização, você verá um indicador de carregamento até que a atualização seja concluída. Se não houver uma versão mais recente, a atualização exibirá uma mensagem de erro.
 
