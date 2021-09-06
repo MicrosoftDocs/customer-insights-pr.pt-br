@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
+ms.openlocfilehash: 7ad08b8b782654939c6bfc2ca330a3d31e71054a2f2c97a921971d1056b7cd38
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650304"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033663"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -118,11 +118,11 @@ Você pode reorganizar entidades para regras de correspondência para alterar a 
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir a eliminação de duplicação em uma entidade correspondente
 
-Além de [regras para a correspondência entre entidades](#define-rules-for-match-pairs), você também pode especificar regras de eliminação de duplicação. *Eliminação de duplicação* é outro processo durante a correspondência de registros. Ela identifica registros duplicados e os mescla em um único registro. Os registros de origem são vinculados ao registro mesclado com IDs alternativas.
+Além de [regras para a correspondência entre entidades](#define-rules-for-match-pairs), você também pode especificar regras de eliminação de duplicação. *Eliminação de duplicação* é outro processo durante a correspondência de registros. Ela identifica registros duplicados e os mescla em um registro. Os registros de origem são vinculados ao registro mesclado com IDs alternativas.
 
-Os registro com eliminação de duplicação serão usados no processo de correspondência entre entidades. A eliminação de duplicação ocorre em entidades individuais e pode ser configurada para cada entidade usada em pares de correspondência.
+Os registros com duplicação eliminada serão usados no processo de correspondência entre entidades. A eliminação de duplicação ocorre em entidades individuais e pode ser configurada para cada entidade usada em pares correspondentes.
 
-A especificação de regras de eliminação de duplicação não é obrigatória. Se nenhuma regra desse tipo for configurada, as regras definidas pelo sistema serão aplicadas. Elas combinam todos os registros em um único registro antes de passar os dados da entidade para a correspondência entre entidades para o aprimoramento do desempenho.
+A especificação de regras de eliminação de duplicação não é obrigatória. Se essas regras não estiverem configuradas, as regras definidas pelo sistema serão aplicadas. Elas combinam todos os registros em um único registro antes de passar os dados da entidade para a correspondência entre entidades para o aprimoramento do desempenho.
 
 ### <a name="add-deduplication-rules"></a>Adicionar regras de eliminação de duplicação
 
@@ -133,8 +133,8 @@ A especificação de regras de eliminação de duplicação não é obrigatória
 1. No painel **Mesclar preferências**, escolha as entidades às quais deseja aplicar a eliminação de duplicação.
 
 1. Especifique como combinar os registros duplicados e escolha uma das três opções:
-   - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. Esta é a opção de mesclagem padrão.
-   - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir a recência.
+   - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. É a opção de mesclagem padrão.
+   - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir o nível de atualização.
    - **Menos recente**: identifica o registro vencedor com base na menor recência. Requer uma data ou um campo numérico para definir a recência.
  
    > [!div class="mx-imgBorder"]
