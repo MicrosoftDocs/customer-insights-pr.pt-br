@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Limites de serviço
       href: engagement-insights/quotas.md
-- name: Contato de suporte
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Integre insights do público-alvo e de participação
+  items:
+    - name: Vincular insights do público-alvo e insights de participação
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Use segmentos de insights do público-alvo em relatórios de insights de participação
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Use dimensões demográficas para dividir dados comportamentais
+      href: engagement-insights/curate-dimensions.md
+- name: Obtenha suporte
+  href: 'https://dynamics.microsoft.com/en-us/support/'

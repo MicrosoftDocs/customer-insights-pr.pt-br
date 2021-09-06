@@ -1,7 +1,7 @@
 ---
 title: Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights
 description: Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539101"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034346"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights
 
-Os insights de público-alvo ajudam você a compreender melhor seus clientes. Conecte dados de várias fontes transacionais, comportamentais e observacionais para criar uma visão do cliente em 360 graus. Use essas informações para gerar experiências e processos centrados no cliente. Unificar e entender dados de clientes, além de utilizá-los para ações e insights inteligentes.
+[Insights de público-alvo, uma funcionalidade do Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) ajuda você a ter uma compreensão mais profunda dos clientes. Conecte dados de várias fontes transacionais, comportamentais e observacionais para criar uma visão do cliente em 360 graus. Use essas informações para gerar experiências e processos centrados no cliente. Unificar e entender dados de clientes, além de utilizá-los para ações e insights inteligentes.
 
 ## <a name="main-benefits"></a>Principais benefícios 
 
@@ -34,9 +34,9 @@ Os insights de público-alvo ajudam você a compreender melhor seus clientes. Co
 
 - **Potencializar seus processos de negócios e experiências personalizadas do cliente**
 
-  - Impulsionar a participação personalizada entre os canais - capacitar os profissionais de marketing, vendas e serviços, insights contextuais do cliente e cartões de perfil personalizados, infundidos nos aplicativos de negócios que eles já usam todos os dias
-  - Automatizar experiências e processos centrados no cliente com base em perfis personalizáveis, medidas de negócios e segmentos.
-  - Permitir e estender experiências de linha de negócios baseadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Criar aplicativos rapidamente com insights incorporados usando uma abordagem poderosa de pouco código do PowerApps.  
+  - Promova a participação personalizada em canais – capacite profissionais de marketing, vendas e serviços. Use insights prontos para uso e cartões de perfil de cliente personalizados que se integram aos aplicativos de negócios já utilizados.
+  - Automatizar experiências e processos com base em perfis personalizáveis, medidas de negócios e segmentos.
+  - Permitir e estender experiências de linha de negócios baseadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Criar aplicativos rapidamente com insights incorporados usando uma abordagem poderosa de pouco código do Power Apps.  
 
 ## <a name="key-audiences"></a>Principais públicos-alvo
 
@@ -50,13 +50,18 @@ Os insights de público-alvo ajudam você a compreender melhor seus clientes. Co
 
 - **Usuários comerciais:**
 
-  - Informações sobre perfis de clientes em 360 graus e visualizações de ponta a ponta do jornada do cliente.
-  - Visualize dados de clientes em 360 graus nos processos de negócios do Dynamics 365 com pacotes predefinidos.
+  - Insights sobre perfis de clientes em 360 graus e jornadas do cliente.
+  - Visualize dados de clientes em 360 graus em processos de negócios do Dynamics 365 com pacotes predefinidos.
 
 - **Analistas de negócios:**
 
   - Crie perfis personalizáveis, defina medidas, crie segmentos e se beneficie da análise preditiva para obter uma visão de 360 graus do seu cliente, específica da sua organização.  
-  - Use conectores prontos para uso em vários aplicativos ou APIs da Microsoft e de terceiros para processar ainda mais os insights.
+  - Use conectores prontos para uso em vários aplicativos ou APIs da Microsoft e de terceiros para processar os insights.
 
+## <a name="pricing-and-licensing"></a>Preço e licenças
+
+O Customer Insights é licenciado por locatário e inclui várias funcionalidades. As capacidades permitidas incluem um conjunto de perfis, atualizações diárias do sistema, solicitações do Power Platform e dois ambientes. Você pode adquirir capacidade adicional e licença para aumentar a cota padrão. 
+- Capacidade detalhada e direitos: [Guia de Licenciamento do Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Visão geral de preços: [Preços do Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

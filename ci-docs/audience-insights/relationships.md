@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171150"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035217"
 ---
 # <a name="relationships-between-entities"></a>Relacionamentos entre entidades
 
@@ -82,7 +82,7 @@ Esta página oferece um conjunto de opções para relacionamentos novos e existe
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorar o visualizador de relacionamento
 
-O visualizador de relacionamento mostra um diagrama de rede dos relacionamentos existentes entre entidades conectadas e sua cardinalidade.
+O visualizador de relacionamento mostra um diagrama de rede dos relacionamentos existentes entre entidades conectadas e sua cardinalidade. Ele também visualiza o caminho do relacionamento.
 
 Para personalizar a exibição, você pode alterar a posição das caixas arrastando-as na tela.
 
@@ -92,6 +92,20 @@ Opções disponíveis:
 - **Exportar como imagem**: salve a exibição atual como um arquivo de imagem.
 - **Alterar para layout horizontal/vertical**: altere o alinhamento das entidades e relacionamentos.
 - **Editar**: atualize as propriedades de relacionamentos personalizados no painel de edição e salve as alterações.
+
+### <a name="relationship-path"></a>Caminho do relacionamento
+
+O caminho de relacionamento descreve as entidades que estão conectadas com relacionamentos entre uma entidade de origem e uma entidade de destino. Ele é usado ao criar um segmento ou medida que inclui outras entidades além da entidade de perfil unificado e há várias opções para alcançar a entidade de perfil unificado.
+
+O caminho de relacionamento informa ao sistema os relacionamentos para acessar a entidade de perfil unificado. Caminhos de relacionamento diferentes podem produzir resultados diferentes.
+
+Por exemplo, a entidade *eCommerce_eCommercePurchases* tem os seguintes relacionamentos com a entidade de perfil unificado *Cliente*:
+
+- eCommerce_eCommercePurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
+
+O caminho de relacionamento determina quais entidades você pode usar ao criar regras para medidas ou segmentos. A escolha da opção com o caminho de relacionamento mais longo provavelmente produzirá menos resultados porque os registros correspondentes precisam fazer parte de todas as entidades. Neste exemplo, um cliente deve ter comprado mercadorias por meio de comércio eletrônico (eCommerce_eCommercePurchases), em um ponto de venda (POS_posPurchases) e participa de nosso programa de fidelidade (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, você provavelmente obterá mais resultados porque os clientes só precisam existir em uma entidade adicional.
 
 ## <a name="manage-existing-relationships"></a>Gerenciar relacionamentos existentes 
 
@@ -105,6 +119,6 @@ Selecione um parentesco e escolha uma das seguintes opções:
 
 ## <a name="next-step"></a>Próxima etapa
 
-Os relacionamentos do sistema e personalizados são usados para [criar segmentos](segments.md) com base em várias fontes de dados que não são mais isoladas.
+Relacionamentos de sistema e personalizados são usados para [criar segmentos](segments.md) e [medidas](measures.md) com base em várias fontes de dados que não são mais isoladas.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

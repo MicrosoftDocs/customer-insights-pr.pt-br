@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377774"
 ---
 # <a name="create-and-manage-segments"></a>Criar e gerenciar segmentos
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685448"
 > - Um painel lateral para selecionar atributos estará constantemente disponível.
 > - Uma opção para selecionar caminhos de relacionamento de entidade.
 > Para experimentar o novo construtor de segmentos, envie um email com o assunto "Solicitação para habilitar o novo construtor de segmentos" a cihelp [at] microsoft.com. Inclua o nome de sua organização e a ID de seu ambiente de área restrita.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementos do construtor de segmento." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organize seu segmento com regras e sub-regras. Cada regra ou sub-regra consiste em condições. Combine as condições com operadores lógicos
+>
+> 2 - Escolha o [caminho de relacionamento](relationships.md) entre entidades que se aplicam a uma regra. O caminho do relacionamento determina quais atributos podem ser usados em uma condição.
+>
+> 3 - Gerencie regras e sub-regras. Altere a posição de uma regra ou exclua-a.
+>
+> 4 - Adicione condições e crie o nível certo de aninhamento usando sub-regras.
+>
+> 5 - Aplique operações definidas às regras conectadas.
+>
+> 6 - Use o painel de atributos para adicionar atributos de entidade disponíveis ou criar condições baseadas em atributos. O painel mostra a lista de entidades e atributos, com base no caminho de relacionamento selecionado, que estão disponíveis para a regra selecionada.
+>
+> 7 - Adicione condições com base em atributos às regras e sub-regras existentes ou adicione-as a uma nova regra.
+>
+> 8 - Desfaça e refaça alterações durante a criação do segmento.
 
 Defina filtros complexos em torno da entidade unificada do cliente e suas entidades relacionadas. Cada segmento, após o processamento, cria um conjunto de registros do cliente que você pode exportar e executar. Os segmentos são gerenciados na página **Segmentos**. 
 
@@ -64,7 +81,7 @@ Ao criar um segmento, você pode salvar um rascunho. Ele será salvo como um seg
 
    |Número |Definição  |
    |---------|---------|
-   |0     |Entity          |
+   |1     |Entity          |
    |2     |Atributo          |
    |3    |Operador         |
    |4    |Valor         |
@@ -147,6 +164,6 @@ Segmentos rápidos lhe permitem construir segmentos simples com um único operad
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Exportar um segmento](export-destinations.md) e explorar o [Cartão de Cliente](customer-card-add-in.md) e os [Conectores](export-power-bi.md) para obter insights no nível do cliente.
+[Exportar um segmento](export-destinations.md) e explorar a [Integração do cartão do cliente](customer-card-add-in.md) para usar segmentos em outros aplicativos.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
