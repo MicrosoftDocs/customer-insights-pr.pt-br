@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692239"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032652"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços aprimorados
 
@@ -22,7 +22,7 @@ Os endereços dos seus dados podem ser não estruturados, incompletos ou incorre
 
 ## <a name="how-we-enhance-addresses"></a>Como aprimoramos os endereços
 
-Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar seus componentes e os coloca em um formato estruturado. Em seguida, usamos a IA para corrigir, completar e padronizar os valores no endereço.
+Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar componentes e coloca-os em um formato estruturado. Em seguida, usamos a IA para corrigir, completar e padronizar os valores no endereço.
 
 ### <a name="example"></a>Exemplo
 
@@ -44,11 +44,11 @@ As informações de endereço podem estar em um formato não padrão e conter er
 
 ### <a name="limitations"></a>Limitações
 
-Os endereços avançados só funcionam com os valores que já existem nos dados de endereço processados. O que o modelo não faz: 
+Os endereços avançados só funcionam com os valores que já existem nos dados de endereço processados. O modelo não: 
 
-1. Verificar se o endereço é válido.
-2. Verificar se algum dos valores, como CEPs ou nomes de ruas, é válido.
-3. Alterar valores que não reconhece.
+1. Verifica se o endereço é um endereço válido.
+2. Verifica se um dos valores, como CEPs ou nomes de rua, são válidos.
+3. Altera valores não reconhecidos.
 
 O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo altera um valor de entrada, como acontece com qualquer modelo baseado em aprendizado de máquina, a precisão de 100% não é garantida.
 
