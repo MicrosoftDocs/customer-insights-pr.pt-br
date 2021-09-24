@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034346"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474043"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Visão geral de insights de público-alvo para o Dynamics 365 Customer Insights
 
@@ -57,11 +57,5 @@ ms.locfileid: "7034346"
 
   - Crie perfis personalizáveis, defina medidas, crie segmentos e se beneficie da análise preditiva para obter uma visão de 360 graus do seu cliente, específica da sua organização.  
   - Use conectores prontos para uso em vários aplicativos ou APIs da Microsoft e de terceiros para processar os insights.
-
-## <a name="pricing-and-licensing"></a>Preço e licenças
-
-O Customer Insights é licenciado por locatário e inclui várias funcionalidades. As capacidades permitidas incluem um conjunto de perfis, atualizações diárias do sistema, solicitações do Power Platform e dois ambientes. Você pode adquirir capacidade adicional e licença para aumentar a cota padrão. 
-- Capacidade detalhada e direitos: [Guia de Licenciamento do Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Visão geral de preços: [Preços do Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

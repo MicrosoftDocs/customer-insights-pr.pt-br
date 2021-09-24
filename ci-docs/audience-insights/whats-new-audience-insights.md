@@ -1,7 +1,7 @@
 ---
 title: Recursos novos e futuros
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035949"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465191"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
@@ -26,6 +26,15 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2021-updates"></a>Atualizações de agosto de 2021
+
+As atualizações em julho e agosto de 2021 incluem um novo recurso, atualizações de desempenho e correções de bugs.
+
+### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar segmentos para o Klaviyo** Ampliamos nossos [destinos de exportação para incluir o Klaviyo](export-klaviyo.md). Agora você pode exportar segmentos para criar campanhas, fazer marketing por email e usar grupos de clientes específicos com o Klaviyo. 
+
 
 ## <a name="june-2021-updates"></a>Atualizações de junho de 2021
 

@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Recurso de insights de interação (versão preliminar) no Dynamics 365 Customer Insights
+title: Capacidade de insights de participação no Dynamics 365 Customer Insights (versão preliminar)
 summary: Colete dados para os seus sites. Entenda as interações com os clientes e o uso nos seus sites de forma interativa. Use a integração profunda entre os insights de interação e os insights de público-alvo para enriquecer sua análise comportamental em tempo real com relatórios de perfis dos clientes. Enriqueça os perfis dos clientes com atividades da Web para obter dados comportamentais em tempo real juntamente com dados relevantes dos clientes. Transforme sua empresa para obter valor imediato dos dados dos seus clientes.
 metadata:
-  title: Documentação dos insights de interação (versão preliminar)
+  title: Documentação de insights de participação (versão preliminar)
   description: Hub de ajuda com links importantes para os insights de interação.
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036224"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494170"
 landingContent:
 - title: Sobre
   linkLists:
   - linkListType: overview
     links:
-    - text: Visão geral da funcionalidade
+    - text: Benefícios de capacidade
       url: overview.md
-    - text: Termos e conceitos
+    - text: Glossário de termos
       url: glossary.md
-    - text: Descubra insights de participação
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Recursos novos e atualizados
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Integração
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Equipar seu site
       url: instrument-website.md
-- title: Relatórios
+- title: Exibir e filtrar relatórios
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Exibir relatórios
       url: view-reports.md
-    - text: Criar relatórios personalizados
-      url: custom-reports.md
     - text: Exibir relatório de perfis unificados
       url: profile-reports.md
-    - text: Criar relatórios funil
-      url: funnel-reports.md
-- title: Eventos
+    - text: Use segmentos de público-alvo para filtrar relatórios
+      url: integrate-audience-insights-segments.md
+- title: Analisar
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Criar relatórios funil
+      url: funnel-reports.md
+    - text: Analisar dados comportamentais
+      url: curate-dimensions.md
+    - text: Criar relatórios personalizados
+      url: custom-reports.md
     - text: Criar eventos refinados
       url: refined-events.md
     - text: Exportar eventos
       url: export-events.md
-    - text: Excluir e exportar dados pessoais
-      url: delete-export-personal-data.md
-- title: Recursos do desenvolvedor
+- title: Recursos para desenvolvedores
   linkLists:
   - linkListType: reference
     links:
-    - text: Recursos do desenvolvedor
+    - text: Recursos para desenvolvedores
       url: developer-resources.md
     - text: Exemplo de SDK da Web
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Gerenciar ambientes e espaços de trabalho
       url: manage-environments-workspaces.md
     - text: Conectar a insights do público-alvo
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Gerenciar cookies e consentimento do usuário
       url: user-consent-storage.md
+    - text: Excluir e exportar dados pessoais
+      url: delete-export-personal-data.md
+    - text: Limites de serviço
+      url: ../service-limits.md

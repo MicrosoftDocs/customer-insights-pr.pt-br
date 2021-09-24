@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes unificados
 description: Use recursos para enriquecer os dados do cliente.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032514"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469934"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (visualização)
 
@@ -29,6 +29,7 @@ Você precisa ter permissões de Colaborador ou Administrador para criar ou edit
 
 Na guia **Descobrir**, você encontrará os seguintes enriquecimentos:
 
+- [Azure Mapas](enrichment-azure-maps.md) fornecido pela Microsoft
 - [Marcas](enrichment-microsoft.md) fornecidas pela Microsoft
 - [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft
 - [Endereços aprimorados](enrichment-enhanced-addresses.md) fornecidos pela Microsoft
@@ -62,5 +63,17 @@ Os enriquecimentos de terceiros são configurados usando [conexões](connections
 ## <a name="multiple-enrichments-of-the-same-type"></a>Vários enriquecimentos do mesmo tipo
 
 A entidade a ser enriquecida é especificada durante a configuração de enriquecimento, o que permite que você enriqueça somente um subconjunto de seus perfis. Por exemplo, enriqueça dados somente para um segmento específico. Você pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma conexão. Alguns enriquecimentos terão limites para o número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e o uso atual podem ser vistos na página **Enriquecimento**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Veja o andamento do processo de enriquecimento
+
+Você pode encontrar detalhes sobre o processamento de um enriquecimento, incluindo o status e possíveis problemas durante ou após a conclusão de uma atualização. Entenda quais processos estão envolvidos para atualizar um enriquecimento e quanto tempo levou para executar os processos. O status de enriquecimento é compatível com Experian, Leadspace, HERE Technologies, SFTP Import e Azure Mapas.
+
+Para ver o status de enriquecimento
+
+1. Vá para **Dados** > **Enriquecimento**. 
+1. Na guia **Meus enriquecimentos**, selecione o status de um enriquecimento para abrir um painel lateral. 
+1. No painel **Detalhes de progresso**, expanda a seção **Enriquecimentos**. 
+1. No enriquecimento em que você deseja ver o progresso, selecione **Ver detalhes**. 
+1. No painel **Detalhes da tarefa**, selecione **Mostrar detalhes** para ver os processos envolvidos na atualização do enriquecimento e o status. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

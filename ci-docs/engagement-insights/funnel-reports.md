@@ -4,17 +4,17 @@ description: Como usar relatórios de funil para entender como o público toma d
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032241"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498628"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Criar e gerenciar relatórios de funil
 
@@ -158,4 +158,21 @@ Você pode alterar o nome de um relatório de funil, excluí-lo ou modificar as 
 1. Selecione um nome para abrir o relatório.
 
 1. Selecione a etapa que deseja remover e escolha **Excluir**.
+
+## <a name="funnel-insights"></a>Insights de funil 
+
+Os insights de participação agora oferecem insights de funil para os clientes. Use insights de funil para ter insights mais profundos sobre o comportamento do cliente sobre as etapas no relatório de funil. Quando você cria e salva um novo relatório de funil, os insights do funil são gerados automaticamente para o relatório. 
+
+Você pode exibir insights de funil das seguintes categorias, nos níveis principal e de etapa: 
+
+ - Taxa de conversão 
+ - Tempo de transição 
+ - Tempo de conclusão 
+
+Use esses insights para explorar em detalhes o comportamento do cliente e entender melhor pontos de desistência e conversões de seu relatório de funil. 
+
+Os insights do funil são recalculados a cada 24 horas ou quando você **Salva** o relatório de funil. 
+
+> [!NOTE]
+> Para exibir insights do funil, você deverá salvar o relatório sempre que fizer alterações. 
 

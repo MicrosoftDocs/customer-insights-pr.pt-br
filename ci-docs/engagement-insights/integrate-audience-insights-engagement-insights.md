@@ -1,19 +1,19 @@
 ---
 title: Criar um link entre insights do público-alvo e insights de participação
 description: Crie um link ativo entre insights do público-alvo e insights de participação para permitir o compartilhamento bidirecional de dados.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7460999"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487093"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Criar um link entre insights do público-alvo e insights de participação
 
@@ -26,14 +26,14 @@ Use perfis e segmentos unificados de insights do público-alvo para obter mais o
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Os perfis de insights do público-alvo devem ser armazenados em uma conta do Azure Data Lake Storage que você possui, ou em um data lake do [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; gerenciado. 
-
+- Seu ambiente de insights do público-alvo deve ter um ambiente do Dataverse associado. Se esse ambiente também estiver usando o Dataverse para armazenamento de dados, certifique-se de verificar a opção **Habilitar compartilhamento de dados** em insights do público-alvo. Para obter mais informações, consulte [Criar e configurar um ambiente pago em insights do público-alvo](../audience-insights/get-started-paid.md).
 - Você precisa de permissões de administrador para os ambientes de insights de participação e do público-alvo.
-
 - Os ambientes vinculados devem estar na mesma região geográfica.
 
 > [!NOTE]
-> - Se sua assinatura de insights do público-alvo for uma avaliação, que usa um data lake gerenciado internamente por insights do público-alvo, fale com [pirequest@microsoft.com](mailto:pirequest@microsoft.com) para obter assistência. 
-> - Se o ambiente de insights do público-alvo usar o seu próprio Azure Data Lake Storage para armazenar dados, você precisará adicionar uma entidade de serviço do Azure de insights de participação à sua conta de armazenamento. Para obter detalhes, acesse [Conecte-se a uma conta do Azure Data Lake Storage com uma entidade de serviço do Azure para insights do público-alvo](../audience-insights/connect-service-principal.md). Além disso, o ambiente de insights do público-alvo deve ter um [ambiente do Dataverse](../audience-insights/get-started-paid.md) associado. 
+> - Se sua assinatura de insights do público-alvo for uma avaliação que usa um data lake gerenciado internamente por insights do público-alvo, fale com [pirequest@microsoft.com](mailto:pirequest@microsoft.com) para obter assistência. 
+> - Se o ambiente de insights do público-alvo usar o seu próprio Azure Data Lake Storage para armazenar dados, você precisará adicionar uma entidade de serviço do Azure de insights de participação à sua conta de armazenamento. Para obter detalhes, acesse [Conecte-se a uma conta do Azure Data Lake Storage com uma entidade de serviço do Azure para insights do público-alvo](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Criar um link do ambiente
 
@@ -75,6 +75,7 @@ Após vincular ambientes, você pode selecionar recursos opcionais para os ambie
 
    > [!IMPORTANT]
    > Se você não adicionar usuários explicitamente nesta etapa, os dados serão ocultados de usuários em insights de participação.
+   > Para que segmentos de insights do público-alvo apareçam em insights de participação, você deve primeiro [executar processos de mesclagem e downstream](../audience-insights/merge-entities.md). Os processos de downstream são importantes porque geram uma tabela única que prepara segmentos de insights do público-alvo a serem compartilhados com insights de participação. (Se uma atualização do sistema for agendada, ela incluirá automaticamente processos de downstream.)
 
 1. Revise sua seleção e, depois, selecione **Concluir**.
 

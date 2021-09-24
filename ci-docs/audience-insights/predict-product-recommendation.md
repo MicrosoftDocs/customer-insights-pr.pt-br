@@ -1,20 +1,20 @@
 ---
 title: Previsão de recomendação do produto
 description: Preveja os produtos que um cliente provavelmente comprará ou com os quais interagirá.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034942"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494525"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Previsão de recomendação do produto (versão preliminar)
 
@@ -85,27 +85,28 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Se você selecionou *não* recomendar produtos comprados recentemente, defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada dois anos. Essa janela examinará o histórico de compras dos últimos dois anos e, se encontrar um item, o item será filtrado das recomendações.
 
-1. Selecione **Avançar**
+1. Selecione **Avançar**.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 
-1. Selecione **Adicionar dados** para **Histórico de transações do cliente** e escolha a entidade que fornece as informações do histórico de transações/compras, conforme descrito nos [pré-requisitos](#prerequisites).
+1. Selecione **Adicionar dados** e escolha o tipo de atividade no painel lateral que contém a transação necessária ou as informações do histórico de compras.
 
-1. Mapeie os campos semânticos para atributos na sua entidade do histórico de compras e selecione **Avançar**. Para obter descrições dos campos, observe os [pré-requisitos](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Defina o relacionamento da entidade.](media/product-recommendation-purchasehistorymapping.PNG "Página de histórico de compras que mostra atributos semânticos que são mapeados para campos na entidade de histórico de compras selecionada")
+1. Em **Escolher as atividades**, escolha as atividades específicas da atividade selecionada em que deseja que o cálculo se concentre.
 
-1. Se os campos não estiverem preenchidos, configure o relacionamento da sua entidade do histórico de compras para a entidade *Cliente*.
-    1. Selecione a **Entidade do histórico de compras**.
-    1. Selecione o **Campo** que identifica o cliente na entidade do histórico de compras. Ele precisa estar relacionado à ID do cliente principal da sua entidade *Cliente*.
-    1. Selecione a **Entidade Cliente** que corresponde à entidade do cliente primário.
-    1. Insira um nome que descreva a relação.
-       > [!div class="mx-imgBorder"]
-       > ![Página do histórico de compras que mostra a criação de um relacionamento com o cliente.](media/model-purchase-join.png "Página do histórico de compras que mostra a criação de um relacionamento com o cliente")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Painel lateral mostrando a escolha de atividades específicas no tipo semântico.":::
+
+1. Se você ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para fazer isso. A experiência guiada para mapear atividades semânticas é aberta. Mapeie seus dados para os campos correspondentes no tipo de atividade selecionado.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de atividade de configuração de página.":::
+
+1. Depois de mapear a atividade para o tipo semântico correspondente, selecione **Avançar** para prosseguir 
+ 
+1. Mapeie os atributos semânticos para os campos necessários para executar o modelo.
 
 1. Selecione **Salvar**.
 
 1. Selecione **Avançar**
+
 
 ### <a name="configure-product-filters"></a>Configurar filtros de produto
 

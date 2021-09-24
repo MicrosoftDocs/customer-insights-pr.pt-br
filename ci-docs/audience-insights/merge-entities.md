@@ -1,7 +1,7 @@
 ---
 title: Mesclar entidades na unificação de dados
 description: Mescle entidades para criar perfis de clientes unificados.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034988"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494305"
 ---
 # <a name="merge-entities"></a>Mesclar entidades
 
@@ -66,7 +66,7 @@ Altere o nome de exibição dos atributos mesclados. Não é possível alterar o
 
 Exclua um atributo do perfil unificado do cliente. Se o campo for usado em outros processos, por exemplo, em um segmento, remova-o desses processos antes de excluí-lo do perfil do cliente. 
 
-1. Selecione o campo mesclado.
+1. Selecione um campo mesclado.
   
 1. Selecione **Mostrar mais** e escolha **Excluir**.
 
@@ -76,17 +76,40 @@ Exclua um atributo do perfil unificado do cliente. Se o campo for usado em outro
 
 Na página **Meslar**, selecione **Campos excluídos** para ver a lista de todos os campos excluídos. Este painel lhe permite adicionar novamente campos excluídos.
 
+## <a name="edit-a-merged-field"></a>Editar um campo mesclado
+
+1.  Selecione um campo mesclado.
+
+1.  Selecione **Mostrar mais** e escolha **Editar**.
+
+1.  Especifique como combinar ou mesclar os campos de uma das três opções:
+    - **Importância**: identifica o valor vencedor com base na classificação de importância especificada para os campos participantes. É a opção de mesclagem padrão. Selecione **Mover para cima/baixo** para definir a classificação de importância.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Opção de importância na caixa de diálogo de campos de mesclagem."::: 
+    - **Mais recente**: identifica o valor vencedor com base no maior nível de atualização. Requer uma data ou um campo numérico para cada entidade participante no escopo dos campos de mesclagem para definir o nível de atualização.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Opção de nível de atualização na caixa de diálogo de campos de mesclagem.":::
+    - **Menos recente**: identifica o valor vencedor com base no menor nível de atualização. Requer uma data ou um campo numérico para cada entidade participante no escopo dos campos de mesclagem para definir o nível de atualização.
+
+1.  Você pode incluir campos adicionais para participar do processo de mesclagem.
+
+1.  Você pode renomear o campo mesclado.
+
+1. Selecione **Concluído** para aplicar suas alterações.
+
+1. Selecione **Salvar** e **Executar** para processar as alterações. 
+
 ## <a name="manually-combine-fields"></a>Combinar campos manualmente
 
 Especifique um atributo mesclado manualmente. 
 
 1. Na página **Mesclar**, selecione **Combinar campos**.
 
-1. Forneça um **Nome** e um **Nome do campo de saída**.
+1. Especifique a política do vencedor de mesclagem no menu suspenso **Combinar campos por**.
 
 1. Escolha um campo para adicionar. Selecione **Adicionar campos** para combinar outros campos.
 
-1. Confirme a exclusão.
+1. Forneça um **Nome** e um **Nome do campo de saída**.
+
+1. Selecione **Concluído** para aplicar as alterações.
 
 1. Selecione **Salvar** e **Executar** para processar as alterações. 
 
@@ -103,6 +126,27 @@ Algumas entidades contêm mais detalhes que outras. Se uma entidade tiver os dad
 1. Confirme a alteração.
 
 1. Selecione **Salvar** e **Executar** para processar as alterações.
+
+## <a name="configure-customer-id-generation"></a>Configurar geração de ID do cliente 
+
+Após configurar os campos de mesclagem, você pode definir como gerar valores CustomerId, os identificadores exclusivos de perfil do cliente. A etapa de mesclagem no processo de unificação de dados gera o identificador exclusivo de perfil do cliente. O identificador é o CustomerId na entidade *Cliente* resultante do processo de unificação de dados. 
+
+O CustomerId na entidade Cliente é baseado em um hash do primeiro valor das chaves primárias vencedoras não nulas. Essas chaves são obtidas das entidades usadas na fase de correspondência e mesclagem e são influenciadas pela ordem de correspondência. Portanto, o CustomerID gerado pode mudar quando um valor de chave primária muda na entidade primária da ordem de correspondência. Consequentemente, o valor da chave primária talvez nem sempre represente o mesmo cliente.
+
+Configurar uma ID de cliente estável permite evitar esse comportamento.
+
+**Configurar uma ID do cliente exclusiva**
+
+1. Acesse **Unify** > **Mesclar**.
+
+1. Na página **Mesclar**, selecione a guia **Chaves**. 
+
+1. Passe o mouse sobre a linha **CustomerId** e selecione a opção **Configurar**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Controle para personalizar a geração de ID.":::
+
+1. Selecione até cinco campos que contenham uma ID de cliente exclusiva e sejam mais estáveis. Os registros que não correspondem à sua configuração usam uma ID configurada pelo sistema.  
+
+1. Selecione **Concluído** e execute o processo de mesclagem para aplicar as alterações.
 
 ## <a name="run-your-merge"></a>Execute sua mesclagem
 

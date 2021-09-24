@@ -4,17 +4,17 @@ description: Como criar, renomear e excluir espaços de trabalho e ambientes.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034028"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486021"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gerenciar ambientes e espaços de trabalho
 
@@ -85,13 +85,11 @@ A exclusão de um espaço de trabalho removerá permanentemente todo o seu conte
 
 1. Selecione **Adicionar membros** para conceder acesso e [atribuir funções](user-roles.md). Atualmente, apenas **Administrador do espaço de trabalho** está disponível.
 
-1. Se você configurar uma [conexão com os insights de público-alvo](configure-connections.md), poderá selecionar **Permitir acesso a dados de perfis** para permitir que o membro veja relatórios baseados em [perfis de usuários](profile-reports.md).
-
 1. Selecione **Adicionar membros** para adicioná-los ao seu espaço de trabalho.
 
 ## <a name="manage-an-environment"></a>Gerenciamento de ambiente
 
-Como Administrador de ambiente, você pode acessar um ambiente no painel de navegação esquerdo. Você pode definir configurações do ambiente, outros Administradores de ambiente, espaços de trabalho e [conexões com os insights de público-alvo](configure-connections.md). Selecione as guias para mover-se entre as diferentes áreas do centro de administração.
+Como Administrador de ambiente, você pode acessar um ambiente no painel de navegação esquerdo. Você pode definir as configurações do ambiente, outros administradores de ambiente e espaços de trabalho. Selecione as guias para mover-se entre as diferentes áreas do centro de administração.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centro de administração de ambientes.":::
 
@@ -123,8 +121,6 @@ Como Administrador de ambiente, você pode acessar um ambiente no painel de nave
 
 1. Selecione **Adicionar membros** para atualizar membros e [atribuir funções](user-roles.md). Atualmente, apenas **Administrador do ambiente** está disponível.
 
-1. Se você configurar uma [conexão com os insights de público-alvo](configure-connections.md), poderá selecionar **Permitir acesso a dados de perfis** para permitir que o membro veja relatórios baseados em [perfis de usuários](profile-reports.md).
-
 1. Selecione **Adicionar membros** para adicioná-los ao seu ambiente.
 
 ### <a name="delete-an-environment"></a>Excluir um ambiente
@@ -143,7 +139,7 @@ Os administradores do ambiente podem excluir ambientes. Antes de excluir um ambi
 
 Estabelecer conexões com os insights de público-alvo permite que você veja relatórios nos insights de interação com base em perfis de clientes unificados. 
 
-Para obter mais informações, consulte [Configurar conexões](configure-connections.md).
+Para obter mais informações, consulte [Criar um link entre insights do público-alvo e insights de participação](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Gerenciar dados pessoais
 

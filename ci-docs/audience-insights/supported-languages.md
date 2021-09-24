@@ -1,24 +1,23 @@
 ---
-title: Idiomas com suporte para insights do público-alvo
+title: Idiomas com Suporte para Dynamics 365 Customer Insights
 description: Entenda e configure o suporte a idiomas.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035125"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483328"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Idiomas com suporte a insights do público-alvo
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Idiomas com Suporte para Dynamics 365 Customer Insights
 
-Os insights de público-alvo para o Dynamics 365 Customer Insights são traduzido para vários idiomas. A lista a seguir contém os idiomas disponíveis e informações sobre o que é traduzido. Você também pode saber mais sobre como alterar as configurações de idioma. 
+O Dynamics 365 Customer Insights é traduzido para vários idiomas. A lista a seguir contém os idiomas disponíveis e informações sobre o que é traduzido. Você também pode saber mais sobre como alterar as configurações de idioma. 
 
 ## <a name="languages"></a>Idiomas
 
@@ -69,7 +68,7 @@ Os insights de público-alvo para o Dynamics 365 Customer Insights são traduzid
 
 ## <a name="whats-translated"></a>O que está traduzido
 
-O aplicativo usa sua preferência de idioma para exibir elementos como menu, texto de rótulo e mensagens do painel em seu idioma de preferência.
+O Customer Insights usa sua preferência de idioma para exibir elementos como menu, texto de rótulo e mensagem do sistema no idioma de sua preferência.
 
 Como a maioria dos recursos é baseada em seus dados, alguns itens permanecem no idioma original. Por exemplo:
 
