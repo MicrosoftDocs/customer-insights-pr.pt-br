@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487093"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559004"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Criar um link entre insights do público-alvo e insights de participação
 
@@ -54,6 +54,9 @@ Você pode criar um link do ambiente atualizando as configurações de **Adminis
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Habilite atributos e segmentos de perfis unificados de insights do público-alvo
 
 Após vincular ambientes, você pode selecionar recursos opcionais para os ambientes vinculados. Esses recursos permitem atributos e segmentos de perfis unificados a partir de insights do público-alvo para análise interativa dos dados do cliente.
+
+> [!IMPORTANT]
+> Para que segmentos de insights do público-alvo apareçam em insights de participação, você deve primeiro [executar processos de mesclagem e downstream](../audience-insights/merge-entities.md). Os processos de downstream são importantes porque geram uma tabela única que prepara segmentos de insights do público-alvo a serem compartilhados com insights de participação. (Se uma atualização do sistema for agendada, ela incluirá automaticamente processos de downstream.)
 
 **Para analisar dados da Web em insights de participação**
 

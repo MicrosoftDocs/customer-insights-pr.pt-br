@@ -4,17 +4,17 @@ description: Como usar relatórios de funil para entender como o público toma d
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498628"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558799"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Criar e gerenciar relatórios de funil
 
@@ -163,13 +163,23 @@ Você pode alterar o nome de um relatório de funil, excluí-lo ou modificar as 
 
 Os insights de participação agora oferecem insights de funil para os clientes. Use insights de funil para ter insights mais profundos sobre o comportamento do cliente sobre as etapas no relatório de funil. Quando você cria e salva um novo relatório de funil, os insights do funil são gerados automaticamente para o relatório. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Insights do funil.":::
+
+> [!NOTE]
+> Os insights do funil podem ser gerados somente para as etapas do funil que **não** incluam dimensões personalizadas. Para gerar insights do funil para todas as etapas em seu funil, use dimensões de insights de participação prontas para uso para criar suas etapas do funil. 
+
 Você pode exibir insights de funil das seguintes categorias, nos níveis principal e de etapa: 
 
- - Taxa de conversão 
+ - Taxa de conversão
+ -    A taxa de conversão entre Finalização da compra e Comprar é de 22%.
  - Tempo de transição 
+ -    O tempo médio de transição entre Carrinho e Finalização da compra é de 23 minutos. 
  - Tempo de conclusão 
+ -    O tempo médio para os clientes concluírem o funil é 47 minutos. 
 
 Use esses insights para explorar em detalhes o comportamento do cliente e entender melhor pontos de desistência e conversões de seu relatório de funil. 
+
+Para comparar insights de etapas diferentes, selecione **Ver detalhamento da etapa** ou **Comparar a outras etapas** nos cartões de insights. Isso exibirá um gráfico de barras comparando as métricas de cada etapa do funil. 
 
 Os insights do funil são recalculados a cada 24 horas ou quando você **Salva** o relatório de funil. 
 

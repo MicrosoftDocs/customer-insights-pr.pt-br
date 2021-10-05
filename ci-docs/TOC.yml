@@ -242,7 +242,7 @@
   items:
     - name: Hub de Ajuda
       href: engagement-insights/index.yml
-    - name: Visão geral da funcionalidade
+    - name: Sobre os insights de participação
       href: engagement-insights/overview.md
     - name: Introdução
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Disponibilidade regional
       href: engagement-insights/regional-availability.md
-- name: Integre insights do público-alvo e de participação
+- name: Compartilhar dados entre recursos
   items:
     - name: Vincular insights do público-alvo e insights de participação
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Direitos e solicitações de DSR
   href: dsr-rights-requests.md
-- name: Obtenha suporte
-  href: 'https://dynamics.microsoft.com/support/'

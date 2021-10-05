@@ -1,20 +1,20 @@
 ---
 title: Relacionamentos entre entidades e caminhos de entidade
 description: Crie e gerencie relacionamentos entre entidades de várias fontes de dados.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035217"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557338"
 ---
 # <a name="relationships-between-entities"></a>Relacionamentos entre entidades
 
@@ -93,11 +93,11 @@ Opções disponíveis:
 - **Alterar para layout horizontal/vertical**: altere o alinhamento das entidades e relacionamentos.
 - **Editar**: atualize as propriedades de relacionamentos personalizados no painel de edição e salve as alterações.
 
-### <a name="relationship-path"></a>Caminho do relacionamento
+## <a name="relationship-paths"></a>Caminhos de relacionamento
 
-O caminho de relacionamento descreve as entidades que estão conectadas com relacionamentos entre uma entidade de origem e uma entidade de destino. Ele é usado ao criar um segmento ou medida que inclui outras entidades além da entidade de perfil unificado e há várias opções para alcançar a entidade de perfil unificado.
+Um caminho de relacionamento descreve as entidades que estão conectadas com os relacionamentos entre uma entidade de origem e uma entidade de destino. Ele é usado ao criar um segmento ou medida que inclui outras entidades além da entidade de perfil unificado e há várias opções para alcançar a entidade de perfil unificado. 
 
-O caminho de relacionamento informa ao sistema os relacionamentos para acessar a entidade de perfil unificado. Caminhos de relacionamento diferentes podem produzir resultados diferentes.
+Um caminho de relacionamento informa o sistema sobre os relacionamentos para acessar a entidade de perfil unificado. Caminhos de relacionamento diferentes podem produzir resultados diferentes.
 
 Por exemplo, a entidade *eCommerce_eCommercePurchases* tem os seguintes relacionamentos com a entidade de perfil unificado *Cliente*:
 
@@ -105,7 +105,43 @@ Por exemplo, a entidade *eCommerce_eCommercePurchases* tem os seguintes relacion
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
 
-O caminho de relacionamento determina quais entidades você pode usar ao criar regras para medidas ou segmentos. A escolha da opção com o caminho de relacionamento mais longo provavelmente produzirá menos resultados porque os registros correspondentes precisam fazer parte de todas as entidades. Neste exemplo, um cliente deve ter comprado mercadorias por meio de comércio eletrônico (eCommerce_eCommercePurchases), em um ponto de venda (POS_posPurchases) e participa de nosso programa de fidelidade (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, você provavelmente obterá mais resultados porque os clientes só precisam existir em uma entidade adicional.
+Um caminho de relacionamento determina quais entidades você pode usar ao criar regras para medidas ou segmentos. A escolha da opção com o caminho de relacionamento mais longo provavelmente produzirá menos resultados porque os registros correspondentes precisam fazer parte de todas as entidades. Neste exemplo, um cliente deve ter comprado mercadorias por meio de comércio eletrônico (eCommerce_eCommercePurchases), em um ponto de venda (POS_posPurchases) e participa de nosso programa de fidelidade (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, você provavelmente obterá mais resultados porque os clientes só precisam existir em uma entidade adicional.
+
+### <a name="direct-relationship"></a>Relacionamento direto
+
+Um relacionamento é classificado como um **relacionamento direto** quando uma entidade de origem se relaciona a uma entidade de destino com somente um relacionamento.
+
+Por exemplo, se uma entidade de atividade chamada *eCommerce_eCommercePurchases* se conecta a uma entidade de destino *eCommerce_eCommerceContacts* por meio de uma *ContactId* somente, isso é um relacionamento direto.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="A entidade de origem se conecta diretamente à entidade de destino.":::
+
+#### <a name="multi-path-relationship"></a>Relacionamento de múltiplos caminhos
+
+Um **relacionamento de múltiplos caminhos** é um tipo especial de relacionamento que conecta uma entidade de origem a mais de uma entidade de destino.
+
+Por exemplo, se uma entidade de atividade chamada *eCommerce_eCommercePurchases* se relaciona a duas entidades de destino *eCommerce_eCommerceContacts* e *loyaltyScheme_loyCustomers*, isso é um relacionamento de múltiplos caminhos.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="A entidade de origem se conecta diretamente a mais de uma entidade de destino por meio de um relacionamento com saltos múltiplos.":::
+
+### <a name="indirect-relationship"></a>Relacionamento indireto
+
+Um relacionamento é classificado como um **relacionamento indireto** quando uma entidade de origem se relaciona a uma ou mais entidades adicionais antes de se relacionar a uma entidade de destino.
+
+#### <a name="multi-hop-relationship"></a>Relacionamento com saltos múltiplos
+
+Um *relacionamento com saltos múltiplos* é um *relacionamento indireto* que permite que você se conecte a uma entidade de origem por meio de uma ou mais entidades intermediárias.
+
+Por exemplo, se uma entidade de atividade chamada *eCommerce_eCommercePurchasesWest* se conecta a uma entidade intermediária chamada *eCommerce_eCommercePurchasesEast* e então se conecta a uma entidade de destino chamada *eCommerce_eCommerceContacts*, isso é um relacionamento com saltos múltiplos.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="A entidade de origem se conecta diretamente a uma entidade de destino com uma entidade intermediária.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relacionamento de múltiplos caminhos com saltos múltiplos
+
+Os relacionamentos de múltiplos caminhos e com saltos múltiplos podem ser usados juntos para criar **relacionamentos de múltiplos caminhos com saltos múltiplos**. Esse tipo especial combina as funções de **relacionamentos com saltos múltiplos** e de **relacionamentos de múltiplos caminhos**. Ele permite que você se conecte a mais de uma entidade enquanto usa entidades intermediárias.
+
+Por exemplo, se uma entidade de atividade chamada *eCommerce_eCommercePurchasesWest* se conecta a uma entidade intermediária chamada *eCommerce_eCommercePurchasesEast* e então se conecta a duas entidades de destino, *eCommerce_eCommerceContacts* e *loyaltyScheme_loyCustomers*, isso é um relacionamento de múltiplos caminhos e com saltos múltiplos.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="A entidade de origem se conecta diretamente a uma entidade de destino e se conecta a outra entidade de destino por meio de uma entidade intermediária.":::
 
 ## <a name="manage-existing-relationships"></a>Gerenciar relacionamentos existentes 
 
