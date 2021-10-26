@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o Sendinblue
 description: Saiba como configurar a conexão e exportar para o Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036041"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617771"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Exportar segmentos para o Sendinblue (versão preliminar)
 
@@ -29,10 +29,10 @@ Exporte segmentos de perfis de cliente unificados para gerar campanhas, fornecer
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis por exportação para o Sendinblue.
+- Até 1 milhão de perfis de clientes por exportação para o Sendinblue.
 - A exportação para o Sendinblue é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode levar até 90 minutos. 
-- O número de perfis que você pode exportar para a Sendinblue é dependente e limitado pelo seu contrato com a Sendinblue.
+- Exportar segmentos com um total de 1 milhão de perfis de clientes pode levar até 90 minutos. 
+- O número de perfis de clientes que você pode exportar para o Sendinblue depende e está limitado ao seu contrato com o Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Configurar conexão com a Sendinblue
 
@@ -64,7 +64,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Digite seu **ID de lista da Sendinblue** 
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente. 
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. 
 
 1. Como outra opção, você pode exportar o **Nome**, **Sobrenome** e **Telefone** para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
 

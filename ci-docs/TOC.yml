@@ -2,9 +2,15 @@
   href: index.yml
 - name: Visão geral do produto
   href: overview.md
-- name: Criar uma avaliação
-  href: audience-insights/get-started-trial.md
-- name: Acessar seu ambiente
+- name: Avaliação gratuita
+  items:
+    - name: Inscrever-se em uma avaliação gratuita
+      href: trial-signup.md
+    - name: Perguntas Frequentes da Avaliação
+      href: trial-FAQ.md
+- name: Comece com uma licença paga
+  href: paid-license.md
+- name: Acessar o ambiente
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Insights do público-alvo
   items:
@@ -19,9 +25,11 @@
         - name: Guia de início rápido
           href: audience-insights/get-started.md
         - name: Criar um novo ambiente
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Explorar insights de público-alvo
           href: audience-insights/home.md
+    - name: Trabalhe com contas corporativas
+      href: audience-insights/work-with-business-accounts.md
     - name: Módulos de aprendizagem
       items:
         - name: Ingerir dados
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Listar atividades do cliente
           href: audience-insights/activities.md
+        - name: Defina mapeamentos semânticos
+          href: audience-insights/semantic-mappings.md
     - name: Enriquecimento de dados
       items:
         - name: Enriquecer perfis de cliente
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Prever a rotatividade de assinaturas
               href: audience-insights/predict-subscription-churn.md
-            - name: Previsão de rotatividade transacional
+            - name: Faça previsão de rotatividade de transações
               href: audience-insights/predict-transactional-churn.md
             - name: Usar modelos personalizados do Azure Machine Learning
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Guia de amostra para previsão de rotatividade de assinaturas
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Guia de amostra para previsão de rotatividade transacional
+            - name: Guia de amostra para previsão de rotatividade de transações
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Guia de amostra para previsão de recomendação do produto
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Gerenciar vários ambientes
           href: audience-insights/manage-environments.md
-        - name: Conecte-se a uma conta de armazenamento ADLS usando a entidade de serviço
-          href: audience-insights/connect-service-principal.md
         - name: Idiomas com suporte
           href: audience-insights/supported-languages.md
+        - name: Segurança
+          items:
+            - name: Traga seu próprio cofre de chaves
+              href: audience-insights/use-azure-key-vault.md
+            - name: Conecte-se a uma conta de armazenamento ADLS usando a entidade de serviço
+              href: audience-insights/connect-service-principal.md
     - name: Extensibilidade
       items:
         - name: Integre dados da Web a partir de insights de participação
@@ -248,6 +262,8 @@
       items:
         - name: Guia de início rápido
           href: engagement-insights/get-started.md
+        - name: Crie um ambiente
+          href: engagement-insights/create-new-environment.md
         - name: Criar um espaço de trabalho
           href: engagement-insights/create-workspace.md
         - name: Eventos de captura de sites e aplicativos móveis

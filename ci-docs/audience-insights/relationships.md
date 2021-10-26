@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557338"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622864"
 ---
 # <a name="relationships-between-entities"></a>Relacionamentos entre entidades
 
@@ -68,6 +68,20 @@ O relacionamento consiste em uma *entidade de origem* contendo a chave estrangei
 
 4. Selecione **Salvar** para criar o relacionamento personalizado.
 
+## <a name="set-up-account-hierarchies"></a>Configure as hierarquias da conta
+
+Os ambientes que são configurados para usar contas comerciais como público-alvo primário podem configurar hierarquias de contas para contas comerciais relacionadas. Por exemplo, uma empresa que possui unidades de negócio separadas. 
+
+As organizações criam hierarquias de contas para gerenciar melhor as contas e seus relacionamentos entre si. O recurso de insights de público-alvo oferece suporte a hierarquias de contas pai-filho que já existem nos dados do cliente ingeridos. Por exemplo, contas do Dynamics 365 Sales. Essas hierarquias podem ser configuradas na página **Relacionamentos** em insights do público-alvo, na guia de hierarquia da conta.
+
+1. Vá para **Dados** > **Relacionamentos**.
+1. Selecione a guia **Hierarquia da conta**.
+1. Selecione **Nova hierarquia da conta**. 
+1. No painel **Hierarquia da conta**, forneça um nome para a hierarquia. O sistema cria um nome para a entidade de saída. Você pode alterar o nome da entidade de saída.
+1. Selecione a entidade que contém a hierarquia de sua conta. Geralmente está na mesma entidade que contém as contas.
+1. Selecione o **ID da conta** e o **ID da conta pai** da entidade selecionada 
+1. Selecione **Salvar** para aplicar as configurações e finalizar a hierarquia da conta.
+
 ## <a name="view-relationships"></a>Exibir relacionamentos
 
 A página Relacionamentos lista todos os relacionamentos que foram criados. Cada linha representa um relacionamento, que também inclui detalhes sobre a entidade de origem, a entidade de destino e a cardinalidade. 
@@ -105,7 +119,7 @@ Por exemplo, a entidade *eCommerce_eCommercePurchases* tem os seguintes relacion
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
 
-Um caminho de relacionamento determina quais entidades você pode usar ao criar regras para medidas ou segmentos. A escolha da opção com o caminho de relacionamento mais longo provavelmente produzirá menos resultados porque os registros correspondentes precisam fazer parte de todas as entidades. Neste exemplo, um cliente deve ter comprado mercadorias por meio de comércio eletrônico (eCommerce_eCommercePurchases), em um ponto de venda (POS_posPurchases) e participa de nosso programa de fidelidade (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, você provavelmente obterá mais resultados porque os clientes só precisam existir em uma entidade adicional.
+Um caminho de relacionamento determina quais entidades você pode usar ao criar regras para medidas ou segmentos. A escolha da opção com o caminho de relacionamento mais longo provavelmente produzirá menos resultados porque os registros correspondentes precisam fazer parte de todas as entidades. Neste exemplo, um cliente tem que ter adquirido mercadorias através de comércio eletrônico (eCommerce_eCommercePurchases) em um ponto de venda (POS_posPurchases) e participar de nosso programa de fidelidade (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, você provavelmente obterá mais resultados porque os clientes só precisam existir em uma entidade adicional.
 
 ### <a name="direct-relationship"></a>Relacionamento direto
 

@@ -1,7 +1,7 @@
 ---
 title: Suplemento do Cartão do Cliente para aplicativos Dynamics 365
 description: Mostre dados de insights do público-alvo em aplicativos Dynamics 365 com este suplemento.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,39 +9,40 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032974"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643347"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Com o Suplemento do Cartão do Cliente instalado em um aplicativo Dynamics 365 compatível, você pode escolher exibir dados demográficos, insights e cronogramas de atividades. O suplemento recuperará dados do Customer Insights sem afetar os dados no aplicativo conectado Dynamics 365. 
+Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Com o suplemento do Cartão do Cliente instalado em um aplicativo Dynamics 365 suportado, você pode optar por exibir os campos de perfil do cliente, insights e cronograma de atividades. O suplemento recuperará dados do Customer Insights sem afetar os dados no aplicativo conectado Dynamics 365.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O suplemento só funciona com aplicativos baseados em modelo do Dynamics 365, como Vendas ou Customer Service, versão 9.0 e superior.
-- Para que seus dados do Dynamics 365 sejam mapeados para os perfis de clientes de insights do público-alvo, eles precisam ser [ingeridos do aplicativo Dynamics 365 usando o conector do Microsoft Dataverse ](connect-power-query.md).
+- Para que seus dados Dynamics 365 possam mapear para os perfis dos clientes de insights do público-alvo, eles precisam ser [ingeridos a partir do aplicativo Dynamics 365 utilizando o conector do Microsoft Dataverse](connect-power-query.md).
 - Todos os usuários do Dynamics 365 do Suplemento de Cartão do Cliente devem ser [adicionados como usuários](permissions.md) nos insights do público-alvo para ver os dados.
 - [É preciso que haja recursos de filtro e pesquisa configurados](search-filter-index.md) em insights de público-alvo para que a pesquisa de dados funcione.
-- Cada controle de suplemento depende de dados específicos nos insights do público-alvo:
-  - Controle de medida: requer [medidas configuradas](measures.md).
-  - Controle de inteligência: requer dados gerados usando [previsões](predictions.md) ou [modelos personalizados](custom-models.md).
-  - Controle demográfico: campos demográficos (como idade ou sexo) estão disponíveis no perfil de cliente unificado.
-  - Controle de enriquecimento: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
-  - Controle de linha do tempo: requer [atividades configuradas](activities.md).
+- Cada controle de suplemento depende de dados específicos nos insights do público-alvo. Alguns dados e controles estão disponíveis apenas em ambientes de tipos específicos. A configuração do suplemento irá informá-lo se um controle não estiver disponível devido ao tipo de ambiente selecionado. Saiba mais sobre [casos de uso de ambiente](work-with-business-accounts.md).
+  - **Controle de medida**: Requer [ medidas configuradas](measures.md) do tipo de atributos do cliente.
+  - **Controle de inteligência**: Requer dados gerados usando [previsões](predictions.md) ou [modelos personalizados](custom-models.md).
+  - **Controle de detalhes do cliente**: Todos os campos do perfil estão disponíveis no perfil de cliente unificado.
+  - **Controle de enriquecimento**: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
+  - **Controle de contatos**: Requer definição de entidade semântica de tipo de contato.
+  - **Controle de linha do tempo**: Requer [atividades configuradas](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalar o Complemento do Cartão do Cliente
 
 O Suplemento do Cartão do Cliente é uma solução para aplicativos customer engagement no Dynamics 365. Para instalar a solução, vá para AppSource e procure **Cartão do Cliente do Dynamics**. Selecione o [Suplemento do Cartão do Cliente no AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) e selecione **Obter Agora**.
 
-Pode ser necessário entrar com suas credenciais de administrador no aplicativo Dynamics 365 para instalar a solução.
-
-Pode levar algum tempo para a solução ser instalada no seu ambiente.
+Pode ser necessário entrar com suas credenciais de administrador no aplicativo Dynamics 365 para instalar a solução. Pode levar algum tempo para a solução ser instalada no seu ambiente.
 
 ## <a name="configure-the-customer-card-add-in"></a>Configurar o Suplemento do Cartão do Cliente
 
@@ -50,7 +51,7 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 1. Selecione o link **Nome para Exibição** da solução **Suplemento do Cartão do Cliente do Dynamics 365 Customer Insights (versão prévia)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selecione o nome de exibição.](media/select-display-name.png "Selecione nome para exibição")
+   > ![Selecione o nome de exibição.](media/select-display-name.png "Selecione o nome para exibição.")
 
 1. Selecione **Entrar** e insira as credenciais da conta de administrador que você usa para configurar o Customer Insights.
 
@@ -64,7 +65,7 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
    - Para mapear com uma conta, selecione o campo na entidade Cliente que corresponde à ID da entidade de sua conta.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo ID do Contato.](media/contact-id-field.png "Campo ID de Contato")
+   > ![Campo ID do Contato.](media/contact-id-field.png "Campo ID de Contato.")
 
 1. Selecione **Salvar configuração** para salvar as configurações.
 
@@ -73,7 +74,9 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 1. Atribua a função **Personalizador de Cartão do Customer Insights** a usuários que personalizarão o conteúdo mostrado no cartão para toda a organização.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Adicionar controles de cartão de cliente a formulários
-  
+
+Dependendo do seu cenário, você pode optar por adicionar controles a qualquer formulário de **Contato** ou de **Conta**. Se o seu ambiente de insights de público-alvo for para contas corporativas, recomendamos adicionar os controles ao formulário de Conta. Nesse caso, substitua "contato" nas etapas abaixo por "conta".
+
 1. Para adicionar os controles do Cartão do Cliente ao seu formulário de contato, vá para **Configurações** > **Personalizações** no Dynamics 365.
 
 1. Selecione **Personalizar o sistema**.
@@ -83,7 +86,7 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 1. Selecione o formulário de contato ao qual você deseja adicionar os controles do Cartão do Cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Selecione o formulário de Contato.](media/contact-active-forms.png "Selecione o formulário de Contato")
+    > ![Selecione o formulário de Contato.](media/contact-active-forms.png "Selecione o formulário de Contato.")
 
 1. Para adicionar um controle, no editor de formulários, arraste qualquer campo do **Gerenciador de Campos** para o local em que deseja que o controle apareça.
 
@@ -102,7 +105,8 @@ Pode levar algum tempo para a solução ser instalada no seu ambiente.
 1. Para personalizar o que você deseja mostrar no controle personalizado, selecione o botão de edição no canto superior direito.
 
 ## <a name="upgrade-customer-card-add-in"></a>Atualizar Suplemento do Cartão do Cliente
-O Suplemento do Cartão do Cliente não é atualizado automaticamente. Para atualizar para a versão mais recente, siga este procedimento no aplicativo Dynamics 365 que tem o suplemento instalado.
+
+O Suplemento do Cartão do Cliente não é atualizado automaticamente. Para atualizar para a versão mais recente, siga estas etapas no aplicativo Dynamics 365 que possui o suplemento instalado.
 
 1. No aplicativo Dynamics 365, acesse **Configurações** > **Personalização** e selecione **Soluções**.
 

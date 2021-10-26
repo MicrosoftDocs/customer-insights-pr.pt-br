@@ -1,32 +1,32 @@
 ---
 title: Enriquecimento de perfis de empresa com a Leadspace de enriquecimento de terceiros
 description: Informações gerais sobre o enriquecimento de terceiros da Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031689"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617337"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecimento de perfis de empresa com a Leadspace (versão preliminar)
 
-Leadspace é uma empresa de ciência de dados que fornece uma Plataforma de Dados de Clientes B2B. Ela permite que os clientes com perfis de cliente unificados para as empresas possam enriquecer seus dados. Os enriquecimentos incluem mais atributos, como tamanho da empresa, local, setor e muito mais.
+A Leadspace é uma empresa de ciência de dados que fornece uma Plataforma de Dados de Clientes B2B. Ela habilita ambientes com perfis de clientes unificados com base em contas para enriquecer seus dados. Enriqueça *Perfis de clientes* com atributos como tamanho da empresa, localização ou setor. Enriqueça *Perfis de contato* com atributos como cargo, personalidade ou verificação de email.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para configurar a Leadspace, os seguintes pré-requisitos devem ser atendidos:
 
 - Você ter uma licença da Leadspace ativa.
-- Você ter [perfis unificados de clientes](customer-profiles.md) para empresas.
-- Uma conexão da Leadspace já ter sido configurada por um administrador ou você ter permissões de [administrador](permissions.md#administrator) e a "chave perpétua" (chamada de **token da Leadspace**). Contate a [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) diretamente para obter detalhes sobre seu produto.
+- Você tem [perfis de clientes unificados](customer-profiles.md) com base em contas.
+- Uma conexão da Leadspace já ter sido configurada por um administrador ou você ter permissões de [administrador](permissions.md#administrator) e a "chave perpétua" (chamada de **token da Leadspace**). Contate a [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) diretamente para obter detalhes sobre seu produto.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
@@ -46,10 +46,14 @@ Para configurar a Leadspace, os seguintes pré-requisitos devem ser atendidos:
 
 1. Selecione **Avançar** e defina quais tipos de campos de seus perfis unificados serão usados para procurar dados de empresas correspondentes da Leadspace. O campo **Nome da empresa** é obrigatório. Para uma maior precisão de correspondência, podem ser adicionados até dois outros campos, **Site da empresa** e **Local da empresa**.
 
-   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Painel de mapeamento de campo da Leadspace.":::
+   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Painel de mapeamento de campo Leadspace.":::
 
 1. Selecione **Avançar** para concluir o mapeamento de campos.
 
+1. Marque a caixa de seleção se tiver *Perfis de contato* que você gostaria de enriquecer. Os insights do público-alvo mapearão automaticamente os campos obrigatórios.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Enriquecimento de registros de contato Leadspace.":::
+ 
 1. Forneça um nome para o enriquecimento e selecione **Salvar enriquecimento** depois de revisar suas escolhas.
 
 
@@ -81,7 +85,8 @@ Para obter mais informações, consulte [APIs da Leadspace](https://support.lead
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md) e [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

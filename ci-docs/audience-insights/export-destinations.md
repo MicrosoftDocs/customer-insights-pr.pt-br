@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights
 description: Gerencie exportações para compartilhar dados.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034668"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623087"
 ---
 # <a name="exports-preview-overview"></a>Visão geral de exportações (versão preliminar)
 
-A página **Exportações** mostra todas as exportações configuradas. As exportações compartilham dados específicos com vários aplicativos. Elas podem incluir perfis ou entidades de clientes, esquemas e detalhes de mapeamento. Cada exportação requer uma [conexão, configurada por um administrador, para gerenciar a autenticação e o acesso](connections.md).
+A página **Exportações** mostra todas as exportações configuradas. As exportações compartilham dados específicos com vários aplicativos. Estes podem incluir perfis de clientes, entidades, esquemas e detalhes de mapeamento. Cada exportação requer uma [conexão, configurada por um administrador, para gerenciar a autenticação e o acesso](connections.md).
 
 Vamos para **Dados** > **Exportações** para exibir a página de exportações. Todas as funções podem visualizar exportações configuradas. Use o campo de busca na barra de comandos para encontrar as exportações por nome, nome da conexão ou tipo da conexão.
 
-## <a name="set-up-a-new-export"></a>Configurar uma nova exportação
+## <a name="export-types"></a>Tipos de exportação
 
+Há dois tipos principais de exportações:  
+
+- **Exportações de saída de dados** permitem exportar qualquer tipo de entidade disponível nos insights do público-alvo. As entidades selecionadas para exportação são exportadas com todos os campos de dados, metadados, esquemas e detalhes de mapeamento. 
+- **Exportações de segmento** permitem exportar entidades de segmento de insights do público-alvo. Os segmentos representam uma lista de perfis de clientes. Ao configurar a exportação, você seleciona os campos de dados incluídos, dependendo do sistema de destino para o qual você está exportando os dados. 
+
+### <a name="export-segments"></a>Exportar segmentos
+
+**Exportar segmentos em ambientes para contas comerciais (B2B) ou clientes individuais (B2C)**  
+A maioria das opções de exportação oferece suporte a ambos os tipos de ambientes. Exportar segmentos para vários sistemas de destino possui requisitos específicos. De modo geral, um membro do segmento, o perfil do cliente, contém informações de contato. Embora este seja geralmente o caso de segmentos construídos sobre clientes individuais (B2C), não é necessariamente o caso de segmentos baseados em contas comerciais (B2B). 
+
+**Ambientes de exportação de segmento para contas comerciais (B2B)**  
+- Os segmentos no contexto de ambientes para contas comerciais são construídos na entidade *conta*. Para exportar segmentos de conta como estão, o sistema de destino precisa oferecer suporte a segmentos de conta puros. Este é o caso do [LinkedIn](export-linkedin-ads.md) quando você escolhe a opção **empresa** ao definir a exportação.
+- Todos os outros sistemas de destino exigem campos da entidade de contato. Para garantir que os segmentos de conta possam recuperar dados de contatos relacionados, sua definição de segmento precisa projetar atributos da entidade de contato. Saiba mais sobre como [configurar segmentos e atributos do projeto](segment-builder.md).
+
+**Exportações de segmento em ambientes para clientes pessoa física (B2C)**  
+- Os segmentos no contexto de ambientes para contas individuais são construídos na entidade *conta de cliente unificada*. Cada segmento que atende às exigências dos sistemas-alvo (por exemplo, um endereço de email) pode ser exportado.
+
+**Limites nas exportações de segmento**  
+- Os sistemas de destino de terceiros podem limitar o número de perfis de clientes que você pode exportar. 
+- Para clientes individuais, você verá o número real de membros do segmento ao selecionar um segmento para exportação. Você receberá um aviso se um segmento for muito grande. 
+- Para contas comerciais, você verá o número de contas em um segmento; no entanto, o número de contatos que podem ser projetados não aparece. Em alguns casos, isso pode fazer com que o segmento exportado contenha, na verdade, mais perfis de clientes do que o sistema de destino aceita. Exceder os limites dos resultados dos sistemas de destino irá ignorar a exportação. 
+
+## <a name="set-up-a-new-export"></a>Configurar uma nova exportação  
 Para configurar ou editar uma exportação, você precisa ter conexões disponíveis. As conexões dependem da sua [função de usuário](permissions.md):
-- Os administradores têm acesso a todas as conexões. Eles também podem criar novas conexões ao configurar uma exportação.
-- Os colaboradores podem ter acesso a conexões específicas. Eles dependem de administradores para configurar e compartilhar conexões. A lista de exportações mostra aos colaboradores se eles podem editar ou somente visualizar uma exportação na coluna **Suas permissões**. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Os visualizadores podem apenas exibir exportações existentes, mas não podem criá-las.
+- **Administradores** têm acesso a todas as conexões. Eles também podem criar novas conexões ao configurar uma exportação.
+- **Colaboradores** podem ter acesso a conexões específicas. Eles dependem de administradores para configurar e compartilhar conexões. A lista de exportações mostra aos colaboradores se eles podem editar ou somente visualizar uma exportação na coluna **Suas permissões**. Para obter mais informações, vá para [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Visualizadores** só podem ver as exportações existentes - não criá-las.
 
 ### <a name="define-a-new-export"></a>Definir uma nova exportação
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033204"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605935"
 ---
 # <a name="connections-preview-overview"></a>Visão geral de conexões (versão preliminar)
 
@@ -47,6 +47,7 @@ Para adicionar conexões, você deve ter [permissões de administrador](permissi
 1. No painel **Configurar conexão**, forneça os detalhes necessários. 
    1. O **Nome de exibição** e o tipo de conexão descrevem uma conexão. Recomendamos escolher um nome que explique a finalidade e o objetivo dessa conexão.
    1. Os campos exatos dependem do serviço ao qual você está se conectando. Você pode saber mais sobre os detalhes de um tipo de conexão específico no artigo sobre o serviço de destino.
+   1. Se você [usar seu próprio Key Vault](use-azure-key-vault.md) para armazenar segredos, ative **Usar Key Vault** e escolha o segredo da lista.
 
 1. Para criar a conexão, selecione **Salvar**.
 
@@ -93,3 +94,6 @@ Os enriquecimentos e as exportações separados tornam-se inativos. Você os rea
 
 1. Para confirmar a exclusão, selecione **Remover**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar conexões com segredos gerenciados por seu próprio Key Vault
+
+Algumas conexões precisam de segredos como chaves de API ou senhas. Algumas conexões oferecem suporte a segredos armazenados em seu Key Vault. Saiba mais sobre as conexões compatíveis e como configurá-las em [seu próprio Key Vault para insights do público-alvo](use-azure-key-vault.md).

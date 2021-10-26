@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558941"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617904"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos para o Google Ads (versão preliminar)
 
@@ -35,9 +35,9 @@ Exporte segmentos de perfis de cliente unificados para uma lista de público-alv
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis por exportação para o Google Ads.
+- Até 1 milhão de perfis de clientes por exportação para Google Ads.
 - A exportação para o Google Ads é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode levar até 5 minutos devido a limitações do provedor. 
+- Exportar segmentos com um total de 1 milhão de perfis de clientes pode levar até 5 minutos devido às limitações do fornecedor. 
 - A correspondência no Google Ads pode levar até 48 horas.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurar conexão com o Google Ads
@@ -74,7 +74,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Insira sua **[ID de público-alvo do Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e selecione **Conectar** para inicializar a conexão com o Google Ads.
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente.
 
 1. Selecione os segmentos que você deseja exportar. Você pode exportar até 1 milhão de perfis de clientes no total para o Google Ads.
 

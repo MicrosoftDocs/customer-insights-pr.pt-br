@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o Snapchat
 description: Saiba como configurar a conexão e exportar para o Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033387"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618646"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportar segmentos para o Snapchat (versão preliminar)
 
@@ -29,7 +29,7 @@ Exporte segmentos de perfis de clientes unificados para o Snapchat e use-os para
 ## <a name="known-limitations"></a>Limitações conhecidas
 
 - A exportação para o Snapchat é limitada a segmentos.
-- Exportar até 1 milhão de perfis para o Snapchat pode levar até 15 minutos para a conclusão. 
+- Exportar até 1 milhão de perfis de clientes para o Snapchat pode levar até 15 minutos para ser concluído. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configurar conexão com o Snapchat
 
@@ -63,7 +63,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Insira a [**ID do Público-Alvo do Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente. A exportação de segmentos para o Snapchat é necessária.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. A exportação de segmentos para o Snapchat é necessária.
 
 1. Selecione os segmentos que você deseja exportar. 
 

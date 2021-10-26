@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483511"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645158"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conecte-se a uma conta do Azure Data Lake Storage usando uma entidade de serviço do Azure
 
 As ferramentas automatizadas que usam os serviços do Azure devem sempre ter permissões restritas. Em vez de fazer com que os aplicativos entrem como um usuário totalmente privilegiado, o Azure oferece entidades de serviço. Continue lendo para saber como se conectar ao Dynamics 365 Customer Insights com uma conta do Azure Data Lake Storage usando uma entidade de serviço do Azure em vez das chaves de conta de armazenamento. 
 
-Você pode usar a entidade de serviço para [adicionar ou editar uma pasta de Common Data Model como uma fonte de dados](connect-common-data-model.md) ou [criar ou atualizar um ambiente](get-started-paid.md).
+Você pode usar a entidade de serviço para [adicionar ou editar uma pasta de Common Data Model como uma fonte de dados](connect-common-data-model.md) ou [criar ou atualizar um ambiente](create-environment.md).
 
 > [!IMPORTANT]
 > - A conta do Data Lake Storage que usará a entidade de segurança do serviço deve ter [namespace hierárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace).

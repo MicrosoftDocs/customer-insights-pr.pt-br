@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465191"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606032"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Atualizações de setembro de 2021
+
+As atualizações em setembro de 2021 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="activities"></a>Atividades
+
+- **Melhorias no cronograma de atividades** Ampliamos os filtros para a linha do tempo de atividades nos perfis dos clientes. Além disso, você pode usar a nova bandeja de filtro para filtrar por tipo de atividade e por data. As datas podem ser filtradas em diferentes condições. Para mais informações, consulte [Visualoizar cronogramas de atividades em perfis de clientes](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relações
+
+- **Suporte de relacionamento multi-hop** Use relacionamentos multi-hop ao configurar atividades e definir relacionamentos entre entidades. Os relacionamentos multi-hop usam uma entidade intermediária para conectar duas entidades. Ao configurar uma atividade, você pode usar uma relação multi-hop para conectar sua entidade de atividade a uma entidade intermediária e depois a uma entidade de cliente. Você pode combinar relacionamentos multi-hop com relacionamentos multi-path. Para obter mais informações, consulte [Relacionamento multi-hop](relationships.md#multi-hop-relationship).
+
+- **Suporte de relacionamento multi-path** Use relacionamentos multi-path ao configurar atividades e definir relacionamentos entre entidades. Relacionamentos multi-path relacionam uma entidade de origem a mais de uma entidade. Ao configurar uma atividade, você pode usar uma relação multi-path para conectar sua entidade de atividade com mais de uma entidade de cliente. Você pode combinar relacionamentos multi-path com relacionamentos multi-hop. Para obter mais informações, consulte [Relacionamento multi-path](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Atualizações de agosto de 2021
 

@@ -4,18 +4,18 @@ description: Uma visão geral dos recursos de ajuda para começar rapidamente.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494580"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623663"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Introdução ao recurso de insights de interação do Dynamics 365 Customer Insights (versão preliminar pública)
 
@@ -39,33 +39,47 @@ A primeira vez que você acessa insights de participação, pode definir as conf
 
 1. Selecione sua região e marque a caixa se quiser optar por receber atualizações e ofertas por email.
 
-1. Reveja os **Termos de uso de insights de participação (versão preliminar)** e **Declaração de privacidade** e, depois, selecione **Explorar a demonstração** para aceitar essas configurações.
+1. Reveja os **Termos de uso de insights de engajamento (versão preliminar)** e **Declaração de privacidade** e, depois, selecione **Explorar a demonstração** para aceitar essas configurações.
 
 1. Explore o produto usando um conjunto de dados de exemplo.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Etapa 3: Configurar um espaço de trabalho e adicionar o código ao seu site da Web
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Etapa 3: Configure um espaço de trabalho e crie relatórios
 
 Um espaço de trabalho é onde você pode exibir a atividade do usuário em tempo real e armazenar e gerenciar relatórios. Adicione o código ao seu site da Web para começar a coletar *eventos*, os dados de atividade que vêm dos usuários.
 
 1. [Crie um espaço de trabalho](create-workspace.md) e adicione membros.
 
-1. [Adicione código ao seu site](instrument-website.md) ou [aplicativo móvel](developer-resources.md#capture-events-from-mobile-apps) para ver a atividade de usuário que chega ao seu espaço de trabalho.
+1. Adicione o código ao seu [site](instrument-website.md) ou [aplicativo móvel](developer-resources.md#capture-events-from-mobile-apps) para ver a atividade do usuário chegando ao seu espaço de trabalho.
 
 1. Veja um [relatório em tempo real](view-reports.md) que mostra usuários ativos por navegador, dispositivo, sistema operacional, local e idioma. Você também pode criar [relatórios personalizados](custom-reports.md) para criar suas próprias visualizações.
+
+1. Crie [ dimensões](dimensions.md) para classificar os visitantes por usuários novos e recorrentes, [métricas](metrics.md) para ajudar a entender melhor o comportamento do usuário e [segmentos](segments.md) para identificar subconjuntos de visitantes com base nas características ou interações do site.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Etapa 4: Exportar dados para outros canais
 
-Você pode criar *eventos refinados* (uma visão virtual) de seus dados de análise da Web. Em seguida, filtre e exporte os dados para o Azure Data Lake Storage. Você pode ingerir os dados exportados como um fonte de dados. Para obter mais informações, consulte [Criar um link entre insights do público-alvo e insights de participação](integrate-audience-insights-engagement-insights.md).
+Você pode criar *eventos refinados* (uma visão virtual) de seus dados de análise da Web. Em seguida, filtre e exporte os dados para o Azure Data Lake Storage. Você pode ingerir os dados exportados como um fonte de dados.
 
 1. [Crie eventos refinados](refined-events.md) para exportação.
 
-1. [Exporte os dados](export-events.md) para o Data Lake Storage.
+1. [Exporte os dados](export-events.md) para o Azure Data Lake Storage.
 
 1. [Crie um link entre insights do público-alvo e insights de participação](integrate-audience-insights-engagement-insights.md) para compartilhar dados entre os dois recursos.
 
+1. [Reconhecer eventos da Web de usuários autenticados anteriormente](unknown-to-known.md) com o recurso **desconhecido para conhecido**.
+
 1. Aprenda como [excluir e exportar dados de eventos contendo informações pessoais](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Etapa 5: Crie e gerencie relatórios de funil
+
+Um relatório em forma de funil coleta informações sobre as etapas que ocorrem durante uma jornada do cliente por meio de seu site ou aplicativo móvel. Além de criar relatórios de perfil prontos para uso e relatórios personalizados, você pode criar um relatório de funil para identificar a jornada dos seus clientes antes de fazerem uma compra. 
+
+1. [Crie um relatório de funil](funnel-reports.md) para decisões fundamentadas e identificar áreas de otimização e melhorias de processos.
+
+1. Crie relatórios de funil em vários canais, depois de instrumentar seu aplicativo móvel com os insights de engajamento[Android SDK](get-started-android.md) ou [iOS SDK](get-started-ios.md).
+
+1. Use [insights de funil](funnel-reports.md#funnel-insights) para ter insights mais profundos sobre o comportamento do cliente sobre as etapas no relatório de funil.
  
-## <a name="step-5-stay-connected"></a>Etapa 5: Permanecer conectado
+## <a name="step-6-stay-connected"></a>Etapa 6: Permanecer conectado
 
 Agradecemos sua participação ativa e consideramos todos os comentários relevantes no desenvolvimento de versões futuras. Compartilhe seus comentários e relate problemas por um destes canais:
 - [Comunidade](https://go.microsoft.com/fwlink/?linkid=2141648)

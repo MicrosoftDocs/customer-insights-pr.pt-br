@@ -1,7 +1,7 @@
 ---
 title: Conector do Power Apps
 description: Conecte-se com o Power Apps e o Power Automate.
-ms.date: 01/19/2021
+ms.date: 10/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: fc0af656cd5b436d9efd65b2a2c75dde9c9deb9dbcdd56ffc6a960f5878a631f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 985e6c85795fba8ca3063cdffc7f9012e798856a
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031735"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623209"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector do Microsoft Power Apps (versão prévia)
 
@@ -30,48 +30,47 @@ Consulte a documentação do Power Apps para saber como [adicionar uma conexão 
 
 Depois de adicionar o Customer Insights como uma conexão de dados, você pode escolher as seguintes entidades no Power Apps:
 
-- Cliente: para usar dados do [perfil de cliente unificado](customer-profiles.md).
-- UnifiedActivity: para exibir a [linha do tempo de atividade](activities.md) no aplicativo.
+- **Customer**: para usar dados do [perfil de cliente unificado](customer-profiles.md).
+- **UnifiedActivity**: para exibir a [linha do tempo de atividades](activities.md) no aplicativo.
+- **ContactProfile**: para exibir os contatos de um cliente. Esta entidade só está disponível em ambientes de insights de público-alvo para contas comerciais.
 
 ## <a name="limitations"></a>Limitações
 
 ### <a name="retrievable-entities"></a>Entidades recuperáveis
 
-Você só pode recuperar as entidades **Cliente**, **UnifiedActivity** e **Segmentos** por meio do conector Power Apps. Outras entidades são mostradas porque o conector subjacente dá suporte a elas por meio de gatilhos no Power Automate.  
+Você só pode recuperar as entidades **Cliente**, **UnifiedActivity**, **Segmentos** e **ContactProfile** através do conector Power Apps. ContactProfile só está disponível na instância de insights de público-alvo para contas comerciais. Outras entidades são mostradas porque o conector subjacente dá suporte a elas por meio de gatilhos no Power Automate.
 
 ### <a name="delegation"></a>Delegação
 
-A delegação funciona para as entidades Cliente e UnifiedActivity. 
+A delegação funciona para as entidades **Cliente** e **UnifiedActivity**. 
 
 - Delegação para a entidade **Cliente**: para usar a delegação para esta entidade, os campos precisam ser indexados em [Índice de filtro e pesquisa](search-filter-index.md).  
-
 - Delegação para **UnifiedActivity** : a delegação para esta entidade só funciona para os campos **ActivityId** e **CustomerId**.  
+- Delegação para **ContactProfile**: A delegação para esta entidade só funciona para os campos **ContactId** e **CustomerId**. ContactProfile só está disponível em ambientes de insights de público-alvo para contas comerciais.
 
-- Para obter mais informações sobre delegação, consulte [Funções e operações delegáveis do Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Para obter mais informações sobre delegação, vá para [funções e operações delegáveis do Power Apps](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Exemplo de controle da galeria
 
-Por exemplo, você adiciona perfis de clientes a um [controle de galeria](/powerapps/maker/canvas-apps/add-gallery).
+Você pode adicionar perfis de clientes a um [controle de galeria](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Adicione um controle **Galeria** a um aplicativo que você está criando.
-
-> [!div class="mx-imgBorder"]
-> ![Adicione um elemento da galeria.](media/connector-powerapps9.png "Adicione um elemento da galeria")
-
-1. Selecione **Cliente** como a fonte de dados dos itens.
+1. Adicione um controle de **galeria** a um aplicativo que você está criando.
 
     > [!div class="mx-imgBorder"]
-    > ![Selecione uma fonte de dados.](media/choose-datasource-powerapps.png "Selecione uma fonte de dados")
+    > ![Adicione um elemento da galeria.](media/connector-powerapps9.png "Adicione um elemento da galeria.")
 
-1. Você pode alterar o painel de dados à direita para selecionar qual campo a entidade Cliente mostrará na galeria.
+2. Selecione **Cliente** como a fonte de dados dos itens.
 
-1. Se você quiser mostrar qualquer campo do cliente selecionado na galeria, preencha a propriedade Texto de um rótulo: **{Name_of_the_gallery}.Selecionado.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Selecione uma fonte de dados.](media/choose-datasource-powerapps.png "Selecione uma fonte de dados.")
 
-    Exemplo: Gallery1.Selected.address1_city
+3. Você pode alterar o painel de dados à direita para selecionar qual campo a entidade Cliente mostrará na galeria.
 
-1. Para exibir a linha do tempo unificada para um cliente, adicione um elemento Galeria e adicione a propriedade Itens: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Se você quiser mostrar qualquer campo do cliente selecionado na galeria, preencha a propriedade **Texto** de um rótulo usando **{Name_of_the_gallery}.Selected.{property_name}**  
+    - Por exemplo: _Gallery1.Selected.address1_city_
 
-    Exemplo: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Para exibir a linha do tempo unificada para um cliente, adicione um elemento de galeria e acrescente a propriedade **Itens** usando **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Por exemplo: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

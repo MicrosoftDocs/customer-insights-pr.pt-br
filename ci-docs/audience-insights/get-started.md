@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466563"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645250"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Comece com o recurso de insights do público-alvo no Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Insights de público-alvo podem ajudá-lo a ter uma compreensão mais profunda d
 
 ## <a name="step-1-create-an-environment"></a>Etapa 1: Criar um ambiente
 
-Para começar, primeiro você precisa criar um ambiente para trabalhar. Se sua organização já adquiriu uma licença, consulte [Comece com uma assinatura paga](get-started-paid.md). Para iniciar uma avaliação de insights do público-alvo, consulte [Configure um ambiente de avaliação](get-started-trial.md). 
+Para começar, primeiro você precisa criar um ambiente para trabalhar. Se sua organização já adquiriu uma licença, consulte [Crie um ambiente](create-environment.md). Para iniciar uma avaliação de insights do público-alvo, consulte [Configure um ambiente de avaliação](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Etapa2: Explorar insights de público-alvo
 

@@ -1,7 +1,7 @@
 ---
 title: Mesclar entidades na unificação de dados
 description: Mescle entidades para criar perfis de clientes unificados.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494305"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648240"
 ---
 # <a name="merge-entities"></a>Mesclar entidades
 
@@ -89,7 +91,7 @@ Na página **Meslar**, selecione **Campos excluídos** para ver a lista de todos
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opção de nível de atualização na caixa de diálogo de campos de mesclagem.":::
     - **Menos recente**: identifica o valor vencedor com base no menor nível de atualização. Requer uma data ou um campo numérico para cada entidade participante no escopo dos campos de mesclagem para definir o nível de atualização.
 
-1.  Você pode incluir campos adicionais para participar do processo de mesclagem.
+1.  Você pode adicionar mais campos para participar do processo de mesclagem.
 
 1.  Você pode renomear o campo mesclado.
 
@@ -131,15 +133,15 @@ Algumas entidades contêm mais detalhes que outras. Se uma entidade tiver os dad
 
 Após configurar os campos de mesclagem, você pode definir como gerar valores CustomerId, os identificadores exclusivos de perfil do cliente. A etapa de mesclagem no processo de unificação de dados gera o identificador exclusivo de perfil do cliente. O identificador é o CustomerId na entidade *Cliente* resultante do processo de unificação de dados. 
 
-O CustomerId na entidade Cliente é baseado em um hash do primeiro valor das chaves primárias vencedoras não nulas. Essas chaves são obtidas das entidades usadas na fase de correspondência e mesclagem e são influenciadas pela ordem de correspondência. Portanto, o CustomerID gerado pode mudar quando um valor de chave primária muda na entidade primária da ordem de correspondência. Consequentemente, o valor da chave primária talvez nem sempre represente o mesmo cliente.
+O CustomerId na entidade Cliente é baseado em um hash do primeiro valor das chaves primárias vencedoras não nulas. Essas chaves são obtidas das entidades usadas na fase de correspondência e mesclagem e são influenciadas pela ordem de correspondência. Portanto, o CustomerID gerado pode mudar quando um valor de chave primária muda na entidade primária da ordem de correspondência. Portanto, o valor da chave primária nem sempre representa o mesmo cliente.
 
-Configurar uma ID de cliente estável permite evitar esse comportamento.
+Configurar um ID de cliente estável permite evitar esse comportamento.
 
 **Configurar uma ID do cliente exclusiva**
 
 1. Acesse **Unify** > **Mesclar**.
 
-1. Na página **Mesclar**, selecione a guia **Chaves**. 
+1. Selecione a guia **Chaves**. 
 
 1. Passe o mouse sobre a linha **CustomerId** e selecione a opção **Configurar**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Controle para personalizar a geração de ID.":::
@@ -147,6 +149,30 @@ Configurar uma ID de cliente estável permite evitar esse comportamento.
 1. Selecione até cinco campos que contenham uma ID de cliente exclusiva e sejam mais estáveis. Os registros que não correspondem à sua configuração usam uma ID configurada pelo sistema.  
 
 1. Selecione **Concluído** e execute o processo de mesclagem para aplicar as alterações.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Perfis de grupo em famílias ou clusters
+
+Como parte do processo de configuração de geração de perfil de cliente, você pode definir regras para agrupar perfis relacionados em um cluster. Atualmente, existem dois tipos de clusters disponíveis - clusters domésticos e customizados. O sistema escolhe automaticamente uma família com regras predefinidas se a entidade *Cliente* contiver os campos semânticos *Person.LastName* e *Location.Address*. Você também pode criar um cluster com suas próprias regras e condições, semelhantes a [regras de correspondência](match-entities.md#define-rules-for-match-pairs).
+
+**Defina uma família ou um cluster**
+
+1. Acesse **Unify** > **Mesclar**.
+
+1. Na guia **Mesclar**, selecione **Avançado** > **Criar cluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Controle para criar um novo cluster.":::
+
+1. Escolha entre um cluster **Doméstico** ou **Personalizado**. Se os campos semânticos *Person.LastName* e *Location.Address* existirem na entidade *Cliente*, a família é selecionada automaticamente.
+
+1. Forneça um nome para o cluster e selecione **Finalizar**.
+
+1. Selecione a guia **Clusters** para encontrar o cluster que você criou.
+
+1. Especifique as regras e condições para definir seu cluster.
+
+1. Selecione **Executar** para executar o processo de mesclagem e criar o cluster.
+
+Depois de executar o processo de mesclagem, os identificadores de cluster são adicionados como novos campos na entidade *Cliente*.
 
 ## <a name="run-your-merge"></a>Execute sua mesclagem
 

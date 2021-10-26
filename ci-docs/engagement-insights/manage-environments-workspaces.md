@@ -4,17 +4,17 @@ description: Como criar, renomear e excluir espaços de trabalho e ambientes.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486021"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645432"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gerenciar ambientes e espaços de trabalho
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486021"
 
 ## <a name="overview"></a>Visão Geral
 
-Um espaço de trabalho é um espaço para armazenar e gerenciar eventos e relatórios. É onde você pode ver as atividades do usuário em tempo real. Ao criar um espaço de trabalho, você seleciona o tipo de dados a serem enviados para ele. No momento, há suporte para dados Web e aplicativos móveis.
+Este tópico discute como gerenciar áreas de trabalho e ambientes, uma vez que já tenham sido criados. 
 
-Um ambiente é um espaço onde você gerencia seus espaços de trabalho e conexões. A forma como você usa os ambientes depende da sua organização e do seu caso de uso. Por exemplo, você pode criar:
+- Um *espaço de trabalho* é um espaço para armazenar e gerenciar eventos e relatórios. É onde você pode ver as atividades do usuário em tempo real. Ao criar um espaço de trabalho, você seleciona o tipo de dados a serem enviados para ele. No momento, há suporte para dados Web e aplicativos móveis. Para mais informações, consulte [Criar um espaço de trabalho e adicionar membros](create-workspace.md).
 
--   Um único ambiente.
--   Ambientes separados para teste e produção.
--   Ambientes separados para equipes ou departamentos específicos na sua organização que contenham eventos relevantes para cada público-alvo.
--   Ambientes separados para filiais globais diferentes da empresa.
--   Conexões com o recurso de insights de público-alvo do Customer Insights.
+- Um *ambiente* é um espaço onde você gerencia seus espaços de trabalho e conexões. Para obter mais informações, consulte [Criar um novo ambiente](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Escolher um ambiente e criar um espaço de trabalho 
-
-Todo espaço de trabalho precisa estar em um ambiente. Você pode selecionar um ambiente pré-existente ou criar um novo ao criar um espaço de trabalho. Em seguida, você pode optar por adicionar membros ao espaço de trabalho e começar a coletar dados.
-
-**Para criar seu primeiro espaço de trabalho**
-
-1. Nos insights de interação, selecione **Novo** no alternador de espaço de trabalho. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Seletor de espaços de trabalho na página do Customer Insights.":::
-
-1. Escolha um ambiente na lista ou selecione **Criar novo ambiente**.
-
-1. Insira um nome em **Nome do espaço de trabalho**. 
-
-1. Selecione o tipo de ambiente que deseja criar, dependendo se você quer medir o que acontece em um site ou aplicativo móvel. 
-
-1. Você pode adicionar membros e atribuir seu nível de permissão a partir da lista **Função**. Em seguida, selecione **Concluir** para criar o espaço de trabalho ou **Avançar** para instalar o código. 
-
-1. Instale o snippet de código para começar a receber dados e selecione **Concluído**. 
-
-## <a name="manage-a-workspace"></a>Gerenciar um espaço de trabalho
+## <a name="manage-an-existing-workspace"></a>Gerenciar um espaço de trabalho existente
 
 Você pode manter vários espaços de trabalho simultaneamente em um ambiente. Sua [função](user-roles.md) determina como você pode trabalhar neles. 
 
  - Você precisa ser um administrador de ambiente ou de espaço de trabalho para gerenciar o espaço de trabalho.
  - Como administrador do espaço de trabalho, você pode renomear ou excluir os atuais espaços de trabalho. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Central de administração do espaço de trabalho.":::
 
 ### <a name="edit-a-workspace-name"></a>Editar o nome de um espaço de trabalho
 
@@ -75,7 +53,7 @@ A exclusão de um espaço de trabalho removerá permanentemente todo o seu conte
 
 1. Selecione **Excluir espaço de trabalho**. 
 
-1. Na caixa de diálogo **Excluir espaço de trabalho**, insira **CONFIRMAR EXCLUSÃO**. 
+1. Na caixa de diálogo **Excluir espaço de trabalho**, digite **CONFIRMAR EXCLUIR** em maiúsculas. 
 
 1. Selecione **Excluir** para excluir permanentemente o espaço de trabalho.
 
@@ -87,27 +65,11 @@ A exclusão de um espaço de trabalho removerá permanentemente todo o seu conte
 
 1. Selecione **Adicionar membros** para adicioná-los ao seu espaço de trabalho.
 
-## <a name="manage-an-environment"></a>Gerenciamento de ambiente
+## <a name="manage-an-existing-environment"></a>Gerenciar um ambiente existente
 
-Como Administrador de ambiente, você pode acessar um ambiente no painel de navegação esquerdo. Você pode definir as configurações do ambiente, outros administradores de ambiente e espaços de trabalho. Selecione as guias para mover-se entre as diferentes áreas do centro de administração.
+Como administrador de ambiente, você pode acessar um ambiente no painel de navegação esquerdo. Você pode definir as configurações do ambiente, outros administradores de ambiente e espaços de trabalho. Selecione as guias para mover-se entre as diferentes áreas do centro de administração.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centro de administração de ambientes.":::
-
-### <a name="create-an-environment"></a>Criar um ambiente
-
-1. No seletor de espaços de trabalho, selecione **Criar+**.
-
-1. Na experiência guiada, abra o menu suspenso **Ambiente** e selecione **Criar novo ambiente**. 
-
-1. Forneça um **Nome de ambiente**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Entre na experiência guiada para especificar os detalhes do ambiente.":::
-
-1. Escolha **Região** e selecione **Avançar**. 
-
-1. Forneça um nome de espaço de trabalho e escolha o tipo de espaço de trabalho que deseja criar. 
-
-1.  Ou então, adicione os membros e copie o trecho de código para concluir o processo de criação.
+:::image type="content" source="media/environment-edit.png" alt-text="Centro de administração de ambientes.":::
 
 ### <a name="rename-an-environment"></a>Renomear um ambiente
 
@@ -131,7 +93,7 @@ Os administradores do ambiente podem excluir ambientes. Antes de excluir um ambi
 
 1. Selecione **Excluir ambiente**. 
 
-1. Na caixa de diálogo **Excluir espaço de trabalho**, insira **CONFIRMAR EXCLUSÃO**. 
+1. Na caixa de diálogo **Excluir espaço de trabalho**, digite **CONFIRMAR EXCLUIR** em maiúsculas. 
 
 1. Selecione **Excluir** para excluir o ambiente de forma permanente.
 

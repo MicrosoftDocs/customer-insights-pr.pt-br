@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559004"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645568"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Criar um link entre insights do público-alvo e insights de participação
 
@@ -26,7 +26,7 @@ Use perfis e segmentos unificados de insights do público-alvo para obter mais o
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Os perfis de insights do público-alvo devem ser armazenados em uma conta do Azure Data Lake Storage que você possui, ou em um data lake do [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash; gerenciado. 
-- Seu ambiente de insights do público-alvo deve ter um ambiente do Dataverse associado. Se esse ambiente também estiver usando o Dataverse para armazenamento de dados, certifique-se de verificar a opção **Habilitar compartilhamento de dados** em insights do público-alvo. Para obter mais informações, consulte [Criar e configurar um ambiente pago em insights do público-alvo](../audience-insights/get-started-paid.md).
+- Seu ambiente de insights do público-alvo deve ter um ambiente do Dataverse associado. Se esse ambiente também estiver usando o Dataverse para armazenamento de dados, certifique-se de verificar a opção **Habilitar compartilhamento de dados** em insights do público-alvo. Para mais informações, consulte [Crie e configure um ambiente em insights do público-alvo](../audience-insights/create-environment.md).
 - Você precisa de permissões de administrador para os ambientes de insights de participação e do público-alvo.
 - Os ambientes vinculados devem estar na mesma região geográfica.
 

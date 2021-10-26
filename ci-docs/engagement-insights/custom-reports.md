@@ -4,23 +4,23 @@ description: Saiba como criar relatórios personalizados.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 2540221710786dc1c84b231fbb23b9749b601cc6a2aeb78614e16002302a80a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3fa801bfc8b0aee65c21b90de2423a3d5d5e4e26
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036949"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582861"
 ---
 # <a name="create-and-edit-custom-reports"></a>Criar e editar relatórios personalizados
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Além dos relatórios prontos para uso, você pode criar um relatório personalizado com visualizações de gráficos e tabelas para ajudá-lo a entender o comportamento do usuário. Este artigo explica como criar um relatório com os dados de que você precisa usando visualizações de tabela e gráfico. 
+Além de relatórios prontos para uso (OOB), você pode criar um relatório personalizado com visualizações de gráficos e tabelas para ajudá-lo a entender o comportamento do usuário. Este artigo explica como criar um relatório com os dados de que você precisa usando visualizações de tabela e gráfico. Para obter informações sobre relatórios OOB, consulte [Visualizar relatórios](view-reports.md).
 
 ## <a name="create-a-custom-report"></a>Criar um relatório personalizado
 
@@ -35,11 +35,13 @@ Além dos relatórios prontos para uso, você pode criar um relatório personali
     - Selecione **Adicionar visual** na barra de comandos para criar uma visualização de tabela padrão.
     - Ou selecione uma visualização de coluna, barra, linha, área, pizza, rosca ou de tabela da página **Editor de relatório**.
 
-1. No painel **Dados**, escolha uma das **Métricas** disponíveis (por exemplo, exibições de página) para exibir. Em seguida, adicione **Dimensões** (por exemplo, país) para mostrar na visualização. Para obter mais informações sobre como adicionar outras opções à sua escolha, consulte [Exibir e criar métricas](metrics.md) e [Exibir e criar dimensões](dimensions.md).
+1. Na seção **Dados** do painel **Editor de visualização**, escolha uma das opções disponíveis (por exemplo, visualizações de página) na lista suspensa **Métricas**. Você também pode adicionar **Dimensões** (por exemplo, país) para mostrar na visualização. Para mais informações, consulte [Visualize e crie métricas](metrics.md) e [Visualize e crie dimensões](dimensions.md).
 
-1. Selecione **Design** no painel **Editor de visualização** para adicionar **Texto do título**, e definir **Posição**, **Rótulos de dados** e **eixo**.  Você também pode alterar a visualização selecionando outro tipo de gráfico.
+   :::image type="content" source="media/page-views.png" alt-text="Escolha uma métrica para seu relatório.":::
 
-1. Você pode alterar o tamanho e a posição de uma visualização:
+1. Selecione a seção **Projeto** do painel **Editor de visualização** para adicionar **Texto do título** e alternar o **Título** como ligado e desligado.  Você também pode alterar o tipo de visualização selecionando outro gráfico, como **gráfico de pizza**.
+
+1. Para alterar o tamanho e a posição de uma visualização:
    - Selecione a visualização e arraste um dos cantos ou bordas para ajustar seu tamanho.
    - Selecione a visualização e mova-a para uma nova posição. Você também pode usar as teclas de seta para alterar a posição.
 1. Para adicionar outra visualização, selecione **Adicionar visualização** na barra de comandos.
@@ -47,17 +49,27 @@ Além dos relatórios prontos para uso, você pode criar um relatório personali
 
 1. Forneça um nome para o relatório personalizado e selecione **Salvar** para criá-lo.
  
+## <a name="filter-a-custom-report"></a>Filtrar um relatório personalizado
+
+Você pode selecionar o período de tempo ou intervalo de datas em um relatório personalizado para focar em um valor ou período de tempo.
+
+Para selecionar um período de tempo, no canto superior direito da visualização do relatório, selecione um valor na lista suspensa do relatório. Você também pode escolher um *Período fixo*.
+
+:::image type="content" source="media/filter-time-date-range.png" alt-text="Filtrar por intervalo de data ou hora.":::
+
+Para a maioria dos relatórios, selecione **+ Adicionar condição**, para escolher uma dimensão ou segmento para filtrar o relatório. Para obter mais informações, consulte [Visualizar e criar segmentos](segments.md).
+
 ## <a name="edit-a-custom-report"></a>Editar um relatório personalizado
 
 1. Vá para **Analisar** > **Personalizado** para acessar a lista de relatórios personalizados.
 
 1. Na lista de relatórios personalizados, selecione **Mais [...]** 
 
-1. Escolha **Editar detalhes** para alterar o nome do relatório.
+1. Escolha **Editar nome** para alterar o nome do relatório.
 
-1. Selecione o nome do relatório e use as opções **Adicionar visualização** e **Editar** para adicionar, remover, reposicionar ou redimensionar as visualizações.
+1. Selecione o nome do relatório e use as opções **+ Adicionar visualização** e **Editar** para adicionar, remover, reposicionar ou redimensionar as visualizações.
 
-1. Para alterar as propriedades de uma visualização, selecione **...** e depois **Editar visualização**.
+1. Para alterar as propriedades de uma visualização, selecione o visual, selecione **...** e então **Editar visual**.
 
    :::image type="content" source="media/edit-visual-control.png" alt-text="Editando propriedades de gráfico para relatórios personalizados.":::
 
@@ -72,5 +84,6 @@ Além dos relatórios prontos para uso, você pode criar um relatório personali
 1. Escolha **Excluir** para remover o relatório.
 
 1. Confirme sua exclusão para remover o relatório permanentemente.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

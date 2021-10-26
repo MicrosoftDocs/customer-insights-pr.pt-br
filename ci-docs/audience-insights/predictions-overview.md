@@ -1,7 +1,7 @@
 ---
 title: Visão geral sobre os cenários de predição com suporte
 description: Cenários de previsão e opções cobertos pelo aplicativo Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035995"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618829"
 ---
 # <a name="predictions-overview"></a>Visão geral das previsões
 
@@ -24,10 +24,20 @@ O Dynamics 365 Customer Insights é fornecido com várias opções que aproveita
 ## <a name="out-of-box-models"></a>Modelos prontos para uso
 
 A maneira mais fácil de começar com dados de previsão são os modelos predefinidos, geralmente chamados de modelos prontos para uso. Eles exigem apenas determinados dados e estrutura para gerar insights rapidamente. Atualmente, os seguintes modelos estão disponíveis: 
-- [Valor da permanência do cliente](predict-customer-lifetime-value.md): prevê a receita potencial de um cliente durante toda a interação com uma empresa. 
+
+# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+
+- [Valor da permanência do cliente](predict-customer-lifetime-value.md): prevê a receita potencial de um cliente durante toda a interação com uma empresa.
 - [Recomendação de produto](predict-product-recommendation.md): sugere conjuntos de recomendações de produtos preditivos com base no comportamento de compra e clientes com padrões de compra semelhantes.
 - [Rotatividade da assinatura](predict-subscription-churn.md): prevê se um cliente está em risco por não usar mais os produtos ou serviços de assinatura de sua empresa.
 - [Rotatividade transacional](predict-transactional-churn.md): prevê se um cliente não comprará mais seus produtos ou serviços em determinado período.
+
+# <a name="business-accounts-b2b"></a>[Contas comerciais (B2B)](#tab/b2b)
+
+- [Rotatividade transacional](predict-transactional-churn.md): prevê se um cliente não comprará mais seus produtos ou serviços em determinado período.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integração do Azure Machine Learning
 

@@ -1,7 +1,7 @@
 ---
 title: Dados do Customer Insights no Microsoft Dataverse
 description: Use entidades Customer Insights como tabelas no Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032882"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645204"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
@@ -24,11 +24,7 @@ O Customer Insights oferece a opção de disponibilizar entidades de saída no [
 
 **Organizações com ambientes existentes do Dataverse**
 
-Organizações que já usam o Dataverse podem [usar um dos ambientes existentes do Dataverse](get-started-paid.md) quando um administrador configura insights de público-alvo. Ao fornecer a URL para o ambiente do Dataverse, ele estará vinculado ao seu novo ambiente de insights de público-alvo. Para garantir o melhor desempenho possível, os ambientes do Customer Insights e do Dataverse devem estar hospedados na mesma região.
-
-Para anexar um ambiente do Dataverse, expanda as **Configurações avançadas** ao criar o ambiente de insights de público-alvo. Forneça a **URL do ambiente do Microsoft Dataverse** e marque a caixa de seleção para **Habilitar o compartilhamento de dados**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Organizações que já usam o Dataverse podem [usar um dos ambientes existentes do Dataverse](create-environment.md) quando um administrador configura insights de público-alvo. Ao fornecer a URL para o ambiente do Dataverse, ele estará vinculado ao seu novo ambiente de insights de público-alvo. Para garantir o melhor desempenho possível, os ambientes do Customer Insights e do Dataverse devem estar hospedados na mesma região.
 
 **Nova organização**
 

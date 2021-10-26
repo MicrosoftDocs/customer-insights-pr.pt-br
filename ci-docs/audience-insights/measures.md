@@ -1,7 +1,7 @@
 ---
 title: Criar e gerenciar medidas
 description: Defina medidas para analisar e refletir o desempenho da sua empresa.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036994"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622845"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerenciar medidas
 
@@ -26,24 +26,24 @@ Use o construtor de medidas para extrair insights e planejar atividades comercia
 
 ## <a name="build-your-own-measure-from-scratch"></a>Criar sua própria medida do zero
 
-Esta seção explica como criar uma medida do zero. Você pode criar uma medida com atributos de dados de entidades de dados que têm um relacionamento configurado para se conectar com a entidade Cliente. 
+Esta seção explica como criar uma medida do zero. Você pode construir uma medida com atributos de dados de entidades de dados que tenham um relacionamento estabelecido para se conectar com a entidade unificada de perfil de cliente.
+
+# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 1. Nos insights de público-alvo, vá para **Medidas**.
 
 1. Selecione **Novo** e escolha **Crie sua própria**.
 
 1. Selecione **Editar nome** e forneça um **Nome** para a medida. 
-   > [!NOTE]
-   > Se a sua configuração de medida tiver apenas dois campos, por exemplo, CustomerID e um cálculo, a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E você poderá ver o valor da medida no perfil de cliente unificado. Outras medidas vão gerar suas próprias entidades.
 
 1. Na área de configuração, escolha a função de agregação no menu suspenso **Selecionar função**. As funções de agregação incluem: 
    - **Somar**
    - **Média**
    - **Contagem**
    - **Contagem Exclusiva**
-   - **Máx**
-   - **Min**
-   - **Primeiro**: pega o primeiro valor do registro de dados
+   - **Máximo**
+   - **Mínimo**
+   - **Primeiro**: usa o primeiro valor do registro de dados
    - **Último**: pega o último valor que foi adicionado ao registro de dados
 
    :::image type="content" source="media/measure-operators.png" alt-text="Operadores para cálculos de medidas.":::
@@ -53,7 +53,7 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
    1. Selecione a guia **Atributos**. 
    1. Entidade de dados: escolha a entidade que inclui o atributo que você deseja medir. 
    1. Atributo de dados: escolha o atributo que deseja usar na função de agregação para calcular a medida. Você só pode selecionar um atributo por vez.
-   1. Você também pode selecionar um atributo de dados de uma medida existente selecionando a guia **Medidas**. Ou você pode pesquisar um nome de entidade ou medida. 
+   1. Você também pode selecionar um atributo de dados de uma medida existente selecionando a guia **Medidas** ou você pode pesquisar um nome de entidade ou medida. 
    1. Selecione **Adicionar** para adicionar o atributo selecionado à medida.
 
    :::image type="content" source="media/measure-attribute-selection.png" alt-text="Selecione um atributo para usar nos cálculos.":::
@@ -73,11 +73,11 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
    1. Selecione **Editar dimensões** para adicionar atributos de dados pelos quais você deseja agrupar os valores de medida. Por exemplo, cidade ou sexo. Por padrão, a dimensão *CustomerID* é selecionada para criar *medidas em nível de cliente*. Você pode remover a dimensão padrão se quiser criar *medidas em nível de negócios*.
    1. Selecione **Concluído** para adicionar as dimensões à medida.
 
-1. Caso haja valores nos seus dados que você precise substituir por um inteiro, por exemplo, substituir *nulo* por *0*, selecione **Regras**. Configure a regra e escolha apenas números inteiros como substituições.
+1. Se houver valores em seus dados que você precisa substituir por um número inteiro, selecione **Regras**. Configure a regra e escolha apenas números inteiros como substituições. Por exemplo, substitua *nulo* por *0*.
 
 1. Se houver vários caminhos entre a entidade de dados que você mapeou e a entidade *Cliente*, você deverá escolher um dos [caminhos de relacionamento de entidade](relationships.md) identificados. Os resultados da medição podem variar dependendo do caminho selecionado. 
    
-   1. Selecione **Preferências de dados** e escolha o caminho da entidade que deve ser usado para identificar sua medida. Se houver somente um único caminho para a entidade *Cliente*, este controle não será exibido.
+   1. Selecione **Caminho de relacionamento** e escolha o caminho da entidade que deve ser usado para identificar sua medida. Se houver somente um único caminho para a entidade *Cliente*, este controle não será exibido.
    1. Selecione **Concluído** para aplicar sua seleção. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Selecione o caminho da entidade para a medida.":::
@@ -92,14 +92,86 @@ Esta seção explica como criar uma medida do zero. Você pode criar uma medida 
 
 1. Acesse **Medidas** para ver a medida recém-criada na lista.
 
+# <a name="business-accounts-b2b"></a>[Contas comerciais (B2B)](#tab/b2b)
+
+1. Nos insights de público-alvo, vá para **Medidas**.
+
+1. Selecione **Novo** e escolha **Crie sua própria**.
+
+1. Selecione **Editar nome** e forneça um **Nome** para a medida. 
+
+1. Na área de configuração, escolha a função de agregação no menu suspenso **Selecionar função**. As funções de agregação incluem: 
+   - **Somar**
+   - **Média**
+   - **Contagem**
+   - **Contagem Exclusiva**
+   - **Máximo**
+   - **Mínimo**
+   - **Primeiro**: usa o primeiro valor do registro de dados
+   - **Último**: pega o último valor que foi adicionado ao registro de dados
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Operadores para cálculos de medidas.":::
+
+1. Selecione **Adicionar atributo** para selecionar os dados necessários para criar esta medida.
+   
+   1. Selecione a guia **Atributos**. 
+   1. Entidade de dados: escolha a entidade que inclui o atributo que você deseja medir. 
+   1. Atributo de dados: escolha o atributo que deseja usar na função de agregação para calcular a medida. Você só pode selecionar um atributo por vez.
+   1. Você também pode selecionar um atributo de dados de uma medida existente selecionando a guia **Medidas** ou você pode pesquisar um nome de entidade ou medida. 
+   1. Selecione **Adicionar** para adicionar o atributo selecionado à medida.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Selecione um atributo para usar nos cálculos.":::
+
+1. Para criar medidas mais complexas, você pode adicionar mais atributos ou usar operadores matemáticos em sua função de medida.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Crie uma medida complexa com operadores matemáticos.":::
+
+1. Para adicionar filtros, selecione **Filtro** na área de configuração. 
+  
+   1. Na seção **Adicionar atributo** do painel **Filtros**, selecione o atributo de lote que você deseja usar para criar filtros.
+   1. Configure os operadores de filtro para definir o filtro para cada atributo selecionado.
+   1. Selecione **Aplicar** para adicionar os filtros à medida.
+
+1. Para adicionar dimensões, selecione **Dimensão** na área de configuração. As dimensões serão mostradas como colunas na entidade de saída da medida.
+ 
+   1. Selecione **Editar dimensões** para adicionar atributos de dados pelos quais você deseja agrupar os valores de medida. Por exemplo, cidade ou sexo. Por padrão, a dimensão *CustomerID* é selecionada para criar *medidas em nível de cliente*. Você pode remover a dimensão padrão se quiser criar *medidas em nível de negócios*.
+   1. Selecione **Concluído** para adicionar as dimensões à medida.
+
+1. Se houver valores em seus dados que você precisa substituir por um número inteiro, selecione **Regras**. Configure a regra e escolha apenas números inteiros como substituições. Por exemplo, substitua *nulo* por *0*.
+
+1. Você pode usar o alternador **Agrupar subcontas** se você [usar contas com hierarquias](relationships.md#set-up-account-hierarchies).
+   - Se estiver definido como **Desligado**, a medida é calculada para cada conta. Cada conta obtém seu próprio resultado.
+   - Se estiver definido como **Ligado**, selecione **Editar** para escolher a hierarquia da conta de acordo com as hierarquias ingeridas. A medida produzirá apenas um resultado porque está agregada a subcontas.
+
+1. Se houver vários caminhos entre a entidade de dados que você mapeou e a entidade *Cliente*, você deverá escolher um dos [caminhos de relacionamento de entidade](relationships.md) identificados. Os resultados da medição podem variar dependendo do caminho selecionado. 
+   
+   1. Selecione **Caminho de relacionamento** e escolha o caminho da entidade que deve ser usado para identificar sua medida. Se houver somente um único caminho para a entidade *Cliente*, este controle não será exibido.
+   1. Selecione **Concluído** para aplicar sua seleção. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Selecione o caminho da entidade para a medida.":::
+
+1. Selecione **...** no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo de uma medida.
+
+1. Na área **Versão preliminar**, você verá o esquema de dados da entidade de saída da medida, incluindo filtros e dimensões. A versão preliminar reage dinamicamente às mudanças na configuração.
+
+1. Selecione **Executar** para calcular os resultados da medida configurada. Selecione **Salvar e fechar** se você deseja manter a configuração atual e executar a medida mais tarde.
+
+1. Acesse **Medidas** para ver a medida recém-criada na lista.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Usar um modelo para criar uma medida
+
+Você pode usar modelos predefinidos de medidas comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
+
+# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 Você pode usar modelos predefinidos de medidas comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
 
 Modelos de medidas disponíveis: 
 - Valor médio da transação (ATV)
 - Valor total da transação
-- Receita diária média
+- Receita média diária
 - Receita média anual
 - Contagem de transações
 - Pontos de fidelidade ganhos
@@ -140,6 +212,12 @@ O procedimento a seguir descreve as etapas para criar uma nova medida usando um 
 
 1. Agora você pode selecionar **Executar** para calcular os resultados da medida. Para refiná-los mais tarde, selecione **Salvar rascunho**.
 
+# <a name="business-accounts-b2b"></a>[Contas comerciais (B2B)](#tab/b2b)
+
+Este recurso está disponível apenas para medidas criadas em ambientes com clientes individuais como público-alvo primário.
+
+---
+
 ## <a name="manage-your-measures"></a>Gerenciar suas medidas
 
 Você pode encontrar a lista de medidas na página **Medidas**.
@@ -166,6 +244,5 @@ Selecione uma medida da lista para as seguintes opções:
 ## <a name="next-step"></a>Próxima etapa
 
 Você pode usar medidas existentes para criar [um segmento de cliente](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
