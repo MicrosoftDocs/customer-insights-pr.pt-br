@@ -1,7 +1,7 @@
 ---
 title: Previsão de rotatividade de transações
 description: Preveja se um cliente está em risco de não comprar mais seus produtos ou serviços.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643344"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673031"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Previsão de rotatividade de transações (versão preliminar)
 
@@ -28,6 +28,32 @@ Para ambientes baseados em contas comerciais, podemos prever a rotatividade tran
 > Experimente o tutorial para uma previsão de rotatividade de transações usando dados de amostra: [guia de amostra de previsão de rotatividade de transações (versão preliminar)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
+
+- Por último, [Permissões de colaborador](permissions.md) em Customer Insights.
+- Conhecimento de negócios para entender o que rotatividade significa para o seu negócio. Oferecemos suporte a definições de rotatividade baseadas em tempo, ou seja, um cliente é considerado um cliente com rotatividade após um período sem compras.
+- Dados sobre as transações/compras e seu histórico:
+    - Identificadores de transação para distinguir compras/transações.
+    - Identificadores de cliente para corresponder transações aos seus clientes.
+    - Datas dos eventos de transação, que definem as datas em que a transação ocorreu.
+    - O esquema de dados semânticos para compras/transações requer as seguintes informações:
+        - **ID da transação**: um identificador exclusivo de uma compra ou transação.
+        - **Data da transação**: data da compra ou transação.
+        - **Valor da transação**: quantia em moeda/valor numérico da transação/item.
+        - (Opcional) **ID exclusiva do produto**: ID do produto ou serviço adquirido se os seus dados estiverem em um nível de item de linha.
+        - (Opcional) **Se esta transação foi uma devolução**: campo verdadeiro/falso que identifica se a transação foi uma devolução ou não. Se o **Valor da transação** for negativo, também usaremos essa informação para inferir uma devolução.
+- (Opcional) Dados sobre atividades do cliente:
+    - Identificadores de atividades para diferenciar atividades do mesmo tipo.
+    - Identificadores de clientes para mapear atividades para os clientes.
+    - Informações de atividades que contêm o nome e a data da atividade.
+    - O esquema de dados semânticos para atividades do cliente inclui:
+        - **Chave primária:** Um identificador exclusivo para uma atividade. Por exemplo, uma visita a um site ou um registro de uso que mostra que o cliente experimentou uma amostra do seu produto.
+        - **Carimbo de data/hora:** A data e a hora do evento identificado pela chave primária.
+        - **Evento:** O nome do evento que você deseja usar. Por exemplo, um campo denominado "UserAction" em um supermercado pode ser um cupom usado pelo cliente.
+        - **Detalhes:** Informações detalhadas sobre o evento. Por exemplo, um campo denominado "CouponValue" em um supermercado pode ser o valor da moeda do cupom.
+
+# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
 
 - Por último, [Permissões de colaborador](permissions.md) em Customer Insights.
 - Conhecimento de negócios para entender o que rotatividade significa para o seu negócio. Oferecemos suporte a definições de rotatividade baseadas em tempo, ou seja, um cliente é considerado um cliente com rotatividade após um período sem compras.
@@ -59,6 +85,9 @@ Para ambientes baseados em contas comerciais, podemos prever a rotatividade tran
         - **País:** o país de um cliente.
         - **Indústria:** o tipo de setor de um cliente. Por exemplo, um campo denominado "Indústria" em uma torrefadora de café pode indicar se o cliente era varejista.
         - **Classificação:** a categorização de um cliente para sua empresa. Por exemplo, um campo denominado "ValueSegment" em uma torrefadora de café pode ser a camada do cliente com base no tamanho do cliente.
+
+---
+
 - Características de dados sugeridas:
     - Dados históricos suficientes: dados de transação de pelo menos o dobro da janela de tempo selecionada. De preferência, de dois a três anos do histórico de transações. 
     - Várias compras por cliente: idealmente, pelo menos duas transações por cliente.
@@ -114,6 +143,32 @@ Para ambientes baseados em contas comerciais, podemos prever a rotatividade tran
 
 1. Selecione **Avançar**
 
+# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Adicionar outros dados (opcional)
+
+Configure o relacionamento da sua entidade de atividade do cliente com a entidade *Cliente*.
+
+1. Selecione o campo que identifica o cliente na tabela de atividades do cliente. Ele pode estar diretamente relacionado à ID do cliente principal da sua entidade *Cliente*.
+
+1. Selecione a entidade que é sua entidade *Cliente* primária.
+
+1. Insira um nome que descreva a relação.
+
+#### <a name="customer-activities"></a>Atividades do cliente
+
+1. Opcionalmente, selecione **Adicionar dados** para **Atividades do cliente**.
+
+1. Selecione o tipo de atividade semântica que contém os dados que você gostaria de usar e, em seguida, selecione uma ou mais atividades na seção **Atividades**.
+
+1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está configurando. Selecione **Criar novo** e escolha um tipo de atividade disponível ou crie um novo.
+
+1. Selecione **Próximo** e **Salvar**.
+
+1. Se você tiver outras atividades do cliente que gostaria de incluir, repita as etapas acima.
+
+# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Selecione o nível de previsão
 
 A maioria das previsões é criada no nível do cliente. Em algumas situações, isso pode não ser granular o suficiente para atender às suas necessidades de negócio. Você pode usar esse recurso para prever a rotatividade de uma filial de um cliente, por exemplo, em vez do cliente como um todo.
@@ -122,9 +177,9 @@ A maioria das previsões é criada no nível do cliente. Em algumas situações,
 
 1. Expanda as entidades das quais deseja escolher o nível secundário ou use a caixa de filtro de pesquisa para filtrar as opções selecionadas.
 
-1. Escolha o atributo que deseja usar como nível secundário e selecione **Adicionar**
+1. Escolha o atributo que deseja usar como nível secundário e selecione **Adicionar**.
 
-1. Selecione **Avançar**.
+1. Selecione **Avançar**
 
 > [!NOTE]
 > As entidades disponíveis nesta seção são exibidas porque têm um relacionamento com a entidade que você escolheu na seção anterior. Se você não vir a entidade que deseja adicionar, verifique se ela tem um relacionamento válido presente em **Relacionamentos**. Apenas relacionamentos um-para-um e muitos-para-um são válidos para esta configuração.
@@ -159,7 +214,7 @@ Configure o relacionamento da sua entidade de atividade do cliente com a entidad
 
 1. Selecione **Avançar**
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Fornece uma lista opcional de contas de referência (apenas contas comerciais)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Forneça uma lista opcional de contas de referência
 
 Adicione uma lista de seus clientes corporativos e contas que deseja usar como benchmarks. Você terá [detalhes para essas contas de referência](#review-a-prediction-status-and-results) incluindo sua pontuação de rotatividade e os recursos mais influentes que impactaram sua previsão de rotatividade.
 
@@ -168,6 +223,8 @@ Adicione uma lista de seus clientes corporativos e contas que deseja usar como b
 1. Escolha os clientes que atuam como referência.
 
 1. Selecione **Avançar** para continuar.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Definir agenda e revisar configuração
 
@@ -201,6 +258,25 @@ Adicione uma lista de seus clientes corporativos e contas que deseja usar como b
 1. Selecione os três pontos verticais ao lado da previsão cujos resultados deseja revisar e selecione **Exibir**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Exibir controle para ver os resultados de uma previsão.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
+
+1. Há três seções principais de dados na página de resultados:
+   - **Desempenho do modelo de treinamento**: A, B ou C são pontuações possíveis. Essa pontuação indica o desempenho da previsão e pode ajudar você a decidir usar os resultados armazenados na entidade de saída. As pontuações são determinadas com base nas seguintes regras: 
+        - **A** quando o modelo previu com precisão pelo menos 50% das previsões totais e quando a porcentagem de previsões precisas para clientes com rotatividade é maior do que a taxa de linha de base em pelo menos 10%.
+            
+        - **B** quando o modelo previu com precisão pelo menos 50% das previsões totais e quando a porcentagem de previsões precisas para clientes com rotatividade é até 10% maior do que a linha de base.
+            
+        - **C** quando o modelo previu com precisão menos de 50% das previsões totais ou quando a porcentagem de previsões precisas para clientes com rotatividade é menor do que a linha de base.
+               
+        - **Linha de base** usa a entrada de janela de tempo da previsão para o modelo (por exemplo, um ano) e o modelo cria diferentes frações de tempo dividindo-a por 2 até atingir um mês ou menos. Ele usa essas frações para criar uma regra de negócios para clientes que não compraram nesse período. Esses clientes são considerados clientes com rotatividade. A regra de negócios baseada em tempo com a maior capacidade de prever quem tem propensão à rotatividade é escolhida como modelo de linha de base.
+            
+    - **Probabilidade de rotatividade (número de clientes)**: grupos de clientes com base no risco previsto de rotatividade. Esses dados podem ajudar você mais tarde, se quiser criar um segmento de clientes com alto risco de rotatividade. Esses segmentos ajudam a entender qual deve ser o limite para a assinatura do segmento.
+       
+    - **Fatores mais influentes**: muitos fatores são levados em consideração ao criar a previsão. Cada um dos fatores tem sua importância calculada para as previsões agregadas que um modelo cria. Você pode usar esses fatores para ajudar a validar os resultados de sua previsão ou usar essas informações mais tarde para [criar segmentos](segments.md) que podem ajudar a influenciar o risco de rotatividade dos clientes.
+
+
+# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
 
 1. Há três seções principais de dados na página de resultados:
    - **Desempenho do modelo de treinamento**: A, B ou C são pontuações possíveis. Essa pontuação indica o desempenho da previsão e pode ajudar você a decidir usar os resultados armazenados na entidade de saída. As pontuações são determinadas com base nas seguintes regras: 
@@ -237,6 +313,11 @@ Adicione uma lista de seus clientes corporativos e contas que deseja usar como b
        Quando você prevê o desligamento no nível da conta, todas as contas são consideradas na derivação dos valores médios dos recursos para os segmentos de desligamento. Para previsões de rotatividade no nível secundário para cada conta, a derivação dos segmentos de rotatividade depende do nível secundário do item selecionado no painel lateral. Por exemplo, se um item tem um nível secundário de categoria de produto = material de escritório, então somente os itens que têm material de escritório como categoria de produto são considerados ao derivar os valores médios de característica para segmentos de rotatividade. Esta lógica é aplicada para garantir uma comparação justa dos valores das características do item com os valores médios em segmentos de baixa, média e alta rotatividade.
 
        Em alguns casos, o valor médio dos segmentos de baixa, média ou alta rotatividade está vazio ou não disponível porque não há itens que pertençam aos segmentos de rotatividade correspondentes com base na definição acima.
+       
+       > [!NOTE]
+       > A interpretação dos valores nas colunas de média baixa, média e alta é diferente para características categóricas como país/região ou setor. Como a noção de valor de recurso "média" não se aplica a recursos categóricos, os valores nessas colunas são a proporção de clientes em segmentos de baixa, média ou alta rotatividade que têm o mesmo valor do recurso categórico em comparação com o item selecionado no painel lateral.
+
+---
 
 ## <a name="manage-predictions"></a>Gerenciar previsões
 

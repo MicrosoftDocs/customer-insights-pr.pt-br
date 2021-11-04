@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622845"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673356"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerenciar medidas
 
@@ -28,7 +28,7 @@ Use o construtor de medidas para extrair insights e planejar atividades comercia
 
 Esta seção explica como criar uma medida do zero. Você pode construir uma medida com atributos de dados de entidades de dados que tenham um relacionamento estabelecido para se conectar com a entidade unificada de perfil de cliente.
 
-# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
 
 1. Nos insights de público-alvo, vá para **Medidas**.
 
@@ -92,7 +92,7 @@ Esta seção explica como criar uma medida do zero. Você pode construir uma med
 
 1. Acesse **Medidas** para ver a medida recém-criada na lista.
 
-# <a name="business-accounts-b2b"></a>[Contas comerciais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
 
 1. Nos insights de público-alvo, vá para **Medidas**.
 
@@ -164,7 +164,7 @@ Esta seção explica como criar uma medida do zero. Você pode construir uma med
 
 Você pode usar modelos predefinidos de medidas comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
 
-# <a name="individual-customers-b2c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
 
 Você pode usar modelos predefinidos de medidas comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
 
@@ -212,7 +212,7 @@ O procedimento a seguir descreve as etapas para criar uma nova medida usando um 
 
 1. Agora você pode selecionar **Executar** para calcular os resultados da medida. Para refiná-los mais tarde, selecione **Salvar rascunho**.
 
-# <a name="business-accounts-b2b"></a>[Contas comerciais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
 
 Este recurso está disponível apenas para medidas criadas em ambientes com clientes individuais como público-alvo primário.
 

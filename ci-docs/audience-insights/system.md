@@ -1,7 +1,7 @@
 ---
 title: Configuração do sistema em insights do público
 description: Saiba mais sobre as configurações do sistema na funcionalidade de insights de público-alvo do Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035876"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651826"
 ---
 # <a name="system-configuration"></a>Configuração do sistema
 
@@ -24,9 +24,9 @@ A página **Sistema** inclui as seguintes guias:
 - [Uso da API](#api-usage-tab)
 - [Sobre](#about-tab)
 - [Geral](#general-tab)
+- [Segurança](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Página do sistema.](media/system-tabs.png "Página do sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Guias de configurações na página do sistema.":::
 
 ## <a name="status-tab"></a>Guia Status
 
@@ -84,9 +84,15 @@ A guia **Sobre** contém o **Nome de exibição** de sua organização, o **ID d
 
 ## <a name="general-tab"></a>Guia Geral
 
-Existem duas opções na guia **Geral**: **Idioma** e **Formato de País/Região**.
+Você pode alterar o idioma e o formato do país/região na aba **Geral**.
 
-A aplicação [suporta vários idiomas](supported-languages.md). Para alterar seu idioma preferido, escolha um **Idioma** no menu suspenso.
+O Customer Insights [oferece suporte a vários idiomas](/dynamics365/get-started/availability). O aplicativo usa sua preferência de idioma para exibir elementos como menu, texto de rótulo e mensagens do painel em seu idioma de preferência.
+
+Os dados importados e as informações inseridas manualmente não são traduzidas.
+
+### <a name="update-the-settings"></a>Atualizar as configurações
+
+Para alterar seu idioma preferido, escolha um **Idioma** no menu suspenso.
 
 Para alterar sua formatação preferida para datas, hora e números, use o menu suspenso **Formato de País/Região**. Uma visualização de formatação é exibida nesse campo. O sistema irá sugerir automaticamente uma seleção quando você escolher um novo idioma.
 
@@ -105,6 +111,13 @@ O **Uso de API** contém três seções:
 
    Operações que usam [ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um botão com um símbolo binocular para visualizar o uso da API em tempo real. Selecione o botão para abrir um painel lateral contendo detalhes de uso para o uso da API em tempo real no ambiente atual.   
    Use a caixa **Agrupar por** no painel **Uso da API em tempo real** para escolher a melhor forma de apresentar suas interações em tempo real. Você pode agrupar os dados pelo método API, nome qualificado da entidade (entidade ingerida), criado por (fonte do evento), resultado (êxito ou falha) ou códigos de erro. Os dados estão disponíveis como um gráfico de histórico e como uma tabela.
+
+## <a name="security-tab"></a>Guia Segurança 
+
+A guia **Segurança** permite que você vincule e gerencie seu próprio [Azure Key Vault](/azure/key-vault/general/basic-concepts) no ambiente.
+O cofre de chaves dedicado pode ser usado para preparar e usar segredos nos limites de conformidade de uma organização. As percepções do público-alvo podem usar os segredos do Azure Key Vault para [configurar conexões](connections.md) para sistemas de terceiros.
+
+Para obter mais informações, consulte [Trazer seu próprio Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
