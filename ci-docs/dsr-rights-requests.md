@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483640"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732666"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitações de Direitos do Titular dos Dados (DSR) no GDPR
 
@@ -79,7 +79,14 @@ Um administrador do locatário pode seguir estas etapas para exportar dados:
 2. Reconheça a confirmação para exportar os dados para o usuário solicitado.
 3. Receba os dados exportados através do endereço de e-mail do administrador do locatário.
 
-## <a name="engagement-insights"></a>Insights de participação
+## <a name="consent-management-preview"></a>Gerenciamento de consentimento (versão preliminar)
+
+O recurso de gerenciamento de consentimento não coleta dados do usuário diretamente. Ele apenas importa e processa os dados de consentimento fornecidos por usuários em outros aplicativos.
+
+Para remover os dados de consentimento sobre usuários específicos, remova-os das fontes de dados ingeridas para o recurso de gerenciamento de consentimento. Depois de atualizar a fonte de dados, os dados removidos também serão excluídos do Centro de Consentimento. Os aplicativos que usam a entidade de consentimento também excluirão os dados que foram removidos da fonte após uma [atualização](audience-insights/system.md#refresh-processes). Recomendamos atualizar as fontes de dados rapidamente depois de responder a uma solicitação do titular dos dados para remover os dados do usuário de todos os outros processos e aplicativos.
+
+
+## <a name="engagement-insights-preview"></a>Insights de participação (versão preliminar)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Exclusão e exportação de dados de eventos que contêm informações de identificação do usuário final
 

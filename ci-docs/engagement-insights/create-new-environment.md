@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648103"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673628"
 ---
 # <a name="create-a-new-environment"></a>Criar um novo ambiente 
 
@@ -40,13 +40,13 @@ Um ambiente é um espaço onde você gerencia seus espaços de trabalho e conex�
 
 1. Escolha **Região** e selecione **Avançar**. 
 
-1. Digite um **Nome do espaço de trabalho**, que permite coletar dados para sites ou aplicativos específicos. Para obter mais informações, consulte [Criar um espaço de trabalho](create-workspace.md).
+1. Digite um **Nome do espaço de trabalho**, que permita coletar dados de sites ou aplicativos específicos. Para obter mais informações, consulte [Criar um espaço de trabalho](create-workspace.md).
 
 1. Escolha o **Tipo de espaço de trabalho** (Web ou móvel) que você deseja criar. 
 
 1. Selecione **Exibir configurações avançadas** para ativar ou desativar essas configurações opcionais:
 
-   - Alterne **Desconhecido para conhecido** como "habilitado" para associar eventos da web a usuários que se autenticaram anteriormente. Para mais informações, consulte [Reconhecer eventos da web de visitantes autenticados anteriormente](unknown-to-known.md)
+   - Alterne **Desconhecido para conhecido** como "habilitado" para associar eventos da web a usuários que se autenticaram anteriormente. Para obter mais informações, consulte [Reconhecer eventos da web de visitantes autenticados anteriormente](unknown-to-known.md).
    - Alterne **Filtrar tráfego de bot** para "habilitado" para remover o tráfego da web por bots para este espaço de trabalho. 
 
 1. Selecione **Concluído** quando terminar. 

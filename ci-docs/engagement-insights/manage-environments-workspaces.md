@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645432"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673775"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gerenciar ambientes e espaços de trabalho
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645432"
 
 Este tópico discute como gerenciar áreas de trabalho e ambientes, uma vez que já tenham sido criados. 
 
-- Um *espaço de trabalho* é um espaço para armazenar e gerenciar eventos e relatórios. É onde você pode ver as atividades do usuário em tempo real. Ao criar um espaço de trabalho, você seleciona o tipo de dados a serem enviados para ele. No momento, há suporte para dados Web e aplicativos móveis. Para mais informações, consulte [Criar um espaço de trabalho e adicionar membros](create-workspace.md).
+- Um *espaço de trabalho* é um espaço para armazenar e gerenciar eventos e relatórios. É onde você pode ver as atividades do usuário em tempo real. Ao criar um espaço de trabalho, você seleciona o tipo de dados a serem enviados para ele. No momento, há suporte para dados Web e aplicativos móveis. Para obter mais informações, consulte [Criar um espaço de trabalho e adicionar membros](create-workspace.md).
 
 - Um *ambiente* é um espaço onde você gerencia seus espaços de trabalho e conexões. Para obter mais informações, consulte [Criar um novo ambiente](create-new-environment.md).
 
@@ -71,19 +71,11 @@ Como administrador de ambiente, você pode acessar um ambiente no painel de nave
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centro de administração de ambientes.":::
 
-### <a name="rename-an-environment"></a>Renomear um ambiente
+### <a name="edit-an-environment-name"></a>Editar um nome de ambiente
 
 1. Vá para **Administração** > **Ambiente** e selecione **Configurações**.
 
 1. Atualize o **Nome do ambiente** e selecione **Salvar** para aplicar suas alterações.
-
-### <a name="manage-environment-members"></a>Gerenciar membros de um ambiente
-
-1. Vá para **Administração** > **Ambiente** e selecione **Membros**.
-
-1. Selecione **Adicionar membros** para atualizar membros e [atribuir funções](user-roles.md). Atualmente, apenas **Administrador do ambiente** está disponível.
-
-1. Selecione **Adicionar membros** para adicioná-los ao seu ambiente.
 
 ### <a name="delete-an-environment"></a>Excluir um ambiente
 
@@ -97,6 +89,14 @@ Os administradores do ambiente podem excluir ambientes. Antes de excluir um ambi
 
 1. Selecione **Excluir** para excluir o ambiente de forma permanente.
 
+### <a name="manage-environment-members"></a>Gerenciar membros de um ambiente
+
+1. Vá para **Administração** > **Ambiente** e selecione **Membros**.
+
+1. Selecione **Adicionar membros** para atualizar membros e [atribuir funções](user-roles.md). Atualmente, apenas **Administrador do ambiente** está disponível.
+
+1. Selecione **Adicionar membros** para adicioná-los ao seu ambiente.
+
 ## <a name="manage-connections"></a>Gerenciar conexões
 
 Estabelecer conexões com os insights de público-alvo permite que você veja relatórios nos insights de interação com base em perfis de clientes unificados. 
@@ -107,7 +107,6 @@ Para obter mais informações, consulte [Criar um link entre insights do públic
 
 Para proteger os dados pessoais do seu cliente, você pode excluir ou exportar os dados identificáveis do usuário final.
 
-Para obter mais informações, consulte [Excluir e exportar dados de eventos que contenham informações pessoais](delete-export-personal-data.md).
-
+Para obter mais informações, consulte [Excluir e exportar dados de eventos que contenham informações pessoais](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

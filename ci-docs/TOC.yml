@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Endereços aprimorados
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Aprimorar dados da empresa
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Enriqueça com o Azure Mapas
           href: audience-insights/enrichment-azure-maps.md
         - name: Enriqueça com a HERE Technologies
@@ -250,6 +252,40 @@
           href: audience-insights/apis.md
         - name: Referências da API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Gerenciamento de consentimento (versão preliminar)
+  items:
+    - name: Hub de Ajuda
+      href: consent-management/index.yml
+    - name: Visão geral da funcionalidade
+      href: consent-management/overview.md
+    - name: Introdução
+      items:
+        - name: Introdução
+          href: consent-management/get-started.md
+        - name: Conceitos e terminologia
+          href: consent-management/glossary.md
+    - name: Importar dados de consentimento
+      items:
+        - name: Importar dados de consentimento
+          href: consent-management/import-consent-data.md
+        - name: Definir dados de consentimento e aplicar preferências de consentimento
+          href: consent-management/set-consent-rules.md
+    - name: Gerenciar dados de consentimento
+      items:
+        - name: Habilitar regras de consentimento nos insights de público-alvo
+          href: audience-insights/activate-consent.md
+        - name: Gerenciar regras de consentimento padrão em segmentos de insights de público-alvo
+          href: audience-insights/change-default-consent-rules.md
+    - name: Gerenciar configurações e usuários
+      items:
+        - name: Definir configurações do sistema
+          href: consent-management/system-settings.md
+        - name: Gerenciar usuários e permissões
+          href: consent-management/manage-users.md
+    - name: Usar dados de consentimento
+      items:
+        - name: Criar previsões com dados de consentimento
+          href: consent-management/predictions-consent-data.md
 - name: Insights de participação (versão preliminar)
   items:
     - name: Hub de Ajuda

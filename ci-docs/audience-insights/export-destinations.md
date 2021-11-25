@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights
 description: Gerencie exportações para compartilhar dados.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673309"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732121"
 ---
 # <a name="exports-preview-overview"></a>Visão geral de exportações (versão preliminar)
 
@@ -97,7 +97,9 @@ Depois que criar os destinos de exportação, eles serão listados em **Dados** 
 
 Cada exportação que você configura tem uma agenda de atualizações. Durante uma atualização, o sistema procura dados novos ou atualizados para incluir em uma exportação. Por padrão, as exportações são executadas como parte de cada [atualização agendada do sistema](system.md#schedule-tab). Você pode personalizar a agenda de atualização ou desativá-la para executar as exportações manualmente.
 
-As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações em andamento nas [dependências](system.md#refresh-policies) quando uma exportação agendada precisar iniciar, o sistema primeiro concluirá as atualizações e depois fará a exportação. Você pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizada**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações em andamento nas [dependências](system.md#refresh-processes) quando uma exportação agendada precisar iniciar, o sistema primeiro concluirá as atualizações e depois fará a exportação. Você pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizada**.
 
 ### <a name="schedule-exports"></a>Agenda exportações
 

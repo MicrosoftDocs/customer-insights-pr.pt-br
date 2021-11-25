@@ -1,7 +1,7 @@
 ---
 title: Mapeamentos semânticos (versão preliminar)
 description: Visão geral dos mapeamentos semânticos e como usá-los.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622921"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731929"
 ---
 # <a name="semantic-mappings"></a>Mapeamentos semânticos
 
@@ -75,8 +75,7 @@ Os mapeamentos semânticos permitem que você mapeie seus dados de não atividad
 
 1. Para executar um mapeamento semântico posteriormente, selecione o mapeamento semântico e selecione **Atualizar**.
 
-> [!TIP]
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gerenciar mapeamentos semânticos existentes
 
@@ -91,5 +90,6 @@ Em **Dados** > **Mapeamentos semânticos (versão preliminar)**, você pode visu
 - **Renomear**: Abre uma caixa de diálogo onde você pode inserir um nome diferente para o mapeamento semântico selecionado. Selecione **Salvar** para aplicar suas alterações.
 
 - **Excluir**: Abre uma caixa de diálogo para confirmar a exclusão do mapeamento semântico selecionado. Você também pode excluir mais de um mapeamento semântico de uma vez, selecionando os mapeamentos semânticos e o ícone de exclusão. Selecione **Excluir** para confirmar a exclusão.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

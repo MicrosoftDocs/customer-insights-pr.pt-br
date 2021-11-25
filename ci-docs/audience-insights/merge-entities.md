@@ -1,7 +1,7 @@
 ---
 title: Mesclar entidades na unificação de dados
 description: Mescle entidades para criar perfis de clientes unificados.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648240"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732758"
 ---
 # <a name="merge-entities"></a>Mesclar entidades
 
@@ -187,10 +187,9 @@ Escolha **Executar processos de mesclagem e posteriores** para atualizar o siste
 
 Para fazer mais alterações e executar a etapa novamente, cancele uma mesclagem em andamento. Selecione **Atualizando...** e selecione **Cancelar o trabalho** no painel lateral exibido.
 
-> [!TIP]
-> Depois de executar o processo de mesclagem, selecione o status do processo para abrir o painel **Detalhes da tarefa**. Ele oferece uma visão geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver que entidades participaram do processo de correspondência, se a resolução de conflitos e as publicação das atualizações tiveram êxito.  
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho detalhado para obter os detalhes do processo por meio do link de status da tarefa.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Caminho detalhado para obter os detalhes do processo por meio do link de status da tarefa.":::
 
 ## <a name="next-step"></a>Próxima Etapa
 

@@ -1,7 +1,7 @@
 ---
 title: Recursos novos e futuros
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673801"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753103"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Atualizações de outubro de 2021
+
+As atualizações em outubro de 2021 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="b-to-b"></a>B2B
+
+A partir de outubro de 2021, você pode trabalhar com contas comerciais e seus contatos relacionados no Customer Insights. Antes, o aplicativo era voltado principalmente para consumidores individuais. Várias áreas de recursos foram atualizadas para oferecer suporte a cenários B2B em cima de um novo tipo de ambiente. Para obter uma visão geral dos recursos B2B com suporte, consulte [Trabalhe com contas comerciais em insights de público-alvo](work-with-business-accounts.md).
+
+As seções a seguir destacam algumas das principais áreas que foram adaptadas para oferecer suporte a contas comerciais e consumidores individuais.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Exportar segmentos com base em contas comerciais
+
+Todas as exportações de segmento em insights de público-alvo estão disponíveis no contexto de contas comerciais. A maioria das exportações de segmento requerem configuração extra e [informações de contato projetadas](segment-builder.md#create-a-new-segment) nos segmentos subjacentes para serem válidas para contas comerciais. Para obter mais informações, consulte [Exportar segmentos](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Usar a exportação de Anúncios do LinkedIn com contas comerciais
+
+A exportação de Anúncios do LinkedIn agora está disponível para segmentação de empresa e contato no contexto das contas comerciais. Ao selecionar a segmentação da empresa como seu foco principal de exportação do LinkedIn, você pode exportar segmentos criados em contas comerciais sem a necessidade de projetar informações de contato. Para obter mais informações, consulte os documentos sobre [Exportação de Anúncios do LinkedIn](export-linkedin-ads.md) e a diferença entre [segmentação de contato](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e [segmentação da empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Criar medidas com base em contas comerciais e sua hierarquia
+
+O construtor de medidas permite criar medidas em torno de contas comerciais e, opcionalmente, usar as informações de hierarquia. As informações de hierarquia são usadas para acumular um cálculo de medida em uma conta e em todas as suas subcontas relacionadas. Por exemplo, você pode criar medidas como a receita total para cada grupo de contas comerciais identificadas por sua hierarquia. Para obter mais informações, consulte [Definir e gerenciar medidas](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Criar segmentos com base em contas comerciais e sua hierarquia
+
+O construtor de segmento permite que você crie segmentos de contas comerciais que, opcionalmente, incluem informações de contato para cada conta em um segmento. Se você configurou a hierarquia de contas, pode usar as informações da hierarquia de contas na criação do segmento. Para obter mais informações, consulte [Criar um novo segmento](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Mantenha suas contas comerciais com insights profundos sobre a tendência de rotatividade
+
+O modelo de previsão de rotatividade de clientes agora também oferece suporte a contas comerciais. Você pode avaliar o risco da rotatividade não apenas para uma conta, mas para uma combinação de uma conta e uma categoria de produto ou serviço que os clientes compram de você. Esse acréscimo ajuda a entender se uma conta tem maior probabilidade de parar de comprar de você em geral ou apenas em uma determinada categoria de bens ou serviços. Para ajudá-lo ainda mais a usar este modelo de IA, ele também lista os motivos pelos quais uma conta provavelmente será objeto de rotatividade. Para mais informações, consulte [Previsão de rotatividade de transações (versão preliminar)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ver os contatos de uma conta comercial na exibição do Customer
+
+Se as contas comerciais forem mapeadas para contas relacionadas, o aplicativo Customer Insights mostra esses contatos relacionados como parte da exibição de detalhes do cliente. Para obter mais informações, consulte [Perfis do cliente](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Atualizações de setembro de 2021
 

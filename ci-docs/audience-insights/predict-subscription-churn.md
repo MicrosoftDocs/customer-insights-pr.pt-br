@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035309"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799716"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de rotatividade de assinaturas (versão preliminar)
 
 A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em risco de não usar mais os produtos ou serviços de assinatura da sua empresa. Você pode criar uma previsão de rotatividade de assinaturas na página **Inteligência** > **Previsões**. Selecione **Minhas previsões** para ver outras previsões que você criou.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Experimente o tutorial para uma previsão de rotatividade de assinatura usando dados de exemplo: [Guia de exemplo para previsão de rotatividade de assinatura](sample-guide-predict-subscription-churn.md).

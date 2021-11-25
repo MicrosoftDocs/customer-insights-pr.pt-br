@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033571"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732250"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabalhar com APIs do Customer Insights
 
@@ -135,7 +135,7 @@ Saiba como começar a usar as bibliotecas de clientes C# de NuGet.org. Para obte
 
 1. Use a [Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) para obter um `AccessToken` usando seu [registro do Azure App](#create-a-new-app-registration-in-the-azure-portal) existente.
 
-1. Depois de autenticar e adquirir um token com sucesso, crie um ou use um `HttpClient` existente com a **"Autorização" DefaultRequestHeaders** adicional definida como **Portador <access token>** e **Ocp-Apim-Subscription-Key** definido como [**chave de assinatura** do seu ambiente do Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Depois de autenticar e adquirir um token com êxito, crie um ou use um `HttpClient` existente com a **"Autorização" DefaultRequestHeaders** adicional definida como **"Token de acesso" de Portador** e **Ocp-Apim-Subscription-Key** definida como a [**chave de assinatura** de seu ambiente do Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Redefina o cabeçalho **Autorização** quando apropriado. Por exemplo, quando o token expirou.
 

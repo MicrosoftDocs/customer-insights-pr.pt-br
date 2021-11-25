@@ -1,7 +1,7 @@
 ---
 title: Criar e gerenciar ambientes
 description: Saiba como se inscrever no serviço e gerenciar ambientes.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673719"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799624"
 ---
 # <a name="manage-environments"></a>Gerenciar ambientes
 
@@ -39,6 +39,19 @@ Você pode editar alguns dos detalhes dos ambientes existentes.
 3. Na caixa **Editar ambiente**, você pode atualizar as configurações de ambiente.
 
 Para obter mais informações sobre configurações de ambiente, consulte [Crie um novo ambiente](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Conectar-se ao Microsoft Dataverse
+   
+A etapa **Microsoft Dataverse** permite conectar o Customer Insights com o seu ambiente Dataverse.
+
+Para usar [modelos de previsão prontos para uso](predictions-overview.md#out-of-box-models), configure o compartilhamento de dados com o Dataverse. Ou você pode ativar a ingestão de dados de fontes de dados na infraestrutura local, fornecendo o URL do ambiente Microsoft Dataverse que sua organização administra. Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um data lake Gerenciado do Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opções de configuração para habilitar o compartilhamento de dados com o Microsoft Dataverse.":::
+
+> [!NOTE]
+> O Customer Insights não suporta os seguintes cenários de compartilhamento de dados:
+> - Se salvar todos os dados no seu próprio Azure Data Lake Storage, você não poderá habilitar o compartilhamento de dados com um data lake gerenciado do Dataverse.
+> - Se você ativar o compartilhamento de dados com o Dataverse, você não será capaz de [criar valores previstos ou ausentes em uma entidade](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuração do ambiente
 
