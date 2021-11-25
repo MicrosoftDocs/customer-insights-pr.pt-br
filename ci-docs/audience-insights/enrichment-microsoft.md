@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes com dados da Microsoft
-description: Use dados proprietários da Microsoft para enriquecer dados de clientes com afinidades de marca e interesse.
-ms.date: 11/01/2021
+description: Use dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades e share of voice.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732528"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793692"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquecer perfis de clientes com afinidades de marca e interesse (versão prévia)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquecer os perfis dos clientes com afinidades e share of voice (versão preliminar)
 
-Use dados proprietários da Microsoft para enriquecer dados de clientes com afinidades de marca e interesse. Essas afinidades são baseadas nos dados de pessoas com dados demográficos semelhantes aos dos seus clientes. Essas informações ajudam a entender e segmentar melhor seus clientes com base em suas afinidades com marcas e interesses específicos.
+Use dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades de marca, afinidades de interesse e share of voice (SoV). Essas afinidades e o SoV são baseados nos dados das pessoas com demografias semelhantes às dos seus clientes. Essas informações ajudam você a entender e segmentar melhor seus clientes com base nas afinidades ou no SoV com marcas e interesses específicos que eles têm.
 
 Em insights de público-alvo, acesse **Dados** > **Enriquecimento** para [configurar e exibir enriquecimentos](enrichment-hub.md).
 
-Para configurar o enriquecimento das afinidades da marca, vá para a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Marcas**.
+Para configurar o enriquecimento de afinidades de marca e de SoV, acesse a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Marcas**.
 
-Para configurar o enriquecimento das afinidades do interesse, vá para a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Interesses**.
+Para configurar o enriquecimento de afinidades de interesse e de SoV, acesse a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Interesses**.
 
    > [!div class="mx-imgBorder"]
    > ![Blocos de marcas e interesses.](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
 
-## <a name="how-we-determine-affinities"></a>Como determinamos afinidades
+## <a name="how-we-determine-affinities-and-sov"></a>Como determinamos afinidades e SoV
 
-Usamos dados de pesquisa online da Microsoft para encontrar afinidades por marcas e interesses entre vários segmentos demográficos (definidos por idade, sexo ou localização). O volume de pesquisa online de uma marca ou interesse determina quanta afinidade um segmento demográfico, em comparação com outros segmentos, tem com essa marca ou interesse.
+Usamos dados de pesquisa online da Microsoft para encontrar afinidades e SoV para marcas e interesses em vários segmentos demográficos (definidos por idade, sexo ou localização). O volume de pesquisa online para uma marca ou interesse constitui a base para determinar a afinidade ou o SoV. No entanto, cada um fornece uma perspectiva diferente para entender seus clientes.
+
+- A afinidade é uma comparação entre segmentos demográficos. Você pode usar essas informações para identificar os segmentos demográficos que tenham maior afinidade com uma determinada marca ou interesse, em comparação com outros segmentos.
+
+- O share of voice é uma comparação entre suas marcas ou interesses selecionados. Você pode usar essas informações para identificar qual marca ou interesse tem o maior share of voice para um determinado segmento demográfico, em comparação com outras marcas ou interesses selecionados.
 
 ## <a name="affinity-level-and-score"></a>Nível e pontuação de afinidade
 
@@ -48,6 +52,10 @@ O *nível de afinidade* consiste em quatro níveis e *pontuação de afinidade* 
 |Baixo(a)     | 1 a 34        |
 
 Dependendo da granularidade que deseja para medir a afinidade, é possível usar o nível ou a pontuação de afinidade. A pontuação de afinidade oferece um controle mais preciso.
+
+## <a name="share-of-voice-sov"></a>Share of voice (SoV)
+
+Calculamos o SoV em uma escala de 100 pontos. O SoV total em todas as marcas ou interesses para cada perfil de cliente enriquecido chega a 100. Ao contrário das afinidades, o SoV é relativo às marcas e aos interesses que você seleciona. Por exemplo, os valores de SoV para 'Microsoft' podem ser diferentes se as marcas selecionadas forem ('Microsoft', 'GitHub') em comparação com ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Países/regiões com suporte
 
@@ -82,7 +90,7 @@ Revise as preferências de enriquecimento padrão e atualize-as conforme necess�
 
 ### <a name="select-entity-to-enrich"></a>Selecione a entidade a ser enriquecida
 
-Selecione **Entidade enriquecida** e escolha o conjunto de dados que deseja enriquecer com os dados da empresa da Microsoft. Você pode selecionar a entidade Cliente para enriquecer todos os perfis de cliente ou selecionar uma entidade de segmento para enriquecer apenas perfis de clientes contidos nesse segmento.
+Selecione **Entidade enriquecida** e escolha o conjunto de dados que deseja enriquecer com os dados da Microsoft. Você pode selecionar a entidade Cliente para enriquecer todos os perfis de cliente ou selecionar uma entidade de segmento para enriquecer apenas perfis de clientes contidos nesse segmento.
 
 ### <a name="map-your-fields"></a>Mapear seus campos
 
@@ -124,13 +132,11 @@ Depois de executar o processo de enriquecimento, vá para **Meus enriquecimentos
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Visualização dos resultados após a execução do processo de enriquecimento.":::
 
-Revise os dados enriquecidos selecionando **Exibir Dados enriquecidos** no gráfico. Dados enriquecidos para marcas vão para a entidade **BrandAffinityFromMicrosoft**. Os dados para interesses estão na entidade **InterestAffinityFromMicrosoft**. Você também encontrará essas entidades listadas no grupo **Enriquecimento** em **Dados** > **Entidades**.
-
-Você verá um gráfico com o número de perfis de clientes enriquecidos ao longo do tempo e uma versão preliminar da entidade enriquecida. Selecione **Mostrar mais** no bloco de visualização para abrir a entidade enriquecida.
+Você encontrará um gráfico com o número de perfis de clientes enriquecidos ao longo do tempo e visualizações das entidades enriquecidas. Revise os dados enriquecidos selecionando **Ver mais** nos gráficos de **Nível de afinidade** ou de **Share of Voice**. Dados enriquecidos para marcas vão para as entidades **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft**. Os dados para interesses estão nas entidades **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft**. Você também encontrará essas entidades listadas no grupo **Enriquecimento** em **Dados** > **Entidades**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Veja dados de enriquecimento no cartão do cliente
 
-As afinidades de marca e interesse também podem ser visualizadas em cartões de clientes individuais. Vá para **Clientes** e selecione um perfil do cliente. No cartão do cliente, você encontrará gráficos das marcas ou interesses pelos quais as pessoas no perfil demográfico desse cliente têm afinidade.
+O SoV de marca e interesse também pode ser exibido em cartões de clientes individuais. Vá para **Clientes** e selecione um perfil do cliente. No cartão do cliente, você encontrará gráficos para o SoV de marca ou de interesse com base nas pessoas nesse perfil demográfico do cliente.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Cartão de cliente com dados enriquecidos.":::
 

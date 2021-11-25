@@ -1,7 +1,7 @@
 ---
 title: Dados da empresa aprimorados
 description: Enriqueça e normalize os dados da empresa com os modelos da Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770156"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813906"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquecimento dos perfis da empresa com dados da empresa aprimorados
 
@@ -51,7 +51,8 @@ Existem algumas limitações com os dados aprimorados. Não há suporte aos iten
 
 1.  Confirme a identidade da empresa. Não verificamos se a entrada é uma organização existente ou se uma empresa usa a saída como seu nome padrão.
 2.  Cobre as empresas de forma abrangente globalmente. Os dados compilados da Microsoft têm cobertura global, mas oferecem a maior parte da cobertura na Austrália, no Canadá, no Reino Unido e nos Estados Unidos.
-3.  Garanta a precisão ou atualização dos dados. Como as informações comerciais mudam com frequência, não podemos garantir que os dados da empresa aprimorados fornecidos sejam sempre exatos ou atualizados.
+3.  Padronize os endereços da empresa globalmente. Atualmente, oferecemos suporte à padronização de endereços nestes países ou regiões: Austrália, Canadá, França, Alemanha, Itália, Japão, Reino Unido e Estados Unidos.
+4.  Garanta a precisão ou atualização dos dados. Como as informações comerciais mudam com frequência, não podemos garantir que os dados da empresa aprimorados fornecidos sejam sempre exatos ou atualizados.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
