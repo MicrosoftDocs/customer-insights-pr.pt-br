@@ -1,7 +1,7 @@
 ---
 title: Corresponder entidades para unificação de dados
-description: Combine entidades para combinar conjuntos de dados e criar perfis de clientes unificados.
-ms.date: 11/01/2021
+description: Corresponda entidades para criar perfis de clientes unificados.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732620"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863797"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -224,17 +224,24 @@ Você pode reconfigurar e ajustar a maioria dos parâmetros de correspondência.
 
 ## <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
 
-Você pode especificar condições que determinados registros sempre devem corresponder ou nunca corresponder. Essas regras podem ser carregadas para substituir o processo de correspondência padrão. Por exemplo, se houver John Doe I e John Doe II em nossos registros, o sistema pode combiná-los como uma pessoa. As regras de correspondência personalizadas permitem que você especifique que os perfis se refiram a pessoas diferentes. 
+Você pode especificar condições que substituem a lógica de correspondência padrão. Há quatro opções disponíveis: 
+
+|Opção  |Description |Exemplo  |
+|---------|---------|---------|
+|Sempre corresponder     | Define valores que sempre correspondem.         |  Sempre corresponder *Mike* e *MikeR*.       |
+|Nunca corresponder     | Define valores que nunca correspondem.        | Nunca corresponder *John* e *Jonathan*.        |
+|Bypass personalizado     | Define valores que o sistema deve sempre ignorar na fase de correspondência. |  Ignorar os valores *11111* e *Desconhecido* durante a correspondência.        |
+|Mapeamento de alias    | Definição de valores que o sistema deve considerar como o mesmo valor.         | Considerar *Joe* igual a *Joseph*.        |
 
 1. Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Correspondência personalizada** na seção **Detalhes dos registros correspondentes**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Captura de tela da seção de regras de correspondência com o controle Correspondência personalizada destacado.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Captura de tela da seção de regras de correspondência com o controle Correspondência personalizada destacado.":::
 
-1. Se não houver nenhuma regra de correspondência personalizadas definida, você verá um novo painel **Correspondência personalizada** com mais detalhes.
+1. No painel **Personalizado**, vá para a guia **Registros**.
 
-1. Selecione **Preencher o modelo** para obter um arquivo de modelo que pode especificar quais registros de quais entidades devem sempre corresponder ou nunca. Você precisará preencher separadamente os registros "sempre corresponder" e "nunca corresponder" em dois arquivos diferentes.
+1. Escolha a opção de correspondência personalizada da lista suspensa **Tipo personalizado** e selecione **Baixar modelo**. Você precisa de um modelo separado para cada opção de correspondência.
 
-1. O modelo contém campos para especificar os valores da chave primária e da entidade a serem usados na correspondência personalizada. Por exemplo, se você quiser que a chave primária *12345* da entidade *Vendas* sempre corresponda à chave primária *34567* da entidade *Contato*, preencha no modelo:
+1. Um arquivo de modelo é baixado. Abra-o e preencha os detalhes. O modelo contém campos para especificar os valores da chave primária e da entidade a serem usados na correspondência personalizada. Por exemplo, se você quiser que a chave primária *12345* da entidade *Vendas* sempre corresponda à chave primária *34567* da entidade *Contato*, preencha no modelo:
     - Entity1: Sales
     - Entity1Key: 12345
     - Entity2: Contact
@@ -244,26 +251,32 @@ Você pode especificar condições que determinados registros sempre devem corre
    
    Se você deseja especificar a correspondência personalizada para eliminação de duplicação em uma entidade, forneça a mesma entidade como Entidade1 e Entidade2 e defina os diferentes valores de chave primária.
 
-1. Depois de adicionar todas as substituições que você deseja aplicar, salve o arquivo de modelo.
+1. Depois de adicionar todas as substituições, salve o arquivo de modelo.
 
-1. Vá para **Dados** > **Fontes de dados** e ingira os arquivos de modelo como novas entidades. Depois de ingerido, você pode usá-los para especificar a configuração de Correspondência.
+1. Vá para **Dados** > **Fontes de dados** e ingira os arquivos de modelo como novas entidades.
 
-1. Após o upload dos arquivos e entidades estarem disponíveis, selecione a opção **Correspondência personalizada** novamente. Você verá opções para especificar as entidades que deseja incluir. Selecione as entidades necessárias no menu suspenso.
+1. Após o upload dos arquivos e entidades estarem disponíveis, selecione a opção **Correspondência personalizada** novamente. Você verá opções para especificar as entidades que deseja incluir. Selecione as entidades necessárias no menu suspenso e selecione **Concluído**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de tela da caixa de diálogo para escolher substituições para um cenário de correspondência personalizado.":::
 
-1. Selecione as entidades para as quais você deseja usar **Sempre corresponder** e **Nunca corresponder**, selecione **Concluído**.
+1. A aplicação da correspondência personalizada depende da opção de correspondência que você deseja usar. 
+
+   - Para **Sempre corresponder** ou **Nunca corresponder**, prossiga para a próxima etapa.
+   - Para **Bypass personalizado** ou **Mapeamento de alias**, selecione **Editar** em uma regra de correspondência existente ou crie uma. Na lista suspensa Normalizações, escolha a opção **Bypass personalizado** ou **Mapeamento de alias** e selecione **Concluído**.
 
 1. Selecione **Salvar** na página **Corresponder** para aplicar a configuração de correspondência personalizada.
 
 1. Selecione **Executar** na página **Corresponder** para iniciar o processo de correspondência. Outras regras de correspondência especificadas serão substituídas pela configuração de correspondência personalizada.
 
-> [!TIP]
-> Acesse **Dados** > **Entidades** e examine a entidade **ConflationMatchPair** para confirmar se as substituições foram aplicadas.
+### <a name="known-issues"></a>Problemas conhecidos
+
+- A autocombinação não mostra os dados normalizados em entidades de eliminação de duplicação. No entanto, ela aplica a normalização internamente durante a eliminação de duplicação. É o comportamento esperado para todas as normalizações. 
+- Se a configuração do tipo semântico for removida na fase de **Mapeamento** em que uma regra de correspondência usa Mapeamento de alias ou Bypass personalizado, a normalização não será aplicada. Ela só acontece se você desmarcar o tipo semântico após configurar a normalização na regra de correspondência, pois o tipo semântico será desconhecido.
+
 
 ## <a name="next-step"></a>Próxima etapa
 
-Depois de concluir o processo de correspondência de pelo menos um par de correspondência, você pode resolver possíveis contradições em seus dados, percorrendo o tópico [**Mesclar**](merge-entities.md).
+Depois de concluir o processo de correspondência para pelo menos um par de correspondência, continue para a etapa de [**Mesclagem**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

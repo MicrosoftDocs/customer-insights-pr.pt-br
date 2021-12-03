@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618277"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866874"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segmentos para o LinkedIn Ads (versão preliminar)
 
@@ -28,6 +28,7 @@ Exporte segmentos de perfis de clientes unificados para o LinkedIn Ads para cria
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- Seu segmento no Customer Insights precisa conter pelo menos 300 perfis exclusivos. 
 - Você pode exportar até 100.000 perfis de clientes por exportação para o LinkedIn Ads.
 - A exportação para o LinkedIn Ads está limitada a segmentos.
 - Exportar até 100.000 perfis de clientes para o LinkedIn Ads pode levar até 10 minutos para ser concluído. 
