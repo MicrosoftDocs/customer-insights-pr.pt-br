@@ -1,7 +1,7 @@
 ---
 title: Experimentos do Azure Machine Learning
 description: Use modelos baseados em Azure Machine Learning no Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033158"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881724"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Usar modelos baseados em Azure Machine Learning
 
-Os dados unificados no Dynamics 365 Customer Insights são uma fonte para a criação de modelos de machine learning que podem gerar insights de negócios adicionais. O Customer Insights integra-se ao Machine Learning Studio (clássico) e Azure Machine Learning para usar seus próprios modelos personalizados. Consulte os [experimentos do Machine Learning Studio (clássico)](machine-learning-studio-experiments.md) para obter exemplos de experimentos baseados no Machine Learning Studio (clássico). 
+Os dados unificados no Dynamics 365 Customer Insights são uma fonte para a criação de modelos de machine learning que podem gerar insights de negócios adicionais. O Customer Insights se integra ao Azure Machine Learning para usar seus próprios modelos personalizados.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -35,7 +35,7 @@ Os dados unificados no Dynamics 365 Customer Insights são uma fonte para a cria
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Trabalhar com o designer do Azure Machine Learning
 
-O designer do Azure Machine Learning fornece uma tela visual em que você pode arrastar e soltar conjuntos de dados e módulos, de forma semelhante ao Machine Learning Studio (clássico). Um pipeline em lote criado a partir do designer pode ser integrado ao Customer Insights se eles forem configurados apropriadamente. 
+O designer do Azure Machine Learning fornece uma tela visual onde você pode arrastar e soltar conjuntos de dados e módulos. Um pipeline em lote criado a partir do designer pode ser integrado ao Customer Insights se eles forem configurados apropriadamente. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Trabalhar com o SDK do Azure Machine Learning
 

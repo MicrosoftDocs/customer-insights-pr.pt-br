@@ -1,7 +1,7 @@
 ---
 title: Modelos de aprendizado de máquina personalizados | Microsoft Docs
 description: Trabalhar com modelos personalizados do Azure Machine Learning no Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032928"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881770"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizado de máquina personalizados
+
+> [!NOTE]
+> O suporte para o Machine Learning Studio (clássico) terminará em 31 de agosto de 2024. Recomendamos que você faça a transição para o [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) até essa data.
+>
+> A partir de 1º de dezembro de 2021, você não poderá criar novos recursos do Machine Learning Studio (clássico). Até 31 de agosto de 2024, você pode continuar a usar os recursos existentes do Machine Learning Studio (clássico). Para obter mais informações, consulte [Migrar para o Azure Machine Learning](/azure/machine-learning/migrate-overview).
+
 
 **Inteligência** > **Modelos personalizados** permite que você gerencie fluxos de trabalho com base nos modelos do Azure Machine Learning. Os fluxos de trabalho ajudam você a escolher os dados dos quais deseja gerar insights e mapear os resultados para os dados unificados do cliente. Para obter mais informações sobre a criação de modelos do ML personalizados, consulte [Usar modelos baseados em Aprendizado de Máquina do Azure](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Atualmente, esse recurso oferece suporte a serviços da Web publicados por meio de [Machine Learning Studio (clássico)](https://studio.azureml.net) e [Pipelines em lote do Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
+- Este recurso oferece suporte a serviços Web publicados por meio de [pipelines de lote do Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
 - Você precisa de uma conta de armazenamento Gen2 do Azure Data Lake associada à sua instância do Azure Studio para usar esse recurso. Para obter mais informações, consulte [Criar uma conta de armazenamento do Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
 
 1. Se sua assinatura do Aprendizado de Máquina do Azure estiver em um locatário diferente do Customer Insights, selecione **Entrar** com suas credenciais para a organização selecionada.
 
-1. Selecione **Espaços de Trabalho** associado ao seu serviço da Web. Há duas seções listadas, uma para o Azure Machine Learning v1 (Machine Learning Studio [clássico]) e o Azure Machine Learning v2 (Azure Machine Learning). Se você não tiver certeza de qual espaço de trabalho é o correto para seu serviço da Web do Machine Learning Studio (clássico), selecione **Qualquer um**.
+1. Selecione **Espaços de Trabalho** associado ao seu serviço da Web. 
 
-1. Escolha o serviço Web do Machine Learning Studio (clássico) ou o pipeline do Azure Machine Learning na lista suspensa **Serviço Web que contém seu modelo**. Em seguida, selecione **Próximo**.
-   - Saiba mais sobre como [publicar um serviço Web no Machine Learning Studio (clássico)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Saiba mais sobre como [publicar um pipeline no Azure Machine Learning usando o designer](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Seu pipeline deve ser publicado em um [ponto de extremidade do pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Escolha o pipeline do Azure Machine Learning na lista suspensa **Serviço Web que contém seu modelo**. Em seguida, selecione **Próximo**.    
+   Saiba mais sobre como [publicar um pipeline no Azure Machine Learning usando o designer](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ou [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Seu pipeline deve ser publicado em um [ponto de extremidade do pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Para cada **Entrada do serviço Web**, selecione **Entidade** correspondente nos insights de público-alvo e selecione **Avançar**.
    > [!NOTE]
@@ -62,9 +67,6 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
    > ![Configure um fluxo de trabalho.](media/intelligence-screen2-updated.png "Configurar um fluxo de trabalho")
 
 1. Na etapa **Parâmetros de saída do modelo**, defina as seguintes propriedades:
-   - Machine Learning Studio (clássico)
-      1. Insira a saída **Nome da entidade** para a qual deseja que os resultados de saída do serviço Web fluam.
-   - Aprendizado de Máquina do Azure
       1. Insira a saída **Nome da entidade** para a qual deseja que os resultados de saída do pipeline fluam.
       1. Selecione **Nome do parâmetro de armazenamento de dados de saída** do pipeline em lote no menu suspenso.
       1. Selecione **Nome do parâmetro do Caminho de Saída** do pipeline em lote no menu suspenso.
@@ -93,9 +95,6 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
 1. Para cada **entrada de serviço Web**, você pode atualizar a **Entidade** correspondente usando insights de público-alvo. Em seguida, selecione **Próximo**.
 
 1. Na etapa **Parâmetros de saída do modelo**, defina as seguintes propriedades:
-   - Machine Learning Studio (clássico)
-      1. Insira a saída **Nome da entidade** para a qual deseja que os resultados de saída do serviço Web fluam.
-   - Aprendizado de Máquina do Azure
       1. Insira a saída **Nome da entidade** para a qual deseja que os resultados de saída do pipeline fluam.
       1. Selecione **Nome do parâmetro de armazenamento de dados de saída** para seu pipeline de teste.
       1. Selecione **Nome do parâmetro do Caminho de Saída** para seu pipeline de teste.

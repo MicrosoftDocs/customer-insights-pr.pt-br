@@ -1,7 +1,7 @@
 ---
 title: Usar fontes de dados para ingerir dados
 description: Saiba como importar dados de várias fontes.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732113"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900322"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
@@ -25,19 +25,22 @@ O recurso de insights de público-alvo no Dynamics 365 Customer Insights conecta
 
 ## <a name="add-a-data-source"></a>Adicionar fonte de dados
 
-Consulte os artigos detalhados sobre como adicionar uma fonte de dados, dependendo da opção escolhida.
+Consulte os artigos detalhados para saber como adicionar uma fonte de dados, dependendo da opção que você escolher.
 
-Você pode adicionar uma fonte de dados de três maneiras principais:
+É possível adicionar as seguintes fontes de dados:
 
-- [Por meio de dezenas de conectores do Power Query](connect-power-query.md)
-- [De uma pasta do Common Data Model](connect-common-data-model.md)
-- [Do seu próprio lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Conectores do Power Query](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Se você estiver usando a versão de avaliação, a seção de métodos de importação incluirá uma opção **Biblioteca de dados do Customer Insights**. Escolha essa opção para selecionar um conjunto de dados de exemplo disponível para vários setores. Para obter mais informações, consulte [Avaliação do Dynamics 365 Customer Insights](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adicionar dados de fontes de dados locais
 
-Há suporte à ingestão de dados de fontes de dados locais nos insights de público-alvo com base nos fluxos de dados do Microsoft Power Platform. Os fluxos de dados podem ser habilitados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](create-environment.md) durante a configuração do ambiente.
+Há suporte à ingestão de dados de fontes de dados locais nos insights de público-alvo com base nos fluxos de dados do Microsoft Power Platform. Você pode habilitar Fluxos de dados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](create-environment.md) ao configurar o ambiente.
 
-As fontes de dados criadas após a associação de um ambiente do Dataverse com o Customer Insights usará[fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Remova e recrie fontes de dados que existiam antes que um ambiente do Dataverse fosse associado para [usar os gateways de dados locais](/data-integration/gateway/service-gateway-app).
+As fontes de dados que são criadas após associar um ambiente do Dataverse ao Customer Insights usam [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Você pode remover e recriar fontes de dados que existiam antes de um ambiente do Dataverse ser associado [usando gateways de dados locais](/data-integration/gateway/service-gateway-app).
 
 Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
 

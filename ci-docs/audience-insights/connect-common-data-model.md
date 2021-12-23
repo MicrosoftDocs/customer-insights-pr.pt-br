@@ -1,7 +1,7 @@
 ---
 title: Conectar os dados do Common Data Model a uma conta do Azure Data Lake
 description: Trabalhe com dados do Common Data Model usando o Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033112"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900183"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar a uma pasta do Common Data Model usando uma conta do Azure Data Lake
 
@@ -30,7 +30,7 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
 
 - O Azure Data Lake a partir do qual você deseja se conectar e ingerir dados deve estar na mesma região do Azure que o ambiente do Dynamics 365 Customer Insights. Não há suporte para conexões com uma pasta do Common Data Model de um data lake em uma região diferente do Azure. Para conhecer a região do Azure do ambiente, acesse **Administrador** > **Sistema** > **Sobre** em insights de público-alvo.
 
-- Os dados armazenados em serviços online podem ser armazenados em um local diferente daquele onde os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar ou se conectar a dados armazenados em serviços online, você concorda que os dados podem ser transferidos e armazenados com o Dynamics 365 Customer Insights. [Saiba mais no Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+- Os dados armazenados em serviços online podem ser armazenados em um local diferente daquele onde os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar ou se conectar aos dados armazenados em serviços online, você concorda que os dados podem ser transferidos e armazenados com o Dynamics 365 Customer Insights. [Saiba mais na Central de Confiabilidade da Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Conectar-se a uma pasta do Common Data Model
 
@@ -38,12 +38,11 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
 
 1. Selecione **Adicionar fonte de dados**.
 
-1. Selecione **Conectar-se a uma pasta do Common Data Model**, insira um **Nome** para a fonte de dados e selecione **Avançar**. Nomear diretrizes: 
-   - Comece com uma letra.
-   - Use somente letras e números. Caracteres especiais e espaços não são permitidos.
-   - Use entre 3 e 64 caracteres.
+1. Selecione **Azure Data Lake Storage**, insira um **Nome** para a fonte de dados e selecione **Avançar**.
 
-1. Você pode escolher entre usar uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Insira as informações do **Contêiner** e selecione **Avançar**.
+   - Se solicitado, selecione um dos conjuntos de dados de exemplo que pertencem ao seu setor e, em seguida, selecione **Avançar**. 
+
+1. Você pode escolher entre usar uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Insira o **Endereço do servidor**, selecione **Entrar** e, em seguida, selecione **Avançar**.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo para inserir detalhes da nova conexão do Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Este artigo fornece informações sobre como ingerir dados de uma pasta do Commo
    > [!NOTE]
    > Qualquer arquivo model.json ou manifest.json associado a outra fonte de dados no ambiente não será mostrado na lista.
 
-1. Você obterá uma lista de entidades disponíveis no arquivo model.json ou manifest.json selecionado. Você pode revisar e selecionar da lista de entidades disponíveis e selecionar **Salvar**. Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.
+1. Você verá uma lista de entidades disponíveis no arquivo model.json ou manifest.json selecionado. Analise e selecione na lista de entidades disponíveis e, em seguida, selecione **Salvar**. Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo mostrando uma lista de entidades de um arquivo model.json.](media/review-entities.png)
 
-8. Indique quais entidades de dados você quer habilitar na criação de perfil de dados e selecione **Salvar**. A criação de perfil de dados permite a análise e outros recursos. Você pode selecionar a entidade inteira, que seleciona todos os atributos da entidade, ou selecionar certos atributos de sua escolha. Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.
+8. Indique em quais entidades de dados você quer habilitar a criação de perfis de dados e, em seguida, selecione **Salvar**. A criação de perfil de dados permite a análise e outros recursos. Você pode selecionar a entidade inteira, que seleciona todos os atributos da entidade, ou selecionar certos atributos de sua escolha. Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo mostrando uma criação de perfil de dados.](media/dataprofiling-entities.png)
 

@@ -1,20 +1,20 @@
 ---
-title: Suplemento do Cartão do Cliente para aplicativos Dynamics 365
+title: Suplemento Cartão do Cliente para aplicativos do Dynamics 365 (Vídeo)
 description: Mostre dados de insights do público-alvo em aplicativos Dynamics 365 com este suplemento.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792015"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903973"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
@@ -34,7 +34,7 @@ Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos
   - **Controle de medida**: Requer [ medidas configuradas](measures.md) do tipo de atributos do cliente.
   - **Controle de inteligência**: Requer dados gerados usando [previsões](predictions.md) ou [modelos personalizados](custom-models.md).
   - **Controle de detalhes do cliente**: Todos os campos do perfil estão disponíveis no perfil de cliente unificado.
-  - **Controle de enriquecimento**: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes. O suplemento do cartão oferece suporte a estes enriquecimentos: [Marcas](enrichment-microsoft.md) fornecido pela Microsoft, [Interesses](enrichment-microsoft.md) fornecido pela Microsoft.
+  - **Controle de enriquecimento**: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes. O suplemento de cartão oferece suporte a estes enriquecimentos: [Marcas](enrichment-microsoft.md) fornecido pela Microsoft, [Interesses](enrichment-microsoft.md) fornecido pela Microsoft e [Dados de engajamento do Office](enrichment-office.md) fornecido pela Microsoft.
   - **Controle de contatos**: Requer definição de entidade semântica de tipo de contato.
   - **Controle de linha do tempo**: Requer [atividades configuradas](activities.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Ativar regras de consentimento para segmentos
 description: Siga estas etapas para vincular dados de consentimento e ativar verificações de consentimento em insights de público-alvo. Um administrador também pode desativar as verificações de consentimento.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790764"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884060"
 ---
 # <a name="activate-consent-rules"></a>Ativar regras de consentimento
 
@@ -49,3 +49,6 @@ Para parar de usar dados de consentimento em insights de público-alvo, um admin
 1. Escolha a guia **Consentimento (versão preliminar)**.
 
 1. Na seção **Habilitar verificações de consentimento**, defina a alternância como **Desativado**.
+
+> [!TIP]
+> Para parar de usar o recurso de gerenciamento de consentimento, consulte [Configurações do sistema no Centro de Consentimento (versão preliminar)](../consent-management/system-settings.md).
