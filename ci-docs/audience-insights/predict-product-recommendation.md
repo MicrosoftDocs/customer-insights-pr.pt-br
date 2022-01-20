@@ -1,7 +1,7 @@
 ---
 title: Previsão de recomendação do produto
 description: Preveja os produtos que um cliente provavelmente comprará ou com os quais interagirá.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494525"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967779"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Previsão de recomendação do produto (versão preliminar)
 
@@ -79,11 +79,11 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 1. Defina o **Número de produtos** que você deseja recomendar a um cliente. Esse valor depende de como seu método de entrega preenche os dados. Se você pode recomendar três produtos, defina esse valor adequadamente.
    
    >[!TIP]
-   > Você pode selecionar **Salvar e fechar** a qualquer momento para salvar a previsão como rascunho. Você encontrará a previsão de rascunho na guia **Minhas previsões**.
+   > Você pode selecionar **Salvar rascunho** a qualquer momento para salvar o previsão como rascunho. Você encontrará a previsão de rascunho na guia **Minhas previsões**.
 
-1. Escolha se deseja **Sugerir produtos que os clientes compraram recentemente**.
+1. Escolha se você deseja incluir produtos que os clientes compraram recentemente no campo **Repetir compras esperadas**.
 
-1. Se você selecionou *não* recomendar produtos comprados recentemente, defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada dois anos. Essa janela examinará o histórico de compras dos últimos dois anos e, se encontrar um item, o item será filtrado das recomendações.
+1. Defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada dois anos. Essa janela examinará o histórico de compras dos últimos dois anos e, se encontrar um item, o item será filtrado das recomendações.
 
 1. Selecione **Avançar**.
 

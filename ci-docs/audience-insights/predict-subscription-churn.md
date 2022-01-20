@@ -1,5 +1,5 @@
 ---
-title: Previsão da rotatividade de assinaturas (Vídeo)
+title: Previsão da rotatividade de assinaturas (contém vídeo)
 description: Preveja se um cliente está em risco de não usar mais os produtos ou serviços de assinatura da sua empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903935"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967687"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -77,7 +77,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 1. Insira o número de **Dias desde o término da assinatura** que a sua empresa considera um cliente em um estado rotativo. Esse período geralmente é associado a atividades comerciais como ofertas ou outros esforços de marketing para tentar fidelizar o cliente.
 1. Insira o número de **Dias para consultar no futuro para prever a rotatividade** para definir uma janela para prever a rotatividade. Por exemplo, para prever o risco de rotatividade de seus clientes nos próximos 90 dias para alinhar seus esforços de retenção de marketing. Prever o risco de rotatividade para períodos mais longos ou mais curtos pode dificultar ainda mais a abordagem dos fatores no seu perfil de risco de rotatividade, dependendo dos requisitos comerciais específicos. Selecione **Avançar** para continuar
    >[!TIP]
-   > Você pode selecionar **Salvar e fechar** a qualquer momento para salvar a previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
+   > Você pode selecionar **Salvar rascunho** a qualquer momento para salvar o previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 

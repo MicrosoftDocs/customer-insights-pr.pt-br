@@ -44,7 +44,7 @@
       items:
         - name: Visão geral de fontes de dados
           href: audience-insights/data-sources.md
-        - name: Adicionar fontes de dados por meio de conectores Power Query
+        - name: Adicionar fontes de dados por meio de conectores do Power Query
           href: audience-insights/connect-power-query.md
         - name: Adicionar uma pasta do Common Data Model como uma fonte de dados
           href: audience-insights/connect-common-data-model.md
@@ -80,7 +80,7 @@
       items:
         - name: Enriquecer perfis de cliente
           href: audience-insights/enrichment-hub.md
-        - name: Afinidades de marca e interesse
+        - name: Marcas e interesses
           href: audience-insights/enrichment-microsoft.md
         - name: Endereços aprimorados
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Faça previsão de rotatividade de transações
               href: audience-insights/predict-transactional-churn.md
+            - name: Analisar o sentimento nos comentários do cliente
+              href: audience-insights/sentiment-analysis.md
             - name: Usar modelos personalizados do Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Dados parcialmente ausentes completos

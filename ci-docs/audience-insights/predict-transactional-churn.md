@@ -1,7 +1,7 @@
 ---
-title: Previsão da rotatividade de transações (Vídeo)
+title: Previsão da rotatividade de transações (contém vídeo)
 description: Preveja se um cliente está em risco de não comprar mais seus produtos ou serviços.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904058"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967733"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Previsão de rotatividade de transações (versão preliminar)
 
@@ -103,25 +103,25 @@ Para ambientes baseados em contas comerciais, podemos prever a rotatividade tran
 
 1. Selecione o bloco **Modelo de rotatividade de clientes (versão preliminar)** e, em seguida, selecione **Usar este modelo**.
 
-1. No painel **Modelo de rotatividade de clientes**, escolha **Transação** e selecione **Iniciar**.
+1. No painel **Modelo de rotatividade de clientes (versão preliminar)**, escolha **Transação** e selecione **Introdução**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de tela com a opção de transação selecionada no painel do modelo de rotatividade do cliente.":::
-
+ 
 ### <a name="name-model"></a>Nomear modelo
 
 1. Forneça um nome para o modelo para diferenciá-lo dos outros modelos.
 
 1. Forneça um nome para a entidade de saída usando somente letras e números, sem espaços. Esse é o nome que a entidade de modelo usará. 
 
-1. Selecione **Avançar**.
+1. Selecione **Avançar**
 
 ### <a name="define-customer-churn"></a>Definir rotatividade de clientes
 
-1. Defina uma janela de dias para prever a rotatividade no campo **Identificar os clientes que podem apresentar rotatividade no próximo**. Por exemplo, preveja o risco de rotatividade para seus clientes nos próximos 90 dias a fim de alinhá-lo aos seus esforços de retenção de marketing. A previsão do risco de rotatividade para um período mais longo ou mais curto pode dificultar a abordagem dos fatores no seu perfil de risco de rotatividade, mas depende dos requisitos comerciais específicos.
+1. Defina a **Janela de previsão**. Por exemplo, preveja o risco de rotatividade para seus clientes nos próximos 90 dias a fim de alinhá-lo aos seus esforços de retenção de marketing. A previsão do risco de rotatividade para um período mais longo ou mais curto pode dificultar a abordagem dos fatores no seu perfil de risco de rotatividade, mas depende dos requisitos comerciais específicos.
    >[!TIP]
-   > Você pode selecionar **Salvar e fechar** a qualquer momento para salvar a previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
+   > Você pode selecionar **Salvar rascunho** a qualquer momento para salvar o previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
 
-1. Insira o número de dias para definir a rotatividade no campo **Um cliente apresenta rotatividade quando não faz compras em:**. Por exemplo, se um cliente não fez compras nos últimos 30 dias, ele pode ser considerado como um cliente com rotatividade para sua empresa. 
+1. Insira o número de dias para definir a rotatividade no campo **Definição de rotatividade**. Por exemplo, se um cliente não fez compras nos últimos 30 dias, ele pode ser considerado como um cliente com rotatividade para sua empresa. 
 
 1. Selecione **Avançar** para continuar.
 
@@ -129,19 +129,16 @@ Para ambientes baseados em contas comerciais, podemos prever a rotatividade tran
 
 1. Selecione **Adicionar dados** e escolha o tipo de atividade no painel lateral que contém a transação necessária ou as informações do histórico de compras.
 
-1. Em **Escolher as atividades**, escolha as atividades específicas da atividade selecionada em que deseja que o cálculo se concentre.
+1. Em **Selecionar atividades**, escolha as atividades específicas a partir do tipo de atividade selecionado no qual você deseja concentrar o cálculo.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Painel lateral mostrando a escolha de atividades específicas no tipo semântico.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Painel lateral mostrando a escolha de atividades específicas no tipo semântico.":::
 
-1. Se você ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para fazer isso. A experiência guiada para mapear atividades semânticas é aberta. Mapeie seus dados para os campos correspondentes no tipo de atividade selecionado.
+   Se você ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para fazer isso. A experiência guiada para mapear atividades semânticas é aberta. Mapeie seus dados para os campos correspondentes no tipo de atividade selecionado.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de atividade de configuração de página.":::
+1. Mapeie os atributos semânticos para os campos necessários para executar o modelo. Se os campos abaixo não estiverem preenchidos, configure o relacionamento da sua entidade do histórico de compras com a entidade *Cliente*. Selecione **Salvar**.
 
-1. Depois de mapear a atividade para o tipo semântico correspondente, selecione **Avançar** para prosseguir
+1. Na etapa **Adicionar dados necessários**, selecione **Avançar** para continuar se você não quiser adicionar mais atividades.
 
-1. Mapeie os atributos semânticos para os campos necessários para executar o modelo. Se os campos abaixo não estiverem preenchidos, configure o relacionamento da sua entidade do histórico de compras com a entidade *Cliente*.
-
-1. Selecione **Avançar**
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
 

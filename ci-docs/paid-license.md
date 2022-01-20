@@ -5,21 +5,21 @@ description: Familiarize-se com a experiência de primeira execução do Dynamic
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673422"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977631"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Comece depois de adquirir o Customer Insights
 
 Este artigo explica como dar os primeiros passos no Dynamics 365 Customer Insights depois que sua organização adquirir uma assinatura. Se quiser comprar o Customer Insights, nossas opções de contato estão listadas no [site do Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Depois que comprar uma licença de assinatura do Customer Insights, o administrador global do locatário do Microsoft 365 receberá um email convidando-o para criar o ambiente. 
+Depois de adquirir uma licença de assinatura do Customer Insights, o administrador global do locatário do Microsoft 365 recebe um email que o convida a criar o ambiente. 
 
 O Customer Insights é licenciado por locatário e inclui várias funcionalidades. Você pode adquirir mais capacidade e mais licenças para aumentar a cota padrão. 
 - [Visão geral de preço](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

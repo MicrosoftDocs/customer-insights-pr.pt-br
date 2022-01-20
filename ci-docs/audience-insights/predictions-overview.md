@@ -1,21 +1,20 @@
 ---
 title: Visão geral sobre os cenários de predição com suporte
 description: Cenários de previsão e opções cobertos pelo aplicativo Dynamics 365 Customer Insights.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673948"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977999"
 ---
 # <a name="predictions-overview"></a>Visão geral das previsões
 
@@ -31,6 +30,7 @@ A maneira mais fácil de começar com dados de previsão são os modelos predefi
 - [Recomendação de produto](predict-product-recommendation.md): sugere conjuntos de recomendações de produtos preditivos com base no comportamento de compra e clientes com padrões de compra semelhantes.
 - [Rotatividade da assinatura](predict-subscription-churn.md): prevê se um cliente está em risco por não usar mais os produtos ou serviços de assinatura de sua empresa.
 - [Rotatividade transacional](predict-transactional-churn.md): prevê se um cliente não comprará mais seus produtos ou serviços em determinado período.
+- [Análise de sentimento](sentiment-analysis.md): analise o sentimento dos comentários do cliente e identifique os aspectos comerciais que são frequentemente mencionados.
 
 # <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
 
