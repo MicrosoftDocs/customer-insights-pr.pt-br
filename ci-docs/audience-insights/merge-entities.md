@@ -1,7 +1,7 @@
 ---
 title: Mesclar entidades na unificação de dados
 description: Mescle entidades para criar perfis de clientes unificados.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732758"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Mesclar entidades
 
 A fase de mesclagem na última fase no processo de unificação de dados. Seu objetivo é reconciliar dados conflitantes. Exemplos de dados conflitantes podem incluir um nome de cliente encontrado em dois de seus conjuntos de dados, mas que mostra um pouco diferente em cada um ("Grant Marshall" versus "Grant Marshal") ou um número de telefone que difere no formato (617-803-091X versus 617803091X). A mesclagem desses pontos de dados conflitantes é feita atributo a atributo.
@@ -99,11 +94,13 @@ Na página **Meslar**, selecione **Campos excluídos** para ver a lista de todos
 
 1. Selecione **Salvar** e **Executar** para processar as alterações. 
 
-## <a name="manually-combine-fields"></a>Combinar campos manualmente
+## <a name="combine-fields-manually"></a>Combinar os campos manualmente
 
-Especifique um atributo mesclado manualmente. 
+Especifique um atributo mesclado manualmente.
 
-1. Na página **Mesclar**, selecione **Combinar campos**.
+1. Na página **Mesclar**, selecione **Combinar**.
+
+1. Escolha a opção **Campos**.
 
 1. Especifique a política do vencedor de mesclagem no menu suspenso **Combinar campos por**.
 
@@ -114,6 +111,26 @@ Especifique um atributo mesclado manualmente.
 1. Selecione **Concluído** para aplicar as alterações.
 
 1. Selecione **Salvar** e **Executar** para processar as alterações. 
+
+## <a name="combine-a-group-of-fields"></a>Combinar um grupo de campos
+
+Trate um grupo de campos como uma unidade. Por exemplo, quando nossos registros contêm os campos Endereço1, Endereço2, Cidade, Estado e CEP. Provavelmente não convém mesclar Endereço2 em um registro diferente para que isso torne nossos dados mais completos
+
+1. Na página **Mesclar**, selecione **Combinar**.
+
+1. Escolha a opção **Grupo de campos**.
+
+1. Especifique a política do vencedor de mesclagem no menu suspenso **Classificar grupos por**.
+
+1. Selecione **Adicionar** e escolha se deseja adicionar mais campos ou grupos adicionais aos campos.
+
+1. Informe um **Nome** e um **Nome de saída** para cada campo combinado.
+
+1. Informe um **Nome** para o grupo de campos. 
+
+1. Selecione **Concluído** para aplicar as alterações.
+
+1. Selecione **Salvar** e **Executar** para processar as alterações.
 
 ## <a name="change-the-order-of-fields"></a>Alterar a ordem dos campos
 

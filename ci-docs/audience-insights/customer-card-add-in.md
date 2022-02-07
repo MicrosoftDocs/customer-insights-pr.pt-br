@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945413"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Com o suplemento do Cartão do Cliente instalado em um aplicativo Dynamics 365 suportado, você pode optar por exibir os campos de perfil do cliente, insights e cronograma de atividades. O suplemento recuperará dados do Customer Insights sem afetar os dados no aplicativo conectado Dynamics 365.
 

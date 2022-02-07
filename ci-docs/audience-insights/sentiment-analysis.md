@@ -1,5 +1,5 @@
 ---
-title: Análise semântica de comentários do cliente
+title: Análise de sentimento de comentários do cliente
 description: Saiba como a usar um modelo de análise de sentimento em comentários do cliente no Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951072"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analisar o sentimento nos comentários do cliente (versão preliminar)
 
 Os clientes esperam produtos, serviços e experiências de alta qualidade nos dias de hoje. Especialmente os clientes que compartilham seus comentários. É muito desafiador para as organizações analisar um volume crescente de dados sem diminuir a precisão e aumentar o custo de mão de obra. O Dynamics 365 Customer Insights oferece um modelo de análise de sentimento para comentários do cliente que permite que as organizações analisem seus dados com mais precisão e a um custo menor.
@@ -38,7 +33,7 @@ Para garantir que você possa confiar nos resultados dos modelos, fornecemos inf
 
 Usamos dois **Modelos de processamento de linguagem natural (NLP)**: o primeiro atribui a cada comentário uma pontuação de sentimento. O segundo modelo associa cada comentário a todos os aspectos comerciais aplicáveis. Os modelos são treinados em dados públicos de fontes em redes sociais e nos setores de varejo, restaurantes, produtos de consumo e automotivo.    
   
-- Os aspectos comerciais predefinidos para o modelo associar aos dados de comentários incluem:
+Os aspectos comerciais predefinidos para o modelo associar aos dados de comentários incluem:
 -   Gerenciamento de contas
 -   Finalização de compra e pagamento
 -   Suporte ao cliente

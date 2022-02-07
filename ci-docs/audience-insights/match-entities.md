@@ -1,7 +1,7 @@
 ---
 title: Corresponder entidades para unificação de dados
 description: Corresponda entidades para criar perfis de clientes unificados.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863797"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Corresponder entidades
 
 A fase de correspondência especifica como combinar seus conjuntos de dados em um conjunto de dados de perfil de cliente unificado. Depois de concluir a [etapa de mapeamento](map-entities.md) no processo de unificação de dados, você estará pronto para fazer a correspondência de suas entidades. A fase de correspondência requer pelo menos duas entidades mapeadas.
@@ -35,7 +30,7 @@ Cada correspondência unifica duas ou mais entidades em uma única entidade cons
 
 :::image type="content" source="media/match-page.png" alt-text="Captura de tela da página Corresponder na área Unificar do processo de unificação de dados.":::
   
-A correspondência da entidade principal *eCommerce:eCommerceContacts* é feita com a próxima entidade *LoyaltyScheme:loyCustomers*. Se você tiver mais de duas entidades, será feita a correspondência conjunto de dados resultante da primeira etapa de correspondência com a entidade seguinte.
+A correspondência da entidade principal *eCommerce:eCommerceContacts* é feita com a próxima entidade *LoyaltyScheme:loyCustomers*. O conjunto de dados que resulta da primeira etapa de correspondência é combinado com a entidade a seguir, se você tiver mais de duas entidades.
 
 > [!IMPORTANT]
 > A entidade que você escolhe como sua entidade principal servirá como base para o conjunto de dados de perfis unificado. Entidades adicionais selecionadas durante a fase de correspondência serão adicionadas a essa entidade. Isso não significa que a entidade unificada incluirá *todos* os dados incluídos nesta entidade.
@@ -108,7 +103,7 @@ As regras de correspondência representam conjuntos de condições. Para fazer a
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Alterar a ordem da entidade nas regras de correspondência
 
-Você pode reorganizar entidades para regras de correspondência para alterar a ordem em que são processadas. As regras que estiverem em conflito devido a um pedido alterado serão removidas. Você deve recriar as regras removidas com uma configuração atualizada.
+Você pode reordenar as entidades de acordo com regras de correspondência para alterar a ordem em que elas são processadas. As regras que estiverem em conflito devido a um pedido alterado serão removidas. Você deve recriar as regras removidas com uma configuração atualizada.
 
 1. Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Editar**.
 
@@ -130,17 +125,21 @@ A especificação de regras de eliminação de duplicação não é obrigatória
 
 1. Acesse **Dados** > **Unificar** > **Corresponder**.
 
-1. Na seção **Duplicações mescladas**, selecione **Definir entidades**. Caso as regras de eliminação de duplicação já tenham sido criadas, selecione **Editar**.
+1. Na seção **Detalhes dos registros com duplicação eliminada**, selecione **Definir entidades**. Caso as regras de eliminação de duplicação já tenham sido criadas, selecione **Editar**.
 
 1. No painel **Mesclar preferências**, escolha as entidades às quais deseja aplicar a eliminação de duplicação.
 
-1. Especifique como combinar os registros duplicados e escolha uma das três opções:
-   - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. É a opção de mesclagem padrão.
-   - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir o nível de atualização.
-   - **Menos recente**: identifica o registro vencedor com base na menor recência. Requer uma data ou um campo numérico para definir a recência.
+   1. Especifique como combinar os registros duplicados e escolha uma das três opções:
+      - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. É a opção de mesclagem padrão.
+      - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir o nível de atualização.
+      - **Menos recente**: identifica o registro vencedor com base na menor recência. Requer uma data ou um campo numérico para definir o nível de atualização.
+
+   1. Você também pode selecionar **Avançado** para definir regras de eliminação de duplicação em atributos individuais de uma entidade. Por exemplo, você pode manter o email mais recente E o endereço mais completo de diferentes registros. Expanda a entidade para ver todos os seus atributos e defina qual opção usar para atributos individuais. Se você escolher uma opção baseada em recência, também precisará especificar um campo de data/hora que defina a recência. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Etapa 1 das regras de eliminação de duplicação.](media/match-selfconflation.png "Etapa 1 das regras de eliminação de duplicação")
+      > [!div class="mx-imgBorder"]
+      > ![Etapa 1 das regras de eliminação de duplicação.](media/match-selfconflation.png "Etapa 1 das regras de eliminação de duplicação")
+
+   1. Selecione **Concluído** e aplique suas preferências de mesclagem para a eliminação de duplicação.
  
 1. Depois que as entidades forem selecionadas e a preferência de mesclagem for definida, selecione **Adicionar regra** para definir as regras de eliminação de duplicação no nível da entidade.
    - **Selecionar campo** lista todos os campos disponíveis dessa entidade. Escolha o campo em que deseja verificar se há duplicidades. Escolha campos que provavelmente são exclusivos para cada cliente. Por exemplo, um endereço de email ou a combinação de nome, cidade e número de telefone.
@@ -158,7 +157,7 @@ A especificação de regras de eliminação de duplicação não é obrigatória
 
 1. Quaisquer regras de correspondência personalizadas definidas substituem as regras de eliminação de duplicação. Se uma regra de eliminação de duplicação identificar registros correspondentes e uma regra de correspondência personalizada for definida para nunca corresponder esses registros, esses dois registros não serão correspondidos.
 
-1. Depois que [executar o processo de correspondência](#run-the-match-process), você verá as estatísticas de eliminação de duplicação nos blocos de métricas principais.
+1. Depois de [executar o processo de correspondência](#run-the-match-process), você verá as estatísticas de eliminação de duplicação nos blocos de métricas principais.
 
 ### <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicação como uma entidade
 
@@ -222,7 +221,23 @@ Você pode reconfigurar e ajustar a maioria dos parâmetros de correspondência.
 
 - **Exclua uma regra** selecionando o símbolo **Excluir**.
 
-## <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
+## <a name="advanced-options"></a>Opções avançadas
+
+### <a name="add-exceptions-to-a-rule"></a>Adicionar exceções a uma regra
+
+Na maioria dos casos, a correspondência de entidades direciona a perfis de usuários únicos com dados consolidados. Para gerenciar dinamicamente casos raros de falsos positivos e falsos negativos, você pode definir exceções para uma regra de correspondência. As exceções são aplicadas após o processamento das regras de correspondência e evitam a correspondência de todos os registros que atendem aos critérios de exceção.
+
+Por exemplo, se sua regra de correspondência combinar sobrenome, cidade e data de nascimento, o sistema identificará gêmeos com o mesmo sobrenome que moram na mesma cidade com o mesmo perfil. Você poderá especificar uma exceção que não corresponda aos perfis se o nome nas entidades combinadas não for o mesmo.
+
+1. Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Editar** na regra à qual você deseja adicionar condições.
+
+1. No painel **Editar regra**, selecione **Adicionar exceção**.
+
+1. Especifique os critérios de exceção. 
+
+1. Selecione **Concluído** para salvar a regra.
+
+### <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
 
 Você pode especificar condições que substituem a lógica de correspondência padrão. Há quatro opções disponíveis: 
 
@@ -241,7 +256,7 @@ Você pode especificar condições que substituem a lógica de correspondência 
 
 1. Escolha a opção de correspondência personalizada da lista suspensa **Tipo personalizado** e selecione **Baixar modelo**. Você precisa de um modelo separado para cada opção de correspondência.
 
-1. Um arquivo de modelo é baixado. Abra-o e preencha os detalhes. O modelo contém campos para especificar os valores da chave primária e da entidade a serem usados na correspondência personalizada. Por exemplo, se você quiser que a chave primária *12345* da entidade *Vendas* sempre corresponda à chave primária *34567* da entidade *Contato*, preencha no modelo:
+1. Abra o arquivo de modelo baixado e preencha os detalhes. O modelo contém campos para especificar os valores da chave primária e da entidade a serem usados na correspondência personalizada. Por exemplo, se você quiser que a chave primária *12345* da entidade *Vendas* sempre corresponda à chave primária *34567* da entidade *Contato*, preencha no modelo:
     - Entity1: Sales
     - Entity1Key: 12345
     - Entity2: Contact
@@ -268,7 +283,7 @@ Você pode especificar condições que substituem a lógica de correspondência 
 
 1. Selecione **Executar** na página **Corresponder** para iniciar o processo de correspondência. Outras regras de correspondência especificadas serão substituídas pela configuração de correspondência personalizada.
 
-### <a name="known-issues"></a>Problemas conhecidos
+#### <a name="known-issues"></a>Problemas conhecidos
 
 - A autocombinação não mostra os dados normalizados em entidades de eliminação de duplicação. No entanto, ela aplica a normalização internamente durante a eliminação de duplicação. É o comportamento esperado para todas as normalizações. 
 - Se a configuração do tipo semântico for removida na fase de **Mapeamento** em que uma regra de correspondência usa Mapeamento de alias ou Bypass personalizado, a normalização não será aplicada. Ela só acontece se você desmarcar o tipo semântico após configurar a normalização na regra de correspondência, pois o tipo semântico será desconhecido.

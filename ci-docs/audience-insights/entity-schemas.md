@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380729"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Esquemas de entidades no Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 O [Common Data Model](/common-data-model/) é uma especificação declarativa e uma definição de entidades padrão que representam os conceitos e atividades comumente usados em uma variedade de aplicações de negócios e de produtividade. Este modelo está sendo estendido aos dados observacionais e analíticos. O Common Data Service oferece entidades de negócios bem definidas, modulares e extensíveis, como Conta, Unidade de Negócios, Ocorrência, Contato, Cliente Potencial, Oportunidade e Produto, bem como interações e relações entre fornecedores, trabalhadores e clientes, como atividades e contratos de nível de serviço. Qualquer pessoa pode desenvolver e estender definições do Common Data Model para capturar ideias adicionais específicas de negócios.
 

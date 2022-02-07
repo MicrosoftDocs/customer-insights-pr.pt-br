@@ -1,7 +1,7 @@
 ---
 title: Dados da empresa aprimorados
 description: Enriqueça e normalize os dados da empresa com os modelos da Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927568"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Enriquecimento dos perfis da empresa com dados da empresa aprimorados
 
 Use os modelos da Microsoft e os dados da empresa compilados para corrigir, complementar e padronizar os perfis da sua empresa. Usaremos o [Formato Common Data Model](/common-data-model/schema/core/applicationcommon/account) para melhor precisão e insights.
@@ -82,17 +77,17 @@ Para iniciar o processo de enriquecimento, selecione **Executar** na barra de co
 
 Após a conclusão do processo de enriquecimento, você poderá analisar os dados dos perfis de clientes recém-enriquecidos em **Meus enriquecimentos**. Além disso, você encontrará a hora da última atualização e o número de perfis enriquecidos.
 
-Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando **Exibir dados enriquecidos**.
+Você pode ver um exemplo dos dados enriquecidos no bloco **Versão preliminar de clientes enriquecidos**. Selecione **Ver mais** e, depois, a guia **Dados** para acessar uma visão detalhada de cada perfil enriquecido.
 
 ### <a name="overview-card"></a>Cartão de visão geral
 
 O cartão de visão geral mostra detalhes sobre a cobertura do enriquecimento. 
 
-* **Clientes processados e alterados**: o número de perfis de clientes que foram enriquecidos com sucesso.
+* **Empresas processadas e alteradas**: o número de perfis de empresas que foram enriquecidas com êxito.
 
-* **Clientes processados e não alterados**: o número de perfis de clientes que foram reconhecidos mas que não foram alterados. Isso geralmente acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
+* **Empresas processadas e não alteradas**: o número de perfis de empresas que foram reconhecidas, mas não foram alteradas. Isso geralmente acontece quando os dados de entrada são válidos e não podem ser aprimorados pelo enriquecimento.
 
-* **Clientes não processados e não alterados**: o número de perfis de clientes que não foram reconhecidos. Geralmente para dados de entrada que são inválidos ou não são compatíveis com o enriquecimento.
+* **Empresas não processadas e não alteradas**: o número de perfis de empresas de clientes que não foram reconhecidas. Isso normalmente acontece para dados de entrada que são inválidos ou não são compatíveis com o enriquecimento.
 
 ## <a name="next-steps"></a>Próximas etapas
 
