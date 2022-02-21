@@ -1,7 +1,7 @@
 ---
 title: Suplemento Cartão do Cliente para aplicativos do Dynamics 365 (contém vídeo)
 description: Mostre dados de insights do público-alvo em aplicativos Dynamics 365 com este suplemento.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085193"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
 
@@ -113,5 +118,26 @@ O Suplemento do Cartão do Cliente não é atualizado automaticamente. Para atua
 
 1. Depois de iniciar o processo de atualização, você verá um indicador de carregamento até que a atualização seja concluída. Se não houver uma versão mais recente, a atualização exibirá uma mensagem de erro.
 
+## <a name="troubleshooting"></a>Solução de Problemas
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Os controles do Suplemento do Cartão do Cliente não encontram dados
+
+**Problema:**
+
+Mesmo com campos de ID configurados corretamente, os controles não conseguem encontrar dados dos clientes.  
+
+**Resolução:**
+
+1. Verifique se você configurou o Suplemento do Cartão seguindo as instruções: [Configurar o Suplemento do Cartão do Cliente](#configure-the-customer-card-add-in) 
+
+1. Consulte a configuração de ingestão de dados. Edite a fonte de dados do sistema do Dynamics 365 que contém o GUID de ID de contato. Se o GUID de ID de contato for mostrado com caracteres maiúsculos no editor do Power Query, siga estas etapas: 
+    1. Edite a fonte de dados para abri-la no editor do Power Query.
+    1. Selecione a coluna de ID de contato.
+    1. Selecione **Transformar** na barra de cabeçalho para ver as ações disponíveis.
+    1. Selecione **minúsculas**. Verifique se os GUIDs na tabela agora estão em minúsculas.
+    1. Salvar a fonte de dados.
+    1. Execute processos de ingestão, unificação e downstream de dados para propagar as alterações no GUID. 
+
+Depois de concluir a atualização completa, os controles do Suplemento do Cartão do Cliente devem mostrar os dados esperados. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

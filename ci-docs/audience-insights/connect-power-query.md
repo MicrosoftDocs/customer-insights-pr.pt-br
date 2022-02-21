@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934964"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092058"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar-se a uma fonte de dados do Power Query
 
@@ -30,7 +30,7 @@ A adição de fontes de dados com base nos conectores do Power Query geralmente 
 
 1. Selecione **Adicionar fonte de dados**.
 
-1. Selecione **Microsoft Power Query** e, em seguida, selecione **Avançar**.
+1. Selecione **Microsoft Power Query**.
 
 1. Forneça um **Nome** para a fonte de dados e selecione **Avançar** para criar a fonte de dados.
 
@@ -47,12 +47,12 @@ A adição de fontes de dados com base nos conectores do Power Query geralmente 
 
 1. Você também poderá transformar seus dados. Selecione uma entidade para editar ou transformar. Use as opções na janela do Power Query para aplicar transformações. Cada transformação é listada em **Etapas aplicadas**. O Power Query fornece várias opções predefinidas de transformação. Para obter mais informações, consulte a [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
 
-1. Você pode adicionar entidades adicionais à sua fonte de dados, selecionando **Obter dados** na caixa de diálogo **Editar consultas**.
-
    É recomendável usar as seguintes transformações:
 
-   - Se você estiver ingerindo dados de um arquivo CSV, a primeira linha geralmente contém cabeçalhos. Vá para **Transformar tabela** e selecione **Usar cabeçalhos como primeira linha**.
-   - Certifique-se de que o tipo de dados esteja definido de forma adequada.
+   - Se você estiver ingerindo dados de um arquivo CSV, a primeira linha geralmente contém cabeçalhos. Acesse **Transformar** e selecione **Usar a primeira linha como cabeçalho**.
+   - Certifique-se de que o tipo de dados esteja definido de forma adequada. Por exemplo, no caso de campos de data, selecione um tipo de data.
+
+1. Para adicionar outras entidades à fonte de dados na caixa de diálogo **Editar consultas**, acesse **Página Inicial** e selecione **Obter dados**.
 
 1. Selecione **Salvar** na parte inferior da janela do Power Query para salvar as transformações. Depois de salvar, você encontrará sua fonte de dados em **Dados** > **Fontes de dados**.
 

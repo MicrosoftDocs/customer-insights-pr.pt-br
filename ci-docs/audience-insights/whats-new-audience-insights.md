@@ -1,7 +1,7 @@
 ---
 title: Recursos novos e futuros
-description: 'Informações sobre novos recursos, melhorias e correções de bugs.'
-ms.date: 01/27/2022
+description: Informações sobre novos recursos, melhorias e correções de bugs.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088271"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Atualizações de janeiro de 2022
+
+As atualizações de janeiro de 2022 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimento dos comentários do cliente
+
+O Customer Insights fornece um novo recurso baseado em IA para sintetizar o sentimento do cliente e identificar aspectos de negócios específicos como oportunidades para melhorias direcionadas. Ao analisar os comentários escritos por seus clientes, você pode obter insights precisos com um baixo custo. Análise de sentimentos baseada em modelos de Processamento de Linguagem Natural (NLP) que geram dois insights derivados para cada ID do cliente. Uma pontuação de sentimento (de -5 a 5) e uma lista de aspectos de negócios aplicáveis. 
+
+Para obter mais informações, consulte [Analisar sentimento nos comentários do cliente (versão preliminar)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Atualizações de dezembro de 2021
@@ -37,7 +53,7 @@ Para obter mais informações, confira [Encaminhamento de logs no Dynamics 365 C
 
 Use dados do Microsoft Office 365 para enriquecer os perfis das contas dos clientes com insights sobre engajamentos por meio de aplicativos do Office 365. Os dados de engajamento consistem em atividades de email e reunião, que são agregadas no nível da conta. Por exemplo, o número de emails de uma conta comercial ou o número de reuniões com a conta. Nenhum dado sobre usuários individuais é compartilhado. Este enriquecimento está disponível nas seguintes regiões: Reino Unido, Europa, América do Norte.
 
-Para obter mais informações, confira [Enriquecer perfis de clientes com dados de engajamento (versão preliminar)](enrichment-office.md)
+Para obter mais informações, consulte [Enriquecer perfis de clientes com dados de engajamento (versão preliminar)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Recursos avançados de unificação de dados
 

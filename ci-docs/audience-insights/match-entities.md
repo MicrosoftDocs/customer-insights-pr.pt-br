@@ -1,7 +1,7 @@
 ---
 title: Corresponder entidades para unificação de dados
 description: Corresponda entidades para criar perfis de clientes unificados.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098821"
 ---
-
 # <a name="match-entities"></a>Corresponder entidades
 
 A fase de correspondência especifica como combinar seus conjuntos de dados em um conjunto de dados de perfil de cliente unificado. Depois de concluir a [etapa de mapeamento](map-entities.md) no processo de unificação de dados, você estará pronto para fazer a correspondência de suas entidades. A fase de correspondência requer pelo menos duas entidades mapeadas.
@@ -24,13 +29,7 @@ A página de correspondência tem três seções:
 
 ## <a name="specify-the-match-order"></a>Especifique a ordem de correspondência
 
-Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
-
-Cada correspondência unifica duas ou mais entidades em uma única entidade consolidada. Ao mesmo tempo, ela mantém os registros exclusivos do cliente. Por exemplo, selecionamos duas entidades: **eCommerce:eCommerceContacts** como a entidade principal e **LoyaltyScheme:loyCustomers** como entidade secundária. A ordem das entidades especifica a ordem na qual o sistema tentará fazer a correspondência dos registros.
-
-:::image type="content" source="media/match-page.png" alt-text="Captura de tela da página Corresponder na área Unificar do processo de unificação de dados.":::
-  
-A correspondência da entidade principal *eCommerce:eCommerceContacts* é feita com a próxima entidade *LoyaltyScheme:loyCustomers*. O conjunto de dados que resulta da primeira etapa de correspondência é combinado com a entidade a seguir, se você tiver mais de duas entidades.
+Cada correspondência unifica duas ou mais entidades em uma única entidade consolidada. Ao mesmo tempo, ela mantém os registros exclusivos do cliente. A ordem de correspondência indica a ordem em que o sistema tenta corresponder os registros.
 
 > [!IMPORTANT]
 > A entidade que você escolhe como sua entidade principal servirá como base para o conjunto de dados de perfis unificado. Entidades adicionais selecionadas durante a fase de correspondência serão adicionadas a essa entidade. Isso não significa que a entidade unificada incluirá *todos* os dados incluídos nesta entidade.
@@ -38,9 +37,18 @@ A correspondência da entidade principal *eCommerce:eCommerceContacts* é feita 
 > Há duas considerações que podem ajudá-lo a escolher a hierarquia de suas entidades:
 >
 > - Escolha a entidade com os dados de perfil mais completos e confiáveis sobre seus clientes como entidade principal.
-> - Escolha a entidade que tenha vários atributos em comum com outras entidades (por exemplo, nome, número de telefone ou endereço de email) como entidade principal.
+> - Escolha a entidade que tem vários atributos em comum com outras entidades (por exemplo, nome, número de telefone ou endereço de email) como entidade principal.
 
-Depois que especificar a ordem de correspondência, você verá os pares de correspondência definidos na seção **Detalhes dos registros correspondentes** em **Dados** > **Unificar** > **Corresponder**. As principais métricas estarão vazias até que o processo de correspondência seja concluído.
+1. Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
+1. Selecione **Ordem da entidade**. Por exemplo, selecione **eCommerce:eCommerceContacts** como a entidade principal e **LoyaltyScheme:loyCustomers** como segunda entidade. 
+1. Para definir todos os registros na entidade como um cliente exclusivo e correspondido a cada entidade a seguir, selecione **Incluir tudo**.
+1. Selecione **Concluído**. 
+
+Depois de especificar a ordem de correspondência, os pares de correspondência definidos são exibidos na seção **Detalhes dos registros correspondentes** em **Dados** > **Unificar** > **Corresponder**. As principais métricas ficam vazias até que o processo de correspondência seja concluído.
+
+:::image type="content" source="media/match-page.png" alt-text="Captura de tela da página Corresponder na área Unificar do processo de unificação de dados.":::
+  
+A correspondência da entidade principal *eCommerce:eCommerceContacts* é feita com a próxima entidade *LoyaltyScheme:loyCustomers*. O conjunto de dados que resulta da primeira etapa de correspondência é combinado com a entidade a seguir, se você tiver mais de duas entidades.
 
 ## <a name="define-rules-for-match-pairs"></a>Definir regras para pares de correspondência
 
@@ -50,7 +58,7 @@ O aviso **Precisa de regras** próximo ao nome de uma entidade sugere que nenhum
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Captura de tela da seção Detalhes dos registros correspondentes com o controle para adicionar regras destacado.":::
 
-1. Selecione **Adicionar regras** em uma entidade na seção **Detalhes dos registros correspondentes** para definir regras de correspondência.
+1. Selecione **Adicionar regra** abaixo de uma entidade na seção **Detalhes dos registros correspondentes** para definir as regras de correspondência.
 
 1. No painel **Criar regra**, configure as condições para a regra.
 
@@ -61,15 +69,15 @@ O aviso **Precisa de regras** próximo ao nome de uma entidade sugere que nenhum
    - **Entidade/Campo (segunda linha)**: escolha um atributo relacionado ao atributo da entidade especificada na primeira linha.
 
    - **Normalizar**: selecione uma das opções de normalização a seguir para os atributos selecionados. 
-     - Espaço em branco: remove todos os espaços. *Hello   World* torna-se *Olá, Mundo*.
+     - Numerais: converte outros sistemas de numeração, como numerais romanos, em numerais arábicos. *VIII* torna-se *8*.
      - Símbolos: remove todos os símbolos e caracteres especiais. *Head&Shoulder* torna-se *HeadShoulder*.
      - Texto em minúsculas: converte todos os caracteres em minúsculas. *TODAS EM MAIÚSCULAS e Capitalização de Título* torna-se *todas em maiúsculas e capitalização de título*.
+     - Tipo (telefone, nome, endereço, organização): padroniza nomes, títulos, números de telefone, endereços etc. 
      - Unicode para ASCII: converte a notação Unicode em caracteres ASCII. */u00B2* torna-se *2*.
-     - Numerais: converte outros sistemas de numeração, como numerais romanos, em numerais arábicos. *VIII* torna-se *8*.
-     - Tipos semânticos: padroniza nomes, títulos, números de telefone, endereços, etc. 
+     - Espaço em branco: remove todos os espaços. *Hello   World* torna-se *Olá, Mundo*.
 
    - **Precisão**: defina o nível de precisão a ser aplicado a esta condição. 
-     - **Básico**: escolha entre *Baixo*, *Médio*, *Alto* e *Exato*. Selecione **Exata** para corresponder apenas aos registros que correspondem a 100%. Selecione um dos outros níveis para corresponder aos registros que não são 100% idênticos.
+     - **Básico**: escolha entre *Baixo*, *Médio*, *Alto* e *Exato*. Selecione **Exato** para corresponder apenas os registros com 100% de correspondência. Selecione um dos outros níveis para corresponder aos registros que não são 100% idênticos.
      - **Personalizado**: defina uma porcentagem de correspondência para os registros. O sistema só fará a corresponderá dos registros que ultrapassarem esse limite.
 
 1. Forneça um **Nome** para a regra.
@@ -92,7 +100,7 @@ Para fazer a correspondência das entidades somente se os atributos atenderem a 
 
 ### <a name="add-rules-to-a-match-pair"></a>Adicionar regras a um par de correspondência
 
-As regras de correspondência representam conjuntos de condições. Para fazer a correspondência das entidades com base em vários atributos, adicione mais regras
+As regras de correspondência representam conjuntos de condições. Para fazer a correspondência das entidades com base em vários atributos, adicione mais regras.
 
 1.  Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Adicionar regra** na entidade à qual você deseja adicionar regras.
 
@@ -117,7 +125,7 @@ Você pode reordenar as entidades de acordo com regras de correspondência para 
 
 Além de [regras para a correspondência entre entidades](#define-rules-for-match-pairs), você também pode especificar regras de eliminação de duplicação. *Eliminação de duplicação* é outro processo durante a correspondência de registros. Ela identifica registros duplicados e os mescla em um registro. Os registros de origem são vinculados ao registro mesclado com IDs alternativas.
 
-Os registros com duplicação eliminada serão usados no processo de correspondência entre entidades. A eliminação de duplicação ocorre em entidades individuais e pode ser configurada para cada entidade usada em pares correspondentes.
+Os registros com duplicação eliminada são usados no processo de correspondência entre entidades. A eliminação de duplicação ocorre em entidades individuais e pode ser configurada para cada entidade usada em pares correspondentes.
 
 A especificação de regras de eliminação de duplicação não é obrigatória. Se essas regras não estiverem configuradas, as regras definidas pelo sistema serão aplicadas. Elas combinam todos os registros em um único registro antes de passar os dados da entidade para a correspondência entre entidades para o aprimoramento do desempenho.
 
