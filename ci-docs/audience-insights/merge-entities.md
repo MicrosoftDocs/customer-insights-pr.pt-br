@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046549"
 ---
-
 # <a name="merge-entities"></a>Mesclar entidades
 
 A fase de mesclagem na última fase no processo de unificação de dados. Seu objetivo é reconciliar dados conflitantes. Exemplos de dados conflitantes podem incluir um nome de cliente encontrado em dois de seus conjuntos de dados, mas que mostra um pouco diferente em cada um ("Grant Marshall" versus "Grant Marshal") ou um número de telefone que difere no formato (617-803-091X versus 617803091X). A mesclagem desses pontos de dados conflitantes é feita atributo a atributo.

@@ -9,8 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
+ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
+ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "8027038"
 ---
-
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar a uma pasta do Common Data Model usando uma conta do Azure Data Lake
 
 Este artigo fornece informações sobre como ingerir dados de uma pasta do Common Data Model usando sua conta Gen2 do Azure Data Lake Storage.
