@@ -1,7 +1,7 @@
 ---
 title: Mapeamentos semânticos (versão preliminar)
 description: Visão geral dos mapeamentos semânticos e como usá-los.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881816"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622921"
 ---
-# <a name="semantic-mappings-preview"></a>Mapeamentos semânticos (versão preliminar)
+# <a name="semantic-mappings"></a>Mapeamentos semânticos
 
 Os mapeamentos semânticos permitem que você mapeie seus dados de não atividade para esquemas predefinidos. Esses esquemas ajudam os insights do público-alvo a entender melhor seus atributos de dados. O mapeamento semântico e os dados fornecidos permitem novos insights e recursos nos insights do público-alvo. Para mapear seus dados de atividade para os esquemas, revise a documentação [Atividades](activities.md).
 
@@ -75,7 +75,8 @@ Os mapeamentos semânticos permitem que você mapeie seus dados de não atividad
 
 1. Para executar um mapeamento semântico posteriormente, selecione o mapeamento semântico e selecione **Atualizar**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
 
 ## <a name="manage-existing-semantic-mappings"></a>Gerenciar mapeamentos semânticos existentes
 
@@ -90,41 +91,5 @@ Em **Dados** > **Mapeamentos semânticos (versão preliminar)**, você pode visu
 - **Renomear**: Abre uma caixa de diálogo onde você pode inserir um nome diferente para o mapeamento semântico selecionado. Selecione **Salvar** para aplicar suas alterações.
 
 - **Excluir**: Abre uma caixa de diálogo para confirmar a exclusão do mapeamento semântico selecionado. Você também pode excluir mais de um mapeamento semântico de uma vez, selecionando os mapeamentos semânticos e o ícone de exclusão. Selecione **Excluir** para confirmar a exclusão.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Usar um mapeamento de entidade semântica ContactProfile para criar atividades no nível do contato
-
-Depois de criar um mapeamento de entidade semântica *ContactProfile*, você pode capturar atividades de contatos. Isso permite ver na linha do tempo de atividades de uma conta qual contato foi responsável por cada atividade. A maioria das etapas segue a configuração típica de mapeamento de atividades.
-
-   > [!NOTE]
-   > Para que as atividades no nível do contato funcionem, você deve ter os atributos **AccountID** e **ContactID** para cada registro nos seus dados de atividade.
-
-1. [Defina um mapeamento de entidade semântica *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) e execute o mapeamento semântico.
-
-1. Nos insights de público-alvo, vá para **Dados** > **Atividades**.
-
-1. Selecione **Adicionar Atividade** para criar uma nova atividade.
-
-1. Nomeie a atividade, selecione a entidade de atividade de origem e selecione a chave primária da entidade de atividade.
-
-1. Na etapa **Relacionamentos**, crie um relacionamento indireto entre seus dados de origem de atividade e contas, usando seus dados de contato como uma entidade intermediária. Para obter mais informações, consulte [caminhos de relacionamento direto e indireto](relationships.md#relationship-paths).
-   - Relacionamento de exemplo para uma atividade chamada *Compras*:
-      - **Dados da Atividade de Origem de Compras** > **Dados de Contato** no atributo **ContactID**
-      - **Dados de Contato** > **Dados de Conta** no atributo **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuração do relacionamento de exemplo.":::
-
-1. Depois de configurar os relacionamentos, selecione **Avançar** e conclua a configuração do seu mapeamento de atividades. Para obter etapas detalhadas sobre a criação de atividades, consulte [definir uma atividade](activities.md).
-
-1. Execute seus mapeamentos de atividades.
-
-1. Suas atividades no nível do contato agora estarão visíveis na linha do tempo do cliente.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final após a configuração das atividades de contato":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtragem da linha do tempo de atividades no nível do contato
-
-Depois de configurar um mapeamento de atividades no nível do contato e executá-lo, a linha do tempo de atividades dos seus clientes será atualizada. Ela inclui as IDs ou nomes, dependendo da sua configuração *ContactProfile*, das atividades em que atuaram. Você pode filtrar atividades por contatos na linha do tempo para ver contatos específicos de seu interesse. Além disso, você pode ver todas as atividades que não estão atribuídas a um contato específico, selecionando **Atividades não mapeadas para um Contato**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opções de filtragem disponíveis para atividades no nível do contato.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

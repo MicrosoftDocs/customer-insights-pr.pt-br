@@ -1,86 +1,76 @@
 ---
 title: Exportar dados do Customer Insights para o Marketo
-description: Saiba como configurar a conexão e exportar para o Marketo.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Saiba como configurar a conexão com o Marketo.
+ms.date: 11/12/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 34ccee2894f1f2b552d0c6a88a6810e2dfc677a3
+ms.sourcegitcommit: 0b1d3ca11b8ba362a959da0eea15c37e9cdba084
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619151"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "4570389"
 ---
-# <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para o Marketo (versão preliminar)
+# <a name="connector-for-marketo-preview"></a>Conector para Marketo (versão preliminar)
 
 Exporte segmentos de perfis de clientes unificados para gerar campanhas, fornecer marketing por email e usar grupos específicos de clientes com o Marketo.
 
-## <a name="prerequisites-for-connection"></a>Pré-requisitos para conexão
+## <a name="prerequisites"></a>Pré-requisitos
 
 -   Você deve ter uma [conta do Marketo](https://login.marketo.com/) e as credenciais de administrador correspondentes.
 -   Há listas existentes no Marketo e as IDs correspondentes. Para obter mais informações, consulte [listas do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Você deve ter [segmentos configurados](segments.md).
 -   Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
 
-## <a name="known-limitations"></a>Limitações conhecidas
+## <a name="connect-to-marketo"></a>Conectar-se ao Marketo
 
-- Até 1 milhão de perfis de clientes por exportação para o Marketo.
-- A exportação para o Marketo é limitada a segmentos.
-- Exportar segmentos com um total de 1 milhão de perfis de clientes pode levar até 3 horas. 
-- O número de perfis de clientes que você pode exportar para o Marketo depende e está limitado ao seu contrato com o Marketo.
+1. Vá para **Administrador** > **Exportar destinos**.
 
-## <a name="set-up-connection-to-marketo"></a>Configurar conexão com o Marketo
+1. Em **Marketo**, selecione **Configurar**.
 
-1. Vá para **Administração** > **Conexões**.
+1. Dê ao seu destino de exportação um nome reconhecível no campo **Nome de exibição**.
 
-1. Selecione **Adicionar conexão** e escolha **Marketo** para configurar a conexão.
+1. Insira **[ID de cliente do Marketo, Segredo do cliente e Nome de Host do Ponto de Extremidade REST](https://developers.marketo.com/rest-api/authentication/)**.
 
-1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
-
-1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Insira **[ID de cliente do Marketo, Segredo do cliente e Nome de Host do Ponto de Extremidade REST](https://developers.marketo.com/rest-api/authentication/)**. O Nome do host do ponto de extremidade REST é somente o nome do host, sem `https://`. Exemplo: `xyz-abc-123.mktorest.com`. 
+1. Insira sua **[ID de lista do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
 
 1. Selecione **Aceito** para confirmar a **Conformidade e privacidade dos dados** e selecione **Conectar** para inicializar a conexão com o Marketo.
 
 1. Selecione **Adicionar a si mesmo como usuário de exportação** e forneça suas credenciais do Customer Insights.
 
-1. Selecione **Salvar** para concluir a conexão.
+   :::image type="content" source="media/export-connect-marketo.png" alt-text="Captura de tela de exportação da conexão com o Marketo":::
 
-## <a name="configure-an-export"></a>Configurar uma exportação
+1. Selecione **Próximo** para configurar a exportação.
 
-Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+## <a name="configure-the-connector"></a>Configurar o conector
 
-1. Vá para **Dados** > **Exportações**.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente. 
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
-
-1. No campo **Conexão para exportação**, escolha uma conexão da seção do Marketo. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
-
-1. Insira sua **[ID da lista do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. A ID da lista é um valor puramente numérico. Por exemplo, se a sua ID da lista do Marketo for ST12345A7, remova o caractere antes e depois dos numerais e insira `12345`. 
-
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. 
-
-1. Opcionalmente, você pode exportar **Nome**, **Sobrenome**, **Cidade**, **Estado** e **País/Região** para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
+1. Opcionalmente, você pode exportar **Nome**, **Sobrenome**, **Cidade**, **Estado** e **País/Região** como campos adicionais para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
 
 1. Selecione os segmentos que você deseja exportar. Você pode exportar até 1 milhão de perfis de clientes no total para o Marketo.
 
+   :::image type="content" source="media/export-segment-marketo.png" alt-text="Selecionar campos e segmentos para exportar para o Marketo":::
+
 1. Selecione **Salvar**.
 
-Salvar uma exportação não a executa imediatamente.
+## <a name="export-the-data"></a>Exportar os dados
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). No Marketo, agora você pode encontrar seus segmentos em [listas do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Você pode [exportar dados sob demanda](export-destinations.md). A exportação também será executada a cada [atualização agendada](system.md#schedule-tab). No Marketo, agora você pode encontrar seus segmentos em [listas do Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
+## <a name="known-limitations"></a>Limitações conhecidas
+
+- Até 1 milhão de perfis por exportação para o Marketo.
+- A exportação para o Marketo é limitada a segmentos.
+- A exportação de segmentos com um total de 1 milhão de perfis pode levar até 3 horas. 
+- O número de perfis que você pode exportar para o Marketo depende e está limitado ao seu contrato com o Marketo.
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 
 Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao Marketo, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que o Marketo cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Seu Administrador do Dynamics 365 Customer Insights pode remover este destino de exportação a qualquer momento para interromper o uso dessa funcionalidade.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes unificados
 description: Use recursos para enriquecer os dados do cliente.
-ms.date: 02/07/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098775"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672985"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (visualização)
 
@@ -37,17 +37,14 @@ Na guia **Descobrir**, você encontrará todas as opções de enriquecimento sup
 - [Dados demográficos](enrichment-experian.md) fornecidos pela Experian
 - [Dados personalizados](enrichment-SFTP-custom-import.md) via SFTP 
 - [Azure Mapas](enrichment-azure-maps.md) fornecido pela Microsoft
-- [Dados de localização](enrichment-here.md) fornecidos pela HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
 
 - [Dados de empresas](enrichment-leadspace.md) fornecidos pela Leadspace
 - [Endereços aprimorados](enrichment-enhanced-addresses.md) fornecidos pela Microsoft 
-- [Dados aprimorados da empresa](enrichment-enhanced-company-data.md) fornecidos pela Microsoft
 - [Dados de localização](enrichment-here.md) fornecidos pela HERE Technologies 
 - [Dados personalizados](enrichment-SFTP-custom-import.md) via SFTP 
 - [Azure Mapas](enrichment-azure-maps.md) fornecido pela Microsoft
-- [Dados de engajamento da conta](enrichment-office.md) fornecido pela Microsoft
 
 ---
 

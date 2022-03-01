@@ -1,7 +1,7 @@
 ---
 title: Dados do Customer Insights no Microsoft Dataverse
 description: Use entidades Customer Insights como tabelas no Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866920"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645204"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
@@ -45,7 +45,6 @@ Algumas entidades de saída de insights de público-alvo estão disponíveis com
 - [CustomerMeasure](#customermeasure)
 - [Enriquecimento](#enrichment)
 - [Previsão](#prediction)
-- [Associação ao segmento](#segment-membership)
 
 
 ### <a name="customerprofile"></a>Perfil do Cliente
@@ -121,17 +120,4 @@ Esta tabela contém a saída das previsões do modelo.
 | Modelo                | Cadeia de Caracteres      | Nome do modelo                                                |
 | Valores               | Cadeia de caracteres JSON | Lista de atributos produzidos pelo modelo |
 | msdynci_predictionid | GUID        | GUID determinístico gerado a partir de msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Associação ao segmento
-
-Esta tabela contém informações de associação ao segmento de perfis do cliente.
-
-| Column        | Type | Description                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID do Perfil do Cliente        |
-| SegmentProvider      | String       | Aplicativo que publica os segmentos. Padrão: Insights de público-alvo         |
-| SegmentMembershipType | String       | Tipo de cliente registrado por esta associação ao segmento. Oferece suporte a vários tipos, como Cliente, Contato ou Conta. Padrão: Cliente  |
-| Segmentos       | Cadeia de caracteres JSON  | Lista de segmentos exclusivos dos quais o perfil do cliente é membro      |
-| msdynci_identifier  | String   | Identificador exclusivo do registro da associação ao segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID determinístico gerado de `msdynci_identifier`          |
+| msdynci_identifier   | Cadeia de Caracteres      |  `Model|ModelProvider|CustomerId`                      |

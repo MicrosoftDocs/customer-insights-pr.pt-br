@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673368"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645296"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Crie um novo espaço de trabalho e adicione membros
 
@@ -26,9 +26,9 @@ Ao criar uma área de trabalho, você seleciona o tipo de dados nos quais deseja
 
 ## <a name="create-a-new-workspace"></a>Criar um espaço de trabalho
 
-O processo de criação de um espaço de trabalho inclui a configuração do *ambiente* para organizar o espaço de trabalho. Um ambiente é um espaço que pode conter um ou mais espaços de trabalho. Você pode usar um ambiente para gerenciar seus espaços de trabalho e conexões ao recurso de insights de público-alvo.
+O processo de criação de um espaço de trabalho inclui a configuração do *ambiente* para organizar o espaço de trabalho. Um ambiente é um espaço que pode conter um ou mais espaços de trabalho. Você pode usar um ambiente para gerenciar seus espaços de trabalho e conexões com o recurso de insights de público do Customer Insights.
 
-1. Selecione **+Novo** no alternador de espaço de trabalho.
+1. Selecione **Novo** no alternador de espaço de trabalho.
 
    :::image type="content" source="media/new-workspace.png" alt-text="Página do Customer Insights com texto explicativo no painel de navegação e na descrição.":::
 

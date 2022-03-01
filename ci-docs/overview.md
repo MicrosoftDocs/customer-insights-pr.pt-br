@@ -7,12 +7,13 @@ ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: b2dc5a1159f8baea1fa3c686de5ac294842b3e26
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977554"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036497"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Visão geral do produto Dynamics 365 Customer Insights
 
@@ -32,10 +33,5 @@ Para escolher um recurso
 1. No painel de navegação, selecione **Todos os aplicativos** para abrir a janela **Escolher seu foco**.
 1. Selecione **Ir agora** para navegar até o recurso de sua escolha.
 
-## <a name="pricing-and-licensing"></a>Preço e licenças
-
-O Customer Insights é licenciado por locatário e inclui várias funcionalidades. Você pode adquirir capacidade adicional e licença para aumentar a cota padrão. 
-- [Visão geral de preço](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
-- Capacidade e direitos: [Guia de licenciamento do Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

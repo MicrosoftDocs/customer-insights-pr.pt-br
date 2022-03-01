@@ -1,22 +1,20 @@
 ---
-title: Mapear entidades e atributos para unificação de dados
-description: Selecione entidades, atributos, chaves primárias e tipos semânticos para mapear dados para o perfil unificado do cliente.
-ms.date: 10/18/2020
+title: Mapear entidades para unificação de dados
+description: Mapeie dados para criar perfis de clientes unificados.
+ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: adkuppa
 manager: shellyha
-searchScope:
-- ci-map
-ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673228"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405046"
 ---
 # <a name="map-entities-and-attributes"></a>Mapear entidades e atributos
 
@@ -37,14 +35,14 @@ Para obter mais informações sobre o fluxo geral de unificação de dados, cons
 3. Selecione as entidades e atributos que deseja usar nas fases de *correspondência* e *mesclagem*. Você pode selecionar os atributos necessários individualmente de uma entidade ou incluir todos os atributos de uma entidade marcando a caixa de seleção **Incluir todos os campos** no nível da entidade. Recomendamos selecionar pelo menos duas entidades para se beneficiar do processo de unificação de dados.
 
    > [!div class="mx-imgBorder"]
-   > ![Adicionar exemplos de entidades.](media/data-manager-configure-map-add-entities-example.png "Adicionar exemplo de entidades")
+   > ![Adicionar exemplo de entidades](media/data-manager-configure-map-add-entities-example.png "Adicionar exemplo de entidades")
 
    Neste exemplo, estamos adicionando as entidades **eCommerceContacts** e **loyCustomers**. Ao escolher essas entidades, você pode obter insights nos quais clientes de negócios online são membros do programa de fidelidade.
    
    Você pode pesquisar palavras-chave em todos os atributos e entidades para selecionar os atributos necessários que deseja mapear.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemplo de campos de pesquisa.](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de pesquisa")
+   > ![Exemplo de campos de pesquisa](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de pesquisa")
 
 4. Selecione **Aplicar** para confirmar suas seleções.
 
@@ -57,7 +55,7 @@ Depois de selecionar suas entidades, a página **Mapa** lista as entidades selec
 - **Tipo de semântico de atributo**: Categorias de seus atributos, como endereço de email ou nome. Para usar modelos de IA para previsão inteligente de semântica, economizar tempo e melhorar a precisão, defina **Mapeamento inteligente** como **ATIVADO**. O mapeamento inteligente destaca a recomendação de semântica baseada em IA no campo **Tipo**. Se defini-lo como **DESATIVADO**, você verá nossas recomendações de mapeamento regulares. Você pode selecionar qualquer tipo semântico da lista de opções disponível e substituir a seleção sugerida.
 
 > [!div class="mx-imgBorder"]
-> ![Tipo de atributo e previsão semântica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e previsão semântica")
+> ![Tipo de atributo e previsão semântica](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e previsão semântica")
 
 Também é possível adicionar um tipo semântico personalizado. Selecione o campo de tipo para um atributo e digite seu nome de tipo semântico personalizado. Dessa forma, você também pode alterar os tipos de atributos que foram identificados pelo sistema.
 
@@ -66,7 +64,7 @@ Todos os atributos para os quais um tipo semântico é automaticamente identific
 Atributos que não são mapeados automaticamente para um tipo semântico são agrupados na seção **Definir os dados nos campos não mapeados**. Selecione o campo de tipo semântico para os atributos não mapeados ou insira seu nome de tipo de atributo personalizado.
 
 > [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo.](media/data-manager-configure-map-add-attributes.png "Chave primária e tipo de atributo")
+> ![Chave primária e tipo de atributo](media/data-manager-configure-map-add-attributes.png "Chave primária e tipo de atributo")
 
 > [!NOTE]
 > Um campo deve ser mapeado para o tipo semântico Person.FullName para preencher o nome do cliente no cartão do cliente. Caso contrário, os cartões do cliente aparecerão sem nome. 
@@ -78,7 +76,7 @@ Atributos que não são mapeados automaticamente para um tipo semântico são ag
 2. No painel **Editar campos**, adicione ou remova atributos e entidades. Use a pesquisa ou role para localizar e selecionar seus atributos e entidades de interesse. Você não pode remover um atributo ou uma entidade se eles já foram correspondidos.
 
    > [!div class="mx-imgBorder"]
-   > ![Adicionar ou remover atributos.](media/configure-data-map-edit.png "Adicionar ou remover atributos")
+   > ![Adicionar ou remover atributos](media/configure-data-map-edit.png "Adicionar ou remover atributos")
 
 3. Selecione **Aplicar**.
 
@@ -96,7 +94,7 @@ Continue com as etapas de unificação e certifique-se de que o atributo que con
 
 Para organizações (Visualização), o tipo de atributo deve ser mapeado para "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo B2B.](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
+> ![Chave primária e tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
 
 ## <a name="next-step"></a>Próxima etapa
 
@@ -104,6 +102,3 @@ Como parte do processo de unificação de dados, vá para a página **Correspond
 
 > [!TIP]
 > Confira o seguinte vídeo: [Introdução: Criando um Perfil de Cliente Unificado](https://youtu.be/oBfGEhucAxs).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

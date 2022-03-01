@@ -1,58 +1,64 @@
 ---
 title: Usar fontes de dados para ingerir dados
 description: Saiba como importar dados de várias fontes.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046574"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887880"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 O recurso de insights de público-alvo no Dynamics 365 Customer Insights conecta-se aos dados de um amplo conjunto de fontes. A conexão a uma fonte de dados é conhecida como o processo de *ingestão de dados*. Depois de ingerir os dados, você pode [unificar](data-unification.md) e agir sobre eles.
 
 ## <a name="add-a-data-source"></a>Adicionar fonte de dados
 
-Consulte os artigos detalhados para saber como adicionar uma fonte de dados, dependendo da opção que você escolher.
+Consulte os artigos detalhados sobre como adicionar uma fonte de dados, dependendo da opção escolhida.
 
-É possível adicionar as seguintes fontes de dados:
+Você pode adicionar uma fonte de dados de três maneiras principais:
 
-- [Conectores do Power Query](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Se você estiver usando a versão de avaliação, a seção de métodos de importação incluirá uma opção **Biblioteca de dados do Customer Insights**. Escolha essa opção para selecionar um conjunto de dados de exemplo disponível para vários setores. Para obter mais informações, consulte [Avaliação do Dynamics 365 Customer Insights](../trial-signup.md).
+- [Por meio de dezenas de conectores do Power Query](connect-power-query.md)
+- [De uma pasta do Common Data Model](connect-common-data-model.md)
+- [Do seu próprio lake do Common Data Service](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adicionar dados de fontes de dados locais
 
-Há suporte à ingestão de dados de fontes de dados locais nos insights de público-alvo com base nos fluxos de dados do Microsoft Power Platform. Você pode habilitar Fluxos de dados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](create-environment.md) ao configurar o ambiente.
+A ingestão de dados de fontes de dados locais no Audience Insights tem suporte com base nos fluxos de dados do Power Platform. Os fluxos de dados podem ser habilitados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) durante a configuração do ambiente.
 
-As fontes de dados que são criadas após associar um ambiente do Dataverse ao Customer Insights usam [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Você pode remover e recriar fontes de dados que existiam antes de um ambiente do Dataverse ser associado [usando gateways de dados locais](/data-integration/gateway/service-gateway-app).
+As fontes de dados criadas após a associação de um ambiente do Dataverse com o Customer Insights usará[fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateways de dados. Remova e recrie fontes de dados que existiam antes que um ambiente do Dataverse fosse associado para usar os gateways de dados locais.
 
-Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
+Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Power Platform, onde você pode exibir e configurar gateways de dados locais.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de tela da página de fontes de dados mostrando links que apontam para o ambiente do Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Analisar dados ingeridos
 
 Você verá o nome de cada fonte de dados ingeridos, seu status e a última vez em que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por cada coluna.
 
 > [!div class="mx-imgBorder"]
-> ![Fonte de dados adicionada.](media/configure-data-datasource-added.png "Fonte de dados adicionada")
+> ![Fonte de dados adicionada](media/configure-data-datasource-added.png "Fonte de dados adicionada")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Status  |Descrição  |
+|---------|---------|
+|Êxito   |A fonte de dados foi inserida com sucesso se um horário for mencionado na coluna **Atualizado**.
+|Não iniciada   |A fonte de dados ainda não recebeu dados ou ainda está no modo de rascunho.         |
+|Atualizando    |A ingestão de dados está em andamento. Você pode cancelar esta operação selecionando **Interromper atualização** na coluna **Ações**. A interrupção da atualização de uma fonte de dados a reverterá para o último estado de atualização.       |
+|Falhou     |A ingestão de dados encontrou erros.         |
 
-O carregamento de dados pode levar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página **Entidades**. Para obter mais informações, consulte [Entidades](entities.md).
+Selecione o valor na coluna **Status** de qualquer fonte de dados para revisar mais detalhes. No painel **Detalhes de progresso**, expanda **Fontes de dados**. Selecione **Ver detalhes** para obter mais informações sobre o status de atualização, incluindo detalhes do erro e atualizações do processo downstream.
+
+O carregamento de dados pode demorar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página **Entidades**. Para obter mais informações, consulte [Entidades](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Atualizar uma fonte de dados
 
@@ -64,7 +70,7 @@ Para atualizar uma fonte de dados sob demanda, siga estas etapas:
 
 1. Nos insights de público-alvo, vá para **Dados** > **Fontes de dados**.
 
-2. Selecione as reticências verticais ao lado da fonte de dados que você deseja atualizar e selecione **Atualizar** na lista suspensa.
+2. Selecione as reticências verticais ao lado da fonte de dados que deseja atualizar e selecione **Atualizar** na lista suspensa.
 
 3. A fonte de dados agora é acionada para uma atualização manual. Atualizar um fonte de dados atualizará o esquema da entidade e os dados de todas as entidades especificadas na fonte de dados.
 

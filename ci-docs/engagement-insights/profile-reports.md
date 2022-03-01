@@ -1,34 +1,39 @@
 ---
-title: Habilitar relatórios de perfis prontos para uso (OOB)
-description: Como criar relatórios de perfis prontos para uso (OOB) agrupados por gênero, idade e município ou região de origem.
+title: Habilitar relatórios de perfis prontos para uso
+description: Como criar relatórios de perfis prontos para uso agrupados por gênero, idade e município ou região de origem.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 10/01/2021
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cba2c112e9e475ceb047fe627fb41e6c8a27e1e7
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582772"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033938"
 ---
-# <a name="out-of-box-oob-unified-profile-reports"></a>Relatórios de perfis prontos para uso (OOB)
+# <a name="out-of-box-profile-reports"></a>Relatórios de perfis prontos para uso
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Um relatório de perfil unificado é uma coleção de visualização de dados para ajudá-lo a entender como os usuários se comportam. Ao conectar-se ao recurso de insights de público-alvo do Customer Insights, o insights de engajamento pode exibir relatórios OOB com informações sobre perfis unificados de clientes. Esse relatório inclui o número de perfis que você possui, agrupados por gênero, idade e localização geográfica. Para obter informações sobre perfis de clientes, consulte [Perfis de clientes](../audience-insights/customer-profiles.md).
+Um relatório é uma coleção de visualização de dados para ajudá-lo a entender como os usuários se comportam. Quando se conectam aos insights de público-alvo do Customer Insights, os insights de interação podem mostrar um relatório com informações sobre perfis de clientes unificados. Esse relatório inclui o número de perfis que você possui, agrupados por gênero, idade e localização geográfica.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Um administrador de ambiente deve [criar um vínculo entre insights de engajamento e insights do público-alvo](integrate-audience-insights-engagement-insights.md).
+O ambiente dos insights de público-alvo deve armazenar dados em uma conta do Azure Data Lake Storage gerenciada pelo cliente.
+
+Se você estiver usando uma versão de avaliação do recurso de insights de público-alvo ou um ambiente em um data lake gerenciado do Customer Insights, [fale conosco](https://go.microsoft.com/fwlink/?linkid=2145734) para obter ajuda.  
+
 
 ## <a name="enable-the-customer-profile-report"></a>Habilitar o relatório de perfil do cliente
 
-Depois de especificar a ligação entre insights de engajamento e insights do público-alvo, o administrador pode então conceder acesso a outras pessoas da organização para visualização do relatório. O administrador de ambiente que configura a conexão automaticamente tem acesso ao relatório. 
+Um administrador de ambiente deve [criar uma conexão com os insights de público-alvo](configure-connections.md).
+
+Depois de especificar os detalhes da conexão, o administrador pode conceder acesso a outras pessoas na organização para ver o relatório. O administrador de ambiente que configura a conexão automaticamente tem acesso ao relatório. 
 
 Depois de concluir a conexão, o recurso **Perfis** estará disponível no painel de navegação esquerdo. 
 

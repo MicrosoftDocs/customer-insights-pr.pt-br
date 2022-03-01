@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466334"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461089"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Use dimensões demográficas para dividir dados comportamentais
 
@@ -29,7 +29,7 @@ Ao usar dimensões demográficas do perfil unificado, os usuários de insights d
 - Um ambiente de insights de participação no qual você tem dados de perfil do cliente vinculados ao ambiente de insights do público-alvo em que os perfis de cliente são criados. Mais informações: [Criar um link entre insights do público-alvo e insights de participação](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Depois de criar um link entre os ambientes de insights do público-alvo e de insights de participação, talvez você deseje apenas dados específicos para propriedades de perfil do cliente, que podem ser úteis como dimensões em insights de participação. Para obter mais informações acesse [Habilite atributos e segmentos de perfis unificados de insights do público-alvo](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Depois de criar um link entre os ambientes de insights do público-alvo e de insights de participação, talvez você deseje apenas dados específicos para propriedades de perfil do cliente, que podem ser úteis como dimensões em insights de participação. Para obter mais informações acesse [Habilite atributos e segmentos de perfis unificados de insights do público-alvo](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Criar um novo relatório personalizado
 

@@ -4,26 +4,26 @@ description: Saiba mais sobre as regiões e as áreas geográficas onde o servi�
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/28/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645387"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483283"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilidade regional do Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Insights de participação, um recurso do Dynamics 365 Customer Insights, gradualmente inclui mais regiões em que os clientes podem escolher para armazenar seus dados. Os administradores podem escolher uma região ao [criar um novo ambiente](create-new-environment.md). 
+Insights de participação, um recurso do Dynamics 365 Customer Insights, gradualmente inclui mais regiões em que os clientes podem escolher para armazenar seus dados. Os administradores podem escolher uma região ao [criar um novo ambiente](manage-environments-workspaces.md#create-an-environment). 
 
-Quando você configura insights de participação pela primeira vez, pode escolher a região enquanto passa pela [experiência guiada de primeira execução](quickstart.md). Depois, todo novo ambiente permitirá que você escolha a região em que os dados serão armazenados.
+Quando você configura insights de participação pela primeira vez, pode escolher a região enquanto passa pela [experiência guiada de primeira execução](quickstart.md). Depois, cada novo ambiente permite escolher a região em que os dados serão armazenados.
 
-No momento, oferecemos suporte às geografias dos EUA e da Europa. Os usuários podem optar por estas regiões: Oeste dos EUA, Leste dos EUA, Norte da Europa e Oeste da Europa.
+Atualmente, existem duas regiões geográficas: EUA e Europa. Os usuários podem escolher entre a região Oeste dos EUA e a região Europa Setentrional.
 
 Uma organização pode manter ambientes em diferentes regiões. Por exemplo, o Ambiente A armazena dados no Oeste dos EUA e o Ambiente B, na Europa Setentrional.
 

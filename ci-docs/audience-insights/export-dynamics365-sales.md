@@ -1,48 +1,41 @@
 ---
 title: Exportar dados do Customer Insights para o Dynamics 365 Sales
-description: Saiba como configurar a conexão e exportar para o Dynamics 365 Sales.
-ms.date: 03/03/2021
-ms.reviewer: mhart
+description: Saiba como configurar a conexão com o Dynamics 365 Sales.
+ms.date: 02/01/2021
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
-ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8090909"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268994"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Usar segmentos no Dynamics 365 Sales (versão preliminar)
+# <a name="connector-for-dynamics-365-sales-preview"></a>Conector para Dynamics 365 Sales (versão preliminar)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Use seus dados de cliente para criar listas de marketing, fluxos de trabalho de acompanhamento e enviar promoções com o Dynamics 365 Sales.
 
-## <a name="known-limitations"></a>Limitações conhecidas
+## <a name="prerequisite"></a>Pré-requisito
 
-- As exportações para o Dynamics 365 Sales estão limitadas a 100 mil membros por segmento.
-- As exportações de segmentos para o Dynamics 365 Sales podem levar até 3 horas para serem concluídas. 
-
-## <a name="prerequisite-for-connection"></a>Pré-requisitos para conexão
-
-1. Os registros de contatos devem estar presentes no Dynamics 365 Sales antes de exportar um segmento do Customer Insights para o Sales. Leia mais sobre como ingerir contatos no [Dynamics 365 Sales usando o Microsoft Dataverse](connect-power-query.md).
+1. Os registros de contatos devem estar presentes no Dynamics 365 Sales antes de exportar um segmento do Customer Insights para o Sales. Leia mais sobre como ingerir contatos no [Dynamics 365 Sales usando o Common Data Services](connect-power-query.md).
 
    > [!NOTE]
    > Exportar segmentos de insights de público-alvo para o Sales não criará registros de contatos nas instâncias do Sales. Os registros de contatos do Sales devem ser ingeridos em insights de público-alvo e usados como uma fonte de dados. Também será necessário incluí-los na entidade unificada do Customer para mapear IDs de clientes para IDs de contatos antes que os segmentos possam ser exportados.
 
-## <a name="set-up-the-connection-to-sales"></a>Configurar a conexão com o Sales
+## <a name="configure-the-connector-for-sales"></a>Configurar o conector para o Sales
 
-1. Vá para **Administração** > **Conexões**.
+1. Nos insights de público-alvo, vá para **Administrador** > **Destinos de exportação**.
 
-1. Selecione **Adicionar conexão** e escolha **Dynamics 365 Sales** para configurar a conexão.
+1. No **Dynamics 365 Sales**, selecione **Configurar**.
 
-1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
-
-1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Dê ao seu destino de exportação um nome reconhecível no campo **Nome de exibição**.
 
 1. Digite a URL do Sales da sua organização no campo **Endereço do servidor**.
 
@@ -50,24 +43,15 @@ Use seus dados de cliente para criar listas de marketing, fluxos de trabalho de 
 
 1. Mapeie um campo de ID de cliente para a ID de Contato do Dynamics 365.
 
-1. Selecione **Salvar** para concluir a conexão. 
-
-## <a name="configure-an-export"></a>Configurar uma exportação
-
-Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
-
-1. Vá para **Dados** > **Exportações**.
-
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
-
-1. No campo **Conexão para exportação**, escolha uma conexão da seção do Dynamics 365 Sales. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
+1. Selecione **Avançar**.
 
 1. Escolha um ou mais segmentos.
 
-1. Selecione **Salvar**
+1. Selecione **Salvar**.
 
-Salvar uma exportação não a executa imediatamente.
+## <a name="export-the-data"></a>Exportar os dados
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
+Você pode [exportar dados sob demanda](export-destinations.md). A exportação também será executada a cada [atualização agendada](system.md#schedule-tab).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
