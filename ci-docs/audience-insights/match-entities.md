@@ -1,6 +1,6 @@
 ---
 title: Corresponder entidades para unificação de dados
-description: Combine entidades para combinar conjuntos de dados e criar perfis de clientes unificados.
+description: Corresponda entidades para criar perfis de clientes unificados.
 ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648194"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085608"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -120,11 +118,11 @@ Você pode reorganizar entidades para regras de correspondência para alterar a 
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir a eliminação de duplicação em uma entidade correspondente
 
-Além de [regras para a correspondência entre entidades](#define-rules-for-match-pairs), você também pode especificar regras de eliminação de duplicação. *Eliminação de duplicação* é outro processo durante a correspondência de registros. Ela identifica registros duplicados e os mescla em um registro. Os registros de origem são vinculados ao registro mesclado com IDs alternativas.
+Além de [regras para a correspondência entre entidades](#define-rules-for-match-pairs), você também pode especificar regras de eliminação de duplicação. *Eliminação de duplicação* é outro processo durante a correspondência de registros. Ela identifica registros duplicados e os mescla em um único registro. Os registros de origem são vinculados ao registro mesclado com IDs alternativas.
 
-Os registros com duplicação eliminada serão usados no processo de correspondência entre entidades. A eliminação de duplicação ocorre em entidades individuais e pode ser configurada para cada entidade usada em pares correspondentes.
+Os registro com eliminação de duplicação serão usados no processo de correspondência entre entidades. A eliminação de duplicação ocorre em entidades individuais e pode ser configurada para cada entidade usada em pares de correspondência.
 
-A especificação de regras de eliminação de duplicação não é obrigatória. Se essas regras não estiverem configuradas, as regras definidas pelo sistema serão aplicadas. Elas combinam todos os registros em um único registro antes de passar os dados da entidade para a correspondência entre entidades para o aprimoramento do desempenho.
+A especificação de regras de eliminação de duplicação não é obrigatória. Se nenhuma regra desse tipo for configurada, as regras definidas pelo sistema serão aplicadas. Elas combinam todos os registros em um único registro antes de passar os dados da entidade para a correspondência entre entidades para o aprimoramento do desempenho.
 
 ### <a name="add-deduplication-rules"></a>Adicionar regras de eliminação de duplicação
 
@@ -135,12 +133,12 @@ A especificação de regras de eliminação de duplicação não é obrigatória
 1. No painel **Mesclar preferências**, escolha as entidades às quais deseja aplicar a eliminação de duplicação.
 
 1. Especifique como combinar os registros duplicados e escolha uma das três opções:
-   - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. É a opção de mesclagem padrão.
-   - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir o nível de atualização.
+   - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. Esta é a opção de mesclagem padrão.
+   - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir a recência.
    - **Menos recente**: identifica o registro vencedor com base na menor recência. Requer uma data ou um campo numérico para definir a recência.
  
    > [!div class="mx-imgBorder"]
-   > ![Etapa 1 das regras de eliminação de duplicação.](media/match-selfconflation.png "Etapa 1 das regras de eliminação de duplicação")
+   > ![Etapa 1 das regras de eliminação de duplicação](media/match-selfconflation.png "Etapa 1 das regras de eliminação de duplicação")
  
 1. Depois que as entidades forem selecionadas e a preferência de mesclagem for definida, selecione **Adicionar regra** para definir as regras de eliminação de duplicação no nível da entidade.
    - **Selecionar campo** lista todos os campos disponíveis dessa entidade. Escolha o campo em que deseja verificar se há duplicidades. Escolha campos que provavelmente são exclusivos para cada cliente. Por exemplo, um endereço de email ou a combinação de nome, cidade e número de telefone.
@@ -148,7 +146,7 @@ A especificação de regras de eliminação de duplicação não é obrigatória
    - Defina mais condições adicionais selecionando **Adicionar condição**.
  
    > [!div class="mx-imgBorder"]
-   > ![Etapa 2 das regras de eliminação de duplicação.](media/match-selfconflation-rules.png "Etapa 2 das regras de eliminação de duplicação")
+   > ![Etapa 2 das regras de eliminação de duplicação](media/match-selfconflation-rules.png "Etapa 2 das regras de eliminação de duplicação")
 
   É possível criar várias regras de eliminação de duplicação para uma entidade. 
 
@@ -181,9 +179,7 @@ Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Executar** para
 Você encontrará o resultado de uma execução com êxito, a entidade unificada do perfil do cliente, na página **Entidades**. Sua entidade de cliente unificada é chamada **Clientes** na seção **Perfis**. A primeira execução de correspondência com êxito cria a entidade unificada *Cliente*. Todas as execuções de correspondência subsequentes expandem essa entidade.
 
 > [!TIP]
-> Depois de executar o processo de correspondência, selecione o status do processo para abrir o painel **Detalhes da tarefa**. Ele oferece uma visão geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver que entidades participaram do processo de correspondência, que regras foram aplicadas a elas e se as atualizações foram publicadas com êxito.  
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho detalhado para obter os detalhes do processo por meio do link de status da tarefa.":::
+> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
 
 ## <a name="review-and-validate-your-matches"></a>Revise e valide suas correspondências
 
@@ -213,7 +209,7 @@ Experimente diferentes limites de precisão nas condições para encontrar o val
 
 Você pode reconfigurar e ajustar a maioria dos parâmetros de correspondência.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Captura de tela do menu suspenso com as opções de regra de correspondência.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Captura de tela do menu suspenso com opções de regra de correspondência.":::
 
 - **Altere a ordem das suas regras** se você definiu várias regras. Você pode reordenar as regras de correspondência selecionando as opções **Mover para Cima** e **Mover para Baixo** ou arrastando e soltando.
 
@@ -251,7 +247,7 @@ Você pode especificar condições que determinados registros sempre devem corre
 
 1. Vá para **Dados** > **Fontes de dados** e ingira os arquivos de modelo como novas entidades. Depois de ingerido, você pode usá-los para especificar a configuração de Correspondência.
 
-1. Após o upload dos arquivos e entidades estarem disponíveis, selecione a opção **Correspondência personalizada** novamente. Você verá opções para especificar as entidades que deseja incluir. Selecione as entidades necessárias no menu suspenso.
+1. Após o upload dos arquivos e entidades estarem disponíveis, selecione a opção **Correspondência personalizada** novamente. Você verá opções para especificar as entidades que deseja incluir. Selecione as entidades obrigatórias no menu suspenso.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de tela da caixa de diálogo para escolher substituições para um cenário de correspondência personalizado.":::
 

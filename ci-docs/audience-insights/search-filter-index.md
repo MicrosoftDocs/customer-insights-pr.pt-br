@@ -1,34 +1,41 @@
 ---
 title: Procurar e filtrar perfis de cliente
 description: Encontre rapidamente informações sobre perfis unificados de clientes e filtre os atributos especificados.
-ms.date: 11/01/2021
-ms.reviewer: mhart
+ms.date: 04/16/2020
+ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732020"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405056"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfis de clientes: índice de filtro e pesquisa
 
 O resultado da unificação dos dados do cliente é uma entidade de Perfil do Cliente que fornece uma visão unificada da sua base total de clientes. Para [encontrar informações rapidamente sobre um cliente ou grupo de clientes específico](customer-profiles.md), você pode configurar o recurso **Pesquisar** e **Filtrar** na página **Clientes**. Leia para saber como os administradores podem editar os atributos na página **Índice de pesquisa e filtro**, que estão disponíveis para os usuários pesquisarem e filtrarem.
 
-   :::image type="content" source="media/search-filter.png" alt-text="Filtro de pesquisa":::
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!div class="mx-imgBorder"]
+> ![Filtro de pesquisa](media/search-filter.png "Filtro de pesquisa")
 
 ## <a name="add-fields-and-specify-attributes"></a>Adicionar campos e especificar atributos
 
 Se for a primeira vez que você define atributos pesquisáveis como administrador, você precisará primeiro definir os campos indexados. Sugerimos que você escolha todos os atributos pelos quais os usuários possam pesquisar e filtrar clientes na página **Clientes**. Você só pode especificar atributos que existem na entidade Perfil do Cliente que você criou durante o processo de unificação de dados.
 
 1. Abra a página **Clientes** e selecione **Índice de filtro e pesquisa**.
+
+> [!NOTE]
+> Criamos uma configuração padrão do índice de pesquisa nos atributos disponíveis na entidade Cliente a partir dos seguintes tipos semânticos, conforme definido na página Mapa.
+> - Nome, Sobrenome, Nome do meio, Nome Completo da Pessoa
+> - Nome da Organização
+> - Endereço de Email
+> - Número de telefone
+> - Informações sobre local
 
 2. Selecione **+ Adicionar** para especificar os campos indexados.
 
@@ -57,11 +64,4 @@ O menu **Filtro** na página **Clientes** pode incluir um número variável de n
 
 2. Selecione **Salvar** para aplicar suas alterações.
 
-3. Selecione **Executar** quando estiver pronto para aplicar suas configurações. Após o processamento das alterações, você as encontrará nos [cartões de cliente na página Cliente](customer-profiles.md). 
-
-## <a name="next-steps"></a>Próximas etapas
-
-Analise a [página de perfis unificados](customer-profiles.md) para pesquisar perfis ou usar os campos indexados para ver um subconjunto de todos os perfis unificados.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+3. Selecione **Executar** quando estiver pronto para aplicar suas configurações.

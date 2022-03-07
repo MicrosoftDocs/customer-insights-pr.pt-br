@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: fabc3cc9faf4e11f46c396782b561ef61cd0f6d5
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618507"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555339"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Enriqueça os perfis dos clientes com dados demográficos da Experian (versão preliminar)
 
@@ -91,7 +91,7 @@ Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando *
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md) e [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

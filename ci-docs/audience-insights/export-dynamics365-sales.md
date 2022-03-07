@@ -2,19 +2,19 @@
 title: Exportar dados do Customer Insights para o Dynamics 365 Sales
 description: Saiba como configurar a conexão com o Dynamics 365 Sales.
 ms.date: 02/01/2021
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268994"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598095"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Conector para Dynamics 365 Sales (versão preliminar)
 

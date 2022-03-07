@@ -1,20 +1,20 @@
 ---
 title: Trabalhar com APIs
 description: Use APIs e entenda as limitações.
-ms.date: 12/04/2020
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5a03e916676800afdd8692da865a1060952d5c4f
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689116"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016578"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabalhar com APIs do Customer Insights
 
@@ -36,7 +36,7 @@ Este artigo explica como acessar as APIs do Customer Insights, criar um registro
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Habilitar APIs do Customer Insights":::
 
-1. Selecione **Explorar nossas APIs** para experimentar as APIs.
+1. Selecione **Explorar nossas APIs** para [experimentar as APIs](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Escolha uma operação de API e selecione **Experimentar**.
 
@@ -47,6 +47,9 @@ Este artigo explica como acessar as APIs do Customer Insights, criar um registro
 1. Role até a parte inferior do painel lateral e selecione **Enviar**.
 
 A resposta HTTP aparecerá logo abaixo.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Gif animado mostrando como selecionar o teste de APIs.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Criar um registro de aplicativo no portal do Azure
 
@@ -61,6 +64,8 @@ Essas etapas ajudam você a começar a usar as APIs do Customer Insights em um a
 
 1. No seu novo registro de aplicativo, vá para **Permissões de API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animado para definir a permissão da API no registro do aplicativo.":::
+
 1. Selecione **Adicionar uma permissão** e **Customer Insights** no painel lateral.
 
 1. Para **Tipo de permissão**, selecione **Permissões delegadas** e a permissão **user_impersonation**.
@@ -71,9 +76,11 @@ Essas etapas ajudam você a começar a usar as APIs do Customer Insights em um a
 
 Você pode usar a ID do aplicativo/cliente para esse registro de aplicativo na Biblioteca de Autenticação da Microsoft (MSAL) para obter um token de portador para envio com sua solicitação à API.
 
-Para obter mais informações sobre MSAL, consulte [Visão geral da Biblioteca de Autenticação da Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animado para conceder consentimento de administrador.":::
 
-Para obter mais informações sobre o registro do aplicativo no Azure, consulte [A nova experiência de registro de aplicativo do portal do Azure](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Para obter mais informações sobre MSAL, consulte [Visão geral da Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
+
+Para obter mais informações sobre o registro do aplicativo no Azure, consulte [A nova experiência de registro de aplicativo do portal do Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Para obter informações sobre como usar as APIs de nossas bibliotecas de clientes, consulte [Bibliotecas de clientes do Customer Insights](#customer-insights-client-libraries).
 
@@ -83,23 +90,19 @@ A [seção de registro de aplicativo](#create-a-new-app-registration-in-the-azur
 
 1. No registro do seu aplicativo no portal do Azure, vá para **Permissões de API**.
 
-1. Selecione **Adicionar uma permissão** e **Customer Insights** no painel lateral.
+1. Selecione **Adicionar permissão**. 
+
+1. Selecione a guia **APIs que minha organização usa** e escolha **Dynamics 365 AI para Customer Insights** na lista. 
 
 1. Para **Tipo de permissão**, selecione **Permissões de aplicativo** e a permissão **CustomerInsights.Api.All**.
 
 1. Selecione **Adicionar permissões**.
 
-1. Para dar o consentimento do administrador a essa permissão do aplicativo, você precisa adicionar uma Entidade de Serviço.
-
-   1. Instale o módulo PowerShell do Azure Active Directory (AD): `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Conecte-se à sua conta do AD: `Connect-AzureAD -TenantId <your tenant id>`. Você pode encontrar sua ID de locatário em **Visão geral** > **Azure Active Directory**.
-   1. Execute o seguinte comando para adicionar uma Entidade de Serviço do Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` O parâmetro AppId pertence ao aplicativo de API do Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Nome da Entidade de Serviço":::
-
 1. Volte para **Permissões de API** para o registro do seu aplicativo.
 
 1. Selecione **Conceder consentimento do administrador para...** para concluir o registro do aplicativo.
+
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animado para conceder consentimento de administrador.":::
 
 1. Para concluir, é preciso adicionar o nome do registro do aplicativo como um usuário no Customer Insights.    
    Abra o Customer Insights, acesse **Administrador** > **Permissões** e selecione **Adicionar usuário**.
@@ -108,7 +111,7 @@ A [seção de registro de aplicativo](#create-a-new-app-registration-in-the-azur
 
 ## <a name="customer-insights-client-libraries"></a>Bibliotecas de clientes do Customer Insights
 
-Esta seção ajuda você a começar a usar as bibliotecas de clientes disponíveis para as APIs do Customer Insights.
+Esta seção ajuda você a começar a usar as bibliotecas de clientes disponíveis para as APIs do Customer Insights. Todo o código-fonte da biblioteca e os aplicativos de exemplo podem ser encontrados na [página do Customer Insights no GitHub](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +130,7 @@ Saiba como começar a usar as bibliotecas de clientes C# de NuGet.org. Para obte
 
 #### <a name="use-the-c-client-library"></a>Usar a biblioteca de cliente C#
 
-1. Use a [Biblioteca de Autenticação da Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) para obter um `AccessToken` usando seu [registro do Azure App](#create-a-new-app-registration-in-the-azure-portal) existente.
+1. Use a [Biblioteca de Autenticação da Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) para obter um `AccessToken` usando seu [registro do Azure App](#create-a-new-app-registration-in-the-azure-portal) existente.
 
 1. Depois de autenticar e adquirir um token com sucesso, crie um ou use um `HttpClient` existente com a **"Autorização" DefaultRequestHeaders** adicional definida como **Portador <access token>** e **Ocp-Apim-Subscription-Key** definido como [**chave de assinatura** do seu ambiente do Customer Insights](#get-started-trying-the-customer-insights-apis).    
    Redefina o cabeçalho **Autorização** quando apropriado. Por exemplo, quando o token expirou.
@@ -140,3 +143,13 @@ Saiba como começar a usar as bibliotecas de clientes C# de NuGet.org. Para obte
 
 1. A resposta provavelmente será do tipo `object` porque o método pode retornar vários tipos (por exemplo, `IList<InstanceInfo>` e `ApiErrorResult`). Para verificar o tipo de retorno, você pode converter com segurança os objetos nos tipos de resposta especificados na [página de detalhes da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) para essa operação.    
    Se mais informações sobre a solicitação forem necessárias, use os **métodos de mensagem http** para acessar o objeto de resposta bruto.
+
+### <a name="nodejs-package"></a>Pacote NodeJS
+
+Use as bibliotecas de cliente NodeJS disponíveis no NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Pacote Python
+
+Use as bibliotecas de cliente Python disponíveis no PyPi: https://pypi.org/project/customerinsights/
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

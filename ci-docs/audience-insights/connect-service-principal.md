@@ -1,30 +1,28 @@
 ---
 title: Conectar-se a uma conta Gen2 do Azure Data Lake Storage com uma entidade de serviço
 description: Use uma entidade de serviço do Azure para insights de público-alvo para se conectar ao seu próprio data lake ao anexá-lo aos insights de público-alvo.
-ms.date: 02/10/2021
+ms.date: 11/24/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692099"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644074"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectar-se a uma conta Gen2 do Azure Data Lake Storage com uma entidade de serviço do Azure para obter insights de público-alvo
 
 As ferramentas automatizadas que usam os serviços do Azure devem sempre ter permissões restritas. Em vez de fazer com que os aplicativos entrem como um usuário totalmente privilegiado, o Azure oferece entidades de serviço. Continue lendo para saber como conectar insights de público-alvo com uma conta Gen2 do Azure Data Lake Storage usando uma entidade de serviço do Azure em vez de chaves de conta de armazenamento. 
 
-Você pode usar a entidade de serviço para, com segurança, [adicionar ou editar uma pasta do Common Data Model como uma fonte de dados](connect-common-data-model.md) ou [criar um ambiente ou atualizar um existente](get-started-paid.md).
+Você pode usar a entidade de serviço para, com segurança, [adicionar ou editar uma pasta do Common Data Model como uma fonte de dados](connect-common-data-model.md) ou [criar um ambiente ou atualizar um existente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-> [!IMPORTANT]
-> - A conta de armazenamento do Azure Data Lake Gen2 que pretende usar a entidade de serviço deve ter o [Espaço Hierárquico de Nomes (HNS) habilitado](/azure/storage/blobs/data-lake-storage-namespace).
-> - Você precisa de permissões de administrador para sua assinatura do Azure para criar a entidade de serviço.
+Você precisa de permissões de administrador para sua assinatura do Azure para criar a entidade de serviço.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Criar entidade de serviço do Azure para insights de público-alvo
 
@@ -48,7 +46,7 @@ Antes de criar uma entidade de serviço para insights de público-alvo, verifiqu
 
 ### <a name="create-a-new-service-principal"></a>Criar uma entidade de serviço
 
-1. Instale a versão mais recente do **Azure Active Directory PowerShell para Graph**. Para obter mais informações, consulte [Instalar Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
+1. Instale a versão mais recente do **Azure Active Directory PowerShell para Graph**. Para obter mais informações, consulte [Instalar Azure Active Directory PowerShell para Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
    - No seu computador, selecione a tecla Windows e pesquise **Windows PowerShell** e **Executar como Administrador**.
    
    - Na janela do PowerShell que é aberta, digite `Install-Module AzureAD`.
@@ -81,11 +79,11 @@ A propagação das alterações pode levar até 15 minutos.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Insira a ID do recurso do Azure ou os detalhes da assinatura do Azure no anexo da conta de armazenamento para insights de público-alvo.
 
-Anexe uma conta do Azure Data Lake Storage em insights de público-lavo para [armazenar dados de saída](manage-environments.md) ou [usá-los como fonte de dados](connect-dataverse-managed-lake.md). Escolher a opção Azure Data Lake permite que você escolha entre uma abordagem baseada em recursos ou baseada em assinatura.
+Anexe uma conta do Azure Data Lake Storage em insights de público-lavo para [armazenar dados de saída](manage-environments.md) ou [usá-los como fonte de dados](connect-common-data-service-lake.md). Escolher a opção Azure Data Lake permite que você escolha entre uma abordagem baseada em recursos ou baseada em assinatura.
 
 Siga as etapas abaixo para fornecer as informações necessárias sobre a abordagem selecionada.
 
-### <a name="resource-based-storage-account-connection"></a>Conexão de conta de armazenamento baseada em recursos
+### <a name="resounce-based-storage-account-connection"></a>Conexão de conta de armazenamento baseada em recursos
 
 1. Acesse o [portal administrativo do Azure](https://portal.azure.com), entre na sua assinatura e abra a conta de armazenamento.
 
@@ -110,8 +108,7 @@ Siga as etapas abaixo para fornecer as informações necessárias sobre a aborda
 1. Revise a **Assinatura**, o **Grupo de recursos** e o **Nome** da conta de armazenamento para ter certeza de selecionar os valores corretos nos insights de público-alvo.
 
 1. Em insights de público-alvo, escolha os valores ou os campos correspondentes ao anexar a conta de armazenamento.
+
+   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Insira as informações de ID do recurso da conta de armazenamento.":::
    
 1. Continue com as etapas restantes nos insights de público-alvo para anexar a conta de armazenamento.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

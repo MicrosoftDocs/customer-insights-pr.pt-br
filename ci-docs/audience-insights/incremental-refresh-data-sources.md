@@ -1,24 +1,22 @@
 ---
 title: Atualização incremental de fontes de dados baseadas no Power Query
 description: Atualize dados novos e atualizados de grandes fontes de dados baseadas no Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+ms.date: 09/28/2020
+ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900241"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268534"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Atualização incremental de fontes de dados baseadas no Power Query
-
-Este artigo discute como configurar a atualização incremental para fontes de dados com base no Power Query.
 
 A atualização incremental de fontes de dados oferece as seguintes vantagens:
 
@@ -32,9 +30,9 @@ Os insights de público-alvo permitem a atualização incremental de fontes de d
 
 1. [Criar uma nova fonte de dados baseada no Power Query](connect-power-query.md).
 
-1. Forneça um **Nome** para a fonte de dados.
+1. Forneça um nome para a fonte de dados.
 
-1. Selecione uma fonte de dados que ofereça suporte à atualização incremental, como o [banco de dados SQL do Azure](/power-query/connectors/azuresqldatabase).
+1. Selecione uma fonte de dados que ofereça suporte à atualização incremental, como o banco de dados SQL do Azure.
 
 1. Selecione as entidades ou tabelas a serem ingeridas.
 
@@ -46,7 +44,8 @@ Os insights de público-alvo permitem a atualização incremental de fontes de d
 
 1. Em **Configurações de atualização incremental**, você configurará a atualização incremental para todas as entidades selecionadas ao criar a fonte de dados.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurar entidades em uma fonte de dados para atualização incremental.":::
+   > [!div class="mx-imgBorder"]
+   > ![Configurar entidades em uma fonte de dados para atualização incremental](media/incremental-refresh-settings.png "Configurar entidades em uma fonte de dados para atualização incremental")
 
 1. Selecione uma entidade e forneça os seguintes detalhes:
 

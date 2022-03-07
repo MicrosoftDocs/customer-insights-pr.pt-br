@@ -2,19 +2,19 @@
 title: Gerenciar permissões de usuário
 description: Saiba mais sobre permissões e funções de usuário.
 ms.date: 10/27/2020
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689206"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595688"
 ---
 # <a name="user-permissions"></a>Permissões de usuário
 
@@ -74,3 +74,6 @@ Nos insights de público-alvo, vá para **Administrador** > **Permissões** para
 - As funções são especificadas na coluna **Função**.
 - Selecione qualquer título de coluna para classificar os resultados pelo valor dessa coluna.
 - Use o campo **Pesquisar** na parte superior da página para localizar usuários específicos.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

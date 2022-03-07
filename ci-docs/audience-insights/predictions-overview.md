@@ -9,13 +9,12 @@ ms.topic: get-started
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 69ae945b22819521db217508c6fc232876346747
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035995"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095683"
 ---
 # <a name="predictions-overview"></a>Visão geral das previsões
 

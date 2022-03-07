@@ -1,23 +1,20 @@
 ---
-title: Crie uma visão unificada de seus clientes
-description: Passe pelo processo de unificação de dados com seus dados para criar um único conjunto de dados mestre de perfis de clientes.
-ms.date: 10/18/2021
-ms.reviewer: mhart
+title: Unificação de dados
+description: Saiba como unificar os dados ingeridos.
+ms.date: 04/16/2020
+ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: adkuppa
-ms.author: adkuppa
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.custom: intro-internal
-searchScope:
-- ci-unify
-ms.openlocfilehash: 694bfd0e407975af64ca0971a73fe4c3f5ba5a23
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648057"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269638"
 ---
 # <a name="data-unification-overview"></a>Visão geral da unificação de dados
 

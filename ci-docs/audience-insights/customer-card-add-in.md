@@ -1,24 +1,24 @@
 ---
-title: Suplemento Cartão do Cliente para aplicativos do Dynamics 365 (contém vídeo)
+title: Suplemento do Cartão do Cliente para aplicativos Dynamics 365
 description: Mostre dados de insights do público-alvo em aplicativos Dynamics 365 com este suplemento.
-ms.date: 02/02/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085193"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643347"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Com o suplemento do Cartão do Cliente instalado em um aplicativo Dynamics 365 suportado, você pode optar por exibir os campos de perfil do cliente, insights e cronograma de atividades. O suplemento recuperará dados do Customer Insights sem afetar os dados no aplicativo conectado Dynamics 365.
 
@@ -27,14 +27,14 @@ Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O suplemento só funciona com aplicativos baseados em modelo do Dynamics 365, como Vendas ou Customer Service, versão 9.0 e superior.
-- Para que seus dados do Dynamics 365 possam mapear para os perfis dos clientes de insights de público-alvo, recomendamos que eles sejam [ingeridos a partir do aplicativo Dynamics 365 utilizando o conector do Microsoft Dataverse](connect-power-query.md). Se você usar um método diferente para ingerir contatos (ou contas) do Dynamics 365, verifique se `contactid` (ou `accountid`) está definida como a [chave primária para essa fonte de dados na etapa de mapa do processo de unificação de dados](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Para que seus dados Dynamics 365 possam mapear para os perfis dos clientes de insights do público-alvo, eles precisam ser [ingeridos a partir do aplicativo Dynamics 365 utilizando o conector do Microsoft Dataverse](connect-power-query.md).
 - Todos os usuários do Dynamics 365 do Suplemento de Cartão do Cliente devem ser [adicionados como usuários](permissions.md) nos insights do público-alvo para ver os dados.
 - [É preciso que haja recursos de filtro e pesquisa configurados](search-filter-index.md) em insights de público-alvo para que a pesquisa de dados funcione.
 - Cada controle de suplemento depende de dados específicos nos insights do público-alvo. Alguns dados e controles estão disponíveis apenas em ambientes de tipos específicos. A configuração do suplemento irá informá-lo se um controle não estiver disponível devido ao tipo de ambiente selecionado. Saiba mais sobre [casos de uso de ambiente](work-with-business-accounts.md).
   - **Controle de medida**: Requer [ medidas configuradas](measures.md) do tipo de atributos do cliente.
-  - **Controle de inteligência**: requer dados gerados usando [previsões ou modelos personalizados](predictions-overview.md).
+  - **Controle de inteligência**: Requer dados gerados usando [previsões](predictions.md) ou [modelos personalizados](custom-models.md).
   - **Controle de detalhes do cliente**: Todos os campos do perfil estão disponíveis no perfil de cliente unificado.
-  - **Controle de enriquecimento**: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes. O suplemento de cartão oferece suporte a estes enriquecimentos: [Marcas](enrichment-microsoft.md) fornecido pela Microsoft, [Interesses](enrichment-microsoft.md) fornecido pela Microsoft e [Dados de engajamento do Office](enrichment-office.md) fornecido pela Microsoft.
+  - **Controle de enriquecimento**: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
   - **Controle de contatos**: Requer definição de entidade semântica de tipo de contato.
   - **Controle de linha do tempo**: Requer [atividades configuradas](activities.md).
 
@@ -118,26 +118,5 @@ O Suplemento do Cartão do Cliente não é atualizado automaticamente. Para atua
 
 1. Depois de iniciar o processo de atualização, você verá um indicador de carregamento até que a atualização seja concluída. Se não houver uma versão mais recente, a atualização exibirá uma mensagem de erro.
 
-## <a name="troubleshooting"></a>Solução de Problemas
-
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Os controles do Suplemento do Cartão do Cliente não encontram dados
-
-**Problema:**
-
-Mesmo com campos de ID configurados corretamente, os controles não conseguem encontrar dados dos clientes.  
-
-**Resolução:**
-
-1. Verifique se você configurou o Suplemento do Cartão seguindo as instruções: [Configurar o Suplemento do Cartão do Cliente](#configure-the-customer-card-add-in) 
-
-1. Consulte a configuração de ingestão de dados. Edite a fonte de dados do sistema do Dynamics 365 que contém o GUID de ID de contato. Se o GUID de ID de contato for mostrado com caracteres maiúsculos no editor do Power Query, siga estas etapas: 
-    1. Edite a fonte de dados para abri-la no editor do Power Query.
-    1. Selecione a coluna de ID de contato.
-    1. Selecione **Transformar** na barra de cabeçalho para ver as ações disponíveis.
-    1. Selecione **minúsculas**. Verifique se os GUIDs na tabela agora estão em minúsculas.
-    1. Salvar a fonte de dados.
-    1. Execute processos de ingestão, unificação e downstream de dados para propagar as alterações no GUID. 
-
-Depois de concluir a atualização completa, os controles do Suplemento do Cartão do Cliente devem mostrar os dados esperados. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

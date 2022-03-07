@@ -1,7 +1,7 @@
 ---
-title: Enriquecimento de aprimoramento de endereços (contém vídeo)
+title: Enriquecimento de aprimoramento de endereço
 description: Enriqueça e normalize as informações de endereço de perfis de clientes com modelos da Microsoft.
-ms.date: 12/16/2021
+ms.date: 04/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
+ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934909"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "5965564"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços aprimorados
 
@@ -22,13 +22,11 @@ Os endereços dos seus dados podem ser não estruturados, incompletos ou incorre
 
 ## <a name="how-we-enhance-addresses"></a>Como aprimoramos os endereços
 
-Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar componentes e coloca-os em um formato estruturado. Em seguida, usamos a IA para corrigir, completar e padronizar os valores no endereço.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
+Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar seus componentes e os coloca em um formato estruturado. Depois, usamos inteligência artificial para corrigir, completar e padronizar os valores no endereço.
 
 ### <a name="example"></a>Exemplo
 
-As informações de endereço podem estar em um formato não padrão e conter erros de ortografia. O modelo pode corrigir esses problemas e criar endereços consistentes em perfis unificados de clientes.
+As informações de endereço podem estar em formato não padrão e conter erros de ortografia. O modelo pode corrigir esses problemas e criar endereços consistentes em perfis unificados de clientes.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -46,13 +44,13 @@ As informações de endereço podem estar em um formato não padrão e conter er
 
 ### <a name="limitations"></a>Limitações
 
-Os endereços avançados só funcionam com os valores que já existem nos dados de endereço processados. O modelo não: 
+Os endereços avançados só funcionam com os valores que já existem nos dados de endereço processados. O que o modelo não faz: 
 
-1. Verifica se o endereço é um endereço válido.
-2. Verifica se um dos valores, como CEPs ou nomes de rua, são válidos.
-3. Altera valores não reconhecidos.
+1. Verificar se o endereço é válido.
+2. Verificar se algum dos valores, como CEPs ou nomes de ruas, é válido.
+3. Alterar valores que não reconhece.
 
-O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo altera um valor de entrada, como acontece com qualquer modelo baseado em aprendizado de máquina, a precisão de 100% não é garantida.
+O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo muda um valor de entrada, como acontece com qualquer modelo baseado em ML, não há garantia de 100% de precisão.
 
 ## <a name="supported-countries-or-regions"></a>Países ou regiões com suporte
 
@@ -60,10 +58,6 @@ Atualmente, damos suporte a endereços de enriquecimento nestes países ou regi�
 
 - Austrália
 - Canadá
-- França
-- Alemanha
-- Itália
-- Japão
 - Reino Unido
 - Estados Unidos
 
@@ -82,7 +76,7 @@ Os endereços devem conter um valor de país/região. Não processamos endereço
 1. Selecione como os endereços serão formatados em seu conjunto de dados. Escolha **Endereço com um único atributo** se os endereços em seus dados usarem um único campo. Escolha **Endereço com vários atributos** se os endereços em seus dados usarem mais de um campo de dados.
 
    > [!NOTE]
-   > País/região é obrigatório em endereços de atributo único e de vários atributos. Endereços que não contiverem valores de país/região válidos ou com suporte não serão enriquecidos.
+   > O campo País/região é obrigatório em endereços com atributo único e com vários atributos. Endereços que não contiverem valores de país/região válidos ou suportados não serão enriquecidos
 
 1.  Mapeie os campos de endereço da sua entidade de cliente unificada.
 
@@ -102,18 +96,8 @@ Após a conclusão do processo de enriquecimento, você poderá analisar os dado
 
 Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando **Exibir dados enriquecidos**.
 
-### <a name="overview-card"></a>Cartão de visão geral
-
-O cartão de visão geral mostra detalhes sobre a cobertura do enriquecimento. 
-
-* **Clientes processados e alterados**: o número de perfis de clientes que foram enriquecidos com sucesso.
-
-* **Clientes processados e não alterados**: o número de perfis de clientes que foram reconhecidos mas que não foram alterados. Isso geralmente acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
-
-* **Clientes não processados e não alterados**: o número de perfis de clientes que não foram reconhecidos. Geralmente para dados de entrada que são inválidos ou não são compatíveis com o enriquecimento.
-
 ## <a name="next-steps"></a>Próximas etapas
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md), [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para oferecer experiências personalizadas aos seus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

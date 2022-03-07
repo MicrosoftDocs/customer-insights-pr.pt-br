@@ -2,19 +2,19 @@
 title: Guia de amostra para previsão de rotatividade de assinaturas
 description: Use este guia de amostra para experimentar o modelo de previsão de rotatividade de assinatura pronto para uso.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306289"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269822"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guia de amostra para previsão de rotatividade de assinaturas (versão preliminar)
 
@@ -22,7 +22,7 @@ Explicaremos a você um exemplo de ponta a ponta de previsão de rotatividade de
 
 ## <a name="scenario"></a>Cenário
 
-A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem por meio do site Contoso Coffee. Recentemente, eles começaram um negócio de assinatura para seus clientes obterem café regularmente. O objetivo deles é entender quais clientes assinantes podem cancelar sua assinatura nos próximos meses. Saber qual de seus clientes está **propenso a rotacionar**, pode ajudá-los a economizar esforços de marketing, concentrando-se em mantê-los.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que são vendidas por meio do site Contoso Coffee. Recentemente, eles começaram um negócio de assinatura para seus clientes obterem café regularmente. O objetivo deles é entender quais clientes assinantes podem cancelar sua assinatura nos próximos meses. Saber qual de seus clientes está **propenso a rotacionar**, pode ajudá-los a economizar esforços de marketing, concentrando-se em mantê-los.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -128,7 +128,7 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 1. Vá para a guia **Corresponder** e selecione **Definir pedido**.
 
-1. Na lista suspensa **Primária**, escolha **eCommerceContacts : eCommerce** como sua fonte primária e inclua todos os registros.
+1. Na lista suspensa **Primário**, escolha **eCommerceContacts : eCommerce** como fonte primária e inclua todos os registros.
 
 1. Na lista suspensa **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registros.
 
@@ -138,16 +138,16 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 1. Adicione sua primeira condição usando FullName.
 
-   * Para eCommerceContacts, selecione **FullName** na lista suspensa.
-   * Para loyCustomers, selecione **FullName** na lista suspensa.
+   * Para eCommerceContacts selecione **FullName** no menu suspenso.
+   * Para loyCustomers selecione **FullName** no menu suspenso.
    * Selecione o menu suspenso **Normalizar** e escolha **Inserir (telefone, nome, endereço,...)**.
    * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 
 1. Digite o nome **FullName, Email** para a nova regra.
 
    * Adicione uma segunda condição para o endereço de e-mail selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, selecione **Email** na lista suspensa.
-   * Para a entidade loyCustomers, selecione **Email** na lista suspensa. 
+   * Para a entidade eCommerceContacts, escolha **Email** no menu suspenso.
+   * Para a entidade loyCustomers, escolha **Email** no menu suspenso. 
    * Deixe o campo Normalizar em branco. 
    * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 

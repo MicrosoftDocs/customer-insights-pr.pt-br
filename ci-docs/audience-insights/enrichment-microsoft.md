@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305142"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245693"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Enriquecer perfis de clientes com afinidades de marca e interesse (versão prévia)
 
-Use dados proprietários da Microsoft para enriquecer dados de clientes com afinidades de marca e interesse. Essas afinidades são baseadas nos dados de pessoas com dados demográficos semelhantes aos dos seus clientes. Essas informações ajudam a entender e segmentar melhor seus clientes com base em suas afinidades com marcas e interesses específicos.
+Use dados proprietários da Microsoft para enriquecer dados de clientes com afinidades de marca e interesse. Essas afinidades são determinadas com base em dados de pessoas com dados demográficos semelhantes aos de seus clientes. Essas informações ajudam a entender e segmentar melhor seus clientes com base em suas afinidades com marcas e interesses específicos.
 
 Em insights de público-alvo, acesse **Dados** > **Enriquecimento** para [configurar e exibir enriquecimentos](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Para configurar o enriquecimento das afinidades da marca, vá para a guia **Desc
 Para configurar o enriquecimento das afinidades do interesse, vá para a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Interesses**.
 
    > [!div class="mx-imgBorder"]
-   > ![Blocos de marcas e interesses](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
+   > ![Blocos de Marcas e Interesses](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
 
 ## <a name="how-we-determine-affinities"></a>Como determinamos afinidades
 
@@ -35,7 +35,7 @@ Usamos dados de pesquisa online da Microsoft para encontrar afinidades por marca
 
 ## <a name="affinity-level-and-score"></a>Nível e pontuação de afinidade
 
-Em cada perfil de cliente enriquecido, fornecemos dois valores relacionados: nível de afinidade e pontuação de afinidade. Esses valores ajudam a determinar o grau de afinidade para o segmento demográfico do perfil, uma marca ou interesse, em comparação a outros segmentos demográficos.
+Em cada perfil de cliente enriquecido, fornecemos dois valores relacionados – nível de afinidade e pontuação de afinidade. Esses valores ajudam a determinar o grau de afinidade para o segmento demográfico do perfil, uma marca ou interesse, em comparação a outros segmentos demográficos.
 
 O *nível de afinidade* consiste em quatro níveis e *pontuação de afinidade* é calculado em uma escala de 100 pontos que mapeia para os níveis de afinidade.
 
@@ -53,7 +53,7 @@ Dependendo da granularidade que deseja para medir a afinidade, é possível usar
 
 Atualmente, oferecemos suporte para as seguintes opções de país/região: Austrália, Canadá (inglês), França, Alemanha, Reino Unido ou Estados Unidos (inglês).
 
-Para selecionar um país ou região, abra **Enriquecimento de marcas** ou **Enriquecimento de interesses** e selecione **Alterar** ao lado de **País/Região**. No painel **Configurações de país/região**, escolha uma opção e selecione **Aplicar**.
+Para selecionar um país, abra o **Enriquecimento de marcas** ou **Enriquecimento de interesse** e selecione **Alterar** ao lado de **País/Região**. No painel **Configurações de país/região**, escolha uma opção e selecione **Aplicar**.
 
 ### <a name="implications-related-to-country-selection"></a>Implicações relativas à seleção de país
 
@@ -61,9 +61,9 @@ Para selecionar um país ou região, abra **Enriquecimento de marcas** ou **Enri
 
 - Ao [escolher um setor](#define-your-brands-or-interests), você obterá as marcas ou os interesses mais relevantes com base no país/região selecionado.
 
-- Ao [enriquecer perfis](#refresh-enrichment), enriqueceremos todos os perfis de clientes dos quais obtemos dados para as marcas e interesses selecionados, incluindo perfis que não estão no país ou na região selecionada. Por exemplo, se você selecionou Alemanha, enriqueceremos perfis localizados nos Estados Unidos se tivermos dados disponíveis para as marcas e os interesses selecionados nos EUA.
+- Ao [enriquecer perfis](#refresh-enrichment), enriqueceremos todos os perfis de cliente para os quais obtemos dados para as marcas e os interesses selecionados. Incluindo perfis que não estão no país/região selecionado. Por exemplo, se você selecionou Alemanha, enriqueceremos perfis localizados nos Estados Unidos se tivermos dados disponíveis para as marcas e os interesses selecionados nos EUA.
 
-## <a name="configure-enrichment"></a>Configurar enriquecimento
+## <a name="configure-enrichment"></a>Configurar Enriquecimento
 
 Uma experiência guiada ajuda você na configuração dos enriquecimentos. 
 
@@ -88,19 +88,19 @@ Selecione **Entidade enriquecida** e escolha o conjunto de dados que deseja enri
 
 Mapeie os campos da entidade de cliente unificada para definir o segmento demográfico que deseja que o sistema use para enriquecer os dados de clientes. Mapeie País/Região e pelo menos os atributos de Data de Nascimento ou Sexo. Além disso, é necessário mapear pelo menos uma Cidade (e Estado/Província) ou CEP. Selecione **Editar** para definir o mapeamento dos campos e selecione **Aplicar** quando terminar. Selecione **Salvar** para concluir o mapeamento de campo.
 
-Os seguintes formatos e valores têm suporte (os valores não diferenciam maiúsculas de minúsculas):
+Os seguintes formatos e valores têm suporte; os valores não diferenciam maiúsculas de minúsculas:
 
-- **Data de nascimento**: recomendamos que a data de nascimento seja convertida no tipo DateTime durante a ingestão de dados. Alternativamente, pode ser uma cadeia de caracteres no formato [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "aaaa-MM-dd" ou "aaaa-MM-ddTHH:mm:ss".
-- **Sexo**: masculino, feminino, desconhecido.
-- **CEP**: CEPs de cinco dígitos para os Estados Unidos, CEP padrão em todos os outros lugares.
-- **Cidade**: nome da cidade em inglês.
+- **Data de nascimento**: recomendamos que a data de nascimento seja convertida no tipo DateTime durante a ingestão de dados. Como alternativa, pode ser uma string no formato [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "aaaa-MM-dd" ou "aaaa-MM-ddTHH:mm:ssZ".
+- **Gênero**: Masculino, Feminino, Desconhecido
+- **Código postal**: CEPs de cinco dígitos para os EUA, código postal padrão em todos os outros lugares
+- **Cidade**: nome da cidade em inglês
 - **Estado/Província**: abreviação de duas letras para os EUA e o Canadá. Abreviação de duas ou três letras para a Austrália. Não aplicável à França, à Alemanha ou ao Reino Unido.
 - **País/Região**:
 
   - EUA: Estados Unidos da América, Estados Unidos, EUA, América
   - CA: Canadá, CA
   - GB: Reino Unido, Reino Unido, Grã-Bretanha, GB, Reino Unido da Grã-Bretanha e Irlanda do Norte, Reino Unido da Grã-Bretanha
-  - AU: Austrália, AU, Comunidade das Nações da Austrália
+  - AU: Austrália, AU, Common Wealth of Australia
   - FR: França, FR, República Francesa
   - DE: Alemanha, Alemanha, Deutschland, Allemagne, DE, República Federal da Alemanha, República da Alemanha
 
@@ -113,11 +113,10 @@ Por último, você pode revisar as informações e fornecer um nome para o enriq
 ## <a name="refresh-enrichment"></a>Atualizar enriquecimento
 
 Execute o enriquecimento depois de configurar marcas, interesses e o mapeamento de campo para dados demográficos. Para iniciar o processo, selecione **Executar** na página de configuração de marca ou interesse. Além disso, você pode permitir que o sistema execute o enriquecimento automaticamente como parte de uma atualização agendada.
-
 Dependendo do tamanho dos dados do cliente, pode levar alguns minutos para que uma execução de enriquecimento seja concluída.
 
 > [!TIP]
-> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Após selecionar **Ver detalhes** para uma ou mais tarefas do trabalho, você encontrará informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados com a tarefa.
+> Existem [seis tipos de status](system.md#status-types) para tarefas/processos. Além disso, a maioria dos processos [depende de outros processos de downstream](system.md#refresh-policies). Você pode selecionar o status de um processo para ver detalhes sobre o progresso de todo o trabalho. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, você encontra informações adicionais: tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecimento
 
@@ -135,7 +134,7 @@ As afinidades de marca e interesse também podem ser visualizadas em cartões de
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Crie [Segmentos](segments.md) e [Medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
+Compile com base nos dados de cliente enriquecidos. Crie [Segmentos](segments.md), [Medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para oferecer experiências personalizadas aos seus clientes.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
