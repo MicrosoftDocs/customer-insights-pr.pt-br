@@ -2,21 +2,23 @@
 title: Guia de amostra para previsão de rotatividade de assinaturas
 description: Use este guia de amostra para experimentar o modelo de previsão de rotatividade de assinatura pronto para uso.
 ms.date: 11/19/2020
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269822"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355599"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Guia de amostra para previsão de rotatividade de assinaturas (versão preliminar)
+# <a name="subscription-churn-prediction-sample-guide"></a>Guia de amostra para previsão de rotatividade de assinaturas
 
 Explicaremos a você um exemplo de ponta a ponta de previsão de rotatividade de assinatura usando os dados de amostra fornecidos abaixo. 
 
@@ -31,7 +33,7 @@ A Contoso é uma empresa que produz café e máquinas de café de alta qualidade
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1 - Ingerir dados
 
-Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes de dados usando Power Query conectores](connect-power-query.md), especificamente. As informações a seguir pressupõem que você está familiarizado com a ingestão de dados em geral. 
+Revise os artigos [sobre ingestão de dados](data-sources.md) e [importação de fontes de dados usando conectores do Power Query](connect-power-query.md) especificamente. As informações a seguir pressupõem que você está familiarizado com a ingestão de dados em geral. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dados do cliente da plataforma de comércio eletrônico
 
@@ -128,7 +130,7 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 1. Vá para a guia **Corresponder** e selecione **Definir pedido**.
 
-1. Na lista suspensa **Primário**, escolha **eCommerceContacts : eCommerce** como fonte primária e inclua todos os registros.
+1. Na lista suspensa **Primária**, escolha **eCommerceContacts : eCommerce** como sua fonte primária e inclua todos os registros.
 
 1. Na lista suspensa **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registros.
 
@@ -138,16 +140,16 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 1. Adicione sua primeira condição usando FullName.
 
-   * Para eCommerceContacts selecione **FullName** no menu suspenso.
-   * Para loyCustomers selecione **FullName** no menu suspenso.
+   * Para eCommerceContacts, selecione **FullName** na lista suspensa.
+   * Para loyCustomers, selecione **FullName** na lista suspensa.
    * Selecione o menu suspenso **Normalizar** e escolha **Inserir (telefone, nome, endereço,...)**.
    * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 
 1. Digite o nome **FullName, Email** para a nova regra.
 
    * Adicione uma segunda condição para o endereço de e-mail selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, escolha **Email** no menu suspenso.
-   * Para a entidade loyCustomers, escolha **Email** no menu suspenso. 
+   * Para a entidade eCommerceContacts, selecione **Email** na lista suspensa.
+   * Para a entidade loyCustomers, selecione **Email** na lista suspensa. 
    * Deixe o campo Normalizar em branco. 
    * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
 
@@ -168,7 +170,7 @@ Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tarefa 3 - Configurar a rotatividade de previsão de assinatura
 
-Com os perfis de cliente unificados em vigor, agora podemos executar a previsão de rotatividade de assinatura. Para obter etapas detalhadas, consulte o artigo [Previsão de rotatividade de assinatura (versão preliminar)](predict-subscription-churn.md). 
+Com os perfis de cliente unificados em vigor, agora podemos executar a previsão de rotatividade de assinatura. Para obter etapas detalhadas, consulte o artigo [Previsão da rotatividade de assinaturas](predict-subscription-churn.md). 
 
 1. Vá para **Inteligência** > **Descobrir** e selecione usar o **Modelo de rotatividade do cliente**.
 

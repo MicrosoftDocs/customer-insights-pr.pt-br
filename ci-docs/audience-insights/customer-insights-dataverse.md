@@ -3,18 +3,20 @@ title: Dados do Customer Insights no Microsoft Dataverse
 description: Use entidades Customer Insights como tabelas no Microsoft Dataverse.
 ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866920"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355415"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 

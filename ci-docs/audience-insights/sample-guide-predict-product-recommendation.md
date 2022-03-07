@@ -3,26 +3,29 @@ title: Guia de amostra para previsão de recomendação do produto
 description: Use este guia de amostra para experimentar o modelo de previsão de recomendação do produto pronto para uso.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035171"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354633"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia de amostra para previsão de recomendação do produto (versão preliminar)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guia de amostra para previsão de recomendação do produto
 
 Explicaremos a você um exemplo de ponta a ponta de previsão de recomendação do produto usando os dados de exemplo fornecidos abaixo.
 
 ## <a name="scenario"></a>Cenário
 
-A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem por meio do site Contoso Coffee. O objetivo deles é entender quais produtos eles devem recomendar a seus clientes recorrentes. Saber o que os clientes estão mais **propenso a comprar**, pode ajudá-los a economizar esforços de marketing, concentrando-se em itens específicos.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que são vendidas por meio do site Contoso Coffee. O objetivo deles é entender quais produtos eles devem recomendar a seus clientes recorrentes. Saber o que os clientes estão mais **propenso a comprar**, pode ajudá-los a economizar esforços de marketing, concentrando-se em itens específicos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,7 +34,7 @@ A Contoso é uma empresa que produz café e máquinas de café de alta qualidade
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1 - Ingerir dados
 
-Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importar fontes de dados usando Power Query conectores](connect-power-query.md), especificamente. As informações a seguir pressupõem que você está familiarizado com a ingestão de dados em geral.
+Revise os artigos [sobre ingestão de dados](data-sources.md) e [importação de fontes de dados usando conectores do Power Query](connect-power-query.md) especificamente. As informações a seguir pressupõem que você está familiarizado com a ingestão de dados em geral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dados do cliente da plataforma de comércio eletrônico
 

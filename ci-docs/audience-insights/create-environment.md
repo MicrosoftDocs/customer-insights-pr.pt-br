@@ -1,21 +1,23 @@
 ---
 title: Criar ambientes do Customer Insights
 description: Etapas para criar ambientes com uma assinatura licenciada para o Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673377"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354081"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Criar um ambiente de insights do público-alvo
 
@@ -28,7 +30,7 @@ As organizações podem criar *dois* ambientes para cada licença do Customer In
 
 ## <a name="create-a-new-environment"></a>Criar um novo ambiente
 
-Depois que comprar uma licença de assinatura do Customer Insights, o administrador global do locatário do Microsoft 365 receberá um email convidando-o para criar o ambiente. Acesse [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) para começar. 
+Depois de adquirir uma licença de assinatura do Customer Insights, o administrador global do locatário do Microsoft 365 recebe um email que o convida a criar o ambiente. Acesse [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) para começar. 
 
 Uma experiência guiada ajuda você nas etapas para reunir todas as informações necessárias para um novo ambiente. Você precisa de [permissões de administrador](permissions.md) em insights de público-alvo para criar ou gerenciar ambientes.
 
@@ -64,7 +66,7 @@ Salvando dados no Azure Data Lake Storage, você concorda que os dados serão tr
 > O Customer Insights atualmente oferece suporte para o seguinte:
 > - Entidades ingeridas de fluxos de dados do Power BI que são armazenados em um data lake gerenciado pelo Microsoft Dataverse.  
 > - Azure Data Lake Storage contas da mesma região do Azure que você selecionou ao criar o ambiente.
-> - Azure Data Lake Storage contas que têm *namespace hierárquico* ativado.
+> - Contas do Azure Data Lake Storage que são Gen2 e têm *namespace hierárquico* habilitado. As contas de armazenamento do Azure Data Lake Gen1 não têm suporte.
 
 Para a opção do Azure Data Lake Storage, você pode escolher entre uma opção baseada em recursos e outra baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar-se a uma conta do  Azure Data Lake Storage usando uma entidade de serviço do Azure](connect-service-principal.md). O nome do **Conteiner** será `customerinsights` e não pode ser alterado.
 
@@ -76,9 +78,14 @@ Se você criar vários ambientes de Customer Insights e optar por salvar as enti
    
 A etapa **Microsoft Dataverse** permite conectar o Customer Insights com o seu ambiente Dataverse.
 
-Para usar [modelos de previsão prontos para uso](predictions-overview.md#out-of-box-models), configure o compartilhamento de dados com o Dataverse. Ou você pode ativar a ingestão de dados de fontes de dados na infraestrutura local, fornecendo o URL do ambiente Microsoft Dataverse que sua organização administra. Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um data lake Gerenciado do Dataverse.
+Forneça seu próprio ambiente do Microsoft Dataverse para compartilhar dados (perfis e insights) com aplicativos de negócios baseados no Dataverse, como o Dynamics 365 Marketing ou aplicativos baseados em modelo no Power Apps. Deixe este campo vazio se você não tiver seu próprio ambiente do Dataverse e provisionaremos um para você.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opções de configuração para habilitar o compartilhamento de dados com o Microsoft Dataverse.":::
+Conectar-se ao seu ambiente do Dataverse também permite que você [faça a ingestão de dados de fontes de dados locais usando fluxos de dados e gateways do Power Platform](data-sources.md#add-data-from-on-premises-data-sources). Você também pode usar [ modelos de previsão prontos para uso](predictions-overview.md?tabs=b2c#out-of-box-models) conectando-se a um ambiente do Dataverse.
+
+> [!IMPORTANT]
+> O Customer Insights e o Dataverse devem estar na mesma região para habilitar o compartilhamento de dados.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="compartilhamento de dados com o Microsoft Dataverse habilitado automaticamente para novas instâncias de rede.":::
 
 > [!NOTE]
 > O Customer Insights não suporta os seguintes cenários de compartilhamento de dados:

@@ -3,18 +3,20 @@ title: Modelos de aprendizado de máquina personalizados | Microsoft Docs
 description: Trabalhar com modelos personalizados do Azure Machine Learning no Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967641"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355037"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizado de máquina personalizados
 

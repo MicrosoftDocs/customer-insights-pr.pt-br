@@ -4,27 +4,32 @@ description: Visão geral das funções e permissões disponíveis para membros 
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ccc6a1b87b4cc28701e276b6e35432356e7647c4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036679"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227525"
 ---
 # <a name="roles-and-permissions"></a>Funções e permissões
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Um espaço de trabalho é como você armazena e gerencia eventos e relatórios. Um membro é um usuário que pode acessar um espaço de trabalho. Você pode atribuir membros ao espaço de trabalho e definir suas funções e permissões. As funções Administrador gerenciam espaços de trabalho e ambientes e configuram insights de participação para outros usuários. As funções Colaborador são voltadas para analistas que não precisam configurar insights de participação, mas desejam criar seus próprios relatórios, funis ou segmentos.
+Um espaço de trabalho é onde você armazena e gerencia eventos e relatórios. Para mais informações, consulte [Criar um espaço de trabalho e adicionar membros](create-workspace.md). 
+
+Um espaço de trabalho pode incluir as seguintes funções e permissões:
+
+- *Membro*: usuários que podem acessar um espaço de trabalho. Você pode atribuir membros ao espaço de trabalho e definir suas funções e permissões. 
+- *Administrador*: administram espaços de trabalho e ambientes de trabalho e configuram insights de engajamento para outros usuários. 
+- *Contribuinte*: voltados para analistas que não precisam configurar insights de engajamento mas querem criar seus próprios relatórios, funis ou segmentos.
 
 ## <a name="permissions"></a>Permissões
   
-O gráfico a seguir identifica as permissões de cada função. 
+A tabela a seguir identifica as permissões para cada função. 
 
 | Permissão | Administrador do ambiente | Administrador do espaço de trabalho | Colaborador do ambiente | Colaborador do espaço de trabalho | 
 |--|--|--|--|--|

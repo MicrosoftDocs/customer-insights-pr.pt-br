@@ -1,24 +1,23 @@
 ---
 title: Recursos novos e futuros
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 08/31/2021
-ms.service: customer-insights
+ms.date: 03/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465191"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232643"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo no recurso de insights do público-alvo do Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Estamos animados para anunciar nossas atualizações mais recentes! Este artigo resume os recursos de recursos de versão preliminar pública, aprimoramentos de disponibilidade geral e atualizações de recursos. Para ver os planos de recurso a longo prazo, consulte os [Planos de lançamento do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +25,122 @@ Distribuímos atualizações por região. Portanto, determinadas regiões podem 
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Atualizações de janeiro de 2022
+
+As atualizações de janeiro de 2022 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimento dos comentários do cliente
+
+O Customer Insights fornece um novo recurso baseado em IA para sintetizar o sentimento do cliente e identificar aspectos de negócios específicos como oportunidades para melhorias direcionadas. Ao analisar os comentários escritos por seus clientes, você pode obter insights precisos com um baixo custo. Análise de sentimentos baseada em modelos de Processamento de Linguagem Natural (NLP) que geram dois insights derivados para cada ID do cliente. Uma pontuação de sentimento (de -5 a 5) e uma lista de aspectos de negócios aplicáveis. 
+
+Para obter mais informações, consulte [Analisar sentimento nos comentários do cliente (versão preliminar)](sentiment-analysis.md).
+
+
+## <a name="december-2021-updates"></a>Atualizações de dezembro de 2021
+
+As atualizações em dezembro de 2021 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Encaminhar logs do Customer Insights para o Azure Monitor
+
+O Customer Insights fornece uma integração direta com o Azure Monitor. Esse recurso inclui eventos operacionais e de auditoria. Os logs de recursos do Azure Monitor permitem monitorar e enviar logs para o Armazenamento do Azure, o Azure Log Analytics ou transmiti-los para os Hubs de Eventos do Azure.
+
+Para obter mais informações, confira [Encaminhamento de logs no Dynamics 365 Customer Insights com o Azure Monitor (versão preliminar)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquecer perfis de clientes com dados de engajamento
+
+Use dados do Microsoft Office 365 para enriquecer os perfis das contas dos clientes com insights sobre engajamentos por meio de aplicativos do Office 365. Os dados de engajamento consistem em atividades de email e reunião, que são agregadas no nível da conta. Por exemplo, o número de emails de uma conta comercial ou o número de reuniões com a conta. Nenhum dado sobre usuários individuais é compartilhado. Este enriquecimento está disponível nas seguintes regiões: Reino Unido, Europa, América do Norte.
+
+Para obter mais informações, consulte [Enriquecer perfis de clientes com dados de engajamento (versão preliminar)](enrichment-office.md).
+
+### <a name="advanced-data-unification-features"></a>Recursos avançados de unificação de dados
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Habilitar políticas de resolução de conflitos no nível de atributo individual
+
+Ao eliminar a duplicação de registros de clientes em uma entidade, não convém escolher um registro completo como vencedor. Agora permitimos que você mescle os melhores campos de vários registros com base em regras de cada atributo. Por exemplo, você pode manter o email mais recente E o endereço mais completo de diferentes registros. 
+
+Agora você pode definir regras de mesclagem separadas para atributos individuais ao eliminar a duplicação e mesclar registros em uma única entidade. Anteriormente, só permitíamos que você selecionasse uma única regra de mesclagem (mantendo registros com base na integridade dos dados de recência) que era aplicada no nível do registro a todos os atributos. Isso não é ideal quando alguns dos dados que você deseja manter são encontrados no registro A, e outros bons dados são encontrados no registro B.
+
+Para mais informações, confira [Definir a eliminação de duplicação em uma entidade correspondente](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Regras personalizadas para correspondência
+
+Há momentos em que você precisa especificar uma exceção às regras gerais para NÃO corresponder registros. Isso pode acontecer quando vários indivíduos compartilham informações suficientes para que o sistema os corresponda como um único indivíduo. Por exemplo, gêmeos com o mesmo sobrenome, que moram na mesma cidade e compartilham a data de nascimento.
+
+As exceções garantem que a unificação incorreta de dados possa ser resolvida nas regras de unificação. Você pode adicionar várias exceções a uma regra.
+
+Para obter mais informações, confira [Adicionar exceções a uma regra](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Fornecer políticas adicionais de resolução de conflitos e habilitar o agrupamento de atributos
+
+Esse recurso permite tratar um grupo de campos como uma unidade. Por exemplo, quando nossos registros contêm os campos Endereço1, Endereço2, Cidade, Estado e CEP. Provavelmente não convém mesclar Endereço2 em um registro diferente para que isso torne nossos dados mais completos.
+
+Agora você pode combinar um grupo de campos relacionados e aplicar uma única política de mesclagem ao grupo. 
+
+Para obter mais informações, confira [Combinar um grupo de campos](merge-entities.md#combine-a-group-of-fields).
+
+
+## <a name="november-2021-updates"></a>Atualizações de novembro de 2021
+
+As atualizações em novembro de 2021 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Associação ao segmento agora disponível no Dataverse
+
+As informações de associação ao segmento para perfis de clientes agora estão disponíveis no Dataverse juntamente com os perfis e insights dos clientes. Os aplicativos de ação e os aplicativos baseados em modelo do Dynamics 365 podem usar esses dados para pesquisar detalhes da associação ao segmento para um determinado cliente.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>As atividades oferecem suporte a detalhes no nível do contato para contas comerciais
+
+Agora você pode configurar, exibir e filtrar atividades para contatos nas linhas do tempo de atividades da sua conta comercial para entender melhor quais contatos de conta participaram de atividades específicas.
+
+## <a name="october-2021-updates"></a>Atualizações de outubro de 2021
+
+As atualizações em outubro de 2021 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="b-to-b"></a>B2B
+
+A partir de outubro de 2021, você pode trabalhar com contas comerciais e seus contatos relacionados no Customer Insights. Antes, o aplicativo era voltado principalmente para consumidores individuais. Várias áreas de recursos foram atualizadas para oferecer suporte a cenários B2B em cima de um novo tipo de ambiente. Para obter uma visão geral dos recursos B2B com suporte, consulte [Trabalhe com contas comerciais em insights de público-alvo](work-with-business-accounts.md).
+
+As seções a seguir destacam algumas das principais áreas que foram adaptadas para oferecer suporte a contas comerciais e consumidores individuais.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Exportar segmentos com base em contas comerciais
+
+Todas as exportações de segmento em insights de público-alvo estão disponíveis no contexto de contas comerciais. A maioria das exportações de segmento requerem configuração extra e [informações de contato projetadas](segment-builder.md#create-a-new-segment) nos segmentos subjacentes para serem válidas para contas comerciais. Para obter mais informações, consulte [Exportar segmentos](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Usar a exportação de Anúncios do LinkedIn com contas comerciais
+
+A exportação de Anúncios do LinkedIn agora está disponível para segmentação de empresa e contato no contexto das contas comerciais. Ao selecionar a segmentação da empresa como seu foco principal de exportação do LinkedIn, você pode exportar segmentos criados em contas comerciais sem a necessidade de projetar informações de contato. Para obter mais informações, consulte os documentos sobre [Exportação de Anúncios do LinkedIn](export-linkedin-ads.md) e a diferença entre [segmentação de contato](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e [segmentação da empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Criar medidas com base em contas comerciais e sua hierarquia
+
+O construtor de medidas permite criar medidas em torno de contas comerciais e, opcionalmente, usar as informações de hierarquia. As informações de hierarquia são usadas para acumular um cálculo de medida em uma conta e em todas as suas subcontas relacionadas. Por exemplo, você pode criar medidas como a receita total para cada grupo de contas comerciais identificadas por sua hierarquia. Para obter mais informações, consulte [Definir e gerenciar medidas](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Criar segmentos com base em contas comerciais e sua hierarquia
+
+O construtor de segmento permite que você crie segmentos de contas comerciais que, opcionalmente, incluem informações de contato para cada conta em um segmento. Se você configurou a hierarquia de contas, pode usar as informações da hierarquia de contas na criação do segmento. Para obter mais informações, consulte [Criar um novo segmento](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Mantenha suas contas comerciais com insights profundos sobre a tendência de rotatividade
+
+O modelo de previsão de rotatividade de clientes agora também oferece suporte a contas comerciais. Você pode avaliar o risco da rotatividade não apenas para uma conta, mas para uma combinação de uma conta e uma categoria de produto ou serviço que os clientes compram de você. Esse acréscimo ajuda a entender se uma conta tem maior probabilidade de parar de comprar de você em geral ou apenas em uma determinada categoria de bens ou serviços. Para ajudá-lo ainda mais a usar este modelo de IA, ele também lista os motivos pelos quais uma conta provavelmente será objeto de rotatividade. Para mais informações, consulte [Previsão de rotatividade de transações (versão preliminar)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ver os contatos de uma conta comercial na exibição do Customer
+
+Se as contas comerciais forem mapeadas para contas relacionadas, o aplicativo Customer Insights mostra esses contatos relacionados como parte da exibição de detalhes do cliente. Para obter mais informações, consulte [Perfis do cliente](customer-profiles.md).
+
+
+## <a name="september-2021-updates"></a>Atualizações de setembro de 2021
+
+As atualizações em setembro de 2021 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="activities"></a>Atividades
+
+- **Melhorias no cronograma de atividades** Ampliamos os filtros para a linha do tempo de atividades nos perfis dos clientes. Além disso, você pode usar a nova bandeja de filtro para filtrar por tipo de atividade e por data. As datas podem ser filtradas em diferentes condições. Para mais informações, consulte [Visualoizar cronogramas de atividades em perfis de clientes](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relações
+
+- **Suporte de relacionamento multi-hop** Use relacionamentos multi-hop ao configurar atividades e definir relacionamentos entre entidades. Os relacionamentos multi-hop usam uma entidade intermediária para conectar duas entidades. Ao configurar uma atividade, você pode usar uma relação multi-hop para conectar sua entidade de atividade a uma entidade intermediária e depois a uma entidade de cliente. Você pode combinar relacionamentos multi-hop com relacionamentos multi-path. Para obter mais informações, consulte [Relacionamento multi-hop](relationships.md#multi-hop-relationship).
+
+- **Suporte de relacionamento multi-path** Use relacionamentos multi-path ao configurar atividades e definir relacionamentos entre entidades. Relacionamentos multi-path relacionam uma entidade de origem a mais de uma entidade. Ao configurar uma atividade, você pode usar uma relação multi-path para conectar sua entidade de atividade com mais de uma entidade de cliente. Você pode combinar relacionamentos multi-path com relacionamentos multi-hop. Para obter mais informações, consulte [Relacionamento multi-path](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Atualizações de agosto de 2021
 
@@ -152,7 +267,7 @@ As atualizações em março de 2021 incluem vários recursos, atualizações de 
 - **Exportar segmentos para o Constant Contact** Estendemos nossos destinos de exportação para incluir o Constant Contact. Agora você pode exportar segmentos do Customer Insights para listas do Constant Contact e usá-los como linha de base para suas campanhas de marketing.   
    Para obter mais informações, consulte [Exportar para o Constant Contact](export-constant-contact.md).
 
-- **Exportar segmentos para o RollWorks** Estendemos nossos destinos de exportação para incluir o RollWorks. Agora você pode exportar segmentos do Customer Insights para públicos do RollWorks e usá-los como linha de base para sua publicidade B2B.    
+- **Exportar segmentos para o RollWorks** Estendemos nossos destinos de exportação para incluir o RollWorks. Agora você pode exportar segmentos do Customer Insights para públicos-alvo de RollWorks e usá-los como a linha de base para sua publicidade B2B.    
    Para obter mais informações, consulte [Exportar para o RollWorks](export-rollworks.md).
 
 - **Exportar segmentos para o Snapchat** Estendemos nossos destinos de exportação para incluir o Snapchat. Agora você pode exportar segmentos do Customer Insights para públicos do Snapchat e usá-los como linha de base para sua publicidade.     

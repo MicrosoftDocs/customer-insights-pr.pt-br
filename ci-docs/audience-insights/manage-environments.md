@@ -1,24 +1,26 @@
 ---
 title: Criar e gerenciar ambientes
 description: Saiba como se inscrever no serviço e gerenciar ambientes.
-ms.date: 07/22/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034163"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354265"
 ---
 # <a name="manage-environments"></a>Gerenciar ambientes
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Alternar ambientes
 
@@ -26,7 +28,7 @@ Selecione o controle de **Ambiente** no canto superior direito da página para a
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de tela do controle para alternar ambientes.":::
 
-Os administradores podem [criar](get-started-paid.md) e gerenciar ambientes.
+Os administradores podem [criar](create-environment.md) e gerenciar ambientes.
 
 ## <a name="edit-an-existing-environment"></a>Editar um ambiente existente
 
@@ -36,23 +38,25 @@ Você pode editar alguns dos detalhes dos ambientes existentes.
 
 2.  Selecione o ícone **Editar**.
 
-3. Na caixa **Editar ambiente**, é possível atualizar o **Nome de exibição** do ambiente, mas não é possível alterar a **Região** ou o **Tipo**.
+3. Na caixa **Editar ambiente**, você pode atualizar as configurações de ambiente.
 
-4. Se um ambiente estiver configurado para armazenar dados no Azure Data Lake Storage, você pode atualizar a **Chave de conta**. No entanto, você não pode alterar o **Nome da conta** e o nome do **Recipiente**.
+Para obter mais informações sobre configurações de ambiente, consulte [Crie um novo ambiente](create-environment.md).
 
-5. Como outra opção, você pode atualizar de uma conexão baseada em chave da conta para uma conexão baseada em recursos ou em assinatura. Após a atualização, não é possível reverter para a chave de conta. Para obter mais informações, consulte [Conectar insights de público-alvo a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
-
-6. Opcionalmente, você pode fornecer uma URL do ambiente do Microsoft Dataverse em **Configurar compartilhamento de dados com o Microsoft Dataverse e habilitar recursos adicionais**. Esses recursos incluem o compartilhamento de dados com aplicativos e soluções baseados no Microsoft Dataverse, a ingestão de dados de fontes de dados locais ou o uso de [previsões](predictions.md). Selecione **Habilitar compartilhamento de dados** para compartilhar dados de saída do Customer Insights com um Data Lake Gerenciado do Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Atualmente, não há suporte para o compartilhamento de dados com o Microsoft Dataverse Managed Data Lake ao salvar todos os dados no seu Azure Data Lake Storage.
-   > - A [previsão de valores ausentes em uma entidade](predictions.md) e os relatórios do PowerBI Embedded em insights de público-alvo (se habilitados em seu ambiente) não têm suporte no momento se você habilitar o compartilhamento de dados com o data lake gerenciado do Microsoft Dataverse.
-
-   Depois de habilitar o compartilhamento de dados com o Microsoft Dataverse, uma atualização completa das suas fontes de dados e de outros processos será iniciada. Se os processos estiverem em execução no momento, você não verá a opção para habilitar o compartilhamento de dados com o Microsoft Dataverse. Aguarde a conclusão desses processos ou cancele-os para habilitar o compartilhamento de dados. 
+## <a name="connect-to-microsoft-dataverse"></a>Conectar-se ao Microsoft Dataverse
    
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opções de configuração para habilitar o compartilhamento de dados com o Microsoft Dataverse.":::
-   
-   Quando você executar processos, como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento especificada acima. Arquivos de dados e arquivos model.json serão criados e adicionados às respectivas subpastas, dependendo do processo executado.
+A etapa **Microsoft Dataverse** permite conectar o Customer Insights com o seu ambiente Dataverse.
+
+Para usar [modelos de previsão prontos para uso](predictions-overview.md#out-of-box-models), configure o compartilhamento de dados com o Dataverse. Ou você pode ativar a ingestão de dados de fontes de dados na infraestrutura local, fornecendo o URL do ambiente Microsoft Dataverse que sua organização administra.
+
+> [!IMPORTANT]
+> O Customer Insights e o Dataverse devem estar na mesma região para habilitar o compartilhamento de dados.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Opções de configuração para habilitar o compartilhamento de dados com o Microsoft Dataverse.":::
+
+> [!NOTE]
+> O Customer Insights não suporta os seguintes cenários de compartilhamento de dados:
+> - Se salvar todos os dados no seu próprio Azure Data Lake Storage, você não poderá habilitar o compartilhamento de dados com um data lake gerenciado do Dataverse.
+> - Se você ativar o compartilhamento de dados com o Dataverse, você não será capaz de [criar valores previstos ou ausentes em uma entidade](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuração do ambiente
 
@@ -81,7 +85,8 @@ Os seguintes dados *não* são copiados:
 
 - Perfis do cliente.
 - Credenciais da fonte de dados. Você precisará fornecer as credenciais para cada fonte de dados e atualizar as fontes de dados manualmente.
-- As fontes de dados da pasta Common Data Model e Data Lake gerenciadas pelo Dataverse. Você precisará criar essas fontes de dados manualmente com o mesmo nome do ambiente de origem.
+
+- Fontes de dados da pasta do Common Data Model e do data lake gerenciado do Dataverse. Você precisará criar essas fontes de dados manualmente com o mesmo nome do ambiente de origem.
 
 Ao copiar um ambiente, você verá uma mensagem de confirmação de que o novo ambiente foi criado. Selecione **Ir para fontes de dados** para ver a lista de fontes de dados.
 

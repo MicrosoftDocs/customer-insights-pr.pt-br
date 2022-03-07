@@ -1,22 +1,21 @@
 ---
 title: Previsão de recomendação do produto
 description: Preveja os produtos que um cliente provavelmente comprará ou com os quais interagirá.
-ms.date: 03/17/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906750"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355737"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Previsão de recomendação do produto (versão preliminar)
+# <a name="product-recommendation-prediction"></a>Previsão de recomendação do produto
 
 O modelo de recomendação de produto cria conjuntos de recomendações de produto preditivas. As recomendações são baseadas no comportamento de compra anterior e clientes com padrões de compra semelhantes. Você pode criar novas previsões de recomendação de produto na página **Inteligência** > **Previsões**. Selecione **Minhas previsões** para ver outras previsões que você criou.
 
@@ -62,9 +61,9 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. No Customer Insights, acesse **Inteligência** > **Previsões**.
 
-1. Selecione o bloco **Modelo de recomendações do produto (versão preliminar)** e selecione **Usar este modelo**.
+1. Selecione o bloco **Modelo de recomendações de produtos** e selecione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Bloco do modelo de recomendação do produto com o botão Usar este modelo](media/product-recommendation-usethismodel.PNG "Bloco do modelo de recomendação do produto com o botão Usar este modelo")
+   > ![Bloco do modelo de recomendação do produto com o botão Usar este modelo.](media/product-recommendation-usethismodel.PNG "Bloco do modelo de recomendação do produto com o botão Usar este modelo")
 
 1. Revise as informações sobre os requisitos do modelo. Se você tiver os dados necessários, selecione **Começar**.
 
@@ -79,33 +78,34 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 1. Defina o **Número de produtos** que você deseja recomendar a um cliente. Esse valor depende de como seu método de entrega preenche os dados. Se você pode recomendar três produtos, defina esse valor adequadamente.
    
    >[!TIP]
-   > Você pode selecionar **Salvar e fechar** a qualquer momento para salvar a previsão como rascunho. Você encontrará a previsão de rascunho na guia **Minhas previsões**.
+   > Você pode selecionar **Salvar rascunho** a qualquer momento para salvar o previsão como rascunho. Você encontrará a previsão de rascunho na guia **Minhas previsões**.
 
-1. Escolha se deseja **Sugerir produtos que os clientes compraram recentemente**.
+1. Escolha se você deseja incluir produtos que os clientes compraram recentemente no campo **Repetir compras esperadas**.
 
-1. Se você selecionou *não* recomendar produtos comprados recentemente, defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada dois anos. Essa janela examinará o histórico de compras dos últimos dois anos e, se encontrar um item, o item será filtrado das recomendações.
+1. Defina a **Janela do passado**. Esta configuração especifica o período que o modelo considera antes de recomendar o produto ao usuário novamente. Por exemplo, indique que um cliente adquire um laptop a cada dois anos. Essa janela examinará o histórico de compras dos últimos dois anos e, se encontrar um item, o item será filtrado das recomendações.
 
-1. Selecione **Avançar**
+1. Selecione **Avançar**.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 
-1. Selecione **Adicionar dados** para **Histórico de transações do cliente** e escolha a entidade que fornece as informações do histórico de transações/compras, conforme descrito nos [pré-requisitos](#prerequisites).
+1. Selecione **Adicionar dados** e escolha o tipo de atividade no painel lateral que contém a transação necessária ou as informações do histórico de compras.
 
-1. Mapeie os campos semânticos para atributos na sua entidade do histórico de compras e selecione **Avançar**. Para obter descrições dos campos, observe os [pré-requisitos](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Defina o relacionamento da entidade](media/product-recommendation-purchasehistorymapping.PNG "Página de histórico de compras mostrando atributos semânticos que são mapeados para campos na entidade de histórico de compras selecionada")
+1. Em **Escolher as atividades**, escolha as atividades específicas da atividade selecionada em que deseja que o cálculo se concentre.
 
-1. Se os campos não estiverem preenchidos, configure o relacionamento da sua entidade do histórico de compras para a entidade *Cliente*.
-    1. Selecione a **Entidade do histórico de compras**.
-    1. Selecione o **Campo** que identifica o cliente na entidade do histórico de compras. Ele precisa estar relacionado à ID do cliente principal da sua entidade *Cliente*.
-    1. Selecione a **Entidade Cliente** que corresponde à entidade do cliente primário.
-    1. Insira um nome que descreva a relação.
-       > [!div class="mx-imgBorder"]
-       > ![Página do histórico de compras mostrando a criação de um relacionamento com o cliente](media/model-purchase-join.png "Página do histórico de compras mostrando a criação de um relacionamento com o cliente")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Painel lateral mostrando a escolha de atividades específicas no tipo semântico.":::
+
+1. Se você ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para fazer isso. A experiência guiada para mapear atividades semânticas é aberta. Mapeie seus dados para os campos correspondentes no tipo de atividade selecionado.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de atividade de configuração de página.":::
+
+1. Depois de mapear a atividade para o tipo semântico correspondente, selecione **Avançar** para prosseguir 
+ 
+1. Mapeie os atributos semânticos para os campos necessários para executar o modelo.
 
 1. Selecione **Salvar**.
 
-1. Selecione **Avançar**.
+1. Selecione **Avançar**
+
 
 ### <a name="configure-product-filters"></a>Configurar filtros de produto
 
@@ -123,7 +123,7 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Se você optar por definir um filtro de produto, precisará defini-lo agora. No painel **Atributos do catálogo de produtos**, selecione os atributos da sua *entidade Catálogo de Produtos* que você deseja incluir no filtro.
 
-   :::image type="content" source="media/product-filters-sidepane.png" alt-text="Painel lateral mostrando os atributos na entidade do catálogo de produtos a serem selecionados para filtros de produto.":::
+   :::image type="content" source="media/product-filters-sidepane.png" alt-text="Painel lateral que mostra os atributos na entidade do catálogo de produtos a serem selecionados para filtros de produto.":::
 
 1. Escolha se você deseja que o filtro de produto use conectores **and** ou **or** para combinar logicamente sua seleção de atributos do catálogo de produtos.
    
@@ -145,7 +145,7 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
    > [!div class="mx-imgBorder"]
-   > ![Exibição da página Minhas Previsões](media/product-recommendation-mypredictions.PNG "Exibição da página Minhas Previsões")
+   > ![Exibição da página Minhas Previsões.](media/product-recommendation-mypredictions.PNG "Exibição da página Minhas Previsões")
 
 1. Selecione a previsão que você deseja revisar.
    - **Nome da previsão:** O nome da previsão que foi fornecido ao criá-la.
@@ -163,7 +163,7 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
 
 1. Selecione os três pontos verticais ao lado da previsão cujos resultados deseja revisar e selecione **Exibir**.
    > [!div class="mx-imgBorder"]
-   > ![Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir](media/product-recommendation-verticalellipses.PNG "Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir")
+   > ![Exibição das opções no menu de três pontos verticais de uma previsão, que inclui editar, atualizar, exibir, logs e excluir.](media/product-recommendation-verticalellipses.PNG "Exibição das opções no menu de três pontos verticais para uma previsão, incluindo editar, atualizar, exibir, logs e excluir")
 
 1. Há cinco seções principais de dados na página de resultados:
     1. **Desempenho do modelo de treinamento:** A, B ou C são pontuações possíveis. Essa pontuação indica o desempenho da previsão e pode ajudar você a decidir usar os resultados armazenados na entidade de saída.
@@ -173,13 +173,13 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
             - **C** O modelo será considerado como qualidade **C** se a métrica "Success @ K" for inferior à linha de base.
                
                > [!div class="mx-imgBorder"]
-               > ![Exibição do resultado de desempenho do modelo](media/product-recommendation-modelperformance.PNG "Exibição do resultado de desempenho do modelo")
+               > ![Exibição do resultado do desempenho do modelo.](media/product-recommendation-modelperformance.PNG "Exibição do resultado de desempenho do modelo")
             - **Linha de base**: O modelo pega os principais produtos mais recomendados por contagem de compra em todos os clientes e usa regras aprendidas identificadas pelo modelo para criar um conjunto de recomendações para os clientes. As previsões são então comparadas aos principais produtos, calculadas pelo número de clientes que compraram o produto. Se um cliente tem pelo menos um produto em seus produtos recomendados que também foi visto nos produtos mais comprados, eles são considerados parte da linha de base. Se 10 desses clientes tivessem um produto recomendado comprado de um total de 100 clientes, a linha de base seria 10%.
             - **Success @ K**: Usando um conjunto de validação de período de transações, as recomendações são criadas para todos os clientes e comparadas com o conjunto de validação de transações. Por exemplo, em um período de 12 meses, o mês 12 pode ser reservado como um conjunto de dados de validação. Se o modelo fizesse a previsão de pelo menos um item que você compraria no mês 12 com base no que aprendeu nos 11 meses anteriores, o cliente aumentaria a métrica "Success @ K".
     
     1. **Produtos mais sugeridos (com contagem):** os cinco principais produtos previstos para seus clientes.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico mostrando os 5 produtos mais recomendados](media/product-recommendation-topproducts.PNG "Gráfico mostrando os 5 produtos mais recomendados")
+       > ![Gráfico que mostra os 5 produtos mais recomendados.](media/product-recommendation-topproducts.PNG "Gráfico que mostra os 5 produtos mais recomendados")
     
     1. **Principais fatores de recomendação:** o modelo usa o histórico de transações dos clientes para fazer recomendações de produtos. Ele aprende padrões com base em compras anteriores e encontra semelhanças entre clientes e produtos. Essas semelhanças são então utilizadas para gerar recomendações de produtos.
     A seguir estão os fatores que podem influenciar uma recomendação de produto gerada pelo modelo. 
@@ -190,48 +190,24 @@ Se estiver interessado em experimentar este recurso, mas não tiver dados para p
         Toda recomendação de produto é influenciada por um ou mais desses fatores. A porcentagem de recomendações em que cada fator influenciador desempenhou um papel é visualizada em um gráfico. No exemplo a seguir, 100% das recomendações foram influenciadas por transações anteriores, 60% pela similaridade do cliente e 22% pela similaridade do produto. Passe o mouse sobre as barras do gráfico para ver a porcentagem exata em que os fatores influenciadores contribuíram.
 
         > [!div class="mx-imgBorder"]
-        > ![Principais fatores de recomendação](media/product-recommendation-keyrecommendationfactors.png "Principais fatores de recomendação aprendidos pelo modelo para gerar recomendações de produtos")
+        > ![Principais fatores de recomendação.](media/product-recommendation-keyrecommendationfactors.png "Principais fatores de recomendação aprendidos pelo modelo para gerar recomendações de produtos")
        
      
    1. **Estatísticas de dados**: fornecem uma visão geral do número de transações, clientes e produtos que o modelo considerou. Elas são baseadas nos dados de entrada que foram usados para aprender padrões e gerar recomendações de produtos.
 
       > [!div class="mx-imgBorder"]
-      > ![Estatísticas de dados](media/product-recommendation-datastatistics.png "Estatísticas de dados sobre dados de entrada usados pelo modelo para aprender padrões")
+      > ![Estatísticas de dados.](media/product-recommendation-datastatistics.png "Estatísticas de dados sobre dados de entrada usados pelo modelo para aprender padrões")
 
       Esta seção mostra estatísticas sobre os pontos de dados que foram usados pelo modelo para aprender padrões e gerar recomendações de produtos. A filtragem, conforme definida na configuração do modelo, será aplicada na saída gerada pelo modelo. No entanto, o modelo usa todos os dados disponíveis para aprender padrões. Portanto, se você usar a filtragem de produto na configuração do modelo, esta seção mostrará o número total de produtos que o modelo analisou para aprender padrões, que pode diferir do número de produtos que correspondem aos critérios de filtragem definidos.
 
    1. **Recomendações de produtos de alta confiança:** Uma amostra de recomendações fornecidas a seus clientes que o modelo acha que provavelmente serão adquiridas pelo cliente.    
       Se um catálogo de produtos for adicionado, as IDs dos produtos serão substituídas pelos nomes dos produtos. Os nomes dos produtos fornecem informações mais acionáveis e intuitivas sobre as previsões.
        > [!div class="mx-imgBorder"]
-       > ![Lista mostrando sugestões de alta confiança para um conjunto selecionado de clientes individuais](media/product-recommendation-highconfidence.PNG "Lista mostrando sugestões de alta confiança para um conjunto selecionado de clientes individuais")
+       > ![Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais.](media/product-recommendation-highconfidence.PNG "Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais")
 
-## <a name="fix-a-failed-prediction"></a>Corrigir uma previsão com falha
+## <a name="manage-predictions"></a>Gerenciar previsões
 
-1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
-
-1. Selecione a previsão cujos logs de erro gostaria de exibir e selecione **Logs**.
-
-1. Revise todos os erros. Há vários tipos de erros que podem ocorrer e eles descrevem qual condição causou o erro. Por exemplo, um erro em que não há dados suficientes para prever com precisão é normalmente resolvido carregando mais dados no Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Atualizar uma previsão
-
-As previsões são atualizadas automaticamente na mesma [programação em que seus dados são atualizados](system.md#schedule-tab) conforme definido nas configurações.
-
-1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
-
-1. Selecione os três pontos verticais ao lado da previsão que deseja atualizar.
-
-1. Selecione **Atualizar**.
-
-## <a name="delete-a-prediction"></a>Excluir uma previsão
-
-A exclusão de uma previsão também removerá sua entidade de saída.
-
-1. Vá para a guia **Minhas previsões** em **Inteligência** > **Previsões**.
-
-1. Selecione os três pontos verticais ao lado da previsão que deseja excluir.
-
-1. Selecione **Excluir**.
+É possível otimizar, solucionar problemas, atualizar ou excluir previsões. Revise um relatório de usabilidade de dados de entrada para descobrir como fazer uma previsão mais rápida e confiável. Para obter mais informações, consulte [Gerenciar previsões](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

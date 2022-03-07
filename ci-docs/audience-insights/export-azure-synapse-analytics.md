@@ -1,20 +1,19 @@
 ---
-title: Exportar dados do Customer Insights para o Azure Synapse Analytics
-description: Aprenda a configurar a conexão e exportar para o Azure Synapse Analytics.
+title: Exportar dados do Customer Insights para a Azure Synapse Analytics
+description: Saiba como configurar a conexão ao Azure Synapse Analytics.
 ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951028"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231298"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar para o Azure Synapse Analytics (versão preliminar)
 
@@ -53,7 +52,7 @@ Para criar uma conexão, a entidade de serviço e a conta de usuário no Custome
 
 1. Vá para **Administração** > **Conexões**.
 
-1. Selecione **Adicionar conexão** e escolha **Azure Synapse Analytics** ou selecione **Configurar** no bloco **Azure Synapse Analytics** para configurar a conexão.
+1. Selecione **Adicionar conexão** e escolha **Azure Synapse Analytics** ou selecione a **Configuração** no bloco **Azure Synapse Analytics** para configurar a conexão.
 
 1. Dê um nome reconhecível à sua conexão no campo Nome de exibição. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
@@ -71,7 +70,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Para criar uma exportação, selecione **Adicionar exportação**.
 
-1. No campo **Conexão para exportação**, escolha uma conexão da seção do **Azure Synapse Analytics**. Se não vir este nome de seção, não há [conexões](connections.md) deste tipo disponíveis para você.
+1. No campo **Conexão para exportação**, escolha uma conexão na seção do **Azure Synapse Analytics**. Se não vir este nome de seção, não há [conexões](connections.md) deste tipo disponíveis para você.
 
 1. Fornece um **Nome de exibição** reconhecívelf para sua exportação e um **Nome do banco de dados**.
 

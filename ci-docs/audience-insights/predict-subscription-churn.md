@@ -1,24 +1,25 @@
 ---
-title: Previsão de rotatividade de assinaturas
+title: Previsão da rotatividade de assinaturas (contém vídeo)
 description: Preveja se um cliente está em risco de não usar mais os produtos ou serviços de assinatura da sua empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556293"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354679"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Previsão de rotatividade de assinaturas (versão preliminar)
+# <a name="subscription-churn-prediction"></a>Previsão de rotatividade de assinaturas
 
 A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em risco de não usar mais os produtos ou serviços de assinatura da sua empresa. Você pode criar uma previsão de rotatividade de assinaturas na página **Inteligência** > **Previsões**. Selecione **Minhas previsões** para ver outras previsões que você criou.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Experimente o tutorial para uma previsão de rotatividade de assinatura usando dados de exemplo: [Guia de exemplo para previsão de rotatividade de assinatura](sample-guide-predict-subscription-churn.md).
@@ -61,7 +62,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 ## <a name="create-a-subscription-churn-prediction"></a>Crie uma previsão de rotatividade de assinaturas
 
 1. Nos insights de público-alvo, vá para **Inteligência** > **Previsões**.
-1. Selecione o bloco **Modelo de rotatividade de assinaturas (versão preliminar)** e selecione **Usar este modelo**.
+1. Selecione o bloco **Modelo de rotatividade da assinatura** e selecione **Usar este modelo**.
    > [!div class="mx-imgBorder"]
    > ![Bloco do modelo de Rotatividade de Assinaturas com o botão Usar este modelo.](media/subscription-churn-usethismodel.PNG "Bloco do modelo de Rotatividade de Assinaturas com o botão Usar este modelo")
 
@@ -75,7 +76,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
 1. Insira o número de **Dias desde o término da assinatura** que a sua empresa considera um cliente em um estado rotativo. Esse período geralmente é associado a atividades comerciais como ofertas ou outros esforços de marketing para tentar fidelizar o cliente.
 1. Insira o número de **Dias para consultar no futuro para prever a rotatividade** para definir uma janela para prever a rotatividade. Por exemplo, para prever o risco de rotatividade de seus clientes nos próximos 90 dias para alinhar seus esforços de retenção de marketing. Prever o risco de rotatividade para períodos mais longos ou mais curtos pode dificultar ainda mais a abordagem dos fatores no seu perfil de risco de rotatividade, dependendo dos requisitos comerciais específicos. Selecione **Avançar** para continuar
    >[!TIP]
-   > Você pode selecionar **Salvar e fechar** a qualquer momento para salvar a previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
+   > Você pode selecionar **Salvar rascunho** a qualquer momento para salvar o previsão como rascunho. Você encontrará o rascunho da previsão na guia **Minhas previsões** para continuar.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 

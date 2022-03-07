@@ -1,22 +1,24 @@
 ---
 title: Mapeamentos semânticos (versão preliminar)
 description: Visão geral dos mapeamentos semânticos e como usá-los.
-ms.date: 11/01/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731929"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353943"
 ---
-# <a name="semantic-mappings"></a>Mapeamentos semânticos
+# <a name="semantic-mappings-preview"></a>Mapeamentos semânticos (versão preliminar)
 
 Os mapeamentos semânticos permitem que você mapeie seus dados de não atividade para esquemas predefinidos. Esses esquemas ajudam os insights do público-alvo a entender melhor seus atributos de dados. O mapeamento semântico e os dados fornecidos permitem novos insights e recursos nos insights do público-alvo. Para mapear seus dados de atividade para os esquemas, revise a documentação [Atividades](activities.md).
 
@@ -91,5 +93,40 @@ Em **Dados** > **Mapeamentos semânticos (versão preliminar)**, você pode visu
 
 - **Excluir**: Abre uma caixa de diálogo para confirmar a exclusão do mapeamento semântico selecionado. Você também pode excluir mais de um mapeamento semântico de uma vez, selecionando os mapeamentos semânticos e o ícone de exclusão. Selecione **Excluir** para confirmar a exclusão.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Usar um mapeamento de entidade semântica ContactProfile para criar atividades no nível do contato
+
+Depois de criar um mapeamento de entidade semântica *ContactProfile*, você pode capturar atividades de contatos. Isso permite ver na linha do tempo de atividades de uma conta qual contato foi responsável por cada atividade. A maioria das etapas segue a configuração típica de mapeamento de atividades.
+
+   > [!NOTE]
+   > Para que as atividades no nível do contato funcionem, você deve ter os atributos **AccountID** e **ContactID** para cada registro nos seus dados de atividade.
+
+1. [Defina um mapeamento de entidade semântica *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) e execute o mapeamento semântico.
+
+1. Nos insights de público-alvo, vá para **Dados** > **Atividades**.
+
+1. Selecione **Adicionar Atividade** para criar uma nova atividade.
+
+1. Nomeie a atividade, selecione a entidade de atividade de origem e selecione a chave primária da entidade de atividade.
+
+1. Na etapa **Relacionamentos**, crie um relacionamento indireto entre seus dados de origem de atividade e contas, usando seus dados de contato como uma entidade intermediária. Para obter mais informações, consulte [caminhos de relacionamento direto e indireto](relationships.md#relationship-paths).
+   - Relacionamento de exemplo para uma atividade chamada *Compras*:
+      - **Dados da Atividade de Origem de Compras** > **Dados de Contato** no atributo **ContactID**
+      - **Dados de Contato** > **Dados de Conta** no atributo **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuração do relacionamento de exemplo.":::
+
+1. Depois de configurar os relacionamentos, selecione **Avançar** e conclua a configuração do seu mapeamento de atividades. Para obter etapas detalhadas sobre a criação de atividades, consulte [definir uma atividade](activities.md).
+
+1. Execute seus mapeamentos de atividades.
+
+1. Suas atividades no nível do contato agora estarão visíveis na linha do tempo do cliente.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final após a configuração das atividades de contato":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Filtragem da linha do tempo de atividades no nível do contato
+
+Depois de configurar um mapeamento de atividades no nível do contato e executá-lo, a linha do tempo de atividades dos seus clientes será atualizada. Ela inclui as IDs ou nomes, dependendo da sua configuração *ContactProfile*, das atividades em que atuaram. Você pode filtrar atividades por contatos na linha do tempo para ver contatos específicos de seu interesse. Além disso, você pode ver todas as atividades que não estão atribuídas a um contato específico, selecionando **Atividades não mapeadas para um Contato**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opções de filtragem disponíveis para atividades no nível do contato.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

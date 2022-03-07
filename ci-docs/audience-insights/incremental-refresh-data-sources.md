@@ -1,22 +1,26 @@
 ---
-title: Atualização incremental de fontes de dados baseadas no Power Query
-description: Atualize dados novos e atualizados de grandes fontes de dados baseadas no Power Query.
-ms.date: 09/28/2020
-ms.reviewer: adkuppa
-ms.service: customer-insights
+title: Atualização incremental para fontes de dados baseadas no Power Query
+description: Atualize dados novos e atualizados para grandes fontes de dados baseadas no Power Query.
+ms.date: 12/06/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268534"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353667"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Atualização incremental de fontes de dados baseadas no Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Atualização incremental para fontes de dados baseadas no Power Query
+
+Este artigo discute como configurar a atualização incremental para fontes de dados baseadas no Power Query.
 
 A atualização incremental de fontes de dados oferece as seguintes vantagens:
 
@@ -26,13 +30,13 @@ A atualização incremental de fontes de dados oferece as seguintes vantagens:
 
 ## <a name="configure-incremental-refresh"></a>Configurar atualização incremental
 
-Os insights de público-alvo permitem a atualização incremental de fontes de dados importadas por meio do Power Query que oferecem suporte à ingestão incremental. Por exemplo, bancos de dados SQL do Azure com campos de data e hora, que indicam quando os registros de dados foram atualizados pela última vez.
+Os insights de público-alvo permitem a atualização incremental para fontes de dados importadas por meio do Power Query que oferecem suporte à ingestão incremental. Por exemplo, bancos de dados SQL do Azure com campos de data e hora, que indicam quando os registros de dados foram atualizados pela última vez.
 
-1. [Criar uma nova fonte de dados baseada no Power Query](connect-power-query.md).
+1. [Crie uma fonte de dados baseada no Power Query](connect-power-query.md).
 
-1. Forneça um nome para a fonte de dados.
+1. Forneça um **Nome** para a fonte de dados.
 
-1. Selecione uma fonte de dados que ofereça suporte à atualização incremental, como o banco de dados SQL do Azure.
+1. Selecione uma fonte de dados que ofereça suporte à atualização incremental, como o [banco de dados SQL do Azure](/power-query/connectors/azuresqldatabase).
 
 1. Selecione as entidades ou tabelas a serem ingeridas.
 
@@ -44,8 +48,7 @@ Os insights de público-alvo permitem a atualização incremental de fontes de d
 
 1. Em **Configurações de atualização incremental**, você configurará a atualização incremental para todas as entidades selecionadas ao criar a fonte de dados.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configurar entidades em uma fonte de dados para atualização incremental](media/incremental-refresh-settings.png "Configurar entidades em uma fonte de dados para atualização incremental")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurar entidades em uma fonte de dados para atualização incremental.":::
 
 1. Selecione uma entidade e forneça os seguintes detalhes:
 

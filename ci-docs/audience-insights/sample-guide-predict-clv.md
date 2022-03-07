@@ -3,18 +3,17 @@ title: Exemplo de guia de previsão do valor de permanência do cliente
 description: Use este exemplo de guia para testar o modelo de previsão do valor de permanência do cliente.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306335"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354817"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Exemplo de guia de previsão do valor de permanência do cliente (CLV)
 
@@ -22,7 +21,7 @@ Este guia orientará você usando um exemplo completo de previsão do valor de p
 
 ## <a name="scenario"></a>Cenário
 
-A Contoso é uma empresa que produz café e máquinas de café de alta qualidade. Ela vende os produtos por meio do site Contoso Coffee. A empresa quer entender o valor (receita) que seus clientes podem gerar nos próximos 12 meses. Saber o valor esperado de seus clientes nos próximos 12 meses a ajudará a direcionar seus esforços de marketing para clientes de alto valor.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade. Eles vendem os produtos pelo site da Contoso Coffee. A empresa quer entender o valor (receita) que seus clientes podem gerar nos próximos 12 meses. Saber o valor esperado de seus clientes nos próximos 12 meses a ajudará a direcionar seus esforços de marketing para clientes de alto valor.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,7 +30,7 @@ A Contoso é uma empresa que produz café e máquinas de café de alta qualidade
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1 - Ingerir dados
 
-Reveja os artigos [sobre ingestão de dados](data-sources.md) e [importação de fontes de dados usando conectores do Power Query](connect-power-query.md). As informações a seguir pressupõem que você está familiarizado com a ingestão de dados em geral.
+Revise os artigos [sobre ingestão de dados](data-sources.md) e [importação de fontes de dados usando conectores do Power Query](connect-power-query.md). As informações a seguir pressupõem que você está familiarizado com a ingestão de dados em geral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dados do cliente da plataforma de comércio eletrônico
 
@@ -164,7 +163,7 @@ Depois de ingerir os dados, agora começamos o processo de unificação de dados
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tarefa 3 - Configurar a previsão do valor de permanência do cliente
 
-Com os perfis de cliente unificados em vigor, agora podemos executar a previsão do valor de permanência do cliente. Para obter etapas detalhadas, consulte [Previsão do valor de permanência do cliente (versão preliminar)](predict-customer-lifetime-value.md).
+Com os perfis de cliente unificados em vigor, agora podemos executar a previsão do valor de permanência do cliente. Para obter etapas detalhadas, consulte [Previsão do Valor da Permanência do Cliente](predict-customer-lifetime-value.md).
 
 1. Acesse **Inteligência**  > **Previsões** e selecione o **Modelo de valor de permanência do cliente**.
 

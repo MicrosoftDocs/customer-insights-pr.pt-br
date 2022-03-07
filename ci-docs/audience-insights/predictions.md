@@ -2,19 +2,22 @@
 title: Preencher dados parciais usando previsões
 description: Use previsões para preencher dados incompletos dos clientes.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732346"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353989"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Concluir seus dados parciais com previsões (preterido)
 
@@ -113,7 +116,7 @@ Como parte desse fluxo, você escolherá um atributo específico para basear seu
 
 ## <a name="edit-a-prediction"></a>Editar uma previsão
 
-Depois de criar uma previsão, você poderá personalizar o modelo no AI Builder para aumentar a eficácia do seu modelo.  
+Depois que criar uma previsão, você poderá personalizar o modelo no AI Builder para aumentar sua eficiência.  
 
 1. Nos insights de público-alvo, vá para **Inteligência** > **Previsões** > **Minhas previsões**.
 

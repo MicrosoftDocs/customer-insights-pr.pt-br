@@ -6,16 +6,15 @@ ms.reviewer: mhart
 ms.custom: intro-internal
 ms.author: britl
 ms.date: 09/15/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 879a71175a2e7d44a54d25fd8efb9f12927cea5a
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 68e4d0555d2fc377fae62ff5db64c032fcebcb04
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977492"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226200"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Começar a usar o SDK para iOS
 

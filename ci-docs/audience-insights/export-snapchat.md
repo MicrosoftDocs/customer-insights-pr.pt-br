@@ -1,20 +1,19 @@
 ---
 title: Exportar dados do Customer Insights para o Snapchat
 description: Saiba como configurar a conexão e exportar para o Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6565ab81599abcc0f94465e1153f08e0bc119839
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 7eac3307b3f82b6c5ebc3d66d6563ae50696ed65
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124029"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227234"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportar segmentos para o Snapchat (versão preliminar)
 
@@ -29,7 +28,7 @@ Exporte segmentos de perfis de clientes unificados para o Snapchat e use-os para
 ## <a name="known-limitations"></a>Limitações conhecidas
 
 - A exportação para o Snapchat é limitada a segmentos.
-- Exportar até 1 milhão de perfis para o Snapchat pode levar até 15 minutos para a conclusão. 
+- Exportar até 1 milhão de perfis de clientes para o Snapchat pode levar até 15 minutos para ser concluído. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configurar conexão com o Snapchat
 
@@ -63,7 +62,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Insira a [**ID do Público-Alvo do Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente. A exportação de segmentos para o Snapchat é necessária.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. A exportação de segmentos para o Snapchat é necessária.
 
 1. Selecione os segmentos que você deseja exportar. 
 

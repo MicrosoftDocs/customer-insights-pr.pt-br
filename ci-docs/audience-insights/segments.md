@@ -2,25 +2,30 @@
 title: Segmentos em insights de público-alvo
 description: Visão geral dos segmentos e como criá-los e gerenciá-los.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978045"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355969"
 ---
 # <a name="segments-overview"></a>Visão geral dos segmentos
 
 Os segmentos permitem agrupar seus clientes com base em atributos demográficos, transacionais ou comportamentais. Você pode usar segmentos para direcionar campanhas promocionais, atividades de vendas e ações de suporte ao cliente para atingir suas metas de negócios.
 
-Os perfis de clientes que correspondem aos filtros de uma definição de segmento são chamados de *membros* de um segmento. Alguns [limites de serviço](service-limits.md) se aplicam.
+Os perfis de clientes que correspondem aos filtros de uma definição de segmento são chamados de *membros* de um segmento. Alguns [limites de serviço](/dynamics365/customer-insights/service-limits) se aplicam.
 
 ## <a name="create-a-new-segment"></a>Criar um novo segmento
 
@@ -106,4 +111,4 @@ A parte inferior contém uma lista dos membros do segmento.
 >A lista é uma visualização dos membros do segmento correspondentes e mostra os 100 primeiros registros do seu segmento, para que você possa avaliá-lo rapidamente e revisar suas definições, se necessário. Para ver todos os registros correspondentes, você precisa [exportar o segmento](export-destinations.md).
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,24 +1,27 @@
 ---
 title: Exportar dados do Customer Insights para um Armazenamento de Blobs do Azure
 description: Aprenda a configurar a conexão e exportar para o Armazenamento de blobs.
-ms.date: 06/30/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
-ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
+ms.openlocfilehash: 5ea8e58822e1bb901552ff1de960d5340d340003
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6318285"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231237"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar a lista de segmentos e outros dados para o Armazenamento de Blobs do Azure (versão preliminar)
 
 Armazene seus dados do Customer Insights em um Armazenamento de blobs ou use-o para transferir seus dados para outros aplicativos.
+
+## <a name="known-limitations"></a>Limitações conhecidas
+
+1. Para Armazenamento de Blobs do Azure, você pode escolher entre [Desempenho padrão e nível de desempenho Premium](/azure/storage/blobs/storage-blob-performance-tiers). Se você escolher o nível de desempenho Premium, selecione [blobs de blocos premium como tipo de conta](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
 ## <a name="set-up-the-connection-to-blob-storage"></a>Configurar a conexão com o Armazenamento de Blobs
 

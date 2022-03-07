@@ -3,18 +3,17 @@ title: Perguntas frequentes sobre a avaliação - Dynamics 365 Customer Insights
 description: Soluções para dúvidas comuns relacionadas à configuração e gerenciamento da avaliação do Customer Insights. Saiba como resolver problemas específicos de plataforma e de aplicativos.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642844"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229481"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Perguntas frequentes sobre a avaliação do Dynamics 365 Customer Insights
 
@@ -43,7 +42,7 @@ Ao se inscrever para a avaliação, você receberá um email com os detalhes da 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Como faço para adicionar mais usuários à avaliação?
 
-Para adicionar usuários, acesse o [centro de administração do Microsoft 365](https://admin.microsoft.com) usando a conta de administrador da avaliação. Siga as [orientações do centro de administração](/microsoft-365/admin/add-users/add-users) para adicionar usuários até o limite da licença de avaliação. Se o usuário que você está adicionando já tiver uma conta do Microsoft 365, atribua a ele um direito de acesso apropriado na organização de avaliação. Para obter mais informações, consulte [Atribuir um direito de acesso a um usuário](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Para adicionar usuários, acesse o [centro de administração do Microsoft 365](https://admin.microsoft.com) usando a conta do administrador da avaliação. Siga as [orientações do centro de administração](/microsoft-365/admin/add-users/add-users) para adicionar usuários até o limite da licença de avaliação. Se o usuário que você estiver adicionando já tiver uma conta do Microsoft 365, atribua a ele um direito de acesso apropriado na organização de avaliação. Para obter mais informações, consulte [Atribuir um direito de acesso a um usuário](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Quantos usuários posso adicionar ao meu ambiente de avaliação?
 
@@ -63,7 +62,7 @@ Você pode estender a avaliação diretamente no aplicativo. Você pode estender
 
 Geralmente, recomendamos começar do zero com seus próprios dados ao atualizar para a versão paga do Customer Insights. 
 
-Opcionalmente, se você só usar insights do público-alvo, você pode copiar seus dados de um ambiente de avaliação se você adquirir o Customer Insights. Você deve ser o administrador da avaliação do Customer Insights e o administrador global de seu locatário do Microsoft 365 ou o administrador do Dynamics 365 em sua organização para migrar as configurações de um ambiente de avaliação para um ambiente pago. 
+Opcionalmente, se você só usar insights do público-alvo, você pode copiar seus dados de um ambiente de avaliação se você adquirir o Customer Insights. Você deve ser o administrador da avaliação do Customer Insights e o administrador global do locatário do Microsoft 365 ou o administrador do Dynamics 365 em sua organização para migrar as configurações de um ambiente de avaliação para um ambiente pago. 
 
 Depois que entrar em sua instância paga do Customer Insights pela primeira vez, você será solicitado a criar um ambiente. Nesse processo, você poderá optar por copiar a configuração de um ambiente existente e migrar a maioria das configurações. Se você tiver as permissões mencionadas acima, o ambiente de avaliação aparecerá nesta lista. Para obter mais informações, consulte [Copiar a configuração do ambiente](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +81,9 @@ Depois que se inscrever para a avaliação, você chegará à tela principal do 
 
 A maioria dos recursos do Customer Insights estão disponíveis na avaliação.
 
-Este recurso não está disponível: 
+Os seguintes recursos **não estão disponíveis**: 
 - Você não pode criar novos ambientes que usem sua própria conta de armazenamento do Azure Data Lake.
+- Não é possível excluir o ambiente de avaliação. 
 
 ### <a name="how-long-does-the-trial-last"></a>Quanto tempo leva a avaliação?
 

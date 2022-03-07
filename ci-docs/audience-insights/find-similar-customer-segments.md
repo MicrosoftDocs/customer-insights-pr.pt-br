@@ -1,24 +1,29 @@
 ---
-title: Encontrar clientes semelhantes com IA
+title: Encontrar clientes semelhantes com IA (contém vídeo)
 description: Encontrar segmentos de clientes semelhantes com inteligência artificial.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596761"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355231"
 ---
 # <a name="similar-customers-preview"></a>Clientes Semelhantes (versão preliminar)
 
 Esse recurso permite encontrar clientes semelhantes em sua base de clientes usando inteligência artificial. Você precisa ter pelo menos um segmento criado para usar esse recurso. A expansão dos critérios de um segmento existente ajuda a encontrar clientes semelhantes a esse segmento.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Encontrar clientes semelhantes* usa meios automatizados para avaliar dados e fazer previsões com base nesses dados e, portanto, tem a capacidade de ser usado como um método de criação de perfil, pois esse termo é definido pelo Regulamento Geral sobre a Proteção de Dados ("RGPD"). O uso desse recurso pelo cliente para processar dados pode estar sujeito ao RGPD ou a outras leis ou regulamentos. Você é responsável por garantir que o uso do Dynamics 365 Customer Insights, incluindo as previsões, esteja em conformidade com todas as leis e regulamentos aplicáveis, incluindo leis relacionadas a privacidade, dados pessoais, dados biométricos, proteção de dados e confidencialidade das comunicações.
@@ -50,7 +55,7 @@ Esse recurso permite encontrar clientes semelhantes em sua base de clientes usan
 Depois de processar o segmento semelhante, você encontrará o novo segmento listado na página **Segmentos**.
 
 > [!div class="mx-imgBorder"]
-> ![Segmento de clientes semelhante](media/expanded-segment.png "Segmento de clientes semelhante")
+> ![Segmento de clientes semelhante.](media/expanded-segment.png "Segmento de clientes semelhante")
 
 Selecione **Exibir** na barra de ação para abrir os detalhes do segmento. Essa exibição contém informações sobre a distribuição de resultados entre [pontuações de similaridade](#about-similarity-scores). Você também encontrará os valores da pontuação de similaridade na **Visualização Membros do segmento**.
 

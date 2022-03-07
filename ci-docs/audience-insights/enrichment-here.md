@@ -3,18 +3,17 @@ title: Enriquecimento com o enriquecimento de terceiros da HERE Technologies
 description: Informações gerais sobre o enriquecimento de terceiros da HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: be0ac9fa29ce1569d06e4e539e95824c0a3ada4dcf49802c2b574e9d91730630
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032560"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230368"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com a HERE Technologies (versão preliminar)
 
@@ -85,7 +84,7 @@ Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando *
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md) e [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

@@ -1,36 +1,37 @@
 ---
-title: Exportar dados do Customer Insights para o Gerenciador de Anúncios do Facebook
+title: Exportar dados do Customer Insights para o Gerenciador de Anúncios do Facebook (contém vídeo)
 description: Saiba como configurar a conexão e exportar para o Gerenciador de Anúncios do Facebook.
 ms.date: 04/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976028"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226481"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportar lista de segmentos para o Gerenciador de Anúncios do Facebook (versão preliminar)
 
 Exporte segmentos de perfis unificados de clientes para o Gerenciador de Anúncios do Facebook para criar campanhas no Facebook e no Instagram.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
+
 ## <a name="prerequisites-for-connection"></a>Pré-requisitos para conexão
 
-- Você deve ter uma [**Conta de Anúncios do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta de Negócios do Facebook**](https://business.facebook.com/).
-- Você deve ser um administrador na [**Conta de Anúncios do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Você precisa ter uma [**Conta do Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta de negócios do Facebook**](https://business.facebook.com/).
+- Você precisa ser um administrador na [**Conta do Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 10 milhões de perfis de clientes por exportação para o Gerenciador de Anúncios do Facebook.
+- Até 10 milhão de perfis de cliente por exportação para o Facebook Ads Manager.
 - A exportação para o Gerenciador de Anúncios do Facebook é limitada a segmentos.
 - Crie ou atualize públicos personalizados no Facebook do tipo *lista de clientes* apenas.
-- A exportação de segmentos com um total de 10 milhões de perfis pode levar até 90 minutos para ser concluída.
+- Exportar segmentos com um total de 10 milhões de perfis de clientes pode levar até 90 minutos para ser concluído.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurar conexão com o Gerenciador de Anúncios do Facebook
 
@@ -42,11 +43,11 @@ Para que os usuários possam criar uma exportação, um administrador deve confi
 
 1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
-1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será **Administradores**. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autenticar com Anúncios do Facebook: 
 
-   1. Selecione **Continue com Facebook** para fazer login na sua Conta de Anúncios do Facebook.
+   1. Selecione **Continuar com o Facebook** para entrar com sua conta do Facebook Ads.
 
    1. Conceda permissão a **ads_management** depois de autenticar com o Facebook.
 
@@ -54,7 +55,7 @@ Para que os usuários possam criar uma exportação, um administrador deve confi
 
    1. Selecione um **Público-alvo personalizado existente** na lista suspensa ou crie um **Novo público-alvo personalizado**. Para obter mais informações, consulte [**Público no Gerenciador de Anúncios do Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Você só pode criar ou atualizar públicos personalizados no Facebook do tipo *lista de clientes* com esta exportação. Em alguns casos, você vê públicos personalizados de diferentes tipos na lista suspensa. A seleção de um tipo diferente de *lista de clientes* resultará em uma exportação com falha. 
+      > Você só pode criar ou atualizar públicos personalizados no Facebook do tipo *lista de clientes* com esta exportação. Em alguns casos, você vê públicos-alvo de diferentes tipos na lista suspensa. A seleção de um tipo diferente de *lista de clientes* resultará em uma exportação com falha. 
 
 1. Examine a **Conformidade e privacidade dos dados** e selecione **Concordo**.
 
@@ -68,16 +69,17 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Para criar uma nova exportação, selecione **Adicionar destino**. 
 
-1. Em **Conexão para exportação**, escolha uma conexão da seção do **Gerenciador de Anúncios do Facebook**. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
+1. Em **Conexão para exportação**, escolha uma conexão da seção do **Gerenciador de Anúncios do Facebook**. Se você não vir este nome de seção, significa que não há conexões desse tipo disponíveis para você.
 
 1. No campo **Escolher identificador de chave**, selecione **Email**, **Nome e endereço** ou **Telefone** para enviar para o Gerenciador de Anúncios do Facebook. 
 
 1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**.
 
 1. Mapeie os atributos correspondentes da sua entidade unificada do cliente para o identificador de chave selecionado.
-   > [DICA] As melhores chances de correspondência ocorrem se você selecionar **E-mail** como o identificador. Adicionar identificadores adicionais pode melhorar a correspondência.
+   > [!TIP]
+   > É mais provável obter uma correspondência se você selecionar **Email** como identificador principal. Adicionar identificadores adicionais pode melhorar a correspondência.
 
-1. Selecione **Adicionar atributo** para mapear mais atributos para enviar para o Gerenciador de Anúncios do Facebook. Os atributos do Gerenciador de Anúncios do Facebook estão sendo mapeados para os seguintes nomes fáceis de usar: **FN** = **Nome**, **LN** = **Sobrenome**, **FI** = **Primeira Inicial**, **PHONE** = **Telefone**, **GEN** = **Gênero**, **DOB** = **Data de Nascimento**, **ST** = **Estado**, **CT** = **Cidade**, **ZIP** = **Código postal/CEP**, **COUNTRY** = **País/Região**
+1. Selecione **Adicionar atributo** para mapear mais atributos para enviar para o Gerenciador de Anúncios do Facebook. Os atributos do Facebook Ads Manager são mapeados para os seguintes nomes amigáveis: **FN** = **Nome**, **LN** = **Sobrenome**, **FI** = **Primeira inicial**, **PHONE** = **Telefone**, **GEN** = **Gênero**, **DOB** = **Data de nascimento**, **ST** = **Estado**, **CT** = **Cidade**, **ZIP** = **Código postal / CEP**, **COUNTRY** = **País / Região**
 
 1. Selecione os segmentos que você deseja exportar.
 
@@ -85,7 +87,9 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 Salvar uma exportação não a executa imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). 
+
+Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

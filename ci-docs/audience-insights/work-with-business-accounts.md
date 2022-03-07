@@ -1,20 +1,24 @@
 ---
 title: Comece com contas comerciais como público-alvo primário
 description: Saiba sobre contas comerciais como público-alvo primário Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644974"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353528"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Trabalhe com contas comerciais em insights de público-alvo
 
@@ -32,7 +36,7 @@ Depois de unificar os dados, [especifique hierarquias de contas](relationships.m
 
 Se sua organização mantém ambientes para clientes individuais e contas comerciais, você pode usar o alternador no painel esquerdo para escolher o público-alvo primário.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Alternador para alterar o público-alvo primário entre clientes individuais e contas comerciais.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Alternador para alterar o público-alvo primário entre clientes individuais e contas comerciais.":::
 
 ## <a name="supported-feature-areas"></a>Áreas de recurso suportadas
 

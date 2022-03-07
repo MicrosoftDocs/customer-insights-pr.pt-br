@@ -3,20 +3,24 @@ title: Previsão do valor de permanência do cliente (CLV)
 description: Preveja o potencial de receita para clientes ativos no futuro.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095496"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355775"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Previsão do valor de permanência do cliente (CLV) (versão preliminar)
+# <a name="customer-lifetime-value-clv-prediction"></a>Previsão do valor de permanência do cliente (CLV)
 
 Preveja o valor potencial (receita) que clientes ativos individuais trarão para o seu negócio por um período futuro definido. Este recurso pode ajudar você a atingir vários objetivos: 
 - Identificar clientes de alto valor e processar esse insight
@@ -65,7 +69,7 @@ Os dados a seguir são obrigatórios e, quando marcados como opcionais, são rec
     - Plenitude dos dados: menos de 20% dos valores ausentes nos campos obrigatórios dos dados de entrada   
 
 > [!NOTE]
-> - O modelo requer o histórico de transações de seus clientes. Apenas uma entidade de histórico de transações pode ser configurada atualmente. Se houver várias entidades de compra/transação, una-as no Power Query antes da ingestão de dados.
+> - O modelo requer o histórico de transações de seus clientes. Apenas uma entidade de histórico de transações pode ser configurada atualmente. Se houver várias entidades de compra/transação, você poderá uni-las no Power Query antes da ingestão de dados.
 > - Porém, para dados adicionais de atividade do cliente (opcional), você pode adicionar quantas entidades de atividade do cliente quiser para serem consideradas pelo modelo.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Criar uma previsão do valor de permanência do cliente
@@ -74,7 +78,7 @@ Os dados a seguir são obrigatórios e, quando marcados como opcionais, são rec
 
 1. Selecione o bloco **Valor de permanência do cliente** e selecione **Usar modelo**. 
 
-1. No painel **Valor de permanência do cliente (versão preliminar)**, selecione **Começar agora**.
+1. No painel **Valor da permanência do cliente**, selecione **Introdução**.
 
 1. **Nomear este modelo** e **Nome da entidade de saída** para distingui-los de outros modelos ou entidades.
 

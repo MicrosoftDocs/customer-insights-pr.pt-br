@@ -1,20 +1,19 @@
 ---
 title: Exportar dados do Customer Insights para o Marketo
 description: Saiba como configurar a conexão e exportar para o Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033479"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231947"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para o Marketo (versão preliminar)
 
@@ -29,10 +28,10 @@ Exporte segmentos de perfis de clientes unificados para gerar campanhas, fornece
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis por exportação para o Marketo.
+- Até 1 milhão de perfis de clientes por exportação para o Marketo.
 - A exportação para o Marketo é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode levar até 3 horas. 
-- O número de perfis que você pode exportar para o Marketo depende e está limitado ao seu contrato com o Marketo.
+- Exportar segmentos com um total de 1 milhão de perfis de clientes pode levar até 3 horas. 
+- O número de perfis de clientes que você pode exportar para o Marketo depende e está limitado ao seu contrato com o Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Configurar conexão com o Marketo
 
@@ -64,7 +63,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Insira sua **[ID da lista do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. A ID da lista é um valor puramente numérico. Por exemplo, se a sua ID da lista do Marketo for ST12345A7, remova o caractere antes e depois dos numerais e insira `12345`. 
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente. 
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. 
 
 1. Opcionalmente, você pode exportar **Nome**, **Sobrenome**, **Cidade**, **Estado** e **País/Região** para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
 

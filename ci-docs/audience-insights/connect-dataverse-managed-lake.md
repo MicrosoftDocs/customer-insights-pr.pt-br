@@ -2,19 +2,21 @@
 title: Conectar-se a tabelas no Microsoft Dataverse
 description: Importar dados de um data lake gerenciado pelo Microsoft Dataverse.
 ms.date: 12/06/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+searchScope:
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046411"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354127"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conecte-se aos dados em um data lake gerenciado do Microsoft Dataverse
 

@@ -5,16 +5,15 @@ author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cba2c112e9e475ceb047fe627fb41e6c8a27e1e7
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: 4c165c4278a4870e6872d460e20cf7cb1eb8df83
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582772"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233940"
 ---
 # <a name="out-of-box-oob-unified-profile-reports"></a>Relatórios de perfis prontos para uso (OOB)
 

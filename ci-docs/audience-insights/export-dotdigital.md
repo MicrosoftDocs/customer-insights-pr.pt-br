@@ -1,38 +1,37 @@
 ---
 title: Exportar dados do Customer Insights para o DotDigital
 description: Saiba como configurar a conexão e exportar para o DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: f9302e17c07238d837dcafb82baecb5aedda17de
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759945"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231604"
 ---
-# <a name="export-segment-lists-to-dotdigital-preview"></a>Exportar listas de segmentos para o DotDigital (versão preliminar)
+# <a name="export-segments-to-dotdigital-preview"></a>Exportar segmentos para o DotDigital (versão preliminar)
 
 Exporte segmentos de perfis de clientes unificados para catálogos de endereços do DotDigital e use-os para campanhas, marketing por email e para criar segmentos de clientes com o DotDigital. 
 
 ## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma conexão
 
--   Você deve ter uma [conta do DotDigital](https://dotdigital.com/) e as credenciais de administrador correspondentes.
+-   Você tem uma [conta DotDigital](https://dotdigital.com/) e criou um [usuário API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Você precisará usar as credenciais de usuário da API para criar uma conexão
 -   Há catálogos de endereços existentes no DotDigital e as IDs correspondentes. A ID pode ser encontrada na URL ao selecionar e abrir um catálogo de endereços. Para obter mais informações, consulte [catálogos de endereços do DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Você deve ter [segmentos configurados](segments.md) em insights do público-alvo.
 -   Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis por exportação para o DotDigital.
+- Até 1 milhão de perfis de clientes por exportação para DotDigital.
 - A exportação para o DotDigital é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode levar até 3 horas devido a limitações do provedor. 
-- O número de perfis que você pode exportar para o DotDigital depende e está limitado ao seu contrato com o DotDigital.
+- Exportar segmentos com um total de 1 milhão de perfis de clientes pode levar até 3 horas devido às limitações do fornecedor. 
+- O número de perfis de clientes que você pode exportar para DotDigital depende e está limitado ao seu contrato com DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Configurar conexão com o DotDigital
 
@@ -44,7 +43,7 @@ Exporte segmentos de perfis de clientes unificados para catálogos de endereços
 
 1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Insira seu **nome de usuário e senha do DotDigital**.
+1. Insira seu **nome de usuário e senha da API DotDigital**. 
 
 1. Insira sua **[ID do catálogo de endereços do DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +66,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 1. No campo **Conexão para exportação**, escolha uma conexão da seção do DotDigital. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
 
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo no seu perfil de cliente unificado que representa o endereço de email de um cliente. Repita as mesmas etapas para outros campos opcionais, como **Nome**, **Sobrenome**, **Nome completo**, **Gênero** e **Código postal**.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. Repita as mesmas etapas para outros campos opcionais, como **Nome**, **Sobrenome**, **Nome completo**, **Gênero** e **Código postal**.
 
 1. Selecione os segmentos que você deseja exportar. Você pode exportar até 1 milhão de perfis de clientes no total para o DotDigital.
 

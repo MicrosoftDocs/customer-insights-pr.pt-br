@@ -5,21 +5,20 @@ author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
 ms.date: 09/28/2021
-ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564580"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228092"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilidade regional do Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Insights de participação, um recurso do Dynamics 365 Customer Insights, gradualmente inclui mais regiões em que os clientes podem escolher para armazenar seus dados. Os administradores podem escolher uma região ao [criar um novo ambiente](manage-environments-workspaces.md#create-an-environment). 
+Insights de participação, um recurso do Dynamics 365 Customer Insights, gradualmente inclui mais regiões em que os clientes podem escolher para armazenar seus dados. Os administradores podem escolher uma região ao [criar um novo ambiente](create-new-environment.md). 
 
 Quando você configura insights de participação pela primeira vez, pode escolher a região enquanto passa pela [experiência guiada de primeira execução](quickstart.md). Depois, todo novo ambiente permitirá que você escolha a região em que os dados serão armazenados.
 

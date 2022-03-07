@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: ded9e98f06109b7cdc27f449455b7f58d633722f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673775"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350623"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gerenciar ambientes e espaços de trabalho
 
@@ -107,6 +106,6 @@ Para obter mais informações, consulte [Criar um link entre insights do públic
 
 Para proteger os dados pessoais do seu cliente, você pode excluir ou exportar os dados identificáveis do usuário final.
 
-Para obter mais informações, consulte [Excluir e exportar dados de eventos que contenham informações pessoais](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
+Para obter mais informações, consulte [Excluir e exportar dados de eventos que contenham informações pessoais](../dsr-rights-requests.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

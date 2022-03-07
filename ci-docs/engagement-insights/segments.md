@@ -5,16 +5,15 @@ ms.reviewer: mhart
 ms.author: jusali
 author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623573"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225362"
 ---
 # <a name="view-and-create-segments"></a>Exibir e criar segmentos
 

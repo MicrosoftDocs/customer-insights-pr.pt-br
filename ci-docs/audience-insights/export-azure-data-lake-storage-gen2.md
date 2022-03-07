@@ -3,18 +3,17 @@ title: Exportar dados do Customer Insights para o Azure Data Lake Storage Gen2
 description: Saiba como configurar a conexão do Azure Data Lake Storage Gen2.
 ms.date: 10/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 934c396559d4c4be8e640917d2265805753eb62d
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605889"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231655"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exporte a lista de segmentos e outros dados para o Azure Data Lake Storage Gen2 (versão preliminar)
 

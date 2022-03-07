@@ -1,20 +1,25 @@
 ---
-title: Enriquecimento de aprimoramento de endereço
+title: Enriquecimento de aprimoramento de endereços (contém vídeo)
 description: Enriqueça e normalize as informações de endereço de perfis de clientes com modelos da Microsoft.
-ms.date: 04/21/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965564"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353622"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços aprimorados
 
@@ -22,11 +27,13 @@ Os endereços dos seus dados podem ser não estruturados, incompletos ou incorre
 
 ## <a name="how-we-enhance-addresses"></a>Como aprimoramos os endereços
 
-Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar seus componentes e os coloca em um formato estruturado. Depois, usamos inteligência artificial para corrigir, completar e padronizar os valores no endereço.
+Nosso modelo passa por um processo de duas etapas para aprimorar endereços. Primeiro, ele analisa o endereço para identificar componentes e coloca-os em um formato estruturado. Em seguida, usamos a IA para corrigir, completar e padronizar os valores no endereço.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Exemplo
 
-As informações de endereço podem estar em formato não padrão e conter erros de ortografia. O modelo pode corrigir esses problemas e criar endereços consistentes em perfis unificados de clientes.
+As informações de endereço podem estar em um formato não padrão e conter erros de ortografia. O modelo pode corrigir esses problemas e criar endereços consistentes em perfis unificados de clientes.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -44,13 +51,13 @@ As informações de endereço podem estar em formato não padrão e conter erros
 
 ### <a name="limitations"></a>Limitações
 
-Os endereços avançados só funcionam com os valores que já existem nos dados de endereço processados. O que o modelo não faz: 
+Os endereços avançados só funcionam com os valores que já existem nos dados de endereço processados. O modelo não: 
 
-1. Verificar se o endereço é válido.
-2. Verificar se algum dos valores, como CEPs ou nomes de ruas, é válido.
-3. Alterar valores que não reconhece.
+1. Verifica se o endereço é um endereço válido.
+2. Verifica se um dos valores, como CEPs ou nomes de rua, são válidos.
+3. Altera valores não reconhecidos.
 
-O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo muda um valor de entrada, como acontece com qualquer modelo baseado em ML, não há garantia de 100% de precisão.
+O modelo usa técnicas com base em aprendizado de máquina para aprimorar os endereços. Embora apliquemos um limite de alta confiança para quando o modelo altera um valor de entrada, como acontece com qualquer modelo baseado em aprendizado de máquina, a precisão de 100% não é garantida.
 
 ## <a name="supported-countries-or-regions"></a>Países ou regiões com suporte
 
@@ -58,6 +65,10 @@ Atualmente, damos suporte a endereços de enriquecimento nestes países ou regi�
 
 - Austrália
 - Canadá
+- França
+- Alemanha
+- Itália
+- Japão
 - Reino Unido
 - Estados Unidos
 
@@ -76,7 +87,7 @@ Os endereços devem conter um valor de país/região. Não processamos endereço
 1. Selecione como os endereços serão formatados em seu conjunto de dados. Escolha **Endereço com um único atributo** se os endereços em seus dados usarem um único campo. Escolha **Endereço com vários atributos** se os endereços em seus dados usarem mais de um campo de dados.
 
    > [!NOTE]
-   > O campo País/região é obrigatório em endereços com atributo único e com vários atributos. Endereços que não contiverem valores de país/região válidos ou suportados não serão enriquecidos
+   > País/região é obrigatório em endereços de atributo único e de vários atributos. Endereços que não contiverem valores de país/região válidos ou com suporte não serão enriquecidos.
 
 1.  Mapeie os campos de endereço da sua entidade de cliente unificada.
 
@@ -94,10 +105,20 @@ Para iniciar o processo de enriquecimento, selecione **Executar** na barra de co
 
 Após a conclusão do processo de enriquecimento, você poderá analisar os dados dos perfis de clientes recém-enriquecidos em **Meus enriquecimentos**. Além disso, você encontrará a hora da última atualização e o número de perfis enriquecidos.
 
-Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando **Exibir dados enriquecidos**.
+Você pode ver um exemplo dos dados enriquecidos no bloco **Versão preliminar de clientes enriquecidos**. Selecione **Ver mais** e, depois, a guia **Dados** para acessar uma visão detalhada de cada perfil enriquecido.
+
+### <a name="overview-card"></a>Cartão de visão geral
+
+O cartão de visão geral mostra detalhes sobre a cobertura do enriquecimento. 
+
+* **Endereços processados e alterados**: o número de perfis de clientes com endereços que foram enriquecidos com êxito.
+
+* **Endereços processados e não alterados**: o número de perfis de clientes com endereços que foram reconhecidos, mas não foram alterados. Isso geralmente acontece quando os dados de entrada são válidos e não podem ser aprimorados pelo enriquecimento.
+
+* **Endereços não processados e não alterados**: o número de perfis com endereços que não foram reconhecidos. Geralmente para dados de entrada que são inválidos ou não são compatíveis com o enriquecimento.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Crie [segmentos](segments.md), [medidas](measures.md), e até mesmo [exporte os dados](export-destinations.md) para oferecer experiências personalizadas aos seus clientes.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

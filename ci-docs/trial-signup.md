@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645477"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350209"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Inscreva-se em uma avaliação gratuita do Dynamics 365 Customer Insights
 
@@ -32,23 +31,12 @@ A avaliação leva alguns minutos para carregar e logo após, você poderá come
 
 Seu ambiente de avaliação inclui muitos dos mesmos recursos da versão paga. Os links abaixo orientam você sobre alguns dos principais recursos.
 
-### <a name="audience-insights"></a>Insights do público-alvo
-
 - [Guia de início rápido para insights do público-alvo.](audience-insights/get-started.md)
 - [Adicione mais usuários e atribuir permissões.](audience-insights/permissions.md)
 - [Ingerir suas fontes de dados](audience-insights/data-sources.md) e executá-las por meio do [processo de unificação de dados](audience-insights/data-unification.md) para obter [perfis de clientes unificados](audience-insights/customer-profiles.md).
 - [Enriquecer os perfis de clientes unificados](audience-insights/enrichment-hub.md) ou [executar modelos preditivos](audience-insights/predictions-overview.md).
 - Crie [segmentos](audience-insights/segments.md) para agrupar clientes e [métricas](audience-insights/measures.md) para revisar os KPIs.
 - Configurar [conexões](audience-insights/connections.md) e [exportações](audience-insights/export-destinations.md) para processar subconjuntos de seus dados em outros aplicativos.
-
-### <a name="engagement-insights"></a>Insights de participação
-
-- [Guia de início rápido para insights de engajamento.](engagement-insights/get-started.md)
-- [Crie um espaço de trabalho](engagement-insights/create-workspace.md) e adicione membros.
-- [Adicione o código ao seu site](engagement-insights/instrument-website.md) ou [aplicativo móvel](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Visualize um [relatório em tempo real](engagement-insights/view-reports.md) ou crie [relatórios personalizados](engagement-insights/custom-reports.md).
-- [Crie eventos refinados](engagement-insights/refined-events.md) para exportação.
-- [Exporte os dados](engagement-insights/export-events.md) para o Azure Data Lake Storage.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
