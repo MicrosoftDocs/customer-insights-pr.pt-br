@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355128"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376908"
 ---
 # <a name="match-entities"></a>Corresponder entidades
 
@@ -180,7 +180,19 @@ Uma entidade de saída de eliminação de duplicação contém as seguintes info
   - Deduplication_WinnerId: este campo contém a ID do vencedor dos grupos ou clusters identificados. Se a Deduplication_WinnerId for igual ao valor da chave primária para um registro, isso significa que o registro é o registro vencedor.
 - Campos usados para definir as regras de eliminação de duplicação.
 - Campos de regra e pontuação para denotar quais das regras de eliminação de duplicação foram aplicadas e a pontuação retornada pelo algoritmo de correspondência.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Incluir entidades enriquecidas (versão preliminar)
+
+Se você enriqueceu entidades no nível fonte de dados, selecione-as antes de executar o processo de correspondência. As entidades enriquecidas podem melhorar seus resultados de unificação. Para obter mais informações, consulte [Enriquecimento de fontes de dados](data-sources-enrichment.md). 
+
+A entidade enriquecida contém os campos de fonte de dados originais e os campos enriquecidos. Portanto, se você optar por trabalhar com a entidade enriquecida, a configuração existente não será afetada. No entanto, talvez seja necessário atualizar as regras de correspondência para usar os campos enriquecidos.
+
+1. Acesse **Dados** > **Unificar** > **Corresponder** e selecione **Usar entidades enriquecidas** no topo da página.
+
+1. No painel **Usar entidades enriquecidas**, selecione uma ou mais entidades enriquecidas.
+
+1. Selecione **Concluído**. Independentemente do local em que a entidade de origem é usada (como ordem de correspondência ou regras), ela é alterada automaticamente para a entidade enriquecida.
+  
 ## <a name="run-the-match-process"></a>Executar o processo de correspondência
 
 Com as regras de correspondência definidas, incluindo as regras de correspondência entre entidades e de eliminação de duplicação, você poderá executar o processo de correspondência. 

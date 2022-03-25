@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230368"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376266"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com a HERE Technologies (versão preliminar)
 
@@ -25,7 +25,7 @@ Para configurar os enriquecimentos da HERE Technologies, os seguintes pré-requi
 
 - Você tem uma assinatura ativa da HERE Technologies. Para obter uma assinatura, você pode [inscrever-se aqui](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [entre contato com a HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) diretamente. [Saiba mais sobre o enriquecimento de localização da HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Uma [conexão](connections.md) da HERE está disponível *ou* você tem permissões de [administrador](permissions.md#administrator) e a chave de API da HERE Technologies.
+- Uma [conexão](connections.md) da HERE está disponível *ou* você tem permissões de [administrador](permissions.md#admin) e a chave de API da HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 

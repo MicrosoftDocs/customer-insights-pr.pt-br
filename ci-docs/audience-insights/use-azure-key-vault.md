@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355877"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376494"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Traga seu próprio cofre de chaves do Azure (versão preliminar)
 
@@ -31,7 +31,7 @@ Para configurar o cofre de chaves em insights do público, os seguintes pré-req
 
 - Você deve ter uma assinatura ativa do Azure.
 
-- Você tem uma função de [Administrador](permissions.md#administrator) nos insights do público-alvo. Saiba mais sobre [permissões do usuário em insights do público-alvo](permissions.md#assign-roles-and-permissions).
+- Você tem uma função de [Administrador](permissions.md#admin) nos insights do público-alvo. Saiba mais sobre [permissões do usuário em insights do público-alvo](permissions.md#assign-roles-and-permissions).
 
 - Você tem funções de [Contribuinte](/azure/role-based-access-control/built-in-roles#contributor) e [Administrador de acesso de usuário](/azure/role-based-access-control/built-in-roles#user-access-administrator) no cofre de chaves ou no grupo de recursos ao qual o cofre de chaves pertence. Para obter mais informações, acesse [Adicionar ou remover atribuições de função do Azure usando o portal do Azure](/azure/role-based-access-control/role-assignments-portal). Se você não tiver a função de Administrador de Acesso de Usuário no cofre principal, você deve configurar separadamente as permissões de controle de acesso baseadas em funções para o diretor de serviços Azure para o Dynamics 365 Customer Insights. Siga os passos para [usar um diretor de serviços do Azure](connect-service-principal.md) para o cofre de chaves que deve ser vinculado.
 
