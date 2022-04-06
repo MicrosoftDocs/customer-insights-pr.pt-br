@@ -8,13 +8,8 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231947"
 ---
+
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para o Marketo (versão preliminar)
 
 Exporte segmentos de perfis de clientes unificados para gerar campanhas, fornecer marketing por email e usar grupos específicos de clientes com o Marketo.
@@ -63,7 +58,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Insira sua **[ID da lista do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. A ID da lista é um valor puramente numérico. Por exemplo, se a sua ID da lista do Marketo for ST12345A7, remova o caractere antes e depois dos numerais e insira `12345`. 
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. 
+1. Na seção **Correspondência de dados**, selecione pelo menos um campo que representa o endereço de e-mail ou o ID Marketo do cliente. 
 
 1. Opcionalmente, você pode exportar **Nome**, **Sobrenome**, **Cidade**, **Estado** e **País/Região** para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
 

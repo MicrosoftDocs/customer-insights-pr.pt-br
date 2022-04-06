@@ -1,20 +1,15 @@
 ---
 title: Visão geral sobre os cenários de predição com suporte
 description: Cenários de previsão e opções cobertos pelo aplicativo Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228171"
 ---
+
 # <a name="predictions-overview"></a>Visão geral das previsões
 
 O Dynamics 365 Customer Insights é fornecido com várias opções que aproveitam a IA e o aprendizado de máquina para prever dados. 
@@ -36,6 +31,11 @@ A maneira mais fácil de começar com dados de previsão são os modelos predefi
 - [Rotatividade transacional](predict-transactional-churn.md): prevê se um cliente não comprará mais seus produtos ou serviços em determinado período.
 
 ---
+
+> [!TIP]
+> Recomendamos que você atualize regularmente os modelos prontos para uso com dados atualizados para garantir que eles informem com precisão seu caso de uso comercial. Os dados são atualizados ad hoc quando o sistema ingere fontes de dados novas ou atualizadas. No entanto, os modelos só serão pontuados novamente nesse caso e continuarão usando os dados de treinamento existentes.
+> 
+> Para configurar uma **Atualização da agenda**, defina o cronograma de retreinamento do modelo na experiência de configuração. O modelo será treinado e pontuado novamente conforme o cronograma, que pode ser alterado a qualquer momento.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integração do Azure Machine Learning

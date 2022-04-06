@@ -9,15 +9,10 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376402"
+  - ci-system-diagnostic
+  - customerInsights
 ---
+
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Encaminhamento de logs no Dynamics 365 Customer Insights com o Azure Monitor (Versão preliminar)
 
 O Dynamics 365 Customer Insights fornece uma integração direta com o Azure Monitor. Os logs de recursos do Azure Monitor permitem monitorar e enviar logs para o [Armazenamento do Azure](https://azure.microsoft.com/services/storage/), o [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ou transmiti-los para os [Hubs de Eventos do Azure](https://azure.microsoft.com/services/event-hubs/).
@@ -230,7 +225,7 @@ Os eventos de fluxo de trabalho têm as seguintes propriedades.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Sim      | Sim  | Sempre `WorkflowEvent`, marcando o evento como evento de fluxo de trabalho.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Sim      | Sim  | Identificador da execução do fluxo de trabalho. Todos os eventos de fluxo de trabalho e tarefa na execução do fluxo de trabalho têm a mesma `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Sim      | Sim  | Identificador da operação, consulte [Tipos de operação].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Sim      | Sim  | Identificador da operação, consulte [Tipos de operação](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Sim      | No   | Somente fluxo de trabalho. Número de tarefas acionadas pelo fluxo de trabalho.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Sim      | No   | Opcional. Somente eventos de fluxo de trabalho. A [objectId do usuário](/azure/marketplace/find-tenant-object-id#find-user-object-id) do Azure Active Directory que acionou o fluxo de trabalho, consulte também `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Sim      | No   | Atualização `full` ou `incremental`.                                                                                                                                                                                                                            |

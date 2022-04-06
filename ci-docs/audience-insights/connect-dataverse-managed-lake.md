@@ -1,7 +1,7 @@
 ---
 title: Conectar-se a tabelas no Microsoft Dataverse
 description: Importar dados de um data lake gerenciado pelo Microsoft Dataverse.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -9,18 +9,11 @@ ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
 searchScope:
-- ci-dataverse
-- customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354127"
+  - ci-dataverse
+  - customerInsights
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conecte-se aos dados em um data lake gerenciado do Microsoft Dataverse
-
-
 
 Este artigo fornece informações sobre como os usuários do Dataverse podem se conectar rapidamente a entidades analíticas em um lake gerenciado pelo Microsoft Dataverse. 
 
@@ -29,7 +22,8 @@ Este artigo fornece informações sobre como os usuários do Dataverse podem se 
 
 ## <a name="important-considerations"></a>Considerações importantes
 
-Os dados armazenados em serviços online, como o Azure Data Lake Storage, podem ser armazenados em um local diferente daquele onde os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar ou se conectar aos dados armazenados em serviços online, você concorda que os dados podem ser transferidos e armazenados com o Dynamics 365 Customer Insights. [Saiba mais na Central de Confiabilidade da Microsoft](https://www.microsoft.com/trust-center).
+1. Os dados armazenados em serviços online, como o Azure Data Lake Storage, podem ser armazenados em um local diferente daquele onde os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar ou se conectar aos dados armazenados em serviços online, você concorda que os dados podem ser transferidos e armazenados com o Dynamics 365 Customer Insights. [Saiba mais na Central de Confiabilidade da Microsoft](https://www.microsoft.com/trust-center).
+2. Apenas as entidades Dataverse com o [controle de alterações](/power-platform/admin/enable-change-tracking-control-data-synchronization) habilitado são visíveis. Essas entidades podem ser exportadas para o data lake gerenciado do Dataverse e usadas no Customer Insights. As tabelas do Dataverse prontas para uso têm o controle de alterações habilitado por padrão. Você precisa ativar o controle de alterações para tabelas personalizadas. Para verificar se uma tabela do Dataverse está com o controle de alterações habilitado, acesse [Power Apps](https://make.powerapps.com) > **Dados** > **Tabelas**. Encontre a tabela que você está procurando e selecione-a. Acesse **Configurações** > **Opções avançadas** e verifique a configuração **Controlar alterações**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Conectar-se a um data lake gerenciado do Dataverse
 

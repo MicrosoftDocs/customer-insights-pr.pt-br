@@ -1,5 +1,5 @@
 ---
-title: Ingestão de dados em tempo real e limitações
+title: Ingestão de dados em tempo real (versão preliminar)
 description: Informações gerais sobre recursos em tempo real em percepções de público.
 ms.date: 10/27/2020
 ms.reviewer: mhart
@@ -9,15 +9,10 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355461"
+  - ci-system-api-usage
+  - customerInsights
 ---
+
 # <a name="real-time-data-ingestion-preview"></a>Ingestão de dados em tempo real (versão preliminar)
 
 A funcionalidade quase em tempo real permite ver, em segundos, as últimas interações que seus clientes tiveram com seus produtos ou serviços.

@@ -1,7 +1,7 @@
 ---
 title: Segmentos em insights de público-alvo
 description: Visão geral dos segmentos e como criá-los e gerenciá-los.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -9,18 +9,13 @@ ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-enrichment-details
-- ci-segments
-- ci-segment-details
-- customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355969"
+  - ci-customers-page
+  - ci-enrichment-details
+  - ci-segments
+  - ci-segment-details
+  - customerInsights
 ---
+
 # <a name="segments-overview"></a>Visão geral dos segmentos
 
 Os segmentos permitem agrupar seus clientes com base em atributos demográficos, transacionais ou comportamentais. Você pode usar segmentos para direcionar campanhas promocionais, atividades de vendas e ações de suporte ao cliente para atingir suas metas de negócios.
@@ -68,7 +63,9 @@ As seguintes ações estão disponíveis quando você seleciona um segmento:
 
 ## <a name="refresh-segments"></a>Atualizar segmentos
 
-Você pode atualizar todos os segmentos de uma vez, selecionando **Atualizar tudo** na página **Segmentos** ou você pode atualizar um ou vários segmentos ao selecioná-los e escolher **Atualizar** nas opções. Como alternativa, você pode configurar uma atualização recorrente em **Admin** > **Sistema** > **Agendar**.
+Você pode atualizar todos os segmentos de uma vez, selecionando **Atualizar tudo** na página **Segmentos** ou você pode atualizar um ou vários segmentos ao selecioná-los e escolher **Atualizar** nas opções. Como alternativa, você pode configurar uma atualização recorrente em **Admin** > **Sistema** > **Agendar**. Quando uma atualização recorrente é configurada, as seguintes regras se aplicam:
+- Todos os segmentos com o tipo **Dinâmico** ou **Expansão** serão atualizados automaticamente conforme a cadência definida. Quando a atualização estiver concluída, o **Status** indica se houve algum problema na atualização do segmento. A informação **Última atualização** mostra um carimbo de data/hora da última atualização bem-sucedida. Se ocorrer um erro, selecione-o para ver detalhes sobre o que aconteceu.
+- Segmentos com o tipo **Estático** *não* serão atualizados automaticamente. A informação **Última atualização** mostra um carimbo de data/hora da última vez que os segmentos estáticos foram executados ou atualizados manualmente.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

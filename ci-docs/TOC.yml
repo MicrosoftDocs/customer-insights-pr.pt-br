@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Perguntas Frequentes da Avaliação
       href: trial-FAQ.md
-- name: Comece com uma licença paga
-  href: paid-license.md
 - name: Acessar o ambiente
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Insights do público-alvo
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Recursos novos e atualizados
       href: audience-insights/whats-new-audience-insights.md
-    - name: Introdução
+    - name: Começar agora
       items:
         - name: Guia de início rápido
           href: audience-insights/get-started.md
+        - name: Comece com uma licença paga
+          href: paid-license.md
         - name: Criar um novo ambiente
           href: audience-insights/create-environment.md
         - name: Explorar insights de público-alvo
           href: audience-insights/home.md
-    - name: Trabalhe com contas corporativas
-      href: audience-insights/work-with-business-accounts.md
+        - name: Trabalhe com contas corporativas
+          href: audience-insights/work-with-business-accounts.md
     - name: Fontes de dados
       items:
         - name: Visão geral de fontes de dados
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestão de dados em tempo real
           href: audience-insights/real-time-data-ingestion.md
-        - name: Entender entidades e conjuntos de dados
-          href: audience-insights/entities.md
     - name: Unificação de dados
       items:
         - name: Visão geral da unificação de dados
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Mesclar entidades
           href: audience-insights/merge-entities.md
-        - name: Revisar perfis de cliente unificado
-          href: audience-insights/customer-profiles.md
-        - name: Filtrar perfis de cliente unificado
-          href: audience-insights/search-filter-index.md
-        - name: Criar relacionamentos e entidades conectadas
-          href: audience-insights/relationships.md
-        - name: Listar atividades do cliente
-          href: audience-insights/activities.md
-        - name: Defina mapeamentos semânticos
-          href: audience-insights/semantic-mappings.md
     - name: Enriquecimento de dados
       items:
         - name: Enriquecer perfis de cliente
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Enriquecer com importação personalizada do SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Perfis unificados
+      items:
+        - name: Revisar perfis de cliente unificado
+          href: audience-insights/customer-profiles.md
+        - name: Filtrar perfis de cliente unificado
+          href: audience-insights/search-filter-index.md
+        - name: Definir atividades do cliente
+          href: audience-insights/activities.md
     - name: Segmentos
       items:
         - name: Visão geral dos segmentos
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -204,6 +202,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entidades
+      items:
+        - name: Compreender as entidades
+          href: audience-insights/entities.md
+        - name: Revisar os esquemas de entidades no Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Dados do Customer Insights no Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Criar relacionamentos e entidades conectadas
+          href: audience-insights/relationships.md
+        - name: Defina mapeamentos semânticos
+          href: audience-insights/semantic-mappings.md
     - name: Administração
       items:
         - name: Definir a configuração do sistema
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Gerenciar vários ambientes
           href: audience-insights/manage-environments.md
-        - name: Segurança
-          items:
-            - name: Traga seu próprio cofre de chaves
-              href: audience-insights/use-azure-key-vault.md
-            - name: Conecte-se a uma conta de armazenamento ADLS usando a entidade de serviço
-              href: audience-insights/connect-service-principal.md
-            - name: Exportar logs de diagnóstico
-              href: audience-insights/diagnostics.md
-    - name: Extensibilidade
+        - name: Traga seu próprio cofre de chaves
+          href: audience-insights/use-azure-key-vault.md
+        - name: Conectar a uma conta de armazenamento usando a entidade de serviço
+          href: audience-insights/connect-service-principal.md
+        - name: Exportar logs de diagnóstico
+          href: audience-insights/diagnostics.md
+        - name: Limites de serviço
+          href: service-limits.md
+        - name: Direitos e solicitações de DSR
+          href: dsr-rights-requests.md
+    - name: APIs
       items:
         - name: Revisar os esquemas de entidades no Common Data Model
           href: audience-insights/entity-schemas.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Insights de participação (versão preliminar)
   href: engagement-insights/overview.md
-- name: Limites de serviço
-  href: service-limits.md
-- name: Direitos e solicitações de DSR
-  href: dsr-rights-requests.md
 - name: Obtenha suporte
   href: /power-platform/admin/get-help-support

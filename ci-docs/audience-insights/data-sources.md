@@ -1,7 +1,7 @@
 ---
 title: Usar fontes de dados para ingerir dados
 description: Saiba como importar dados de várias fontes.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -9,16 +9,11 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354035"
+  - ci-data-sources
+  - ci-create-data-source
+  - customerInsights
 ---
+
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
 
@@ -47,7 +42,18 @@ As fontes de dados que são criadas após associar um ambiente do Dataverse ao C
 
 Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
 
+> [!IMPORTANT]
+> Verifique se os seus gateways estão atualizados com a versão mais recente. Você pode instalar uma atualização e reconfigurar um gateway em um prompt mostrado diretamente na tela do gateway ou [fazer download da versão mais recente](https://powerapps.microsoft.com/downloads/). Se você não usar a versão mais recente do gateway, a atualização do fluxo de dados vai falhar com mensagens de erro como **Não há suporte para a palavra-chave: propriedades de configuração. Nome do parâmetro: palavra-chave**.
+
 ## <a name="review-ingested-data"></a>Analisar dados ingeridos
+Se o seu ambiente contém fluxos de dados do Power Platform, a página **Fontes de Dados** lista três seções: 
+- **Compartilhado**: as fontes de dados que podem ser gerenciadas por todos os administradores do Customer Insights. Alguns exemplos de fontes de dados compartilhadas incluem os fluxos de dados do Power BI, sua própria conta de armazenamento e anexar a um data lake gerenciado do Dataverse.
+- **Gerenciado por mim**: os fluxos de dados do Power Platform criados e que só podem ser gerenciados por você. Outros administradores do Customer Insights só podem visualizar esses fluxos de dados, mas não podem editar, atualizar ou excluir.
+- **Gerenciado por outros**: os fluxos de dados do Power Platform criados por outros administradores. Você só pode visualizar. Aqui, é indicado o proprietário do fluxo de dados que você precisa contatar caso precise de qualquer ajuda.
+> [!NOTE]
+> Todas as entidades podem ser visualizadas e usadas por outros usuários. A contextualidade do usuário se aplica apenas às fontes de dados e não às entidades que resultam desses fluxos de dados.
+
+Se nenhum fluxo de dados do Power Platform for usado, você não verá nenhum grupo ou seção. A página **Fontes de Dados** contém apenas uma lista de todas as fontes de dados.
 
 Você verá o nome de cada fonte de dados ingeridos, seu status e a última vez em que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por cada coluna.
 

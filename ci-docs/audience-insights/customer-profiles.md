@@ -9,23 +9,20 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-customer-card
-- ci-activities
-- ci-activities-wizard
-- customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354864"
+  - ci-customers-page
+  - ci-customer-card
+  - ci-activities
+  - ci-activities-wizard
+  - customerInsights
 ---
+
 # <a name="customer-profiles"></a>Perfis do cliente
 
 A página **Clientes** mostra uma visão combinada de seus perfis de clientes unificados. Os perfis do cliente estão disponíveis, já que você [criou a entidade cliente unificada](data-unification.md). A página permite pesquisar clientes e definir o índice dessa pesquisa.
 
-Os clientes podem ser pessoas ou organizações. Cada perfil de cliente é representado por um bloco de cartão do cliente. Use os controles de paginação para obter mais registros. O cartão exibe campos da entidade do *Cliente* conforme definido no **Índice de pesquisa e filtro**. Selecione um bloco para ver os dados do cliente selecionado em uma página dedicada chamada [Página de detalhes do cliente](customer-profiles.md#customer-details-page).
+Os clientes podem ser pessoas ou organizações. Cada perfil de cliente é representado por um bloco de cartão do cliente. Use os controles de paginação para obter mais registros. O cartão exibe campos da entidade do *Cliente* conforme definido no **Índice de pesquisa e filtro**. A ordem dos campos dentro de cada cartão é escolhida pelo sistema.
+
+Selecione um bloco para ver os dados do cliente selecionado em uma página dedicada chamada [Página de detalhes do cliente](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Página do cliente mostrando blocos de resultados](media/customers-page-result-tiles-B2C.png "Página do cliente mostrando blocos de resultados")
