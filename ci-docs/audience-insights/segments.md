@@ -9,13 +9,18 @@ ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-customers-page
-  - ci-enrichment-details
-  - ci-segments
-  - ci-segment-details
-  - customerInsights
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508552"
 ---
-
 # <a name="segments-overview"></a>Visão geral dos segmentos
 
 Os segmentos permitem agrupar seus clientes com base em atributos demográficos, transacionais ou comportamentais. Você pode usar segmentos para direcionar campanhas promocionais, atividades de vendas e ações de suporte ao cliente para atingir suas metas de negócios.

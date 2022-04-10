@@ -9,10 +9,15 @@ ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
 searchScope:
-  - ci-dataverse
-  - customerInsights
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464052"
 ---
-
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conecte-se aos dados em um data lake gerenciado do Microsoft Dataverse
 
 Este artigo fornece informações sobre como os usuários do Dataverse podem se conectar rapidamente a entidades analíticas em um lake gerenciado pelo Microsoft Dataverse. 

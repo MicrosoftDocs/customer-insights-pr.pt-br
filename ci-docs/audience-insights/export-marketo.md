@@ -8,8 +8,13 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487485"
 ---
-
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para o Marketo (versão preliminar)
 
 Exporte segmentos de perfis de clientes unificados para gerar campanhas, fornecer marketing por email e usar grupos específicos de clientes com o Marketo.

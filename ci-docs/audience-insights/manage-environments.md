@@ -9,10 +9,15 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 searchScope:
-  - ci-system-about
-  - customerInsights
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: ba29bcd173e615e544bd10e69043f310c009eb47
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491984"
 ---
-
 # <a name="manage-environments"></a>Gerenciar ambientes
 
 ## <a name="switch-environments"></a>Alternar ambientes

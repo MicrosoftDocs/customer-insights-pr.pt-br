@@ -8,8 +8,13 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523780"
 ---
-
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos para o Google Ads (versão preliminar)
 
 Exporte segmentos de perfis de cliente unificados para uma lista de público-alvo do Google Ads e use-os para criar anúncios no Pesquisa Google, Gmail, YouTube e Google Display Network. 

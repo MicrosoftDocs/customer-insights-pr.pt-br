@@ -8,8 +8,13 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: 4de499fcc4a5a0dcc2dfd3bae02913c81a59647b
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8524133"
 ---
-
 # <a name="export-segment-lists-to-iterable-preview"></a>Exportar listas de segmentos para o Iterable (versão preliminar)
 
 Exporte segmentos de perfis de clientes unificados para o Iterable e use-os para atividades de marketing.

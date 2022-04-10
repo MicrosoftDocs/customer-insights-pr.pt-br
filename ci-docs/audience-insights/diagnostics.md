@@ -9,10 +9,15 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-  - ci-system-diagnostic
-  - customerInsights
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523654"
 ---
-
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Encaminhamento de logs no Dynamics 365 Customer Insights com o Azure Monitor (Versão preliminar)
 
 O Dynamics 365 Customer Insights fornece uma integração direta com o Azure Monitor. Os logs de recursos do Azure Monitor permitem monitorar e enviar logs para o [Armazenamento do Azure](https://azure.microsoft.com/services/storage/), o [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ou transmiti-los para os [Hubs de Eventos do Azure](https://azure.microsoft.com/services/event-hubs/).
