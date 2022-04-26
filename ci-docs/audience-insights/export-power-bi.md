@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225501"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552042"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector do Power BI (versão prévia)
 
@@ -72,6 +72,6 @@ Após a remoção dos relacionamentos duplicados, tente configurar o conector do
 
 Ao carregar entidades que contêm campos com um formato de data como MM/DD/AAAA, você pode encontrar erros devido a formatos de localidade incompatíveis. Essa incompatibilidade acontece quando seu arquivo do Power BI Desktop está definido como um local diferente de inglês (Estados Unidos), porque os campos de data nos insights de público-alvo são salvos no formato dos EUA.
 
-O arquivo do Power BI Desktop tem uma única configuração de local, que é aplicada durante a recuperação de dados. Para que esses campos de data sejam interpretados corretamente, defina a localidade do arquivo .BPI como inglês (Estados Unidos). [Saiba como mudar a localidade de um arquivo do Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+O arquivo do Power BI Desktop tem uma única configuração de local, que é aplicada durante a recuperação de dados. Para que esses campos de data sejam interpretados corretamente, defina a localidade do arquivo .BPI como inglês (Estados Unidos). [Saiba como mudar a localidade de um arquivo do Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

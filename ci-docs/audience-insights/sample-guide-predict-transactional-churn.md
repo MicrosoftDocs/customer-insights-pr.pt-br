@@ -5,15 +5,15 @@ ms.date: 11/19/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d3465b7eaa17a24e2926b8ea432b33e705931b88
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354587"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555345"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Guia de amostra de previsão de rotatividade transacional
 
@@ -91,7 +91,7 @@ Revise os artigos [sobre ingestão de dados](data-sources.md) e [importação de
 
 Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder, Mesclar** para criar um perfil de cliente unificado. Para obter mais informações, consulte [Unificação de dados](data-unification.md).
 
-### <a name="map"></a>Mapa 
+### <a name="map"></a>Mapa
 
 1. Depois de ingerir os dados, mapeie os contatos dos dados de comércio eletrônico e de fidelidade para tipos de dados comuns. Vá para **Dados** > **Unificar** > **Mapear**.
 

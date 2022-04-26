@@ -1,12 +1,12 @@
 ---
 title: Entender e gerenciar medidas
 description: Saiba como as medidas ajudam a analisar e refletir o desempenho do seu negócio.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359759"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529663"
 ---
 # <a name="measures-overview"></a>Visão geral de medidas
 
@@ -27,7 +27,7 @@ As medidas ajudam você a entender melhor os comportamentos dos clientes e o des
 
 As medidas são criadas [usando-se o construtor de medidas](measure-builder.md), uma plataforma de consulta de dados com vários operadores e opções de mapeamento simples. Ele permite filtrar dados, agrupar resultados, detectar [caminhos de relacionamento de entidades](relationships.md) e exibir a saída. Você pode [usar modelos predefinidos](measure-templates.md) para configurar de modo eficiente medidas comumente usadas.
 
-Use o construtor de medidas para extrair insights e planejar atividades comerciais por meio da consulta de dados do cliente. Por exemplo, criar uma medida de *gasto total por cliente* e *retorno total por cliente* ajuda a identificar um grupo de clientes com alto gasto, mas alto retorno. Você pode [criar um segmento](segments.md) com base nessas medidas para impulsionar as próximas ações recomendadas. 
+Use o construtor de medidas para extrair insights e planejar atividades comerciais por meio da consulta de dados do cliente. Por exemplo, criar uma medida de *gasto total por cliente* e *retorno total por cliente* ajuda a identificar um grupo de clientes com alto gasto, mas alto retorno. Você pode [criar um segmento](segments.md) com base nessas medidas para impulsionar as próximas ações recomendadas.
 
 ## <a name="manage-your-measures"></a>Gerenciar suas medidas
 
@@ -35,18 +35,17 @@ Você pode encontrar a lista de medidas na página **Medidas**.
 
 Você encontrará informações sobre o tipo de medida, o criador, a data de criação, o status e o estado. Ao selecionar uma nova medida, na lista, você pode visualizar a saída e baixar um arquivo CSV.
 
-Para atualizar todas as suas medidas ao mesmo tempo, selecione **Atualizar tudo** sem selecionar uma medida específica.
+:::image type="content" source="media/measures-actions.png" alt-text="Ações para gerenciar medidas únicas."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Ações para gerenciar medidas únicas.":::
+As seguintes ações estão disponíveis quando você seleciona uma medida:
 
-Selecione uma medida da lista para as seguintes opções:
-
-- Selecione o nome da medida para ver seus detalhes.
-- **Edite** a configuração da medida.
-- **Atualize** a medida com base nos dados mais recentes.
-- **Renomeie** a medida.
-- **Exclua** a medida.
-- **Ative** ou **Desative**. Medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
+- **Editar** a configuração da medida.
+- **Duplicar** uma medida. Você pode optar por editar suas propriedades imediatamente ou simplesmente salvar a duplicidade.
+- **Atualizar** a medida com base nos dados mais recentes. Para atualizar todas as suas medidas ao mesmo tempo, selecione todas as medidas e, em seguida, **Atualizar**.
+- **Renomear** a medida.
+- **Ativar** ou **Desativar**. Medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
+- **Marcar** para [gerenciar as marcas](work-with-tags-columns.md#manage-tags) para o segmento.
+- **Excluir** a medida.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
