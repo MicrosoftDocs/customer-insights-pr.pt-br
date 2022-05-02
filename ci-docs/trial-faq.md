@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229481"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641794"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Perguntas frequentes sobre a avaliação do Dynamics 365 Customer Insights
 
@@ -62,13 +62,13 @@ Você pode estender a avaliação diretamente no aplicativo. Você pode estender
 
 Geralmente, recomendamos começar do zero com seus próprios dados ao atualizar para a versão paga do Customer Insights. 
 
-Opcionalmente, se você só usar insights do público-alvo, você pode copiar seus dados de um ambiente de avaliação se você adquirir o Customer Insights. Você deve ser o administrador da avaliação do Customer Insights e o administrador global do locatário do Microsoft 365 ou o administrador do Dynamics 365 em sua organização para migrar as configurações de um ambiente de avaliação para um ambiente pago. 
+Opcionalmente, se você só usar o Customer Insights, poderá copiar dados de um ambiente de avaliação se adquirir o Customer Insights. Você deve ser o administrador da avaliação do Customer Insights e o administrador global do locatário do Microsoft 365 ou o administrador do Dynamics 365 em sua organização para migrar as configurações de um ambiente de avaliação para um ambiente pago. 
 
-Depois que entrar em sua instância paga do Customer Insights pela primeira vez, você será solicitado a criar um ambiente. Nesse processo, você poderá optar por copiar a configuração de um ambiente existente e migrar a maioria das configurações. Se você tiver as permissões mencionadas acima, o ambiente de avaliação aparecerá nesta lista. Para obter mais informações, consulte [Copiar a configuração do ambiente](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Depois que entrar em sua instância paga do Customer Insights pela primeira vez, você será solicitado a criar um ambiente. Nesse processo, você poderá optar por copiar a configuração de um ambiente existente e migrar a maioria das configurações. Se você tiver as permissões mencionadas acima, o ambiente de avaliação aparecerá nesta lista. Para obter mais informações, consulte [Copiar a configuração do ambiente](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Quais são os limites e cotas de avaliação?
 
-- Você não pode usar sua própria conta de armazenamento do Azure Data Lake para armazenar os dados de saída durante uma avaliação de insights do público-alvo. No entanto, você pode ingerir dados de uma conta de armazenamento do Data Lake.
+- Você não pode usar sua própria conta do Azure Data Lake storage para armazenar dados de saída durante uma avaliação do Customer Insights. No entanto, você pode ingerir dados de uma conta de armazenamento do Data Lake.
 - Você pode armazenar um máximo de 3 GB de dados no Dataverse ambiente que é provisionado automaticamente quando você inicia uma avaliação do Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Perguntas específicas sobre o Customer Insights
