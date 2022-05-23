@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645531"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755622"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento do Cartão do Cliente (versão prévia)
-
-
 
 Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos do Dynamics 365. Com o suplemento do Cartão do Cliente instalado em um aplicativo Dynamics 365 suportado, você pode optar por exibir os campos de perfil do cliente, insights e cronograma de atividades. O suplemento recuperará dados do Customer Insights sem afetar os dados no aplicativo conectado Dynamics 365.
 
@@ -31,10 +29,10 @@ Obtenha uma exibição de 360 graus de seus clientes diretamente nos aplicativos
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O suplemento só funciona com aplicativos baseados em modelo do Dynamics 365, como Vendas ou Customer Service, versão 9.0 e superior.
-- Para que dados do Dynamics 365 sejam mapeados para os perfis dos clientes do Customer Insights, recomendamos que eles sejam [ingeridos a partir do aplicativo Dynamics 365 utilizando o conector do Microsoft Dataverse](connect-power-query.md). Se você usar um método diferente para ingerir contatos (ou contas) do Dynamics 365, verifique se `contactid` (ou `accountid`) está definida como a [chave primária para essa fonte de dados na etapa de mapa do processo de unificação de dados](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Para que dados do Dynamics 365 sejam mapeados para os perfis dos clientes do Customer Insights, recomendamos que eles sejam [ingeridos a partir do aplicativo Dynamics 365 utilizando o conector do Microsoft Dataverse](connect-power-query.md). Se você usar um método diferente para ingerir contatos (ou contas) do Dynamics 365, verifique se `contactid` (ou `accountid`) está definida como a [chave primária para essa fonte de dados na etapa de mapa do processo de unificação de dados](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos os usuários do Dynamics 365 do Complemento do Cartão do Cliente devem ser [adicionados como usuários](permissions.md) no Customer Insights para ver os dados.
 - [Recursos configurados de pesquisa e filtro](search-filter-index.md) no Customer Insights são necessários para que a pesquisa de dados funcione.
-- Cada controle do suplemento depende de dados específicos no Customer Insights. Alguns dados e controles estão disponíveis apenas em ambientes de tipos específicos. A configuração do suplemento irá informá-lo se um controle não estiver disponível devido ao tipo de ambiente selecionado. Saiba mais sobre [casos de uso de ambiente](work-with-business-accounts.md).
+- Cada controle do suplemento depende de dados específicos no Customer Insights. Alguns dados e controles estão disponíveis apenas em ambientes de tipos específicos. A configuração do suplemento informará se um controle não estiver disponível devido ao tipo de ambiente selecionado. Saiba mais sobre [casos de uso de ambiente](work-with-business-accounts.md).
   - **Controle de medida**: Requer [ medidas configuradas](measures.md) do tipo de atributos do cliente.
   - **Controle de inteligência**: requer dados gerados usando [previsões ou modelos personalizados](predictions-overview.md).
   - **Controle de detalhes do cliente**: Todos os campos do perfil estão disponíveis no perfil de cliente unificado.
@@ -132,16 +130,16 @@ Mesmo com campos de ID configurados corretamente, os controles não conseguem en
 
 **Resolução:**
 
-1. Verifique se você configurou o Suplemento do Cartão seguindo as instruções: [Configurar o Suplemento do Cartão do Cliente](#configure-the-customer-card-add-in) 
+1. Verifique se você configurou o Suplemento do Cartão seguindo as instruções: [Configurar o Suplemento do Cartão do Cliente](#configure-the-customer-card-add-in)
 
-1. Consulte a configuração de ingestão de dados. Edite a fonte de dados do sistema do Dynamics 365 que contém o GUID de ID de contato. Se o GUID de ID de contato for mostrado com caracteres maiúsculos no editor do Power Query, siga estas etapas: 
+1. Consulte a configuração de ingestão de dados. Edite a fonte de dados do sistema do Dynamics 365 que contém o GUID de ID de contato. Se o GUID de ID de contato for mostrado com caracteres maiúsculos no editor do Power Query, siga estas etapas:
     1. Edite a fonte de dados para abri-la no editor do Power Query.
     1. Selecione a coluna de ID de contato.
     1. Selecione **Transformar** na barra de cabeçalho para ver as ações disponíveis.
     1. Selecione **minúsculas**. Verifique se os GUIDs na tabela agora estão em minúsculas.
     1. Salvar a fonte de dados.
-    1. Execute processos de ingestão, unificação e downstream de dados para propagar as alterações no GUID. 
+    1. Execute processos de ingestão, unificação e downstream de dados para propagar as alterações no GUID.
 
-Depois de concluir a atualização completa, os controles do Suplemento do Cartão do Cliente devem mostrar os dados esperados. 
+Depois que o sistema concluir a atualização completa, os controles do Suplemento do Cartão do Cliente devem mostrar os dados esperados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

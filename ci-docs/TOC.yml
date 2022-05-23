@@ -66,12 +66,18 @@
   items:
     - name: Visão geral da unificação de dados
       href: data-unification.md
-    - name: Mapear entidades e atributos
+    - name: Selecionar campos de origem
       href: map-entities.md
-    - name: Corresponder entidades
+    - name: Remover registros duplicados
+      href: remove-duplicates.md
+    - name: Condições de correspondência
       href: match-entities.md
-    - name: Mesclar entidades
+    - name: Unificar campos de cliente
       href: merge-entities.md
+    - name: Revisar a unificação de dados
+      href: review-unification.md
+    - name: Atualizar as configurações de unificação
+      href: data-unification-update.md
 - name: Enriquecimento de dados
   items:
     - name: Enriquecer perfis de cliente
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Referências da API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Consultas de exemplo OData
+      href: odata-examples.md
 - name: Gerenciamento de consentimento (Versão preliminar)
   items:
     - name: Hub de Ajuda

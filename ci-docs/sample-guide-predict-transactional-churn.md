@@ -1,19 +1,19 @@
 ---
 title: Guia de amostra de previsão de rotatividade transacional
 description: Use este guia de amostra para experimentar o modelo de previsão de rotatividade transacional pronto para uso.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645686"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741305"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Guia de amostra de previsão de rotatividade transacional
 
@@ -86,69 +86,13 @@ Revise os artigos [sobre ingestão de dados](data-sources.md) e [importação de
 
 1. Salvar a fonte de dados.
 
-
 ## <a name="task-2---data-unification"></a>Tarefa 2 - Unificação de dados
 
-Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder, Mesclar** para criar um perfil de cliente unificado. Para obter mais informações, consulte [Unificação de dados](data-unification.md).
-
-### <a name="map"></a>Mapa
-
-1. Depois de ingerir os dados, mapeie os contatos dos dados de comércio eletrônico e de fidelidade para tipos de dados comuns. Vá para **Dados** > **Unificar** > **Mapear**.
-
-1. Selecione as entidades que representam o perfil do cliente – **eCommerceContacts** e **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unifique as fontes de dados de comércio eletrônico e fidelidade.":::
-
-1. Selecione **ContactId** como a chave primária para **eCommerceContacts** e **LoyaltyID** como a chave primária para **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifique LoyaltyId como chave primária.":::
-
-### <a name="match"></a>Corresponder
-
-1. Vá para a guia **Corresponder** e selecione **Definir pedido**.
-
-1. Na lista suspensa **Primária**, escolha **eCommerceContacts : eCommerce** como sua fonte primária e inclua todos os registros.
-
-1. Na lista suspensa **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registros.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificar correspondência de comércio eletrônico e fidelidade.":::
-
-1. Selecione **Criar uma nova regra**
-
-1. Adicione sua primeira condição usando FullName.
-
-   * Para eCommerceContacts, selecione **FullName** na lista suspensa.
-   * Para loyCustomers, selecione **FullName** na lista suspensa.
-   * Selecione o menu suspenso **Normalizar** e escolha **Inserir (telefone, nome, endereço,...)**.
-   * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
-
-1. Digite o nome **FullName, Email** para a nova regra.
-
-   * Adicione uma segunda condição para o endereço de e-mail selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, selecione **Email** na lista suspensa.
-   * Para a entidade loyCustomers, selecione **Email** na lista suspensa. 
-   * Deixe o campo Normalizar em branco. 
-   * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Regra de correspondência unificada para nome e email.":::
-
-7. Selecione **Salvar** e **Executar**.
-
-### <a name="merge"></a>Merge
-
-1. Vá para a guia **Mesclar**.
-
-1. Na entidade **ContactId** para **loyCustomers**, altere o nome de exibição para **ContactIdLOYALTY** para diferenciá-lo dos outros IDs ingeridos.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="renomear contactid de loyalty id.":::
-
-1. Selecione **Salvar** e **Executar** para iniciar o processo de mesclagem.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarefa 3 - Configurar a previsão de rotatividade da transação
 
-Com os perfis de cliente unificados em vigor, agora podemos executar a previsão de rotatividade de assinatura. Para obter etapas detalhadas, consulte o artigo [Previsão da rotatividade de assinaturas](predict-subscription-churn.md). 
+Com os perfis de cliente unificados em vigor, agora podemos executar a previsão de rotatividade de transações. Para obter etapas detalhadas, consulte o artigo [Previsão de rotatividade de transações](predict-transactional-churn.md). 
 
 1. Vá para **Inteligência** > **Descobrir** e selecione usar o **Modelo de rotatividade do cliente**.
 
@@ -180,7 +124,7 @@ Com os perfis de cliente unificados em vigor, agora podemos executar a previsão
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tarefa 4 - Revise os resultados e explicações do modelo
 
-Deixe o modelo concluir o treinamento e a pontuação dos dados. Agora, você pode revisar as explicações do modelo de rotatividade de assinatura. Para mais informações, consulte [Analisar um status de previsão e resultados](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Deixe o modelo concluir o treinamento e a pontuação dos dados. Agora você pode revisar as explicações do modelo de rotatividade. Para mais informações, consulte [Analisar um status de previsão e resultados](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tarefa 5 - Crie um segmento de clientes de alto risco de rotatividade
 
@@ -192,14 +136,12 @@ Você pode criar um novo segmento com base na entidade criada pelo modelo.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Criando um segmento com a saída do modelo.":::
 
-1. Selecione o ponto de extremidade **OOBSubscriptionChurnPrediction** e defina o segmento: 
+1. Selecione o ponto de extremidade **OOBeCommerceChurnPrediction** e defina o segmento: 
    - Campo: ChurnScore
    - Operador: maior que
    - Valor: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configure o segmento de rotatividade de assinaturas.":::
 
-Agora, você tem um segmento que é atualizado dinamicamente que identifica clientes de alto risco de rotatividade para este negócio de assinatura.
+Agora você tem um segmento atualizado dinamicamente que identifica clientes com alto risco de rotatividade.
 
 Para obter mais informações, consulte [Criar e gerenciar segmentos](segments.md).
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645525"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755248"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Encaminhamento de logs no Dynamics 365 Customer Insights com o Azure Monitor (Versão preliminar)
 
@@ -27,8 +27,8 @@ O Customer Insights envia os seguintes logs de eventos:
 - **Eventos de Auditoria**
   - **APIEvent** - permite o controle de alterações feito por meio da interface de usuário do Dynamics 365 Customer Insights.
 - **Eventos Operacionais**
-  - **WorkflowEvent** - o Workflow permite configurar [Fontes de Dados](data-sources.md), [unificar](data-unification.md), [enriquecer](enrichment-hub.md) e, por fim, [exportar](export-destinations.md) dados para outros sistemas. Todas essas etapas podem ser executadas individualmente (por exemplo, acionar uma única exportação) ou orquestradas (por exemplo, atualização de dados de fontes de dados que acionam o processo de unificação que atrairá enriquecimentos adicionais e, após a conclusão, exportará os dados para outro sistema). Para obter mais detalhes, consulte o [Esquema WorkflowEvent](#workflow-event-schema).
-  - **APIEvent** - todas as chamadas à API para a instância dos clientes no Dynamics 365 Customer Insights. Para obter mais detalhes, consulte o [Esquema APIEvent](#api-event-schema).
+  - **WorkflowEvent** - o fluxo de trabalho permite configurar [Fontes de Dados](data-sources.md), [unificar](data-unification.md), [enriquecer](enrichment-hub.md) e, por fim, [exportar](export-destinations.md) dados para outros sistemas. Todas essas etapas podem ser feitas individualmente (por exemplo, disparar uma única exportação). Também podem ser executadas orquestradas (por exemplo, atualização de dados de fontes de dados que dispara o processo de unificação, que extrairá enriquecimentos e, uma vez concluído, exportará os dados para outro sistema). Para obter mais informações, consulte o [Esquema WorkflowEvent](#workflow-event-schema).
+  - **APIEvent** - todas as chamadas à API para a instância dos clientes no Dynamics 365 Customer Insights. Para obter mais informações, consulte o [Esquema APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Definir as configurações de diagnóstico
 
@@ -55,7 +55,7 @@ Para configurar o diagnóstico no Customer Insights, os seguintes pré-requisito
 
 1. Escolha o **Locatário** da assinatura do Azure com o recurso de destino e selecione **Entrar**.
 
-1. Selecione o **Tipo de recurso** (Conta de armazenamento, Hub de Eventos ou análise de logs).
+1. Selecione o **Tipo de recurso** (Conta de armazenamento, hub de eventos ou análise de logs).
 
 1. Selecione a **Assinatura** do recurso de destino.
 
@@ -182,7 +182,7 @@ Os [eventos de API](apis.md) têm as seguintes propriedades.
 
 ### <a name="workflow-event-schema"></a>Esquema de eventos de fluxo de trabalho
 
-O fluxo de trabalho contém várias etapas. [Ingerir fontes de dados](data-sources.md), [unificar](data-unification.md), [enriquecer](enrichment-hub.md) e [exportar](export-destinations.md) dados. Todas essas etapas podem ser executadas individualmente ou orquestradas com os processos a seguir. 
+O fluxo de trabalho contém várias etapas. [Ingerir fontes de dados](data-sources.md), [unificar](data-unification.md), [enriquecer](enrichment-hub.md) e [exportar](export-destinations.md) dados. Todas essas etapas podem ser executadas individualmente ou orquestradas com os processos a seguir.
 
 #### <a name="operation-types"></a>Tipos de operação
 
@@ -215,7 +215,7 @@ O fluxo de trabalho contém várias etapas. [Ingerir fontes de dados](data-sourc
 | `time`          | Carimbo de data/hora | Obrigatória          | Carimbo de data/hora do evento (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Obrigatória          | ResourceId da instância que emitiu o evento.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Obrigatória          | Nome da operação representada por este evento. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Consulte [Tipos de Operação](#operation-types) para referência. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Obrigatória          | Categoria de log do evento. Sempre `Operational` para eventos de fluxo de trabalho                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Obrigatória          | Categoria de log do evento. Sempre `Operational` para eventos de fluxo de trabalho                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Obrigatória          | Status do evento. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Longo      | Opcional          | Duração da operação em milissegundos.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Opcional          | Objeto JSON com mais propriedades para a categoria particular de eventos.                                                                                        | Consulte a subseção [Propriedades do Fluxo de Trabalho](#workflow-properties-schema)                                                                                                       |

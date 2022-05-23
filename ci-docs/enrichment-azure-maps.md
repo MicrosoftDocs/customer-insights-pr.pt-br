@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645523"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755340"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquecimento de perfis de clientes com o Azure Mapas (versão preliminar)
 
@@ -51,7 +51,7 @@ Para configurar o enriquecimento de dados do Azure Mapas, é necessário atender
 
 1. Selecione **Avançar** para concluir o mapeamento de campos.
 
-1. Avalie se você deseja modificar **Configurações Avançadas**. Isso visa fornecer flexibilidade máxima para lidar com casos de uso avançados, mas os valores padrão serão adequados na maioria dos casos:
+1. Avalie se você deseja modificar **Configurações Avançadas**. Essas configurações são fornecidas para fornecer flexibilidade máxima para lidar com casos de uso avançados, mas os valores padrão serão adequados na maioria dos casos:
    - **Tipo de endereços**: o comportamento padrão é que o enriquecimento retornará a melhor correspondência de endereço, mesmo se estiver incompleto. Para obter apenas endereços completos (por exemplo, endereços que incluem o número da casa), desmarque todas as caixas de seleção, exceto **Endereços de Ponto**. 
    - **Idioma**: por padrão, os endereços são retornados no idioma da região à qual o endereço foi determinado como pertencente. Para aplicar um idioma de endereço padronizado, selecione o idioma no menu suspenso. Por exemplo, selecionar **inglês** retornará **Copenhague, Dinamarca** em vez de **København, Danmark**.
 
@@ -89,7 +89,7 @@ Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando *
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para o Azure Mapas, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o Azure Mapas cumpra obrigações de privacidade ou segurança que você possa ter. Para obter mais informações, acesse [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para o Azure Mapas, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o Azure Mapas atenda às obrigações de privacidade ou de segurança que você possa ter. Para obter mais informações, acesse [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

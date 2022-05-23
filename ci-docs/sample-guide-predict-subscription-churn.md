@@ -1,8 +1,8 @@
 ---
 title: Guia de amostra para previsão de rotatividade de assinaturas
 description: Use este guia de amostra para experimentar o modelo de previsão de rotatividade de assinatura pronto para uso.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645669"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741397"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Guia de amostra para previsão de rotatividade de assinaturas
 
@@ -112,61 +112,7 @@ Revise os artigos [sobre ingestão de dados](data-sources.md) e [importação de
 
 ## <a name="task-2---data-unification"></a>Tarefa 2 - Unificação de dados
 
-Depois de ingerir os dados, agora iniciamos o processo de **Mapear, Corresponder, Mesclar** para criar um perfil de cliente unificado. Para obter mais informações, consulte [Unificação de dados](data-unification.md).
-
-### <a name="map"></a>Mapa
-
-1. Depois de ingerir os dados, mapeie os contatos dos dados de comércio eletrônico e de fidelidade para tipos de dados comuns. Vá para **Dados** > **Unificar** > **Mapear**.
-
-1. Selecione as entidades que representam o perfil do cliente – **eCommerceContacts** e **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unifique as fontes de dados de comércio eletrônico e fidelidade.":::
-
-1. Selecione **ContactId** como a chave primária para **eCommerceContacts** e **LoyaltyID** como a chave primária para **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifique LoyaltyId como chave primária.":::
-
-### <a name="match"></a>Corresponder
-
-1. Vá para a guia **Corresponder** e selecione **Definir pedido**.
-
-1. Na lista suspensa **Primária**, escolha **eCommerceContacts : eCommerce** como sua fonte primária e inclua todos os registros.
-
-1. Na lista suspensa **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registros.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificar correspondência de comércio eletrônico e fidelidade.":::
-
-1. Selecione **Criar uma nova regra**
-
-1. Adicione sua primeira condição usando FullName.
-
-   * Para eCommerceContacts, selecione **FullName** na lista suspensa.
-   * Para loyCustomers, selecione **FullName** na lista suspensa.
-   * Selecione o menu suspenso **Normalizar** e escolha **Inserir (telefone, nome, endereço,...)**.
-   * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
-
-1. Digite o nome **FullName, Email** para a nova regra.
-
-   * Adicione uma segunda condição para o endereço de e-mail selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, selecione **Email** na lista suspensa.
-   * Para a entidade loyCustomers, selecione **Email** na lista suspensa. 
-   * Deixe o campo Normalizar em branco. 
-   * Defina **Nível de precisão**: **Básico** e **Valor**: **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Regra de correspondência unificada para nome e email.":::
-
-7. Selecione **Salvar** e **Executar**.
-
-### <a name="merge"></a>Merge
-
-1. Vá para a guia **Mesclar**.
-
-1. Na entidade **ContactId** para **loyCustomers**, altere o nome de exibição para **ContactIdLOYALTY** para diferenciá-lo dos outros IDs ingeridos.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="renomear contactid de loyalty id.":::
-
-1. Selecione **Salvar** e **Executar** para iniciar o processo de mesclagem.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tarefa 3 - Configurar a rotatividade de previsão de assinatura
 
