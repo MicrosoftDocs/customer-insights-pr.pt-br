@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645614"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800406"
 ---
 # <a name="custom-machine-learning-models"></a>Modelos de aprendizado de máquina personalizados
 
@@ -92,7 +92,7 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
 
 ## <a name="edit-a-workflow"></a>Editar um fluxo de trabalho
 
-1. Na página **Modelos Personalizados**, selecione as reticências verticais na coluna **Ações** ao lado de um fluxo de trabalho que você criou anteriormente e selecione **Editar**.
+1. Na página **Modelos Personalizados**, selecione as reticências verticais (&vellip;) na coluna **Ações** ao lado de um fluxo de trabalho que você criou anteriormente e selecione **Editar**.
 
 1. Você pode atualizar o nome reconhecível do seu fluxo de trabalho no campo **Nome de exibição**, mas não pode alterar o serviço Web ou pipeline configurado. Selecione **Avançar**.
 
@@ -108,7 +108,7 @@ As previsões oferecem recursos para criar melhores experiências para o cliente
 
 ## <a name="run-a-workflow"></a>Executar um fluxo de trabalho
 
-1. Na página **Modelos Personalizados**, selecione as reticências verticais na coluna **Ações** ao lado de um fluxo de trabalho que você criou anteriormente.
+1. Na página **Modelos Personalizados**, selecione as reticências verticais (&vellip;) na coluna **Ações** ao lado de um fluxo de trabalho que você criou anteriormente.
 
 1. Selecione **Executar**.
 
@@ -116,7 +116,7 @@ Seu fluxo de trabalho também é executado automaticamente com cada atualizaçã
 
 ## <a name="delete-a-workflow"></a>Excluir um fluxo de trabalho
 
-1. Na página **Modelos Personalizados**, selecione as reticências verticais na coluna **Ações** ao lado de um fluxo de trabalho que você criou anteriormente.
+1. Na página **Modelos Personalizados**, selecione as reticências verticais (&vellip;) na coluna **Ações** ao lado de um fluxo de trabalho que você criou anteriormente.
 
 1. Selecione **Excluir** e confirme sua exclusão.
 

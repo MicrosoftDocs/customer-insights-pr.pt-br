@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645646"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800130"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar-se a uma fonte de dados do Power Query
 
@@ -76,7 +76,7 @@ Conectores com uma marca de seleção na coluna **Customer Insights (Fluxos de d
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-2. Selecione as reticências verticais ao lado da fonte de dados que você deseja alterar e selecione **Editar** no menu suspenso.
+2. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que você deseja alterar e selecione **Editar** no menu suspenso.
 
    > [!div class="mx-imgBorder"]
    > ![Opção Editar.](media/edit-option-data-sources.png "Editar opção")

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755295"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800358"
 ---
 # <a name="connections-preview-overview"></a>Visão geral de conexões (versão preliminar)
 
@@ -69,7 +69,7 @@ Ao configurar ou editar uma conexão de exportação, você escolhe quais usuár
 
 1. Acesse a guia **Conexões**.
 
-1. Selecione as reticências verticais para a conexão que você deseja editar.
+1. Selecione as reticências verticais (&vellip;) para a conexão que você deseja editar.
 
 1. Selecione **Editar**.
 
@@ -85,7 +85,7 @@ Os enriquecimentos e as exportações separados tornam-se inativos. Você os rea
 
 1. Acesse a guia **Conexões**.
 
-1. Selecione as reticências verticais para a conexão que você deseja remover.
+1. Selecione as reticências verticais (&vellip;) para a conexão que você deseja remover.
 
 1. Selecione **Remover** no menu suspenso. Uma caixa de diálogo de confirmação será exibida.
 

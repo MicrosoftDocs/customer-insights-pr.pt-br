@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645667"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800082"
 ---
 # <a name="create-segments"></a>Criar segmentos
 
@@ -134,8 +134,9 @@ Ao criar um segmento, você pode salvar um rascunho. No estágio de rascunho, um
 > - O construtor de segmentos não sugere valores válidos de entidades ao definir os operadores para as condições. Você pode acessar **Dados** > **Entidades** e baixar os dados da entidade para ver os valores disponíveis.
 > - As condições baseadas nas datas permitem alternar entre datas fixas e um intervalo de datas flutuante.
 > - Se você tiver várias regras para o seu segmento, a regra que você está editando terá uma linha azul vertical ao lado dela.
-> - Você pode mover regras e condições para outros locais na definição do segmento. Selecione [...] ao lado de uma regra ou condição e escolha como e para onde movê-la.
+> - Você pode mover regras e condições para outros locais na definição do segmento. Selecione as reticências verticais (&vellip;) ao lado de uma regra ou condição e escolha como e para onde movê-la.
 > - Os controles **Desfazer** e **Refazer** na barra de comando permitem reverter as alterações.
+> - Após a criação, alguns segmentos permitem que você [acompanhe o uso do segmento](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Segmentos rápidos
 

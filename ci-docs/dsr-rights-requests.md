@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641502"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808532"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitações de Direitos do Titular dos Dados (DSR) no GDPR
 
@@ -41,7 +41,7 @@ Um administrador do Customer Insights pode seguir estas etapas para remover dado
 1. Entre no Dynamics 365 Customer Insights.
 2. Acesse **Dados** > **Fontes de dados**
 3. Para cada fonte de dados na lista que contém dados excluídos do cliente:
-   1. Selecione (...) e depois selecione **Atualizar**.
+   1. Selecione as reticências verticais (&vellip;) e, depois, **Atualizar**.
    2. Verifique o status da fonte de dados em **Status**. Uma marca de seleção significa que a atualização foi bem-sucedida. Um triângulo de aviso significa que algo deu errado. Se um triângulo de aviso for exibido, entre em contato com D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Um administrador do Customer Insights pode seguir estas etapas para remover dado
 Um administrador do Customer Insights pode seguir estas etapas para excluir os dados do usuário do Customer Insights:
 
 1. Entre no Dynamics 365 Customer Insights.
-2. Vá para **Administrador** > **Permissões**.
+2. Acesse **Administrador** > **Segurança** > **Permissões**.
 3. Marque a caixa de seleção do usuário que você deseja excluir.
 4. Selecione **Remover**.
 

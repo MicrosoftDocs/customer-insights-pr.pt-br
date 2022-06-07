@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645688"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800312"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Usar o construtor de medidas para criar medidas a partir do zero
 
@@ -88,7 +88,7 @@ Você pode criar medidas no nível de clientes individuais (atributo do cliente,
 
 1. Para adicionar mais cálculos para a medida, selecione **Novo cálculo**. Você só pode usar entidades no mesmo caminho de entidade para novos cálculos. Mais cálculos serão exibidos como novas colunas na entidade de saída de medida.
 
-1. Selecione **...** no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo de uma medida.
+1. Selecione as reticências verticais (&vellip;) no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo a partir de uma medida.
 
 1. Na área **Versão preliminar**, você verá o esquema de dados da entidade de saída da medida, incluindo filtros e dimensões. A versão preliminar reage dinamicamente às mudanças na configuração.
 
@@ -158,7 +158,7 @@ Você pode criar medidas no nível de contas individuais (medida do cliente) ou 
    1. Selecione **Caminho de relacionamento** e escolha o caminho da entidade que deve ser usado para identificar sua medida. Se houver somente um único caminho para a entidade *Cliente*, este controle não será exibido.
    1. Selecione **Concluído** para aplicar sua seleção.
 
-1. Selecione **...** no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo de uma medida.
+1. Selecione as reticências verticais (&vellip;) no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo a partir de uma medida.
 
 1. Na área **Versão preliminar**, você verá o esquema de dados da entidade de saída da medida, incluindo filtros e dimensões. A versão preliminar reage dinamicamente às mudanças na configuração.
 

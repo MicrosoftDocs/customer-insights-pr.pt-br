@@ -1,19 +1,19 @@
 ---
 title: Enriquecimento da fonte de dados
 description: Enriqueça as fontes de dados antes de passar pelo processo de unificação de dados.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755672"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800267"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecimento de fontes de dados (versão preliminar)
 
@@ -27,7 +27,7 @@ Você deve ter permissões de Colaborador ou Administrador para criar ou editar 
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-1. Selecione as reticências verticais ao lado da fonte de dados que deseja enriquecer e selecione **Enriquecer**.
+1. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que deseja enriquecer e selecione **Enriquecer**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de enriquecimento de fontes de dados":::
 
@@ -41,11 +41,12 @@ Estes são os enriquecimentos disponíveis no momento para fontes de dados. Revi
 
 - [Endereços aprimorados](enrichment-enhanced-addresses.md)
 - [Dados da empresa aprimorados](enrichment-enhanced-company-data.md)
+- [Dados de identidade do LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gerenciar enriquecimentos de fonte de dados existentes
 
 Acesse a guia **Meus enriquecimentos** para ver todos os enriquecimentos configurados.
 
-Selecione o enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências (...) em um item da lista para ver as opções. Se configurou vários enriquecimentos, você poderá usar a caixa de pesquisa para encontrá-los rapidamente.
+Selecione o enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências verticais (&vellip;) em um item de lista para ver as opções. Se configurou vários enriquecimentos, você poderá usar a caixa de pesquisa para encontrá-los rapidamente.
 
 Você pode exibir, editar, executar ou excluir um enriquecimento de fonte de dados. Para obter mais informações, consulte a seção [Gerenciar enriquecimentos existentes](enrichment-hub.md).

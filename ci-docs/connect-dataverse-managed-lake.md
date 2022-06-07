@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645533"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800149"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conecte-se aos dados em um data lake gerenciado do Microsoft Dataverse
 
@@ -62,7 +62,7 @@ Para conectar-se a um data lake diferente do Dataverse, [crie uma nova fonte de 
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-2. Ao lado da fonte de dados que você deseja atualizar, selecione as reticências.
+2. Ao lado da fonte de dados que você deseja atualizar, selecione as reticências verticais (&vellip;).
 
 3. Selecione uma opção **Editar** na lista.
 
