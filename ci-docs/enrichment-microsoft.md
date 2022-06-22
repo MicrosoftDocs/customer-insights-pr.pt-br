@@ -1,5 +1,5 @@
 ---
-title: Enriquecer perfis de clientes com dados da Microsoft
+title: Enriqueça os perfis dos clientes com dados de marcas e interesses da Microsoft
 description: Use dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades e share of voice.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645634"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953751"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Enriquecer os perfis dos clientes com afinidades e share of voice (versão preliminar)
 
 Use dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades de marca, afinidades de interesse e share of voice (SoV). Essas afinidades e o SoV são baseados nos dados das pessoas com demografias semelhantes às dos seus clientes. Essas informações ajudam você a entender e segmentar melhor seus clientes com base nas afinidades ou no SoV com marcas e interesses específicos que eles têm.
-
-Vá para **Dados** > **Enriquecimento** para [configurar e exibir enriquecimentos](enrichment-hub.md).
-
-Para configurar o enriquecimento de afinidades de marca e de SoV, acesse a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Marcas**.
-
-Para configurar o enriquecimento de afinidades de interesse e de SoV, acesse a guia **Descobrir** e selecione **Enriquecer meus dados** no bloco **Interesses**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Blocos de marcas e interesses.](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Como determinamos afinidades e SoV
 
@@ -45,7 +36,6 @@ Usamos dados de pesquisa online da Microsoft para encontrar afinidades e SoV par
 Em cada perfil de cliente enriquecido, fornecemos dois valores relacionados: nível de afinidade e pontuação de afinidade. Esses valores ajudam a determinar o grau de afinidade para o segmento demográfico do perfil, uma marca ou interesse, em comparação a outros segmentos demográficos.
 
 O *nível de afinidade* consiste em quatro níveis e *pontuação de afinidade* é calculado em uma escala de 100 pontos que mapeia para os níveis de afinidade.
-
 
 |Nível de afinidade |Pontuação de afinidade  |
 |---------|---------|
@@ -64,78 +54,65 @@ Calculamos o SoV em uma escala de 100 pontos. O SoV total em todas as marcas ou 
 
 Atualmente, oferecemos suporte para as seguintes opções de país/região: Austrália, Canadá (inglês), França, Alemanha, Reino Unido ou Estados Unidos (inglês).
 
-Para selecionar um país ou região, abra **Enriquecimento de marcas** ou **Enriquecimento de interesses** e selecione **Alterar** ao lado de **País/Região**. No painel **Configurações de país/região**, escolha uma opção e selecione **Aplicar**.
+## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
-### <a name="implications-related-to-country-selection"></a>Implicações relativas à seleção de país
+1. Vá para **Dados** > **Enriquecimento** e selecione a guia **Descobrir**.
 
-- Ao [escolher suas próprias marcas](#define-your-brands-or-interests), o sistema oferece sugestões com base no país/região selecionado.
+   - Para configurar o enriquecimento de afinidades de marca e de SoV, selecione **Enriquecer meus dados** no bloco **Marcas**.
 
-- Ao [escolher um setor](#define-your-brands-or-interests), você obterá as marcas ou os interesses mais relevantes com base no país/região selecionado.
+   - Para configurar o enriquecimento de afinidades de interesse e de SoV, selecione **Enriquecer meus dados** no bloco **Interesses**.
 
-- Ao [enriquecer perfis](#refresh-enrichment), enriqueceremos todos os perfis de clientes dos quais obtemos dados para as marcas e interesses selecionados, incluindo perfis que não estão no país ou na região selecionada. Por exemplo, se você selecionou Alemanha, enriqueceremos perfis localizados nos Estados Unidos se tivermos dados disponíveis para as marcas e os interesses selecionados nos EUA.
+   > [!div class="mx-imgBorder"]
+   > ![Blocos de marcas e interesses.](media/BrandsInterest-tile-Hub.png "Blocos de Marcas e Interesses")
 
-## <a name="configure-enrichment"></a>Configurar enriquecimento
+1. Revise a visão geral e selecione **Avançar**.
 
-Uma experiência guiada ajuda você na configuração dos enriquecimentos. 
+1. Para alterar seu país ou região, selecione **Alterar** ao lado de **País/Região**. No painel **Configurações de país/região**, escolha um [país/região com suporte](#supported-countriesregions) e selecione **Aplicar**.
 
-### <a name="define-your-brands-or-interests"></a>Definir suas marcas ou interesses
+   > [!NOTE]
+   > Ao escolher suas próprias marcas, o sistema oferece sugestões com base no país/região selecionado. Ao escolher um setor, você obterá as marcas ou os interesses mais relevantes com base no país/região selecionado.
 
-Escolha até cinco marcas ou interesses usando uma ou ambas as opções:
+1. Escolha até cinco marcas ou interesses usando uma ou ambas as opções:
 
-- **Setor**: selecione seu setor na lista suspensa e escolha entre as principais marcas ou interesses desse setor.
-- **Escolher seus próprios**: insira uma marca ou interesse que seja relevante para sua organização e escolha uma das sugestões correspondentes. Se não listarmos uma marca ou interesse que você procura, envie-nos seus comentários usando o link **Sugerir**.
+   - **Setor**: selecione seu setor na lista suspensa e escolha entre as principais marcas ou interesses desse setor.
+   - **Escolher seus próprios**: insira uma marca ou interesse que seja relevante para sua organização e escolha uma das sugestões correspondentes. Se não listarmos uma marca ou interesse que você procura, envie-nos seus comentários usando o link **Sugerir**.
 
-### <a name="review-enrichment-preferences"></a>Revisar preferências de enriquecimento
+1. Selecione **Avançar** e revise suas preferências de enriquecimento padrão e atualize-as conforme necessário.
 
-Revise as preferências de enriquecimento padrão e atualize-as conforme necessário.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de tela da janela de preferências de enriquecimento.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captura de tela da janela de preferências de enriquecimento.":::
+1. Selecione **Avançar**
 
-### <a name="select-entity-to-enrich"></a>Selecione a entidade a ser enriquecida
+1. Selecione **Conjunto de dados do cliente** e escolha o perfil ou segmento que deseja enriquecer com dados da Microsoft. A entidade *Cliente* enriquece todos os perfis de cliente enquanto um segmento enriquecer apenas perfis de clientes contidos nesse segmento.
 
-Selecione **Entidade enriquecida** e escolha o conjunto de dados que deseja enriquecer com os dados da Microsoft. Você pode selecionar a entidade Cliente para enriquecer todos os perfis de cliente ou selecionar uma entidade de segmento para enriquecer apenas perfis de clientes contidos nesse segmento.
+1. Selecione **Avançar**
 
-### <a name="map-your-fields"></a>Mapear seus campos
+1. Mapeie seus campos de sua entidade de cliente unificada para os dados da Microsoft.
 
-Mapeie os campos da entidade de cliente unificada para definir o segmento demográfico que deseja que o sistema use para enriquecer os dados de clientes. Mapeie País/Região e pelo menos os atributos de Data de Nascimento ou Sexo. Além disso, é necessário mapear pelo menos uma Cidade (e Estado/Província) ou CEP. Selecione **Editar** para definir o mapeamento dos campos e selecione **Aplicar** quando terminar. Selecione **Salvar** para concluir o mapeamento de campo.
+   > [!NOTE]
+   > Pelo menos os atributos Data de Nascimento ou Sexo são obrigatórios. País/Região e pelo menos Cidade (e Estado/Província) ou CEP são obrigatórios. Recomendamos que a data de nascimento seja convertida no tipo DateTime durante a ingestão de dados. Alternativamente, pode ser uma cadeia de caracteres no formato [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "aaaa-MM-dd" ou "aaaa-MM-ddTHH:mm:ss".
 
-Os seguintes formatos e valores têm suporte (os valores não diferenciam maiúsculas de minúsculas):
+1. Selecione **Avançar** para concluir o mapeamento de campos.
 
-- **Data de nascimento**: recomendamos que a data de nascimento seja convertida no tipo DateTime durante a ingestão de dados. Alternativamente, pode ser uma cadeia de caracteres no formato [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "aaaa-MM-dd" ou "aaaa-MM-ddTHH:mm:ss".
-- **Sexo**: masculino, feminino, desconhecido.
-- **CEP**: CEPs de cinco dígitos para os Estados Unidos, CEP padrão em todos os outros lugares.
-- **Cidade**: nome da cidade em inglês.
-- **Estado/Província**: abreviação de duas letras para os EUA e o Canadá. Abreviação de duas ou três letras para a Austrália. Não aplicável à França, à Alemanha ou ao Reino Unido.
-- **País/Região**:
+1. Forneça um nome para o enriquecimento. O **Nome da entidade de saída** é selecionado automaticamente.
 
-  - EUA: Estados Unidos da América, Estados Unidos, EUA, América
-  - CA: Canadá, CA
-  - GB: Reino Unido, Reino Unido, Grã-Bretanha, GB, Reino Unido da Grã-Bretanha e Irlanda do Norte, Reino Unido da Grã-Bretanha
-  - AU: Austrália, AU, Comunidade das Nações da Austrália
-  - FR: França, FR, República Francesa
-  - DE: Alemanha, Alemanha, Deutschland, Allemagne, DE, República Federal da Alemanha, República da Alemanha
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Revisão de interesses e página de nomenclatura.":::
 
-## <a name="review-and-name-the-enrichment"></a>Revise e nomeie o enriquecimento
+1. Selecione **Salvar enriquecimento** depois de revisar suas escolhas.
 
-Por último, você pode revisar as informações e fornecer um nome para o enriquecimento.
+1. Selecione **Executar** para iniciar o processo de enriquecimento ou feche para voltar para a página **Enriquecimentos**.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Revisão de interesses e página de nomenclatura.":::
-
-## <a name="refresh-enrichment"></a>Atualizar enriquecimento
-
-Execute o enriquecimento depois de configurar marcas, interesses e o mapeamento de campo para dados demográficos. Para iniciar o processo, selecione **Executar** na página de configuração de marca ou interesse. Além disso, você pode permitir que o sistema execute o enriquecimento automaticamente como parte de uma atualização agendada.
-
-Dependendo do tamanho dos dados do cliente, pode levar alguns minutos para que uma execução de enriquecimento seja concluída.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Ao enriquecer perfis, enriqueceremos todos os perfis de clientes dos quais obtemos dados para as marcas e interesses selecionados, incluindo perfis que não estão no país ou na região selecionada. Por exemplo, se você selecionou Alemanha, enriqueceremos perfis localizados nos Estados Unidos se tivermos dados disponíveis para as marcas e os interesses selecionados nos EUA.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecimento
 
-Depois de executar o processo de enriquecimento, vá para **Meus enriquecimentos** para revisar o número total de clientes enriquecidos e um detalhamento de marcas ou interesses nos perfis de clientes enriquecidos.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Visualização dos resultados após a execução do processo de enriquecimento.":::
 
-Você encontrará um gráfico com o número de perfis de clientes enriquecidos ao longo do tempo e visualizações das entidades enriquecidas. Revise os dados enriquecidos selecionando **Ver mais** nos gráficos de **Nível de afinidade** ou de **Share of Voice**. Dados enriquecidos para marcas vão para as entidades **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft**. Os dados para interesses estão nas entidades **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft**. Você também encontrará essas entidades listadas no grupo **Enriquecimento** em **Dados** > **Entidades**.
+Os resultados incluem os gráficos **Nível de afinidade** ou **Compartilhamento de Voz**.
+
+As entidades criadas dos enriquecimentos estão listadas no grupo **Enriquecimento** em **Dados** > **Entidades**. Dados enriquecidos para marcas vão para as entidades **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft**. Os dados para interesses estão nas entidades **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Veja dados de enriquecimento no cartão do cliente
 

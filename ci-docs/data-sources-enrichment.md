@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800267"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011459"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecimento de fontes de dados (versão preliminar)
 
@@ -29,9 +29,11 @@ Você deve ter permissões de Colaborador ou Administrador para criar ou editar 
 
 1. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que deseja enriquecer e selecione **Enriquecer**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de enriquecimento de fontes de dados":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Página Fontes de dados com Enriquecer realçado":::
 
    A guia **Descobrir** exibe as [opções de enriquecimento de fonte de dados compatíveis](#supported-data-source-enrichments).
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de enriquecimento de fontes de dados":::
 
 1. Selecione **Enriquecer meus dados** para configurar um enriquecimento de fonte de dados. O nome da entidade de saída é preenchido automaticamente.
 

@@ -1,27 +1,27 @@
 ---
 title: Ingerir dados por meio de um conector do Power Query (contém vídeo)
 description: Conectores para fontes de dados com base no Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+ms.date: 05/09/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
-ms.author: adkuppa
+ms.author: matgos
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b99c3b446e580f455f9678d54d9db414aea9b331
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800130"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011643"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar-se a uma fonte de dados do Power Query
 
-O Power Query oferece um amplo conjunto de conectores para ingerir dados. A maioria desses conectores são suportados por Dynamics 365 Customer Insights. 
+O Power Query oferece um amplo conjunto de conectores para ingerir dados. A maioria desses conectores são suportados por Dynamics 365 Customer Insights.
 
 A adição de fontes de dados com base nos conectores do Power Query geralmente segue as etapas descritas nesta seção. No entanto, dependendo do conector que você usa, são necessárias informações diferentes. Para saber mais, consulte a documentação sobre conectores individuais na [Referência de conectores do Power Query](/power-query/connectors/).
 
@@ -35,7 +35,7 @@ A adição de fontes de dados com base nos conectores do Power Query geralmente 
 
 1. Selecione **Microsoft Power Query**.
 
-1. Forneça um **Nome** para a fonte de dados e selecione **Avançar** para criar a fonte de dados.
+1. Forneça um **Nome** e uma **Descrição** opcional para o fonte de dados e selecione **Avançar**.
 
 1. Escolha um dos [conectores disponíveis](#available-power-query-data-sources). Neste exemplo, selecionamos o conector **Text/CSV**.
 
@@ -45,47 +45,49 @@ A adição de fontes de dados com base nos conectores do Power Query geralmente 
 
 1. A caixa de diálogo **Power Query – Editar consultas** permite que você revise e refine os dados. As entidades que os sistemas identificaram na sua fonte de dados selecionada aparecem no painel esquerdo.
 
-   > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo Editar consultas.](media/data-manager-configure-edit-queries.png "Caixa de diálogo Editar consultas")
+   :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Caixa de diálogo Editar consultas":::
 
-1. Você também poderá transformar seus dados. Selecione uma entidade para editar ou transformar. Use as opções na janela do Power Query para aplicar transformações. Cada transformação é listada em **Etapas aplicadas**. O Power Query fornece várias opções predefinidas de transformação. Para obter mais informações, consulte a [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Você também poderá transformar seus dados. Selecione uma entidade para editar ou transformar. Use as opções na janela do Power Query para aplicar transformações. Cada transformação está listada em **Etapas aplicadas**. O Power Query fornece várias opções predefinidas de transformação. Para obter mais informações, consulte a [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
 
    É recomendável usar as seguintes transformações:
 
    - Se você estiver ingerindo dados de um arquivo CSV, a primeira linha geralmente contém cabeçalhos. Acesse **Transformar** e selecione **Usar a primeira linha como cabeçalho**.
    - Certifique-se de que o tipo de dados esteja definido de forma adequada. Por exemplo, no caso de campos de data, selecione um tipo de data.
 
-1. Para adicionar outras entidades à fonte de dados na caixa de diálogo **Editar consultas**, acesse **Página Inicial** e selecione **Obter dados**.
+1. Para adicionar outras entidades à fonte de dados na caixa de diálogo **Editar consultas**, acesse **Página Inicial** e selecione **Obter dados**. Repita as etapas 6 a 10 até adicionar todas as entidades a esta fonte de dados.
 
-1. Selecione **Salvar** na parte inferior da janela do Power Query para salvar as transformações. Depois de salvar, você encontrará sua fonte de dados em **Dados** > **Fontes de dados**.
+1. Selecione **Salvar**. A página **Fontes de dados** abre mostrando a nova fonte de dados no status **Atualizando**.
 
-1. Na página **Fontes de dados**, você observará que a nova fonte de dados está no status **Atualizando**.
+### <a name="available-power-query-data-sources"></a>Fontes de dados do Power Query disponíveis
 
-## <a name="available-power-query-data-sources"></a>Fontes de dados do Power Query disponíveis
+Consulte a [Referência de conectores do Power Query](/power-query/connectors/) para obter uma lista de conectores que você pode usar para importar dados para o Customer Insights.
 
-Consulte a [Referência de conectores do Power Query](/power-query/connectors/) para obter uma lista de conectores que você pode usar para importar dados para o Customer Insights. 
+Conectores com uma marca de seleção na coluna **Customer Insights (Fluxos de dados)** estão disponíveis para criar novas fontes de dados com base no Power Query. Revise a documentação de um conector específico para saber mais sobre seus pré-requisitos, [limitações de consulta](/power-query/power-query-online-limits) e outros detalhes.
 
-Conectores com uma marca de seleção na coluna **Customer Insights (Fluxos de dados)** estão disponíveis para criar novas fontes de dados com base no Power Query. Revise a documentação de um conector específico para saber mais sobre seus pré-requisitos, limitações e outros detalhes.
+## <a name="add-data-from-on-premises-data-sources"></a>Adicionar dados de fontes de dados locais
+
+Há suporte à ingestão de dados de fontes de dados locais com base em fluxos de trabalho do Microsoft Power Platform (PPDFs). Você pode habilitar fluxos de dados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](create-environment.md) ao configurar o ambiente.
+
+As fontes de dados que são criadas após associar um ambiente do Dataverse ao Customer Insights usam [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Você pode remover e recriar fontes de dados que existiam antes de um ambiente do Dataverse ser associado [usando gateways de dados locais](/data-integration/gateway/service-gateway-app).
+
+Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
+
+> [!IMPORTANT]
+> Verifique se os seus gateways estão atualizados com a versão mais recente. Você pode instalar uma atualização e reconfigurar um gateway em um prompt mostrado diretamente na tela do gateway ou [fazer download da versão mais recente](https://powerapps.microsoft.com/downloads/). Se você não usar a versão mais recente do gateway, a atualização do fluxo de dados vai falhar com mensagens de erro como **Não há suporte para a palavra-chave: propriedades de configuração. Nome do parâmetro: palavra-chave**.
 
 ## <a name="edit-power-query-data-sources"></a>Editar fonte de dados do Power Query
 
 > [!NOTE]
-> Talvez não seja possível fazer alterações nas fontes de dados que estão sendo usadas no momento em um dos processos do aplicativo (*segmentação*, *corresponder* ou *mesclar*, por exemplo). 
+> Talvez não seja possível fazer alterações nas fontes de dados que estão sendo usadas no momento em um dos processos do aplicativo (*segmentação*, *corresponder* ou *mesclar*, por exemplo).
 >
 > Na página **Configurações**, você pode acompanhar o andamento de cada um dos processos ativos. Quando um processo é concluído, você pode retornar à página **Fontes de Dados** e fazer suas alterações.
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-2. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que você deseja alterar e selecione **Editar** no menu suspenso.
-
-   > [!div class="mx-imgBorder"]
-   > ![Opção Editar.](media/edit-option-data-sources.png "Editar opção")
+1. Ao lado da fonte de dados que você deseja atualizar, selecione **Editar**
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-   
-3. Aplique suas alterações e transformações na caixa de diálogo **Power Query – Editar consultas** conforme descrito na seção [Criar uma fonte de dados](#create-a-new-data-source).
 
-4. Selecione **Salvar** no Power Query depois de concluir suas edições para salvar suas alterações.
+1. Aplique suas alterações e transformações na caixa de diálogo **Power Query – Editar consultas** conforme descrito na seção [Criar uma fonte de dados](#create-a-new-data-source).
 
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Selecione **Salvar** no Power Query depois de concluir suas edições para salvar suas alterações.

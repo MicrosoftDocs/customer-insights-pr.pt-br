@@ -1,95 +1,93 @@
 ---
 title: Enriquecimento de dados de identidade do LiveRamp
 description: Enriqueça perfis de clientes com dados do LiveRamp.
-ms.date: 03/02/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 0727818f6df565d9a031966a68d521ae7167e484
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645611"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953981"
 ---
-# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquecer perfis dos clientes com dados de identidade do LiveRamp (versão preliminar) 
+# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquecer perfis dos clientes com dados de identidade da LiveRamp (versão preliminar)
 
-O LiveRamp fornece resolução de identidade offline determinada e consolidação de dados do cliente. Você pode mapear identificadores pessoais em seus dados de cliente para o gráfico de identidade da AbiliTec e receber IDs da AbiliTec. Você pode usar essas IDs para uma unificação melhor dos dados de seus clientes. 
+O LiveRamp fornece resolução de identidade offline determinada e consolidação de dados do cliente. Você pode mapear identificadores pessoais em seus dados de cliente para o gráfico de identidade da AbiliTec e receber IDs da AbiliTec. Você pode usar essas IDs para uma unificação melhor dos dados de seus clientes.
 
-## <a name="prerequisites"></a>Pré-requisitos 
+## <a name="supported-countriesregions"></a>Países/regiões com suporte
 
-Para configurar o enriquecimento, os seguintes pré-requisitos devem ser atendidos: 
+Atualmente, oferecemos suporte ao enriquecimento de perfis de clientes com dados do LiveRamp apenas nos Estados Unidos.
 
-- Você tem uma assinatura ativa do LiveRamp. Para obter uma assinatura, entre em contato com a equipe da sua conta LiveRamp ou pelo email [dynamics@liveramp.com](mailto:dynamics@liveramp.com) para saber mais.   
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma assinatura ativa da AbiliTec com uma ID do cliente e segredo para acessar a API. Para obter mais informações, consulte [Hub dos desenvolvedores da API da AbiliTec](https://developers.liveramp.com/abilitec-api/). 
+- Você tem uma assinatura ativa da LiveRamp. Para obter uma assinatura, entre em contato com a equipe da sua conta LiveRamp ou pelo email [dynamics@liveramp.com](mailto:dynamics@liveramp.com) para saber mais.
 
-## <a name="supported-countriesregions"></a>Países/regiões com suporte 
+- Uma assinatura ativa da AbiliTec com uma ID do cliente e segredo para acessar a API. Para obter mais informações, consulte [Hub dos desenvolvedores da API da AbiliTec](https://developers.liveramp.com/abilitec-api/).
 
-Atualmente, oferecemos suporte ao enriquecimento de perfis de clientes com dados do LiveRamp apenas nos Estados Unidos. 
+- Uma [conexão](connections.md) da LiveRamp é [configurada](#configure-the-connection-for-liveramp) por um administrador.
 
-## <a name="configure-the-enrichment"></a>Configurar o enriquecimento 
+## <a name="configure-the-connection-for-liveramp"></a>Configurar a conexão para LiveRamp
 
-1. Vá para **Dados** > **Enriquecimento** e selecione a guia **Descobrir**. 
+Você deve ser um [administrador](permissions.md#admin) no Customer Insights e ter uma ID do cliente e um segredo ativos da LiveRamp.
 
-1. Selecione **Enriquecer meus dados** no bloco **Identidade**. 
+1. Selecione **Adicionar conexão** ao configurar um enriquecimento ou acesse **Administrador** > **Conexões** e selecione **Configurar** no bloco da LiveRamp.
+
+   :::image type="content" source="media/liveramp-connection.png" alt-text="Painel de configuração para configurar a conexão com o serviço do LiveRamp da AbiliTec. ":::
+
+1. Insira um nome para a conexão e uma ID de cliente e um segredo válidos da LiveRamp.
+
+1. Revise e forneça seu consentimento para a [Conformidade e privacidade dos dados](#data-privacy-and-compliance) selecionando **Eu concordo**.
+
+1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Salvar**.
+
+### <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
+
+Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao LiveRamp, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o LiveRamp atenda às obrigações de privacidade ou segurança que você possa ter. Para obter mais informações, revise a [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
+
+## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
+
+1. Vá para **Dados** > **Enriquecimento** e selecione a guia **Descobrir**.
+
+1. Selecione **Enriquecer meus dados** em **Identidade** do bloco da LiveRamp.
 
    :::image type="content" source="media/liveramp-tile.png" alt-text="Bloco de identidade na página de visão geral do enriquecimento. ":::
 
-1. Selecione uma [conexão](connections.md) na lista suspensa. Contate um administrador se nenhuma conexão estiver disponível. Se você for um administrador, poderá criar uma conexão selecionando **Adicionar conexão**. Selecione **LiveRamp** na lista suspensa. 
+1. Revise a visão geral e selecione **Avançar**.
 
-1. Selecione **Avançar** e escolha o **Conjunto de dados do cliente** que deseja enriquecer com os dados de identidade do LiveRamp. Você pode selecionar a entidade *Cliente* para enriquecer todos os perfis de cliente ou selecionar uma entidade de *segmento* para enriquecer apenas perfis de clientes contidos nesse segmento. 
+1. Selecionar a conexão. Entre em contato com um administrador se não houver um disponível.
 
-1. Selecione **Avançar** e defina quais tipos de campos de perfis unificados devem ser usados para procurar dados de identidade correspondentes do LiveRamp. Pelo menos um dos campos **Nome e endereço**, **Telefone** ou **Email** é obrigatório. 
+1. Selecione **Avançar**
 
-   > [!TIP]
-   > Quanto mais identificadores e campos principais você mapear, maior será a probabilidade de uma taxa de correspondência mais alta 
+1. Selecione **Conjunto de dados do cliente** e escolha o perfil ou segmento que deseja enriquecer com dados de identidade da LiveRamp. A entidade *Cliente* enriquece todos os perfis de cliente enquanto um segmento enriquecer apenas perfis de clientes contidos nesse segmento.
 
-1. Mapeie os campos da sua entidade unificada de *Cliente* que serão usados para correspondência com o gráfico de ID da AbiliTec da LiveRamp. 
+1. Defina que tipo de campos de seus perfis unificados devem usar para fazer a correspondência de dados de identidade da LiveRamp. Pelo menos um dos campos **Nome e endereço**, **Email** ou **Telefone** é obrigatório. Para maior precisão de correspondência, adicione outros campos. Selecione **Avançar**
+
+1. Mapeie os campos para os dados de identificação da LiveRamp.
 
    :::image type="content" source="media/liveramp-data-mapping.png" alt-text="Opções de mapeamento de dados para o enriquecimento do LiveRamp.":::
 
-1. Selecione **Avançar** para concluir o mapeamento de campos. 
+1. Selecione **Avançar** para concluir o mapeamento de campos.
 
-1. Forneça um **Nome** para o enriquecimento e a **Entidade de saída**. 
+1. Forneça um **Nome** para o enriquecimento e o **Nome da entidade de saída**.
 
-1. Selecione **Salvar enriquecimento** depois de revisar suas escolhas. 
+1. Selecione **Salvar enriquecimento** depois de revisar suas escolhas.
 
-## <a name="configure-the-connection-for-liveramp"></a>Configurar a conexão para LiveRamp 
+1. Selecione **Executar** para iniciar o processo de enriquecimento ou feche para voltar para a página **Enriquecimentos**.
 
-Você deve ser um administrador para [configurar as conexões](connections.md). Selecione **Adicionar conexão** ao configurar o enriquecimento ou acesse **Administrador** > **Conexões** e selecione **Configurar** no bloco **LiveRamp**. 
+## <a name="enrichment-results"></a>Resultados de enriquecimento
 
-:::image type="content" source="media/liveramp-connection.png" alt-text="Painel de configuração para configurar a conexão com o serviço do LiveRamp da AbiliTec. ":::
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-1. Em **Nome de exibição**, insira o nome da conexão. 
-
-1. Forneça uma ID de cliente do LiveRamp válida e um segredo. 
-
-1. Revise e forneça seu consentimento para **Conformidade e privacidade dos dados** marcando a caixa de seleção **Concordo**. 
-
-1. Selecione **Verificar** para validar a configuração. 
-
-1. Para concluir a conexão, selecione **Salvar**. 
-
-## <a name="enrichment-results"></a>Resultados de enriquecimento 
-
-Para iniciar o processo de enriquecimento, selecione Executar na barra de comandos. Você também pode permitir que o sistema execute o enriquecimento automaticamente como parte de uma [atualização agendada](system.md#schedule-tab). A duração do processamento depende do tamanho dos dados do cliente. 
-
-Após a conclusão do processo de enriquecimento, você pode revisar os dados de perfis de clientes recém-enriquecidos em  **Meus enriquecimentos**. Além disso, você encontrará a hora da última atualização e o número de perfis enriquecidos. 
-
-Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando **Exibir dados enriquecidos**. 
+O **Número de clientes enriquecidos por campo** apresenta um detalhamento da cobertura de cada campo enriquecido.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Compile com base nos dados de cliente enriquecidos. Use as IDs da AbiliTec para consolidar os perfis dos clientes em uma visão baseada em pessoa. 
+Compile com base nos dados de cliente enriquecidos. Use as IDs da AbiliTec para consolidar os perfis dos clientes em uma visão baseada em pessoa.
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados 
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao LiveRamp, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o LiveRamp atenda às obrigações de privacidade ou segurança que você possa ter. Para obter mais informações, revise a [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade. 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

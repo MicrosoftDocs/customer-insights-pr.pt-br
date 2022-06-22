@@ -1,88 +1,80 @@
 ---
 title: Usar fontes de dados para ingerir dados
 description: Saiba como importar dados de várias fontes.
-ms.date: 03/18/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800452"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011735"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
+O Dynamics 365 Customer Insights fornece conexões para trazer dados de um amplo conjunto de fontes. A conexão a uma fonte de dados é conhecida como o processo de *ingestão de dados*. Após a ingestão dos dados, você pode [unificar](data-unification.md), gerar insights e ativar os dados para criar experiências personalizadas.
 
+## <a name="add-data-sources"></a>Adicionar fontes de dados
 
-O Dynamics 365 Customer Insights se conecta a dados de um ampla conjunto de fontes. A conexão a uma fonte de dados é conhecida como o processo de *ingestão de dados*. Depois de ingerir os dados, você pode [unificar](data-unification.md) e agir sobre eles.
+Você pode anexar ou importar fontes de dados para o Customer Insights. Os links abaixo fornecem instruções sobre como adicionar fontes de dados.
 
-## <a name="add-a-data-source"></a>Adicionar fonte de dados
+**Anexar uma fonte de dados**
 
-Consulte os artigos detalhados para saber como adicionar uma fonte de dados, dependendo da opção que você escolher.
+Se você tiver dados preparados em um dos serviços de dados do Azure da Microsoft, o Customer Insights poderá se conectar facilmente ao fonte de dados sem precisar ingerir novamente os dados. Selecione uma das opções a seguir:
+- [Azure Data Lake Storage (arquivos csv ou parquet em uma pasta do Common Data Model)](connect-common-data-model.md)
+- [Azure Synapse Analytics (bancos de dados do Lake)](connect-synapse.md)
+- [Data lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
-É possível adicionar as seguintes fontes de dados:
+**Importar e transformar**
 
-- [Por meio de dezenas de conectores do Power Query](connect-power-query.md)
-- [De uma pasta do Common Data Model](connect-common-data-model.md)
-- [Do seu próprio lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
-- [De um banco de dados do Azure Synapse Analytics](connect-synapse.md)
+Se você usar fontes de dados locais, dados da Microsoft ou de terceiros, importe e transforme os dados usando conectores do Power Query.
+- [Conectores do Power Query](connect-power-query.md)
 
-## <a name="add-data-from-on-premises-data-sources"></a>Adicionar dados de fontes de dados locais
+## <a name="review-data-sources"></a>Revisar fontes de dados
 
-Há suporte à ingestão de dados de fontes de dados locais com base em fluxos de trabalho do Microsoft Power Platform. Você pode habilitar Fluxos de dados no Customer Insights [fornecendo a URL do ambiente do Microsoft Dataverse](create-environment.md) ao configurar o ambiente.
-
-As fontes de dados que são criadas após associar um ambiente do Dataverse ao Customer Insights usam [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Você pode remover e recriar fontes de dados que existiam antes de um ambiente do Dataverse ser associado [usando gateways de dados locais](/data-integration/gateway/service-gateway-app).
-
-Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficará visível e você poderá reutilizá-lo no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
-
-> [!IMPORTANT]
-> Verifique se os seus gateways estão atualizados com a versão mais recente. Você pode instalar uma atualização e reconfigurar um gateway em um prompt mostrado diretamente na tela do gateway ou [fazer download da versão mais recente](https://powerapps.microsoft.com/downloads/). Se você não usar a versão mais recente do gateway, a atualização do fluxo de dados vai falhar com mensagens de erro como **Não há suporte para a palavra-chave: propriedades de configuração. Nome do parâmetro: palavra-chave**.
-
-## <a name="review-ingested-data"></a>Analisar dados ingeridos
-Se o seu ambiente contém fluxos de dados do Power Platform, a página **Fontes de Dados** lista três seções: 
-- **Compartilhado**: as fontes de dados que podem ser gerenciadas por todos os administradores do Customer Insights. Alguns exemplos de fontes de dados compartilhadas incluem os fluxos de dados do Power BI, sua própria conta de armazenamento e anexar a um data lake gerenciado do Dataverse.
-- **Gerenciado por mim**: os fluxos de dados do Power Platform criados e que só podem ser gerenciados por você. Outros administradores do Customer Insights só podem visualizar esses fluxos de dados, mas não podem editar, atualizar ou excluir.
+Se o seu ambiente tiver sido configurado para usar o armazenamento do Customer Insights e se usa fontes de dados locais, você usa fluxos de dados do Power Platform. Com fluxos de dados do Power Platform, você poderá exibir fontes de dados compartilhadas e fontes de dados gerenciadas por outras pessoas. A página **Fontes de Dados** lista as fontes de dados em três seções:
+- **Compartilhado**: as fontes de dados que podem ser gerenciadas por todos os administradores do Customer Insights. Alguns exemplos de fontes de dados compartilhadas incluem os fluxos de dados do Power Platform, sua própria conta de armazenamento e anexar a um data lake gerenciado do Dataverse.
+- **Gerenciado por mim**: os fluxos de dados do Power Platform criados e gerenciados somente por você. Outros administradores do Customer Insights só podem visualizar esses fluxos de dados, mas não podem editar, atualizar ou excluir.
 - **Gerenciado por outros**: os fluxos de dados do Power Platform criados por outros administradores. Você só pode visualizar. Aqui, é indicado o proprietário do fluxo de dados que você precisa contatar caso precise de qualquer ajuda.
 > [!NOTE]
-> Todas as entidades podem ser visualizadas e usadas por outros usuários. A contextualidade do usuário se aplica apenas às fontes de dados e não às entidades que resultam desses fluxos de dados.
+> Todas as entidades podem ser visualizadas e usadas por outros usuários. Embora as fontes de dados sejam propriedade do usuário que as criou, as entidades resultantes da ingestão de dados podem ser usadas por todos os usuários do Customer Insights.
 
-Se nenhum fluxo de dados do Power Platform for usado, você não verá nenhum grupo ou seção. A página **Fontes de Dados** contém apenas uma lista de todas as fontes de dados.
+Se o seu ambiente não usa fluxos de dados do Power Platform, a página **Fontes de Dados** contém apenas uma lista de todas as fontes de dados. Nenhuma seção é exibida.
 
-Você verá o nome de cada fonte de dados ingeridos, seu status e a última vez em que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por cada coluna.
+Acesse **Dados** > **Fontes de dados** para exibir o nome de cada fonte de dados ingerida, seu status e a última vez que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por cada coluna.
 
-> [!div class="mx-imgBorder"]
-> ![Fonte de dados adicionada.](media/configure-data-datasource-added.png "Fonte de dados adicionada")
+:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Fonte de dados adicionada.":::
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 O carregamento de dados pode levar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página **Entidades**. Para obter mais informações, consulte [Entidades](entities.md).
 
-## <a name="refresh-a-data-source"></a>Atualizar uma fonte de dados
+## <a name="refresh-data-sources"></a>Atualizar fontes de dados
 
-As fontes de dados podem ser atualizadas em uma programação automática ou manualmente sob demanda. 
+As fontes de dados podem ser atualizadas em uma programação automática ou manualmente sob demanda. As [fontes de dados locais](connect-power-query.md#add-data-from-on-premises-data-sources) são atualizadas em suas próprias agendas, que são configuradas durante a ingestão de dados. Para fontes de dados anexadas, a ingestão de dados consome os dados mais recentes disponíveis desse fonte de dados.
 
-Acesse **Administrador** > **Sistema** > [**Agendar**](system.md#schedule-tab) para configurar atualizações agendadas de todas as fontes de dados ingeridos.
+Acesse **Administrador** > **Sistema** > [**Agenda**](system.md#schedule-tab) para configurar atualizações agendadas pelo sistema de suas fontes de dados ingeridas.
 
 Para atualizar uma fonte de dados sob demanda, siga estas etapas:
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-2. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que você deseja atualizar e selecione **Atualizar** na lista suspensa.
+1. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que você deseja atualizar e selecione **Atualizar** na lista suspensa. A fonte de dados agora é acionada para uma atualização manual. Atualizar um fonte de dados atualizará o esquema da entidade e os dados de todas as entidades especificadas na fonte de dados.
 
-3. A fonte de dados agora é acionada para uma atualização manual. Atualizar um fonte de dados atualizará o esquema da entidade e os dados de todas as entidades especificadas na fonte de dados.
-
-4. Selecione **Parar de atualizar** se quiser cancelar uma atualização existente e que a fonte de dados seja revertida para seu último status de atualização.
+1. Selecione **Parar de atualizar** se quiser cancelar uma atualização existente e que a fonte de dados seja revertida para seu último status de atualização.
 
 ## <a name="delete-a-data-source"></a>Excluir uma fonte de dados
+
+Um fonte de dados só poderá ser excluída se os dados não forem usados em nenhum processamento, como unificação, insights, ativações ou exportações.
 
 1. Acesse **Dados** > **Fontes de dados**.
 

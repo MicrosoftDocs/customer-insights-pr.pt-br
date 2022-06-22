@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833362"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011827"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conecte-se a uma conta do Azure Data Lake Storage usando uma entidade de serviço do Azure
 
@@ -51,7 +51,13 @@ Antes de criar uma nova entidade de serviço para o Customer Insights, verifique
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Conceder permissões à entidade de serviço para acessar a conta de armazenamento
 
-Vá para o portal do Azure para conceder permissões à entidade de serviço da conta de armazenamento que você deseja usar no Customer Insights.
+Vá para o portal do Azure para conceder permissões à entidade de serviço da conta de armazenamento que você deseja usar no Customer Insights. Uma das funções a seguir deve ser atribuída à conta de armazenamento ou contêiner:
+
+|Credencial|Requisitos|
+|----------|------------|
+|Usuário conectado no momento|**Função**: Leitor de Dados de Blob de Armazenamento, Colaborador de Blob de Armazenamento ou Proprietário de Blob de Armazenamento.<br>**Nível**: as permissões podem ser concedidas na conta de armazenamento ou no contêiner.</br>|
+|Entidade de Serviço do Customer Insights -<br>Uso do Azure Data Lake Storage como fonte de dados</br>|Opção 1<ul><li>**Função**: Leitor de Dados de Blob de Armazenamento, Colaborador de Dados de Blob de Armazenamento ou Proprietário de Dados de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>Opção 2 *(sem compartilhamento de acesso de Entidade de Serviço à conta de armazenamento)*<ul><li>**Função 1**: Leitor de Dados de Blob de Armazenamento, Colaborador de Dados de Blob de Armazenamento ou Proprietário de Dados de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas no contêiner.</li><li>**Função 2**: Delegante de Dados do Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>|
+|Entidade de Serviço do Customer Insights - <br>Uso do Azure Data Lake Storage como saída ou destino</br>|Opção 1<ul><li>**Função**: Colaborador de Blob de Armazenamento ou Proprietário de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>Opção 2 *(sem compartilhamento de acesso de Entidade de Serviço à conta de armazenamento)*<ul><li>**Função**: Colaborador de Blob de Armazenamento ou Proprietário de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas no contêiner.</li><li>**Função 2**: Delegante do Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>|
 
 1. Acesse o [portal administrativo do Azure](https://portal.azure.com) e faça logon em sua organização.
 
@@ -62,7 +68,7 @@ Vá para o portal do Azure para conceder permissões à entidade de serviço da 
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de tela mostrando o portal do Azure enquanto adiciona uma atribuição de função.":::
 
 1. No painel **Adicionar atribuição de função**, defina as seguintes propriedades:
-   - Função: **Colaborador de Dados do Storage Blob**
+   - Função: Leitor de Dados de Blob de Armazenamento, Colaborador de Dados de Blob de Armazenamento ou Proprietário de Blob de Armazenamento com base nas credenciais listadas acima.
    - Atribua acesso a: **Usuário, grupo ou entidade de serviço**
    - Selecione membros: **Dynamics 365 AI for Customer Insights** (a [entidade de serviço](#create-a-new-service-principal) pesquisada anteriormente neste procedimento)
 

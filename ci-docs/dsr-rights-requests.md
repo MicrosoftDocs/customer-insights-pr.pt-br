@@ -1,19 +1,19 @@
 ---
 title: Solicitações de Direitos do Titular dos Dados (DSR) no RGPD | Microsoft Docs
 description: Responder a Solicitações do Titular dos Dados do Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808532"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947354"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitações de Direitos do Titular dos Dados (DSR) no GDPR
 
@@ -77,11 +77,5 @@ Um administrador do locatário pode seguir estas etapas para exportar dados:
 1. Enviar um email para D365CI@microsoft.com especificando o endereço de email do usuário na solicitação. A equipe do Customer Insights enviará um email para o endereço de email do administrador do locatário registrado, pedindo confirmação para exportar dados.
 2. Reconheça a confirmação para exportar os dados para o usuário solicitado.
 3. Receba os dados exportados através do endereço de e-mail do administrador do locatário.
-
-## <a name="consent-management-preview"></a>Gerenciamento de consentimento (versão preliminar)
-
-O recurso de gerenciamento de consentimento não coleta dados do usuário diretamente. Ele apenas importa e processa os dados de consentimento fornecidos por usuários em outros aplicativos.
-
-Para remover os dados de consentimento sobre usuários específicos, remova-os das fontes de dados ingeridas para o recurso de gerenciamento de consentimento. Depois de atualizar a fonte de dados, os dados removidos também serão excluídos do Centro de Consentimento. Os aplicativos que usam a entidade de consentimento também excluirão os dados que foram removidos da fonte após uma [atualização](system.md#refresh-processes). Recomendamos atualizar as fontes de dados rapidamente depois de responder a uma solicitação do titular dos dados para remover os dados do usuário de todos os outros processos e aplicativos.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

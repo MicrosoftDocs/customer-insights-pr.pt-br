@@ -1,105 +1,186 @@
 ---
 title: Conectar os dados do Common Data Model a uma conta do Azure Data Lake
 description: Trabalhe com dados do Common Data Model usando o Azure Data Lake Storage.
-ms.date: 05/24/2022
-ms.subservice: audience-insights
+ms.date: 05/30/2022
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833342"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011543"
 ---
-# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectar a uma pasta do Common Data Model usando uma conta do Azure Data Lake
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectar-se a dados no Azure Data Lake Storage
 
-Este artigo fornece informações sobre como ingerir dados no Dynamics 365 Customer Insights de uma pasta Common Data Model usando a conta do Azure Data Lake Storage Gen2.
+Ingira dados no Dynamics 365 Customer Insights usando sua conta do Azure Data Lake Storage Gen2. A ingestão de dados pode ser completa ou incremental.
 
-## <a name="important-considerations"></a>Considerações importantes
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Os dados no Azure Data Lake precisam seguir o padrão do Common Data Model. Outros formatos não têm suporte no momento.
+- A ingestão de dados dá suporte a contas do Azure Data Lake Storage *Gen2* exclusivamente. Não é possível usar contas do Data Lake Gen1 para ingerir dados.
 
-- A ingestão de dados oferece suporte exclusivamente a contas de armazenamento *Gen2* do Azure Data Lake. Não é possível usar contas de armazenamento Gen1 do Azure Data Lake para ingerir dados.
-
-- A conta do Azure Data Lake Storage deve ter o recurso [namespace hierárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace).
+- A conta do Azure Data Lake Storage devem ter o [namespace hierárquico habilitado](/azure/storage/blobs/data-lake-storage-namespace). Os dados devem ser armazenados em um formato de pasta hierárquica que defina a pasta raiz e possua subpastas para cada entidade. As subpastas podem ter dados completos ou pastas de dados incrementais.
 
 - Para autenticar com uma entidade de serviço do Azure, verifique se ela está configurada em seu locatário. Para obter mais informações, consulte [Conectar-se a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md).
 
-- O Azure Data Lake a partir do qual você deseja se conectar e ingerir dados deve estar na mesma região do Azure que o ambiente do Dynamics 365 Customer Insights. Não há suporte para conexões com uma pasta do Common Data Model de um data lake em uma região diferente do Azure. Para conhecer a região do Azure do ambiente, vá para **Administrador** > **Sistema** > **Sobre** no Customer Insights.
+- O Azure Data Lake Storage ao qual você deseja se conectar e do qual deseja ingerir dados tem que estar na mesma região do Azure do que o ambiente do Dynamics 365 Customer Insights. Não há suporte para conexões com uma pasta do Common Data Model de um data lake em uma região diferente do Azure. Para conhecer a região do Azure do ambiente, vá para **Administrador** > **Sistema** > **Sobre** no Customer Insights.
 
 - Os dados armazenados em serviços online podem ser armazenados em um local diferente daquele onde os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar ou se conectar aos dados armazenados em serviços online, você concorda que os dados podem ser transferidos e armazenados com o Dynamics 365 Customer Insights. [Saiba mais na Central de Confiabilidade da Microsoft](https://www.microsoft.com/trust-center).
 
-## <a name="connect-to-a-common-data-model-folder"></a>Conectar-se a uma pasta do Common Data Model
+- A entidade de serviço do Customer Insights deve estar em uma das seguintes funções para acessar a conta de armazenamento. Para obter mais informações, consulte [Conceder permissões à entidade de serviço para acessar a conta de armazenamento](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+  - Leitor de Dados do Storage Blob
+  - Proprietário de Dados do Storage Blob
+  - Colaborador de Dados do Storage Blob
+
+- Os dados em seu Data Lake Storage devem seguir o padrão do Common Data Model padrão para armazenamento de seus dados e ter o manifesto do Common Data Model para representar o esquema dos arquivos de dados (*.csv ou *.parquet). O manifesto deve fornecer os detalhes das entidades, como colunas de entidade e tipos de dados, e o local do arquivo de dados e o tipo de arquivo. Para obter mais informações, consulte [O manifesto do Common Data Model](/common-data-model/sdk/manifest). Se o manifesto não estiver presente, os usuários Administradores com acesso de Proprietário de Dados de Blob de Armazenamento ou Colaborador de Dados de Blob de Armazenamento poderão definir o esquema ao ingerir os dados.
+
+## <a name="connect-to-azure-data-lake-storage"></a>Conectar-se ao Azure Data Lake Storage
 
 1. Acesse **Dados** > **Fontes de dados**.
 
 1. Selecione **Adicionar fonte de dados**.
 
-1. Selecione **Azure Data Lake Storage**, insira um **Nome** para a fonte de dados e selecione **Avançar**.
+1. Selecione **Azure Data Lake Storage**.
 
-   - Se solicitado, selecione um dos conjuntos de dados de exemplo que pertencem ao seu setor e, em seguida, selecione **Avançar**.
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Caixa de diálogo para inserir detalhes da conexão para o Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Você pode escolher entre usar uma opção baseada em recurso e uma opção baseada em assinatura para autenticação. Para obter mais informações, consulte [Conectar-se a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Insira o **Endereço do servidor**, selecione **Entrar** e, em seguida, selecione **Avançar**.
-   > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para inserir detalhes da nova conexão do Azure Data Lake.](media/enter-new-storage-details.png)
+1. Insira um **Nome** para a fonte de dados e uma **Descrição** opcional. O nome identifica exclusivamente a fonte de dados e é referenciado em processos downstream e não pode ser alterado.
+
+1. Escolha uma das opções a seguir para **Conectar seu armazenamento usando**. Para obter mais informações, consulte [Conectar o Customer Insights a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md).
+
+   - **Recurso do Azure**: insira a **ID do Recurso**. Opcionalmente, se você quiser ingerir dados de uma conta de armazenamento por meio de um Link Privado do Azure, selecione **Habilitar Link Privado**. Para obter mais informações, consulte [Links Privados](security-overview.md#private-links-tab).
+   - **Assinatura do Azure**: selecione **Subscrição** e, em seguida, **Grupo de recursos** e **Conta de armazenamento**. Opcionalmente, se você quiser ingerir dados de uma conta de armazenamento por meio de um Link Privado do Azure, selecione **Habilitar Link Privado**. Para obter mais informações, consulte [Links Privados](security-overview.md#private-links-tab).
+  
    > [!NOTE]
-   > Você precisa de uma das seguintes funções para o contêiner na conta de armazenamento e para criar a fonte de dados:
+   > Você precisa de uma das seguintes funções para o contêiner ou conta de armazenamento para criar a fonte de dados:
    >
    >  - O Leitor de Dados do Blob de Armazenamento é suficiente para ler de uma conta de armazenamento e ingerir os dados para o Customer Insights. 
-   >  - O Proprietário ou Colaborador de Dados do Blob de Armazenamento é necessário se você quiser editar os arquivos de manifesto diretamente no Customer Insights.
-
-1. Na caixa de diálogo **Selecionar uma pasta do Common Data Model**, selecione o arquivo manifest.json para importar os dados e selecione **Avançar**.
+   >  - O Proprietário ou Colaborador de Dados do Blob de Armazenamento é necessário se você quiser editar os arquivos de manifesto diretamente no Customer Insights.  
+  
+1. Escolha o nome do **Contêiner** que contém os dados e o esquema (arquivo model.json ou manifest.json) de onde importar dados e selecione **Avançar**.
    > [!NOTE]
-   > Qualquer arquivo model.json ou manifest.json associado a outra fonte de dados no ambiente não será mostrado na lista.
+   > Qualquer arquivo model.json ou manifest.json associado a outra fonte de dados no ambiente não será mostrado na lista. Contudo, o mesmo arquivo model.json file ou manifest.json pode ser usado para fontes de dados em vários ambientes.
 
-1. Você verá uma lista de entidades disponíveis no arquivo model.json ou manifest.json selecionado. Analise e selecione na lista de entidades disponíveis e, em seguida, selecione **Salvar**. Todas as entidades selecionadas serão ingeridas usando a nova fonte de dados.
-   > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo mostrando uma lista de entidades de um arquivo model.json.](media/review-entities.png)
+1. Para criar um novo esquema, vá para [Criar um novo arquivo de esquema](#create-a-new-schema-file).
 
-1. Indique em quais entidades de dados você quer habilitar a criação de perfis de dados e, em seguida, selecione **Salvar**. A criação de perfil de dados permite a análise e outros recursos. Você pode selecionar a entidade inteira, que seleciona todos os atributos da entidade, ou selecionar certos atributos de sua escolha. Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.
-   > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo mostrando uma criação de perfil de dados.](media/dataprofiling-entities.png)
+1. Para usar um esquema existente, navegue até a pasta que contém o arquivo model.json ou manifest.cdm.json. Você pode pesquisar em um diretório para localizar o arquivo.
 
-1. Após salvar suas seleções, a página **Fontes de dados** será aberta. Agora você verá a conexão da pasta Common Data Model como uma fonte de dados.
+1. Selecione o arquivo json e selecione **Avançar**. Uma lista de entidades disponíveis é exibida.
 
-> [!NOTE]
-> Um arquivo model.json file ou manifest.json só pode ser associado a uma fonte de dados no mesmo ambiente. Contudo, o mesmo arquivo model.json file ou manifest.json pode ser usado para fontes de dados em vários ambientes.
+   :::image type="content" source="media/review-entities.png" alt-text="Caixa de diálogo de uma lista de entidades a serem selecionadas":::
 
-## <a name="edit-a-common-data-model-folder-data-source"></a>Editar uma fonte de dados da pasta do Common Data Model
+1. Selecione as entidades que você deseja incluir.
 
-Você pode atualizar a chave de acesso para a conta de armazenamento que contém a pasta do Common Data Model. Você também pode alterar o arquivo model.json file ou manifest.json. Para conectar-se a um contêiner diferente na sua conta de armazenamento ou alterar o nome da conta, [crie uma nova conexão da fonte de dados](#connect-to-a-common-data-model-folder).
+   :::image type="content" source="media/ADLS_required.png" alt-text="Caixa de diálogo mostrando Obrigatório para Chave primária":::
+
+   > [!TIP]
+   > Para editar as entidades em uma interface de edição do JSON, selecione **Mostrar mais** > **Editar arquivo de esquema**. Faça as alterações e selecione **Salvar**.
+
+1. Para entidades selecionadas que exigem ingestão incremental, **Obrigatório** é exibido sob **Atualização incremental**. Para cada uma dessas entidades, consulte [Configurar uma atualização incremental para fontes de dados do Azure Data Lake](incremental-refresh-data-sources.md).
+
+1. Para entidades selecionadas onde uma chave primária não tiver sido definida, **Obrigatório** é exibido sob **Chave primária**. Para cada uma destas entidades:
+   1. Selecione **Obrigatória**. O painel **Editar entidade** é exibido.
+   1. Escolha a **Chave primária**. A chave primária é um atributo exclusivo da entidade. Para um atributo ser uma chave primária válida, ele não deve ter valores duplicados, valores ausentes ou valores nulos. Os atributos de tipo de dados de cadeia de caracteres, inteiro e GUID são compatíveis como chaves primárias.
+   1. Opcionalmente, altere o padrão de partição.
+   1. Selecione **Fechar** para salvar e fechar o painel.
+
+1. Selecione o número de **Atributos** para cada entidade incluída. A página **Gerenciar atributos** é exibida.
+
+   :::image type="content" source="media/dataprofiling-entities.png" alt-text="Caixa de diálogo para selecionar a criação de perfil de dados.":::
+
+   1. Crie atributos, edite ou exclua atributos existentes. Você pode alterar o nome, o formato de dados ou adicionar um tipo semântico.
+   1. Para habilitar análises e outros recursos, selecione **Criação de perfil de dados** para toda a entidade ou para atributos específicos. Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.
+   1. Selecione **Concluído**.
+
+1. Selecione **Salvar**. A página **Fontes de dados** abre mostrando a nova fonte de dados no status **Atualizando**.
+
+### <a name="create-a-new-schema-file"></a>Criar um arquivo de esquema
+
+1. Selecione **Novo arquivo de esquema**.
+
+1. Insira um nome para o arquivo e selecione **Salvar**.
+
+1. Selecione **Nova entidade**. O painel **Nova Entidade** é exibido.
+
+1. Insira o nome da entidade e escolha o **Localização de arquivos de dados**.
+   - **Vários arquivos .csv ou .parquet**: navegue até a pasta raiz, selecione o tipo de padrão e insira a expressão.
+   - **Arquivos .csv ou .parquet únicos**: navegue até o arquivo .csv ou .parquet e selecione-o.
+
+   :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Caixa de diálogo para criar uma entidade com Localização de arquivos de dados realçada.":::
+
+1. Selecione **Salvar**.
+
+   :::image type="content" source="media/ADLS_new_entity_define_attributes.png" alt-text="Caixa de diálogo para definir ou gerar atributos automaticamente.":::
+
+1. Selecione **definir os atributos** para adicionar manualmente os atributos ou selecione **gerá-los automaticamente**. Para definir os atributos, insira um nome, selecione o formato de dados e o tipo semântico opcional. Para atributos gerados automaticamente:
+
+   1. Depois que os atributos forem gerados automaticamente, selecione **Revisar atributos**. A página **Gerenciar atributos** é exibida.
+
+   1. Garanta que o formato de dados esteja correto para cada atributo.
+
+   1. Para habilitar análises e outros recursos, selecione **Criação de perfil de dados** para toda a entidade ou para atributos específicos. Por padrão, nenhuma entidade está habilitada para criação de perfil de dados.
+
+      :::image type="content" source="media/dataprofiling-entities.png" alt-text="Caixa de diálogo para selecionar a criação de perfil de dados.":::
+
+   1. Selecione **Concluído**. A página **Selecionar entidades** é exibido.
+
+1. Continue a adicionar entidades e atributos, se aplicável.
+
+1. Depois que todas as entidades tiverem sido adicionadas, selecione **Incluir** para incluir as entidades na ingestão de fonte de dados.
+
+   :::image type="content" source="media/ADLS_required.png" alt-text="Caixa de diálogo mostrando Obrigatório para Chave primária":::
+
+1. Para entidades selecionadas que exigem ingestão incremental, **Obrigatório** é exibido sob **Atualização incremental**. Para cada uma dessas entidades, consulte [Configurar uma atualização incremental para fontes de dados do Azure Data Lake](incremental-refresh-data-sources.md).
+
+1. Para entidades selecionadas onde uma chave primária não tiver sido definida, **Obrigatório** é exibido sob **Chave primária**. Para cada uma destas entidades:
+   1. Selecione **Obrigatória**. O painel **Editar entidade** é exibido.
+   1. Escolha a **Chave primária**. A chave primária é um atributo exclusivo da entidade. Para um atributo ser uma chave primária válida, ele não deve ter valores duplicados, valores ausentes ou valores nulos. Os atributos de tipo de dados de cadeia de caracteres, inteiro e GUID são compatíveis como chaves primárias.
+   1. Opcionalmente, altere o padrão de partição.
+   1. Selecione **Fechar** para salvar e fechar o painel.
+
+1. Selecione **Salvar**. A página **Fontes de dados** abre mostrando a nova fonte de dados no status **Atualizando**.
+
+
+## <a name="edit-an-azure-data-lake-storage-data-source"></a>Editar uma fonte de dados do Azure Data Lake Storage
+
+Você pode atualizar a opção *Conecte-se à conta de armazenamento usando*. Para obter mais informações, consulte [Conectar o Customer Insights a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Para conectar-se a um contêiner diferente na sua conta de armazenamento ou alterar o nome da conta, [crie uma nova conexão da fonte de dados](#connect-to-azure-data-lake-storage).
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-2. Ao lado da fonte de dados que você deseja atualizar, selecione as reticências verticais (&vellip;).
+1. Ao lado da fonte de dados que você deseja atualizar, selecione **Editar**.
 
-3. Selecione uma opção **Editar** na lista.
+   :::image type="content" source="media/data_sources_edit_ADLS.png" alt-text="Caixa de diálogo para editar a fonte de dados do Azure Data Lake.":::
 
-4. Opcionalmente, atualize a **Chave de acesso** e selecione **Avançar**.
+1. Altere qualquer uma das seguintes informações:
 
-   ![Caixa de diálogo para editar e atualizar uma chave de acesso para uma fonte de dados existente.](media/edit-access-key.png)
+   - **Descrição**
+   - **Conecte seu armazenamento usando** e informações de conexão. Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
+      > [!NOTE]
+      > Uma das funções a seguir deve ser atribuída à conta de armazenamento ou contêiner:
+        > - Leitor de Dados do Storage Blob
+        > - Proprietário de Dados do Storage Blob
+        > - Colaborador de Dados do Storage Blob
 
-5. Ou você pode atualizar de uma conexão de chave de conta para uma conexão baseada em recursos ou baseada em assinatura. Para obter mais informações, consulte [Conectar-se a uma conta do Azure Data Lake Storage Gen2 com uma entidade de serviço do Azure](connect-service-principal.md). Você não pode alterar informações de **Contêiner** ao atualizar a conexão.
-   > [!div class="mx-imgBorder"]
+   - **Habilite o Link Privado** se quiser ingerir dados de uma conta de armazenamento por meio de um Link Privado do Azure. Para obter mais informações, consulte [Links Privados](security-overview.md#private-links-tab).
 
-   > ![Caixa de diálogo para inserir detalhes de conexão do Azure Data Lake a uma conta de armazenamento existente.](media/enter-existing-storage-details.png)
+1. Selecione **Avançar**
+1. Altere um dos seguintes:
+   - Navegue até um arquivo model.json ou manifest.json diferente com um conjunto diferente de entidades do contêiner.
+   - Para adicionar outras entidades para ingestão, selecione **Nova entidade**.
+   - Para remover quaisquer entidades já selecionadas se não houver dependências, selecione a entidade e escolha **Excluir**.
+      > [!IMPORTANT]
+      > Se houver dependências no arquivo model.json ou manifest.json existente e no conjunto de entidades, você verá uma mensagem de erro e não será possível selecionar outro arquivo model.json ou manifest.json. Remova essas dependências antes de alterar o arquivo model.json ou manifest.json ou criar uma fonte de dados com o arquivo model.json ou manifest.json que deseja usar para evitar a remoção das dependências.
+   - Para alterar a localização do arquivo de dados ou a chave primária, selecione **Editar**.
+   - Para alterar os dados de ingestão incremental, consulte [Configurar uma atualização incremental para fontes de dados do Azure Data Lake](incremental-refresh-data-sources.md)
 
-6. Opcionalmente, escolha outro arquivo model.json ou manifest.json com um conjunto diferente de entidades no contêiner.
+1. Selecione **Atributos** para adicionar ou alterar atributos ou para habilitar a criação de perfil de dados. Em seguida, selecione **Concluído**.
 
-7. Ou você pode selecionar entidades adicionais para ingestão. Você também pode remover quaisquer entidades já selecionadas, se não houver dependências.
-
-   > [!IMPORTANT]
-   > Se houver dependências no arquivo model.json ou manifest.json existente e no conjunto de entidades, você verá uma mensagem de erro e não será possível selecionar outro arquivo model.json ou manifest.json. Remova essas dependências antes de alterar o arquivo model.json ou manifest.json ou criar uma fonte de dados com o arquivo model.json ou manifest.json que deseja usar para evitar a remoção das dependências.
-
-8. Ou você pode selecionar atributos ou entidades adicionais para habilitar a criação de perfil de dados ou desabilitar os já selecionados.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Clique em **Salvar** para aplicar suas alterações e voltar para a página **Fontes de dados**.

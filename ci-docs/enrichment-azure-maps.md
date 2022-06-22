@@ -1,95 +1,95 @@
 ---
 title: Enriqueça perfis de clientes com dados de localização do Azure Mapas
 description: Informações gerais sobre o enriquecimento próprio do Azure Mapas.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755340"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953614"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Enriquecimento de perfis de clientes com o Azure Mapas (versão preliminar)
 
-O Azure Mapas fornece dados e serviços centrados na localização para fornecer experiências baseadas em dados geoespaciais com inteligência de localização interna. Os serviços de enriquecimento de dados do Azure Mapas melhoram a precisão de informações de localização sobre os clientes. Ele traz recursos como normalização de endereço e extração de latitude e longitude para o Dynamics 365 Customer Insights.
+O Azure Mapas fornece dados e serviços centrados no local para oferecer experiências com base em dados geoespaciais com inteligência de local interna. Os serviços de enriquecimento de dados do Azure Mapas melhoram a precisão de informações de localização sobre os clientes. Ele traz recursos como normalização de endereço e extração de latitude e longitude para o Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para configurar o enriquecimento de dados do Azure Mapas, é necessário atender aos seguintes pré-requisitos:
+- Uma assinatura ativa do Azure Mapas. Para obter uma assinatura, [inscreva-se ou obtenha uma avaliação gratuita](https://azure.microsoft.com/services/azure-maps/).
 
-- Você tem uma assinatura ativa do Azure Mapas. Para obter uma assinatura, você pode [inscrever-se ou obter uma avaliação gratuita](https://azure.microsoft.com/services/azure-maps/).
-
-- Uma [conexão](connections.md) do Azure Mapas está disponível, *ou* você tem permissões de [administrador](permissions.md#admin) e uma chave de API ativa do Azure Mapas.
-
-## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
-
-1. Vá para **Dados** > **Enriquecimento**. 
-
-1. No bloco **Localização**, selecione **Enriquecer meus dados**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Bloco do Azure Mapas.":::
-
-1. Selecione uma [conexão](connections.md) na lista suspensa. Entre em contato com um administrador se nenhuma conexão do Azure Mapas estiver disponível. Se você for um administrador, poderá [configurar a conexão para o Azure Mapas](#configure-the-connection-for-azure-maps). 
-
-1. Selecione **Avançar** para confirmar a seleção.
-
-1. Escolha o **Conjunto de dados do cliente** a ser enriquecido com dados de localização do Azure Mapas. Você pode selecionar a entidade **Cliente** para enriquecer todos os perfis de clientes unificados, ou selecionar uma entidade de segmento para enriquecer somente perfis de clientes contidos nesse segmento.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Captura de tela ao escolher o conjunto de dados do cliente.":::
-
-1. Escolha se deseja mapear campos para o endereço principal e/ou secundário. Você pode especificar um mapeamento de campo para ambos os endereços e enriquecer os perfis para ambos os endereços separadamente (por exemplo, um endereço residencial e um comercial). Selecione **Avançar**
-
-1. Defina que campos de perfis unificados devem ser usados para procurar dados de localização correspondentes no Azure Mapas. Os campos **Rua 1** e **CEP** são obrigatórios para o endereço principal ou secundário selecionado. Para maior precisão de correspondência, você pode adicionar mais campos.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Página de configuração de enriquecimento do Azure Mapas.":::
-
-1. Selecione **Avançar** para concluir o mapeamento de campos.
-
-1. Avalie se você deseja modificar **Configurações Avançadas**. Essas configurações são fornecidas para fornecer flexibilidade máxima para lidar com casos de uso avançados, mas os valores padrão serão adequados na maioria dos casos:
-   - **Tipo de endereços**: o comportamento padrão é que o enriquecimento retornará a melhor correspondência de endereço, mesmo se estiver incompleto. Para obter apenas endereços completos (por exemplo, endereços que incluem o número da casa), desmarque todas as caixas de seleção, exceto **Endereços de Ponto**. 
-   - **Idioma**: por padrão, os endereços são retornados no idioma da região à qual o endereço foi determinado como pertencente. Para aplicar um idioma de endereço padronizado, selecione o idioma no menu suspenso. Por exemplo, selecionar **inglês** retornará **Copenhague, Dinamarca** em vez de **København, Danmark**.
-
-1. Forneça um nome para o enriquecimento.
-
-1. Revise suas opções e selecione **Salvar enriquecimento**.
+- Uma [conexão](connections.md) do Azure Mapas é [configurada](#configure-the-connection-for-azure-maps) por um administrador.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Configure a conexão para o Azure Mapas
 
-Você precisa ser um administrador no Customer Insights para configurar conexões. Selecione **Adicionar conexão** ao configurar um enriquecimento ou acesse **Administração** > **Conexões** e selecione **Configurar** no bloco do Azure Mapas.
+Você deve ser [administrador](permissions.md#admin) no Customer Insights e ter uma chave de API ativa do Azure Mapas.
 
-1. Na caixa **Nome de exibição**, insira um nome para a conexão.
+1. Selecione **Adicionar conexão** ao configurar um enriquecimento ou acesse **Administração** > **Conexões** e selecione **Configurar** no bloco do Azure Mapas.
 
-1. Forneça uma chave válida de API do Azure Mapas.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Página de configuração de conexão do Azure Mapas.":::
 
-1. Revise e forneça seu consentimento para a **Conformidade e privacidade dos dados** marcando a caixa de seleção **Concordo**
+1. Insira um nome para a conexão e uma chave de API válida do Azure Mapas.
 
-1. Selecione **Verificar** para validar a configuração.
+1. Revise e forneça seu consentimento para a [Conformidade e privacidade dos dados](#data-privacy-and-compliance) selecionando **Eu concordo**.
 
-1. Depois de concluir a verificação, selecione **Salvar**.
+1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Salvar**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Página de configuração de conexão do Azure Mapas.":::
+### <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
+
+Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para o Azure Mapas, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o Azure Mapas atenda às obrigações de privacidade ou de segurança que você possa ter. Para obter mais informações, acesse [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
+
+## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
+
+1. Vá para **Dados** > **Enriquecimento** e selecione a guia **Descobrir**.
+
+1. Selecione **Enriquecer meus dados** em **Localização** do bloco do Microsoft Azure Mapas.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Bloco do Azure Mapas.":::
+
+1. Revise a visão geral e selecione **Avançar**.
+
+1. Selecionar a conexão. Contate um administrador se nenhuma conexão estiver disponível.
+
+1. Selecione **Avançar**
+
+1. Selecione **Conjunto de dados do cliente** e escolha o perfil ou segmento que deseja enriquecer com dados da Microsoft. A entidade *Cliente* enriquece todos os perfis de cliente enquanto um segmento enriquecer apenas perfis de clientes contidos nesse segmento.
+
+1. Defina que tipo de campos de seus perfis unificados usar para correspondência: o endereço principal e/ou secundário. Você pode especificar um mapeamento de campos para ambos os endereços e enriquecer os perfis para ambos os endereços separadamente. Por exemplo, para um endereço residencial e um endereço comercial. Selecione **Avançar**
+
+1. Mapeie os campos para os dados de localização do Azure Mapas. Os campos **Rua 1** e **CEP** são obrigatórios para o endereço principal e/ou secundário selecionado. Para maior precisão de correspondência, adicione mais campos.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Mapeamento de atributos do Azure Mapas.":::
+
+1. Selecione **Avançar** para concluir o mapeamento de campos.
+
+1. Revise as **Configurações Avançadas**, que oferecem flexibilidade máxima para lidar com casos de uso avançados. No entanto, os seguintes valores padrão normalmente não precisam ser alterados.
+
+   - **Tipo de endereços**: a melhor correspondência de endereço será retornada, mesmo se estiver incompleta. Para obter apenas endereços completos (por exemplo, endereços que incluem o número da casa), desmarque todas as caixas de seleção, exceto **Endereços de Ponto**.
+   - **Idioma**: os endereços retornam no idioma baseado na região do endereço. Para aplicar um idioma de endereço padronizado, selecione o idioma no menu suspenso. Por exemplo, a seleção de **Inglês** retorna **Copenhagen, Denmark** em vez de **København, Danmark**.
+   - **Número máximo de resultados**: número de resultados por endereço.
+
+1. Selecione **Avançar**
+
+1. Forneça um **Nome** para o enriquecimento e o **Nome da entidade de saída**.
+
+1. Selecione **Salvar enriquecimento** depois de revisar suas escolhas.
+
+1. Selecione **Executar** para iniciar o processo de enriquecimento ou feche para voltar para a página **Enriquecimentos**.
 
 ## <a name="enrichment-results"></a>Resultados de enriquecimento
 
-Para iniciar o processo de enriquecimento, selecione **Executar** na barra de comandos. Você também pode permitir que o sistema execute o enriquecimento automaticamente como parte de uma [atualização agendada](system.md#schedule-tab). O tempo de processamento dependerá do tamanho dos dados do cliente e dos tempos de resposta da API.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Após a conclusão do processo de enriquecimento, você poderá revisar os dados de perfis de clientes recém-enriquecidos em **Meus enriquecimentos**. Além disso, você encontrará a hora da última atualização e o número de perfis enriquecidos.
-
-Você pode acessar uma visão detalhada de cada perfil aprimorado selecionando **Exibir dados enriquecidos**.
+O **Número de clientes enriquecidos por campo** apresenta um detalhamento da cobertura de cada campo enriquecido.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para o Azure Mapas, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o Azure Mapas atenda às obrigações de privacidade ou de segurança que você possa ter. Para obter mais informações, acesse [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Exportar dados do Customer Insights para hosts SFTP (contém vídeo)
 description: Saiba como configurar a conexão e exportar para um local do SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645622"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947170"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos e outros dados para o SFTP (versão preliminar)
 
@@ -28,8 +28,8 @@ Use dados de clientes em aplicativos de terceiros, exportando-os para um local d
 ## <a name="known-limitations"></a>Limitações conhecidas
 
 - Destinos SFTP por trás de firewalls não têm suporte no momento. 
-- O tempo de execução de uma exportação depende do desempenho do sistema. Recomendamos dois núcleos de CPU e 1Gb de memória como configuração mínima do servidor. 
-- Exportar entidades de até 100 milhões de perfis de cliente pode levar 90 minutos ao usar a configuração mínima recomendada de dois núcleos de CPU e 1 Gb de memória. 
+- O tempo de execução de uma exportação depende do desempenho do sistema. Recomendamos dois núcleos de CPU e 1Gb de memória como configuração mínima do servidor.
+- Exportar entidades de até 100 milhões de perfis de cliente pode levar 90 minutos ao usar a configuração mínima recomendada de dois núcleos de CPU e 1 Gb de memória.
 
 ## <a name="set-up-connection-to-sftp"></a>Configurar conexão com o SFTP
 
@@ -64,13 +64,17 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 1. Selecione as entidades, por exemplo, segmentos que deseja exportar.
 
    > [!NOTE]
-   > Cada entidade selecionada será dividida em até cinco arquivos de saída quando exportada. 
+   > Cada entidade selecionada será dividida em até cinco arquivos de saída quando exportada.
 
 1. Selecione **Salvar**.
 
 Salvar uma exportação não a executa imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab).
+Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> A exportação de entidades que contêm uma grande quantidade de dados pode levar a vários arquivos CSV na mesma pasta para cada exportação. A divisão de exportações ocorre por motivos de desempenho para minimizar o tempo necessário para a conclusão de uma exportação.
 
 ## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
 

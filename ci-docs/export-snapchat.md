@@ -1,19 +1,19 @@
 ---
 title: Exportar dados do Customer Insights para o Snapchat
 description: Saiba como configurar a conexão e exportar para o Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645674"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947262"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportar segmentos para o Snapchat (versão preliminar)
 
@@ -21,7 +21,8 @@ Exporte segmentos de perfis de clientes unificados para o Snapchat e use-os para
 
 ## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma conexão
 
--   Você deve ter uma [Conta de Negócios do Snapchat](https://business.snapchat.com/), uma [Conta de Anúncios do Snapchat](https://ads.snapchat.com/) e as credenciais de administrador correspondentes.
+-   Você deve ter uma [Conta de Negócios do Snapchat](https://business.snapchat.com/), uma [Conta de Anúncios do Snapchat](https://ads.snapchat.com/) e as credenciais de administrador correspondentes. Você deve ser pelo menos membro de uma Conta da Organização e ser Gerente de Dados de uma Conta de Anúncios específica. 
+-   Você tem pelo menos um público-alvo no Snapchat Audience Manager do tipo SAM (Snap Audience Match). 
 -   Você tem [segmentos configurados](segments.md) no Customer Insights.
 -   Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
 
@@ -60,7 +61,7 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. No campo **Conexão para exportação**, escolha uma conexão da seção do Snapchat. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
 
-1. Insira a [**ID do Público-Alvo do Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Insira o [**Segmento do Snapchat/ID do Público-alvo**](https://businesshelp.snapchat.com/s/article/custom-audiences). A ID do público-alvo pode ser encontrada na URL depois de selecionar o público no Snapchat Audience Manager. 
 
 1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. A exportação de segmentos para o Snapchat é necessária.
 

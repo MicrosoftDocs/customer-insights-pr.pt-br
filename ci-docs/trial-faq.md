@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833754"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011873"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Perguntas frequentes sobre a avaliação do Dynamics 365 Customer Insights
 
@@ -66,9 +66,9 @@ Opcionalmente, se você só usar o Customer Insights, poderá copiar dados de um
 
 Depois que entrar em sua instância paga do Customer Insights pela primeira vez, você será solicitado a criar um ambiente. Nesse processo, você poderá optar por copiar a configuração de um ambiente existente e migrar a maioria das configurações. Se você tiver as permissões mencionadas acima, o ambiente de avaliação aparecerá nesta lista. Para obter mais informações, consulte [Copiar a configuração do ambiente](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>Quais são os limites e cotas de avaliação?
+### <a name="what-are-the-trial-limits-and-quotas"></a>Quais são os limites e as cotas da avaliação?
 
-- Você não pode usar sua própria conta do Azure Data Lake storage para armazenar dados de saída durante uma avaliação do Customer Insights. No entanto, você pode ingerir dados de uma conta de armazenamento do Data Lake.
+- Você não pode usar sua própria conta do Azure Data Lake Storage para armazenar dados de saída durante uma avaliação do Customer Insights. No entanto, você pode ingerir dados de uma conta do Data Lake Storage.
 - Você pode armazenar um máximo de 3 GB de dados no Dataverse ambiente que é provisionado automaticamente quando você inicia uma avaliação do Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Perguntas específicas sobre o Customer Insights
@@ -83,7 +83,7 @@ A maioria dos recursos do Customer Insights estão disponíveis na avaliação.
 
 Os seguintes recursos **não estão disponíveis**:
 
-- Você não pode criar novos ambientes que usem sua própria conta de armazenamento do Azure Data Lake.
+- Você não pode criar novos ambientes que usem sua própria conta de armazenamento do Azure Data Lake Storage.
 - Não é possível excluir o ambiente de avaliação.
 
 ### <a name="how-long-does-the-trial-last"></a>Quanto tempo leva a avaliação?

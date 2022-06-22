@@ -48,14 +48,14 @@
   items:
     - name: Visão geral de fontes de dados
       href: data-sources.md
+    - name: Conectar-se a dados no Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Conectar-se ao Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Conecte-se aos dados em um data lake gerenciado do Microsoft Dataverse
+      href: connect-dataverse-managed-lake.md
     - name: Adicionar fontes de dados por meio de conectores do Power Query
       href: connect-power-query.md
-    - name: Adicionar uma pasta do Common Data Model como uma fonte de dados
-      href: connect-common-data-model.md
-    - name: Adicionar data lake do Dataverse gerenciado
-      href: connect-dataverse-managed-lake.md
-    - name: Adicionar o Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Enriquecimento de fontes de dados
       href: data-sources-enrichment.md
     - name: Atualização incremental para fontes de dados
@@ -82,27 +82,27 @@
   items:
     - name: Enriquecer perfis de cliente
       href: enrichment-hub.md
+    - name: Contas de dados do Office 365
+      href: enrichment-office.md
     - name: Marcas e interesses
       href: enrichment-microsoft.md
+    - name: Dados empresariais da Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Dados da empresa da Leadspace
+      href: enrichment-leadspace.md
+    - name: Dados demográficos com Experian
+      href: enrichment-experian.md
     - name: Endereços aprimorados
       href: enrichment-enhanced-addresses.md
     - name: Dados da empresa aprimorados
       href: enrichment-enhanced-company-data.md
-    - name: Enriqueça com o Azure Mapas
-      href: enrichment-azure-maps.md
-    - name: Enriqueça com a Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Enriqueça com a HERE Technologies
-      href: enrichment-here.md
-    - name: Enriqueça com Leadspace
-      href: enrichment-leadspace.md
-    - name: Enriqueça com LiveRamp
+    - name: Identidade com LiveRamp
       href: enrichment-liveramp.md
-    - name: Enriqueça com o Experian
-      href: enrichment-experian.md
-    - name: Enriquecer com dados do Office 365
-      href: enrichment-office.md
-    - name: Enriquecer com importação personalizada do SFTP
+    - name: Localização do Azure Mapas
+      href: enrichment-azure-maps.md
+    - name: Localização da HERE Technologies
+      href: enrichment-here.md
+    - name: Importação personalizada do SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Perfis unificados
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Definir atividades do cliente
       href: activities.md
+    - name: Gerenciamento de consentimento para Customer Insights
+      href: consent-management.md
 - name: Segmentos
   items:
     - name: Visão geral dos segmentos
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Consultas de exemplo OData
       href: odata-examples.md
-- name: Gerenciamento de consentimento (Versão preliminar)
-  items:
-    - name: Hub de Ajuda
-      href: consent-management/index.yml
-    - name: Visão geral da funcionalidade
-      href: consent-management/overview.md
-    - name: Começar agora
-      items:
-        - name: Começar agora
-          href: consent-management/get-started.md
-        - name: Conceitos e terminologia
-          href: consent-management/glossary.md
-    - name: Importar dados de consentimento
-      items:
-        - name: Importar dados de consentimento
-          href: consent-management/import-consent-data.md
-        - name: Definir dados de consentimento e aplicar preferências de consentimento
-          href: consent-management/set-consent-rules.md
-    - name: Gerenciar dados de consentimento
-      items:
-        - name: Habilitar regras de consentimento no Customer Insights
-          href: activate-consent.md
-        - name: Gerenciar regras de consentimento padrão em segmentos do Customer Insights
-          href: change-default-consent-rules.md
-    - name: Gerenciar configurações e usuários
-      items:
-        - name: Definir configurações do sistema
-          href: consent-management/system-settings.md
-        - name: Gerenciar usuários e permissões
-          href: consent-management/manage-users.md
-    - name: Usar dados de consentimento
-      items:
-        - name: Criar previsões com dados de consentimento
-          href: consent-management/predictions-consent-data.md
 - name: Limites de serviço
   href: service-limits.md
 - name: Direitos e solicitações de DSR
