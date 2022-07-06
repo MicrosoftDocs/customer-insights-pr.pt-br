@@ -1,5 +1,5 @@
 ---
-title: Exportar dados do Customer Insights para um Armazenamento de Blobs do Azure
+title: Exportar dados para um Armazenamento de Blobs do Azure (versão preliminar)
 description: Aprenda a configurar a conexão e exportar para o Armazenamento de blobs.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947124"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055476"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar a lista de segmentos e outros dados para o Armazenamento de Blobs do Azure (versão preliminar)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Exportar dados para um Armazenamento de Blobs do Azure (versão preliminar)
 
 Armazene seus dados do Customer Insights em um Armazenamento de blobs ou use-o para transferir seus dados para outros aplicativos.
 

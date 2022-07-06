@@ -1,5 +1,5 @@
 ---
-title: Análise de sentimento de comentários do cliente
+title: Analisar o sentimento de comentários do cliente (versão preliminar)
 description: Saiba como a usar um modelo de análise de sentimento em comentários do cliente no Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645664"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055522"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analisar o sentimento nos comentários do cliente (versão preliminar)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analisar o sentimento de comentários do cliente (versão preliminar)
 
 Os clientes esperam produtos, serviços e experiências de alta qualidade nos dias de hoje. Especialmente os clientes que compartilham seus comentários. É muito desafiador para as organizações analisar um volume crescente de dados sem diminuir a precisão e aumentar o custo de mão de obra. O Dynamics 365 Customer Insights oferece um modelo de análise de sentimento para comentários do cliente que permite que as organizações analisem seus dados com mais precisão e a um custo menor.
 

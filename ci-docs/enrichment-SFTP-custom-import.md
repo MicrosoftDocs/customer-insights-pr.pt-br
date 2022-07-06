@@ -1,5 +1,5 @@
 ---
-title: Enriquecimento com importação personalizada do SFTP
+title: Enriquecer perfis de clientes com a importação personalizada do SFTP (versão preliminar)
 description: Informações gerais sobre o enriquecimento de importação personalizada do SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953705"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080792"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer os perfis dos clientes com dados personalizados (versão preliminar)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Enriquecer perfis de clientes com a importação personalizada do SFTP (versão preliminar)
 
 A importação personalizada via SFTP permite que você importe dados que não precisam passar pelo processo de unificação de dados. É uma maneira flexível, segura e fácil de reunir seus dados. A importação personalizada via SFTP pode ser usada em combinação com a [exportação via SFTP](export-sftp.md), que permite exportar os dados de perfil do cliente necessários para aprimoramento. Os dados podem ser processados e enriquecidos, e a importação personalizada de SFTP pode ser usada para retornar os dados enriquecidos ao Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Seu administrador do Dynamics 365 Customer Insights poderá remover esse enrique
 
 1. Selecione **Executar** para iniciar o processo de enriquecimento ou feche para voltar para a página **Enriquecimentos**.
 
-## <a name="enrichment-results"></a>Resultados de enriquecimento
+## <a name="view-enrichment-results"></a>Exibir resultados de enriquecimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

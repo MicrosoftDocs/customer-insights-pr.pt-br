@@ -1,5 +1,5 @@
 ---
-title: Corresponder entidades para unificação de dados
+title: Condições de correspondência para a unificação de dados
 description: Corresponda entidades para criar perfis de clientes unificados.
 recommendations: false
 ms.date: 05/05/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740935"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080800"
 ---
-# <a name="match-conditions"></a>Condições de correspondência
+# <a name="match-conditions-for-data-unification"></a>Condições de correspondência para a unificação de dados
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Inscreva-se em uma avaliação gratuita - Dynamics 365 Customer Insights
+title: Inscreva-se em uma avaliação gratuita do Dynamics 365 Customer Insights
 description: Saiba como inscrever-se rapidamente e iniciar uma avaliação gratuita do Customer Insights. Explore o aplicativo e encontre recursos de aprendizagem adicionais.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641702"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080805"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Inscreva-se em uma avaliação gratuita do Dynamics 365 Customer Insights
 
@@ -34,7 +34,7 @@ Seu ambiente de avaliação inclui muitos dos mesmos recursos da versão paga. O
 - [Introdução ao Customer Insights.](get-started.md)
 - [Adicione mais usuários e atribuir permissões.](permissions.md)
 - [Ingerir suas fontes de dados](data-sources.md) e executá-las por meio do [processo de unificação de dados](data-unification.md) para obter [perfis de clientes unificados](customer-profiles.md).
-- [Enriquecer os perfis de clientes unificados](enrichment-hub.md) ou [executar modelos preditivos](predictions-overview.md).
+- [Enriquecer os perfis de cliente unificados](enrichment-hub.md) ou [executar modelos preditivos](predictions-overview.md).
 - Crie [segmentos](segments.md) para agrupar clientes e [métricas](measures.md) para revisar os KPIs.
 - Configurar [conexões](connections.md) e [exportações](export-destinations.md) para processar subconjuntos de seus dados em outros aplicativos.
 

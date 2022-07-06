@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645536"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051669"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Usar um modelo para criar uma medida
+# <a name="create-measures-from-templates"></a>Criar medidas usando modelos
 
 Você pode usar modelos predefinidos de [medidas](measures.md) comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
 

@@ -1,6 +1,6 @@
 ---
-title: Enriquecer perfis de clientes unificados
-description: Use recursos para enriquecer os dados do cliente.
+title: Visão geral de enriquecimento de dados (versão preliminar)
+description: Use os recursos da Microsoft e de outros serviços de terceiros para enriquecer os dados de seus clientes.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954027"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053847"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (visualização)
+# <a name="data-enrichment-preview-overview"></a>Visão geral de enriquecimento de dados (versão preliminar)
 
-Use dados de fontes como a Microsoft e outros parceiros para enriquecer os dados de seus clientes.
+Use dados de fontes como a Microsoft e outros parceiros para enriquecer os dados de seus clientes. Os enriquecimentos de terceiros são configurados usando [conexões](connections.md), as quais um administrador configura com credenciais e fornece consentimento para a transferências de dados. As conexões podem ser usadas por administradores e colaboradores para configurar enriquecimentos.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Vários enriquecimentos do mesmo tipo
+
+A entidade a ser enriquecida é especificada durante a configuração de enriquecimento, o que permite que você enriqueça somente um subconjunto de seus perfis. Por exemplo, enriqueça dados somente para um segmento específico. Você pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma conexão. Alguns enriquecimentos terão limites para o número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e uso atual podem ser vistos em cada bloco na guia **Descobrir** da página **Enriquecimento**.
+
+## <a name="enrich-data-sources-before-unification"></a>Enriquecer as fontes de dados antes da unificação
+
+Você pode enriquecer os dados do cliente antes da unificação de dados para ajudar a aumentar a qualidade de uma correspondência de dados. Para obter mais informações, consulte [enriquecimento de fonte de dados](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Criar um enriquecimento
+
+Você precisa ter [permissões](permissions.md) de Colaborador ou Administrador para criar ou editar enriquecimentos.
+
+Vá para **Dados** > **Enriquecimento**. A guia **Descobrir** mostra todas as opções de enriquecimento com suporte.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Página do hub de enriquecimento.":::
-
-Vá para **Dados** > **Enriquecimento** para trabalhar com opções de enriquecimento.  
-
-Você precisa ter permissões de Colaborador ou Administrador para criar ou editar enriquecimentos. Para obter mais informações, consulte [Permissões](permissions.md).
-
-Na guia **Descobrir**, você encontrará todas as opções de enriquecimento suportadas.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Na guia **Descobrir**, você encontrará todas as opções de enriquecimento sup
 
 ---
 
-Na guia **Meus enriquecimentos**, você pode ver os enriquecimentos configurados e editar suas propriedades. Você também pode criar [segmentos](segments.md) ou [medidas](measures.md) de enriquecimentos.
-
 ## <a name="manage-existing-enrichments"></a>Gerenciar enriquecimentos existentes
 
-Acesse a guia **Meus enriquecimentos** para ver todos os enriquecimentos configurados. Cada enriquecimento é representado como uma linha que inclui informações adicionais sobre o enriquecimento.
+Vá para **Dados** > **Enriquecimento**. Na guia **Meus enriquecimentos**, exiba os enriquecimentos configurados, seus status, o número de clientes enriquecidos e a última vez que os dados foram atualizados. Você pode classificar a lista de enriquecimentos por qualquer coluna ou usar a caixa de pesquisa para encontrar o enriquecimento que deseja gerenciar.
 
-Selecione o enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências verticais (&vellip;) em um item de lista para ver as opções. Se configurou vários enriquecimentos, você poderá usar a caixa de pesquisa para encontrá-los rapidamente.
+Selecione o enriquecimento para exibir as ações disponíveis.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opções para gerenciar enriquecimentos na lista de enriquecimentos.":::
 
 - **Exibir** detalhes de enriquecimento com o número de perfis de clientes enriquecidos.
 - **Editar** a configuração de enriquecimento.
-- **Executar** o enriquecimento para atualizar os perfis dos clientes com os dados mais recentes.
-- **Desativar** um enriquecimento existente para impedi-lo de atualizar automaticamente a cada atualização agendada. Os dados da última atualização bem-sucedida continuarão disponíveis. **Ativar** um enriquecimento inativo para reiniciar a atualização automática a cada atualização agendada.
+- [**Executar**](#run-or-refresh-enrichments) o enriquecimento para atualizar os perfis dos clientes com os dados mais recentes. Executar vários enriquecimentos de uma só vez selecionando-os na lista.
+- **Ativar** ou **Desativar** um enriquecimento. Os enriquecimentos inativos não serão atualizados durante uma [atualização agendada](system.md#schedule-tab).
 - **Exclua** o enriquecimento.
 
-Execute ou desative vários enriquecimentos de uma vez, selecionando-os na lista. As opções de exibição e edição não estão disponíveis como ação em massa. Elas só funcionam para um enriquecimento de cada vez.
-
-## <a name="enrichments-and-connections"></a>Enriquecimentos e conexões
-
-Os enriquecimentos de terceiros são configurados usando [conexões](connections.md), as quais um administrador configura com credenciais e fornece consentimento para a transferências de dados. As conexões podem ser usadas por administradores e colaboradores para configurar enriquecimentos.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Vários enriquecimentos do mesmo tipo
-
-A entidade a ser enriquecida é especificada durante a configuração de enriquecimento, o que permite que você enriqueça somente um subconjunto de seus perfis. Por exemplo, enriqueça dados somente para um segmento específico. Você pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma conexão. Alguns enriquecimentos terão limites para o número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e uso atual podem ser vistos em cada bloco na guia **Descobrir** da página **Enriquecimento**.
-
-## <a name="enrich-data-sources-before-unification"></a>Enriquecer as fontes de dados antes da unificação
-
-Você pode enriquecer os dados do cliente antes da unificação de dados para ajudar a aumentar a qualidade de uma correspondência de dados. Para obter mais informações, consulte [enriquecimento de fonte de dados](data-sources-enrichment.md).
+Você também pode criar [segmentos](segments.md) ou [medidas](measures.md) de enriquecimentos.
 
 ## <a name="run-or-refresh-enrichments"></a>Executar ou atualizar enriquecimentos
 
-1. Para iniciar o processo de enriquecimento, selecione **Executar**. Ou permita que o sistema execute o enriquecimento automaticamente como parte de uma [atualização agendada](system.md#schedule-tab). A duração do processamento depende do tamanho dos dados do cliente.
+Uma vez executados, os enriquecimentos podem ser atualizados em um agendamento automático ou atualizados manualmente sob demanda.
+
+1. Para atualizar manualmente um ou mais enriquecimentos, selecione-os e escolha **Executar**. Para [agendar uma atualização automática](system.md#schedule-tab), acesse **Administrador** > **Sistema** > **Agenda**. A duração do processamento depende do tamanho dos dados do cliente.
 
 1. Opcionalmente, [veja o andamento do processo de enriquecimento](#see-the-progress-of-the-enrichment-process).
 
 1. Após a conclusão do processo de enriquecimento, vá para **Meus enriquecimentos** para revisar os dados de perfis de clientes enriquecidos recentemente, a hora da última atualização e o número de perfis enriquecidos.
 
-1. Selecione o enriquecimento para ver os [resultados de enriquecimento](#enrichment-results).
+1. Selecione o enriquecimento para ver os [resultados de enriquecimento](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Veja o andamento do processo de enriquecimento
 
@@ -107,12 +103,12 @@ Você pode encontrar detalhes sobre o processamento de um enriquecimento, inclui
 1. No enriquecimento em que você deseja ver o progresso, selecione **Ver detalhes**.
 1. No painel **Detalhes da tarefa**, selecione **Mostrar detalhes** para ver os processos envolvidos na atualização do enriquecimento e o status.
 
-## <a name="enrichment-results"></a>Resultados de enriquecimento
+## <a name="view-enrichment-results"></a>Exibir resultados de enriquecimento
 
 Após concluir a execução de enriquecimento, revise os resultados do enriquecimento.
 
 1. Vá para **Dados** > **Enriquecimento**.
-1. Na guia **Meus enriquecimentos**, selecione o enriquecimento sobre o qual deseja obter informações.
+1. Na guia **Meus enriquecimentos**, selecione o enriquecimento que deseja exibir.
 
 Todos os enriquecimentos mostram informações básicas, como o número de perfis enriquecidos e o número de perfis enriquecidos ao longo do tempo. O bloco **Visualização de clientes enriquecidos** mostra uma amostra da entidade de enriquecimento gerada. Para ter uma exibição detalhada, selecione **Ver mais** e selecione a guia **Dados**.
 

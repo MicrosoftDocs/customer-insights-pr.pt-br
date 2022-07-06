@@ -1,5 +1,5 @@
 ---
-title: Enriquecimento de dados de identidade do LiveRamp
+title: Enriquecer perfis dos clientes com dados de identidade da LiveRamp (versão preliminar)
 description: Enriqueça perfis de clientes com dados do LiveRamp.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953981"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080749"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquecer perfis dos clientes com dados de identidade da LiveRamp (versão preliminar)
 
@@ -79,7 +79,7 @@ Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao LiveRamp,
 
 1. Selecione **Executar** para iniciar o processo de enriquecimento ou feche para voltar para a página **Enriquecimentos**.
 
-## <a name="enrichment-results"></a>Resultados de enriquecimento
+## <a name="view-enrichment-results"></a>Exibir resultados de enriquecimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Enriquecimento de dados
   items:
-    - name: Enriquecer perfis de cliente
+    - name: Visão geral de enriquecimento de dados
       href: enrichment-hub.md
     - name: Contas de dados do Office 365
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Definir atividades do cliente
       href: activities.md
-    - name: Gerenciamento de consentimento para Customer Insights
+    - name: Usar o gerenciamento de consentimento
       href: consent-management.md
 - name: Segmentos
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
         - name: Klaviyo

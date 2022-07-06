@@ -1,5 +1,5 @@
 ---
-title: Exportar dados do Customer Insights para o Gerenciador de Anúncios do Facebook (contém vídeo)
+title: Exportar segmentos para o Gerenciador de anúncios do Facebook (versão preliminar) (contém vídeo)
 description: Saiba como configurar a conexão e exportar para o Gerenciador de Anúncios do Facebook.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f610ab1af83bfd512ec1861e7dc76ebb2eecfcbb
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645690"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080828"
 ---
-# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportar lista de segmentos para o Gerenciador de Anúncios do Facebook (versão preliminar)
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segmentos para o Gerenciador de anúncios do Facebook (versão preliminar)
 
 Exporte segmentos de perfis unificados de clientes para o Gerenciador de Anúncios do Facebook para criar campanhas no Facebook e no Instagram.
 

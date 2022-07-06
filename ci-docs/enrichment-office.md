@@ -1,5 +1,5 @@
 ---
-title: Enriquecer perfis de clientes com dados do Microsoft Office 365
+title: Enriquecer perfis de clientes com dados do Microsoft Office 365 (versão preliminar)
 description: Use dados proprietários do Microsoft Office para enriquecer seus perfis de clientes com dados de engajamento.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954119"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055660"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquecer perfis de clientes com dados de engajamento (versão preliminar)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Enriquecer perfis de clientes com dados do Microsoft Office 365 (versão preliminar)
 
 Use dados do Microsoft Office 365 para enriquecer os perfis das contas dos clientes com insights sobre engajamentos por meio de aplicativos do Office 365. Os dados de engajamento consistem em atividades de email e reunião, que são agregadas no nível da conta. Por exemplo, o número de emails de uma conta comercial ou o número de reuniões com a conta. Nenhum dado sobre usuários individuais é disponibilizado.
 
@@ -75,7 +75,7 @@ Selecione **Executar** para iniciar o processo de enriquecimento.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Resultados de enriquecimento
+## <a name="view-enrichment-results"></a>Exibir resultados de enriquecimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Esta é a entidade *Escritório*. *Office_UserEntity* contém as IDs do Active Directory para os endereços de email que foram escolhidos durante a configuração de enriquecimento.
 

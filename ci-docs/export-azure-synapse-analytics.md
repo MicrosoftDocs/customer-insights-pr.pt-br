@@ -1,19 +1,19 @@
 ---
-title: Exportar dados do Customer Insights para a Azure Synapse Analytics
+title: Exportar para o Azure Synapse Analytics (versão preliminar)
 description: Saiba como configurar a conexão ao Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741489"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080823"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar para o Azure Synapse Analytics (versão preliminar)
 
@@ -48,7 +48,7 @@ No Azure:
 
 ### <a name="configure-a-connection"></a>Configurar uma conexão
 
-Para criar uma conexão, a entidade de serviço e a conta de usuário no Customer Insights precisam de permissões de **Leitor** no *grupo de recursos* em que o espaço de trabalho do Synapse Analytics está localizado. Além disso, a entidade de serviço e o usuário no espaço de trabalho do Synapse Analytics precisam de permissões de **Administrador do Synapse**. 
+Para criar uma conexão, a entidade de serviço e a conta de usuário no Customer Insights precisam de permissões de **Leitor** no *grupo de recursos* em que o espaço de trabalho do Synapse Analytics está localizado. Além disso, a entidade de serviço e o usuário no Synapse Analytics workspace precisam de permissões de **Administrador do Synapse**. 
 
 1. Vá para **Administração** > **Conexões**.
 
@@ -72,13 +72,13 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. No campo **Conexão para exportação**, escolha uma conexão na seção do **Azure Synapse Analytics**. Se não vir este nome de seção, não há [conexões](connections.md) deste tipo disponíveis para você.
 
-1. Fornece um **Nome de exibição** reconhecívelf para sua exportação e um **Nome do banco de dados**.
+1. Fornece um **Nome de exibição** reconhecívelf para sua exportação e um **Nome do banco de dados**. A exportação criará um [banco de dados lake do Azure Synapse](/azure/synapse-analytics/database-designer/concepts-lake-database) no workspace definido na conexão.
 
 1. Selecione quais entidades você deseja exportar para o Azure Synapse Analytics.
    > [!NOTE]
    > Não há suporte a fontes de dados baseadas em uma [pasta do Common Data Model](connect-common-data-model.md).
 
-2. Selecione **Salvar**.
+1. Selecione **Salvar**.
 
 Salvar uma exportação não a executa imediatamente.
 

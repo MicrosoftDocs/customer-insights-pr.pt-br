@@ -1,5 +1,5 @@
 ---
-title: Entidades e conjuntos de dados
+title: Entidades no Customer Insights
 description: Exiba os dados na página Entidades.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645653"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080816"
 ---
 # <a name="entities-in-customer-insights"></a>Entidades no Customer Insights
 

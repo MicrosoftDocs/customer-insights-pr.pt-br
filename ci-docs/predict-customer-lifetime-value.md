@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645694"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055200"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Previsão do valor de permanência do cliente (CLV)
 
-Preveja o valor potencial (receita) que clientes ativos individuais trarão para o seu negócio por um período futuro definido. Este recurso pode ajudar você a atingir vários objetivos: 
+Preveja o valor potencial (receita) que clientes ativos individuais trarão para o seu negócio por um período futuro definido. Este recurso pode ajudar você a atingir vários objetivos:
 - Identificar clientes de alto valor e processar esse insight
 - Criar segmentos de clientes estratégicos com base em seu valor potencial para executar campanhas personalizadas com vendas direcionadas, marketing e esforços de suporte
 - Orientar o desenvolvimento de produtos com foco em recursos que aumentam o valor do cliente
@@ -200,7 +200,7 @@ Há três seções principais de dados na página de resultados.
   O painel **Classificação de modelo** mostra mais detalhes sobre o desempenho do modelo de IA e o modelo de linha de base. O modelo de linha de base usa uma abordagem não baseada em IA para calcular o valor de permanência do cliente com base principalmente no histórico de compras feitas pelos clientes.     
   A fórmula padrão usada para calcular o CLV pelo modelo de linha de base:    
 
-  _**CLV para cada cliente** = Compra média mensal feita pelo cliente na janela do cliente ativo * Número de meses no período de previsão do CLV* Taxa de retenção geral de todos os clientes*_
+  _**CLV para cada cliente** = Compra média mensal feita pelo cliente na janela do cliente ativo * Número de meses no período de previsão do CLV * Taxa de retenção geral de todos os clientes*_
 
   O modelo de IA é comparado ao modelo de linha de base com base em duas métricas de desempenho do modelo.
   

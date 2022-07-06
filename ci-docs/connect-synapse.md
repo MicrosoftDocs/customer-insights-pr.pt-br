@@ -1,5 +1,5 @@
 ---
-title: Ingerir dados do Azure Synapse Analytics
+title: Conectar-se a uma fonte de dados do Azure Synapse (versão preliminar)
 description: Use um banco de dados no Azure Synapse como um fonte de dados no Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011413"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052685"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Conectar-se a uma fonte de dados do Azure Synapse Analytics (versão preliminar)
 
@@ -59,7 +59,7 @@ Para obter mais informações, consulte [Visão geral do Azure Synapse](/azure/s
 
 1. Escolha uma [conexão disponível](connections.md) ao Azure Synapse Analytics ou crie uma nova.
 
-1. Escolha um **Banco de Dados** do espaço de trabalho conectado na conexão do Azure Synapse Analytics selecionada e escolha **Avançar**.
+1. Escolha um **Banco de Dados** do espaço de trabalho conectado na conexão do Azure Synapse Analytics selecionada e escolha **Avançar**. No momento, oferecemos suporte somente ao tipo de banco de dados *Banco de dados lake*.
 
 1. Selecione as entidades a serem ingeridas do banco de dados conectado e selecione **Avançar**.
 
