@@ -1,7 +1,7 @@
 ---
 title: Atividades do cliente
 description: Defina atividades do cliente e exiba-as em uma linha do tempo em perfis de clientes.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755484"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188125"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
-Combine as atividades do cliente de [várias fontes de dados](data-sources.md) no Dynamics 365 Customer Insights. Crie uma linha do tempo que liste as atividades cronologicamente. Inclua a linha do tempo nos aplicativos do Dynamics 365 com a solução [Suplemento do Cartão do Cliente](customer-card-add-in.md).
+Atividades do cliente são ações ou eventos realizados por clientes. Por exemplo, transações, duração de chamadas de suporte, avaliações de site, compras ou devoluções. Essas atividades estão contidas em uma ou mais fontes de dados. Com o Customers Insights, consolide as atividades dos clientes dessas [fontes de dados](data-sources.md) e as associe a perfis de cliente. Essas atividades são exibidas em ordem cronológica em uma linha do tempo no perfil do cliente. Inclua a linha do tempo nos aplicativos do Dynamics 365 com a solução [Suplemento do Cartão do Cliente](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Definir uma atividade
 
-Suas fontes de dados podem incluir entidades com dados transacionais e de atividades de várias fontes de dados. Identifique essas entidades e selecione as atividades que deseja visualizar na linha do tempo do cliente. Escolha a entidade que inclui sua atividade ou atividades de destino.
-
-Uma entidade deve ter pelo menos um atributo do tipo **Data** para ser incluído na linha do tempo do cliente e você não pode adicionar entidades sem os campos de **Data**. O controle **Adicionar atividade** é desativado, se nenhuma entidade for encontrada.
+Uma entidade deve ter pelo menos um atributo do tipo **Data** a ser incluído na linha do tempo de um cliente. O controle **Adicionar atividade** é desativado, se nenhuma entidade for encontrada.
 
 1. Vá para **Dados** > **Atividades**.
 
-1. Selecione **Adicionar atividade** para iniciar a experiência guiada para o processo de configuração da atividade.
+1. Selecione **Adicionar atividade** para iniciar a experiência guiada.
 
-1. Na etapa **Dados da atividade**, defina os valores para os seguintes campos:
+1. Na etapa **Dados da atividade**, insira as seguintes informações:
 
-   - **Nome da atividade**: selecione um nome para sua atividade.
-   - **Entidade**: Selecione uma entidade que inclua dados transacionais ou de atividade.
-   - **Chave primária**: Seleciona o campo que identifica exclusivamente um registro. Não deve conter valores duplicados, valores vazios ou valores ausentes.
+   - **Nome da atividade**: o nome da atividade.
+   - **Entidade atividade**: a entidade que inclui dados transacionais ou de atividade.
+   - **Chave primária**: campo que identifica exclusivamente um registro. Não deve conter valores duplicados, valores vazios ou valores ausentes.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure os dados da atividade com nome, entidade e chave primária.":::
 
-1. Selecione **Avançar** para ir para a próxima etapa.
+1. Selecione **Avançar**
 
-1. Na etapa **Relacionamento**, configure os detalhes para conectar seus dados de atividade ao registro de cliente correspondente. Esta etapa visualiza a conexão entre as entidades.  
+1. Na etapa **Relacionamento**, selecione **Adicionar relacionamento** para conectar dados da atividade ao registro de cliente correspondente. Esta etapa visualiza a conexão entre as entidades.  
 
-   - **Primeiro**: o campo estrangeiro em sua entidade de atividade que será utilizado para estabelecer um relacionamento com outra entidade.
-   - **Segundo**: a entidade cliente de origem correspondente com qual sua entidade de atividade se relacionará. Você só pode se relacionar com entidades de origem do cliente que são usadas no processo de unificação dos dados.
-   - **Terceiro**: se já existir um relacionamento entre esta entidade de atividade e a entidade do cliente de origem selecionada, o nome do relacionamento estará no modo somente leitura. Se o relacionamento não existir, um relacionamento será criado com o nome que você forneceu nesta caixa.
+   - **Chave estrangeira da entidade**: campo da entidade atividade que será usado para estabelecer um relacionamento com outra entidade.
+   - **Nome da entidade de destino**: entidade do cliente de origem correspondente com a qual a entidade atividade se relacionará. Você só pode se relacionar com entidades de origem do cliente que são usadas no processo de unificação dos dados.
+   - **Nome do relacionamento**: o nome que identifica o relacionamento entre entidades. Se já existir um relacionamento entre essa entidade atividade e a entidade do cliente de origem selecionada, o nome do relacionamento será somente leitura.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Defina o relacionamento da entidade.":::
 
    > [!TIP]
    > Em ambientes B2B, você pode selecionar entre entidades de conta e outras entidades. Se você selecionar uma entidade de conta, o caminho de relacionamento será definido automaticamente. Para outras entidades, é necessário definir o caminho do relacionamento sobre uma ou mais entidades intermediárias até chegar a uma entidade de conta.
 
-1. Selecione **Avançar** para ir para a próxima etapa. 
+1. Selecione **Aplicar** para criar o relacionamento.
 
-1. Na etapa **Unificação de atividades**, escolha o evento de atividade e a hora de início de sua atividade. 
+1. Selecione **Avançar**
+
+1. Na etapa **Unificação de atividades**, escolha o evento de atividade e a hora de início de sua atividade.
    - **Campos obrigatórios**
       - **Atividade do evento**: o campo que é o evento para esta atividade.
       - **Carimbo de data/hora**: o campo que representa a hora de início da sua atividade.
@@ -76,61 +76,49 @@ Uma entidade deve ter pelo menos um atributo do tipo **Data** para ser incluído
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especifique os dados da atividade do cliente em uma entidade Atividade Unificada.":::
 
-1. Selecione **Avançar** para passar para a próxima etapa. Você pode selecionar **Concluir e revisar** para salvar a atividade agora com o tipo de atividade definido como **Outro**. 
+1. Selecione **Avançar** para escolher o tipo de atividade ou selecione **Concluir e revisar** para salvar a atividade com o tipo de atividade definido como **Outro**.
 
 1. Na etapa **Tipo de Atividade**, escolha o tipo de atividade e, opcionalmente, selecione se deseja mapear semanticamente alguns dos tipos de atividade para uso em outras áreas do Customer Insights. No momento, os tipos de atividade *Comentários*, *Fidelidade*, *SalesOrder*, *SalesOrderLine* e *Assinatura* oferecem suporte à semântica após concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, você pode escolher *Outro* ou *Criar* para um tipo de atividade personalizada.
 
-1. Selecione **Avançar** para passar para a próxima etapa. 
+1. Selecione **Avançar**
 
 1. Na etapa **Revisar**, verifique suas seleções. Volte para qualquer uma das etapas anteriores e atualize as informações, se necessário.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Revise os campos especificados para uma atividade.":::
-   
-1. Selecione **Salvar atividade** para aplicar suas alterações e selecione **Concluído** para retornar a **Dados** > **Atividades**. Aqui você verá quais atividades estão definidas para serem exibidas na linha do tempo. 
+1. Selecione **Salvar atividade** para aplicar suas alterações e selecione **Concluído** para retornar a **Dados** > **Atividades**. A atividade criada é exibida.
 
-1. Na página **Atividades**, selecione **Executar** para processar a atividade. 
+1. Depois de criar todas as atividade, selecione **Executar** para processá-las.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Gerenciar atividades existentes
 
-Em **Dados** > **Atividades**, você pode ver todas as suas atividades salvas e gerenciá-las. Cada atividade é representada por uma linha que também inclui detalhes sobre a origem, a entidade e o tipo de atividade.
+Vá para **Dados** > **Atividades** para visualizar as atividades salvas, a entidade de origem, o tipo de atividade e se elas estão incluídas na linha do tempo do cliente. Você pode classificar a lista de atividades por qualquer coluna ou usar a caixa de pesquisa para encontrar a atividade que deseja gerenciar.
 
-As seguintes ações estão disponíveis quando você seleciona uma atividade. 
+Selecione uma atividade para exibir as ações disponíveis.
 
-- **Editar**: abre a configuração da atividade na etapa de revisão. Você pode alterar qualquer uma ou todas as configurações atuais desta etapa. Depois que alterar a configuração, selecione **Salvar atividade** e, em seguida, selecione **Executar** para processar as alterações.
-
-- **Renomear**: abre uma caixa de diálogo onde você pode inserir um nome diferente para a atividade selecionada. Selecione **Salvar** para aplicar suas alterações.
-
-- **Excluir**: abre uma caixa de diálogo para confirmar a exclusão da atividade selecionada. Você também pode excluir mais de uma atividade de uma vez, selecionando as atividades e, em seguida, selecionando o ícone de exclusão. Selecione **Excluir** para confirmar a exclusão.
+- **Edite** a atividade para alterar sua configuração. A configuração é aberta na etapa de revisão. Depois que alterar a configuração, selecione **Salvar atividade** e, em seguida, selecione **Executar** para processar as alterações.
+- **Renomeie** a atividade. Selecione **Salvar** para aplicar suas alterações.
+- **Exclua** a atividade. Para excluir mais de uma atividade ao mesmo tempo, selecione as atividades e, depois, selecione **Excluir**. Confirme a exclusão.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Visualizar cronogramas de atividades em perfis de clientes
 
-Depois de configurar as atividades do cliente, selecione **Exibir na linha do tempo da atividade** na configuração de atividades para encontrar todas as atividades do seu cliente em seu perfil de cliente.
+1. Se você selecionou **Exibir na linha do tempo da atividade** na configuração da atividade, vá para **Clientes** e selecione um perfil de cliente para visualizar as atividades do cliente na seção **Linha do tempo de atividade**.
 
-Para abrir a linha do tempo para um cliente, vá para **Clientes** e escolha o perfil do cliente que deseja visualizar.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualize atividades configuradas em Perfis de Clientes.":::
 
-Se um cliente participou de uma atividade configurada, você a encontrará na seção **Linha do tempo da atividade**.
+1. Para filtrar as atividades na linha do tempo de atividade:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualize atividades configuradas em Perfis de Clientes.":::
+   - Selecione um ou mais ícones de atividade para refinar os resultados e incluir apenas os tipos selecionados.
 
-Existem várias maneiras de filtrar atividades na linha do tempo da atividade:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtre as atividades por tipo usando os ícones.":::
 
-- Você pode selecionar um ou vários dos ícones de atividade para refinar seus resultados para incluir apenas os tipos selecionados.
+   - Selecione **Filtro** para abrir um painel de filtros e configurar filtros de linha do tempo. Filtre por *ActivityType* e/ou *Data*. Selecione **Aplicar**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtre as atividades por tipo usando os ícones.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Use o painel de filtro para configurar as condições do filtro.":::
 
-- Você pode selecionar **Filtro** para abrir um painel de filtro para configurar seus filtros de linha do tempo.
-
-   1. Você pode filtrar por *Tipo de atividade* e *Data*
-   1. Selecione **Aplicar** para usar os filtros na linha do tempo da atividade.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Use o painel de filtro para configurar as condições do filtro.":::
-
-Para remover filtros, selecione o **x** ao lado de cada filtro aplicado à linha do tempo ou selecione **Limpar filtros**.
-
+1. Para remover filtros, selecione **Limpar filtros** ou **Filtro** e desmarque a caixa de seleção do filtro.
 
 > [!NOTE]
-> Os filtros de atividade são removidos quando você sai de um perfil de cliente. Você deve aplicá-los cada vez que abrir um perfil de cliente.
+> Os filtros de atividade são removidos quando você sai de um perfil de cliente. Você deverá aplicá-los cada vez que abrir um perfil de cliente.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

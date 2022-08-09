@@ -1,32 +1,29 @@
 ---
 title: Bot do Teams para Dynamics 365 Customer Insights (versão preliminar)
 description: Procure perfis de clientes unificados no Microsoft Teams com a ajuda de um bot.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d140ae72578b48091a41005c4acafe03bac540da
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080810"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195828"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot do Teams para Dynamics 365 Customer Insights (versão preliminar)
 
 Conecte-se com o Microsoft Teams para permitir que um bot procure perfis de clientes unificados nos canais do Teams.
 
-> [!div class="mx-imgBorder"]
-> ![Bot do Teams mostrando um registro de cliente.](media/teams-bot.png "Bot do Teams mostrando um registro de cliente")
+:::image type="content" source="media/teams-bot.png" alt-text="Bot do Teams mostrando um registro de cliente":::
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para instalar e configurar o bot, os seguintes pré-requisitos devem ser atendidos:
-
-- Há pelo menos uma [fonte de dados adicionada](data-sources.md).
+- Pelo menos uma [fonte de dados adicionada](data-sources.md).
 - O [processo de unificação](data-unification.md) foi concluído.
 - Os campos são adicionados ao [índice de pesquisa e filtro](search-filter-index.md).
 - O Customer Insights e o Teams estão na mesma organização.
@@ -37,24 +34,23 @@ Para instalar e configurar o bot, os seguintes pré-requisitos devem ser atendid
 
 ## <a name="configure-the-bot"></a>Configurar o bot
 
-1. Vá para **Administrador** > **Exportar Destinos**.
+1. Vá para **Administração** > **Conexões**.
 1. No bloco do Microsoft Teams, selecione **Configurar**.
 1. Você é redirecionado para a área **Aplicativos** no Teams. Você também pode abrir o Teams e selecionar **Aplicativos** no canto inferior esquerdo ou [obtê-lo do AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) diretamente.
 1. Procure **Customer Insights** e selecione o aplicativo.
 1. Selecione **Adicionar**.
-1. Depois de entrar no Customer Insights no Teams, você verá uma mensagem de boas-vindas e poderá começar.
+1. Entre no Customer Insights no Teams. Uma mensagem de boas-vindas é exibida.
 
 ## <a name="things-you-can-do-with-the-bot"></a>O que você pode fazer com o bot
 
 O bot fornece recursos de pesquisa para perfis unificados de clientes.
 
-- Insira **pesquisar** seguido por um nome, endereço de email ou qualquer outro campo no perfil unificado do cliente que seja adicionado ao índice de pesquisa e filtro.
+- Insira **pesquisar** seguido por um nome, endereço de email ou qualquer outro campo do perfil unificado de cliente que seja adicionado ao índice de pesquisa e filtro.
 
-  Você receberá um cartão com até 15 campos do perfil do cliente resultante. Várias correspondências retornam uma lista de resultados onde você pode selecionar um perfil. Você pode adicionar o termo de pesquisa entre aspas duplas para procurar uma correspondência exata.
+  Você receberá um cartão com até 15 campos do perfil do cliente resultante. Várias correspondências retornam uma lista de resultados onde você pode selecionar um perfil. Para procurar uma correspondência exata, adicione o termo entre aspas duplas.
 
-- Se a sua organização mantiver vários ambientes do Customer Insights na mesma organização, você poderá inserir **switchinstance** para escolher a qual ambiente deseja conectar o bot.
+- Se a sua organização mantém vários ambientes do Customer Insights na mesma organização, insira **switchinstance** para escolher a qual ambiente deseja conectar o bot.
 
 - Insira **ajuda** para ver uma lista dos comandos disponíveis para o bot.  
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

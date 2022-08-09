@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645709"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171081"
 ---
 # <a name="transaction-churn-prediction"></a>Previsão de rotatividade de transações
 
@@ -240,7 +240,7 @@ Adicione uma lista de seus clientes corporativos e contas que deseja usar como b
    - **Nome da previsão**: nome da previsão fornecido ao criá-la.
    - **Tipo de previsão**: tipo de modelo usado para a previsão
    - **Entidade de saída**: nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.
-     Na entidade de saída, *ChurnScore* é a probabilidade prevista de rotatividade e *IsChurn* é um rótulo binário baseado em *ChurnScore* com limite de 0,5. O limite padrão pode não funcionar para o seu cenário. [Criar um novo segmento](segments.md#create-a-new-segment) com o limite de sua preferência.
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de rotatividade e *IsChurn* é um rótulo binário baseado em *ChurnScore* com limite de 0,5. O limite padrão pode não funcionar para o seu cenário. [Criar um novo segmento](segments.md#create-a-segment) com o limite de sua preferência.
      Nem todos os clientes são necessariamente clientes ativos. Alguns deles podem não ter tido nenhuma atividade por um longo período e já são considerados com rotatividade, com base na sua definição de rotatividade. Prever o risco de desligamento para clientes que já se desligaram não é útil porque eles não são o público-alvo de interesse.
    - **Campo previsto**: este campo é preenchido apenas para alguns tipos de previsões e não é usado na previsão de rotatividade.
    - **Status**: status da execução da previsão.

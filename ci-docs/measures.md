@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080835"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170806"
 ---
 # <a name="measures-overview"></a>Visão geral de medidas
 
-As medidas ajudam você a entender melhor os comportamentos dos clientes e o desempenho dos negócios. Elas analisam para valores relevantes de [perfis unificados](data-unification.md). Por exemplo, uma empresa deseja ver o *gasto total por cliente* para entender o histórico ou a medida de um cliente específico ou medir as *vendas totais da empresa* para entender a receita de nível agregado em toda a empresa.  
+As medidas ajudam você a entender melhor os comportamentos dos clientes e o desempenho dos negócios. Elas analisam para valores relevantes de [perfis unificados](data-unification.md). Por exemplo, uma empresa deseja ver o *gasto total por cliente* para entender o histórico ou a medida de um cliente específico ou medir as *vendas totais da empresa* para entender a receita de nível agregado em toda a empresa.
 
-As medidas são criadas [usando-se o construtor de medidas](measure-builder.md), uma plataforma de consulta de dados com vários operadores e opções de mapeamento simples. Ele permite filtrar dados, agrupar resultados, detectar [caminhos de relacionamento de entidades](relationships.md) e exibir a saída. Você pode [usar modelos predefinidos](measure-templates.md) para configurar de modo eficiente medidas comumente usadas.
+Crie medidas para planejar atividades comerciais consultando dados do cliente e extraindo insights. Por exemplo, crie uma medida de *gasto total por cliente* e *retorno total por cliente* para ajudar a identificar um grupo de clientes com alto gasto, porém com alto retorno. Em seguida, [crie um segmento](segments.md) com base nessas medidas para gerar as próximas melhores ações.
 
-Use o construtor de medidas para extrair insights e planejar atividades comerciais por meio da consulta de dados do cliente. Por exemplo, criar uma medida de *gasto total por cliente* e *retorno total por cliente* ajuda a identificar um grupo de clientes com alto gasto, mas alto retorno. Você pode [criar um segmento](segments.md) com base nessas medidas para impulsionar as próximas ações recomendadas.
+## <a name="create-a-measure"></a>Criar uma medida
 
-## <a name="manage-your-measures"></a>Gerenciar suas medidas
+Escolha como criar uma medida com base em seu público-alvo.
 
-Você pode encontrar a lista de medidas na página **Medidas**.
+# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
 
-Você encontrará informações sobre o tipo de medida, o criador, a data de criação, o status e o estado. Ao selecionar uma nova medida, na lista, você pode visualizar a saída e baixar um arquivo CSV.
+- Do zero com o construtor de medidas: [Criar sua própria](measure-builder.md).
+- A partir de medidas comumente usadas: [Usar modelos predefinidos](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
+
+Do zero com o construtor de medidas: [Criar sua própria](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Gerenciar medidas existentes
+
+Acesse a página **Medidas** para exibir as medidas que criou, seus status, tipo de medida e a última vez em que os dados foram atualizados. Você pode classificar a lista de medidas por qualquer coluna ou usar a caixa de pesquisa para encontrar a medida que deseja gerenciar.
+
+Selecione Avançar em uma medida para exibir as ações disponíveis. Selecione o nome da medida para visualizar a saída e baixar um arquivo CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Ações para gerenciar medidas únicas."lightbox="media/measures-actions.png":::
 
-As seguintes ações estão disponíveis quando você seleciona uma medida:
-
-- **Editar** a configuração da medida.
-- **Duplicar** uma medida. Você pode optar por editar suas propriedades imediatamente ou simplesmente salvar a duplicidade.
-- **Atualizar** a medida com base nos dados mais recentes. Para atualizar todas as suas medidas ao mesmo tempo, selecione todas as medidas e, em seguida, **Atualizar**.
+- **Editar** a medida para alterar suas propriedades.
+- **Atualizar** a medida para incluir os dados mais recentes.
 - **Renomear** a medida.
-- **Ativar** ou **Desativar**. Medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
-- **Marcar** para [gerenciar as marcas](work-with-tags-columns.md#manage-tags) para o segmento.
+- **Ativar** ou **Desativar** a medida. As medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab) e terão o **Status** listado como **Ignorada**, indicando que nem mesmo houve tentativa de atualização.
+- **Marcar** para [gerenciar marcas](work-with-tags-columns.md#manage-tags) para a medida.
 - **Excluir** a medida.
+- **Colunas** para [personalizar as colunas](work-with-tags-columns.md#customize-columns) que são exibidas.
+- **Filtro** para [filtrar as marcas](work-with-tags-columns.md#filter-on-tags).
+- **Pesquisar nome**, para pesquisar pelo nome da medida.
+
+## <a name="refresh-measures"></a>Atualizar medidas
+
+As medidas podem ser atualizadas em uma agenda automática ou ser atualizadas manualmente sob demanda. Para atualizar manualmente uma ou mais medidas, selecione-as e escolha **Atualizar**. Para [agendar uma atualização automática](system.md#schedule-tab), acesse **Administrador** > **Sistema** > **Agenda**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Próxima etapa
-
-Você pode usar medidas existentes para criar [um segmento de cliente](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

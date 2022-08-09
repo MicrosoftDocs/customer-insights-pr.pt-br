@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos para o Gerenciador de anúncios do Facebook (versão preliminar) (contém vídeo)
 description: Saiba como configurar a conexão e exportar para o Gerenciador de Anúncios do Facebook.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080828"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195000"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportar segmentos para o Gerenciador de anúncios do Facebook (versão preliminar)
 
@@ -21,31 +21,32 @@ Exporte segmentos de perfis unificados de clientes para o Gerenciador de Anúnci
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Pré-requisitos para conexão
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Você precisa ter uma [**Conta do Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta de negócios do Facebook**](https://business.facebook.com/).
-- Você precisa ser um administrador na [**Conta do Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Uma [conta do Facebook Ads](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [conta comercial do Facebook](https://business.facebook.com/).
+- Privilégios de administrador na [conta do Facebook Ads](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 10 milhão de perfis de cliente por exportação para o Facebook Ads Manager.
-- A exportação para o Gerenciador de Anúncios do Facebook é limitada a segmentos.
-- Crie ou atualize públicos personalizados no Facebook do tipo *lista de clientes* apenas.
-- Exportar segmentos com um total de 10 milhões de perfis de clientes pode levar até 90 minutos para ser concluído.
+- Até 10 milhões de perfis de cliente por exportação para o Gerenciador de Anúncios do Facebook, o que pode levar até 90 minutos.
+- Apenas segmentos.
+- Tipo de *lista de cliente* do Facebook somente em [públicos-alvo personalizados](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+  > [!NOTE]
+  > Em alguns casos, você poderá ver públicos-alvo personalizados de diferentes tipos na lista suspensa. Se você selecionar um tipo diferente que não seja *lista de clientes*, a exportação falhará.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurar conexão com o Gerenciador de Anúncios do Facebook
 
-Para que os usuários possam criar uma exportação, um administrador deve configurar a conexão com o serviço e permitir que os colaboradores usem essa conexão.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Vá para **Administração** > **Conexões**.
 
-1. Selecione **Adicionar conexão** e escolha **Gerenciador de Anúncios do Facebook** para configurar a conexão.
+1. Selecione **Adicionar conexão** e escolha **Gerenciador de Anúncios do Facebook**.
 
 1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
-1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Permita que os colaboradores usem a conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Autenticar com Anúncios do Facebook: 
+1. Autenticar com Anúncios do Facebook:
 
    1. Selecione **Continuar com o Facebook** para entrar com sua conta do Facebook Ads.
 
@@ -53,27 +54,25 @@ Para que os usuários possam criar uma exportação, um administrador deve confi
 
    1. Selecione a Conta de Anúncios do **Facebook** na qual você deseja trabalhar.
 
-   1. Selecione um **Público-alvo personalizado existente** na lista suspensa ou crie um **Novo público-alvo personalizado**. Para obter mais informações, consulte [**Público no Gerenciador de Anúncios do Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Você só pode criar ou atualizar públicos personalizados no Facebook do tipo *lista de clientes* com esta exportação. Em alguns casos, você vê públicos-alvo de diferentes tipos na lista suspensa. A seleção de um tipo diferente de *lista de clientes* resultará em uma exportação com falha. 
+   1. Selecione um **Público-alvo personalizado existente** na lista suspensa ou crie um **Novo público-alvo personalizado**.
 
-1. Examine a **Conformidade e privacidade dos dados** e selecione **Concordo**.
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
 1. Selecione **Salvar** para concluir a conexão.
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
-Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vá para **Dados** > **Exportações**.
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**. 
+1. Selecione **Adicionar exportação**.
 
-1. Em **Conexão para exportação**, escolha uma conexão da seção do **Gerenciador de Anúncios do Facebook**. Se você não vir este nome de seção, significa que não há conexões desse tipo disponíveis para você.
+1. No campo **Conexão para exportação**, escolha uma conexão na seção do Gerenciador de Anúncios do Facebook. Contate um administrador se nenhuma conexão estiver disponível.
 
-1. No campo **Escolher identificador de chave**, selecione **Email**, **Nome e endereço** ou **Telefone** para enviar para o Gerenciador de Anúncios do Facebook. 
+1. Insira um nome para a exportação.
 
-1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**.
+1. No campo **Conectar dados**, selecione **Email**, **Nome e endereço** ou **Telefone** para enviar para o Gerenciador de Anúncios do Facebook.
 
 1. Mapeie os atributos correspondentes da sua entidade unificada do cliente para o identificador de chave selecionado.
    > [!TIP]
@@ -85,16 +84,6 @@ Você pode configurar esta exportação se tiver acesso a uma conexão deste tip
 
 1. Selecione **Salvar**.
 
-Salvar uma exportação não a executa imediatamente.
-
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). 
-
-Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao Gerenciador de Anúncios do Facebook, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que o Gerenciador de Anúncios do Facebook cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Seu Administrador do Dynamics 365 Customer Insights pode remover este destino de exportação a qualquer momento para interromper o uso dessa funcionalidade.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

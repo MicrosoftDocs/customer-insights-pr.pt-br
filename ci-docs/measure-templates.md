@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051669"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170759"
 ---
 # <a name="create-measures-from-templates"></a>Criar medidas usando modelos
 
-Você pode usar modelos predefinidos de [medidas](measures.md) comumente usadas para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam na criação de medidas eficientes. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
+Use modelos predefinidos de [medidas](measures.md) comumente usadas para criá-las. Os modelos se baseiam em dados mapeados da entidade *Atividade Unificada*. Portanto, verifique se você configurou as [atividades de clientes](activities.md) antes de criar uma medida com base em um modelo.
 
-Para criar medidas personalizadas, consulte [Usar o construtor de medidas para criar medidas a partir do zero](measure-builder.md).
+Os modelos de medida têm suporte somente em ambientes para **clientes individuais**. Para criar medidas personalizadas ou criar medidas para B2B, consulte [Usar o construtor de medidas](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Consumidor individual (B2C)](#tab/b2c)
-
-Modelos de medidas disponíveis: 
+Modelos de medidas disponíveis:
 - Valor médio da transação (ATV)
 - Valor total da transação
 - Receita média diária
+- Receita média mensal
 - Receita média anual
 - Contagem de transações
 - Pontos de fidelidade ganhos
@@ -57,21 +56,22 @@ Modelos de medidas disponíveis:
 
 1. Selecione **Concluído**.
 
-1. Na seção **Definir período**, defina o período dos dados a serem usados. Para escolher se você deseja que a nova medida aborde todo o conjunto de dados, selecione **O tempo todo**, ou que a medida se concentre em um **Período específico**.
+1. Na seção **Definir período**, defina o período dos dados. Para escolher se você deseja que a nova medida aborde todo o conjunto de dados, selecione **O tempo todo**, ou que a medida se concentre em um **Período específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de tela mostrando a seção do período ao configurar uma medida com base em um modelo.":::
 
 1. Na próxima seção, selecione **Adicionar dados** para escolher as atividades e mapear os dados correspondentes da sua entidade *Atividade Unificada*.
 
-    1. Etapa 1 de 2: em **Tipo de atividade**, escolha o tipo da entidade que deseja usar. Para **Atividades**, selecione as entidades que deseja mapear.
-    1. Etapa 2 de 2: escolha o atributo da entidade *Atividade Unificada* do componente exigido pela fórmula. Por exemplo, para Valor médio da transação, é o atributo que representa o Valor da transação. Para **Carimbo de data/hora da atividade**, escolha o atributo da entidade Atividade Unificada que representa a data e hora da atividade.
-   
-1. Depois que o mapeamento de dados for bem-sucedido, você poderá ver o status como **Concluído** e o nome das atividades e atributos mapeados.
+    1. Etapa 1 de 2: em **Tipo de atividade**, escolha o tipo da entidade que deseja usar. Em **Atividades**, selecione as entidades que deseja mapear e selecione **Avançar**.
+    1. Etapa 2 de 2: escolha o atributo da entidade *Atividade Unificada* do componente exigido pela fórmula. Por exemplo, para Valor médio da transação, é o atributo que representa o Valor da transação. Em **Carimbo de data/hora da atividade**, escolha o atributo na entidade *Atividade Unificada* que representa a data e a hora da atividade.
+    1. Selecione **Salvar**.
 
-1. Agora você pode selecionar **Executar** para calcular os resultados da medida. Para refiná-los mais tarde, selecione **Salvar rascunho**.
+    Quando há êxito no mapeamento de dados, o status **Concluído** é exibido e o nome das atividades e atributos mapeados é exibido.
 
-# <a name="business-accounts-b-to-b"></a>[Contas comerciais (B2B)](#tab/b2b)
+1. Selecione **Executar** para calcular os resultados da medida. Selecione **Salvar rascunho** se quiser manter a configuração atual e executar a medida posteriormente. A página **Medidas** será exibida.
 
-Este recurso está disponível apenas para medidas criadas em ambientes com clientes individuais como público-alvo primário.
+## <a name="next-step"></a>Próxima etapa
 
----
+Use medidas existentes para criar [um segmento do cliente](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

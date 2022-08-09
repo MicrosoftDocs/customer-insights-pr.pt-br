@@ -1,7 +1,7 @@
 ---
 title: Visão geral de fontes de dados
 description: Saiba como importar ou ingerir dados de várias fontes.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051439"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207077"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
 O Dynamics 365 Customer Insights fornece conexões para trazer dados de um amplo conjunto de fontes. A conexão a uma fonte de dados é conhecida como o processo de *ingestão de dados*. Após a ingestão dos dados, você pode [unificar](data-unification.md), gerar insights e ativar os dados para criar experiências personalizadas.
 
-## <a name="add-data-sources"></a>Adicionar fontes de dados
+## <a name="add-or-edit-data-sources"></a>Adicionar ou editar fontes de dados
 
-Você pode anexar ou importar fontes de dados para o Customer Insights. Os links abaixo fornecem instruções sobre como adicionar fontes de dados.
+Você pode anexar ou importar fontes de dados para o Customer Insights. Os links abaixo fornecem instruções sobre como adicionar e editar fontes de dados.
 
 **Anexar uma fonte de dados**
 
@@ -50,13 +50,18 @@ Se o seu ambiente tiver sido configurado para usar o armazenamento do Customer I
 
 Se o seu ambiente não usa fluxos de dados do Power Platform, a página **Fontes de Dados** contém apenas uma lista de todas as fontes de dados. Nenhuma seção é exibida.
 
-Acesse **Dados** > **Fontes de dados** para exibir o nome de cada fonte de dados ingerida, seu status e a última vez que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por cada coluna.
+## <a name="manage-existing-data-sources"></a>Gerenciar fontes de dados existentes
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Fonte de dados adicionada.":::
+Acesse **Dados** > **Fontes de dados** para exibir o nome de cada fonte de dados ingerida, seu status e a última vez que os dados foram atualizados para essa fonte. Você pode classificar a lista de fontes de dados por qualquer coluna ou usar a caixa de pesquisa para encontrar a fonte de dados que deseja gerenciar.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Selecione uma fonte de dados para exibir as ações disponíveis.
 
-O carregamento de dados pode levar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página **Entidades**. Para obter mais informações, consulte [Entidades](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Fonte de dados adicionada.":::
+
+- [**Editar**](#add-or-edit-data-sources) a fonte de dados para alterar suas propriedades.
+- [**Atualizar**](#refresh-data-sources) a fonte de dados para incluir os dados mais recentes.
+- [**Enriquecer**](data-sources-enrichment.md) a fonte de dados antes da unificação.
+- **Excluir** a fonte de dados. Um fonte de dados só poderá ser excluída se os dados não forem usados em nenhum processamento, como unificação, insights, ativações ou exportações.
 
 ## <a name="refresh-data-sources"></a>Atualizar fontes de dados
 
@@ -64,23 +69,12 @@ As fontes de dados podem ser atualizadas em uma programação automática ou man
 
 Acesse **Administrador** > **Sistema** > [**Agenda**](system.md#schedule-tab) para configurar atualizações agendadas pelo sistema de suas fontes de dados ingeridas.
 
-Para atualizar uma fonte de dados sob demanda, siga estas etapas:
+Para atualizar uma fonte de dados por demanda:
 
 1. Acesse **Dados** > **Fontes de dados**.
 
-1. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que você deseja atualizar e selecione **Atualizar** na lista suspensa. A fonte de dados agora é acionada para uma atualização manual. Atualizar um fonte de dados atualizará o esquema da entidade e os dados de todas as entidades especificadas na fonte de dados.
+1. Selecione a fonte de dados que você deseja atualizar e selecione **Atualizar**. A fonte de dados agora é acionada para uma atualização manual. Atualizar um fonte de dados atualizará o esquema da entidade e os dados de todas as entidades especificadas na fonte de dados.
 
-1. Selecione **Parar de atualizar** se quiser cancelar uma atualização existente e que a fonte de dados seja revertida para seu último status de atualização.
-
-## <a name="delete-a-data-source"></a>Excluir uma fonte de dados
-
-Um fonte de dados só poderá ser excluída se os dados não forem usados em nenhum processamento, como unificação, insights, ativações ou exportações.
-
-1. Acesse **Dados** > **Fontes de dados**.
-
-2. Selecione as reticências verticais (&vellip;) ao lado da fonte de dados que você deseja remover e selecione **Excluir** no menu suspenso.
-
-3. Confirme a exclusão.
-
+1. Selecione o status para abrir o painel **Detalhes de progresso** e exibir o progresso. Para cancelar o trabalho, selecione **Cancelar trabalho** na parte inferior do painel.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645693"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171035"
 ---
 # <a name="subscription-churn-prediction"></a>Previsão de rotatividade de assinaturas
 
@@ -121,7 +121,7 @@ A previsão de rotatividade de assinaturas ajuda a prever se um cliente está em
    - **Nome da previsão:** O nome da previsão que foi fornecido ao criá-la.
    - **Tipo de previsão:** O tipo do modelo usado na previsão
    - **Entidade de saída:** Nome da entidade que armazenará a saída da previsão. Você pode encontrar uma entidade com esse nome em **Dados** > **Entidades**.    
-     Na entidade de saída, *ChurnScore* é a probabilidade prevista de rotatividade e *IsChurn* é um rótulo binário baseado em *ChurnScore* com limite de 0,5. O limite padrão pode não funcionar para o seu cenário. [Criar um novo segmento](segments.md#create-a-new-segment) com o limite de sua preferência.
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de rotatividade e *IsChurn* é um rótulo binário baseado em *ChurnScore* com limite de 0,5. O limite padrão pode não funcionar para o seu cenário. [Criar um novo segmento](segments.md#create-a-segment) com o limite de sua preferência.
    - **Campo previsto:** Este campo é preenchido somente para alguns tipos de previsões e não é usado na previsão de rotatividade de assinaturas.
    - **Status:** O status atual da execução da previsão.
         - **Na fila:** A previsão está aguardando a execução de outros processos.

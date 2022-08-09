@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos para o LinkedIn Ads (versão preliminar)
 description: Saiba como configurar a conexão e exportar para o LinkedIn Ads.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050842"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196794"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segmentos para o LinkedIn Ads (versão preliminar)
 
@@ -21,32 +21,33 @@ Exporte segmentos de perfis de clientes unificados para o LinkedIn Ads para cria
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
--   Você deve ter uma [conta do LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) e as credenciais de administrador correspondentes.
--   Você tem [segmentos configurados](segments.md) no Customer Insights.
--   Os perfis de cliente nos segmentos exportados contêm um campo com um endereço de email.
+- Uma conta do [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) e as credenciais de administrador correspondentes.
+- Uma [ID de conta do LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
+- [Segmentos configurados](segments.md) no Customer Insights.
+- Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Seu segmento no Customer Insights precisa conter pelo menos 300 perfis exclusivos. 
-- Você pode exportar até 100.000 perfis de clientes por exportação para o LinkedIn Ads.
-- A exportação para o LinkedIn Ads está limitada a segmentos.
-- Exportar até 100.000 perfis de clientes para o LinkedIn Ads pode levar até 10 minutos para ser concluído. 
+- Até 100.000 perfis de cliente por exportação para o LinkedIn Ads, o que pode levar até 10 minutos.
+- Apenas segmentos. Um segmento deve conter pelo menos 300 perfis exclusivos.
 
-## <a name="set-up-the-connection-to-linkedin-ads"></a>Configurar a conexão ao LinkedIn Ads
+## <a name="set-up-connection-to-linkedin-ads"></a>Configurar conexão com o LinkedIn Ads
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Vá para **Administração** > **Conexões**.
 
-1. Selecione **Adicionar conexão** e escolha **LinkedIn Ads** para configurar a conexão.
+1. Selecione **Adicionar conexão** e escolha **LinkedIn Ads**.
 
 1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
-1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolha quem pode usar essa conexão. Por padrão, são somente os administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Forneça sua [ID da conta do LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
+1. Forneça a ID de sua conta do LinkedIn Campaign Manager.
 
-1. Selecione **Concordo** para confirmar a **Conformidade e privacidade dos dados**.
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
-1. Selecione **Conectar** para inicializar a conexão com o Monitor de Campanha.
+1. Selecione **Conectar** para inicializar a conexão.
 
 1. Selecione **Autenticar com o LinkedIn** e forneça suas credenciais de administrador do LinkedIn Campaign Manager.
 
@@ -56,29 +57,26 @@ Exporte segmentos de perfis de clientes unificados para o LinkedIn Ads para cria
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
-Você poderá configurar uma exportação se tiver acesso a uma conexão desse tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vá para **Dados** > **Exportações**.
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
+1. Selecione **Adicionar exportação**.
 
-1. No campo **Conexão para exportação**, escolha uma conexão da seção do LinkedIn Ads. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
+1. No campo **Conexão para exportação**, escolha uma conexão da seção do LinkedIn Ads. Contate um administrador se nenhuma conexão estiver disponível.
 
-1. Escolha se deseja exportar dados para fazer a [segmentação de contatos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ou a [segmentação de empresas](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) no LinkedIn. 
+1. Insira um nome para a exportação.
 
-1. Nã seção **Correspondência de dados**, para segmentação de contato, selecione pelo menos um campo que representa o endereço de email de um cliente, ID de anúncio da Apple, ID de anúncio do Google, ID de usuário do Google ou nome e sobrenome. Se você escolher a segmentação da empresa, selecione pelo menos um campo que represente o nome da empresa, domínio de e-mail, URL da página do LinkedIn, símbolo de ação ou site. Campos adicionais podem ser selecionados para definir melhor sua exportação. 
+1. Escolha se deseja exportar dados para fazer a [segmentação de contatos](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ou a [segmentação de empresas](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) no LinkedIn.
 
-1. Selecione os segmentos que você deseja exportar. Os públicos-alvo correspondentes no LinkedIn Campaign Manager serão criados automaticamente com o nome dos segmentos que você selecionou para exportação. Cada segmento resultará em um público-alvo correspondente separado. 
+1. Nã seção **Correspondência de dados**, para segmentação de contato, selecione pelo menos um campo que representa o endereço de email de um cliente, ID de anúncio da Apple, ID de anúncio do Google, ID de usuário do Google ou nome e sobrenome. Se você escolher a segmentação da empresa, selecione pelo menos um campo que represente o nome da empresa, domínio de e-mail, URL da página do LinkedIn, símbolo de ação ou site.
+
+1. Se preferir, adicione campos para definir melhor a exportação. Selecione **Adicionar atributo** para mapear esses campos.
+
+1. Selecione os segmentos que você deseja exportar. Os públicos-alvo correspondentes no LinkedIn Campaign Manager serão criados automaticamente com o nome dos segmentos que você selecionou para exportação. Cada segmento resultará em um público-alvo correspondente separado.
 
 1. Selecione **Salvar**.
 
-Salvar uma exportação não a executa imediatamente.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para o LinkedIn Ads, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados que podem ser confidenciais, como Dados Pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o LinkedIn Ads atenda a todas as obrigações de privacidade ou segurança que você possa ter. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Seu Administrador do Dynamics 365 Customer Insights pode remover este destino de exportação a qualquer momento para interromper o uso dessa funcionalidade.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

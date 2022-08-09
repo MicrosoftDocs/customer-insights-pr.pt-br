@@ -1,51 +1,54 @@
 ---
 title: Exportar segmentos para o Sendinblue (versão preliminar)
 description: Saiba como configurar a conexão e exportar para o Sendinblue.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f6550b5c57866702631b4c294bb059279461bd6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080833"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196932"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Exportar segmentos para o Sendinblue (versão preliminar)
 
 Exporte segmentos de perfis de cliente unificados para gerar campanhas, fornecer marketing por email e usar grupos de clientes específicos com o Sendinblue.
 
-## <a name="prerequisites-for-connection"></a>Pré-requisitos para conexão
+## <a name="prerequisites"></a>Pré-requisitos
 
--   Você tem uma [conta do Sendinblue](https://www.sendinblue.com/) e as credenciais de administrador correspondentes.
--   Há listas existentes no Sendinblue e os IDs correspondentes.
--   Você deve ter [segmentos configurados](segments.md).
--   Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
+- Uma [conta do Sendinblue](https://www.sendinblue.com/) e as credenciais de administrador correspondentes.
+- Uma [chave de API do SendinBlue](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
+- Listas existentes no Sendinblue e as IDs correspondentes.
+- [Segmentos configurados](segments.md).
+- Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis de clientes por exportação para o Sendinblue.
-- A exportação para o Sendinblue é limitada a segmentos.
-- Exportar segmentos com um total de 1 milhão de perfis de clientes pode levar até 90 minutos. 
-- O número de perfis de clientes que você pode exportar para o Sendinblue depende e está limitado ao seu contrato com o Sendinblue.
+- Até 1 milhão de perfis de cliente por exportação para o Sendinblue, o que pode levar até 90 minutos. O número de perfis de cliente que você pode exportar para o Sendinblue depende de seu contrato com o Sendinblue.
+- Apenas segmentos.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Configurar conexão com a Sendinblue
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Vá para **Administração** > **Conexões**.
 
-1. Selecione **Adicionar conexão** e escolha **Sendinblue** para configurar a conexão.
+1. Selecione **Adicionar conexão** e escolha **Sendinblue**.
 
 1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
 1. Escolha quem pode usar essa conexão. Por padrão, são apenas administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Digite sua **[Chave de API da Sendinblue](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key)**.
+1. Digite sua **Chave de API do SendinBlue**.
 
-1. Selecione **Aceito** para confirmar a **Privacidade dos dados e conformidade** e selecione **Conectar** para inicializar a conexão com a Sendinblue.
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
+
+1. Selecione **Conectar** para inicializar a conexão.
 
 1. Selecione **Adicionar a si mesmo como usuário de exportação** e forneça suas credenciais do Customer Insights.
 
@@ -53,33 +56,26 @@ Exporte segmentos de perfis de cliente unificados para gerar campanhas, fornecer
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
-Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vá para **Dados** > **Exportações**.
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
+1. Selecione **Adicionar exportação**.
 
-1. No campo **Conexão para exportação**, escolha uma conexão na seção Sendinblue. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
+1. No campo **Conexão para exportação**, escolha uma conexão na seção Sendinblue. Contate um administrador se nenhuma conexão estiver disponível.
 
-1. Digite seu **ID de lista da Sendinblue** 
+1. Insira um nome para a exportação.
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. 
+1. Digite a **ID de lista do Sendinblue**.
 
-1. Como outra opção, você pode exportar o **Nome**, **Sobrenome** e **Telefone** para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente.
 
-1. Selecione os segmentos que você deseja exportar. 
+1. Como opção, você pode exportar o **Nome**, o **Sobrenome** e o **Telefone** para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
+
+1. Selecione os segmentos que você deseja exportar.
 
 1. Selecione **Salvar**.
 
-Salvar uma exportação não a executa imediatamente.
-
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para a Sendinblue, você permite a transferência de dados fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, tais como Dados Pessoais. A Microsoft transferirá esses dados mediante as suas instruções, mas você é responsável por garantir que a Sendinblue cumpra qualquer obrigação de privacidade ou segurança que você venha a ter. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Seu Administrador do Dynamics 365 Customer Insights pode remover este destino de exportação a qualquer momento para interromper o uso dessa funcionalidade.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

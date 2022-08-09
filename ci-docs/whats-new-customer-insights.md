@@ -1,28 +1,56 @@
 ---
 title: Novidades do Dynamics 365 Customer Insights
 description: Informações sobre novos recursos, melhorias e correções de bugs.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054004"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114232"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades do Dynamics 365 Customer Insights
 
 Estamos animados para anunciar nossas atualizações mais recentes! Este artigo resume os recursos de recursos de versão preliminar pública, aprimoramentos de disponibilidade geral e atualizações de recursos. Para ver os planos de recurso a longo prazo, consulte os [Planos de lançamento do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
 
-Distribuímos atualizações por região. Portanto, determinadas regiões podem ver recursos antes de outras. A menos que especificado de forma diferente, você não precisa tomar medidas e atualizaremos o aplicativo automaticamente, sem tempo de inatividade.
+Distribuímos atualizações por região. Portanto, determinadas regiões podem ver recursos antes de outras. A menos que seja especificado de forma diferente, você não precisará tomar nenhuma medida. Atualizaremos o aplicativo automaticamente sem nenhum tempo de inatividade.
 
 > [!TIP]
 > Para enviar e votar em solicitações de recursos e sugestões de produto, acesse o [portal de ideias do aplicativo do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Atualizações de junho de 2022
+
+As atualizações em junho de 2022 incluem novos recursos, atualizações de desempenho e correções de bugs.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Experiência do usuário atualizada para fontes de dados e ingestão de dados
+
+A importação de dados de uma ampla variedade de fontes de dados é a base para a consolidação dos dados de seus clientes no Dynamics 365 Customer Insights. Revisamos a experiência do usuário para a importação e a conexão de fontes de dados. Essa atualização tem como objetivo facilitar a ingestão de dados para o Customer Insights.
+
+Para obter mais informações, consulte [Visão geral de fontes de dados](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Exportar para a InMobi
+
+A InMobi ajuda as marcar a entender, identificar, envolver e adquirir novos clientes. Você pode exportar segmentos e outros dados para o serviço da InMobi por meio de contas do Armazenamento de Blobs do Azure.
+
+Para obter mais informações, consulte [Exportar para a InMobi (versão preliminar)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Suporte ao Sistema de Proteção de Dados no Customer Insights
+
+O Sistema de Proteção de Dados do Cliente fornece uma interface para revisar e aprovar (ou rejeitar) solicitações de acesso a dados. Essas solicitações ocorrem quando o acesso aos dados do cliente é necessário para resolver um caso de suporte.
+
+Para obter mais informações, consulte [Acessar dados do cliente com segurança com o Sistema de Proteção de Dados do Cliente (Versão preliminar)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Conectar seus dados usando o Link Privado do Azure
+
+O Link Privado do Azure permite que o Customer Insights conecte sua conta do Azure Data Lake Storage por um ponto de extremidade privado em sua rede virtual. Para dados em uma conta de armazenamento, que não está exposta à Internet pública, o Link Privado permite a conexão com essa rede restrita.
+
+Para obter mais informações, consulte [Usar Link Privado no Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Atualizações de maio de 2022
 
@@ -169,7 +197,7 @@ Por um período de transição, os participantes existentes da versão prelimina
 - Ver eventos e as propriedades de eventos 
 - Aprimore perfis unificados com eventos ingeridos e refinados para se beneficiar do valor total dos dados de seus clientes
   
-Durante o período de transição, os eventos capturados ainda serão transmitidos para o Data Lake conectado. Depois que essa funcionalidade for desativada, o compartilhamento de dados será interrompido e nenhum novo evento será enviado ao armazenamento conectado.
+Durante o período de transição, os eventos capturados ainda serão transmitidos para o Data Lake conectado. Depois que essa funcionalidade for desativada, o compartilhamento de dados será interrompido e nenhum novo evento será enviado para o armazenamento conectado.
 Contate diretamente a equipe da sua conta Microsoft se tiver dúvidas sobre o fim da versão preliminar do recurso. A equipe da sua conta manterá você atualizado sobre os próximos lançamentos. 
 
 ## <a name="january-2022-updates"></a>Atualizações de janeiro de 2022

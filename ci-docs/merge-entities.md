@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080827"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139643"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unificar campos do cliente para a unificação de dados
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Nesta etapa do processo de unificação, escolha e exclua atributos para mesclar na sua entidade de perfil unificado. Por exemplo, se três entidades tiverem dados de email, talvez você queira manter todos os três campos de email separados ou mesclá-los em um único campo de email para o perfil unificado. Alguns atributos são combinados automaticamente pelo sistema. Você pode criar IDs de cliente estáveis e exclusivas e agrupar perfis relacionados em um cluster.
 

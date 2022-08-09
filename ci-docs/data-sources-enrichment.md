@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080745"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207169"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Enriquecimento de fontes de dados (versão preliminar)
 
@@ -21,9 +21,9 @@ Use dados de fontes como a Microsoft e outros de parceiros para enriquecer os da
 
 ## <a name="enrich-a-data-source"></a>Enriquecer uma fonte de dados
 
-Você deve ter permissões de Colaborador ou Administrador para criar ou editar enriquecimentos. Para obter mais informações, consulte [Permissões](permissions.md).  
+Você deve ter [permissões](permissions.md) de Colaborador ou Administrador para criar ou editar enriquecimentos.  
 
-1. Acesse **Dados** > **Unificar**. Selecione a entidade que deseja enriquecer e selecione um atributo como chave primária para a entidade. Para obter mais informações, consulte a seção [Selecionar chave primária](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Acesse **Dados** > **Unificar**. Selecione a entidade que você deseja enriquecer e selecione um atributo como [chave primária](map-entities.md#select-primary-key-and-semantic-type-for-attributes) para a entidade.
 
 1. Acesse **Dados** > **Fontes de dados**.
 
@@ -47,8 +47,8 @@ Estes são os enriquecimentos disponíveis no momento para fontes de dados. Revi
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gerenciar enriquecimentos de fonte de dados existentes
 
-Acesse a guia **Meus enriquecimentos** para ver todos os enriquecimentos configurados.
+Vá para **Dados** > **Enriquecimento**. Na guia **Meus enriquecimentos**, exiba os enriquecimentos configurados, seus status, o número de clientes enriquecidos e a última vez que os dados foram atualizados. Você pode classificar a lista de enriquecimentos por qualquer coluna ou usar a caixa de pesquisa para encontrar o enriquecimento que deseja gerenciar.
 
-Selecione o enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências verticais (&vellip;) em um item de lista para ver as opções. Se configurou vários enriquecimentos, você poderá usar a caixa de pesquisa para encontrá-los rapidamente.
+Selecione o enriquecimento para ver as opções disponíveis. Você também pode selecionar as reticências verticais (&vellip;) em um item de lista para ver as opções.
 
-Você pode exibir, editar, executar ou excluir um enriquecimento de fonte de dados. Para obter mais informações, consulte a seção [Gerenciar enriquecimentos existentes](enrichment-hub.md).
+Você pode exibir, editar, executar ou excluir um enriquecimento de fonte de dados. Para obter mais informações, consulte a seção [Gerenciar enriquecimentos existentes](enrichment-hub.md#manage-existing-enrichments).

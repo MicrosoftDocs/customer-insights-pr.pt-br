@@ -1,7 +1,7 @@
 ---
 title: Previsão do valor de permanência do cliente (CLV)
 description: Preveja o potencial de receita para clientes ativos no futuro.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055200"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186426"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Previsão do valor de permanência do cliente (CLV)
 
 Preveja o valor potencial (receita) que clientes ativos individuais trarão para o seu negócio por um período futuro definido. Este recurso pode ajudar você a atingir vários objetivos:
+
 - Identificar clientes de alto valor e processar esse insight
 - Criar segmentos de clientes estratégicos com base em seu valor potencial para executar campanhas personalizadas com vendas direcionadas, marketing e esforços de suporte
 - Orientar o desenvolvimento de produtos com foco em recursos que aumentam o valor do cliente
 - Otimizar as vendas ou estratégia de marketing e alocar o orçamento com mais precisão para alcançar o cliente
-- Reconhecer e recompensar clientes de alto valor por meio de programas de fidelidade ou recompensas 
+- Reconhecer e recompensar clientes de alto valor por meio de programas de fidelidade ou recompensas
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -35,7 +36,7 @@ Antes de começar, reflita sobre o que CLV significa para o seu negócio. Atualm
 
 Como configurar e executar um modelo de CLV não leva muito tempo, considere a criação de vários modelos com preferências de entrada variadas e compare os resultados do modelo para ver qual cenário do modelo melhor se adapta às suas necessidades de negócios.
 
-###  <a name="data-requirements"></a>Requisitos de dados
+### <a name="data-requirements"></a>Requisitos de dados
 
 Os dados a seguir são obrigatórios e, quando marcados como opcionais, são recomendados para aumentar o desempenho do modelo. Quanto mais dados o modelo puder processar, mais precisa será a previsão. Portanto, recomendamos que você ingira mais dados de atividade do cliente, se disponíveis.
 
@@ -52,11 +53,12 @@ Os dados a seguir são obrigatórios e, quando marcados como opcionais, são rec
     - Atividades na Web: histórico de visitas ao site, histórico de email
     - Atividades de fidelidade: histórico de acúmulo e resgate de pontos de recompensa de fidelidade
     - Registro de SAC, chamada de serviço, reclamação ou histórico de devolução
+    - Informações do perfil do cliente
 - Dados sobre atividades do cliente (opcional):
     - Identificadores de atividades para diferenciar atividades do mesmo tipo
     - Identificadores de clientes para mapear atividades para os clientes
     - Informações de atividades que contêm o nome e a data da atividade
-    - O esquema de dados semânticos para atividades inclui: 
+    - O esquema de dados semânticos para atividades inclui:
         - **Chave primária:** um identificador exclusivo para uma atividade
         - **Carimbo de data/hora:** a data e a hora do evento identificado pela chave primária
         - **Evento (nome da atividade)**: o nome do evento que você deseja usar
@@ -66,7 +68,7 @@ Os dados a seguir são obrigatórios e, quando marcados como opcionais, são rec
     - Dados históricos suficientes: no mínimos um ano de dados transacionais. De preferência, dois a três anos de dados transacionais para prever o CLV para um ano.
     - Várias compras por cliente: idealmente, pelo menos duas a três transações por ID do cliente, de preferência em várias datas.
     - Número de clientes: pelo menos 100 clientes exclusivos, de preferência mais de 10.000 clientes. O modelo falhará com menos de 100 clientes e dados históricos insuficientes
-    - Plenitude dos dados: menos de 20% dos valores ausentes nos campos obrigatórios dos dados de entrada   
+    - Plenitude dos dados: menos de 20% dos valores ausentes nos campos obrigatórios dos dados de entrada
 
 > [!NOTE]
 > - O modelo requer o histórico de transações de seus clientes. Apenas uma entidade de histórico de transações pode ser configurada atualmente. Se houver várias entidades de compra/transação, você poderá uni-las no Power Query antes da ingestão de dados.
@@ -120,13 +122,13 @@ Os dados a seguir são obrigatórios e, quando marcados como opcionais, são rec
 
       :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Imagem da etapa de configuração para definir o relacionamento com a entidade cliente.":::
 
-1. Selecione **Avançar**.
+1. Selecione **Avançar**
 
-### <a name="add-optional-data"></a>Adicionar dados opcionais
+### <a name="add-optional-activity-data"></a>Adicionar dados opcionais de atividade
 
-Os dados que refletem as principais interações do cliente (como Web, SAC e logs de eventos) adicionam contexto aos registros de transações. Mais padrões encontrados nos dados de atividade do cliente podem melhorar a precisão das previsões. 
+Os dados que refletem as principais interações do cliente (como Web, SAC e logs de eventos) adicionam contexto aos registros de transações. Mais padrões encontrados nos dados de atividade do cliente podem melhorar a precisão das previsões.
 
-1. Na etapa **Dados adicionais (opcional)**, selecione **Adicionar dados**. Escolha a entidade de atividade do cliente que fornece as informações de atividade do cliente, conforme descrito nos [pré-requisitos](#prerequisites).
+1. Na etapa **Dados adicionais (opcional)**, selecione **Adicionar dados** em **Aumentar insights do modelo com dados adicionais de atividade**. Escolha a entidade de atividade do cliente que fornece as informações de atividade do cliente, conforme descrito nos [pré-requisitos](#prerequisites).
 
 1. Mapeie os campos semânticos para atributos na sua entidade de atividades do cliente e selecione **Avançar**.
 
@@ -135,17 +137,36 @@ Os dados que refletem as principais interações do cliente (como Web, SAC e log
 1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que você está adicionando. Escolha um dos tipos de atividade existentes ou adicione um novo tipo de atividade.
 
 1. Configure o relacionamento da sua entidade de atividade do cliente com a entidade *Cliente*.
-    
+
     1. Selecione o campo que identifica o cliente na tabela de atividades do cliente. Ele pode estar diretamente relacionado à ID do cliente principal da sua entidade *Cliente*.
     1. Selecione a entidade *Cliente* que corresponde à entidade *Cliente* primário.
     1. Insira um nome que descreva a relação.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Imagem da etapa no fluxo de configuração para adicionar dados adicionais e configurar a atividade com exemplos preenchidos.":::
 
-1. Selecione **Salvar**.    
+1. Selecione **Salvar**.
     Adicione mais dados se houver outras atividades do cliente que você deseja incluir.
 
-1. Selecione **Avançar**.
+1. Adicione dados opcionais do cliente ou selecione **Avançar**.
+
+### <a name="add-optional-customer-data"></a>Adicionar dados opcionais do cliente
+
+Selecione a partir de 18 atributos de perfil de cliente comumente usados para incluir como uma entrada para o modelo. Esses atributos podem levar a resultados de modelo mais personalizados, relevantes e práticos para seus casos de uso comercial.
+
+Por exemplo: a Contoso Coffee deseja prever o valor da vida útil do cliente para direcionar aos clientes de lato valor uma oferta personalizada relacionada ao lançamento de sua nova máquina de café expresso. A Contoso usa o modelo CLV e adiciona todos os 18 atributos de perfil do cliente para ver quais fatores influenciam seus clientes de valor mais alto. Eles descobrem que a localização do cliente é o fator mais influenciável para esses clientes.
+Com essas informações, eles organizam um evento local para o lançamento da máquina de café expresso e fazem parceira com fornecedores locais para ofertas personalizadas e uma experiência especial no evento. Sem essas informações, a Contoso poderia ter enviado somente emails de marketing genéricos e perdido a oportunidade de personalizar para esse segmento local de seus clientes de alto valor.
+
+1. Na etapa **Dados adicionais (opcional)**, selecione **Adicionar dados** em **Aumentar ainda mais os insights do modelo com dados adicionais de clientes**.
+
+1. Em **Entidade**, escolha **Customer : CustomerInsights** para selecionar a tabela de perfis unificados de cliente que mapeia para dados de atributo do clientes. Em **ID do Cliente**, escolha **System.Customer.CustomerId**.
+
+1. Mapeie mais campos se os dados estiverem disponíveis em seus perfis unificados de cliente.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Exemplo de campos mapeados para dados de perfil do cliente.":::
+
+1. Selecione **Salvar** depois de mapear os atributos que o modelo deve usar para ajudar a prever o valor da vida útil do cliente.
+
+1. Selecione **Avançar**
 
 ### <a name="set-update-schedule"></a>Definir cronograma de atualização
 

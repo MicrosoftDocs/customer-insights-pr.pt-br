@@ -1,52 +1,53 @@
 ---
 title: Exportar segmentos para o Constant Contact (versão preliminar)
 description: Saiba como configurar a conexão e exportar para o Constant Contact.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fe9706a7cd0755412ee18c4b974684bb9aa3f8d3
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080789"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196472"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportar segmentos para o Constant Contact (versão preliminar)
 
-Exporte segmentos de perfis de clientes unificados para o Constant Contact e use-os para atividades de marketing. 
+Exporte segmentos de perfis de clientes unificados para o Constant Contact e use-os para atividades de marketing.
 
-## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma conexão
+## <a name="prerequisites"></a>Pré-requisitos
 
--   Você deve ter uma [conta do Constant Contact](https://www.constantcontact.com/account-home) e as credenciais de administrador correspondentes.
--   Você tem [segmentos configurados](segments.md) no Customer Insights.
--   Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
+- Uma [conta do Constant Contact](https://www.constantcontact.com/account-home) e as credenciais de administrador correspondentes.
+- Uma [ID de lista do Constant Contact](https://app.constantcontact.com/pages/contacts/ui#lists). Abra uma lista no Constant Contact para localizar a ID da lista na URL.
+- [Segmentos configurados](segments.md) no Customer Insights.
+- Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de email.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Você pode exportar até 1 milhão de perfis de clientes por exportação para o Constant Contact.
-- A exportação para o Constant Contact é limitada a segmentos.
-- Exportar até 1 milhão de perfis de clientes para Constant Contact pode levar até 1 hora para ser concluído. 
-- O número de perfis de clientes que você pode exportar para Constant Contact depende e está limitado ao seu contrato com Constant Contact.
+- Até 1 milhão de perfis de cliente por exportação para o Constant Contact, o que pode levar até uma hora. O número de perfis de cliente que você pode exportar para Constant Contact depende de seu contrato com o Constant Contact.
+- Apenas segmentos.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Configurar conexão com o Constant Contact
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Vá para **Administração** > **Conexões**.
 
-1. Selecione **Adicionar conexão** e escolha **Constant Contact** para configurar a conexão.
+1. Selecione **Adicionar conexão** e escolha **Constant Contact**.
 
 1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
-1. Escolha quem pode usar essa conexão. Se você não fizer nada, o padrão será Administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolha quem pode usar essa conexão. Por padrão, são somente os administradores. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Selecione **Concordo** para confirmar a **Conformidade e privacidade dos dados**.
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
-1. Selecione **Conectar** para inicializar a conexão com o Constant Contact.
+1. Selecione **Conectar** para inicializar a conexão.
 
-1. Selecione **Autenticar com Constant Contact** e forneça suas credenciais de administrador para o Constant Contact. 
+1. Selecione **Autenticar com Constant Contact** e forneça suas credenciais de administrador para o Constant Contact.
 
 1. Selecione **Adicionar a si mesmo como usuário de exportação** e forneça suas credenciais do Customer Insights.
 
@@ -54,31 +55,26 @@ Exporte segmentos de perfis de clientes unificados para o Constant Contact e use
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
-Você pode configurar esta exportação se tiver acesso a uma conexão deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Vá para **Dados** > **Exportações**.
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
+1. Selecione **Adicionar exportação**.
 
-1. No campo **Conexão para exportação**, escolha uma conexão da seção do Constant Contact. Se não vir este nome de seção, não há conexões deste tipo disponíveis para você.
+1. No campo **Conexão para exportação**, escolha uma conexão da seção do Constant Contact. Contate um administrador se nenhuma conexão estiver disponível.
 
-1. Insira sua [**ID da Lista do Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Abra uma lista no Constant Contact para localizar a ID da lista na URL.
+1. Insira um nome para a exportação.
 
-1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente. A exportação de segmentos para o Constant Contact é necessária.
+1. Insira a **ID de Lista do Constant Contact**.
 
-1. Opcionalmente, você pode exportar Nome e Sobrenome como campos adicionais para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
+1. Na seção **Correspondência de dados**, no campo **Email**, selecione o campo que representa o endereço de email de um cliente.
+
+1. Como opção, exporte **Nome** e **Sobrenome** como campos adicionais para criar emails mais personalizados. Selecione **Adicionar atributo** para mapear esses campos.
 
 1. Selecione os segmentos que você deseja exportar.
 
 1. Selecione **Salvar**.
 
-Salvar uma exportação não a executa imediatamente.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Você também pode [exportar dados sob demanda](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para o Constant Contact, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados potencialmente confidenciais, como Dados Pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o Constant Contact atenda a todas as obrigações de privacidade ou segurança que você possa ter. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Seu Administrador do Dynamics 365 Customer Insights pode remover este destino de exportação a qualquer momento para interromper o uso dessa funcionalidade.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

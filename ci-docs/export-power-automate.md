@@ -1,19 +1,19 @@
 ---
 title: Conector do Power Automate (versão preliminar) | Microsoft Docs
 description: Criar fluxos no Microsoft Power Automate a partir do Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080803"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196104"
 ---
 # <a name="power-automate-connector-preview"></a>Conector do Power Automate (versão prévia)
 
@@ -21,18 +21,18 @@ Dispare eventos específicos para ocorrerem automaticamente quando os dados fore
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Você pode fazer no máximo 100 chamadas por 60 segundos. Você pode fazer uma chamada para o ponto de extremidade da API várias vezes usando o parâmetro $skip. [Saiba mais sobre o parâmetro $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- No máximo, 100 chamadas a cada 60 segundos. Use o [parâmetro $skip](/connectors/customerinsights/#get-items-from-an-entity) para chamar o ponto de extremidade de API várias vezes.
 
 ## <a name="power-automate-triggers"></a>Gatilhos do Power Automate
 
-Use gatilhos para criar fluxos da nuvem e automatizar tarefas repetitivas, como notificações ou ações mais avançadas.
+Use gatilhos para criar fluxos da nuvem e automatizar tarefas repetitivas, como notificações ou ações mais avançadas. Use gatilhos quando:
 
-- Gatilho quando uma atualização fonte de dados falhar.
-- Gatilho quando uma atualização fonte de dados for bem-sucedida.
-- Gatilho quando um limite for ultrapassado em um segmento. O gatilho é limitado ao cruzamento acima do limite.
-- Gatilho quando um limite for ultrapassado em uma medida de negócios. Somente medidas de negócios sem uma dimensão contam com suporte. O gatilho é limitado ao cruzamento acima do limite.
-- Acione quando uma atualização completa de (fontes de dados, segmentos, medidas, ...) for concluída.
-- Disparador quando uma atualização do processo de unificação for concluída.
+- Uma atualização de fonte de dados falhar.
+- Uma atualização de fonte de dados for bem-sucedida.
+- Um limite for ultrapassado em um segmento. O gatilho é limitado ao cruzamento acima do limite.
+- Um limite for ultrapassado em uma medida de negócios. Somente medidas de negócios sem uma dimensão contam com suporte. O gatilho é limitado ao cruzamento acima do limite.
+- Uma atualização completa agendada for concluída. Esse gatilho não funciona para atualizações iniciadas manualmente.
+- Uma atualização do processo de unificação for concluída.
 
 [Configurar seus gatilhos no Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ O conector do Power Automate fornece outras ações além dos gatilhos disponív
 
 ## <a name="create-a-power-automate-flow"></a>Criar um fluxo do Power Automate
 
-1. Vá para **Administrador** > **Exportar destinos**.
+1. Vá para **Administração** > **Conexões**.
 
 1. No bloco do **Power Automate**, selecione **Configurar**.
 
@@ -53,7 +53,5 @@ O conector do Power Automate fornece outras ações além dos gatilhos disponív
 Exemplos de como usar os fluxos: 
 - Publique uma mensagem em um canal do Microsoft Teams se houver falha na atualização da fonte de dados. 
 - Envie um email para os proprietários dos dados quando um limite em um segmento for excedido.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

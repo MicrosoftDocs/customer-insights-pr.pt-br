@@ -1,7 +1,7 @@
 ---
-title: 'Perfis de clientes: índice de filtro e pesquisa'
+title: Gerenciar o índice pesquisar e filtrar para perfis de cliente
 description: Encontre rapidamente informações sobre perfis unificados de clientes e filtre os atributos especificados.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050795"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187895"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Perfis de clientes: índice de filtro e pesquisa
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Gerenciar o índice pesquisar e filtrar para perfis de cliente
 
-O resultado da unificação dos dados do cliente é uma entidade de Perfil do Cliente que fornece uma visão unificada da sua base total de clientes. Para [encontrar informações rapidamente sobre um cliente ou grupo de clientes específico](customer-profiles.md), você pode configurar o recurso **Pesquisar** e **Filtrar** na página **Clientes**. Leia para saber como os administradores podem editar os atributos na página **Índice de pesquisa e filtro**, que estão disponíveis para os usuários pesquisarem e filtrarem.
+O resultado da unificação dos dados de seus clientes é uma entidade *Cliente* que fornece uma exibição unificada de sua base total de clientes. Para que os usuários [encontrarem informações sobre um cliente ou grupo de clientes específico](customer-profiles.md) com rapidez, um administrador deve configurar os recursos **Pesquisar** e **Filtrar** da página **Clientes**.
 
    :::image type="content" source="media/search-filter.png" alt-text="Filtro de pesquisa":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Definir atributos pesquisáveis e campos indexados
 
-## <a name="add-fields-and-specify-attributes"></a>Adicionar campos e especificar atributos
+Se for a primeira vez que você define atributos pesquisáveis como administrador, defina os campos indexados primeiro. Sugerimos que você escolha todos os atributos pelos quais os usuários possam pesquisar e filtrar clientes na página **Clientes**. Somente os atributos que existem na entidade *Cliente* criados durante o processo de unificação dos dados podem ser especificados.
 
-Se for a primeira vez que você define atributos pesquisáveis como administrador, você precisará primeiro definir os campos indexados. Sugerimos que você escolha todos os atributos pelos quais os usuários possam pesquisar e filtrar clientes na página **Clientes**. Você só pode especificar atributos que existem na entidade Perfil do Cliente que você criou durante o processo de unificação de dados.
+1. Acesse **Clientes** e selecione **Índice pesquisar e filtrar**.
 
-1. Abra a página **Clientes** e selecione **Índice de filtro e pesquisa**.
+1. Selecione **+ Adicionar**.
 
-2. Selecione **+ Adicionar** para especificar os campos indexados.
+1. Selecione o atributo na lista que deseja adicionar como campos indexados e clique em **Aplicar**.
 
-3. Selecione os atributos na lista que você deseja adicionar como campos indexados. Você sempre pode adicionar mais atributos selecionando **Adicionar**. Você também pode remover quaisquer atributos selecionados usando o símbolo **Remover**.
+1. Para adicionar mais atributos, selecione **Adicionar**. Para remover um atributo selecionado, selecione-o e, em seguida, selecione **Excluir**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Explore a tabela de campos do cliente Indexado
+   :::image type="content" source="media/search-filter-index.png" alt-text="Página Índice pesquisar e filtrar":::
 
-As informações a seguir são apresentadas na tabela.
+1. Selecione **Executar** quando estiver pronto para aplicar as configurações de pesquisa e filtro. Depois que as alterações forem processadas, exiba-as nos [cartões de cliente na página Cliente](customer-profiles.md).
 
-- **Nome**: Representa o nome do atributo, como aparece na entidade Perfil do Cliente.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Definir as opções de filtragem para um determinado atributo
+
+Configure os campos que podem ser usados para a filtragem de clientes na página **Clientes**.
+
+1. Acesse **Clientes** e selecione **Índice pesquisar e filtrar**.
+
+1. Selecione um atributo e **Adicionar filtro**. Defina o número de resultados e a ordem na qual eles serão organizados. Dependendo do tipo de dados do atributo, um dos painéis a seguir será exibido.
+
+   - Atributos do tipo cadeia de caracteres: especifique o número de resultados desejados no painel **Filtro de cadeia de caracteres** e a política de ordem pela qual eles serão organizados.
+
+   - Atributos do tipo numérico: especifique os intervalos incluídos no painel **Filtro de números** e a política de ordem pela qual eles serão organizados.
+
+   - Atributos do tipo data: especifique os intervalos incluídos no painel **Filtro de datas** e a política de ordem pela qual eles serão organizados.
+
+1. Selecione **OK**. Repita para todos os atributos pelos quais deseja filtrar.
+
+1. Selecione **Executar** quando estiver pronto para aplicar as configurações de pesquisa e filtro. Depois que as alterações forem processadas, exiba-as nos [cartões de cliente na página Cliente](customer-profiles.md).
+
+## <a name="view-indexed-customer-fields"></a>Exibir campos do cliente indexados
+
+A página **Índice pesquisar e filtrar** exibe as seguintes informações:
+
+- **Nome**: representa o nome do atributo como ela aparece na entidade *Cliente*.
 - **Tipo de dados**: Especifica se o tipo de dados é uma cadeia de caracteres, um número ou uma data.
 - **Incluído na pesquisa**: Especifica se esse atributo pode ser usado para pesquisar clientes na página **Clientes** usando o campo **Pesquisar**.
 - **Adicionar Filtro**: Controle para definir como esse atributo pode ser usado para filtrar a página **Clientes**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Editando opções de filtragem para um determinado atributo
-
-O menu **Filtro** na página **Clientes** pode incluir um número variável de níveis de atributo (por exemplo, diferentes faixas etárias para filtrar os clientes).
-
-1. Selecione **Adicionar Filtro** para um determinado atributo na página **Índice de pesquisa e filtro**. Você pode definir o número de resultados e a ordem em que eles serão organizados. Dependendo do tipo de dados do atributo, um dos seguintes painéis será exibido.
-
-- Atributos do tipo de string: Especifique o número de resultados desejados no painel **Opções do filtro da string** e a política de ordem pela qual eles serão organizados.
-
-- Atributos do tipo numérico: Especifique os intervalos incluídos no painel **Opções do filtro de número** e a política de ordem pela qual eles serão organizados.
-
-- Atributos do tipo de data: Especifique os intervalos incluídos no painel **Opções do filtro de data** e a política de ordem pela qual eles serão organizados.
-
-2. Selecione **Salvar** para aplicar suas alterações.
-
-3. Selecione **Executar** quando estiver pronto para aplicar suas configurações. Após o processamento das alterações, você as encontrará nos [cartões de cliente na página Cliente](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Próximas etapas
 
 Analise a [página de perfis unificados](customer-profiles.md) para pesquisar perfis ou usar os campos indexados para ver um subconjunto de todos os perfis unificados.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

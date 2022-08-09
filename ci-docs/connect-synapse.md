@@ -1,7 +1,7 @@
 ---
 title: Conectar-se a uma fonte de dados do Azure Synapse (versão preliminar)
 description: Use um banco de dados no Azure Synapse como um fonte de dados no Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052685"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206893"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Conectar-se a uma fonte de dados do Azure Synapse Analytics (versão preliminar)
 
@@ -66,3 +66,9 @@ Para obter mais informações, consulte [Visão geral do Azure Synapse](/azure/s
 1. Opcionalmente, escolha as entidades de dados na qual permitir a criação de perfil de dados.
 
 1. Selecione **Salvar** para aplicar sua seleção e iniciar a ingestão dos dados da fonte de dados recém-criada vinculado às tabelas do banco de dados Lake no Azure Synapse Analytics. A página **Fontes de dados** abre mostrando a nova fonte de dados no status **Atualizando**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+O carregamento de dados pode levar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página [**Entidades**](entities.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080744"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195160"
 ---
 # <a name="connections-preview-overview"></a>Visão geral de conexões (versão preliminar)
 
@@ -27,6 +27,12 @@ Acesse **Administração** > **Conexões** para criar e visualizar conexões.
 A guia **Conexões** mostra todas as conexões ativas. A lista mostra uma linha para cada conexão.
 
 Obtenha uma rápida visão geral, uma descrição e descubra o que você pode fazer com cada opção de extensibilidade na guia **Descobrir**.
+
+## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
+
+Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para terceiros ou para outros produtos da Microsoft, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados que podem ser confidenciais, como Dados Pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que o terceiro cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+O administrador do Dynamics 365 Customer Insights poderá remover a conexão a qualquer momento para interromper o uso da funcionalidade.
 
 ## <a name="exports"></a>Exportações
 
@@ -41,8 +47,6 @@ Somente os administradores podem configurar novas conexões, mas as conexões cr
 Para adicionar conexões, você deve ter [permissões de administrador](permissions.md). Se você se conectar a outros serviços da Microsoft, presumimos que os serviços estejam na mesma organização.
 
 1. Acesse **Administração** > **Conexões (versão preliminar)**.
-
-1. Acesse a guia **Conexões**.
 
 1. Selecione **Adicionar conexão** para criar uma conexão. Escolha no menu suspenso o tipo de conexão que deseja criar.
 
@@ -99,3 +103,5 @@ Os enriquecimentos e as exportações separados tornam-se inativos. Você os rea
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar conexões com segredos gerenciados por seu próprio Key Vault
 
 Algumas conexões precisam de segredos como chaves de API ou senhas. Algumas conexões oferecem suporte a segredos armazenados em seu Key Vault. Saiba mais sobre as conexões compatíveis e como configurá-las em [seu próprio Key Vault para Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]
