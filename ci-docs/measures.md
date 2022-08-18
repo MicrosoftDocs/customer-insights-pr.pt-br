@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170806"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245359"
 ---
 # <a name="measures-overview"></a>Visão geral de medidas
 
@@ -53,7 +53,7 @@ Selecione Avançar em uma medida para exibir as ações disponíveis. Selecione 
 - **Editar** a medida para alterar suas propriedades.
 - **Atualizar** a medida para incluir os dados mais recentes.
 - **Renomear** a medida.
-- **Ativar** ou **Desativar** a medida. As medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab) e terão o **Status** listado como **Ignorada**, indicando que nem mesmo houve tentativa de atualização.
+- **Ativar** ou **Desativar** a medida. As medidas inativas não serão atualizadas durante uma [atualização agendada](schedule-refresh.md) e terão o **Status** listado como **Ignorada**, indicando que nem mesmo houve tentativa de atualização.
 - **Marcar** para [gerenciar marcas](work-with-tags-columns.md#manage-tags) para a medida.
 - **Excluir** a medida.
 - **Colunas** para [personalizar as colunas](work-with-tags-columns.md#customize-columns) que são exibidas.
@@ -62,7 +62,7 @@ Selecione Avançar em uma medida para exibir as ações disponíveis. Selecione 
 
 ## <a name="refresh-measures"></a>Atualizar medidas
 
-As medidas podem ser atualizadas em uma agenda automática ou ser atualizadas manualmente sob demanda. Para atualizar manualmente uma ou mais medidas, selecione-as e escolha **Atualizar**. Para [agendar uma atualização automática](system.md#schedule-tab), acesse **Administrador** > **Sistema** > **Agenda**.
+As medidas podem ser atualizadas em uma agenda automática ou ser atualizadas manualmente sob demanda. Para atualizar manualmente uma ou mais medidas, selecione-as e escolha **Atualizar**. Para [agendar uma atualização automática](schedule-refresh.md), acesse **Administrador** > **Sistema** > **Agenda**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

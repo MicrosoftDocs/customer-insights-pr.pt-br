@@ -1,7 +1,7 @@
 ---
 title: Visão geral de conexões (versão preliminar)
 description: Conexões com outros serviços do Customer Insights.
-ms.date: 04/09/2021
+ms.date: 08/04/2022
 ms.reviewer: nikeller
 ms.subservice: audience-insights
 ms.topic: overview
@@ -11,91 +11,89 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8580dc7d90c75f66f73efc15f8e38f5e10fbb8a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195160"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245497"
 ---
 # <a name="connections-preview-overview"></a>Visão geral de conexões (versão preliminar)
 
-As conexões são a chave para permitir o compartilhamento de dados do Customer Insights e com o Customer Insights. Cada conexão estabelece o compartilhamento de dados com um serviço específico. As conexões são a base para [configurar enriquecimentos de terceiros](enrichment-hub.md) e [configurar exportações](export-destinations.md). A mesma conexão pode ser usada várias vezes. Por exemplo, uma conexão com o Dynamics 365 Marketing funciona para várias exportações e uma conexão da Leadspace pode ser usada para vários enriquecimentos.
+As conexões são a chave para permitir o compartilhamento de dados do Customer Insights e com o Customer Insights. Cada conexão estabelece o compartilhamento de dados com um serviço específico. Use conexões para [configurar enriquecimentos de terceiros](enrichment-hub.md) e [configurar exportações](export-destinations.md). A mesma conexão pode ser usada várias vezes. Por exemplo, uma conexão com o Dynamics 365 Marketing funciona para várias exportações e uma conexão da Leadspace pode ser usada para vários enriquecimentos.
 
-Acesse **Administração** > **Conexões** para criar e visualizar conexões.
+## <a name="export-connections"></a>Conexões de exportação
 
-A guia **Conexões** mostra todas as conexões ativas. A lista mostra uma linha para cada conexão.
+Somente os administradores podem configurar novas conexões, mas eles podem [conceder acesso aos colaboradores](#allow-contributors-to-use-a-connection-for-exports) para usarem as conexões existentes. Os administradores controlam para onde os dados podem ir, os colaboradores definem o conteúdo e a frequência de acordo com suas necessidades.
 
-Obtenha uma rápida visão geral, uma descrição e descubra o que você pode fazer com cada opção de extensibilidade na guia **Descobrir**.
-
-## <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para terceiros ou para outros produtos da Microsoft, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados que podem ser confidenciais, como Dados Pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que o terceiro cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-O administrador do Dynamics 365 Customer Insights poderá remover a conexão a qualquer momento para interromper o uso da funcionalidade.
-
-## <a name="exports"></a>Exportações
-
-Somente os administradores podem configurar novas conexões, mas eles podem conceder acesso aos colaboradores para usarem as conexões existentes. Os administradores controlam para onde os dados podem ir, os colaboradores definem o conteúdo e a frequência de acordo com suas necessidades. Para obter mais informações, consulte [Permitir que os colaboradores usem uma conexão para exportações](#allow-contributors-to-use-a-connection-for-exports).
-
-## <a name="enrichments"></a>Enriquecimentos
+## <a name="enrichment-connections"></a>Conexões de enriquecimento
 
 Somente os administradores podem configurar novas conexões, mas as conexões criadas estão sempre disponíveis para os administradores e os colaboradores. Os administradores gerenciam credenciais e fornecem consentimento para a transferências de dados. As conexões podem então ser usadas para enriquecimentos pelos administradores e colaboradores.
 
 ## <a name="add-a-new-connection"></a>Adicionar uma nova conexão
 
-Para adicionar conexões, você deve ter [permissões de administrador](permissions.md). Se você se conectar a outros serviços da Microsoft, presumimos que os serviços estejam na mesma organização.
+### <a name="prerequisites"></a>Pré-requisitos
 
-1. Acesse **Administração** > **Conexões (versão preliminar)**.
+- [Permissões de administrador](permissions.md)
+- Outros serviços da Microsoft, se houver, estão na mesma organização
 
-1. Selecione **Adicionar conexão** para criar uma conexão. Escolha no menu suspenso o tipo de conexão que deseja criar.
+1. Vá para **Administração** > **Conexões**.
 
-1. No painel **Configurar conexão**, forneça os detalhes necessários.
-   1. O **Nome de exibição** e o tipo de conexão descrevem uma conexão. Recomendamos escolher um nome que explique a finalidade e o objetivo dessa conexão.
-   1. Os campos exatos dependem do serviço ao qual você está se conectando. Você pode saber mais sobre os detalhes de um tipo de conexão específico no artigo sobre o serviço de destino.
-   1. Se você [usar seu próprio Key Vault](use-azure-key-vault.md) para armazenar segredos, ative **Usar Key Vault** e escolha o segredo da lista.
+1. Selecione **Adicionar conexão** e escolha o tipo de conexão que deseja criar. Ou, acesse a guia **Descobrir** e selecione **Configurar** em um bloco de conexão.
 
-1. Para criar a conexão, selecione **Salvar**.
+1. Dê um nome reconhecível à sua conexão no campo **Nome de exibição**. O nome e o tipo da conexão a descrevem. Recomendamos escolher um nome que explique a finalidade e o objetivo da conexão.
 
-Você também pode selecionar **Configurar** em um bloco na aba **Descobrir**.
+1. Insira os detalhes necessários. Os campos exatos dependem do serviço ao qual você está se conectando. Para os detalhes de um tipo de conexão específico, consulte o artigo sobre o serviço de destino.
 
-### <a name="allow-contributors-to-use-a-connection-for-exports"></a>Permitir que os colaboradores usem uma conexão para exportações
+1. Se você [usar seu próprio Key Vault](use-azure-key-vault.md) para armazenar segredos, ative **Usar Key Vault** e escolha o segredo da lista.
 
-Ao configurar ou editar uma conexão de exportação, você escolhe quais usuários têm permissão para usar esta conexão específica para definir [exportações](export-destinations.md). Por padrão, uma conexão está disponível para os usuários com função de administrador. Você pode alterar essa configuração em **Escolher quem pode usar esta conexão** e permitir que os usuários com função de colaborador usem a conexão.
+1. Examine a conformidade e privacidade dos dados e selecione **Concordo**.
+
+1. Selecione **Salvar** para criar a conexão.
+
+### <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
+
+Ao habilitar o Dynamics 365 Customer Insights para transmitir dados para terceiros ou para outros produtos da Microsoft, você permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados que podem ser confidenciais, como Dados Pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que o terceiro cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+O administrador do Dynamics 365 Customer Insights poderá remover a conexão a qualquer momento para interromper o uso da funcionalidade.
+
+## <a name="allow-contributors-to-use-a-connection-for-exports"></a>Permitir que os colaboradores usem uma conexão para exportações
+
+Ao configurar ou editar uma conexão de exportação, escolha quais usuários têm permissão para usar esta conexão específica para definir [exportações](export-destinations.md). Por padrão, uma conexão está disponível para os usuários com função de administrador. Altere a configuração **Escolher quem pode usar esta conexão** para permitir que os usuários com a função de colaborador usem a conexão.
 
 - Os colaboradores não poderão visualizar ou editar a conexão. Eles verão apenas o nome de exibição e seu tipo ao criar uma exportação.
 - Ao compartilhar uma conexão, você permite que os colaboradores usem uma conexão. Os colaboradores verão as conexões compartilhadas ao configurar as exportações. Eles podem gerenciar todas as exportações que usam essa conexão específica.
 - Você pode alterar essa configuração enquanto mantém as exportações que já foram definidas pelos colaboradores.
 
-## <a name="edit-a-connection"></a>Editar uma conexão
+## <a name="manage-existing-connections"></a>Gerenciar conexões existentes
 
-1. Acesse **Administração** > **Conexões (versão preliminar)**.
+1. Vá para **Administração** > **Conexões**.
 
-1. Acesse a guia **Conexões**.
+1. Selecione a guia **Enriquecimento** ou **Exportações** para exibir uma lista de conexões de enriquecimento ou de exportação, o tipo de conexão, quando ela foi criada e quem tem acesso. Você pode classificar a lista de conexões por qualquer coluna.
 
-1. Selecione as reticências verticais (&vellip;) para a conexão que você deseja editar.
+1. Selecione a conexão para exibir as ações disponíveis.
 
-1. Selecione **Editar**.
+   - **Edite** a conexão.
+   - [**Remova**](#remove-a-connection) uma conexão.
 
-1. Altere os valores que deseja atualizar e selecione **Salvar**.
+### <a name="remove-a-connection"></a>Remover uma conexão
 
-## <a name="remove-a-connection"></a>Remover uma conexão
+Se a conexão que você está removendo for usada por enriquecimentos ou exportações, desanexe-os ou remova-os primeiro. A caixa de diálogo de remoção guiará você para os enriquecimentos ou exportações relevantes.
 
-Se a conexão que você está removendo for usada por enriquecimentos ou exportações, primeiro você precisa desanexá-los ou removê-los. A caixa de diálogo de remoção guiará você para os enriquecimentos ou exportações relevantes.
+> [!TIP]
+> Os enriquecimentos desativados e as exportações desanexadas tornam-se inativos. Você os reativa adicionando outra conexão a eles na página [Enriquecimentos](enrichment-hub.md) ou [Exportações](export-destinations.md).
 
-Os enriquecimentos e as exportações separados tornam-se inativos. Você os reativa adicionando outra conexão a eles na página [Enriquecimentos](enrichment-hub.md) ou [Exportações](export-destinations.md).
+1. Vá para **Administração** > **Conexões**.
 
-1. Acesse **Administração** > **Conexões (versão preliminar)**.
+1. Selecione a guia **Enriquecimento** ou **Exportações**.
 
-1. Acesse a guia **Conexões**.
-
-1. Selecione as reticências verticais (&vellip;) para a conexão que você deseja remover.
+1. Selecione a conexão que deseja remover.
 
 1. Selecione **Remover** no menu suspenso. Uma caixa de diálogo de confirmação será exibida.
 
    1. Se houver enriquecimentos ou exportações usando a conexão, selecione o botão para ver o que está usando-a.
-      - **Exportações:** você pode optar por remover ou desconectar as exportações para poder remover a conexão. Para desconectar uma exportação, os administradores podem usar a ação **Desconectar**. Esta ação está disponível para exportações individuais e múltiplas selecionadas. Ao desconectar, você mantém a configuração de exportação, mas ela não será executada até que outra conexão seja adicionada a ela.
-      - **Enriquecimentos:** você pode optar por remover ou desativar os enriquecimentos para poder remover a conexão.
+      - **Exportações:** escolha entre **Remover** a exportação ou **Desanexar a conexão**. Desanexar a conexão mantém a configuração de exportação, mas ela não será executada até que outra conexão seja adicionada a ela.
+      - **Enriquecimentos:** escolha entre **Excluir** ou **Desativar** os enriquecimentos.
    1. Assim que a conexão não tiver mais dependências, volte para **Administração** > **Conexões** e tente remover a conexão novamente.
 
 1. Para confirmar a exclusão, selecione **Remover**.

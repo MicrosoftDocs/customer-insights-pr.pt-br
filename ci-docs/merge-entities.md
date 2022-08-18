@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139643"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213568"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unificar campos do cliente para a unificação de dados
 
@@ -58,6 +58,9 @@ Nesta etapa do processo de unificação, escolha e exclua atributos para mesclar
 
 1. Especifique como combinar ou mesclar os campos de uma das três opções:
     - **Importância**: identifica o valor vencedor com base na classificação de importância especificada para os campos participantes. É a opção de mesclagem padrão. Selecione **Mover para cima/baixo** para definir a classificação de importância.
+
+      > [!NOTE]
+      > O Customer Insights usa o primeiro valor não nulo. Por exemplo, dadas as entidades A, B e C classificadas nessa ordem, se A.Name e B.Name forem nulas, o valor de C.Name será usado.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Opção de importância na caixa de diálogo de campos de mesclagem.":::
 

@@ -1,19 +1,19 @@
 ---
 title: Enriquecer perfis de empresas com a Leadspace (versão preliminar)
 description: Informações gerais sobre o enriquecimento de terceiros da Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196196"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237936"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Enriquecer perfis de empresas com a Leadspace (versão preliminar)
 
@@ -35,14 +35,9 @@ Você deve ser um [administrador](permissions.md#admin) no Customer Insights e t
 
 1. Insira um nome para a conexão e um token válido da Leadspace.
 
-1. Revise e forneça seu consentimento para a [Conformidade e privacidade dos dados](#data-privacy-and-compliance) selecionando **Eu concordo**.
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
 1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Salvar**.
-
-### <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados à Leadspace, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você será responsável por garantir que a Leadspace cumpra as obrigações de privacidade e segurança que possam existir. Para obter mais informações, consulte [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Seu administrador do Dynamics 365 Customer Insights poderá remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 

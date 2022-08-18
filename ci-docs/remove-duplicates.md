@@ -2,7 +2,7 @@
 title: Remover duplicidades antes de unificar os dados
 description: A segunda etapa no processo de unificação é selecionar qual registro manter quando duplicidades forem encontradas.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139415"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213613"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Remover duplicidades antes de unificar os dados
 
-Esta etapa na unificação permite, opcionalmente, configurar regras para lidar com registros duplicados em uma entidade. *Eliminação de duplicação* identifica registros duplicados e os mescla em um registro. Os registros de origem são vinculados ao registro mesclado com IDs alternativas. Se as regras não forem configuradas, as regras definidas pelo sistema serão aplicadas.
+Esta etapa opcional na unificação permite que você configure regras para eliminar registros duplicados **dentro** de uma entidade. A eliminação de duplicação identifica vários registros para um cliente e seleciona o melhor registro a ser mantido (com base nas preferências básicas de mesclagem) ou mescla os registros em um (com base nas preferências avançadas de mesclagem). Os registros de origem são vinculados ao registro mesclado com IDs alternativas. Se as regras não forem configuradas, as regras definidas pelo sistema serão aplicadas.
+
+## <a name="default-deduplication"></a>Eliminação de duplicação padrão
+
+As regras definidas pelo sistema serão aplicadas se nenhuma regra de eliminação de duplicação for adicionada.
+
+- A eliminação de duplicação da chave primária é feita.
+  Para quaisquer registros com a mesma chave primária, o registro **Mais preenchido** (aquele com o menor número de valores nulos) é o vencedor.
+- Quaisquer regras de correspondência entre entidades serão aplicadas à entidade.
+  Por exemplo: na etapa de correspondência, se a entidade A for comparada com a entidade B em *FullName* e *DateofBirth*, a eliminação de duplicação por *FullName* e *DateofBirth* da entidade A também é feita. Como *FullName* e *DateofBirth* são chaves válidas para identificar um cliente na entidade A, essas chaves também são válidas para identificar clientes duplicados na entidade A.
 
 ## <a name="include-enriched-entities-preview"></a>Incluir entidades enriquecidas (versão preliminar)
 

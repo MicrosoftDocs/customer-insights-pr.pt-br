@@ -1,47 +1,50 @@
 ---
-title: Configurações de segurança do Customer Insights
+title: Definir configurações de segurança
 description: Saiba mais sobre configurações de segurança no Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947401"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246048"
 ---
-# <a name="security-settings-in-customer-insights"></a>Configurações de segurança do Customer Insights
+# <a name="configure-security-settings"></a>Definir configurações de segurança
 
-A página **Segurança** lista opções para configurar permissões de usuário e recursos que ajudam a tornar o Dynamics 365 Customer Insights mais seguro. Somente administradores podem acessar esta página.
+Gerencie chaves de API, acesse dados do cliente e configure um Link Privado do Azure.
 
-Vá para **Administrador** > **Segurança** para definir as configurações.
+## <a name="manage-api-keys"></a>Gerenciar chaves de API
 
-A página **Segurança** inclui as seguintes guias:
+Exiba e gerencie as chaves para usar as [APIs do Customer Insights](apis.md) com os dados em seu ambiente.
 
-- [Usuários](#users-tab)
-- [APIs](#apis-tab)
-- [Links Privados](#private-links-tab)
-- [Cofre de chaves](#key-vault-tab)
-- [Acessar com segurança os dados do cliente com o Sistema de Proteção de Dados do Cliente (versão preliminar)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Acesse **Sistema** > **Segurança** e selecione a guia **APIs**.
 
-## <a name="users-tab"></a>Guia Usuários
+1. Se o acesso da API ao ambiente não tiver sido configurado, selecione **Habilitar**. Ou, para bloquear o acesso da API ao ambiente, selecione **Desabilitar** e confirme.
 
-O acesso ao Customer Insights é restrito a usuários em sua organização que foram adicionados ao aplicativo por um administrador. A guia **Usuários** permite gerenciar o acesso do usuário e suas permissões. Para obter mais informações, consulte [Permissões de usuário](permissions.md).
+1. Gerencie as chaves de API primária e secundária:
 
-## <a name="apis-tab"></a>Guia APIs
+   1. Para mostrar a chave de API primária ou secundária, selecione o símbolo **Mostrar**.
 
-Exiba e gerencie as chaves para usar as [APIs do Customer Insights](apis.md) com os dados do seu ambiente.
+   1. Para copiar a chave de API primária ou secundária, selecione o símbolo **Copiar**.
 
-Você pode criar novas chaves primárias e secundárias selecionando **Regenerar primário** ou **Regenerar secundário**. 
+   1. Para criar chaves de API primárias ou secundárias, selecione **Regenerar primária** ou **Regenerar secundária**.
 
-Para bloquear o acesso da API ao ambiente, selecione **Desabilitar**. Se as APIs estiverem desabilitadas, você poderá selecionar **Habilitar** para conceder acesso novamente.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Acessar com segurança os dados do cliente com o Sistema de Proteção de Dados do Cliente (versão preliminar)
 
-## <a name="private-links-tab"></a>Guia Links Privados
+O Customer Insights usa a capacidade Sistema de Proteção de Dados do Cliente do Power Platform. O Sistema de Proteção de Dados do Cliente fornece uma interface para revisar e aprovar (ou rejeitar) solicitações de acesso a dados. Essas solicitações ocorrem quando o acesso aos dados do cliente é necessário para resolver um caso de suporte. Para usar esse recurso, o Customer Insights deverá ter uma conexão existente com um ambiente do Microsoft Dataverse em seu locatário.
+
+Para obter mais informações sobre o Sistema de Proteção de Dados do Cliente, consulte o[resumo](/power-platform/admin/about-lockbox#summary) do Sistema de Proteção de Dados do Cliente do Power Platform. O artigo também descreve o [fluxo de trabalho](/power-platform/admin/about-lockbox#workflow) e a [configuração](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) necessária para habilitar o Sistema de Proteção de Dados do Cliente.
+
+> [!IMPORTANT]
+> Os administradores globais para Power Platform ou administradores do Power Platform podem aprovar as solicitações do Sistema de Proteção de Dados do Cliente emitidas para o Customer Insights.
+
+## <a name="set-up-an-azure-private-link"></a>Configurar um Link Privado do Azure
 
 O [Link Privado do Azure](/azure/private-link/private-link-overview) permite que o Customer Insights conecte-se à sua conta do Azure Data Lake Storage em um ponto de extremidade privado em sua rede virtual. Para dados em uma conta de armazenamento, que não está exposta à Internet pública, o Link Privado permite a conexão com essa rede restrita.
 
@@ -51,26 +54,22 @@ O [Link Privado do Azure](/azure/private-link/private-link-overview) permite que
 > - Customer Insights: Administrador
 > - Função interna do Azure: [Colaborador da Conta de Armazenamento](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
 > - Permissões para a função personalizada do Azure: [Microsoft.Storage/storageAccounts/read e Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
 
-A configuração do Link Privado no Customer Insights é um processo de duas etapas. Primeiro, você inicia a criação de um Link Privado de **Administrador** > **Segurança** > **Links Privados** no Customer Insights. O painel **Adicionar Link Privado** lista as contas de armazenamento do seu locatário que você tem permissões para ver. Selecione a conta de armazenamento e dê consentimento para criar o Link Privado.
+1. No Customer Insights, acesse **Administrador** > **Segurança** e selecione a guia **Links Privados**.
 
-Em seguida, você precisa aprovar o Link Privado no lado da conta do Data Lake Storage. Abra o link apresentado na tela para aprovar o novo Link Privado.
+1. Selecione **Adicionar Link Privado**.
 
-## <a name="key-vault-tab"></a>Guia Key Vault
+   O painel **Adicionar Link Privado** lista as contas de armazenamento do seu locatário que você tem permissões para ver.
 
-A guia **Key Vault** permite vincular e gerenciar seu próprio [Azure Key Vault](/azure/key-vault/general/basic-concepts) no ambiente.
-O cofre de chaves dedicado pode ser usado para preparar e usar segredos nos limites de conformidade de uma organização. O Customer Insights pode usar os segredos do Azure Key Vault para [configurar conexões](connections.md) para sistemas de terceiros.
+1. Selecione a assinatura, o grupo de recursos e a conta de armazenamento.
 
-Para obter mais informações, consulte [Trazer seu próprio Azure Key Vault](use-azure-key-vault.md).
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Acessar com segurança os dados do cliente com o Sistema de Proteção de Dados do Cliente (versão preliminar)
+1. Selecione **Salvar**.
 
-O Customer Insights está usando a capacidade Sistema de Proteção de Dados do Cliente do Power Platform. O Sistema de Proteção de Dados do Cliente fornece uma interface para revisar e aprovar (ou rejeitar) solicitações de acesso a dados. Essas solicitações ocorrem quando o acesso aos dados do cliente é necessário para resolver um caso de suporte. Para usar esse recurso, o Customer Insights deverá ter uma conexão existente com um ambiente do Microsoft Dataverse em seu locatário.
+1. Acesse sua conta do Data Lake Storage e abra o link apresentado na tela.
 
-Para obter mais informações sobre o Sistema de Proteção de Dados do Cliente, consulte o[resumo](/power-platform/admin/about-lockbox#summary) do Sistema de Proteção de Dados do Cliente do Power Platform. O artigo também descreve o [fluxo de trabalho](/power-platform/admin/about-lockbox#workflow) e a [configuração](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) necessária para habilitar o Sistema de Proteção de Dados do Cliente.
+1. Aprove o Link Privado.
 
-> [!IMPORTANT]
-> Os administradores globais para Power Platform ou administradores do Power Platform podem aprovar as solicitações do Sistema de Proteção de Dados do Cliente emitidas para o Customer Insights.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

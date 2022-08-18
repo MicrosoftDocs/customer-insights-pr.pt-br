@@ -1,19 +1,19 @@
 ---
 title: Enriquecer perfis dos clientes com dados de identidade da LiveRamp (versão preliminar)
 description: Enriqueça perfis de clientes com dados do LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196334"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237798"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Enriquecer perfis dos clientes com dados de identidade da LiveRamp (versão preliminar)
 
@@ -41,13 +41,9 @@ Você deve ser um [administrador](permissions.md#admin) no Customer Insights e t
 
 1. Insira um nome para a conexão e uma ID de cliente e um segredo válidos da LiveRamp.
 
-1. Revise e forneça seu consentimento para a [Conformidade e privacidade dos dados](#data-privacy-and-compliance) selecionando **Eu concordo**.
+1. Examine a [conformidade e privacidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
 1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Salvar**.
-
-### <a name="data-privacy-and-compliance"></a>Conformidade e privacidade dos dados
-
-Ao habilitar o Dynamics 365 Customer Insights para transmitir dados ao LiveRamp, você permite a transferência de dados para fora dos limites de conformidade do Dynamics 365 Customer Insights, incluindo dados possivelmente confidenciais, como dados pessoais. A Microsoft transferirá esses dados de acordo com suas instruções, mas você é responsável por garantir que o LiveRamp atenda às obrigações de privacidade ou segurança que você possa ter. Para obter mais informações, revise a [Política de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Seu Administrador do Dynamics 365 Customer Insights pode remover esse enriquecimento a qualquer momento para interromper o uso dessa funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 

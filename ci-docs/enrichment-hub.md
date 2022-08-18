@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053847"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245865"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visão geral de enriquecimento de dados (versão preliminar)
 
@@ -76,7 +76,7 @@ Selecione o enriquecimento para exibir as ações disponíveis.
 - **Exibir** detalhes de enriquecimento com o número de perfis de clientes enriquecidos.
 - **Editar** a configuração de enriquecimento.
 - [**Executar**](#run-or-refresh-enrichments) o enriquecimento para atualizar os perfis dos clientes com os dados mais recentes. Executar vários enriquecimentos de uma só vez selecionando-os na lista.
-- **Ativar** ou **Desativar** um enriquecimento. Os enriquecimentos inativos não serão atualizados durante uma [atualização agendada](system.md#schedule-tab).
+- **Ativar** ou **Desativar** um enriquecimento. Os enriquecimentos inativos não serão atualizados durante uma [atualização agendada](schedule-refresh.md).
 - **Exclua** o enriquecimento.
 
 Você também pode criar [segmentos](segments.md) ou [medidas](measures.md) de enriquecimentos.
@@ -85,7 +85,7 @@ Você também pode criar [segmentos](segments.md) ou [medidas](measures.md) de e
 
 Uma vez executados, os enriquecimentos podem ser atualizados em um agendamento automático ou atualizados manualmente sob demanda.
 
-1. Para atualizar manualmente um ou mais enriquecimentos, selecione-os e escolha **Executar**. Para [agendar uma atualização automática](system.md#schedule-tab), acesse **Administrador** > **Sistema** > **Agenda**. A duração do processamento depende do tamanho dos dados do cliente.
+1. Para atualizar manualmente um ou mais enriquecimentos, selecione-os e escolha **Executar**. Para [agendar uma atualização automática](schedule-refresh.md), acesse **Administrador** > **Sistema** > **Agenda**. A duração do processamento depende do tamanho dos dados do cliente.
 
 1. Opcionalmente, [veja o andamento do processo de enriquecimento](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Você pode encontrar detalhes sobre o processamento de um enriquecimento, inclui
 1. No painel **Detalhes de progresso**, expanda a seção **Enriquecimentos**.
 1. No enriquecimento em que você deseja ver o progresso, selecione **Ver detalhes**.
 1. No painel **Detalhes da tarefa**, selecione **Mostrar detalhes** para ver os processos envolvidos na atualização do enriquecimento e o status.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Exibir resultados de enriquecimento
 

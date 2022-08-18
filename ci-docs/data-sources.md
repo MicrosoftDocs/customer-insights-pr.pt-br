@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207077"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245635"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
@@ -67,7 +67,7 @@ Selecione uma fonte de dados para exibir as ações disponíveis.
 
 As fontes de dados podem ser atualizadas em uma programação automática ou manualmente sob demanda. As [fontes de dados locais](connect-power-query.md#add-data-from-on-premises-data-sources) são atualizadas em suas próprias agendas, que são configuradas durante a ingestão de dados. Para fontes de dados anexadas, a ingestão de dados consome os dados mais recentes disponíveis desse fonte de dados.
 
-Acesse **Administrador** > **Sistema** > [**Agenda**](system.md#schedule-tab) para configurar atualizações agendadas pelo sistema de suas fontes de dados ingeridas.
+Acesse **Administrador** > **Sistema** > [**Agenda**](schedule-refresh.md) para configurar atualizações agendadas pelo sistema de suas fontes de dados ingeridas.
 
 Para atualizar uma fonte de dados por demanda:
 
