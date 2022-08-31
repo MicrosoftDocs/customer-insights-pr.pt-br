@@ -1,9 +1,9 @@
 ---
 title: Mapeamentos semânticos (versão preliminar)
 description: Visão geral dos mapeamentos semânticos e como usá-los.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183617"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303862"
 ---
 # <a name="semantic-mappings-preview"></a>Mapeamentos semânticos (versão preliminar)
 
-Os mapeamentos semânticos permitem que você mapeie seus dados de não atividade para esquemas predefinidos. Esses esquemas ajudam o Customer Insights a entender melhor os atributos de seus dados. O mapeamento semântico e os dados fornecidos permitem novos insights e recursos no Customer Insights. Para mapear seus dados de atividade para os esquemas, revise a documentação [Atividades](activities.md).
+> [!NOTE]
+> A página **Mapeamentos semânticos** está disponível apenas para ambientes de negócios (B-to-B) onde os perfis de contato já foram criados usando esta página. Você pode continuar a criar e gerenciar os perfis de contato individuais usando a página **Mapeamentos semânticos**. Ou [unifique seus dados de contato](data-unification-contacts.md) para remover duplicatas, identificar correspondências entre entidades e criar um perfil de contato unificado. Você pode usar o perfil de contato unificado para criar atividades em nível de contato.
 
-**Os mapeamentos semânticos estão atualmente ativados para ambientes baseados em contas comerciais**. *ContactProfile* é o único tipo de mapeamento semântico disponível atualmente no Customer Insights.
+Os mapeamentos semânticos permitem que você mapeie seus dados de não atividade para esquemas predefinidos. Esses esquemas ajudam o Customer Insights a entender melhor atributos de dados. O mapeamento semântico e os dados fornecidos permitem novos insights e recursos no Customer Insights. Para mapear seus dados de atividade para os esquemas, revise a documentação [Atividades](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Defina um mapeamento de entidade semântica ContactProfile
 
@@ -87,41 +88,5 @@ Selecione o mapeamento semântico para exibir as ações disponíveis.
 - **Atualizar** o mapeamento semântico para incluir os dados mais recentes. Atualizar qualquer mapeamento semântico fornecido irá atualizar todos os mapeamentos semânticos do mesmo tipo.
 - **Renomear** o mapeamento semântico. Selecione **Salvar**.
 - **Excluir** o mapeamento semântico. Para excluir mais de um mapeamento semântico de uma vez, selecione os mapeamentos semânticos e o ícone excluir. Selecione **Excluir** para confirmar a exclusão.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Usar um mapeamento de entidade semântica ContactProfile para criar atividades no nível do contato
-
-Depois de criar um mapeamento de entidade semântica *ContactProfile*, você pode capturar atividades de contatos. Isso permite ver na linha do tempo de atividades de uma conta qual contato foi responsável por cada atividade. A maioria das etapas segue a configuração típica de mapeamento de atividades.
-
-   > [!NOTE]
-   > Para que as atividades no nível do contato funcionem, você deve ter os atributos **AccountID** e **ContactID** para cada registro nos seus dados de atividade.
-
-1. [Defina um mapeamento da entidade semântica *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) e execute o mapeamento semântico.
-
-1. Vá para **Dados** > **Atividades**.
-
-1. Selecione **Adicionar Atividade** para criar uma nova atividade.
-
-1. Nomeie a atividade, selecione a entidade de atividade de origem e selecione a chave primária da entidade de atividade.
-
-1. Na etapa **Relacionamentos**, crie um relacionamento indireto entre seus dados de origem de atividade e contas, usando seus dados de contato como uma entidade intermediária. Para obter mais informações, consulte [caminhos de relacionamento direto e indireto](relationships.md#relationship-paths).
-   - Relacionamento de exemplo para uma atividade chamada *Compras*:
-      - **Dados da Atividade de Origem de Compras** > **Dados de Contato** no atributo **ContactID**
-      - **Dados de Contato** > **Dados de Conta** no atributo **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuração do relacionamento de exemplo.":::
-
-1. Depois de configurar os relacionamentos, selecione **Avançar** e conclua a configuração do seu mapeamento de atividades. Para obter etapas detalhadas sobre a criação de atividades, consulte [definir uma atividade](activities.md).
-
-1. Execute seus mapeamentos de atividades.
-
-1. Após a execução de um mapeamento de atividade no nível do contato, selecione **Clientes**. As atividades no nível do contato são exibidas na linha do tempo do seu cliente.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final após a configuração das atividades de contato":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtragem da linha do tempo de atividades no nível do contato
-
-A linha do tempo da atividade para seus clientes inclui suas IDs ou nomes, dependendo da configuração de *ContactProfile*, nas atividades nas quais atuaram. Filtre as atividades por contatos na linha do tempo para ver contatos específicos nos quais você esteja interessado. Para exibir todas as atividades que não estejam atribuídas a um contato específico, selecione **Atividades não mapeadas para um Contato**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Opções de filtragem disponíveis para atividades no nível do contato.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

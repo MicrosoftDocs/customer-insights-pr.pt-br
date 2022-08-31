@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188079"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303769"
 ---
 # <a name="view-customer-profiles"></a>Exibir perfis de cliente
 
@@ -78,7 +78,7 @@ Os detalhes do cliente incluem:
 **Bloco do perfil do cliente**: mostra os diferentes valores da entidade *Cliente* unificada. Se um campo não tiver valor para o perfil de cliente selecionado, ele não será mostrado, exceto pelo campo de endereço. O bloco é estruturado em seções:
 
 - A primeira seção mostra um conjunto predefinido de campos seguido por todos os campos que fazem parte do índice de pesquisa e filtro. Todos os campos relacionados ao endereço são combinados em uma única linha, que será mostrada mesmo se o perfil não contiver informações de endereço.
-- Em ambientes de contas comerciais, é exibida o campo **Contatos deste cliente**. Cada contato é exibido com seus campos. Os campos vazios estão ocultos.
+- Exibição de **Contatos para este cliente** em ambientes para contas comerciais (B-to-B). Cada contato é exibido com seus campos. Os campos vazios estão ocultos.
 - **Campos adicionais** mostra os demais campos do cliente selecionado, exceto IDs.
 - **IDs** lista todas as IDs dos nomes de entidade correspondentes. Os campos são identificados como IDs pela semântica.
 

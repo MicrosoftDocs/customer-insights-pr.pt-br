@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213613"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304459"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Remover duplicidades antes de unificar os dados
 
@@ -47,7 +47,7 @@ Se você enriqueceu entidades no nível da fonte de dados para ajudar a melhorar
 
 1. Na página **Registros duplicados**, selecione uma entidade e, em seguida, selecione **Adicionar regra** para definir as regras de eliminação de duplicação.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de tela da página Registros duplicados com Mostrar mais realçado":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de tela da página de registros duplicados com entidade realçada e Adicionar regra exibida"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. No painel **Adicionar regra**, insira as seguintes informações:
       - **Selecionar campo**: escolha na lista de campos disponíveis da entidade na qual você deseja verificar se há duplicidades. Escolha campos que provavelmente são exclusivos para cada cliente. Por exemplo, um endereço de email ou a combinação de nome, cidade e número de telefone.
@@ -80,9 +80,9 @@ Se você enriqueceu entidades no nível da fonte de dados para ajudar a melhorar
       - **Mais preenchido**: identifica o registro com mais campos de atributos preenchidos como o registro vencedor. É a opção de mesclagem padrão.
       - **Mais recente**: identifica o registro vencedor com base na maior recência. Requer uma data ou um campo numérico para definir o nível de atualização.
       - **Menos recente**: identifica o registro vencedor com base na menor recência. Requer uma data ou um campo numérico para definir o nível de atualização.
-      
+
       Em caso de empate, o registro vencedor é aquele com o MAX(PK) ou o maior valor de chave primária.
-      
+
    1. Opcionalmente, para definir preferências de mesclagem em atributos individuais de uma entidade, selecione **Avançado** na parte inferior do painel. Por exemplo, você pode manter o email mais recente E o endereço mais completo de diferentes registros. Expanda a entidade para ver todos os seus atributos e defina qual opção usar para atributos individuais. Se você escolher uma opção baseada em recência, também precisará especificar um campo de data/hora que defina a recência.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Painel Preferências de mesclagem avançada mostrando email recente e endereço completo":::
@@ -96,18 +96,5 @@ Se você enriqueceu entidades no nível da fonte de dados para ajudar a melhorar
 
 > [!div class="nextstepaction"]
 > [Próxima etapa para várias entidades: Condições correspondentes](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicação como uma entidade
-
-O processo de eliminação de duplicação cria uma nova entidade sem duplicação para cada uma das entidades de origem. Essas entidades podem ser encontradas juntamente com **ConflationMatchPairs:CustomerInsights** na seção **Sistema** na página **Entidades**, com o nome **Deduplication_DataSource_Entity**.
-
-Uma entidade de saída de eliminação de duplicação contém as seguintes informações:
-
-- IDs/chaves
-  - Campos Chave primária e ID Alternativa. O campo ID Alternativa consiste em todas as IDs alternativas identificadas para um registro.
-  - O campo Deduplication_GroupId mostra o grupo ou cluster identificado em uma entidade que agrupa todos os registros semelhantes com base nos campos de eliminação de duplicação especificados. Ele é usado para fins de processamento do sistema. Se não houver regras de eliminação de duplicação manual especificadas e as regras de eliminação de duplicação definidas pelo sistema se aplicarem, talvez você não encontre esse campo na entidade de saída de eliminação de duplicação.
-  - Deduplication_WinnerId: este campo contém a ID do vencedor dos grupos ou clusters identificados. Se a Deduplication_WinnerId for igual ao valor da chave primária para um registro, isso significa que o registro é o registro vencedor.
-- Campos usados para definir as regras de eliminação de duplicação.
-- Campos de regra e pontuação para denotar quais das regras de eliminação de duplicação foram aplicadas e a pontuação retornada pelo algoritmo de correspondência.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

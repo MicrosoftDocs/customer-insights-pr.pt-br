@@ -4,21 +4,21 @@ description: Saiba mais sobre contas comerciais como público-alvo primário no 
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053099"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303902"
 ---
 # <a name="work-with-business-accounts"></a>Trabalhe com contas corporativas
 
@@ -30,7 +30,7 @@ Os administradores podem [criar um ambiente em uma organização existente](crea
 
 Daí, você pode [ingerir dados](data-sources.md) para contas comerciais e contatos relacionados como fontes de dados de todas as fontes suportadas.
 
-Depois de unificar os dados, [especifique hierarquias de contas](relationships.md#set-up-account-hierarchies) como parte da configuração do relacionamento. Você também pode [configurar mapeamentos semânticos](semantic-mappings.md) para conectar entidades de contato e conta. 
+ [Unifique](data-unification.md) os dados da sua conta seguidos pelos seus dados de contato para conectar entidades de contato e conta.
 
 ## <a name="switch-between-primary-target-audience"></a>Alterne entre o público-alvo primário
 
@@ -43,11 +43,12 @@ Se sua organização mantém ambientes para clientes individuais e contas comerc
 - [Atividades](activities.md): suporte para contas e contatos relacionados para criar atividades e exibi-las em uma linha do tempo.
 - [Relacionamentos](relationships.md): o assistente de atividade ajuda a criar relacionamentos entre as entidades para que a visão da conta possa mostrar todas as atividades dos contatos. Os contatos podem ser detalhados para ver a visualização do contato e as hierarquias podem ser usadas para agregações de atividades da conta.
 - [Medidas](measures.md): oferece suporte a medidas criadas a partir do construtor de medidas com um cálculo. Uma configuração opcional permite o roll-up para subcontas ao criar medidas.
-- [Segmentos](segments.md): oferece suporte a segmentos criados do zero com o construtor de segmentos. Novos operadores permitem incorporar hierarquia de contas ao construir segmentos.
+- [Segmentos](segments.md): oferece suporte a segmentos criados do zero com o construtor de segmentos. Os segmentos podem ser baseados em contas ou contatos.
 - [Ingestão de dados](data-sources.md): todos os recursos nesta área são iguais para contas comerciais e clientes individuais.
-- [Unificação de dados](data-unification.md): todos os recursos nesta área são iguais para contas comerciais e clientes individuais.
+- A unificação de dados B-to-B é muito semelhante à unificação de dados B-to-C, mas tem uma etapa adicional para unificar os contatos após a unificação da conta. Consulte [Contas comerciais (B-to-B)](data-unification.md).
 - [Enriquecimento](enrichment-hub.md): alguns tipos de enriquecimento estão disponíveis apenas para cenários de clientes individuais, enquanto outros estão disponíveis exclusivamente para contas comerciais.
 - [Previsões e modelos prontos para uso](predictions-overview.md): previsão de rotatividade transacional contém etapas adicionais para contas comerciais. Outras previsões estão disponíveis apenas para clientes individuais.
 - [Ativação e exportação](export-destinations.md): as exportações estão disponíveis para contas comerciais e clientes individuais. Algumas exportações requerem configuração extra e informações de contato projetadas nos segmentos subjacentes para serem válidas para contas comerciais.
 - [Configurações do sistema](system.md) e [gerenciamento de usuários](permissions.md): todos os recursos nesta área são iguais para contas comerciais e clientes individuais.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: Condições de correspondência para a unificação de dados
 description: Corresponda entidades para criar perfis de clientes unificados.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139683"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304643"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condições de correspondência para a unificação de dados
 
@@ -27,6 +27,8 @@ Esta etapa na unificação define a ordem de correspondência e as regras de cor
 
 > [!NOTE]
 > Depois de criar suas condições de correspondência e selecionar **Avançar**, você não pode remover uma entidade ou atributo selecionado. Se necessário, selecione **Voltar** para revisar as entidades e atributos selecionados antes de continuar.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Incluir entidades enriquecidas (versão preliminar)
 
@@ -43,16 +45,16 @@ Se você enriqueceu entidades no nível da fonte de dados para ajudar a melhorar
 Cada correspondência unifica duas ou mais entidades em uma única entidade consolidada. Ao mesmo tempo, ela mantém os registros exclusivos do cliente. A ordem de correspondência indica a ordem em que o sistema tenta corresponder os registros.
 
 > [!IMPORTANT]
-> A primeira entidade na lista é chamada de entidade principal. A entidade principal serve como base para o conjunto de dados de perfis unificados. As entidades adicionais selecionadas serão adicionadas a essa entidade.
+> A primeira entidade é chamada de entidade primária, que serve como base para seus perfis unificados. As entidades adicionais selecionadas serão adicionadas a essa entidade.
 >
 > Considerações importantes:
 >
 > - Escolha a entidade com os dados de perfil mais completos e confiáveis sobre seus clientes como a entidade principal.
 > - Escolha a entidade que tem vários atributos em comum com outras entidades (por exemplo, nome, número de telefone ou endereço de email) como a entidade principal.
 
-1. Na página **Condições correspondentes**, use as setas para cima e para baixo para mover as entidades na ordem desejada ou arraste e solte-as. Por exemplo, selecione **Contacts:eCommerce** como a entidade principal e **CustomerLoyalty:Loyalty** como a segunda entidade.
+1. Na página **Condições correspondentes**, use as setas para cima e para baixo para mover as entidades na ordem desejada ou arraste e solte-as. Por exemplo, selecione **eCommerceCustomers** como a entidade principal e **loyCustomers** como a segunda entidade.
 
-1. Para ter todos os registros na entidade como um cliente exclusivo independentemente de uma correspondência ser encontrada ou não, selecione **Incluir todos os registros**. Quaisquer registros nessa entidade que não corresponderem a registros em outras entidades serão incluídos no perfil unificado. Os registros que não têm correspondência são chamados de singletons.
+1. Para ter todos os registros na entidade como um cliente exclusivo independentemente de uma correspondência ser encontrada ou não, selecione **Incluir todos os registros**. Quaisquer registros nessa entidade que não corresponderem a registros em outra entidade serão incluídos no perfil unificado. Os registros que não têm correspondência são chamados de singletons.
   
 A entidade principal *Contacts:eCommerce* corresponde à próxima entidade *CustomerLoyalty:Loyalty*. O conjunto de dados que resulta da primeira etapa de correspondência é combinado com a entidade a seguir, se você tiver mais de duas entidades.
 
@@ -70,7 +72,7 @@ O aviso ao lado de um nome de entidade significa que nenhuma regra de correspond
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Captura de tela do painel Adicionar regra.":::
 
-   - **Selecionar Entidade/Campo (primeira linha)**: escolha uma entidade relacionada e um atributo para especificar uma propriedade de registro que provavelmente é exclusiva de um cliente. Por exemplo, um número de telefone ou endereço de email. Evite a correspondência por atributos de tipo de atividade. Por exemplo, um ID de compra provavelmente não encontrará correspondência em outros tipos de registro.
+   - **Selecionar Entidade/Campo (primeira linha)**: escolha uma entidade e um atributo que provavelmente é exclusivo de um cliente. Por exemplo, um número de telefone ou endereço de email. Evite a correspondência por atributos de tipo de atividade. Por exemplo, um ID de compra provavelmente não encontrará correspondência em outros tipos de registro.
 
    - **Selecionar Entidade/Campo (segunda linha)**: escolha um atributo relacionado ao atributo da entidade especificada na primeira linha.
 
@@ -116,7 +118,7 @@ As regras de correspondência representam conjuntos de condições. Para fazer a
 
 ### <a name="add-exceptions-to-a-rule"></a>Adicionar exceções a uma regra
 
-Na maioria dos casos, a correspondência de entidades resulta em perfis de cliente exclusivos com dados consolidados. Para gerenciar dinamicamente casos raros de falsos positivos e falsos negativos, você pode definir exceções para uma regra de correspondência. As exceções são aplicadas após o processamento das regras de correspondência e evitam a correspondência de todos os registros que atendem aos critérios de exceção.
+Na maioria dos casos, a correspondência de entidades resulta em perfis de cliente exclusivos com dados consolidados. Para gerenciar casos raros de falsos positivos e falsos negativos, defina exceções para uma regra de correspondência. As exceções são aplicadas após o processamento das regras de correspondência e evitam a correspondência de todos os registros que atendem aos critérios de exceção.
 
 Por exemplo, se sua regra de correspondência combinar sobrenome, cidade e data de nascimento, o sistema identificará gêmeos com o mesmo sobrenome que moram na mesma cidade com o mesmo perfil. Você poderá especificar uma exceção que não corresponda aos perfis se o nome nas entidades combinadas não for o mesmo.
 
@@ -134,7 +136,7 @@ Você pode especificar condições que substituem a lógica de correspondência 
 |---------|---------|---------|
 |Sempre corresponder     | Define valores que sempre correspondem.         |  Sempre corresponder *Mike* e *MikeR*.       |
 |Nunca corresponder     | Define valores que nunca correspondem.        | Nunca corresponder *John* e *Jonathan*.        |
-|Bypass personalizado     | Define valores que o sistema deve sempre ignorar na fase de correspondência. |  Ignorar os valores *11111* e *Desconhecido* durante a correspondência.        |
+|Bypass            | Define valores que o sistema deve sempre ignorar na fase de correspondência. |  Ignorar os valores *11111* e *Desconhecido* durante a correspondência.        |
 |Mapeamento de alias    | Definição de valores que o sistema deve considerar como o mesmo valor.         | Considerar *Joe* igual a *Joseph*.        |
 
 1. Selecione **Personalizado**.
