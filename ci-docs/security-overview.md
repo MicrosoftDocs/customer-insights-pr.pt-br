@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246048"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387235"
 ---
 # <a name="configure-security-settings"></a>Definir configurações de segurança
 
@@ -23,7 +23,7 @@ Gerencie chaves de API, acesse dados do cliente e configure um Link Privado do A
 
 Exiba e gerencie as chaves para usar as [APIs do Customer Insights](apis.md) com os dados em seu ambiente.
 
-1. Acesse **Sistema** > **Segurança** e selecione a guia **APIs**.
+1. Acesse **Administrador** > **Segurança** e selecione a guia **APIs**.
 
 1. Se o acesso da API ao ambiente não tiver sido configurado, selecione **Habilitar**. Ou, para bloquear o acesso da API ao ambiente, selecione **Desabilitar** e confirme.
 

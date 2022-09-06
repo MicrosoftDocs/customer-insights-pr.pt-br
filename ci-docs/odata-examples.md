@@ -1,27 +1,27 @@
 ---
 title: Exemplos de consulta OData para APIs do Customer Insights
 description: Exemplos comumente usados do Protocolo Open Data (OData) para consultar as APIs do Customer Insights a fim de revisar dados.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121548"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387188"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemplos de consulta OData para APIs do Customer Insights
 
 O Protocolo Open Data (OData) é um protocolo de acesso a dados baseado em protocolos importantes como HTTP. Ele usa metodologias comumente aceitas como REST para a Web. Há vários tipos de bibliotecas e ferramentas que podem ser usadas para consumir serviços OData.
 
-Este artigo lista algumas consultas de exemplo solicitadas com frequência para ajudá-lo a criar suas próprias implementações com base nas [APIs do Customer Insights](apis.md).
+Para ajudá-lo a criar suas próprias implementações com base nas [APIs do Customer Insights](apis.md), veja algumas consultas de exemplo solicitadas com frequência.
 
-Você precisa modificar os exemplos de consulta para fazê-los funcionar nos ambientes de destino: 
+Modifique os exemplos de consulta para fazê-los funcionar nos ambientes de destino:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` onde a {instanceId} é o GUID do ambiente do Customer Insights que você deseja consultar. A [operação ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) permite que você encontre a {InstanceId} à qual tem acesso.
 - {CID}: GUID de um registro de cliente unificado. Exemplo: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Você precisa modificar os exemplos de consulta para fazê-los funcionar nos amb
 
 ## <a name="customer"></a>Customer
 
-A tabela a seguir contém um conjunto de consultas de exemplo para a entidade *Cliente*.
+Consultas de exemplo para a entidade *Cliente*.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ A tabela a seguir contém um conjunto de consultas de exemplo para a entidade *C
 
 ## <a name="unified-activity"></a>Atividade unificada
 
-A tabela a seguir contém um conjunto de consultas de exemplo para a entidade *UnifiedActivity*.
+Consultas de exemplo para a entidade *UnifiedActivity*.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ A tabela a seguir contém um conjunto de consultas de exemplo para a entidade *U
 
 ## <a name="other-examples"></a>Outros exemplos
 
-A tabela a seguir contém um conjunto de consultas de exemplo para outras entidades.
+Consultas de exemplo para outras entidades.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
