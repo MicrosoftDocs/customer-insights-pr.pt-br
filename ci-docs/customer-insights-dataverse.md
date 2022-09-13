@@ -1,7 +1,7 @@
 ---
 title: Trabalhar com dados do Customer Insights no Microsoft Dataverse
 description: Saiba como conectar o Customer Insights e o Microsoft Dataverse e saiba quais entidades de saída são exportadas para o Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303815"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424295"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Se a remoção da conexão falhar devido a dependências, você precisará remov
 Algumas entidades de saída do Customer Insights estão disponíveis como tabelas no Dataverse. As seções abaixo descrevem o esquema esperado dessas tabelas.
 
 - [Perfil do Cliente](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Algumas entidades de saída do Customer Insights estão disponíveis como tabela
 
 ### <a name="customerprofile"></a>Perfil do Cliente
 
-Esta tabela contém o perfil de cliente unificado do Customer Insights. O esquema para um perfil de cliente unificado depende das entidades e dos atributos usados no processo de unificação de dados. Um esquema de perfil de cliente geralmente contém um subconjunto dos atributos da [Definição do Common Data Model do Perfil do Cliente](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Esta tabela contém o perfil de cliente unificado do Customer Insights. O esquema para um perfil de cliente unificado depende das entidades e dos atributos usados no processo de unificação de dados. Um esquema de perfil de cliente geralmente contém um subconjunto dos atributos da [Definição do Common Data Model do Perfil do Cliente](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Para o cenário de B2B, o perfil do cliente contém contas unificadas, e o esquema geralmente contém um subconjunto dos atributos da [Definição do Common Data Model de Conta](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+Um ContactProfile contém informações unificadas sobre um contato. Os contatos são [indivíduos mapeados para uma conta](data-unification-contacts.md) em um cenário de B2B.
+
+| Column                       | Type                | Description     |
+| ---------------------------- | ------------------- | --------------- |
+|  BirthDate            | DateTime       |  Data de nascimento do contato               |
+|  City                 | Texto |  Cidade do endereço do contato               |
+|  ContactId            | Texto |  ID do perfil do contato               |
+|  ContactProfileId     | Identificador exclusivo   |  GUID do contato               |
+|  CountryOrRegion      | Texto |  País/Região do endereço do contato               |
+|  CustomerId           | Texto |  ID da conta para a qual o contato está mapeado               |
+|  EntityName           | Texto |  Entidade de onde os dados provêm                |
+|  FirstName            | Texto |  Nome do contato               |
+|  Gênero               | Texto |  Sexo do contato               |
+|  Identificação                   | Texto |  GUID determinístico baseado em `Identifier`               |
+|  Identificador           | Texto |  ID interna do perfil do contato: `ContactProfile|CustomerId|ContactId`               |
+|  Cargo             | Texto |  Cargo do contato               |
+|  LastName             | Texto |  Sobrenome do contato               |
+|  PostalCode           | Texto |  CEP do endereço do contato               |
+|  PrimaryEmail         | Texto |  Endereço de email do contato               |
+|  PrimaryPhone         | Texto |  O número de telefone do contato               |
+|  StateOrProvince      | Texto |  O estado ou a província do endereço do contato               |
+|  StreetAddress        | Texto |  Rua do endereço do contato               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 A tabela AlternateKey contém as chaves das entidades que participaram do processo de unificação.
 
-|Column  |Digitar  |Descrição  |
+|Column  |Type  |Description  |
 |---------|---------|---------|
-|DataSourceName    |Cadeia de Caracteres         | Nome da fonte de dados. Por exemplo: `datasource5`        |
-|EntityName        | String        | Nome da entidade no Customer Insights. Por exemplo: `contact1`        |
-|AlternateValue    |String         |ID alternativa que é mapeada para a ID do cliente. Exemplo: `cntid_1078`         |
-|KeyRing           | Texto com várias linhas        | Valor JSON  </br> Exemplo: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | Cadeia de Caracteres        | ID do perfil de cliente unificado.         |
-|AlternateKeyId     | GUID         |  GUID determinístico AlternateKey baseado em msdynci_identifier       |
-|msdynci_identifier |   Cadeia de Caracteres      |   `DataSourceName|EntityName|AlternateValue`  </br> Exemplo: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Texto         | Nome da fonte de dados. Por exemplo: `datasource5`        |
+|EntityName        | Texto        | Nome da entidade no Customer Insights. Por exemplo: `contact1`        |
+|AlternateValue    |Texto         |ID alternativa que é mapeada para a ID do cliente. Exemplo: `cntid_1078`         |
+|KeyRing           | Texto        | Valor JSON  </br> Exemplo: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Texto        | ID do perfil de cliente unificado.         |
+|AlternateKeyId     | Identificador exclusivo        |  GUID determinístico AlternateKey baseado em `Identifier`      |
+|Identificador |   Texto      |   `DataSourceName|EntityName|AlternateValue`  </br> Exemplo: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Esta tabela contém atividades de usuários que estão disponíveis no Customer 
 
 | Column            | Type        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | ID do Perfil do cliente                                                                      |
-| ActivityId        | String      | ID interna da atividade do cliente (chave primária)                                       |
-| SourceEntityName  | Cadeia de Caracteres      | Nome da entidade de origem                                                                |
-| SourceActivityId  | Cadeia de Caracteres      | Chave primária da entidade de origem                                                       |
-| ActivityType      | Cadeia de Caracteres      | Tipo de atividade semântica ou nome da atividade personalizada                                        |
-| ActivityTimeStamp | DATETIME    | Carimbo de data/hora da atividade                                                                      |
-| Title             | String      | Título ou nome da atividade                                                               |
-| Description       | Cadeia de Caracteres      | Descrição da atividade                                                                     |
-| URL               | Cadeia de Caracteres      | Link para uma URL externa específica à atividade                                         |
-| SemanticData      | Cadeia de caracteres JSON | Inclui uma lista de pares de chave/valor para os campos de mapeamento semântico específicos ao tipo de atividade |
-| RangeIndex        | Cadeia de Caracteres      | Carimbo de data/hora Unix usado para classificar a linha do tempo de atividades e as consultas de intervalo em vigor |
-| mydynci_unifiedactivityid   | GUID | ID interna da atividade do cliente (ActivityId) |
+| CustomerId        | Texto      | ID do Perfil do cliente                                                                      |
+| ActivityId        | Texto      | ID interna da atividade do cliente (chave primária)                                       |
+| SourceEntityName  | Texto      | Nome da entidade de origem                                                                |
+| SourceActivityId  | Texto      | Chave primária da entidade de origem                                                       |
+| ActivityType      | Texto      | Tipo de atividade semântica ou nome da atividade personalizada                                        |
+| ActivityTimeStamp | DateTime    | Carimbo de data/hora da atividade                                                                      |
+| Title             | Texto      | Título ou nome da atividade                                                               |
+| Description       | Texto      | Descrição da atividade                                                                     |
+| URL               | Texto      | Link para uma URL externa específica à atividade                                         |
+| SemanticData      | Texto | Inclui uma lista de pares de chave/valor para os campos de mapeamento semântico específicos ao tipo de atividade |
+| RangeIndex        | Texto      | Carimbo de data/hora Unix usado para classificar a linha do tempo de atividades e as consultas de intervalo em vigor |
+| UnifiedActivityId   | Identificador exclusivo | ID interna da atividade do cliente (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Esta tabela contém os dados de saída de medidas baseadas em atributos do cliente.
 
-| Column             | Digitar             | Descrição                 |
+| Column             | Type             | Description                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | Cadeia de Caracteres           | ID do Perfil do cliente        |
-| Medidas           | Cadeia de caracteres JSON      | Inclui uma lista de pares de chave/valor para o nome da medida e valores para o cliente fornecido | 
-| msdynci_identifier | Cadeia de Caracteres           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID do Perfil do cliente |
-
+| CustomerId         | Texto           | ID do Perfil do cliente        |
+| Medidas           | Texto      | Inclui uma lista de pares de chave/valor para o nome da medida e valores para o cliente fornecido |
+| Identificador | Texto           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Identificador exclusivo     | ID do Perfil do cliente |
 
 ### <a name="enrichment"></a>Enriquecimento
 
 Esta tabela contém a saída do processo de enriquecimento.
 
-| Column               | Digitar             |  Descrição                                          |
+| Column               | Type             |  Description                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | Cadeia de Caracteres           | ID do Perfil do cliente                                 |
-| EnrichmentProvider   | Cadeia de Caracteres           | Nome do provedor para o enriquecimento                                  |
-| EnrichmentType       | Cadeia de Caracteres           | Tipo de enriquecimento                                      |
-| Valores               | Cadeia de caracteres JSON      | Lista de atributos produzidos pelo processo de enriquecimento |
-| msdynci_enrichmentid | GUID             | GUID determinístico gerado a partir de msdynci_identifier |
-| msdynci_identifier   | Cadeia de Caracteres           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Texto           | ID do Perfil do cliente                                 |
+| EnrichmentProvider   | Texto           | Nome do provedor para o enriquecimento                                  |
+| EnrichmentType       | Texto           | Tipo de enriquecimento                                      |
+| Valores               | Texto      | Lista de atributos produzidos pelo processo de enriquecimento |
+| EnrichmentId | Identificador exclusivo            | GUID determinístico gerado de `Identifier` |
+| Identificador   | Texto           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Previsão
 
@@ -211,12 +236,12 @@ Esta tabela contém a saída das previsões do modelo.
 
 | Column               | Type        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | ID do Perfil do cliente                                  |
-| ModelProvider        | String      | Nome do provedor do modelo                                      |
-| Modelo                | Cadeia de Caracteres      | Nome do modelo                                                |
-| Valores               | Cadeia de caracteres JSON | Lista de atributos produzidos pelo modelo |
-| msdynci_predictionid | GUID        | GUID determinístico gerado a partir de msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Texto      | ID do Perfil do cliente                                  |
+| ModelProvider        | Texto      | Nome do provedor do modelo                                      |
+| Modelo                | Texto      | Nome do modelo                                                |
+| Valores               | Texto | Lista de atributos produzidos pelo modelo |
+| PredictionId | Identificador exclusivo       | GUID determinístico gerado de `Identifier` |
+| Identificador   | Texto      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Associação ao segmento
 
@@ -224,12 +249,11 @@ Esta tabela contém informações de associação ao segmento de perfis do clien
 
 | Column        | Type | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID do Perfil do Cliente        |
-| SegmentProvider      | String       | Aplicativo que publica os segmentos.      |
-| SegmentMembershipType | String       | Tipo de cliente registrado por esta associação ao segmento. Oferece suporte a vários tipos, como Cliente, Contato ou Conta. Padrão: Cliente  |
-| Segmentos       | Cadeia de caracteres JSON  | Lista de segmentos exclusivos dos quais o perfil do cliente é membro      |
-| msdynci_identifier  | String   | Identificador exclusivo do registro da associação ao segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID determinístico gerado de `msdynci_identifier`          |
-
+| CustomerId        | Texto       | ID do Perfil do Cliente        |
+| SegmentProvider      | Texto       | Aplicativo que publica os segmentos.      |
+| SegmentMembershipType | Texto       | Tipo de cliente registrado por esta associação ao segmento. Oferece suporte a vários tipos, como Cliente, Contato ou Conta. Padrão: Cliente  |
+| Segmentos       | Texto  | Lista de segmentos exclusivos dos quais o perfil do cliente é membro      |
+| Identificador  | Texto   | Identificador exclusivo do registro da associação ao segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Identificador exclusivo      | GUID determinístico gerado de `Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

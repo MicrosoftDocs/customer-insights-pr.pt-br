@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246233"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395987"
 ---
 # <a name="view-system-configuration"></a>Exibir a configuração do sistema
 
@@ -38,12 +38,6 @@ Exiba detalhes sobre o uso da API em tempo real e veja quais eventos aconteceram
    - **Chamadas de API** - um gráfico que visualiza o número agregado de chamadas para a API no período selecionado.
    - **Transferência de dados** - um gráfico que mostra o volume de dados que foram transferidos por meio da API no período selecionado.
    - **Operações** - uma tabela com linhas para cada operação de API disponível e detalhes sobre o uso das operações. Selecione um nome de operação para acessar [a referência da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operações que usam a [ingestão de dados em tempo real](real-time-data-ingestion.md) contém um símbolo de binóculos para exibir o uso da API em tempo real.
-
-   1. Selecione os binóculos para abrir o painel **Uso da API em tempo real** contendo detalhes de uso para a operação.
-   1. **Selecione um período** a ser exibido.
-   1. Use a caixa **Agrupar por** para escolher a melhor forma de apresentar suas interações em tempo real. Agrupe os dados pelo **Método** da API, **Nome qualificado da entidade** (entidade ingerida), **Criação de** (origem do evento), **Resultado** (êxito ou falha) ou **Códigos de erro**. Os dados estão disponíveis como um gráfico de histórico e como uma tabela.
 
 ## <a name="view-system-information"></a>Exibir informações do sistema
 

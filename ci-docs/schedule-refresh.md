@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246331"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395942"
 ---
 # <a name="schedule-system-refresh"></a>Agendar a atualização do sistema
 
@@ -36,7 +36,7 @@ Agende atualizações automáticas de todos as suas [fontes de dados ingeridos](
 
 1. Escolha entre atualizações **Semanal** (padrão) e **Diária**. Se você pretende agendar atualizações semanais, selecione um ou mais dias nos quais deseja executar a atualização.
 
-1. Defina seu **Fuso horário**, em seguida, use a lista suspensa **Tempo** para definir seu tempo de atualização. Se você deseja agendar várias atualizações em um único dia, selecione **Adicionar outra hora**.
+1. Defina seu **Fuso horário**, em seguida, use a lista suspensa **Tempo** para definir seu tempo de atualização. Se você deseja agendar várias atualizações em um único dia, selecione **Adicionar outra hora**. Você pode adicionar até quatro atualizações.
 
 1. Selecione **Salvar** para aplicar suas alterações.
 

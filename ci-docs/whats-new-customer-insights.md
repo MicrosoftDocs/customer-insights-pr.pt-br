@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387268"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409343"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novidades do Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Para obter mais informações, consulte [Criar um perfil de contato unificado](d
 Graças à nova unificação de contatos, você pode criar segmentos de contatos usando critérios de contatos, contas ou ambos. Esses segmentos podem ser exportados para ativação em outros serviços.
 
 Para obter mais informações, consulte a [Visão geral de exportações](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Regiões de implantação alinhadas com o Microsoft Dataverse
+
+Ao criar um novo ambiente do Customer Insights, você pode selecionar a região onde deseja que o serviço seja implantado e hospedado. Atualizamos a seleção de região para estar alinhada com o Microsoft Dataverse e o Power Platform.
+
+Agora você pode selecionar facilmente a mesma região que o ambiente existente do Microsoft Dataverse ou a conta do Azure Data Lake Storage (se você escolher essa opção), sujeito à disponibilidade do Customer Insights nessa região.
+
+Para mais informações, consulte [Criar um novo ambiente](create-environment.md) e [Disponibilidade do produto por geografia](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Atualizações de julho de 2022
 
