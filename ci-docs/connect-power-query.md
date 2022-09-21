@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207031"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463251"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectar-se a uma fonte de dados do Power Query
 
@@ -63,7 +63,9 @@ A adição de fontes de dados com base nos conectores do Power Query geralmente 
 O carregamento de dados pode levar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revisados na página [**Entidades**](entities.md).
 
 > [!CAUTION]
-> Uma fonte de dados baseada no Power Query cria um [fluxo de dados no Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Não altere o nome de um fluxo de dados no centro de administração do Power Platform que seja usado no Customer Insights. Renomear um fluxo de dados causa problemas nas referências entre a fonte de dados do Customer Insights e o fluxo de dados do Dataverse.
+>
+> - Uma fonte de dados baseada no Power Query cria um [fluxo de dados no Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Não altere o nome de um fluxo de dados no centro de administração do Power Platform que seja usado no Customer Insights. Renomear um fluxo de dados causa problemas nas referências entre a fonte de dados do Customer Insights e o fluxo de dados do Dataverse.
+> - As avaliações simultâneas para fontes de dados do Power Query no Customer Insights têm os mesmos [limites de atualização como fluxos de dados no PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Se uma atualização de dados falhar porque atingiu o limite de avaliação, recomendamos que você ajuste a agenda de atualização para cada fluxo de dados de modo a garantir que as fontes de dados não sejam processadas ao mesmo tempo.
 
 ### <a name="available-power-query-data-sources"></a>Fontes de dados do Power Query disponíveis
 
@@ -77,7 +79,7 @@ Há suporte à ingestão de dados de fontes de dados locais com base em fluxos d
 
 As fontes de dados que são criadas após associar um ambiente do Dataverse ao Customer Insights usam [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por padrão. Os fluxos de dados oferecem suporte à conectividade local usando gateway de dados. Você pode remover e recriar fontes de dados que existiam antes de um ambiente do Dataverse ser associado [usando gateways de dados locais](/data-integration/gateway/service-gateway-app).
 
-Os gateways de dados de um ambiente existente do Power BI ou do Power Apps ficarão visíveis e você poderá reutilizá-los no Customer Insights. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
+Os gateways de dados de um ambiente existente do Power BI ou Power Apps estarão visíveis e você poderá reutilizá-los no Customer Insights se o gateway de dados e o ambiente do Customer Insights estiverem na mesma região do Azure. A página de fontes de dados mostra links para acessar o ambiente do Microsoft Power Platform onde você pode exibir e configurar gateways locais de dados.
 
 > [!IMPORTANT]
 > Verifique se os seus gateways estão atualizados com a versão mais recente. Você pode instalar uma atualização e reconfigurar um gateway em um prompt mostrado diretamente na tela do gateway ou [fazer download da versão mais recente](https://powerapps.microsoft.com/downloads/). Se você não usar a versão mais recente do gateway, a atualização do fluxo de dados vai falhar com mensagens de erro como **Não há suporte para a palavra-chave: propriedades de configuração. Nome do parâmetro: palavra-chave**.
