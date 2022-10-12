@@ -1,7 +1,7 @@
 ---
 title: Visão geral de fontes de dados
 description: Saiba como importar ou ingerir dados de várias fontes.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245635"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610038"
 ---
 # <a name="data-sources-overview"></a>Visão geral de fontes de dados
 
@@ -65,7 +65,9 @@ Selecione uma fonte de dados para exibir as ações disponíveis.
 
 ## <a name="refresh-data-sources"></a>Atualizar fontes de dados
 
-As fontes de dados podem ser atualizadas em uma programação automática ou manualmente sob demanda. As [fontes de dados locais](connect-power-query.md#add-data-from-on-premises-data-sources) são atualizadas em suas próprias agendas, que são configuradas durante a ingestão de dados. Para fontes de dados anexadas, a ingestão de dados consome os dados mais recentes disponíveis desse fonte de dados.
+As fontes de dados podem ser atualizadas em uma programação automática ou manualmente sob demanda. As [fontes de dados locais](connect-power-query.md#add-data-from-on-premises-data-sources) são atualizadas em suas próprias agendas, que são configuradas durante a ingestão de dados. Para obter dicas de solução de problemas, consulte [Solucionar problemas de atualização da fonte de dados baseada no PPDF Power Query](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Para fontes de dados anexadas, a ingestão de dados consome os dados mais recentes disponíveis desse fonte de dados.
 
 Acesse **Administrador** > **Sistema** > [**Agenda**](schedule-refresh.md) para configurar atualizações agendadas pelo sistema de suas fontes de dados ingeridas.
 
@@ -76,5 +78,37 @@ Para atualizar uma fonte de dados por demanda:
 1. Selecione a fonte de dados que você deseja atualizar e selecione **Atualizar**. A fonte de dados agora é acionada para uma atualização manual. Atualizar um fonte de dados atualizará o esquema da entidade e os dados de todas as entidades especificadas na fonte de dados.
 
 1. Selecione o status para abrir o painel **Detalhes de progresso** e exibir o progresso. Para cancelar o trabalho, selecione **Cancelar trabalho** na parte inferior do painel.
+
+## <a name="corrupt-data-sources"></a>Fontes de dados corrompidas
+
+Os dados inseridos podem ter registros corrompidos, o que pode fazer com que o processo de ingestão de dados seja concluído com erros ou avisos.
+
+> [!NOTE]
+> Se a ingestão de dados for concluída com erros, o processamento subsequente (como unificação ou criação de atividade) que aproveita essa fonte de dados será ignorado. Se a ingestão for concluída com avisos, o processamento subsequente continua, mas alguns dos registros podem não ser incluídos.
+
+Esses erros podem ser vistos nos detalhes da tarefa.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Detalhe da tarefa mostrando erro de dados corrompidos.":::
+
+Registros corrompidos são mostrados em entidades criadas pelo sistema.
+
+### <a name="fix-corrupt-data"></a>Corrigir dados corrompidos
+
+1. Para exibir os dados corrompidos, acesse **Dados** > **Entidades** e procure as entidades corrompidas na seção **Sistema**. O esquema de nomenclatura de entidades corrompidas: 'DataSourceName_EntityName_corrupt'.
+
+1. Selecione uma entidade corrompida e depois a guia **Dados**.
+
+1. Identifique os campos corrompidos em um registro e o motivo.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo da corrupção." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Dados** > **Entidades** mostram apenas uma parte dos registros corrompidos. Para exibir todos os registros corrompidos, exporte os arquivos para um contêiner na conta de armazenamento usando o [processo de exportação do Customer Insights](export-destinations.md). Se você usou sua própria conta de armazenamento, também poderá consultar a pasta do Customer Insights em sua conta de armazenamento.
+
+1. Corrija os dados corrompidos. Por exemplo, para fontes de dados do Azure Data Lake, [corrija os dados no Data Lake Storage ou atualize os tipos de dados no arquivo manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Para fontes de dados do Power Query, corrija os dados no arquivo de origem e [corrija o tipo de dados na etapa de transformação](connect-power-query.md#data-type-does-not-match-data) na página **Power Query - Editar consultas**.
+
+Após a próxima atualização da fonte de dados, os registros corrigidos são ingeridos no Customer Insights e passados para os processos downstream.
+
+Por exemplo, uma coluna 'aniversário' tem o tipo de dados definido como 'data'. Um registro de cliente tem sua data de aniversário inserida como '01/01/19777'. O sistema sinaliza este registro como corrompido. Altere o aniversário no sistema de origem para "1977". Após uma atualização automática das fontes de dados, o campo agora tem um formato válido e o registro será removido da entidade corrompida.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

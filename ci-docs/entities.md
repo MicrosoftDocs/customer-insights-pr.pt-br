@@ -1,7 +1,7 @@
 ---
 title: Entidades no Customer Insights
 description: Exiba os dados na página Entidades.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183526"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610084"
 ---
 # <a name="entities-in-customer-insights"></a>Entidades no Customer Insights
 
@@ -61,27 +61,5 @@ Vá para **Dados** > **Entidades** para ver uma lista de entidades. As informaç
   - **Criação**: data e hora da criação da entidade.
   - **Edição de**: nome da pessoa que modificou a entidade.
   - **Edição**: data e hora da modificação da entidade.
-
-## <a name="entity-specific-information"></a>Informações específicas da entidade
-
-A seção a seguir fornece informações sobre algumas entidades criadas pelo sistema.
-
-### <a name="corrupted-data-sources"></a>Fontes de dados corrompidas
-
-Os campos de uma fonte de dados ingerida podem conter dados corrompidos. Os registros com campos corrompidos são expostos nas entidades criadas pelo sistema. Saber sobre os registros corrompidos ajuda a identificar quais dados devem ser revisados e atualizados no sistema de origem. Após a próxima atualização da fonte de dados, os registros corrigidos são ingeridos no Customer Insights e passados para os processos downstream. 
-
-Por exemplo, uma coluna 'aniversário' tem o tipo de dados definido como 'data'. Um registro de cliente tem sua data de aniversário inserida como '01/01/19777'. O sistema sinalizará este registro como corrompido. Alguém agora poderá alterar a data de aniversário no sistema de origem para '1977'. Após uma atualização automática das fontes de dados, o campo agora tem um formato válido e o registro será removido da entidade corrompida.
-
-Acesse **Dados** > **Entidades** e procure as entidades corrompidas na seção **Sistema**. Esquema de nomenclatura de entidades corrompidas: 'DataSourceName_EntityName_corrupt'. Selecione uma entidade corrompida para identificar os campos corrompidos e o motivo no nível de registro individual.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo da corrupção.":::
-
-O Customer Insights ainda processa os registros corrompidos. No entanto, eles podem causar problemas ao trabalhar com os dados unificados.
-
-As verificações a seguir são executadas nos dados ingeridos para expor os registros corrompidos:
-
-- Se o valor de um campo não corresponde ao tipo de dados de sua coluna.
-- Se os campos contêm caracteres que fazem com que as colunas não correspondam ao esquema esperado. Por exemplo: aspas formatadas incorretamente, aspas sem escape ou caracteres de nova linha.
-- Se houver colunas datetime/date/datetimeoffset, seu formato precisa ser especificado no modelo caso ele não siga o formato ISO padrão.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

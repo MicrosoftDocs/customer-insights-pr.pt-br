@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Usar modelos personalizados do Azure Machine Learning
           href: custom-models.md
+        - name: Criar segmentos com base em previsões
+          href: prediction-based-segment.md
     - name: Exemplo de guias
       items:
         - name: Exemplo de guia para previsão de CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Experimentos com o Azure Machine Learning
           href: azure-machine-learning-experiments.md
-    - name: Gerenciar previsões
-      href: manage-predictions.md
-    - name: Criar segmentos com base em previsões
-      href: prediction-based-segment.md
 - name: Opções de exportação
   items:
     - name: Exportações
