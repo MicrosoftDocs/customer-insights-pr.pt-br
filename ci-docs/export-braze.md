@@ -1,19 +1,19 @@
 ---
 title: Exportar segmentos para o Braze (versão preliminar)
 description: Saiba como configurar a conexão e exportar para o Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195093"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655265"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportar segmentos para o Braze (versão preliminar)
 
@@ -23,6 +23,7 @@ Exporte segmentos de perfis de clientes unificados para o Braze e use-os para at
 
 - Uma [conta do Braze](https://www.braze.com/) e as respectivas credenciais de administrador.
 - Uma [chave de API do Braze](https://www.braze.com/docs/api/basics/)
+- Seu [Ponto de extremidade REST do Braze](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Segmentos configurados](segments.md) no Customer Insights.
 - Os perfis de clientes unificados nos segmentos exportados contêm um campo que representa um endereço de e-mail e um ID do cliente do Braze.
 
@@ -30,6 +31,7 @@ Exporte segmentos de perfis de clientes unificados para o Braze e use-os para at
 
 - Até 1 milhão de perfis de cliente para o Braze, o que pode levar até 40 minutos. O número de perfis de cliente que você pode exportar para o Braze depende de seu contrato com o Braze.
 - Apenas segmentos.
+- O Link Privado do Azure não tem suporte para a exportação do Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Configurar a conexão com o Braze
 
@@ -62,6 +64,8 @@ Exporte segmentos de perfis de clientes unificados para o Braze e use-os para at
 1. Selecione **Adicionar exportação**.
 
 1. No campo **Conexão para exportação**, escolha uma conexão na seção do Braze. Contate um administrador se nenhuma conexão estiver disponível.
+
+1. Insira seu ponto de extremidade REST no campo **Nome do host** no seguinte formato: `rest.iad-03.braze.com`.
 
 1. Insira um nome para a exportação.
 
