@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196840"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725018"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos para o Mailchimp (versão preliminar)
 
@@ -28,6 +28,7 @@ Exporte segmentos de perfis de clientes unificados para o Mailchimp a fim de cri
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- Não há suporte ao link privado associado a Traga seu próprio armazenamento (BYOS).
 - Até 1 milhão de perfis de cliente por exportação para o Mailchimp, o que pode levar até três horas. O número de perfis de cliente que você pode exportar para o Mailchimp depende de seu contrato com o Mailchimp.
 - Apenas segmentos.
 

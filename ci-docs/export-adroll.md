@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195736"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724664"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segmentos para o AdRoll (versão preliminar)
 
@@ -28,6 +28,7 @@ Exporte segmentos de perfis de clientes unificados para o AdRoll e use-os para p
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- Não há suporte ao link privado associado a Traga seu próprio armazenamento (BYOS).
 - Até 250.000 perfis de clientes por exportação para o AdRoll, o que pode levar até 10 minutos. O número de perfis de cliente que você pode exportar para o AdRoll depende de seu contrato com o AdRoll.
 - Apenas segmentos. Um segmento deve conter pelo menos 100 perfis de cliente.
 

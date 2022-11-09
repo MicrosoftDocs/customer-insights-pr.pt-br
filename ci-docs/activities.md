@@ -1,12 +1,12 @@
 ---
 title: Atividades do cliente ou do contato comercial
 description: Defina as atividades do cliente ou do contato comercial e exiba-as em uma linha do tempo nos perfis dos clientes.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304091"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723767"
 ---
 # <a name="customer-or-business-contact-activities"></a>Atividades do cliente ou do contato comercial
 
@@ -41,6 +41,9 @@ Uma entidade deve ter pelo menos um atributo do tipo **Data** a ser incluído na
    - **Nome da atividade**: selecione um nome para sua atividade.
    - **Entidade de atividade**: selecione uma entidade que inclua dados transacionais ou de atividade.
    - **Chave primária**: Seleciona o campo que identifica exclusivamente um registro. Não deve conter valores duplicados, valores vazios ou valores ausentes.
+
+     > [!NOTE]
+     > A chave primária de cada linha deve permanecer consistente em atualizações da fonte de dados. Se a chave primária de uma linha for atualizada em uma atualização de fonte de dados, ela criará duplicatas na entidade Atividade de saída. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configure os dados da atividade com nome, entidade e chave primária.":::
 
@@ -132,7 +135,15 @@ Para contas comerciais (B-to-B), use uma entidade *ContactProfile* para capturar
 
 1. Selecione **Adicionar atividade**.
 
-1. Nomeie a atividade, selecione a entidade de atividade de origem e selecione a chave primária da entidade de atividade.
+1. Na etapa **Dados da atividade**, insira as seguintes informações:
+
+   - **Nome da atividade**: selecione um nome para sua atividade.
+   - **Entidade de atividade**: selecione uma entidade que inclua dados transacionais ou de atividade.
+   - **Chave primária**: Seleciona o campo que identifica exclusivamente um registro. Não deve conter valores duplicados, valores vazios ou valores ausentes.
+
+     > [!NOTE]
+     > A chave primária de cada linha deve permanecer consistente em atualizações da fonte de dados. Se a chave primária de uma linha for atualizada em uma atualização de fonte de dados, ela criará duplicatas na entidade Atividade de saída. 
+
 
 1. Na etapa **Relacionamentos**, crie um relacionamento indireto entre seus dados de origem de atividade e contas, usando seus dados de contato como uma entidade intermediária. Para obter mais informações, consulte [caminhos de relacionamento direto e indireto](relationships.md#relationship-paths).
    - Relacionamento de exemplo para uma atividade chamada *Compras*:

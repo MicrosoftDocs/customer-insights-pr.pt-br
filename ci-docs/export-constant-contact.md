@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196472"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724487"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportar segmentos para o Constant Contact (versão preliminar)
 
@@ -28,6 +28,7 @@ Exporte segmentos de perfis de clientes unificados para o Constant Contact e use
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- Não há suporte ao link privado associado a Traga seu próprio armazenamento (BYOS).
 - Até 1 milhão de perfis de cliente por exportação para o Constant Contact, o que pode levar até uma hora. O número de perfis de cliente que você pode exportar para Constant Contact depende de seu contrato com o Constant Contact.
 - Apenas segmentos.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304689"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725262"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportar segmentos para o LinkedIn Ads (versão preliminar)
 
@@ -28,6 +28,7 @@ Exporte segmentos de perfis de clientes unificados para o LinkedIn Ads para cria
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- Não há suporte ao link privado associado a Traga seu próprio armazenamento (BYOS).
 - Até 100.000 perfis de cliente por exportação para o LinkedIn Ads, o que pode levar até 10 minutos.
 - Apenas segmentos. Um segmento deve conter pelo menos 300 perfis exclusivos.
 
