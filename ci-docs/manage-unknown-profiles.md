@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556382"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776807"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Gerenciar perfis desconhecidos com o Customer Insights
 
-Os usuários da Internet geralmente não são identificados e permanecem anônimos online. Se eles não estiverem logados porque usam dispositivos ou canais diferentes, isso vale até para os clientes mais fiéis. Com os cookies de terceiros provavelmente desaparecendo em breve, gerenciar as preferências do usuário com base em dados primários é crucial para criar experiências personalizadas. Para muitas marcas, os usuários conhecidos ou autenticados são a minoria, apesar da crescente expectativa dos clientes em relação à personalização. Isso é ótimo para as empresas conhecerem seus clientes com base em dados confiáveis, detalhados e unificados.
+Os usuários da Internet geralmente não são identificados ou permanecem anônimos online. Mesmo os clientes mais leais podem parecer "desconhecidos" se não estiverem conectados em diferentes dispositivos. Para muitas marcas, os usuários conhecidos ou autenticados são a minoria, apesar da crescente expectativa dos clientes em relação à personalização. Com o futuro dos cookies de terceiros provavelmente em xeque, gerenciar as preferências do usuário com base em dados primários é crucial para conseguir experiências personalizadas.
 
-Uma boa personalização depende da riqueza e integridade dos dados de seus clientes, e o Customer Insights ajuda você a atingir esses objetivos. Você não precisa limitar ou interromper o uso dos dados coletados no início da jornada do cliente. O Customer Insights permite que você crie um perfil de cliente para os usuários desconhecidos com base em dados próprios. Você pode usar esse perfil para outras ações, apesar da falta de informações de contato. Importe dados próprios de fontes como a Web, dispositivos móveis ou sistemas CRM para o Customer Insights e enriqueça os perfis dos clientes de maneira contínua. À medida que você unifica mais interações, [transforma o cliente *desconhecido* em *conhecido*](unknown-to-known.md).
+A personalização depende do quanto você sabe sobre seu cliente, e o Customer Insights ajuda você a fazer isso rastreando todos eles.  Você não precisa limitar ou interromper o uso dos dados coletados no início da jornada do cliente. O Customer Insights permite que você crie um perfil de cliente para os usuários desconhecidos com base em dados próprios. Você pode usar esse perfil para outras ações, apesar da falta de informações de contato. Importe dados próprios de fontes como a Web, dispositivos móveis ou sistemas CRM para o Customer Insights e enriqueça os perfis dos clientes de maneira contínua. À medida que você unifica mais interações, [transforma o cliente *desconhecido* em *conhecido*](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Cenário de Exemplo
 
-O comércio eletrônico é o canal que mais cresceu na última década. Suponha que um usuário utilize o dispositivo móvel para navegar no seu site de comércio eletrônico. O site atribui o visitante "mobile_guest123" como um identificador exclusivo, e você começa a coletar atividades comportamentais com base na atividade online dele. Por exemplo, quais páginas a pessoa visitou, quanto tempo passou nessas páginas ou em quais links clicou. Você não sabe o nome ou endereço de e-mail dele, mas esses dados ajudam a fornecer insights significativos sobre esse usuário específico às marcas. Assim, você pode usar esses insights como base na próxima vez que o usuário visitar o site. Consulte o Customer Insights para "mobile_guest123" para recuperar a lista de segmentos do usuário, como "orgânico", "clientes de pré-venda móvel", "clientes de alto valor" etc., ou recupere o perfil para criar experiências personalizadas na Web. Você também pode exportar os dados para qualquer sistema de ativação para fazer o mesmo.
+Suponha que um usuário utilize o dispositivo móvel para navegar no seu site de comércio eletrônico. O site atribui o visitante "mobile_guest123" como um identificador exclusivo, e você começa a coletar atividades comportamentais com base na atividade online dele. Por exemplo, quais páginas a pessoa visitou, quanto tempo passou nessas páginas ou em quais links clicou. Você não sabe o nome ou endereço de e-mail dele, mas esses dados ajudam a fornecer insights significativos sobre esse usuário específico às marcas. Assim, você pode usar esses insights como base na próxima vez que o usuário visitar o site. Consulte o Customer Insights para "mobile_guest123" para recuperar a lista de segmentos do usuário, como "orgânico", "clientes de pré-venda móvel", "clientes de alto valor" etc., ou recupere o perfil para criar experiências personalizadas na Web. Você também pode exportar os dados para qualquer sistema de ativação para fazer o mesmo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Ingerir dados primários no Customer Insights
 - Cada entidade tem um ID exclusivo que é definido como chave primária
 - Cada entidade com uma chave primária para personalização é unificada
-- O sistema de gerenciamento de conteúdo do seu site é capaz de usar APIs (para personalização da Web com base na comunicação direta com o Customer Insights)
+- O sistema de gerenciamento de conteúdo do seu site pode usar APIs (para personalização da Web com base na comunicação direta com o Customer Insights)
 
 A tabela a seguir mostra um exemplo simplificado de como eventos de alto valor podem ser capturados.
 

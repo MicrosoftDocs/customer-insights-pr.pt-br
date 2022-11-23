@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724775"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760012"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Exportar segmentos para o Criteo (versão preliminar)
 
@@ -27,7 +27,6 @@ Exporte segmentos de Unified customer profiles para gerar campanhas, fornecer ma
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Não há suporte ao link privado associado a Traga seu próprio armazenamento (BYOS).
 - Até 1 milhão de perfis de cliente por exportação para o Criteo, o que pode levar até 30 minutos. O número de perfis de cliente que você pode exportar para o Criteo depende de seu contrato com o Criteo.
 - Apenas segmentos.
 
